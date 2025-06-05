@@ -1,0 +1,21 @@
+{
+  "name": "partner-blueprint-webapp",
+  "version": "1.0.0",
+  "description": "Local viewer for Partner Ecosystem Blueprint",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "marked": "^9.1.2",
+    "highlight.js": "^11.9.0",
+    "dompurify": "^3.0.6",
+    "lunr": "^2.3.9"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
