@@ -18,3 +18,36 @@ A simple React-based viewer lives in the `webapp/` directory. Run `python3 scrip
 ### Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request if you want to suggest improvements, fix typos, or add additional resources.
+
+## The Strategic Partner Ecosystem Blueprint
+
+This repository contains the documentation and templates for building a comprehensive and strategic partner ecosystem blueprint.
+
+The blueprint is designed to provide a structured approach to partner strategy, recruitment, and enablement, helping organizations build and scale successful partner programs.
+
+It includes a set of markdown templates and guides covering key aspects of the partner lifecycle.
+
+## Web Application
+
+A simple web application is included in the `webapp/` directory to browse the blueprint documents in a more user-friendly interface.
+
+### Features:
+
+*   Browse documents organized by sections.
+*   Search for content across all documents.
+*   View markdown documents with enhanced rendering (syntax highlighting, etc.).
+*   Navigate between related documents via links.
+
+### How to Run the Web Application:
+
+1.  Ensure you have Python 3 installed.
+2.  Open a terminal and navigate to the root directory of this repository.
+3.  Run a simple HTTP server from the root directory using Python:
+
+    ```bash
+    python3 -m http.server 8000
+    ```
+
+4.  Open your web browser and go to `http://localhost:8000/webapp/`.
+
+The web application will load the documents from the `partner_blueprint/` and `Source Materials/` directories and display them in the browser.

@@ -10,7 +10,11 @@ for path in paths:
             if fn.lower().endswith('.md') or 'Blueprint' in fn:
                 # include markdown files or the blueprint single file
                 relpath = os.path.join(root, fn)
-                files.append(relpath.replace('\\', '/'))
+                # Make path relative to webapp directory
+                relpath = relpath.replace('\\', '/')
+                # Add leading slash to make it absolute from webapp
+                relpath = '/' + relpath
+                files.append(relpath)
 
 files.sort()
 with open('webapp/file_list.json', 'w') as f:
