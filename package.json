@@ -1,0 +1,9 @@
+{
+  "name": "partneros",
+  "version": "1.0.0",
+  "description": "Partner Ecosystem Blueprint tooling",
+  "scripts": {
+    "lint:md": "python3 scripts/lint_markdown.py"
+  },
+  "license": "MIT"
+}

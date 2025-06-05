@@ -5,19 +5,20 @@ The **Partner Ecosystem Blueprint** is a collection of templates, playbooks, and
 ## Directory overview
 
 - `partner_blueprint/` – main home of the blueprint. Each file is broken out by topic (strategy, recruitment, enablement) so you can work through the templates individually. The [`SUMMARY.md`](partner_blueprint/SUMMARY.md) file lists everything in order.
-- `ORIGINAL BLUEPRINT` – a single, consolidated markdown document containing the entire blueprint in one file.
+- `ORIGINAL_BLUEPRINT.md` – a single, consolidated markdown document containing the entire blueprint in one file.
+- `Source Materials/Blueprint_Enhanced_V2.md` – updated blueprint document with enhanced formatting and metadata.
 
 ## Using this repository
 
 Start with the quick start guide inside `partner_blueprint/00_Quick_Start_Guide.md` or browse the table of contents in `SUMMARY.md`. All documents are Markdown files and can be edited or extended as needed.
 
 ### Frontend webapp
-
-A simple React-based viewer lives in the `webapp/` directory. Run `python3 scripts/generate_file_list.py` to refresh `file_list.json` whenever new Markdown files are added. Then open `webapp/index.html` in a browser to navigate the blueprint with built-in search.
+A React-based viewer lives in the `webapp/` directory. Run `npm install` to set up dependencies and `npm run dev` to start a local dev server via Vite. `file_list.json` is regenerated automatically by our GitHub Action or by running `python3 scripts/generate_file_list.py`.
 
 ### Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request if you want to suggest improvements, fix typos, or add additional resources.
+When adding new markdown templates, include YAML frontmatter with keys like `title`, `description`, and `section`. Commit your changes and the GitHub Action will regenerate `webapp/file_list.json`.
 
 ## The Strategic Partner Ecosystem Blueprint
 

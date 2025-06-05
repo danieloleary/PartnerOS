@@ -1,0 +1,30 @@
+name: Update file list
+
+on:
+  push:
+    paths:
+      - 'partner_blueprint/**/*.md'
+      - 'Source Materials/**/*.md'
+      - 'scripts/generate_file_list.py'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Generate file list
+        run: python3 scripts/generate_file_list.py
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add webapp/file_list.json
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update file list" && git push
+          fi

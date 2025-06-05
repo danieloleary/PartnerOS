@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 const App = () => {
   const [docs, setDocs] = React.useState([]);
   const [currentDoc, setCurrentDoc] = React.useState(null);
@@ -427,13 +429,13 @@ const App = () => {
 
   return (
     <div style={{display:'flex', width:'100%'}}>
-      <div id="sidebar">
+      <div id="sidebar" tabindex="0">
         <div className="logo-container">
           <img src="assets/partneros-logo.svg" alt="PartnerOS Logo" className="logo" />
         </div>
         <div className="search-container">
           <input 
-            className="search-input" 
+              className="search-input" aria-label="Search documents"
             type="text" 
             placeholder="Search documents..." 
             value={searchQuery}
@@ -475,4 +477,5 @@ const App = () => {
   );
 };
 
+export default App;
 ReactDOM.createRoot(document.getElementById('app')).render(<App />);

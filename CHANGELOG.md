@@ -1,5 +1,19 @@
 ## [Unreleased]
 
+## [2025-06-05]
+
+### Added
+
+- Local development workflow using Vite (`webapp/package.json`).
+- GitHub Action to regenerate `webapp/file_list.json`.
+- `.gitignore` for common artifacts.
+- Accessibility improvements in the webapp.
+
+### Changed
+- Renamed blueprint files with `.md` extensions.
+- Updated README with contribution instructions.
+
+
 ## [2024-06-10]
 - Implemented YAML frontmatter metadata in all template files
 - Added cross-referencing "Related Templates" sections to all templates
@@ -27,4 +41,4 @@
 - Corrected sidebar links and internal document links.
 - Fixed issue with frontmatter displaying in document content.
 - Adjusted search bar size.
-- Ensured documents are correctly grouped into sections in the sidebar. 
+- Ensured documents are correctly grouped into sections in the sidebar.
