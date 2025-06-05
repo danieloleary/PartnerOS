@@ -6,7 +6,7 @@ last_updated: 2024-06-10
 description: >
   A tool to enable data-driven collaboration and focus by systematically identifying and tracking alignment between your ICPs, target accounts, and joint opportunities.
 related_templates:
-  - 03_Onboarding_Checklist.md
+  - 03_Partner_Qualification_and_Onboarding.md
 ---
 
 ## How to Use This Template
@@ -30,4 +30,4 @@ Use this template to systematically identify and track alignment between your IC
 ---
 
 ## Related Templates
-- [Partner Onboarding Checklist](03_Onboarding_Checklist.md) 
+- [Partner Qualification and Onboarding Framework](03_Partner_Qualification_and_Onboarding.md) 

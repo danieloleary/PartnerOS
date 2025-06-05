@@ -6,4 +6,4 @@ These templates are foundational to establishing why and how we will engage with
 
 Purpose: ...
 
-*... (rest of Section I content here) ...* 
+*... (rest of Section I content here) ...*
