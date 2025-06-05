@@ -1,3 +1,7 @@
+---
+title: Partner Ecosystem Blueprint
+keywords: ["scaling strategic partnerships", "distills best practices", "help companies design", "welcome feel free", "simple http server", "source materials directories"]
+---
 # Partner Ecosystem Blueprint
 
 The **Partner Ecosystem Blueprint** is a collection of templates, playbooks, and reference material for building and scaling strategic partnerships. It distills best practices into actionable documents that can help companies design and operationalize a successful partner program.

@@ -4,15 +4,13 @@ section: Recruitment
 template_number: II.4
 last_updated: 2024-06-10
 description: >
-  A structured script for conducting effective discovery calls with potential partners to assess fit and explore partnership opportunities.
 related_templates:
-  - 03_Partner_Qualification_Framework.md
-  - 05_Partnership_Proposal_Template.md
+keywords: ["gather key information", "structured conversation guide", "i m excited", "i d like", "key products services", "technical capabilities willingness"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to conduct structured, effective discovery calls that gather key information and build relationships with potential partners.
 
 **Steps:**
@@ -253,4 +251,4 @@ Follow-up Required:
 ## Related Templates
 - [Partner Qualification Framework](03_Partner_Qualification_Framework.md)
 - [Partnership Proposal Template](05_Partnership_Proposal_Template.md)
-- [ICP Alignment Tracker](07_ICP_Alignment_Tracker.md) 
+- [ICP Alignment Tracker](07_ICP_Alignment_Tracker.md)

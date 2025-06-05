@@ -1,3 +1,7 @@
+---
+title: The Strategic Partner Ecosystem Blueprint
+keywords: ["partner ecosystem welcome", "ground running whether", "prioritize templates based", "maturity stage rest", "guide helps", "startup laying"]
+---
 # The Strategic Partner Ecosystem Blueprint
 
 ## Master Table of Contents
@@ -34,4 +38,4 @@
 
 Welcome to the Strategic Partner Ecosystem Blueprint—your playbook for building a world-class partner program. This guide helps you hit the ground running, whether you're a startup laying the foundation or an enterprise scaling for the championship. Follow these steps to prioritize templates based on your goals and maturity stage.
 
-*... (rest of Quick Start Guide content here) ...* 
+*... (rest of Quick Start Guide content here) ...*

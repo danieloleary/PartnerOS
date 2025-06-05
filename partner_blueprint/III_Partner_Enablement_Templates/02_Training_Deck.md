@@ -4,14 +4,13 @@ section: Enablement
 template_number: III.2
 last_updated: 2024-06-10
 description: >
-  A template for delivering consistent, comprehensive, and engaging onboarding and refresher training to all partners, ensuring foundational knowledge and confidence.
 related_templates:
-  - 01_Enablement_Roadmap.md
+keywords: ["deliver consistent comprehensive", "proof points reference", "partnership briefly reiterate", "partnership linking back", "target market s", "product s explaining"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to deliver consistent, comprehensive, and engaging onboarding and refresher training to all partners.
 
 **Steps:**
@@ -126,4 +125,4 @@ Core Slides & Enhanced Prompts/Content:
 ---
 
 ## Related Templates
-- [Partner Enablement Roadmap](01_Enablement_Roadmap.md) 
+- [Partner Enablement Roadmap](01_Enablement_Roadmap.md)

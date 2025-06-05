@@ -4,14 +4,13 @@ section: Recruitment
 template_number: II.6
 last_updated: 2024-06-10
 description: >
-  A succinct, compelling "leave-behind" or introductory document that quickly communicates the essence of your partner program and the value of partnering with you.
 related_templates:
-  - 05_Partner_Pitch_Deck.md
+keywords: ["proof points customize", "supporting information distribute", "works simple visual", "url contact info", "quick scanning customize", "one page pdf"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to quickly communicate the essence of your partner program and the value of partnering with you.
 
 **Steps:**
@@ -63,4 +62,4 @@ A succinct, compelling "leave-behind" or introductory document that quickly comm
 ---
 
 ## Related Templates
-- [Partner Pitch Deck](05_Partner_Pitch_Deck.md) 
+- [Partner Pitch Deck](05_Partner_Pitch_Deck.md)

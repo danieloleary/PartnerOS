@@ -4,15 +4,13 @@ section: Recruitment
 template_number: II.1
 last_updated: 2024-06-10
 description: >
-  A structured sequence of emails designed to engage and recruit potential partners, from initial outreach to partnership discussion.
 related_templates:
-  - 02_Outreach_Engagement_Sequence.md
-  - 04_Discovery_Call_Script.md
+keywords: ["believe there s", "could work together", "strong alignment between", "i d appreciate", "interest i d", "i ll make"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to create a systematic, professional email sequence for recruiting potential partners.
 
 **Steps:**
@@ -258,4 +256,4 @@ Best regards,
 
 ## Related Templates
 - [Outreach Engagement Sequence](02_Outreach_Engagement_Sequence.md)
-- [Discovery Call Script](04_Discovery_Call_Script.md) 
+- [Discovery Call Script](04_Discovery_Call_Script.md)

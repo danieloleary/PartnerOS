@@ -4,15 +4,13 @@ section: Strategy
 template_number: I.4
 last_updated: 2024-06-10
 description: >
-  A framework for analyzing competitive landscape and developing unique value propositions for partner relationships.
 related_templates:
-  - 01_Partner_Business_Case.md
-  - 05_Partner_Strategy_Plan.md
+keywords: ["analyze competitive positioning", "template purpose use", "use", "template"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to analyze competitive positioning and develop compelling differentiation strategies for partner relationships.
 
 **Steps:**
@@ -230,4 +228,4 @@ Use this template to analyze competitive positioning and develop compelling diff
 
 ## Related Templates
 - [Partner Business Case](01_Partner_Business_Case.md)
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md) 
+- [Partner Strategy Plan](05_Partner_Strategy_Plan.md)

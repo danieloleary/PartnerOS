@@ -4,15 +4,13 @@ section: Recruitment
 template_number: II.2
 last_updated: 2024-06-10
 description: >
-  A structured sequence for engaging potential partners through multiple channels, from initial contact to partnership discussion.
 related_templates:
-  - 01_Recruitment_Email_Sequence.md
-  - 04_Discovery_Call_Script.md
+keywords: ["relevant content participate", "preferred channels create", "template purpose use", "builds relationships", "both work", "area would"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to create a multi-channel engagement sequence that builds relationships with potential partners through various touchpoints.
 
 **Steps:**
@@ -234,4 +232,4 @@ Call to Action:
 
 ## Related Templates
 - [Recruitment Email Sequence](01_Recruitment_Email_Sequence.md)
-- [Discovery Call Script](04_Discovery_Call_Script.md) 
+- [Discovery Call Script](04_Discovery_Call_Script.md)

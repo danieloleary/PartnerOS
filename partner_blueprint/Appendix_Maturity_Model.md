@@ -1,3 +1,7 @@
+---
+title: Appendix II: Conceptual Partner Program Maturity Model
+keywords: ["often opportunistic driven", "partners early attempts", "joint marketing kpis", "refined deeper dives", "product training available", "partner community engagement"]
+---
 # Appendix II: Conceptual Partner Program Maturity Model
 
 This model provides a framework for understanding the evolution of a partner program and helps identify which areas of this blueprint to prioritize based on your current stage.

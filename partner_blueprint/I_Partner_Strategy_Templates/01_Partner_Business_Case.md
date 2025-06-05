@@ -4,15 +4,13 @@ section: Strategy
 template_number: I.1
 last_updated: 2024-06-10
 description: >
-  A template to rigorously justify strategic investments in establishing, expanding, or refining a partner program or focusing on a specific partner segment.
 related_templates:
-  - 02_Ideal_Partner_Profile.md
-  - 05_Partner_Strategy_Plan.md
+keywords: ["supporting information review", "unique opportunities necessitate", "direct only speed", "formality highlight risks", "concise sentences what", "partner centric approach"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to build a business case for launching, expanding, or refining a partner program or initiative.
 
 **Steps:**
@@ -229,4 +227,4 @@ Use this template to build a business case for launching, expanding, or refining
 
 ## Related Templates
 - [Ideal Partner Profile](02_Ideal_Partner_Profile.md)
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md) 
+- [Partner Strategy Plan](05_Partner_Strategy_Plan.md)

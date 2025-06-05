@@ -1,3 +1,7 @@
+---
+title: [Unreleased]
+keywords: ["marked highlight js", "debugging document loading", "markdown files sidebar", "template instructions", "rendering added", "frontmatter displaying"]
+---
 ## [Unreleased]
 
 ## [2025-06-05]

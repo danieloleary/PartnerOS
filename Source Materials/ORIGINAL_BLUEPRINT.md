@@ -1,3 +1,6 @@
+---
+keywords: ["ground running whether", "starting line match", "maturity foreword navigating", "true power lies", "gradually incorporate others", "top crucially present"]
+---
 THE STRATEGIC PARTNER ECOSYSTEM BLUEPRINT (REVISED & EXPANDED EDITION)
 
 

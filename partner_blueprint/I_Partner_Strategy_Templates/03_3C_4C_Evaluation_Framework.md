@@ -4,15 +4,13 @@ section: Strategy
 template_number: I.3
 last_updated: 2024-06-10
 description: >
-  A standardized framework for vetting new potential partners and conducting ongoing performance reviews of existing partners.
 related_templates:
-  - 02_Ideal_Partner_Profile.md
-  - 05_Partner_Strategy_Plan.md
+keywords: ["excellence presence training", "necessary skills expertise", "business approach align", "partner genuinely committed", "template purpose use", "partner have"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this framework to objectively evaluate potential partners and assess ongoing partner performance.
 
 **Steps:**
@@ -265,4 +263,4 @@ Use this framework to objectively evaluate potential partners and assess ongoing
 
 ## Related Templates
 - [Ideal Partner Profile](02_Ideal_Partner_Profile.md)
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md) 
+- [Partner Strategy Plan](05_Partner_Strategy_Plan.md)

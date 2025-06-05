@@ -4,15 +4,13 @@ section: Recruitment
 template_number: II.3
 last_updated: 2024-06-10
 description: >
-  A checklist to operationalize and streamline the ramp-up process for new partners, ensuring all critical legal, technical, GTM, and communication steps are completed efficiently.
 related_templates:
-  - 07_ICP_Alignment_Tracker.md
-  - 01_Recruitment_Email_Sequence.md
+keywords: ["roles detailed overview", "executive sponsor sent", "demo joint call", "internal person responsible", "review identify overlaps", "core partner team"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this checklist to operationalize and streamline the ramp-up process for new partners.
 
 **Steps:**
@@ -104,4 +102,4 @@ This checklist is designed to operationalize and streamline the ramp-up process 
 
 ## Related Templates
 - [ICP Alignment Tracker](07_ICP_Alignment_Tracker.md)
-- [Partner Recruitment Email Sequence](01_Recruitment_Email_Sequence.md) 
+- [Partner Recruitment Email Sequence](01_Recruitment_Email_Sequence.md)

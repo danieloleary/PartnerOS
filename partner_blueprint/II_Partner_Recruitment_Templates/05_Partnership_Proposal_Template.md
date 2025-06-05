@@ -4,15 +4,13 @@ section: Recruitment
 template_number: II.5
 last_updated: 2024-06-10
 description: >
-  A comprehensive template for creating compelling partnership proposals that clearly articulate value, terms, and next steps.
 related_templates:
-  - 04_Discovery_Call_Script.md
-  - 06_Partnership_Agreement_Template.md
+keywords: ["clearly communicate value", "proposal outlines how", "thorough show attention", "growth rate together", "capture specific percentage", "deliver specific value"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to create professional, compelling partnership proposals that clearly communicate value and drive partner engagement.
 
 **Steps:**
@@ -293,4 +291,4 @@ The partnership will generate revenue through [specific model], with projected r
 
 ## Related Templates
 - [Discovery Call Script](04_Discovery_Call_Script.md)
-- [Partnership Agreement Template](06_Partnership_Agreement_Template.md) 
+- [Partnership Agreement Template](06_Partnership_Agreement_Template.md)

@@ -4,15 +4,13 @@ section: Strategy
 template_number: I.6
 last_updated: 2024-06-10
 description: >
-  A framework for designing and implementing a scalable partner program structure with clear tiers, benefits, and requirements.
 related_templates:
-  - 05_Partner_Strategy_Plan.md
-  - 07_Internal_Alignment_Playbook.md
+keywords: ["structured partner program", "template purpose use", "use", "template", "design", "implement"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to design and implement a structured partner program that scales with your business and drives partner success.
 
 **Steps:**
@@ -229,5 +227,5 @@ Use this template to design and implement a structured partner program that scal
 ---
 
 ## Related Templates
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md) 
-- [Internal Alignment Playbook](07_Internal_Alignment_Playbook.md) 
+- [Partner Strategy Plan](05_Partner_Strategy_Plan.md)
+- [Internal Alignment Playbook](07_Internal_Alignment_Playbook.md)

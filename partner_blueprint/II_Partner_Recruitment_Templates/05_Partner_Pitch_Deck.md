@@ -4,14 +4,13 @@ section: Recruitment
 template_number: II.5
 last_updated: 2024-06-10
 description: >
-  A template for a compelling, repeatable, and scalable narrative that clearly articulates the value of partnering with your company, inspiring prospective partners to join your ecosystem.
 related_templates:
-  - 06_Partnership_One_Pager.md
+keywords: ["content prompt customize", "success stories reference", "vision why partnerships", "partners what sets", "market collaboration how", "program key contacts"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to deliver a compelling, repeatable, and scalable narrative that clearly articulates the value of partnering with your company.
 
 **Steps:**
@@ -78,4 +77,4 @@ A strategic, visually engaging presentation to communicate your partner program'
 ---
 
 ## Related Templates
-- [Partnership One-Pager](06_Partnership_One_Pager.md) 
+- [Partnership One-Pager](06_Partnership_One_Pager.md)
