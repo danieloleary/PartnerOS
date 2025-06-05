@@ -6,7 +6,7 @@ last_updated: 2024-06-10
 description: >
   A structured script for conducting effective discovery calls with potential partners to assess fit and explore partnership opportunities.
 related_templates:
-  - 03_Partner_Qualification_and_Onboarding.md
+  - 03_Partner_Qualification_Framework.md
   - 05_Partnership_Proposal_Template.md
 ---
 
@@ -251,6 +251,6 @@ Follow-up Required:
 ---
 
 ## Related Templates
-- [Partner Qualification and Onboarding Framework](03_Partner_Qualification_and_Onboarding.md)
+- [Partner Qualification Framework](03_Partner_Qualification_Framework.md)
 - [Partnership Proposal Template](05_Partnership_Proposal_Template.md)
 - [ICP Alignment Tracker](07_ICP_Alignment_Tracker.md) 
