@@ -25,7 +25,55 @@ Use this template to deliver a compelling, repeatable, and scalable narrative th
 
 # Partner Pitch Deck (Strategic Narrative)
 
-*To be populated...*
+## Purpose
+A strategic, visually engaging presentation to communicate your partner program's value, differentiation, and the mutual benefits of partnership. Use this deck for recruitment, onboarding, and executive briefings.
+
+---
+
+## Core Slides & Prompts
+
+### 1. Welcome & Introductions
+- Title slide with logos, date, and presenter(s)
+- Brief welcome and context for the meeting
+
+### 2. Our Shared Mission
+- Your company's mission and vision
+- Why partnerships are core to your strategy
+
+### 3. The Market Opportunity
+- Market trends, TAM/SAM/SOM, and growth drivers
+- Key customer pain points and unmet needs
+
+### 4. Why Partner With Us?
+- Unique value proposition for partners
+- What sets your program apart (technology, support, incentives, etc.)
+
+### 5. Program Overview
+- Program structure (tiers, benefits, requirements)
+- Visual summary of benefits by tier
+
+### 6. Go-to-Market Collaboration
+- How you co-sell, co-market, and support partners
+- Example workflows or engagement models
+
+### 7. Success Stories
+- Short case studies or testimonials from existing partners
+- Quantifiable results and proof points
+
+### 8. Getting Started
+- Simple, clear steps to join the program
+- Key contacts and next steps
+
+### 9. Q&A / Thank You
+- Invite questions and provide contact information
+
+---
+
+## Best Practices
+- Use visuals, infographics, and partner logos where possible
+- Keep slides concise and benefit-driven
+- Tailor the deck for different partner types or verticals
+- Update regularly with new proof points and program updates
 
 ---
 

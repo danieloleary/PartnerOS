@@ -246,4 +246,4 @@ Use this template to develop a comprehensive partner strategy that aligns with b
 
 ## Related Templates
 - [Partner Business Case](01_Partner_Business_Case.md)
-- [Ideal Partner Profile](02_Ideal_Partner_Profile.md) 
+- [Ideal Partner Profile](02_Ideal_Partner_Profile.md)
