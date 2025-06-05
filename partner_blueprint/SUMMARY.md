@@ -25,7 +25,7 @@ This section contains templates for identifying, engaging, and onboarding high-p
 ## Templates
 - [Partner Recruitment Email Sequence](II_Partner_Recruitment_Templates/01_Recruitment_Email_Sequence.md)
 - [Outreach/Engagement Sequence](II_Partner_Recruitment_Templates/02_Outreach_Engagement_Sequence.md)
-- [Partner Qualification and Onboarding Framework](II_Partner_Recruitment_Templates/03_Partner_Qualification_and_Onboarding.md)
+- [Partner Qualification Framework](II_Partner_Recruitment_Templates/03_Partner_Qualification_Framework.md)
 - [Discovery Call Script/Guide](II_Partner_Recruitment_Templates/04_Discovery_Call_Script.md)
 - [Partner Pitch Deck](II_Partner_Recruitment_Templates/05_Partner_Pitch_Deck.md)
 - [Partnership One-Pager](II_Partner_Recruitment_Templates/06_Partnership_One_Pager.md)
