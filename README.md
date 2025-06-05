@@ -19,6 +19,8 @@ Start with the quick start guide inside `partner_blueprint/00_Quick_Start_Guide.
 ### Frontend webapp
 A React-based viewer lives in the `webapp/` directory. Run `npm install` to set up dependencies and `npm run dev` to start a local dev server via Vite. `file_list.json` is regenerated automatically by our GitHub Action or by running `python3 scripts/generate_file_list.py`.
 
+For managing the markdown templates themselves, use `scripts/manage_templates.py`. This script can create new templates, update existing ones, apply bulk revisions across the `partner_blueprint/` directory, and even enhance a template with the OpenAI API via the `enhance` command. Set the `OPENAI_API_KEY` environment variable before running the `enhance` subcommand.
+
 ### Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request if you want to suggest improvements, fix typos, or add additional resources.
