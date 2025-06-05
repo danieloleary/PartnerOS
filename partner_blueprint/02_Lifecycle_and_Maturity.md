@@ -1,3 +1,7 @@
+---
+title: The Partner Ecosystem Lifecycle & Blueprint Alignment
+keywords: ["templates here s", "maturity content here", "help assess", "current state", "typical lifecycle", "lifecycle"]
+---
 # The Partner Ecosystem Lifecycle & Blueprint Alignment
 
 Understanding the partner lifecycle helps contextualize these templates. Here's a typical lifecycle and how this blueprint supports each stage:
@@ -11,4 +15,4 @@ Understanding the partner lifecycle helps contextualize these templates. Here's 
 
 *(See Appendix II for a Conceptual Partner Program Maturity Model to help assess your current state and prioritize focus areas.)*
 
-*... (rest of Lifecycle and Maturity content here) ...* 
+*... (rest of Lifecycle and Maturity content here) ...*

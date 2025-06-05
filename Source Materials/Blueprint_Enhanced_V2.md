@@ -1,3 +1,6 @@
+---
+keywords: ["yours any conflicts", "everyone knows who", "annual qbrs make", "compelling repeatable pitch", "major release renew", "glance cheat sheet"]
+---
 PARTNER STRATEGY TEMPLATES OPEN EDITION
 
 1. Partner Business Case Template
@@ -356,7 +359,7 @@ Deep-Dive, Reverse-Engineered from Partner Principles
 1. Partner Recruitment Email Sequence
 Purpose:
 Drive response from targeted, high-value prospective partners by tailoring outreach to context.
-a. 
+a.
 Cold Intro Email
 Subject Line Ideas:
 
@@ -385,7 +388,7 @@ I’m reaching out because [Their Company] is known for [notable achievement], a
 We believe a partnership could help us both serve [ICP/customer type] even better. Would you be open to a 20-min intro chat next week?
 Best,
 [Your Name]
-b. 
+b.
 Warm Intro/Referral Email
 Reference mutual contact (“[Referrer] suggested we connect…”)
 
@@ -393,7 +396,7 @@ Reference mutual contact (“[Referrer] suggested we connect…”)
 Briefly restate value and reason for timing (“We’re launching a new initiative in [vertical]…”)
 
 
-c. 
+c.
 Follow-Up Sequences
 1st follow-up: Reference initial email, add customer proof or new reason to meet.
 
@@ -405,7 +408,7 @@ Follow-Up Sequences
 2. Outreach/Engagement Sequence Template
 Purpose:
 Maximize meeting rates and ensure all best-fit partners are systematically engaged.
-a. 
+a.
 Multi-Touch Sequence
 Step 1: Initial cold or warm email
 
@@ -425,7 +428,7 @@ Step 5: Break-up email (“I don’t want to spam you; let me know if this isn�
 Step 6: Phone call or voicemail if you have a direct line
 
 
-b. 
+b.
 How to Use:
 Document each touch and track replies.
 
@@ -437,7 +440,7 @@ Personalize each message with relevant pain points or business drivers.
 3. Partner Onboarding Checklist
 Purpose:
 Operationalize new partner ramp-up—ensure all boxes checked for a “ready to sell/service” status.
-a. 
+a.
 Core Sections:
 Legal & Contracting: NDA, MSA, and program agreement signed
 
@@ -487,7 +490,7 @@ Register/identify first pipeline deal or co-sell activity
 Schedule first QBR or check-in
 
 
-b. 
+b.
 How to Use:
 Track completion in PRM or a shared Google Sheet/Box Note.
 
@@ -499,7 +502,7 @@ Review at 30/60/90 day partner health check.
 4. Discovery Call Script
 Purpose:
 Qualify the partner and gather key inputs for segmentation and next steps.
-a. 
+a.
 Key Questions/Sections:
 Partner Background: “Tell us about your company and focus areas.”
 
@@ -549,7 +552,7 @@ Next Steps:
 “Are there blockers or open questions before moving forward?”
 
 
-b. 
+b.
 Scoring Guidance:
 Mark “must-have” vs “nice-to-have” on each category.
 
@@ -561,7 +564,7 @@ Assign risk/fit rating post-call.
 5. Partner Pitch Deck
 Purpose:
 Deliver a compelling, repeatable pitch that scales your program’s story and value.
-a. 
+a.
 Slide Structure:
 Introduction & Vision
 
@@ -587,7 +590,7 @@ Differentiators (unique integration, support, market access)
 Next Steps/CTA (book a follow-up, sign-up process)
 
 
-b. 
+b.
 Pro Tips:
 Include data—market size, win rates, attach rates.
 
@@ -602,7 +605,7 @@ Use clear graphics (GTM process flows, benefit tables).
 6. Partnership One-Pager
 Purpose:
 Provide a “leave-behind” document for easy reference and internal sharing.
-a. 
+a.
 Field Structure:
 Program Overview: What the partnership is and why it matters.
 
@@ -626,7 +629,7 @@ Customer Proof: One quick win or testimonial.
 7. ICP Alignment Tracker
 Purpose:
 Enable data-driven focus—target accounts and opportunities where both parties win.
-a. 
+a.
 Key Fields:
 Your ICP Definition: Industry, size, use case, region.
 
@@ -646,7 +649,7 @@ Joint Success Stories: Reference deals or PoCs.
 Next Steps/Action Plan: Who will drive intros, enablement, co-marketing.
 
 
-b. 
+b.
 How to Use:
 Review quarterly to update target lists.
 
@@ -1331,7 +1334,7 @@ Example: “Include .ics file in every confirmation email.”
 How to use: Templates stored centrally and customized per event.
 Here’s your Operations Templates batch, expanded with detailed prompts, example fields, guidance notes, and practical implementation steps—structured clearly to maximize usability and ease of deployment.
 
-📈 
+📈
 Partner Operations Templates
 (Deep Dive, Practical Guide)
 
@@ -1696,11 +1699,11 @@ Document and track centrally; analyze escalations quarterly to identify trends a
 
 Here’s your Career Templates expanded with detailed prompts, practical examples, and actionable guidance for each topic:
 
-👔 
+👔
 Career Templates
  (In-depth Practical Guide)
 
-1. 
+1.
 Partner Job Description Templates
 Purpose:
 Clearly outline partnership roles, responsibilities, requirements, and success criteria.
@@ -1773,7 +1776,7 @@ Update annually to reflect evolving responsibilities.
 
 
 
-2. 
+2.
 Interview Question Bank
 Purpose:
 Systematically evaluate partnership candidates through consistent questioning.
@@ -1831,7 +1834,7 @@ Train all interviewers to use and document consistently.
 
 
 
-3. 
+3.
 Career Progression Ladder
 Purpose:
 Provide clear expectations, responsibilities, and growth paths for partnership professionals.
@@ -1892,7 +1895,7 @@ Update and refine annually during performance cycles.
 
 
 
-4. 
+4.
 Executive Partner Summary Slides
 Purpose:
 Provide executives a concise, strategic overview of partner program health and priorities.
@@ -1938,7 +1941,7 @@ Presented quarterly; align closely with strategic business reviews.
 
 
 
-5. 
+5.
 30-60-90 Day Plans
 Purpose:
 Define structured onboarding and initial success milestones for partnership hires.
@@ -1984,7 +1987,7 @@ Review weekly with managers to ensure alignment and address blockers early.
 
 
 
-6. 
+6.
 Weekly Partner Update Format
 Purpose:
 Ensure regular, concise, actionable updates about partner activities internally.
@@ -2024,8 +2027,4 @@ Standardized format, sent weekly via Slack or email.
 
 
 Managers follow-up directly on any outstanding actions.
-
-
-
-
 

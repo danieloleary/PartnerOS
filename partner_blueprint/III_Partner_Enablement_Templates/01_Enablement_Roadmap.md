@@ -4,14 +4,13 @@ section: Enablement
 template_number: III.1
 last_updated: 2024-06-10
 description: >
-  A roadmap to define, sequence, and communicate all critical training, certification, content access, and go-to-market enablement milestones for partner development.
 related_templates:
-  - 02_Training_Deck.md
+keywords: ["milestone assign owners", "supporting information review", "regular check ins", "essential tools provisioned", "core value proposition", "content action access"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this roadmap to define, sequence, and communicate all critical enablement milestones for partner development.
 
 **Steps:**
@@ -107,4 +106,4 @@ Core Sections & Example Prompts (Expanded with Strategic Context):
 ---
 
 ## Related Templates
-- [Partner Training Deck](02_Training_Deck.md) 
+- [Partner Training Deck](02_Training_Deck.md)

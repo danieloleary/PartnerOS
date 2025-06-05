@@ -1,3 +1,7 @@
+---
+title: Partner Ecosystem Blueprint — Change Log
+keywords: ["master table", "template instructions", "all templates", "use"]
+---
 # Partner Ecosystem Blueprint — Change Log
 
 ## [2024-06-10]
@@ -6,4 +10,3 @@
 - Implemented YAML frontmatter metadata in all template files
 - Added cross-referencing "Related Templates" sections to all templates
 - Added "How to Use This Template" instructions to all templates
-

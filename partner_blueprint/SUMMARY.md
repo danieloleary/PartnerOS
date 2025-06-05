@@ -1,3 +1,7 @@
+---
+title: Partner Ecosystem Blueprint — Master Table of Contents
+keywords: ["maintain consistency across", "section contains templates", "onboarding checklist", "identifying engaging"]
+---
 # Partner Ecosystem Blueprint — Master Table of Contents
 
 ## [2024-03-19]
@@ -38,4 +42,4 @@ This section contains templates for identifying, engaging, and onboarding high-p
 
 ## Appendices
 - [Glossary](Appendix_Glossary.md)
-- [Maturity Model](Appendix_Maturity_Model.md) 
+- [Maturity Model](Appendix_Maturity_Model.md)

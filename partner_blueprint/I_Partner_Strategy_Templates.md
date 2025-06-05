@@ -1,3 +1,7 @@
+---
+title: I. Partner Strategy Templates: Defining Our Ecosystem's North Star
+keywords: ["templates establish why", "strategically sound review", "align internal teams", "set clear objectives", "data driven justification", "offering stands out"]
+---
 # I. Partner Strategy Templates: Defining Our Ecosystem's North Star
 
 These templates establish why and how we engage with partners, ensuring each initiative is purposeful and strategically sound. Review them to align internal teams and set clear objectives for your ecosystem.

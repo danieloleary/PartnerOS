@@ -4,15 +4,13 @@ section: Recruitment
 template_number: II.6
 last_updated: 2024-06-10
 description: >
-  A comprehensive template for creating legally sound partnership agreements that protect both parties and clearly define terms, responsibilities, and expectations.
 related_templates:
-  - 05_Partnership_Proposal_Template.md
-  - 07_Partnership_Launch_Plan.md
+keywords: ["confidentiality obligations shall", "indemnification process shall", "liability limits shall", "detailed exceptions term", "agreement shall commence", "specific purpose term"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to create comprehensive partnership agreements that clearly define terms, protect both parties, and set the foundation for successful collaboration.
 
 **Steps:**
@@ -352,4 +350,4 @@ Date: [Date]
 
 ## Related Templates
 - [Partnership Proposal Template](05_Partnership_Proposal_Template.md)
-- [Partnership Launch Plan](07_Partnership_Launch_Plan.md) 
+- [Partnership Launch Plan](07_Partnership_Launch_Plan.md)

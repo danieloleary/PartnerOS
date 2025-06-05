@@ -4,14 +4,13 @@ section: Recruitment
 template_number: II.7
 last_updated: 2024-06-10
 description: >
-  A tool to enable data-driven collaboration and focus by systematically identifying and tracking alignment between your ICPs, target accounts, and joint opportunities.
 related_templates:
-  - 03_Partner_Qualification_Framework.md
+keywords: ["track alignment between", "icps target accounts", "partners steps review", "mapping fields gather", "compare account lists", "partner under nda"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to systematically identify and track alignment between your ICPs, target accounts, and joint opportunities with partners.
 
 **Steps:**

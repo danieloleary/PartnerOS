@@ -4,15 +4,13 @@ section: Strategy
 template_number: I.2
 last_updated: 2024-06-10
 description: >
-  A systematic framework for defining the characteristics of our most successful and impactful partners, as well as those who are a poor fit.
 related_templates:
-  - 01_Partner_Business_Case.md
-  - 03_3C_4C_Evaluation_Framework.md
+keywords: ["scalable objective filter", "partner recruitment prioritization", "criteria gather data", "strategic verticals match", "target accounts percentage", "commitment investment willingness"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to define the characteristics of ideal partners and create a scalable, objective filter for partner recruitment, prioritization, and ongoing management.
 
 **Steps:**
@@ -286,4 +284,4 @@ Use this template to define the characteristics of ideal partners and create a s
 
 ## Related Templates
 - [Partner Business Case](01_Partner_Business_Case.md)
-- [3C/4C Evaluation Framework](03_3C_4C_Evaluation_Framework.md) 
+- [3C/4C Evaluation Framework](03_3C_4C_Evaluation_Framework.md)

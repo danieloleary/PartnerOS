@@ -4,15 +4,13 @@ section: Recruitment
 template_number: II.3
 last_updated: 2024-06-10
 description: >
-  A comprehensive framework for evaluating and qualifying potential partners based on strategic fit, capabilities, and potential value.
 related_templates:
-  - 02_Outreach_Engagement_Sequence.md
-  - 04_Discovery_Call_Script.md
+keywords: ["template purpose use", "use", "template", "determine", "suitability"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to systematically evaluate potential partners and determine their suitability for partnership.
 
 **Steps:**
@@ -249,4 +247,4 @@ Use this template to systematically evaluate potential partners and determine th
 
 ## Related Templates
 - [Outreach Engagement Sequence](02_Outreach_Engagement_Sequence.md)
-- [Discovery Call Script](04_Discovery_Call_Script.md) 
+- [Discovery Call Script](04_Discovery_Call_Script.md)

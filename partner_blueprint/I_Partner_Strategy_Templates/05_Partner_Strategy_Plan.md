@@ -4,15 +4,13 @@ section: Strategy
 template_number: I.5
 last_updated: 2024-06-10
 description: >
-  A comprehensive framework for developing and executing a partner strategy aligned with business objectives.
 related_templates:
-  - 01_Partner_Business_Case.md
-  - 02_Ideal_Partner_Profile.md
+keywords: ["comprehensive partner strategy", "company strategy focus", "business objectives align", "template purpose use", "business objectives", "use"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to develop a comprehensive partner strategy that aligns with business objectives and drives mutual success.
 
 **Steps:**

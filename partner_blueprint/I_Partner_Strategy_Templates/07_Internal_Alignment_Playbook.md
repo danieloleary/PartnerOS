@@ -4,15 +4,13 @@ section: Strategy
 template_number: I.7
 last_updated: 2024-06-10
 description: >
-  A comprehensive guide for aligning internal teams and stakeholders with partner program objectives and execution.
 related_templates:
-  - 05_Partner_Strategy_Plan.md
-  - 06_Program_Architecture.md
+keywords: ["align internal teams", "partner program objectives", "template purpose use", "use", "template", "stakeholders"]
 ---
 
 ## How to Use This Template
 
-**Purpose:**  
+**Purpose:**
 Use this template to align internal teams and stakeholders with partner program objectives and ensure successful execution.
 
 **Steps:**
@@ -240,4 +238,4 @@ Use this template to align internal teams and stakeholders with partner program 
 
 ## Related Templates
 - [Partner Strategy Plan](05_Partner_Strategy_Plan.md)
-- [Program Architecture](06_Program_Architecture.md) 
+- [Program Architecture](06_Program_Architecture.md)
