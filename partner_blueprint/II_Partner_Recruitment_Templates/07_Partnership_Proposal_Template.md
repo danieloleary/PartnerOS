@@ -1,7 +1,7 @@
 ---
 title: Partnership Proposal Template
 section: Recruitment
-template_number: II.5
+template_number: II.7
 last_updated: 2024-06-10
 description: >
 related_templates:
@@ -291,4 +291,4 @@ The partnership will generate revenue through [specific model], with projected r
 
 ## Related Templates
 - [Discovery Call Script](04_Discovery_Call_Script.md)
-- [Partnership Agreement Template](06_Partnership_Agreement_Template.md)
+- [Partnership Agreement Template](08_Partnership_Agreement_Template.md)

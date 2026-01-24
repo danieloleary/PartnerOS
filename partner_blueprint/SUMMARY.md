@@ -33,8 +33,10 @@ This section contains templates for identifying, engaging, and onboarding high-p
 - [Discovery Call Script/Guide](II_Partner_Recruitment_Templates/04_Discovery_Call_Script.md)
 - [Partner Pitch Deck](II_Partner_Recruitment_Templates/05_Partner_Pitch_Deck.md)
 - [Partnership One-Pager](II_Partner_Recruitment_Templates/06_Partnership_One_Pager.md)
-- [ICP Alignment Tracker](II_Partner_Recruitment_Templates/07_ICP_Alignment_Tracker.md)
-- [Partner Onboarding Checklist](II_Partner_Recruitment_Templates/03_Onboarding_Checklist.md)
+- [Partnership Proposal Template](II_Partner_Recruitment_Templates/07_Partnership_Proposal_Template.md)
+- [Partnership Agreement Template](II_Partner_Recruitment_Templates/08_Partnership_Agreement_Template.md)
+- [Partner Onboarding Checklist](II_Partner_Recruitment_Templates/09_Onboarding_Checklist.md)
+- [ICP Alignment Tracker](II_Partner_Recruitment_Templates/10_ICP_Alignment_Tracker.md)
 
 ## III. Partner Enablement Templates
 - [Partner Enablement Roadmap](III_Partner_Enablement_Templates/01_Enablement_Roadmap.md)

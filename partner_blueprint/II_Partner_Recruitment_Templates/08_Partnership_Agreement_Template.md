@@ -1,7 +1,7 @@
 ---
 title: Partnership Agreement Template
 section: Recruitment
-template_number: II.6
+template_number: II.8
 last_updated: 2024-06-10
 description: >
 related_templates:
@@ -349,5 +349,5 @@ Date: [Date]
 ---
 
 ## Related Templates
-- [Partnership Proposal Template](05_Partnership_Proposal_Template.md)
-- [Partnership Launch Plan](07_Partnership_Launch_Plan.md)
+- [Partnership Proposal Template](07_Partnership_Proposal_Template.md)
+- [Partner Onboarding Checklist](09_Onboarding_Checklist.md)

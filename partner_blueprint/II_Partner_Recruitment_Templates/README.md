@@ -11,8 +11,11 @@ Use these resources to engage prospective partners and guide them from initial c
 ## Templates
 - [Partner Recruitment Email Sequence](01_Recruitment_Email_Sequence.md)
 - [Outreach/Engagement Sequence](02_Outreach_Engagement_Sequence.md)
-- [Partner Onboarding Checklist](03_Onboarding_Checklist.md)
+- [Partner Qualification Framework](03_Partner_Qualification_Framework.md)
 - [Discovery Call Script/Guide](04_Discovery_Call_Script.md)
 - [Partner Pitch Deck](05_Partner_Pitch_Deck.md)
 - [Partnership One-Pager](06_Partnership_One_Pager.md)
-- [ICP Alignment Tracker](07_ICP_Alignment_Tracker.md)
+- [Partnership Proposal Template](07_Partnership_Proposal_Template.md)
+- [Partnership Agreement Template](08_Partnership_Agreement_Template.md)
+- [Partner Onboarding Checklist](09_Onboarding_Checklist.md)
+- [ICP Alignment Tracker](10_ICP_Alignment_Tracker.md)

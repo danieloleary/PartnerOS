@@ -162,9 +162,9 @@ This partner strategy plan integrates with the following templates from the Part
 - [Recruitment Email Sequence](partner_blueprint/II_Partner_Recruitment_Templates/01_Recruitment_Email_Sequence.md) - Partner outreach
 - [Outreach Engagement Sequence](partner_blueprint/II_Partner_Recruitment_Templates/02_Outreach_Engagement_Sequence.md) - Partner engagement
 - [Partner Qualification Framework](partner_blueprint/II_Partner_Recruitment_Templates/03_Partner_Qualification_Framework.md) - Capability assessment
-- [Onboarding Checklist](partner_blueprint/II_Partner_Recruitment_Templates/03_Onboarding_Checklist.md) - Partner onboarding
+- [Onboarding Checklist](partner_blueprint/II_Partner_Recruitment_Templates/09_Onboarding_Checklist.md) - Partner onboarding
 - [Discovery Call Script](partner_blueprint/II_Partner_Recruitment_Templates/04_Discovery_Call_Script.md) - Opportunity discovery
-- [ICP Alignment Tracker](partner_blueprint/II_Partner_Recruitment_Templates/07_ICP_Alignment_Tracker.md) - Customer targeting
+- [ICP Alignment Tracker](partner_blueprint/II_Partner_Recruitment_Templates/10_ICP_Alignment_Tracker.md) - Customer targeting
 
 ### Enablement Templates
 - [Enablement Roadmap](partner_blueprint/III_Partner_Enablement_Templates/01_Enablement_Roadmap.md) - Training and certification

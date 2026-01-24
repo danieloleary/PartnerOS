@@ -1,7 +1,7 @@
 ---
 title: ICP Alignment Tracker (Strategic Account Mapping)
 section: Recruitment
-template_number: II.7
+template_number: II.10
 last_updated: 2024-06-10
 description: >
 related_templates:
