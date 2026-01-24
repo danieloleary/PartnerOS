@@ -1,7 +1,7 @@
 ---
 title: Partner Onboarding Checklist
 section: Recruitment
-template_number: II.3
+template_number: II.9
 last_updated: 2024-06-10
 description: >
 related_templates:
@@ -101,5 +101,5 @@ This checklist is designed to operationalize and streamline the ramp-up process 
 ---
 
 ## Related Templates
-- [ICP Alignment Tracker](07_ICP_Alignment_Tracker.md)
+- [ICP Alignment Tracker](10_ICP_Alignment_Tracker.md)
 - [Partner Recruitment Email Sequence](01_Recruitment_Email_Sequence.md)

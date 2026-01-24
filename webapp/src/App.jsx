@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import html2pdf from "html2pdf.js";
 
 const App = () => {
   const [docs, setDocs] = React.useState([]);
@@ -7,7 +8,9 @@ const App = () => {
   const [searchResults, setSearchResults] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchQuery, setSearchQuery] = React.useState('');
+  const [isExporting, setIsExporting] = React.useState(false);
   const searchIndexRef = React.useRef(null);
+  const contentRef = React.useRef(null);
 
   // Section configuration with icons and descriptions
   const sections = {
@@ -221,6 +224,37 @@ const App = () => {
     }
   };
 
+  const handleExportPDF = async () => {
+    if (!currentDoc || !contentRef.current) return;
+
+    setIsExporting(true);
+
+    try {
+      const element = contentRef.current;
+      const filename = `${currentDoc.title.replace(/[^a-z0-9]/gi, '_')}.pdf`;
+
+      const opt = {
+        margin: [0.75, 0.75, 0.75, 0.75],
+        filename: filename,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+
+      await html2pdf().set(opt).from(element).save();
+    } catch (err) {
+      console.error('Error exporting PDF:', err);
+      alert('Failed to export PDF. Please try again.');
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
+  const handlePrint = () => {
+    window.print();
+  };
+
   const renderDocList = () => {
     if (isLoading) {
       return <div className="loading">Loading documents...</div>;
@@ -319,8 +353,29 @@ const App = () => {
 
     return (
       <div className="doc-content">
-        <h1>{doc.title}</h1>
-        {renderMarkdown(doc.content)}
+        <div className="doc-header">
+          <h1>{doc.title}</h1>
+          <div className="export-buttons">
+            <button
+              onClick={handleExportPDF}
+              disabled={isExporting}
+              className="export-btn"
+              title="Download as PDF"
+            >
+              {isExporting ? 'Exporting...' : 'Export PDF'}
+            </button>
+            <button
+              onClick={handlePrint}
+              className="export-btn print-btn"
+              title="Print document"
+            >
+              Print
+            </button>
+          </div>
+        </div>
+        <div ref={contentRef} className="doc-body">
+          {renderMarkdown(doc.content)}
+        </div>
       </div>
     );
   };

@@ -18,15 +18,22 @@ keywords: ["partner ecosystem welcome", "ground running whether", "prioritize te
 ### II. Partner Recruitment Templates
 - [Partner Recruitment Email Sequence](II_Partner_Recruitment_Templates/01_Recruitment_Email_Sequence.md)
 - [Outreach/Engagement Sequence](II_Partner_Recruitment_Templates/02_Outreach_Engagement_Sequence.md)
-- [Partner Onboarding Checklist](II_Partner_Recruitment_Templates/03_Onboarding_Checklist.md)
+- [Partner Qualification Framework](II_Partner_Recruitment_Templates/03_Partner_Qualification_Framework.md)
 - [Discovery Call Script/Guide](II_Partner_Recruitment_Templates/04_Discovery_Call_Script.md)
 - [Partner Pitch Deck](II_Partner_Recruitment_Templates/05_Partner_Pitch_Deck.md)
 - [Partnership One-Pager](II_Partner_Recruitment_Templates/06_Partnership_One_Pager.md)
-- [ICP Alignment Tracker](II_Partner_Recruitment_Templates/07_ICP_Alignment_Tracker.md)
+- [Partnership Proposal Template](II_Partner_Recruitment_Templates/07_Partnership_Proposal_Template.md)
+- [Partnership Agreement Template](II_Partner_Recruitment_Templates/08_Partnership_Agreement_Template.md)
+- [Partner Onboarding Checklist](II_Partner_Recruitment_Templates/09_Onboarding_Checklist.md)
+- [ICP Alignment Tracker](II_Partner_Recruitment_Templates/10_ICP_Alignment_Tracker.md)
 
 ### III. Partner Enablement Templates
 - [Partner Enablement Roadmap](III_Partner_Enablement_Templates/01_Enablement_Roadmap.md)
 - [Partner Training Deck](III_Partner_Enablement_Templates/02_Training_Deck.md)
+- [Partner Certification Program](III_Partner_Enablement_Templates/03_Partner_Certification_Program.md)
+- [Co-Marketing Playbook](III_Partner_Enablement_Templates/04_Co_Marketing_Playbook.md)
+- [Technical Integration Guide](III_Partner_Enablement_Templates/05_Technical_Integration_Guide.md)
+- [Partner Success Metrics](III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md)
 
 ### Appendices
 - [Glossary](Appendix_Glossary.md)
