@@ -30,6 +30,10 @@ keywords: ["partner ecosystem welcome", "ground running whether", "prioritize te
 ### III. Partner Enablement Templates
 - [Partner Enablement Roadmap](III_Partner_Enablement_Templates/01_Enablement_Roadmap.md)
 - [Partner Training Deck](III_Partner_Enablement_Templates/02_Training_Deck.md)
+- [Partner Certification Program](III_Partner_Enablement_Templates/03_Partner_Certification_Program.md)
+- [Co-Marketing Playbook](III_Partner_Enablement_Templates/04_Co_Marketing_Playbook.md)
+- [Technical Integration Guide](III_Partner_Enablement_Templates/05_Technical_Integration_Guide.md)
+- [Partner Success Metrics](III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md)
 
 ### Appendices
 - [Glossary](Appendix_Glossary.md)
