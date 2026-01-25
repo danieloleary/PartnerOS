@@ -12,6 +12,7 @@ const App = () => {
   const [fillMode, setFillMode] = React.useState(false);
   const [fieldValues, setFieldValues] = React.useState({});
   const [savedDrafts, setSavedDrafts] = React.useState({});
+  const [selectedKeyword, setSelectedKeyword] = React.useState(null);
   const searchIndexRef = React.useRef(null);
   const contentRef = React.useRef(null);
 
@@ -390,15 +391,137 @@ const App = () => {
   // Get placeholders for current document
   const currentPlaceholders = currentDoc ? extractPlaceholders(currentDoc.content) : [];
 
+  // Parse keywords from frontmatter string like '["keyword1", "keyword2"]'
+  const parseKeywords = (keywordsStr) => {
+    if (!keywordsStr) return [];
+    try {
+      // Handle JSON array format
+      if (keywordsStr.startsWith('[')) {
+        return JSON.parse(keywordsStr.replace(/'/g, '"'));
+      }
+      // Handle comma-separated format
+      return keywordsStr.split(',').map(k => k.trim().replace(/["\[\]]/g, ''));
+    } catch {
+      return [];
+    }
+  };
+
+  // Get all unique keywords across all documents
+  const allKeywords = React.useMemo(() => {
+    const keywords = new Set();
+    docs.forEach(doc => {
+      const docKeywords = parseKeywords(doc.frontmatter?.keywords);
+      docKeywords.forEach(k => {
+        if (k && k.length > 2) keywords.add(k);
+      });
+    });
+    return Array.from(keywords).sort();
+  }, [docs]);
+
+  // Get related templates for current document
+  const getRelatedTemplates = (doc) => {
+    if (!doc) return [];
+
+    const related = [];
+    const docKeywords = parseKeywords(doc.frontmatter?.keywords);
+
+    // Find documents with overlapping keywords
+    docs.forEach(otherDoc => {
+      if (otherDoc.path === doc.path) return;
+
+      const otherKeywords = parseKeywords(otherDoc.frontmatter?.keywords);
+      const overlap = docKeywords.filter(k => otherKeywords.includes(k));
+
+      if (overlap.length > 0) {
+        related.push({
+          doc: otherDoc,
+          score: overlap.length,
+          sharedKeywords: overlap
+        });
+      }
+    });
+
+    // Also include documents from the same section
+    docs.forEach(otherDoc => {
+      if (otherDoc.path === doc.path) return;
+      if (related.find(r => r.doc.path === otherDoc.path)) return;
+
+      // Check if same section (e.g., both in Strategy Templates)
+      const docSection = doc.path.split('/')[2];
+      const otherSection = otherDoc.path.split('/')[2];
+
+      if (docSection === otherSection && docSection?.includes('Templates')) {
+        related.push({
+          doc: otherDoc,
+          score: 0.5,
+          sharedKeywords: ['same section']
+        });
+      }
+    });
+
+    // Sort by score and limit to top 5
+    return related.sort((a, b) => b.score - a.score).slice(0, 5);
+  };
+
+  // Filter documents by selected keyword
+  const filteredDocs = React.useMemo(() => {
+    if (!selectedKeyword) return docs;
+    return docs.filter(doc => {
+      const docKeywords = parseKeywords(doc.frontmatter?.keywords);
+      return docKeywords.some(k => k.toLowerCase().includes(selectedKeyword.toLowerCase()));
+    });
+  }, [docs, selectedKeyword]);
+
+  const relatedTemplates = currentDoc ? getRelatedTemplates(currentDoc) : [];
+
+  const renderKeywordFilter = () => {
+    if (allKeywords.length === 0) return null;
+
+    return (
+      <div className="keyword-filter">
+        <div className="keyword-filter-header">
+          <span>Filter by topic</span>
+          {selectedKeyword && (
+            <button
+              className="clear-filter"
+              onClick={() => setSelectedKeyword(null)}
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <div className="keyword-pills">
+          {allKeywords.slice(0, 12).map(keyword => (
+            <button
+              key={keyword}
+              className={`keyword-pill ${selectedKeyword === keyword ? 'active' : ''}`}
+              onClick={() => setSelectedKeyword(selectedKeyword === keyword ? null : keyword)}
+            >
+              {keyword}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const renderDocList = () => {
     if (isLoading) {
       return <div className="loading">Loading documents...</div>;
     }
 
+    const docsToShow = selectedKeyword ? filteredDocs : docs;
+
     return (
       <div className="doc-list">
+        {renderKeywordFilter()}
+        {selectedKeyword && (
+          <div className="filter-status">
+            Showing {filteredDocs.length} templates matching "{selectedKeyword}"
+          </div>
+        )}
         {Object.entries(sections).map(([key, section]) => {
-          const sectionDocs = docs.filter(doc => doc.section === key);
+          const sectionDocs = docsToShow.filter(doc => doc.section === key);
           if (sectionDocs.length === 0) return null;
 
           return (
@@ -407,7 +530,7 @@ const App = () => {
               <p>{section.description}</p>
               <ul>
                 {sectionDocs.map(doc => (
-                  <li key={doc.path}>
+                  <li key={doc.path} className={currentDoc?.path === doc.path ? 'active' : ''}>
                     <a
                       href="#"
                       onClick={(e) => {
@@ -569,6 +692,28 @@ const App = () => {
                   Clear Draft
                 </button>
               )}
+            </div>
+          </div>
+        )}
+
+        {relatedTemplates.length > 0 && !fillMode && (
+          <div className="related-templates">
+            <h3>Related Templates</h3>
+            <div className="related-list">
+              {relatedTemplates.map(({ doc: relDoc, sharedKeywords }) => (
+                <a
+                  key={relDoc.path}
+                  href="#"
+                  className="related-item"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentDoc(relDoc);
+                  }}
+                >
+                  <span className="related-title">{relDoc.title}</span>
+                  <span className="related-section">{sections[relDoc.section]?.icon} {sections[relDoc.section]?.title}</span>
+                </a>
+              ))}
             </div>
           </div>
         )}
