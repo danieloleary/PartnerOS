@@ -1,0 +1,50 @@
+name: Partner Exit
+description: Gracefully end a partnership while protecting customers and brand
+tags: [exit, termination, wind-down]
+
+prerequisites:
+  - Exit decision approved by leadership
+  - Legal counsel consulted
+  - Communication plan drafted
+
+steps:
+  - name: Exit Planning
+    template: I_Partner_Strategy_Templates/08_Partner_Exit_Checklist.md
+    prompt: |
+      Work through the exit planning phase.
+      Assemble the exit team, review contracts, assess financials.
+      Identify customer impact and transition requirements.
+      This is the most critical step - be thorough.
+
+  - name: Customer Assessment
+    template: II_Partner_Recruitment_Templates/10_ICP_Alignment_Tracker.md
+    prompt: |
+      Review all joint customers and pipeline affected by this exit.
+      For each customer, determine transition ownership and plan.
+      Prioritize customer communication based on impact.
+
+  - name: Performance Documentation
+    template: III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md
+    prompt: |
+      Document final partnership performance metrics.
+      This creates a record for post-exit review and future reference.
+      Be objective and factual.
+
+  - name: Execute Wind-Down
+    template: I_Partner_Strategy_Templates/08_Partner_Exit_Checklist.md
+    prompt: |
+      Execute the transition phase of the exit checklist.
+      Track system access revocation, marketing wind-down,
+      customer transitions, and financial close-out.
+      Document everything.
+
+success_criteria:
+  - All customers transitioned
+  - Systems access revoked
+  - Financial matters settled
+  - Post-exit review completed
+
+warnings:
+  - Ensure legal review before any external communication
+  - Document all conversations and decisions
+  - Prioritize customer continuity above all else

@@ -1,0 +1,14 @@
+# Partner Agent Dependencies
+
+# AI Providers (install one or both)
+anthropic>=0.18.0
+openai>=1.0.0
+
+# Configuration
+pyyaml>=6.0
+
+# CLI formatting (optional but recommended)
+rich>=13.0.0
+
+# CLI framework (optional)
+typer>=0.9.0

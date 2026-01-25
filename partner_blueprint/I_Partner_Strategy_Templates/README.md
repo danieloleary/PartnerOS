@@ -16,3 +16,4 @@ A clear strategy sets the tone for your partner program. The templates in this s
 - [Partner Strategy Plan](05_Partner_Strategy_Plan.md)
 - [Partner Program Architecture](06_Program_Architecture.md)
 - [Internal Alignment Playbook](07_Internal_Alignment_Playbook.md)
+- [Partner Exit Checklist](08_Partner_Exit_Checklist.md)

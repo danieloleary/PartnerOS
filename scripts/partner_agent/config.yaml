@@ -1,0 +1,59 @@
+# Partner Agent Configuration
+
+# AI Provider: anthropic or openai
+provider: anthropic
+model: claude-sonnet-4-20250514
+
+# Alternative OpenAI config:
+# provider: openai
+# model: gpt-4-turbo-preview
+
+# Template library location (relative to this file)
+templates_dir: ../../partner_blueprint
+
+# State storage for partner progress
+state_dir: ./state
+
+# Your company context (used to pre-fill templates)
+company:
+  name: "[Your Company]"
+  product: "[Your Product]"
+  value_prop: "[Your Value Proposition]"
+  website: "[Your Website]"
+
+# Partner tier definitions
+tiers:
+  - name: Strategic
+    revenue_threshold: 1000000
+    certification_required: true
+  - name: Gold
+    revenue_threshold: 500000
+    certification_required: true
+  - name: Silver
+    revenue_threshold: 100000
+    certification_required: false
+  - name: Registered
+    revenue_threshold: 0
+    certification_required: false
+
+# QBR schedule by tier
+qbr_frequency:
+  Strategic: monthly
+  Gold: quarterly
+  Silver: semi-annually
+  Registered: annually
+
+# Custom prompts (optional overrides)
+prompts:
+  system: |
+    You are a Partnership Expert Agent helping to run partnership playbooks.
+    Guide users through filling out templates with actionable, specific advice.
+    Ask clarifying questions when needed. Be concise.
+
+  template_intro: |
+    Let's work through the {template_name} together.
+    I'll ask you questions and fill in the template as we go.
+
+  step_complete: |
+    Great progress! Here's what we've captured for this section.
+    Ready to move to the next step?

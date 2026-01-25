@@ -15,3 +15,4 @@ Our enablement assets accelerate partner onboarding and help teams develop the s
 - [Co-Marketing Playbook](04_Co_Marketing_Playbook.md)
 - [Technical Integration Guide](05_Technical_Integration_Guide.md)
 - [Partner Success Metrics](06_Partner_Success_Metrics.md)
+- [Partner QBR Template](07_Partner_QBR_Template.md)

@@ -1,0 +1,46 @@
+name: New Partner Recruitment
+description: End-to-end playbook for identifying, qualifying, and signing a new partner
+tags: [recruitment, new-partner, sales]
+
+steps:
+  - name: Ideal Partner Profile Check
+    template: I_Partner_Strategy_Templates/02_Ideal_Partner_Profile.md
+    prompt: |
+      Let's evaluate if this potential partner matches our Ideal Partner Profile.
+      Ask about their company size, target market, technical capabilities,
+      and strategic alignment. Score them against our IPP criteria.
+
+  - name: Partner Qualification
+    template: II_Partner_Recruitment_Templates/03_Partner_Qualification_Framework.md
+    prompt: |
+      Now let's run through our qualification framework.
+      Assess their business model, go-to-market fit, resource commitment,
+      and strategic value. Identify any red flags or concerns.
+
+  - name: Discovery Call Prep
+    template: II_Partner_Recruitment_Templates/04_Discovery_Call_Script.md
+    prompt: |
+      Prepare for the discovery call with this partner.
+      Customize the script based on what we know about them.
+      Identify the key questions we need answered.
+
+  - name: Partnership Pitch
+    template: II_Partner_Recruitment_Templates/05_Partner_Pitch_Deck.md
+    prompt: |
+      Let's customize our partnership pitch for this specific partner.
+      Highlight the value proposition most relevant to their business.
+      Prepare responses to likely objections.
+
+  - name: Partnership Proposal
+    template: II_Partner_Recruitment_Templates/07_Partnership_Proposal_Template.md
+    prompt: |
+      Draft the formal partnership proposal.
+      Include partnership structure, commitments, timeline, and next steps.
+      Make it compelling but realistic.
+
+success_criteria:
+  - Partner signs Letter of Intent
+  - Key stakeholders aligned on both sides
+  - Clear path to agreement signing
+
+next_playbook: onboard
