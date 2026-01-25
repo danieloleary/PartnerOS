@@ -231,5 +231,5 @@ Call to Action:
 ---
 
 ## Related Templates
-- [Recruitment Email Sequence](01_Recruitment_Email_Sequence.md)
-- [Discovery Call Script](04_Discovery_Call_Script.md)
+- [Recruitment Email Sequence](01-email-sequence.md)
+- [Discovery Call Script](04-discovery-call.md)

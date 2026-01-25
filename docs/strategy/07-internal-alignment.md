@@ -237,5 +237,5 @@ Use this template to align internal teams and stakeholders with partner program 
 ---
 
 ## Related Templates
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md)
-- [Program Architecture](06_Program_Architecture.md)
+- [Partner Strategy Plan](05-strategy-plan.md)
+- [Program Architecture](06-program-architecture.md)

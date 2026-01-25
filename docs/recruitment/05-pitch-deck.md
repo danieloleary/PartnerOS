@@ -77,4 +77,4 @@ A strategic, visually engaging presentation to communicate your partner program'
 ---
 
 ## Related Templates
-- [Partnership One-Pager](06_Partnership_One_Pager.md)
+- [Partnership One-Pager](06-one-pager.md)

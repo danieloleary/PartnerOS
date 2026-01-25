@@ -6,9 +6,9 @@ last_updated: 2024-06-10
 description: >
   A comprehensive checklist for professionally and gracefully ending partner relationships while protecting your brand, customers, and legal interests.
 related_templates:
-  - 03_3C_4C_Evaluation_Framework.md
-  - ../III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md
-  - 05_Partner_Strategy_Plan.md
+  - 03-evaluation-framework.md
+  - ../enablement/06-success-metrics.md
+  - 05-strategy-plan.md
 keywords: ["partner exit", "termination", "offboarding", "partnership end", "wind-down", "transition", "decommission"]
 ---
 
@@ -493,6 +493,6 @@ Retain the following for [X years] post-exit:
 
 ## Related Templates
 
-- [3C/4C Evaluation Framework](03_3C_4C_Evaluation_Framework.md) - For evaluating partnerships
-- [Partner Success Metrics](../III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md) - Performance tracking
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md) - Strategic context for exits
+- [3C/4C Evaluation Framework](03-evaluation-framework.md) - For evaluating partnerships
+- [Partner Success Metrics](../enablement/06-success-metrics.md) - Performance tracking
+- [Partner Strategy Plan](05-strategy-plan.md) - Strategic context for exits

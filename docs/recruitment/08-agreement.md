@@ -349,5 +349,5 @@ Date: [Date]
 ---
 
 ## Related Templates
-- [Partnership Proposal Template](07_Partnership_Proposal_Template.md)
-- [Partner Onboarding Checklist](09_Onboarding_Checklist.md)
+- [Partnership Proposal Template](07-proposal.md)
+- [Partner Onboarding Checklist](09-onboarding.md)

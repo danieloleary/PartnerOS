@@ -14,9 +14,9 @@ Get up and running with PartnerOS in under 5 minutes.
     **Best for:** Teams who want to browse and use templates directly.
 
     1. Browse the template sections:
-        - [Strategy](../strategy/) - Define your partnership vision
-        - [Recruitment](../recruitment/) - Find and sign partners
-        - [Enablement](../enablement/) - Train and support partners
+        - [Strategy](../strategy/index.md) - Define your partnership vision
+        - [Recruitment](../recruitment/index.md) - Find and sign partners
+        - [Enablement](../enablement/index.md) - Train and support partners
 
     2. Find a template that fits your need
 
@@ -109,7 +109,7 @@ graph LR
 1. Start with [Partner Business Case](../strategy/01-partner-business-case.md)
 2. Define your [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md)
 3. Design your [Program Architecture](../strategy/06-program-architecture.md)
-4. Begin [Recruitment](../recruitment/)
+4. Begin [Recruitment](../recruitment/index.md)
 
 ### For Signing a Specific Partner
 

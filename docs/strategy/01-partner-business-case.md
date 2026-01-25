@@ -226,5 +226,5 @@ Use this template to build a business case for launching, expanding, or refining
 ---
 
 ## Related Templates
-- [Ideal Partner Profile](02_Ideal_Partner_Profile.md)
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md)
+- [Ideal Partner Profile](02-ideal-partner-profile.md)
+- [Partner Strategy Plan](05-strategy-plan.md)

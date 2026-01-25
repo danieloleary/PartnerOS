@@ -200,6 +200,6 @@ Use this template to systematically identify and track alignment between your IC
 ---
 
 ## Related Templates
-- [Partner Qualification Framework](03_Partner_Qualification_Framework.md)
-- [Partnership Proposal Template](07_Partnership_Proposal_Template.md)
-- [Ideal Partner Profile](../I_Partner_Strategy_Templates/02_Ideal_Partner_Profile.md)
+- [Partner Qualification Framework](03-qualification-framework.md)
+- [Partnership Proposal Template](07-proposal.md)
+- [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md)

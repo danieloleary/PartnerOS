@@ -18,7 +18,7 @@ Build world-class partner programs with battle-tested templates, proven playbook
   <a href="getting-started/quick-start/" class="cta-button primary">
     :material-rocket-launch: Get Started
   </a>
-  <a href="strategy/" class="cta-button secondary">
+  <a href="strategy/index.md" class="cta-button secondary">
     :material-file-document-multiple: Browse Templates
   </a>
 </div>
@@ -52,7 +52,7 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 Define your partnership vision, ideal partner profile, and program architecture.
 
-[8 Templates →](strategy/){ .md-button }
+[8 Templates →](strategy/index.md){ .md-button }
 
 </div>
 
@@ -99,7 +99,7 @@ AI-powered assistant that runs playbooks end-to-end.
 python agent.py --playbook recruit --partner "Acme Corp"
 ```
 
-[Learn More →](agent/){ .md-button }
+[Learn More →](agent/index.md){ .md-button }
 
 ---
 
@@ -135,7 +135,7 @@ End partnerships professionally.
 
 === "Browse Templates"
 
-    1. Pick a lifecycle phase: [Strategy](strategy/), [Recruitment](recruitment/), or [Enablement](enablement/)
+    1. Pick a lifecycle phase: [Strategy](strategy/index.md), [Recruitment](recruitment/index.md), or [Enablement](enablement/index.md)
     2. Find the template you need
     3. Copy, customize, and use
 

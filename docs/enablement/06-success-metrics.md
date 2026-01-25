@@ -407,6 +407,6 @@ NEXT MONTH FOCUS
 ---
 
 ## Related Templates
-- [Partner Enablement Roadmap](01_Enablement_Roadmap.md)
-- [Partner Certification Program](03_Partner_Certification_Program.md)
-- [Co-Marketing Playbook](04_Co_Marketing_Playbook.md)
+- [Partner Enablement Roadmap](01-roadmap.md)
+- [Partner Certification Program](03-certification.md)
+- [Co-Marketing Playbook](04-co-marketing.md)

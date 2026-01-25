@@ -246,6 +246,6 @@ A succinct, compelling "leave-behind" or introductory document that quickly comm
 ---
 
 ## Related Templates
-- [Partner Pitch Deck](05_Partner_Pitch_Deck.md)
-- [Partnership Proposal Template](07_Partnership_Proposal_Template.md)
-- [Recruitment Email Sequence](01_Recruitment_Email_Sequence.md)
+- [Partner Pitch Deck](05-pitch-deck.md)
+- [Partnership Proposal Template](07-proposal.md)
+- [Recruitment Email Sequence](01-email-sequence.md)

@@ -262,5 +262,5 @@ Use this framework to objectively evaluate potential partners and assess ongoing
 ---
 
 ## Related Templates
-- [Ideal Partner Profile](02_Ideal_Partner_Profile.md)
-- [Partner Strategy Plan](05_Partner_Strategy_Plan.md)
+- [Ideal Partner Profile](02-ideal-partner-profile.md)
+- [Partner Strategy Plan](05-strategy-plan.md)

@@ -232,7 +232,7 @@ Add new playbooks by creating YAML files in `playbooks/`:
 name: Partner Renewal
 description: Annual partnership renewal process
 steps:
-  - template: III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md
+  - template: III_Partner_Enablement_Templates/06-success-metrics.md
     name: Review Metrics
     prompt: |
       Review the partner's performance over the past year.

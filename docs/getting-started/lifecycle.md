@@ -127,7 +127,7 @@ When it's time to part ways, do it gracefully:
 
 ## Partner Agent Playbooks
 
-The [Partner Agent](../agent/) automates these workflows:
+The [Partner Agent](../agent/index.md) automates these workflows:
 
 | Playbook | Lifecycle Phase | Templates Used |
 |----------|-----------------|----------------|
@@ -137,4 +137,4 @@ The [Partner Agent](../agent/) automates these workflows:
 | `expand` | Growth | Business Case → Strategy → Co-Marketing |
 | `exit` | Termination | Exit Checklist → Customer Transition |
 
-[Learn about Partner Agent →](../agent/)
+[Learn about Partner Agent →](../agent/index.md)

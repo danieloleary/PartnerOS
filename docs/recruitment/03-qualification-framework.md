@@ -246,5 +246,5 @@ Use this template to systematically evaluate potential partners and determine th
 ---
 
 ## Related Templates
-- [Outreach Engagement Sequence](02_Outreach_Engagement_Sequence.md)
-- [Discovery Call Script](04_Discovery_Call_Script.md)
+- [Outreach Engagement Sequence](02-outreach-engagement.md)
+- [Discovery Call Script](04-discovery-call.md)

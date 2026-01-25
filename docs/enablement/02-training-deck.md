@@ -125,4 +125,4 @@ Core Slides & Enhanced Prompts/Content:
 ---
 
 ## Related Templates
-- [Partner Enablement Roadmap](01_Enablement_Roadmap.md)
+- [Partner Enablement Roadmap](01-roadmap.md)

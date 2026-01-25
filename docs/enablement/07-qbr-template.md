@@ -6,8 +6,8 @@ last_updated: 2024-06-10
 description: >
   A structured template for conducting productive quarterly business reviews with partners to assess performance, align on strategy, and plan future initiatives.
 related_templates:
-  - 06_Partner_Success_Metrics.md
-  - ../II_Partner_Recruitment_Templates/10_ICP_Alignment_Tracker.md
+  - 06-success-metrics.md
+  - ../recruitment/10-icp-tracker.md
   - ../I_Partner_Strategy_Templates/03_Partner_Program_Charter.md
 keywords: ["QBR", "quarterly review", "business review", "partner performance", "executive alignment", "strategic planning", "partner health"]
 ---
@@ -363,6 +363,6 @@ Use this template to conduct structured quarterly business reviews with your par
 
 ## Related Templates
 
-- [Partner Success Metrics](06_Partner_Success_Metrics.md)
-- [ICP Alignment Tracker](../II_Partner_Recruitment_Templates/10_ICP_Alignment_Tracker.md)
-- [Partner Program Charter](../I_Partner_Strategy_Templates/03_Partner_Program_Charter.md)
+- [Partner Success Metrics](06-success-metrics.md)
+- [ICP Alignment Tracker](../recruitment/10-icp-tracker.md)
+- [Partner Program Charter](../strategy/06-program-architecture.md)

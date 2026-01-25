@@ -386,6 +386,6 @@ Example:
 ---
 
 ## Related Templates
-- [Partner Enablement Roadmap](01_Enablement_Roadmap.md)
-- [Partner Training Deck](02_Training_Deck.md)
-- [Partner Success Metrics](06_Partner_Success_Metrics.md)
+- [Partner Enablement Roadmap](01-roadmap.md)
+- [Partner Training Deck](02-training-deck.md)
+- [Partner Success Metrics](06-success-metrics.md)

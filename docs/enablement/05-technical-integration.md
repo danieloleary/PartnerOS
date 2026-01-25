@@ -497,6 +497,6 @@ Before going live, integrations must meet:
 ---
 
 ## Related Templates
-- [Partner Enablement Roadmap](01_Enablement_Roadmap.md)
-- [Partner Certification Program](03_Partner_Certification_Program.md)
-- [Partner Success Metrics](06_Partner_Success_Metrics.md)
+- [Partner Enablement Roadmap](01-roadmap.md)
+- [Partner Certification Program](03-certification.md)
+- [Partner Success Metrics](06-success-metrics.md)
