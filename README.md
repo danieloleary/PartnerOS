@@ -1,57 +1,89 @@
----
-title: Partner Ecosystem Blueprint
-keywords: ["scaling strategic partnerships", "distills best practices", "help companies design", "partner templates", "PDF export", "fillable templates"]
----
-# Partner Ecosystem Blueprint
+# PartnerOS
 
-The **Partner Ecosystem Blueprint** is a collection of templates, playbooks, and reference material for building and scaling strategic partnerships. It distills best practices into actionable documents that help companies design and operationalize successful partner programs.
+The complete playbook for building and scaling strategic partnerships.
 
-## Features
+[![Deploy Docs](https://github.com/danieloleary/PartnerOS/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/danieloleary/PartnerOS/actions/workflows/deploy-docs.yml)
 
-- **25 Templates** across Strategy (8), Recruitment (10), and Enablement (7) phases
-- **Fillable Templates** - Enter your company details and export customized documents
-- **PDF Export & Print** - Download or print any template
-- **Draft Saving** - Your work is saved locally and persists across sessions
-- **Full-Text Search** - Find content across all templates instantly
-- **Partner Agent** - AI-powered assistant to run partnership playbooks (coming soon)
+## Overview
 
-## Directory Overview
+PartnerOS provides **25 battle-tested templates** and an **AI-powered Partner Agent** to help you build world-class partner programs.
 
-```
-PartnerOS/
-├── partner_blueprint/           # Main template library
-│   ├── I_Partner_Strategy_Templates/    (8 templates)
-│   ├── II_Partner_Recruitment_Templates/ (10 templates)
-│   └── III_Partner_Enablement_Templates/ (7 templates)
-├── webapp/                      # React web application
-├── scripts/                     # Python automation tools
-│   └── partner_agent/           # AI agent for running playbooks
-└── Example_Partner_Plan.md      # Sample filled-out plan
-```
+| Phase | Templates | Description |
+|-------|-----------|-------------|
+| **Strategy** | 8 | Define your partnership vision and program architecture |
+| **Recruitment** | 10 | Find, qualify, pitch, and sign the right partners |
+| **Enablement** | 7 | Train, support, and grow successful partners |
 
 ## Quick Start
 
-### Using the Web Application
+### Browse Templates Online
+
+**[danieloleary.github.io/PartnerOS](https://danieloleary.github.io/PartnerOS)**
+
+### Run Locally
 
 ```bash
-cd webapp
-npm install
-npm run dev
+git clone https://github.com/danieloleary/PartnerOS.git
+cd PartnerOS
+pip install mkdocs-material
+mkdocs serve
 ```
 
-Open http://localhost:5173 in your browser.
+Open http://localhost:8000
 
-### Template Workflow
+### Deploy Your Own
 
-1. **Browse** - Navigate templates by section (Strategy, Recruitment, Enablement)
-2. **Search** - Use the search bar to find specific topics
-3. **Fill** - Click "Fill Template" to enter your company details
-4. **Save** - Click "Save Draft" to preserve your work
-5. **Export** - Download as PDF or print when ready
+```bash
+mkdocs gh-deploy
+```
 
-## Template Sections
+## Partner Agent
 
-### I. Partner Strategy (8 Templates)
+AI-powered assistant that runs playbooks end-to-end.
+
+```bash
+cd scripts/partner_agent
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY=sk-ant-...
+python agent.py
+```
+
+### Playbooks
+
+| Playbook | Description |
+|----------|-------------|
+| `recruit` | Sign a new partner (IPP → Qualification → Discovery → Pitch → Proposal) |
+| `onboard` | Activate a signed partner (Agreement → Checklist → Enablement → Training) |
+| `qbr` | Quarterly business review (Metrics → ICP Review → QBR Doc → Strategy) |
+| `expand` | Grow an existing partnership (Business Case → Strategy → Co-Marketing) |
+| `exit` | End a partnership gracefully (Exit Checklist → Customer Transition) |
+
+### Run from GitHub
+
+1. Add `ANTHROPIC_API_KEY` to repository secrets
+2. Go to **Actions** → **Run Partner Agent**
+3. Click **Run workflow** and select a playbook
+
+## Project Structure
+
+```
+PartnerOS/
+├── docs/                    # MkDocs documentation site
+│   ├── strategy/           # Strategy templates (8)
+│   ├── recruitment/        # Recruitment templates (10)
+│   ├── enablement/         # Enablement templates (7)
+│   └── agent/              # Partner Agent docs
+├── scripts/
+│   └── partner_agent/      # AI agent for playbooks
+├── partner_blueprint/       # Original template source
+├── mkdocs.yml              # Site configuration
+└── .github/workflows/      # CI/CD
+```
+
+## Templates
+
+### Strategy (8)
+
 - Partner Business Case
 - Ideal Partner Profile
 - 3C/4C Evaluation Framework
@@ -59,98 +91,36 @@ Open http://localhost:5173 in your browser.
 - Partner Strategy Plan
 - Program Architecture
 - Internal Alignment Playbook
-- **Partner Exit Checklist** *(new)*
+- Partner Exit Checklist
 
-### II. Partner Recruitment (10 Templates)
-- Recruitment Email Sequence
-- Outreach Engagement Sequence
-- Partner Qualification Framework
+### Recruitment (10)
+
+- Email Sequences
+- Outreach Engagement
+- Qualification Framework
 - Discovery Call Script
 - Partner Pitch Deck
 - Partnership One-Pager
-- Partnership Proposal Template
-- Partnership Agreement Template
-- Partner Onboarding Checklist
+- Proposal Template
+- Agreement Template
+- Onboarding Checklist
 - ICP Alignment Tracker
 
-### III. Partner Enablement (7 Templates)
+### Enablement (7)
+
 - Enablement Roadmap
 - Training Deck
-- Partner Certification Program
+- Certification Program
 - Co-Marketing Playbook
 - Technical Integration Guide
-- Partner Success Metrics
-- **Partner QBR Template** *(new)*
-
-## Scripts
-
-### Template Management
-```bash
-# Create a new template
-python3 scripts/manage_templates.py create <section> <number> "<title>"
-
-# Enhance template with AI
-OPENAI_API_KEY=xxx python3 scripts/manage_templates.py enhance <path> --model gpt-4
-
-# Regenerate file list
-python3 scripts/generate_file_list.py
-
-# Lint markdown files
-python3 scripts/lint_markdown.py
-```
-
-## Partner Agent
-
-AI-powered assistant for running partnership playbooks end-to-end.
-
-### Setup
-```bash
-cd scripts/partner_agent
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-ant-...  # or OPENAI_API_KEY
-```
-
-### Usage
-```bash
-# Interactive mode
-python agent.py
-
-# Run a specific playbook
-python agent.py --playbook recruit --partner "Acme Corp"
-
-# View partner status
-python agent.py --status
-```
-
-### Playbooks
-
-| Playbook | Description | Templates |
-|----------|-------------|-----------|
-| `recruit` | Sign a new partner | IPP → Qualification → Discovery → Pitch → Proposal |
-| `onboard` | Activate a signed partner | Agreement → Checklist → Enablement → Training |
-| `qbr` | Quarterly business review | Metrics → ICP Review → QBR Doc → Strategy |
-| `expand` | Grow an existing partnership | Business Case → Strategy → Co-Marketing |
-| `exit` | End a partnership gracefully | Exit Checklist → Customer Transition |
-
-See [Partner Agent README](scripts/partner_agent/README.md) for full documentation.
-
-## Development
-
-### Tech Stack
-- **Frontend**: React 18, Vite 5, marked.js, DOMPurify, Lunr.js
-- **Export**: html2pdf.js
-- **Automation**: Python 3, GitHub Actions
-
-### CI/CD
-- `update_file_list.yml` - Auto-regenerates file list on markdown changes
-- `markdown_lint.yml` - Validates markdown formatting
+- Success Metrics
+- QBR Template
 
 ## Contributing
 
-Contributions welcome! When adding templates:
-1. Include YAML frontmatter (`title`, `section`, `description`, `keywords`)
-2. Follow the existing template structure
-3. The GitHub Action will auto-update `webapp/file_list.json`
+1. Fork the repository
+2. Add templates to `docs/` with YAML frontmatter
+3. Submit a pull request
 
 ## License
 
