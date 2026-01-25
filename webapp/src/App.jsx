@@ -9,8 +9,75 @@ const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [isExporting, setIsExporting] = React.useState(false);
+  const [fillMode, setFillMode] = React.useState(false);
+  const [fieldValues, setFieldValues] = React.useState({});
+  const [savedDrafts, setSavedDrafts] = React.useState({});
+  const [selectedKeyword, setSelectedKeyword] = React.useState(null);
   const searchIndexRef = React.useRef(null);
   const contentRef = React.useRef(null);
+
+  // Placeholder patterns to detect in templates
+  const PLACEHOLDER_PATTERNS = [
+    /\[Your Company\]/g,
+    /\[Your Company's\]/g,
+    /\[Company Name\]/g,
+    /\[Partner Name\]/g,
+    /\[Partner Company\]/g,
+    /\[Product Name\]/g,
+    /\[Product\/Solution\]/g,
+    /\[Date\]/g,
+    /\[Target Market\]/g,
+    /\[Industry\]/g,
+    /\[Region\]/g,
+    /\[Contact Name\]/g,
+    /\[Email\]/g,
+    /\[Phone\]/g,
+    /\[Revenue Target\]/g,
+    /\[Partner Manager\]/g,
+    /\[Fiscal Year\]/g,
+    /\$X+K?M?/g,
+    /X%/g,
+    /\[insert [^\]]+\]/gi,
+    /\[add [^\]]+\]/gi,
+    /\[specify [^\]]+\]/gi,
+  ];
+
+  // Extract unique placeholders from content
+  const extractPlaceholders = (content) => {
+    if (!content) return [];
+    const found = new Set();
+
+    PLACEHOLDER_PATTERNS.forEach(pattern => {
+      const matches = content.match(pattern);
+      if (matches) {
+        matches.forEach(match => found.add(match));
+      }
+    });
+
+    return Array.from(found).sort();
+  };
+
+  // Load saved drafts from localStorage on mount
+  React.useEffect(() => {
+    try {
+      const saved = localStorage.getItem('partnerOS_drafts');
+      if (saved) {
+        setSavedDrafts(JSON.parse(saved));
+      }
+    } catch (err) {
+      console.error('Error loading saved drafts:', err);
+    }
+  }, []);
+
+  // Load field values when document changes
+  React.useEffect(() => {
+    if (currentDoc && savedDrafts[currentDoc.path]) {
+      setFieldValues(savedDrafts[currentDoc.path]);
+    } else {
+      setFieldValues({});
+    }
+    setFillMode(false);
+  }, [currentDoc, savedDrafts]);
 
   // Section configuration with icons and descriptions
   const sections = {
@@ -255,15 +322,206 @@ const App = () => {
     window.print();
   };
 
+  // Handle field value changes
+  const handleFieldChange = (placeholder, value) => {
+    setFieldValues(prev => ({
+      ...prev,
+      [placeholder]: value
+    }));
+  };
+
+  // Save draft to localStorage
+  const saveDraft = () => {
+    if (!currentDoc) return;
+
+    const newDrafts = {
+      ...savedDrafts,
+      [currentDoc.path]: fieldValues
+    };
+
+    try {
+      localStorage.setItem('partnerOS_drafts', JSON.stringify(newDrafts));
+      setSavedDrafts(newDrafts);
+      alert('Draft saved successfully!');
+    } catch (err) {
+      console.error('Error saving draft:', err);
+      alert('Failed to save draft. Please try again.');
+    }
+  };
+
+  // Clear draft for current document
+  const clearDraft = () => {
+    if (!currentDoc) return;
+
+    if (!confirm('Are you sure you want to clear this draft?')) return;
+
+    const newDrafts = { ...savedDrafts };
+    delete newDrafts[currentDoc.path];
+
+    try {
+      localStorage.setItem('partnerOS_drafts', JSON.stringify(newDrafts));
+      setSavedDrafts(newDrafts);
+      setFieldValues({});
+    } catch (err) {
+      console.error('Error clearing draft:', err);
+    }
+  };
+
+  // Apply field values to content
+  const applyFieldValues = (content) => {
+    if (!content || Object.keys(fieldValues).length === 0) return content;
+
+    let result = content;
+    Object.entries(fieldValues).forEach(([placeholder, value]) => {
+      if (value) {
+        // Escape special regex characters in placeholder
+        const escaped = placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(escaped, 'g');
+        result = result.replace(regex, value);
+      }
+    });
+
+    return result;
+  };
+
+  // Check if current document has a saved draft
+  const hasSavedDraft = currentDoc && savedDrafts[currentDoc.path] &&
+    Object.keys(savedDrafts[currentDoc.path]).length > 0;
+
+  // Get placeholders for current document
+  const currentPlaceholders = currentDoc ? extractPlaceholders(currentDoc.content) : [];
+
+  // Parse keywords from frontmatter string like '["keyword1", "keyword2"]'
+  const parseKeywords = (keywordsStr) => {
+    if (!keywordsStr) return [];
+    try {
+      // Handle JSON array format
+      if (keywordsStr.startsWith('[')) {
+        return JSON.parse(keywordsStr.replace(/'/g, '"'));
+      }
+      // Handle comma-separated format
+      return keywordsStr.split(',').map(k => k.trim().replace(/["\[\]]/g, ''));
+    } catch {
+      return [];
+    }
+  };
+
+  // Get all unique keywords across all documents
+  const allKeywords = React.useMemo(() => {
+    const keywords = new Set();
+    docs.forEach(doc => {
+      const docKeywords = parseKeywords(doc.frontmatter?.keywords);
+      docKeywords.forEach(k => {
+        if (k && k.length > 2) keywords.add(k);
+      });
+    });
+    return Array.from(keywords).sort();
+  }, [docs]);
+
+  // Get related templates for current document
+  const getRelatedTemplates = (doc) => {
+    if (!doc) return [];
+
+    const related = [];
+    const docKeywords = parseKeywords(doc.frontmatter?.keywords);
+
+    // Find documents with overlapping keywords
+    docs.forEach(otherDoc => {
+      if (otherDoc.path === doc.path) return;
+
+      const otherKeywords = parseKeywords(otherDoc.frontmatter?.keywords);
+      const overlap = docKeywords.filter(k => otherKeywords.includes(k));
+
+      if (overlap.length > 0) {
+        related.push({
+          doc: otherDoc,
+          score: overlap.length,
+          sharedKeywords: overlap
+        });
+      }
+    });
+
+    // Also include documents from the same section
+    docs.forEach(otherDoc => {
+      if (otherDoc.path === doc.path) return;
+      if (related.find(r => r.doc.path === otherDoc.path)) return;
+
+      // Check if same section (e.g., both in Strategy Templates)
+      const docSection = doc.path.split('/')[2];
+      const otherSection = otherDoc.path.split('/')[2];
+
+      if (docSection === otherSection && docSection?.includes('Templates')) {
+        related.push({
+          doc: otherDoc,
+          score: 0.5,
+          sharedKeywords: ['same section']
+        });
+      }
+    });
+
+    // Sort by score and limit to top 5
+    return related.sort((a, b) => b.score - a.score).slice(0, 5);
+  };
+
+  // Filter documents by selected keyword
+  const filteredDocs = React.useMemo(() => {
+    if (!selectedKeyword) return docs;
+    return docs.filter(doc => {
+      const docKeywords = parseKeywords(doc.frontmatter?.keywords);
+      return docKeywords.some(k => k.toLowerCase().includes(selectedKeyword.toLowerCase()));
+    });
+  }, [docs, selectedKeyword]);
+
+  const relatedTemplates = currentDoc ? getRelatedTemplates(currentDoc) : [];
+
+  const renderKeywordFilter = () => {
+    if (allKeywords.length === 0) return null;
+
+    return (
+      <div className="keyword-filter">
+        <div className="keyword-filter-header">
+          <span>Filter by topic</span>
+          {selectedKeyword && (
+            <button
+              className="clear-filter"
+              onClick={() => setSelectedKeyword(null)}
+            >
+              Clear
+            </button>
+          )}
+        </div>
+        <div className="keyword-pills">
+          {allKeywords.slice(0, 12).map(keyword => (
+            <button
+              key={keyword}
+              className={`keyword-pill ${selectedKeyword === keyword ? 'active' : ''}`}
+              onClick={() => setSelectedKeyword(selectedKeyword === keyword ? null : keyword)}
+            >
+              {keyword}
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const renderDocList = () => {
     if (isLoading) {
       return <div className="loading">Loading documents...</div>;
     }
 
+    const docsToShow = selectedKeyword ? filteredDocs : docs;
+
     return (
       <div className="doc-list">
+        {renderKeywordFilter()}
+        {selectedKeyword && (
+          <div className="filter-status">
+            Showing {filteredDocs.length} templates matching "{selectedKeyword}"
+          </div>
+        )}
         {Object.entries(sections).map(([key, section]) => {
-          const sectionDocs = docs.filter(doc => doc.section === key);
+          const sectionDocs = docsToShow.filter(doc => doc.section === key);
           if (sectionDocs.length === 0) return null;
 
           return (
@@ -272,7 +530,7 @@ const App = () => {
               <p>{section.description}</p>
               <ul>
                 {sectionDocs.map(doc => (
-                  <li key={doc.path}>
+                  <li key={doc.path} className={currentDoc?.path === doc.path ? 'active' : ''}>
                     <a
                       href="#"
                       onClick={(e) => {
@@ -322,21 +580,35 @@ const App = () => {
     );
   };
 
-  const renderMarkdown = (content) => {
+  const renderMarkdown = (content, applyValues = false) => {
     console.log('renderMarkdown called with content (first 100 chars):', content ? content.substring(0, 100) : 'null');
     if (!content) return null;
 
     try {
+      // Apply field values if requested
+      const processedContent = applyValues ? applyFieldValues(content) : content;
+
       // Use marked to convert markdown to HTML
-      const html = marked.parse(content);
-      
+      let html = marked.parse(processedContent);
+
+      // Highlight unfilled placeholders when in fill mode
+      if (fillMode && !applyValues) {
+        currentPlaceholders.forEach(placeholder => {
+          if (!fieldValues[placeholder]) {
+            const escaped = placeholder.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(escaped, 'g');
+            html = html.replace(regex, `<span class="unfilled-placeholder">${placeholder}</span>`);
+          }
+        });
+      }
+
       // Sanitize the HTML to prevent XSS
       const sanitized = DOMPurify.sanitize(html);
-      
+
       console.log('renderMarkdown successfully processed content.');
 
       return (
-        <div 
+        <div
           className="markdown-content"
           dangerouslySetInnerHTML={{ __html: sanitized }}
         />
@@ -351,11 +623,24 @@ const App = () => {
     console.log('renderDocContent called with doc:', doc);
     if (!doc) return null;
 
+    const placeholders = extractPlaceholders(doc.content);
+    const hasPlaceholders = placeholders.length > 0;
+    const filledCount = Object.values(fieldValues).filter(v => v).length;
+
     return (
       <div className="doc-content">
         <div className="doc-header">
           <h1>{doc.title}</h1>
           <div className="export-buttons">
+            {hasPlaceholders && (
+              <button
+                onClick={() => setFillMode(!fillMode)}
+                className={`export-btn ${fillMode ? 'fill-active' : ''}`}
+                title={fillMode ? 'View template' : 'Fill template'}
+              >
+                {fillMode ? 'View Mode' : 'Fill Template'}
+              </button>
+            )}
             <button
               onClick={handleExportPDF}
               disabled={isExporting}
@@ -373,8 +658,68 @@ const App = () => {
             </button>
           </div>
         </div>
+
+        {fillMode && hasPlaceholders && (
+          <div className="fill-panel">
+            <div className="fill-panel-header">
+              <h3>Fill Template Fields</h3>
+              <span className="fill-progress">
+                {filledCount} / {placeholders.length} filled
+              </span>
+            </div>
+            <p className="fill-instructions">
+              Enter values for each placeholder. Your changes are highlighted in the preview below.
+            </p>
+            <div className="fill-fields">
+              {placeholders.map(placeholder => (
+                <div key={placeholder} className="fill-field">
+                  <label>{placeholder}</label>
+                  <input
+                    type="text"
+                    value={fieldValues[placeholder] || ''}
+                    onChange={(e) => handleFieldChange(placeholder, e.target.value)}
+                    placeholder={`Enter value for ${placeholder}`}
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="fill-actions">
+              <button onClick={saveDraft} className="fill-btn save-btn">
+                Save Draft
+              </button>
+              {hasSavedDraft && (
+                <button onClick={clearDraft} className="fill-btn clear-btn">
+                  Clear Draft
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+
+        {relatedTemplates.length > 0 && !fillMode && (
+          <div className="related-templates">
+            <h3>Related Templates</h3>
+            <div className="related-list">
+              {relatedTemplates.map(({ doc: relDoc, sharedKeywords }) => (
+                <a
+                  key={relDoc.path}
+                  href="#"
+                  className="related-item"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentDoc(relDoc);
+                  }}
+                >
+                  <span className="related-title">{relDoc.title}</span>
+                  <span className="related-section">{sections[relDoc.section]?.icon} {sections[relDoc.section]?.title}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div ref={contentRef} className="doc-body">
-          {renderMarkdown(doc.content)}
+          {renderMarkdown(doc.content, fillMode && filledCount > 0)}
         </div>
       </div>
     );

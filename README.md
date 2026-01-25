@@ -1,60 +1,118 @@
 ---
 title: Partner Ecosystem Blueprint
-keywords: ["scaling strategic partnerships", "distills best practices", "help companies design", "welcome feel free", "simple http server", "source materials directories"]
+keywords: ["scaling strategic partnerships", "distills best practices", "help companies design", "partner templates", "PDF export", "fillable templates"]
 ---
 # Partner Ecosystem Blueprint
 
-The **Partner Ecosystem Blueprint** is a collection of templates, playbooks, and reference material for building and scaling strategic partnerships. It distills best practices into actionable documents that can help companies design and operationalize a successful partner program.
+The **Partner Ecosystem Blueprint** is a collection of templates, playbooks, and reference material for building and scaling strategic partnerships. It distills best practices into actionable documents that help companies design and operationalize successful partner programs.
 
-## Directory overview
+## Features
 
-- `partner_blueprint/` – main home of the blueprint. Each file is broken out by topic (strategy, recruitment, enablement) so you can work through the templates individually. The [`SUMMARY.md`](partner_blueprint/SUMMARY.md) file lists everything in order.
-- `ORIGINAL_BLUEPRINT.md` – a single, consolidated markdown document containing the entire blueprint in one file.
-- `Source Materials/Blueprint_Enhanced_V2.md` – updated blueprint document with enhanced formatting and metadata.
+- **23 Templates** across Strategy (7), Recruitment (10), and Enablement (6) phases
+- **Fillable Templates** - Enter your company details and export customized documents
+- **PDF Export & Print** - Download or print any template
+- **Draft Saving** - Your work is saved locally and persists across sessions
+- **Full-Text Search** - Find content across all templates instantly
 
-## Using this repository
+## Directory Overview
 
-Start with the quick start guide inside `partner_blueprint/00_Quick_Start_Guide.md` or browse the table of contents in `SUMMARY.md`. All documents are Markdown files and can be edited or extended as needed.
+```
+PartnerOS/
+├── partner_blueprint/           # Main template library
+│   ├── I_Partner_Strategy_Templates/    (7 templates)
+│   ├── II_Partner_Recruitment_Templates/ (10 templates)
+│   └── III_Partner_Enablement_Templates/ (6 templates)
+├── webapp/                      # React web application
+├── scripts/                     # Python automation tools
+└── Example_Partner_Plan.md      # Sample filled-out plan
+```
 
-### Frontend webapp
-A React-based viewer lives in the `webapp/` directory. Run `npm install` to set up dependencies and `npm run dev` to start a local dev server via Vite. `file_list.json` is regenerated automatically by our GitHub Action or by running `python3 scripts/generate_file_list.py`.
+## Quick Start
 
-For managing the markdown templates themselves, use `scripts/manage_templates.py`. This script can create new templates, update existing ones, apply bulk revisions across the `partner_blueprint/` directory, and even enhance a template with the OpenAI API via the `enhance` command. Set the `OPENAI_API_KEY` environment variable before running the `enhance` subcommand.
+### Using the Web Application
 
-### Contributing
+```bash
+cd webapp
+npm install
+npm run dev
+```
 
-Contributions are welcome! Feel free to open an issue or submit a pull request if you want to suggest improvements, fix typos, or add additional resources.
-When adding new markdown templates, include YAML frontmatter with keys like `title`, `description`, and `section`. Commit your changes and the GitHub Action will regenerate `webapp/file_list.json`.
+Open http://localhost:5173 in your browser.
 
-## The Strategic Partner Ecosystem Blueprint
+### Template Workflow
 
-This repository contains the documentation and templates for building a comprehensive and strategic partner ecosystem blueprint.
+1. **Browse** - Navigate templates by section (Strategy, Recruitment, Enablement)
+2. **Search** - Use the search bar to find specific topics
+3. **Fill** - Click "Fill Template" to enter your company details
+4. **Save** - Click "Save Draft" to preserve your work
+5. **Export** - Download as PDF or print when ready
 
-The blueprint is designed to provide a structured approach to partner strategy, recruitment, and enablement, helping organizations build and scale successful partner programs.
+## Template Sections
 
-It includes a set of markdown templates and guides covering key aspects of the partner lifecycle.
+### I. Partner Strategy (7 Templates)
+- Partner Business Case
+- Ideal Partner Profile
+- 3C/4C Evaluation Framework
+- Competitive Differentiation
+- Partner Strategy Plan
+- Program Architecture
+- Internal Alignment Playbook
 
-## Web Application
+### II. Partner Recruitment (10 Templates)
+- Recruitment Email Sequence
+- Outreach Engagement Sequence
+- Partner Qualification Framework
+- Discovery Call Script
+- Partner Pitch Deck
+- Partnership One-Pager
+- Partnership Proposal Template
+- Partnership Agreement Template
+- Partner Onboarding Checklist
+- ICP Alignment Tracker
 
-A simple web application is included in the `webapp/` directory to browse the blueprint documents in a more user-friendly interface.
+### III. Partner Enablement (6 Templates)
+- Enablement Roadmap
+- Training Deck
+- Partner Certification Program
+- Co-Marketing Playbook
+- Technical Integration Guide
+- Partner Success Metrics
 
-### Features:
+## Scripts
 
-*   Browse documents organized by sections.
-*   Search for content across all documents.
-*   View markdown documents with enhanced rendering (syntax highlighting, etc.).
-*   Navigate between related documents via links.
+### Template Management
+```bash
+# Create a new template
+python3 scripts/manage_templates.py create <section> <number> "<title>"
 
-### How to Run the Web Application:
+# Enhance template with AI
+OPENAI_API_KEY=xxx python3 scripts/manage_templates.py enhance <path> --model gpt-4
 
-1.  Ensure you have Python 3 installed.
-2.  Open a terminal and navigate to the root directory of this repository.
-3.  Run a simple HTTP server from the root directory using Python:
+# Regenerate file list
+python3 scripts/generate_file_list.py
 
-    ```bash
-    python3 -m http.server 8000
-    ```
+# Lint markdown files
+python3 scripts/lint_markdown.py
+```
 
-4.  Open your web browser and go to `http://localhost:8000/webapp/`.
+## Development
 
-The web application will load the documents from the `partner_blueprint/` and `Source Materials/` directories and display them in the browser.
+### Tech Stack
+- **Frontend**: React 18, Vite 5, marked.js, DOMPurify, Lunr.js
+- **Export**: html2pdf.js
+- **Automation**: Python 3, GitHub Actions
+
+### CI/CD
+- `update_file_list.yml` - Auto-regenerates file list on markdown changes
+- `markdown_lint.yml` - Validates markdown formatting
+
+## Contributing
+
+Contributions welcome! When adding templates:
+1. Include YAML frontmatter (`title`, `section`, `description`, `keywords`)
+2. Follow the existing template structure
+3. The GitHub Action will auto-update `webapp/file_list.json`
+
+## License
+
+MIT License
