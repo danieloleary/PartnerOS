@@ -1,0 +1,88 @@
+name: Run Partner Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      playbook:
+        description: 'Playbook to run'
+        required: true
+        type: choice
+        options:
+          - recruit
+          - onboard
+          - qbr
+          - expand
+          - exit
+      partner:
+        description: 'Partner name'
+        required: true
+        type: string
+      provider:
+        description: 'AI Provider'
+        required: true
+        type: choice
+        default: 'anthropic'
+        options:
+          - anthropic
+          - openai
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          cd scripts/partner_agent
+          pip install -r requirements.txt
+
+      - name: Configure agent
+        run: |
+          cd scripts/partner_agent
+          # Update config with selected provider
+          sed -i "s/^provider:.*/provider: ${{ inputs.provider }}/" config.yaml
+
+          # Set model based on provider
+          if [ "${{ inputs.provider }}" = "anthropic" ]; then
+            sed -i "s/^model:.*/model: claude-sonnet-4-20250514/" config.yaml
+          else
+            sed -i "s/^model:.*/model: gpt-4-turbo-preview/" config.yaml
+          fi
+
+      - name: Run Partner Agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cd scripts/partner_agent
+          python agent.py --playbook ${{ inputs.playbook }} --partner "${{ inputs.partner }}" 2>&1 | tee output.log
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-output-${{ inputs.partner }}-${{ inputs.playbook }}
+          path: |
+            scripts/partner_agent/output.log
+            scripts/partner_agent/state/
+          retention-days: 30
+
+      - name: Summary
+        run: |
+          echo "## Partner Agent Run Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Playbook:** ${{ inputs.playbook }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Partner:** ${{ inputs.partner }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Provider:** ${{ inputs.provider }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Output" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          tail -100 scripts/partner_agent/output.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
