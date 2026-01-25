@@ -6,7 +6,6 @@ repo_name: danieloleary/PartnerOS
 
 theme:
   name: material
-  custom_dir: docs/overrides
   logo: assets/logo.svg
   favicon: assets/favicon.svg
 
