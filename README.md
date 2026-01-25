@@ -8,22 +8,24 @@ The **Partner Ecosystem Blueprint** is a collection of templates, playbooks, and
 
 ## Features
 
-- **23 Templates** across Strategy (7), Recruitment (10), and Enablement (6) phases
+- **25 Templates** across Strategy (8), Recruitment (10), and Enablement (7) phases
 - **Fillable Templates** - Enter your company details and export customized documents
 - **PDF Export & Print** - Download or print any template
 - **Draft Saving** - Your work is saved locally and persists across sessions
 - **Full-Text Search** - Find content across all templates instantly
+- **Partner Agent** - AI-powered assistant to run partnership playbooks (coming soon)
 
 ## Directory Overview
 
 ```
 PartnerOS/
 ├── partner_blueprint/           # Main template library
-│   ├── I_Partner_Strategy_Templates/    (7 templates)
+│   ├── I_Partner_Strategy_Templates/    (8 templates)
 │   ├── II_Partner_Recruitment_Templates/ (10 templates)
-│   └── III_Partner_Enablement_Templates/ (6 templates)
+│   └── III_Partner_Enablement_Templates/ (7 templates)
 ├── webapp/                      # React web application
 ├── scripts/                     # Python automation tools
+│   └── partner_agent/           # AI agent for running playbooks
 └── Example_Partner_Plan.md      # Sample filled-out plan
 ```
 
@@ -49,7 +51,7 @@ Open http://localhost:5173 in your browser.
 
 ## Template Sections
 
-### I. Partner Strategy (7 Templates)
+### I. Partner Strategy (8 Templates)
 - Partner Business Case
 - Ideal Partner Profile
 - 3C/4C Evaluation Framework
@@ -57,6 +59,7 @@ Open http://localhost:5173 in your browser.
 - Partner Strategy Plan
 - Program Architecture
 - Internal Alignment Playbook
+- **Partner Exit Checklist** *(new)*
 
 ### II. Partner Recruitment (10 Templates)
 - Recruitment Email Sequence
@@ -70,13 +73,14 @@ Open http://localhost:5173 in your browser.
 - Partner Onboarding Checklist
 - ICP Alignment Tracker
 
-### III. Partner Enablement (6 Templates)
+### III. Partner Enablement (7 Templates)
 - Enablement Roadmap
 - Training Deck
 - Partner Certification Program
 - Co-Marketing Playbook
 - Technical Integration Guide
 - Partner Success Metrics
+- **Partner QBR Template** *(new)*
 
 ## Scripts
 
@@ -94,6 +98,41 @@ python3 scripts/generate_file_list.py
 # Lint markdown files
 python3 scripts/lint_markdown.py
 ```
+
+## Partner Agent
+
+AI-powered assistant for running partnership playbooks end-to-end.
+
+### Setup
+```bash
+cd scripts/partner_agent
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY=sk-ant-...  # or OPENAI_API_KEY
+```
+
+### Usage
+```bash
+# Interactive mode
+python agent.py
+
+# Run a specific playbook
+python agent.py --playbook recruit --partner "Acme Corp"
+
+# View partner status
+python agent.py --status
+```
+
+### Playbooks
+
+| Playbook | Description | Templates |
+|----------|-------------|-----------|
+| `recruit` | Sign a new partner | IPP → Qualification → Discovery → Pitch → Proposal |
+| `onboard` | Activate a signed partner | Agreement → Checklist → Enablement → Training |
+| `qbr` | Quarterly business review | Metrics → ICP Review → QBR Doc → Strategy |
+| `expand` | Grow an existing partnership | Business Case → Strategy → Co-Marketing |
+| `exit` | End a partnership gracefully | Exit Checklist → Customer Transition |
+
+See [Partner Agent README](scripts/partner_agent/README.md) for full documentation.
 
 ## Development
 
