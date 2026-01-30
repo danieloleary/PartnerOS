@@ -45,45 +45,6 @@ try:
 except ImportError:
     OPENAI_AVAILABLE = False
 
-try:
-    import requests
-    REQUESTS_AVAILABLE = True
-except ImportError:
-    REQUESTS_AVAILABLE = False
-
-
-class OllamaClient:
-    """Local Ollama LLM client."""
-    
-    def __init__(self, endpoint: str = "http://localhost:11434", model: str = "llama3.2:3b"):
-        self.endpoint = endpoint.rstrip('/')
-        self.model = model
-    
-    def chat(self, messages: list, system_prompt: str = None) -> str:
-        """Send chat request to local Ollama."""
-        ollama_messages = []
-        
-        if system_prompt:
-            ollama_messages.append({"role": "system", "content": system_prompt})
-        
-        ollama_messages.extend(messages)
-        
-        try:
-            response = requests.post(
-                f"{self.endpoint}/api/chat",
-                json={
-                    "model": self.model,
-                    "messages": ollama_messages,
-                    "stream": False
-                },
-                timeout=120
-            )
-            response.raise_for_status()
-            data = response.json()
-            return data.get("message", {}).get("content", "[No response]")
-        except Exception as e:
-            return f"[Ollama error: {e}]"
-
 
 class PartnerAgent:
     """Main agent class for running partnership playbooks."""
@@ -112,19 +73,6 @@ class PartnerAgent:
     def _init_llm(self):
         """Initialize LLM client based on configuration."""
         provider = self.config.get("provider", "anthropic")
-        ollama_endpoint = os.environ.get("OLLAMA_ENDPOINT", "http://localhost:11434")
-        ollama_model = os.environ.get("OLLAMA_MODEL", "llama3.2:3b")
-
-        # Try Ollama first if available
-        if provider == "ollama" or (provider == "auto" and REQUESTS_AVAILABLE):
-            try:
-                # Quick health check
-                resp = requests.get(f"{ollama_endpoint}/api/tags", timeout=5)
-                if resp.status_code == 200:
-                    self._print_success(f"Using local Ollama: {ollama_model}")
-                    return OllamaClient(endpoint=ollama_endpoint, model=ollama_model)
-            except:
-                pass
 
         if provider == "anthropic":
             if not ANTHROPIC_AVAILABLE:
@@ -295,10 +243,6 @@ class PartnerAgent:
 
         provider = self.config.get("provider", "anthropic")
         model = self.config.get("model", "claude-sonnet-4-20250514")
-
-        # Handle Ollama
-        if isinstance(self.llm_client, OllamaClient):
-            return self.llm_client.chat(messages, system_prompt)
 
         if provider == "anthropic":
             response = self.llm_client.messages.create(
