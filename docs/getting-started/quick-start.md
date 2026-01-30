@@ -138,7 +138,7 @@ graph LR
 
 <div class="grid">
 
-<div class="card" markdown>
+<div class="card">
 
 ### 📚 Learn the Lifecycle
 Understand the partner journey from strategy to enablement.
@@ -147,7 +147,7 @@ Understand the partner journey from strategy to enablement.
 
 </div>
 
-<div class="card" markdown>
+<div class="card">
 
 ### ✏️ Customize Templates
 Tips for making templates your own.

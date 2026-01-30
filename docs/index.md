@@ -18,7 +18,7 @@ Build world-class partner programs with battle-tested templates, proven playbook
   <a href="getting-started/quick-start/" class="cta-button primary">
     🚀 Get Started
   </a>
-  <a href="strategy/" class="cta-button secondary">
+  <a href="strategy/index.md" class="cta-button secondary">
     📁 Browse Templates
   </a>
 </div>
@@ -49,19 +49,19 @@ Build world-class partner programs with battle-tested templates, proven playbook
 <div class="card">
   <h3>💡 Strategy</h3>
   <p>Define your partnership vision, ideal partner profile, and program architecture.</p>
-  <p><a class="md-button" href="strategy/">8 Templates →</a></p>
+  <p><a class="md-button" href="strategy/index.md">8 Templates →</a></p>
 </div>
 
 <div class="card">
   <h3>🤝 Recruitment</h3>
   <p>Find, qualify, pitch, and sign the right partners for your ecosystem.</p>
-  <p><a class="md-button" href="recruitment/">10 Templates →</a></p>
+  <p><a class="md-button" href="recruitment/index.md">10 Templates →</a></p>
 </div>
 
 <div class="card">
   <h3>🎓 Enablement</h3>
   <p>Onboard, train, and empower partners to sell and deliver successfully.</p>
-  <p><a class="md-button" href="enablement/">7 Templates →</a></p>
+  <p><a class="md-button" href="enablement/index.md">7 Templates →</a></p>
 </div>
 
 </div>
@@ -87,7 +87,7 @@ AI-powered assistant that runs playbooks end-to-end.
 python agent.py --playbook recruit --partner "Acme Corp"
 ```
 
-[Learn More →](agent/){ .md-button }
+[Learn More →](agent/index.md){ .md-button }
 
 ---
 
@@ -95,25 +95,25 @@ python agent.py --playbook recruit --partner "Acme Corp"
 
 <div class="template-grid">
 
-<a href="strategy/02-ideal-partner-profile/" class="template-card" markdown>
-#### Ideal Partner Profile
+<div class="template-card">
+#### [Ideal Partner Profile](strategy/02-ideal-partner-profile/)
 Define exactly who you're looking for in a partner.
-</a>
+</div>
 
-<a href="recruitment/04-discovery-call/" class="template-card" markdown>
-#### Discovery Call Script
+<div class="template-card">
+#### [Discovery Call Script](recruitment/04-discovery-call/)
 Structured questions for qualifying partners.
-</a>
+</div>
 
-<a href="enablement/07-qbr-template/" class="template-card" markdown>
-#### QBR Template
+<div class="template-card">
+#### [QBR Template](enablement/07-qbr-template/)
 Run effective quarterly business reviews.
-</a>
+</div>
 
-<a href="strategy/08-exit-checklist/" class="template-card" markdown>
-#### Exit Checklist
+<div class="template-card">
+#### [Exit Checklist](strategy/08-exit-checklist/)
 End partnerships professionally.
-</a>
+</div>
 
 </div>
 
@@ -123,7 +123,7 @@ End partnerships professionally.
 
 === "Browse Templates"
 
-    1. Pick a lifecycle phase: [Strategy](strategy/), [Recruitment](recruitment/), or [Enablement](enablement/)
+    1. Pick a lifecycle phase: [Strategy](strategy/index.md), [Recruitment](recruitment/index.md), or [Enablement](enablement/index.md)
     2. Find the template you need
     3. Copy, customize, and use
 
