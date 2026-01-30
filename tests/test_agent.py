@@ -1,14 +1,16 @@
 """Test Partner Agent functionality."""
 import os
 import sys
+from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
 # Add partner_agent to path
-sys.path.insert(0, '/Users/danieloleary/partnerOS/scripts/partner_agent')
+sys.path.insert(0, str(REPO_ROOT / 'scripts' / 'partner_agent'))
 
 def test_agent_import():
     """Verify agent can be imported."""
     try:
-        with open('/Users/danieloleary/partnerOS/scripts/partner_agent/agent.py') as f:
+        with open(REPO_ROOT / 'scripts' / 'partner_agent' / 'agent.py') as f:
             code = f.read()
         compile(code, 'agent.py', 'exec')
     except SyntaxError as e:
@@ -16,13 +18,13 @@ def test_agent_import():
 
 def test_backup_exists():
     """Verify backup was created."""
-    backup = '/Users/danieloleary/partnerOS/scripts/partner_agent/agent.py.backup'
-    assert os.path.exists(backup), "agent.py.backup not found"
+    backup = REPO_ROOT / 'scripts' / 'partner_agent' / 'agent.py.backup'
+    assert backup.exists(), "agent.py.backup not found"
 
 def test_env_example_exists():
     """Verify .env.example was created."""
-    env_file = '/Users/danieloleary/partnerOS/scripts/partner_agent/.env.example'
-    assert os.path.exists(env_file), ".env.example not found"
+    env_file = REPO_ROOT / 'scripts' / 'partner_agent' / '.env.example'
+    assert env_file.exists(), ".env.example not found"
     
     with open(env_file) as f:
         content = f.read()
