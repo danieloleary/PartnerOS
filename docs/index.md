@@ -46,34 +46,22 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 <div class="grid">
 
-<div class="card" markdown>
-
-### :material-lightbulb: Strategy
-
-Define your partnership vision, ideal partner profile, and program architecture.
-
-[8 Templates →](strategy/){ .md-button }
-
+<div class="card">
+  <h3>:material-lightbulb: Strategy</h3>
+  <p>Define your partnership vision, ideal partner profile, and program architecture.</p>
+  <p><a class="md-button" href="strategy/">8 Templates →</a></p>
 </div>
 
-<div class="card" markdown>
-
-### :material-account-plus: Recruitment
-
-Find, qualify, pitch, and sign the right partners for your ecosystem.
-
-[10 Templates →](recruitment/){ .md-button }
-
+<div class="card">
+  <h3>:material-account-plus: Recruitment</h3>
+  <p>Find, qualify, pitch, and sign the right partners for your ecosystem.</p>
+  <p><a class="md-button" href="recruitment/">10 Templates →</a></p>
 </div>
 
-<div class="card" markdown>
-
-### :material-school: Enablement
-
-Onboard, train, and empower partners to sell and deliver successfully.
-
-[7 Templates →](enablement/){ .md-button }
-
+<div class="card">
+  <h3>:material-school: Enablement</h3>
+  <p>Onboard, train, and empower partners to sell and deliver successfully.</p>
+  <p><a class="md-button" href="enablement/">7 Templates →</a></p>
 </div>
 
 </div>
