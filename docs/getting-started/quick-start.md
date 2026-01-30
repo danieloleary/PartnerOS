@@ -9,7 +9,7 @@ Get up and running with PartnerOS in under 5 minutes.
 
 ## Choose Your Path
 
-=== ":material-file-document: Just the Templates"
+=== "📄 Just the Templates"
 
     **Best for:** Teams who want to browse and use templates directly.
 
@@ -22,7 +22,7 @@ Get up and running with PartnerOS in under 5 minutes.
 
     3. Copy the content and customize for your company
 
-=== ":material-robot: Partner Agent (AI)"
+=== "🤖 Partner Agent (AI)"
 
     **Best for:** Teams who want AI-assisted playbook execution.
 
@@ -43,7 +43,7 @@ Get up and running with PartnerOS in under 5 minutes.
     python agent.py
     ```
 
-=== ":material-web: Self-Host Docs"
+=== "🌐 Self-Host Docs"
 
     **Best for:** Teams who want their own internal documentation site.
 
@@ -140,7 +140,7 @@ graph LR
 
 <div class="card" markdown>
 
-### :material-book-open-variant: Learn the Lifecycle
+### 📚 Learn the Lifecycle
 Understand the partner journey from strategy to enablement.
 
 [Partner Lifecycle →](lifecycle.md)
@@ -149,7 +149,7 @@ Understand the partner journey from strategy to enablement.
 
 <div class="card" markdown>
 
-### :material-pencil: Customize Templates
+### ✏️ Customize Templates
 Tips for making templates your own.
 
 [How to Use Templates →](how-to-use.md)

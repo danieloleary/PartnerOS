@@ -16,10 +16,10 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 <div class="cta-buttons">
   <a href="getting-started/quick-start/" class="cta-button primary">
-    :material-rocket-launch: Get Started
+    🚀 Get Started
   </a>
-  <a href="strategy/index.md" class="cta-button secondary">
-    :material-file-document-multiple: Browse Templates
+  <a href="strategy/" class="cta-button secondary">
+    📁 Browse Templates
   </a>
 </div>
 
@@ -27,11 +27,11 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 <div class="stats">
   <div class="stat">
-    <div class="stat-number">25</div>
+    <div class="stat-number">39</div>
     <div class="stat-label">Templates</div>
   </div>
   <div class="stat">
-    <div class="stat-number">5</div>
+    <div class="stat-number">8</div>
     <div class="stat-label">Playbooks</div>
   </div>
   <div class="stat">
@@ -42,45 +42,33 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 ---
 
-## :material-compass: Partner Lifecycle
+## 🧭 Partner Lifecycle
 
 <div class="grid">
 
-<div class="card" markdown>
-
-### :material-lightbulb: Strategy
-
-Define your partnership vision, ideal partner profile, and program architecture.
-
-[8 Templates →](strategy/index.md){ .md-button }
-
+<div class="card">
+  <h3>💡 Strategy</h3>
+  <p>Define your partnership vision, ideal partner profile, and program architecture.</p>
+  <p><a class="md-button" href="strategy/">8 Templates →</a></p>
 </div>
 
-<div class="card" markdown>
-
-### :material-account-plus: Recruitment
-
-Find, qualify, pitch, and sign the right partners for your ecosystem.
-
-[10 Templates →](recruitment/){ .md-button }
-
+<div class="card">
+  <h3>🤝 Recruitment</h3>
+  <p>Find, qualify, pitch, and sign the right partners for your ecosystem.</p>
+  <p><a class="md-button" href="recruitment/">10 Templates →</a></p>
 </div>
 
-<div class="card" markdown>
-
-### :material-school: Enablement
-
-Onboard, train, and empower partners to sell and deliver successfully.
-
-[7 Templates →](enablement/){ .md-button }
-
+<div class="card">
+  <h3>🎓 Enablement</h3>
+  <p>Onboard, train, and empower partners to sell and deliver successfully.</p>
+  <p><a class="md-button" href="enablement/">7 Templates →</a></p>
 </div>
 
 </div>
 
 ---
 
-## :material-robot: Partner Agent
+## 🤖 Partner Agent
 
 AI-powered assistant that runs playbooks end-to-end.
 
@@ -99,11 +87,11 @@ AI-powered assistant that runs playbooks end-to-end.
 python agent.py --playbook recruit --partner "Acme Corp"
 ```
 
-[Learn More →](agent/index.md){ .md-button }
+[Learn More →](agent/){ .md-button }
 
 ---
 
-## :material-star: Featured Templates
+## ⭐ Featured Templates
 
 <div class="template-grid">
 
@@ -131,11 +119,11 @@ End partnerships professionally.
 
 ---
 
-## :material-clock-fast: Quick Start
+## ⏱️ Quick Start
 
 === "Browse Templates"
 
-    1. Pick a lifecycle phase: [Strategy](strategy/index.md), [Recruitment](recruitment/index.md), or [Enablement](enablement/index.md)
+    1. Pick a lifecycle phase: [Strategy](strategy/), [Recruitment](recruitment/), or [Enablement](enablement/)
     2. Find the template you need
     3. Copy, customize, and use
 
@@ -160,8 +148,8 @@ End partnerships professionally.
 
 <div style="text-align: center; opacity: 0.7; margin-top: 3rem;">
 
-Built with :material-heart: for partnership teams everywhere.
+Built with ❤️ for partnership teams everywhere.
 
-[:material-github: GitHub](https://github.com/danieloleary/PartnerOS){ .md-button }
+[🐙 GitHub](https://github.com/danieloleary/PartnerOS){ .md-button }
 
 </div>

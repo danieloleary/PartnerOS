@@ -71,7 +71,7 @@ Use the template as inspiration to build your own:
 
 ## Best Practices
 
-### :material-check-circle: Do
+### ✅ Do
 
 - **Read the "How to Use" section** at the top of each template
 - **Customize for your audience** - A startup pitch differs from an enterprise pitch
@@ -79,7 +79,7 @@ Use the template as inspiration to build your own:
 - **Use your brand voice** - Adjust the tone to match your company
 - **Version control** - Keep your customized templates in Git
 
-### :material-close-circle: Don't
+### ❌ Don't
 
 - **Don't use verbatim** - Templates are starting points, not final documents
 - **Don't over-engineer** - Start simple, iterate based on feedback

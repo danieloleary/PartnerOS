@@ -16,37 +16,37 @@ Enablement templates help you activate signed partners and drive ongoing success
 <div class="template-grid">
 
 <a href="01-roadmap/" class="template-card">
-<h4>:material-road-variant: Enablement Roadmap</h4>
+<h4>🛣️ Enablement Roadmap</h4>
 <p>Plan the partner learning journey from onboarding to advanced certification.</p>
 </a>
 
 <a href="02-training-deck/" class="template-card">
-<h4>:material-school: Training Deck</h4>
+<h4>🎓 Training Deck</h4>
 <p>Core training materials for partner sales and technical teams.</p>
 </a>
 
 <a href="03-certification/" class="template-card">
-<h4>:material-certificate: Certification Program</h4>
+<h4>🏅 Certification Program</h4>
 <p>Design certification tracks with requirements and benefits.</p>
 </a>
 
 <a href="04-co-marketing/" class="template-card">
-<h4>:material-bullhorn: Co-Marketing Playbook</h4>
+<h4>📣 Co-Marketing Playbook</h4>
 <p>Joint marketing activities, MDF programs, and campaign templates.</p>
 </a>
 
 <a href="05-technical-integration/" class="template-card">
-<h4>:material-api: Technical Integration Guide</h4>
+<h4>🔌 Technical Integration Guide</h4>
 <p>API documentation, integration patterns, and technical requirements.</p>
 </a>
 
 <a href="06-success-metrics/" class="template-card">
-<h4>:material-chart-line: Success Metrics</h4>
+<h4>📈 Success Metrics</h4>
 <p>KPIs, dashboards, and measurement frameworks for partner performance.</p>
 </a>
 
 <a href="07-qbr-template/" class="template-card">
-<h4>:material-calendar-check: QBR Template</h4>
+<h4>🗓️ QBR Template</h4>
 <p>Quarterly business review structure with scorecards and action planning.</p>
 </a>
 

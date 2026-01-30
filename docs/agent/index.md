@@ -36,27 +36,27 @@ python agent.py
 <div class="template-grid">
 
 <a href="playbooks/#recruit" class="template-card">
-<h4>:material-account-plus: Recruit</h4>
+<h4>🤝 Recruit</h4>
 <p>Sign a new partner from qualification through agreement.</p>
 </a>
 
 <a href="playbooks/#onboard" class="template-card">
-<h4>:material-rocket-launch: Onboard</h4>
+<h4>🚀 Onboard</h4>
 <p>Activate a signed partner with training and first wins.</p>
 </a>
 
 <a href="playbooks/#qbr" class="template-card">
-<h4>:material-calendar-check: QBR</h4>
+<h4>🗓️ QBR</h4>
 <p>Conduct quarterly business reviews with metrics and planning.</p>
 </a>
 
 <a href="playbooks/#expand" class="template-card">
-<h4>:material-arrow-expand: Expand</h4>
+<h4>↗️ Expand</h4>
 <p>Grow an existing partnership with deeper investment.</p>
 </a>
 
 <a href="playbooks/#exit" class="template-card">
-<h4>:material-door-open: Exit</h4>
+<h4>🚪 Exit</h4>
 <p>End a partnership gracefully while protecting relationships.</p>
 </a>
 
