@@ -8,3 +8,27 @@ __pycache__/
 
 # General
 .DS_Store
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Partner Agent
+scripts/partner_agent/state/
+scripts/partner_agent/*.log
+
+# Testing
+tests/.pytest_cache/

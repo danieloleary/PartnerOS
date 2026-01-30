@@ -9,6 +9,10 @@ steps:
       Let's evaluate if this potential partner matches our Ideal Partner Profile.
       Ask about their company size, target market, technical capabilities,
       and strategic alignment. Score them against our IPP criteria.
+    # Tier Criteria: Bronze: Basic IPP match. Silver: Strong ICP fit. Gold: Strategic priority.
+    # KPIs: IPP score (target 70+), market coverage, technical capability rating.
+    # Checklist: [ ] Company size verified [ ] Target market alignment [ ] Technical assessment [ ] Strategic fit [ ] Score recorded
+    # Automation: Auto-score IPP responses, flag high-potential partners for fast-track.
 
   - name: Partner Qualification
     template: II_Partner_Recruitment_Templates/03_Partner_Qualification_Framework.md
@@ -16,6 +20,10 @@ steps:
       Now let's run through our qualification framework.
       Assess their business model, go-to-market fit, resource commitment,
       and strategic value. Identify any red flags or concerns.
+    # Tier Criteria: Bronze: Meets minimums. Silver: Exceeds 2+ criteria. Gold: Exceeds all, strategic.
+    # KPIs: Qualification score, GTM fit rating, resource commitment, strategic value score.
+    # Checklist: [ ] Business model validated [ ] GTM capability assessed [ ] Resources confirmed [ ] Strategic value evaluated [ ] Red flags documented
+    # Automation: Qualification scorecard auto-population, tier recommendation.
 
   - name: Discovery Call Prep
     template: II_Partner_Recruitment_Templates/04_Discovery_Call_Script.md
@@ -23,6 +31,10 @@ steps:
       Prepare for the discovery call with this partner.
       Customize the script based on what we know about them.
       Identify the key questions we need answered.
+    # Tier Criteria: Bronze: Standard discovery. Silver: Customized for vertical. Gold: Executive alignment.
+    # KPIs: Discovery completion rate, questions answered, stakeholder engagement.
+    # Checklist: [ ] Research completed [ ] Custom script prepared [ ] Key questions identified [ ] Stakeholders confirmed [ ] Calendar invite sent
+    # Automation: Generate discovery agenda from IPP data, schedule follow-up.
 
   - name: Partnership Pitch
     template: II_Partner_Recruitment_Templates/05_Partner_Pitch_Deck.md
@@ -30,6 +42,10 @@ steps:
       Let's customize our partnership pitch for this specific partner.
       Highlight the value proposition most relevant to their business.
       Prepare responses to likely objections.
+    # Tier Criteria: Bronze: Standard deck. Silver: Custom vertical messaging. Gold: Executive + custom everything.
+    # KPIs: Pitch completion, objection handling rate, stakeholder alignment score.
+    # Checklist: [ ] Custom deck created [ ] Value props tailored [ ] Objections prepared [ ] Stakeholders briefed [ ] Feedback collected
+    # Automation: Generate customized deck from partner profile, track engagement.
 
   - name: Partnership Proposal
     template: II_Partner_Recruitment_Templates/07_Partnership_Proposal_Template.md
@@ -37,10 +53,15 @@ steps:
       Draft the formal partnership proposal.
       Include partnership structure, commitments, timeline, and next steps.
       Make it compelling but realistic.
+    # Tier Criteria: Bronze: Standard proposal. Silver: Custom terms + enablement. Gold: Strategic terms + dedicated resources.
+    # KPIs: Proposal sent-to-close rate, negotiation cycles, average deal size.
+    # Checklist: [ ] Terms drafted [ ] Commitments defined [ ] Timeline set [ ] Legal reviewed [ ] Sent + tracked
+    # Automation: Generate proposal template, track in CRM, trigger follow-up sequence.
 
 success_criteria:
   - Partner signs Letter of Intent
   - Key stakeholders aligned on both sides
   - Clear path to agreement signing
+  - Tier assigned (Bronze/Silver/Gold)
 
 next_playbook: onboard

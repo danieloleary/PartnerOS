@@ -1,3 +1,10 @@
+---
+title: Enterprise Partner Framework
+description: Generic case study for partner program best practices
+tags: [framework, enterprise, best-practices]
+created: 2026-01-29
+---
+
 # Enterprise Partner Program Framework
 *Generic Case Study Based on Best Practices - January 2026*
 
