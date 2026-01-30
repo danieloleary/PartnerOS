@@ -16,10 +16,10 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 <div class="cta-buttons">
   <a href="getting-started/quick-start/" class="cta-button primary">
-    :material-rocket-launch: Get Started
+    🚀 Get Started
   </a>
   <a href="strategy/" class="cta-button secondary">
-    :material-file-document-multiple: Browse Templates
+    📁 Browse Templates
   </a>
 </div>
 
@@ -42,24 +42,24 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 ---
 
-## :material-compass: Partner Lifecycle
+## 🧭 Partner Lifecycle
 
 <div class="grid">
 
 <div class="card">
-  <h3>:material-lightbulb: Strategy</h3>
+  <h3>💡 Strategy</h3>
   <p>Define your partnership vision, ideal partner profile, and program architecture.</p>
   <p><a class="md-button" href="strategy/">8 Templates →</a></p>
 </div>
 
 <div class="card">
-  <h3>:material-account-plus: Recruitment</h3>
+  <h3>🤝 Recruitment</h3>
   <p>Find, qualify, pitch, and sign the right partners for your ecosystem.</p>
   <p><a class="md-button" href="recruitment/">10 Templates →</a></p>
 </div>
 
 <div class="card">
-  <h3>:material-school: Enablement</h3>
+  <h3>🎓 Enablement</h3>
   <p>Onboard, train, and empower partners to sell and deliver successfully.</p>
   <p><a class="md-button" href="enablement/">7 Templates →</a></p>
 </div>
@@ -68,7 +68,7 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 ---
 
-## :material-robot: Partner Agent
+## 🤖 Partner Agent
 
 AI-powered assistant that runs playbooks end-to-end.
 
@@ -91,7 +91,7 @@ python agent.py --playbook recruit --partner "Acme Corp"
 
 ---
 
-## :material-star: Featured Templates
+## ⭐ Featured Templates
 
 <div class="template-grid">
 
@@ -119,7 +119,7 @@ End partnerships professionally.
 
 ---
 
-## :material-clock-fast: Quick Start
+## ⏱️ Quick Start
 
 === "Browse Templates"
 
@@ -148,8 +148,8 @@ End partnerships professionally.
 
 <div style="text-align: center; opacity: 0.7; margin-top: 3rem;">
 
-Built with :material-heart: for partnership teams everywhere.
+Built with ❤️ for partnership teams everywhere.
 
-[:material-github: GitHub](https://github.com/danieloleary/PartnerOS){ .md-button }
+[🐙 GitHub](https://github.com/danieloleary/PartnerOS){ .md-button }
 
 </div>
