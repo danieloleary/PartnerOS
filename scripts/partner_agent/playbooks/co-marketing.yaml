@@ -1,0 +1,22 @@
+name: "Co-Marketing Campaign"
+description: "Run a joint marketing campaign with a partner to generate leads and awareness."
+steps:
+  - name: "Define Campaign Objectives"
+    template: "docs/enablement/co-marketing/campaign-objectives.md"
+    prompt: "Guide me through defining clear, measurable objectives for this co-marketing campaign."
+  
+  - name: "Identify Target Audience"
+    template: "docs/enablement/co-marketing/target-audience.md"
+    prompt: "Help identify the overlapping target audience between both partners."
+  
+  - name: "Develop Campaign Content"
+    template: "docs/enablement/co-marketing/content-plan.md"
+    prompt: "Outline a content plan for the campaign including messaging, channels, and timeline."
+  
+  - name: "Set Up Tracking"
+    template: "docs/enablement/co-marketing/tracking.md"
+    prompt: "Define KPIs and tracking mechanisms for the campaign."
+  
+  - name: "Execute and Measure"
+    template: "docs/enablement/co-marketing/execution.md"
+    prompt: "Create an execution checklist and measurement process."

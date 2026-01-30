@@ -1,0 +1,22 @@
+name: "Support Escalation"
+description: "Escalate partner issues to the support team effectively and track resolution."
+steps:
+  - name: "Identify Issue Severity"
+    template: "docs/enablement/support/severity-assessment.md"
+    prompt: "Help assess the severity and impact of the partner's issue."
+  
+  - name: "Document Issue Details"
+    template: "docs/enablement/support/issue-documentation.md"
+    prompt: "Gather all necessary information to document the issue clearly."
+  
+  - name: "Route to Appropriate Team"
+    template: "docs/enablement/support/routing.md"
+    prompt: "Determine which team should handle this issue based on type and severity."
+  
+  - name: "Track Resolution"
+    template: "docs/enablement/support/tracking.md"
+    prompt: "Set up tracking for the escalation and expected resolution time."
+  
+  - name: "Follow Up and Close"
+    template: "docs/enablement/support/followup.md"
+    prompt: "Create a follow-up process to confirm resolution and document lessons learned."
