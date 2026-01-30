@@ -14,27 +14,30 @@
 }
 
 /* Hero section on homepage */
+.md-typeset {
+  font-size: 18px; /* slightly larger for readability */
+  line-height: 1.65;
+}
+
 .md-typeset .hero {
   text-align: center;
-  padding: 2rem 0 3rem;
+  padding: 2.25rem 0 3.25rem;
 }
 
 .md-typeset .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #f59e0b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 0.75rem;
+  color: var(--md-primary-fg-color--dark);
+  /* remove gradient text for better contrast and accessibility */
 }
 
 .md-typeset .hero p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: var(--md-typeset-color);
-  opacity: 0.8;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  opacity: 0.9;
+  max-width: 680px;
+  margin: 0 auto 1.75rem;
 }
 
 /* Feature cards */
@@ -188,11 +191,16 @@
 }
 
 .md-typeset .cta-button.secondary {
-  background: var(--md-code-bg-color);
-  color: var(--md-typeset-color);
-  border: 1px solid var(--md-typeset-table-color);
+  background: transparent;
+  color: var(--md-primary-fg-color--dark);
+  border: 1px solid var(--md-primary-fg-color);
 }
 
+.md-typeset .cta-button.secondary:hover {
+  background: var(--md-primary-fg-color);
+  color: white;
+  border-color: var(--md-primary-fg-color);
+}
 /* Tags styling */
 .md-typeset .md-tag {
   background: var(--md-primary-fg-color--light);
@@ -227,7 +235,7 @@
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .md-typeset .hero h1 {
-    font-size: 1.75rem;
+    font-size: 2.25rem;
   }
 
   .md-typeset .stats {
@@ -238,8 +246,21 @@
   .md-typeset .grid {
     grid-template-columns: 1fr;
   }
+
+  .md-header__title .md-header__ellipsis .md-header__topic {
+    font-size: 0.9rem;
+  }
 }
 
+/* Header compact adjustments */
+.md-header__title .md-header__ellipsis .md-header__topic {
+  font-size: 1rem;
+}
+
+.md-tabs__list .md-tabs__item .md-tabs__link {
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+}
 /* Print styles */
 @media print {
   .md-typeset .card,
