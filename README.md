@@ -1,5 +1,7 @@
 # PartnerOS
 
+[![CI](https://github.com/danieloleary/PartnerOS/actions/workflows/ci.yml/badge.svg)](https://github.com/danieloleary/PartnerOS/actions/workflows/ci.yml)
+
 The complete playbook for building and scaling strategic partnerships with an AI-powered Partner Agent.
 
 [![Deploy Docs](https://github.com/danieloleary/PartnerOS/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/danieloleary/PartnerOS/actions/workflows/deploy-docs.yml)
