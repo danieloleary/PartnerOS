@@ -151,7 +151,7 @@ ollama pull qwen2.5:7b
 
 # Verify
 ollama list
-# NAME           ID              SIZE      MODIFIED   
+# NAME           ID              SIZE      MODIFIED
 # qwen2.5:7b     845dbda0ea48    4.7 GB    Just now
 ```
 

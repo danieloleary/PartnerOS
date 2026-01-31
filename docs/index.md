@@ -50,9 +50,6 @@ Build world-class partner programs with battle-tested templates, proven playbook
   <h3>💡 Strategy</h3>
   <p>Define your partnership vision, ideal partner profile, and program architecture.</p>
   <p><a class="md-button" href="strategy/">8 Templates →</a></p>
-</div>
-
-<div class="card">
   <h3>🤝 Recruitment</h3>
   <p>Find, qualify, pitch, and sign the right partners for your ecosystem.</p>
   <p><a class="md-button" href="recruitment/">10 Templates →</a></p>
@@ -87,7 +84,7 @@ AI-powered assistant that runs playbooks end-to-end.
 python agent.py --playbook recruit --partner "Acme Corp"
 ```
 
-[Learn More →](agent/){ .md-button }
+[Learn More →](agent/index.md){ .md-button }
 
 ---
 
@@ -95,25 +92,25 @@ python agent.py --playbook recruit --partner "Acme Corp"
 
 <div class="template-grid">
 
-<a href="strategy/02-ideal-partner-profile/" class="template-card" markdown>
-#### Ideal Partner Profile
-Define exactly who you're looking for in a partner.
-</a>
+<div class="template-card">
+<h4><a href="strategy/02-ideal-partner-profile/">Ideal Partner Profile</a></h4>
+<p>Define exactly who you're looking for in a partner.</p>
+</div>
 
-<a href="recruitment/04-discovery-call/" class="template-card" markdown>
-#### Discovery Call Script
-Structured questions for qualifying partners.
-</a>
+<div class="template-card">
+<h4><a href="recruitment/04-discovery-call/">Discovery Call Script</a></h4>
+<p>Structured questions for qualifying partners.</p>
+</div>
 
-<a href="enablement/07-qbr-template/" class="template-card" markdown>
-#### QBR Template
-Run effective quarterly business reviews.
-</a>
+<div class="template-card">
+<h4><a href="enablement/07-qbr-template/">QBR Template</a></h4>
+<p>Run effective quarterly business reviews.</p>
+</div>
 
-<a href="strategy/08-exit-checklist/" class="template-card" markdown>
-#### Exit Checklist
-End partnerships professionally.
-</a>
+<div class="template-card">
+<h4><a href="strategy/08-exit-checklist/">Exit Checklist</a></h4>
+<p>End partnerships professionally.</p>
+</div>
 
 </div>
 

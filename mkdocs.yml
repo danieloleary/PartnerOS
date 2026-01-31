@@ -146,6 +146,7 @@ nav:
     - Setup: agent/setup.md
     - Playbooks: agent/playbooks.md
     - Configuration: agent/configuration.md
+    - Enterprise Partner Framework: agent/enterprise-partner-framework.md
   - Resources:
     - Glossary: resources/glossary.md
     - Maturity Model: resources/maturity-model.md
