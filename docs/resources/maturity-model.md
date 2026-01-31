@@ -4,68 +4,97 @@ keywords: ["often opportunistic driven", "partners early attempts", "joint marke
 ---
 # Appendix II: Conceptual Partner Program Maturity Model
 
-This model provides a framework for understanding the evolution of a partner program and helps identify which areas of this blueprint to prioritize based on your current stage.
+This model helps teams assess where they are today and prioritize the templates and playbooks that will move the program forward. Use the checklist items as practical, actionable steps to level up.
 
-**Stage 1: Foundational (Ad-hoc & Reactive)**
-* **Characteristics:**
-  * Partnerships are often opportunistic, driven by individual relationships.
-  * Limited formal processes or dedicated resources.
-  * Basic partner agreements (NDA, referral agreement).
-  * Success is inconsistently tracked, if at all.
-  * Little to no specific partner enablement.
-* **Blueprint Focus:**
-  * Partner Business Case (I.1) - To justify investment.
-  * Ideal Partner Profile (IPP) (I.2) - To define "good" early.
-  * Partnership One-Pager (II.6) - For initial outreach.
-  * Basic Partner Onboarding Checklist (Simplified II.3).
-  * Partner Recruitment Email Sequence (II.1).
+---
 
-**Stage 2: Emerging (Structured & Defined)**
-* **Characteristics:**
-  * Dedicated partner manager(s) or small team in place.
-  * Formal partner program with defined tiers and benefits.
-  * Standardized partner agreements and onboarding process.
-  * Initial PRM or CRM usage for partner tracking.
-  * Basic sales and product training available to partners.
-  * Early attempts at joint marketing.
-  * KPIs are defined but reporting might be manual.
-* **Blueprint Focus (in addition to Stage 1):**
-  * Partner Strategy Plan (I.5) - First formal plan.
-  * Partner Program Architecture (I.6) - Formalize tiers & benefits.
-  * 3C/4C Partner Evaluation Framework (I.3) - For vetting.
-  * Partner Onboarding Checklist (II.3) - Full version.
-  * Discovery Call Script/Guide (II.4).
-  * Partner Pitch Deck (II.5).
-  * Partner Training Deck (III.2) - Foundational.
-  * Internal Alignment Playbook (I.7) - Initial RoE.
+## How to use this model
+- **Read the stage descriptions** and pick the stage that most closely matches your current program.
+- **Run the checklist** for each capability area (Strategy, Operations, Enablement, GTM & Sales, Data). Check off items you have implemented and prioritize the remaining items.
+- **Apply templates**: each checklist item references specific templates or playbooks in the PartnerOS blueprint.
 
-**Stage 3: Scaled (Proactive & Integrated)**
-* **Characteristics:**
-  * Mature partner team with specialized roles (ops, marketing, enablement).
-  * Well-defined partner segments and differentiated GTM strategies.
-  * Robust PRM system integrated with CRM and other tools.
-  * Comprehensive enablement programs with certifications.
-  * Consistent joint marketing campaigns and MDF programs.
-  * Automated KPI tracking and reporting; regular QBRs.
-  * Strong internal alignment and clear RoE.
-* **Blueprint Focus (in addition to Stage 1 & 2):**
-  * All templates are relevant and should be actively used and refined.
-  * Deeper dives into: Competitive Differentiation (I.4), ICP Alignment Tracker (II.7), Partner Enablement Roadmap (III.1).
-  * Sophistication in Partner Strategy Plan (I.5) - OKRs, budget, cross-functional alignment.
-  * Expansion of Internal Alignment Playbook (I.7) - Conflict resolution, incentives.
+---
 
-**Stage 4: Optimized (Ecosystem-Led & Innovative)**
-* **Characteristics:**
-  * Partner ecosystem is a core driver of company growth and strategy.
-  * Focus on co-innovation and developing new joint solutions.
-  * Data-driven decision-making for all aspects of the partner program.
-  * Strong partner community and advocacy.
-  * Partners proactively contribute to product roadmap and strategy.
-  * Ecosystem thinking is embedded across the organization.
-  * Continuous improvement cycles for all partner processes.
-* **Blueprint Focus (Continuous Refinement & Expansion):**
-  * Emphasis on strategic elements of Partner Business Case (I.1) for new ecosystem initiatives.
-  * Highly dynamic Partner Strategy Plan (I.5) with focus on innovation and ecosystem health metrics.
-  * Advanced partner segmentation and co-innovation frameworks.
-  * Strong emphasis on Partner Community Engagement and Feedback Loops (I.5.8).
-  * Measuring and optimizing the ROI of the entire ecosystem.
+## Capability summary (quick view)
+
+| Capability | Foundational | Emerging | Scaled | Optimized |
+|---|---:|---:|---:|---:|
+| Strategy & Planning | Basic business case | Formal plan + tiers | OKRs, budgets, joint plans | Ecosystem-level strategy |
+| Program Operations | Ad-hoc agreements | Standardized MSA & onboarding | PRM + automation | Integrated API & partner ops |
+| Enablement | Minimal training | Structured onboarding + basics | Certifications + enablement roadmap | Continuous learning, partner academy |
+| GTM & Sales | Opportunistic co-sell | Defined RoE + joint campaigns | Regular MD F + co-sell programs | Co-innovation + partner-led revenue |
+| Data & Measurement | Manual reporting | KPIs defined (manual) | Automated dashboards & QBRs | Predictive insights & ecosystem ROI |
+
+---
+
+## Stage 1 — Foundational (Ad-hoc & Reactive)
+**Characteristics:** opportunistic partner wins, no formal program, manual tracking, little enablement.
+
+**Checklist (pick 3–5 quick wins):**
+- Create a concise Partner Business Case (use `strategy/01-partner-business-case.md`).
+- Define your Ideal Partner Profile (`strategy/02-ideal-partner-profile.md`).
+- Create a Partner One-Pager for outreach (`II_Partner_Recruitment_Templates/06-one-pager.md`).
+- Build a minimal Onboarding Checklist (from `recruitment/09-onboarding.md`).
+- Start tracking basic revenue metrics (ARR/MRR) for partner deals.
+
+**Suggested next step:** Move to Emerging by formalizing tiers and a basic Partner Playbook.
+
+---
+
+## Stage 2 — Emerging (Structured & Defined)
+**Characteristics:** dedicated partner resource(s), tiered program, documented RoE and onboarding.
+
+**Checklist:**
+- Define partner tiers & benefits (`strategy/06-program-architecture.md`).
+- Implement standard MSA & partner agreements templates (`partner_blueprint/`).
+- Build a repeatable onboarding program and training deck (`enablement/02-training-deck.md`).
+- Configure basic PRM/CRM flows and reporting for partner-sourced deals.
+- Start running regular QBRs and ABRs.
+
+**Suggested next step:** Invest in PRM tooling and enable certifications for partners.
+
+---
+
+## Stage 3 — Scaled (Proactive & Integrated)
+**Characteristics:** specialized partner operations, automated reporting, consistent joint GTM programs.
+
+**Checklist:**
+- Implement automated dashboards and pipeline reporting for partners.
+- Formalize MDF program and co-marketing playbooks (`enablement/04-co-marketing.md`).
+- Create partner certification paths and a partner academy.
+- Align sales incentives and RoE to support partner-led deals.
+- Run quarterly QBRs with scorecards and action plans.
+
+**Suggested next step:** Optimize partner onboarding and scale enablement content production.
+
+---
+
+## Stage 4 — Optimized (Ecosystem-Led & Innovative)
+**Characteristics:** partners drive meaningful growth and co-innovation, program is a strategic asset.
+
+**Checklist:**
+- Build a partner community & advocacy programs (PACs, events).
+- Measure ecosystem ROI and iterate on partner monetization strategies.
+- Integrate partner flows into product roadmap (co-innovation pilots).
+- Use predictive analytics to prioritize partners and opportunities.
+
+**Suggested next step:** Shift budget and governance to support long-term ecosystem initiatives.
+
+---
+
+## Metrics to watch
+- Partner-sourced ARR (monthly/quarterly)
+- Partner contribution to pipeline (% of total pipeline)
+- Partner onboarding completion rate
+- Partner NPS and satisfaction (PSAT)
+- Time-to-first-deal for new partners
+
+---
+
+## Resources
+- [Partner Business Case](../strategy/01-partner-business-case.md)
+- [Program Architecture](../strategy/06-program-architecture.md)
+- [Co-Marketing Playbook](../enablement/04-co-marketing.md)
+- [QBR Template](../enablement/07-qbr-template.md)
+
+<div style="text-align: right; font-size: 0.9rem; opacity: 0.85; margin-top: 1rem;">Back to <a href="../glossary/#top">Glossary</a></div>

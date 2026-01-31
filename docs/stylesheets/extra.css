@@ -22,22 +22,73 @@
 .md-typeset .hero {
   text-align: center;
   padding: 2.25rem 0 3.25rem;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .md-typeset .hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--md-primary-fg-color--dark);
-  /* remove gradient text for better contrast and accessibility */
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+  color: var(--md-primary-fg-color);
 }
 
 .md-typeset .hero p {
   font-size: 1.125rem;
   color: var(--md-typeset-color);
-  opacity: 0.9;
-  max-width: 680px;
+  opacity: 0.95;
+  max-width: 720px;
   margin: 0 auto 1.75rem;
+}
+
+/* CTA buttons */
+.md-typeset .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.md-typeset .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.md-typeset .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.md-typeset .cta-button:focus {
+  outline: 3px solid rgba(99, 102, 241, 0.12);
+  outline-offset: 3px;
+}
+
+.md-typeset .cta-button.primary {
+  background: var(--md-primary-fg-color--dark);
+  color: white;
+}
+
+.md-typeset .cta-button.secondary {
+  background: transparent;
+  color: var(--md-primary-fg-color--dark);
+  border: 1px solid var(--md-primary-fg-color--light);
+}
+
+.md-typeset .cta-button.secondary:hover {
+  background: var(--md-primary-fg-color--light);
+  color: white;
+  border-color: var(--md-primary-fg-color--light);
 }
 
 /* Feature cards */
