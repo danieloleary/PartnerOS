@@ -65,6 +65,10 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+  - assets/css/partner-agent-chat-styles.css
+
+extra_javascript:
+  - assets/js/partner-agent-chat-client.js
 
 markdown_extensions:
   - abbr
@@ -143,6 +147,7 @@ nav:
     - QBR Template: enablement/07-qbr-template.md
   - Partner Agent:
     - agent/index.md
+    - Interactive Chat: agent/partner-agent-chat.md
     - Setup: agent/setup.md
     - Playbooks: agent/playbooks.md
     - Configuration: agent/configuration.md

@@ -67,24 +67,26 @@ Build world-class partner programs with battle-tested templates, proven playbook
 
 ## 🤖 Partner Agent
 
-AI-powered assistant that runs playbooks end-to-end.
+**Chat with AI to generate partnership templates in real-time.**
 
-<div class="playbook-flow">
-  <span class="playbook-step">Recruit</span>
-  <span class="playbook-arrow">→</span>
-  <span class="playbook-step">Onboard</span>
-  <span class="playbook-arrow">→</span>
-  <span class="playbook-step">QBR</span>
-  <span class="playbook-arrow">→</span>
-  <span class="playbook-step">Expand</span>
-</div>
+!!! warning "Setup Required"
+    The Partner Agent requires a Flask server running locally. For **local testing**:
+    
+    ```bash
+    # Terminal 1: Start Flask server
+    cd scripts/partner_agent
+    export ANTHROPIC_API_KEY=sk-ant-YOUR_KEY_HERE
+    python server.py
+    
+    # Terminal 2: Start website
+    mkdocs serve
+    ```
+    
+    Then visit http://localhost:8000
 
-```bash
-# Run a playbook with AI assistance
-python agent.py --playbook recruit --partner "Acme Corp"
-```
+<div id="homepage-agent-chat" style="max-width: 600px; margin: 0 auto 20px;" data-partner-agent-chat></div>
 
-[Learn More →](agent/index.md){ .md-button }
+Or explore the [full Partner Agent interface →](agent/partner-agent-chat.md) for advanced features.
 
 ---
 
@@ -150,3 +152,6 @@ Built with ❤️ for partnership teams everywhere.
 [🐙 GitHub](https://github.com/danieloleary/PartnerOS){ .md-button }
 
 </div>
+
+<script src="/assets/js/partner-agent-chat-client.js"></script>
+<link rel="stylesheet" href="/assets/css/partner-agent-chat-styles.css">

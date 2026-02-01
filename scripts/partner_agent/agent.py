@@ -136,6 +136,21 @@ class PartnerAgent:
                 return None
             return anthropic.Anthropic(api_key=api_key)
 
+        elif provider == "github":
+            # GitHub Models via Anthropic SDK with custom base URL
+            if not ANTHROPIC_AVAILABLE:
+                self._print_error("anthropic package not installed. Run: pip install anthropic")
+                return None
+            api_key = os.environ.get("GITHUB_TOKEN")
+            if not api_key:
+                self._print_warning("GITHUB_TOKEN not set. LLM features disabled.")
+                return None
+            # GitHub Models endpoint
+            return anthropic.Anthropic(
+                api_key=api_key,
+                base_url="https://models.inference.ai.azure.com"
+            )
+
         elif provider == "openai":
             if not OPENAI_AVAILABLE:
                 self._print_error("openai package not installed. Run: pip install openai")
@@ -191,6 +206,67 @@ class PartnerAgent:
             raise FileNotFoundError(f"Playbook not found: {name}")
         with open(playbook_file) as f:
             return yaml.safe_load(f)
+
+    def chat_completion(self, user_message: str, conversation_context: list = None, system_prompt: str = None) -> str:
+        """
+        Get a chat completion from the LLM.
+        
+        Args:
+            user_message: The user's current message
+            conversation_context: List of previous messages in {"role": "...", "content": "..."} format
+            system_prompt: Optional custom system prompt
+        
+        Returns:
+            The assistant's response text
+        """
+        if not self.llm_client:
+            return "[LLM client not initialized]"
+        
+        provider = self.config.get("provider", "anthropic")
+        default_model = self.config.get("model", "claude-3.5-sonnet")
+        
+        # Build messages list
+        messages = conversation_context.copy() if conversation_context else []
+        messages.append({"role": "user", "content": user_message})
+        
+        # Default system prompt
+        if not system_prompt:
+            system_prompt = """You are the PartnerOS Partner Agent, an expert in partner ecosystem strategy.
+Your role is to help users understand partner program fundamentals, generate customized partnership templates,
+and provide strategic guidance. Be conversational, actionable, and reference PartnerOS frameworks when applicable."""
+        
+        try:
+            if isinstance(self.llm_client, anthropic.Anthropic):
+                # Anthropic API (includes GitHub Models)
+                response = self.llm_client.messages.create(
+                    model=default_model,
+                    max_tokens=2048,
+                    system=system_prompt,
+                    messages=messages
+                )
+                return response.content[0].text
+            
+            elif isinstance(self.llm_client, openai.OpenAI):
+                # OpenAI API
+                response = self.llm_client.chat.completions.create(
+                    model=default_model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        *messages
+                    ],
+                    max_tokens=2048
+                )
+                return response.choices[0].message.content
+            
+            elif isinstance(self.llm_client, OllamaClient):
+                # Ollama
+                return self.llm_client.chat(messages, system_prompt)
+            
+            else:
+                return "[Unknown LLM client type]"
+        
+        except Exception as e:
+            return f"[LLM Error: {str(e)}]"
 
     def list_playbooks(self) -> list:
         """List available playbooks."""
