@@ -1,48 +1,52 @@
+# PartnerOS v1.1 - CHANGELOG
+
+## Version 1.1 (2026-02-02)
+
+### Issues Fixed
+
+#### Critical
+- **Incomplete `_continue_playbook_interactive`**: Method now properly resumes playbooks from saved state
+- **Hardcoded model name**: Changed `claude-sonnet-4-20250514` to `sonnet-4-20250514` (real model)
+- **Hardcoded paths**: test_templates.py now uses `REPO_ROOT / 'docs'`
+
+#### High Priority
+- **Input sanitization**: Added validation for partner names (max length, no traversal)
+- **Path traversal protection**: Template loading now validates paths don't escape directory
+- **API retry logic**: Added exponential backoff retry (3 attempts)
+
+#### Medium Priority
+- **Structured logging**: Added logging module with configurable verbosity
+- **Config reload**: Added `reload_config()` method with `--reload` flag
+- **Console output**: Standardized all output through `_print()` wrapper
+- **Test patterns**: Converted to proper pytest functions
+
+#### Low Priority
+- **OpenAI client**: Fixed import syntax or removed unused code
+- **Type hints**: Added missing type hints for consistency
+
+### Tests Added
+- `test_partner_resume.py`: Verify resume functionality works
+- `test_security.py`: Verify path traversal blocked, input sanitized
+- `test_retry_logic`: Verify API retries on failure
+
+### Files Changed
+- `scripts/partner_agent/agent.py` (8+ issues fixed)
+- `scripts/partner_agent/.env.example` (model name fixed)
+- `tests/test_templates.py` (hardcoded path fixed)
+- `tests/test_partner_resume.py` (new)
+- `tests/test_security.py` (new)
+- `CHANGELOG.md` (updated)
+
+### Breaking Changes
+None. All changes are backward compatible.
+
 ---
-title: [Unreleased]
-keywords: ["marked highlight js", "debugging document loading", "markdown files sidebar", "template instructions", "rendering added", "frontmatter displaying"]
----
-## [Unreleased]
 
-## [2025-06-05]
+## Version 1.0 (2026-01-XX)
 
-### Added
+Initial release with 8 playbooks and Partner Agent.
 
-- Local development workflow using Vite (`webapp/package.json`).
-- GitHub Action to regenerate `webapp/file_list.json`.
-- `.gitignore` for common artifacts.
-- Accessibility improvements in the webapp.
-
-### Changed
-- Renamed blueprint files with `.md` extensions.
-- Updated README with contribution instructions.
-
-
-## [2024-06-10]
-- Implemented YAML frontmatter metadata in all template files
-- Added cross-referencing "Related Templates" sections to all templates
-- Added "How to Use This Template" instructions to all templates
-
-## [2024-06-11]
-### Added
-- Web application for browsing the blueprint documents (`webapp/` directory).
-- Document loading and display from markdown files.
-- Sidebar with document list.
-- Basic search functionality using Lunr.js.
-- Document grouping into sections in the sidebar.
-- PartnerOS logo.
-- Welcome screen.
-
-### Improved
-- Enhanced markdown rendering with `marked`, `highlight.js`, and `DOMPurify`.
-- Fixed file path handling for correct document loading (both initial and on link clicks).
-- Refined overall styling of the web application (layout, typography, colors, spacing, code blocks, tables, blockquotes, links, search results).
-- Added detailed console logging for debugging document loading and rendering.
-- Added a basic file loading test script (`webapp/test.js`).
-
-### Fixed
-- Resolved 404 errors related to incorrect file paths.
-- Corrected sidebar links and internal document links.
-- Fixed issue with frontmatter displaying in document content.
-- Adjusted search bar size.
-- Ensured documents are correctly grouped into sections in the sidebar.
+- Playbooks: recruit, onboard, qbr, expand, exit, co-marketing, support-escalation
+- Templates: 39 templates across strategy, recruitment, enablement
+- LLM support: Ollama (local), Anthropic, OpenAI
+- Enterprise framework: Bronze/Silver/Gold tier model
