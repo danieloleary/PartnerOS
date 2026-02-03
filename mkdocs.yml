@@ -51,7 +51,7 @@ theme:
 
 plugins:
   - search:
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      separator: '[\s\-,:!=\[\]()\"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - tags
 
 extra:
@@ -59,9 +59,10 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/danieloleary/PartnerOS
   generator: false
-  analytics:
-    provider: google
-    property: G-XXXXXXXXXX
+  # Analytics disabled (remove placeholder or configure real property)
+  # analytics:
+  #   provider: google
+  #   property: G-XXXXXXXXXX
 
 extra_css:
   - stylesheets/extra.css
@@ -150,3 +151,5 @@ nav:
     - Glossary: resources/glossary.md
     - Maturity Model: resources/maturity-model.md
     - Tags: tags.md
+  - Changelog: CHANGELOG.md
+  - Fixes: FIXES.md

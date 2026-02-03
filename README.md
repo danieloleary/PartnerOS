@@ -36,12 +36,13 @@ pip install -r requirements.txt
 
 # Run with local AI (Ollama)
 export OLLAMA_ENDPOINT=http://localhost:11434
-export OLLAMA_MODEL=qwen2.5:7b
+export OLLAMA_MODEL=llama3.2:3b
 python agent.py
 
 # Or run with Anthropic API (cloud)
 export ANTHROPIC_API_KEY=sk-ant-...
 export PROVIDER=anthropic
+export MODEL=sonnet-4-20250514
 python agent.py
 ```
 
@@ -119,6 +120,8 @@ PartnerOS/
 │   └── test_agent.py          # Agent validation
 ├── partner_blueprint/         # Original template source
 ├── mkdocs.yml                 # Site configuration
+├── CHANGELOG.md               # Version history
+├── FIXES.md                   # Fix documentation
 └── IMPROVEMENT_PLAN.md        # Enhancement roadmap
 ```
 
@@ -145,17 +148,17 @@ PartnerOS works with local Ollama models (free, private, offline):
 brew install ollama
 
 # Pull recommended model
-ollama pull qwen2.5:7b
+ollama pull llama3.2:3b
 
 # Verify
 ollama list
-# NAME           ID              SIZE      MODIFIED   
-# qwen2.5:7b     845dbda0ea48    4.7 GB    Just now
+# NAME           ID              SIZE      MODIFIED
+# llama3.2:3b    abc123def456    4.7 GB    Just now
 ```
 
 ### Supported Models
-- **Qwen2.5:7b** (recommended - 128K context, excellent reasoning)
-- **Llama 3.1:8B** (alternative)
+- **Llama 3.2:3b** (recommended - local, private)
+- **Qwen2.5:7b** (alternative - larger context)
 - **Mistral 7B** (fast option)
 
 ---
@@ -167,19 +170,32 @@ Copy `.env.example` to `.env` and configure:
 ```bash
 # Local Ollama (recommended)
 OLLAMA_ENDPOINT=http://localhost:11434
-OLLAMA_MODEL=qwen2.5:7b
+OLLAMA_MODEL=llama3.2:3b
 PROVIDER=ollama
 
 # Or Anthropic Cloud
 # ANTHROPIC_API_KEY=sk-ant-...
 # PROVIDER=anthropic
-# MODEL=claude-sonnet-4-20250514
+# MODEL=sonnet-4-20250514  # Verified Feb 2026
 ```
 
 ---
 
-## Recent Updates (January 2025)
+## Recent Updates (February 2026)
 
+### v1.1 - Security & Stability
+- ✅ Fixed incomplete `_continue_playbook_interactive` method
+- ✅ Fixed speculative model names (use verified models)
+- ✅ Fixed hardcoded paths (use REPO_ROOT)
+- ✅ Added partner name sanitization
+- ✅ Added path traversal protection
+- ✅ Added API retry with exponential backoff
+- ✅ Added structured logging (--verbose flag)
+- ✅ Added config reload support (--reload flag)
+- ✅ Standardized console output
+- ✅ Added comprehensive tests
+
+### v1.0 (January 2026)
 - ✅ Added 2 new playbooks (co-marketing, support-escalation)
 - ✅ Integrated local Ollama support (no API keys required)
 - ✅ Created enterprise partner framework (three-tier model)
