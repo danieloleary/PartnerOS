@@ -9,28 +9,28 @@ prerequisites:
 
 steps:
   - name: Gather Metrics
-    template: III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md
+    template: enablement/06-success-metrics.md
     prompt: |
       Compile performance metrics for the QBR.
       Gather revenue, pipeline, certification status, and engagement data.
       Identify trends and notable achievements or concerns.
 
   - name: ICP & Pipeline Review
-    template: II_Partner_Recruitment_Templates/10_ICP_Alignment_Tracker.md
+    template: recruitment/10-icp-tracker.md
     prompt: |
       Review the current state of account alignment and pipeline.
       Update the shared account list and opportunity status.
       Identify new target accounts for the next quarter.
 
   - name: Prepare QBR Document
-    template: III_Partner_Enablement_Templates/07_Partner_QBR_Template.md
+    template: enablement/07-qbr-template.md
     prompt: |
       Prepare the full QBR document with all sections.
       Fill in the health scorecard, performance data, and talking points.
       Draft next quarter goals and action items.
 
   - name: Strategic Alignment Check
-    template: I_Partner_Strategy_Templates/05_Partner_Strategy_Plan.md
+    template: strategy/05-strategy-plan.md
     prompt: |
       Review strategic alignment for the partnership.
       Are we still on track with original goals?

@@ -137,7 +137,7 @@ class PartnerAgent:
         self._setup_logging()
         self.base_dir = Path(__file__).parent
         self.config = self._load_config(config_path)
-        self.templates_dir = self.base_dir / self.config.get("templates_dir", "../../partner_blueprint")
+        self.templates_dir = self.base_dir / self.config.get("templates_dir", "../../docs")
         self.state_dir = self.base_dir / self.config.get("state_dir", "./state")
         self.playbooks_dir = self.base_dir / "playbooks"
         self.llm_client = self._init_llm()
@@ -206,7 +206,7 @@ class PartnerAgent:
         return {
             "provider": "anthropic",
             "model": "sonnet-4-20250514",  # Changed from speculative name
-            "templates_dir": "../../partner_blueprint",
+            "templates_dir": "../../docs",
             "state_dir": "./state",
         }
     
@@ -727,13 +727,12 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
     def _list_templates(self):
         """List all available templates."""
         self._print("\nAvailable Templates:\n")
-        for section in ["I_Partner_Strategy_Templates", "II_Partner_Recruitment_Templates",
-                        "III_Partner_Enablement_Templates"]:
+        for section in ["strategy", "recruitment", "enablement"]:
             section_path = self.templates_dir / section
             if section_path.exists():
-                self._print(f"{section.replace('_', ' ')}:", style="bold")
+                self._print(f"{section.title()} Templates:", style="bold")
                 for f in sorted(section_path.glob("*.md")):
-                    if f.name != "README.md":
+                    if f.name != "index.md":
                         self._print(f"  - {f.name}")
                 self._print("")
 

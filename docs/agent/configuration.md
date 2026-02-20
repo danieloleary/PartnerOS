@@ -19,7 +19,7 @@ provider: anthropic
 model: claude-sonnet-4-20250514
 
 # Template library location
-templates_dir: ../../partner_blueprint
+templates_dir: ../../docs
 
 # State storage for partner progress
 state_dir: ./state
@@ -159,7 +159,7 @@ Configure where state is saved:
 state_dir: ./state
 
 # Templates location
-templates_dir: ../../partner_blueprint
+templates_dir: ../../docs
 ```
 
 State structure:

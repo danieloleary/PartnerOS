@@ -8,7 +8,7 @@ import re
 import sys
 import os
 
-ROOT = Path('partner_blueprint')
+ROOT = Path('docs')
 
 
 def parse_front_matter(lines):

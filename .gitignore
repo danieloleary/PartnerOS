@@ -30,5 +30,8 @@ __pycache__/
 scripts/partner_agent/state/
 scripts/partner_agent/*.log
 
+# Private partner data (YOUR data, never committed upstream)
+.partner_data/
+
 # Testing
 tests/.pytest_cache/
