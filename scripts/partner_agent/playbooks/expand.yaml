@@ -9,35 +9,19 @@ prerequisites:
 
 steps:
   - name: Build Expansion Business Case
-    template: strategy/01-partner-business-case.md
-    prompt: |
-      Build the business case for expanding this partnership.
-      Document current performance, growth potential, and investment needed.
-      Quantify expected ROI from deeper partnership.
+    template: docs/strategy/01-partner-business-case.md
 
   - name: Update Strategy Plan
-    template: strategy/05-strategy-plan.md
-    prompt: |
-      Update the partnership strategy for the expanded relationship.
-      Define new goals, initiatives, and success metrics.
-      Identify required resources and timeline.
+    template: docs/strategy/05-strategy-plan.md
 
   - name: Co-Marketing Plan
-    template: enablement/04-co-marketing.md
-    prompt: |
-      Develop a joint marketing plan for the expanded partnership.
-      Plan campaigns, events, and content collaboration.
-      Define MDF allocation and success metrics.
+    template: docs/enablement/04-co-marketing.md
 
   - name: Technical Integration
-    template: enablement/05-technical-integration.md
-    prompt: |
-      Plan deeper technical integration between our solutions.
-      Identify integration points, APIs, and joint solution development.
-      Define technical requirements and timeline.
+    template: docs/enablement/05-technical-integration.md
 
   - name: Executive Alignment
-    template: strategy/07-internal-alignment.md
+    template: docs/strategy/07-internal-alignment.md
     prompt: |
       Ensure internal alignment on the expanded partnership.
       Get executive buy-in and resource commitments.

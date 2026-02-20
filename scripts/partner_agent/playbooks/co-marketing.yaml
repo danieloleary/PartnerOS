@@ -9,35 +9,35 @@ prerequisites:
 
 steps:
   - name: Define Campaign Objectives
-    template: enablement/04-co-marketing.md
+    template: docs/enablement/04-co-marketing.md
     prompt: |
       Guide me through defining clear, measurable objectives for this co-marketing campaign.
       What are the joint goals? Lead targets? Revenue influence targets?
       How does this align with both partners' quarterly priorities?
 
   - name: Identify Target Audience
-    template: recruitment/10-icp-tracker.md
+    template: docs/recruitment/10-icp-tracker.md
     prompt: |
       Help identify the overlapping target audience between both partners.
       Review ICPs from both sides and find the intersection.
       Define the campaign's target segments and account lists.
 
   - name: Develop Campaign Content
-    template: enablement/04-co-marketing.md
+    template: docs/enablement/04-co-marketing.md
     prompt: |
       Outline a content plan for the campaign including messaging, channels, and timeline.
       What assets do we need? Who creates what? What are the approval workflows?
       Draft the campaign brief for both teams.
 
   - name: Set Up Tracking
-    template: enablement/06-success-metrics.md
+    template: docs/enablement/06-success-metrics.md
     prompt: |
       Define KPIs and tracking mechanisms for the campaign.
       How will we attribute leads and pipeline? What tools do we need?
       Set up shared dashboards and reporting cadence.
 
   - name: Execute and Measure
-    template: enablement/06-success-metrics.md
+    template: docs/enablement/06-success-metrics.md
     prompt: |
       Create an execution checklist and measurement process.
       Track campaign performance against objectives.

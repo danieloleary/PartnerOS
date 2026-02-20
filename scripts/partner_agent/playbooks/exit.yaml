@@ -9,7 +9,7 @@ prerequisites:
 
 steps:
   - name: Exit Planning
-    template: strategy/08-exit-checklist.md
+    template: docs/strategy/08-exit-checklist.md
     prompt: |
       Work through the exit planning phase.
       Assemble the exit team, review contracts, assess financials.
@@ -17,21 +17,21 @@ steps:
       This is the most critical step - be thorough.
 
   - name: Customer Assessment
-    template: recruitment/10-icp-tracker.md
+    template: docs/recruitment/10-icp-tracker.md
     prompt: |
       Review all joint customers and pipeline affected by this exit.
       For each customer, determine transition ownership and plan.
       Prioritize customer communication based on impact.
 
   - name: Performance Documentation
-    template: enablement/06-success-metrics.md
+    template: docs/enablement/06-success-metrics.md
     prompt: |
       Document final partnership performance metrics.
       This creates a record for post-exit review and future reference.
       Be objective and factual.
 
   - name: Execute Wind-Down
-    template: strategy/08-exit-checklist.md
+    template: docs/strategy/08-exit-checklist.md
     prompt: |
       Execute the transition phase of the exit checklist.
       Track system access revocation, marketing wind-down,

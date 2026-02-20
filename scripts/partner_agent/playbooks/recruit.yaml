@@ -4,7 +4,7 @@ tags: [recruitment, new-partner, sales]
 
 steps:
   - name: Ideal Partner Profile Check
-    template: strategy/02-ideal-partner-profile.md
+    template: docs/strategy/02-ideal-partner-profile.md
     prompt: |
       Let's evaluate if this potential partner matches our Ideal Partner Profile.
       Ask about their company size, target market, technical capabilities,
@@ -15,7 +15,7 @@ steps:
     # Automation: Auto-score IPP responses, flag high-potential partners for fast-track.
 
   - name: Partner Qualification
-    template: recruitment/03-qualification-framework.md
+    template: docs/recruitment/03-qualification-framework.md
     prompt: |
       Now let's run through our qualification framework.
       Assess their business model, go-to-market fit, resource commitment,
@@ -26,7 +26,7 @@ steps:
     # Automation: Qualification scorecard auto-population, tier recommendation.
 
   - name: Discovery Call Prep
-    template: recruitment/04-discovery-call.md
+    template: docs/recruitment/04-discovery-call.md
     prompt: |
       Prepare for the discovery call with this partner.
       Customize the script based on what we know about them.
@@ -37,7 +37,7 @@ steps:
     # Automation: Generate discovery agenda from IPP data, schedule follow-up.
 
   - name: Partnership Pitch
-    template: recruitment/05-pitch-deck.md
+    template: docs/recruitment/05-pitch-deck.md
     prompt: |
       Let's customize our partnership pitch for this specific partner.
       Highlight the value proposition most relevant to their business.
@@ -48,7 +48,7 @@ steps:
     # Automation: Generate customized deck from partner profile, track engagement.
 
   - name: Partnership Proposal
-    template: recruitment/07-proposal.md
+    template: docs/recruitment/07-proposal.md
     prompt: |
       Draft the formal partnership proposal.
       Include partnership structure, commitments, timeline, and next steps.

@@ -9,35 +9,35 @@ prerequisites:
 
 steps:
   - name: Finalize Agreement
-    template: recruitment/08-agreement.md
+    template: docs/recruitment/08-agreement.md
     prompt: |
       Review and finalize the partnership agreement.
       Ensure all terms are clear and both parties understand commitments.
       Identify any items that need clarification before signing.
 
   - name: Onboarding Checklist
-    template: recruitment/09-onboarding.md
+    template: docs/recruitment/09-onboarding.md
     prompt: |
       Let's work through the onboarding checklist.
       Track portal access, training enrollment, resource provisioning,
       and key milestone dates. Identify any blockers.
 
   - name: Enablement Roadmap
-    template: enablement/01-roadmap.md
+    template: docs/enablement/01-roadmap.md
     prompt: |
       Build a customized enablement roadmap for this partner.
       Consider their existing capabilities, learning preferences,
       and target use cases. Set realistic timeline and milestones.
 
   - name: Training Plan
-    template: enablement/02-training-deck.md
+    template: docs/enablement/02-training-deck.md
     prompt: |
       Customize the training plan based on partner's team composition.
       Identify which certifications they need and in what order.
       Schedule training sessions and set completion targets.
 
   - name: ICP Alignment
-    template: recruitment/10-icp-tracker.md
+    template: docs/recruitment/10-icp-tracker.md
     prompt: |
       Align on target customer profiles and account lists.
       Identify shared accounts and prioritize joint opportunities.
