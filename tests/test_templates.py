@@ -154,8 +154,11 @@ def test_template_count_per_category():
         "getting-started": 4,
         "resources": 4,
         "legal": 4,
-        "finance": 1,
-        "security": 1,
+        "finance": 3,
+        "security": 2,
+        "operations": 4,
+        "executive": 1,
+        "analysis": 1,
     }
 
     failures = []
@@ -195,6 +198,9 @@ def test_folder_structure():
         "legal",
         "finance",
         "security",
+        "operations",
+        "executive",
+        "analysis",
     ]
 
     missing = []
@@ -393,6 +399,9 @@ def test_scripts_exist():
         "demo_mode.py",
         "generate_template.py",
         "standardize_templates.py",
+        "generate_report.py",
+        "export_pdf.py",
+        "package_zip.py",
     ]
 
     for script in required_scripts:
@@ -446,6 +455,53 @@ def test_demo_mode_script_valid():
         compile(code, "demo_mode.py", "exec")
     except SyntaxError as e:
         pytest.fail(f"Syntax error in demo_mode.py: {e}")
+
+
+def test_export_pdf_script_valid():
+    """Verify export_pdf.py is valid Python."""
+    script = REPO_ROOT / "scripts" / "export_pdf.py"
+    if not script.exists():
+        pytest.skip("export_pdf.py not found")
+    with open(script, "r") as f:
+        code = f.read()
+    try:
+        compile(code, "export_pdf.py", "exec")
+    except SyntaxError as e:
+        pytest.fail(f"Syntax error in export_pdf.py: {e}")
+
+
+def test_package_zip_script_valid():
+    """Verify package_zip.py is valid Python."""
+    script = REPO_ROOT / "scripts" / "package_zip.py"
+    if not script.exists():
+        pytest.skip("package_zip.py not found")
+    with open(script, "r") as f:
+        code = f.read()
+    try:
+        compile(code, "package_zip.py", "exec")
+    except SyntaxError as e:
+        pytest.fail(f"Syntax error in package_zip.py: {e}")
+
+
+def test_package_zip_produces_output():
+    """package_zip.py produces a valid zip with expected content."""
+    import tempfile
+    import zipfile
+    import subprocess
+    with tempfile.TemporaryDirectory() as tmpdir:
+        result = subprocess.run(
+            ["python3", str(REPO_ROOT / "scripts" / "package_zip.py"),
+             "--templates-only", "--output", tmpdir, "--version", "test"],
+            capture_output=True, text=True, cwd=str(REPO_ROOT)
+        )
+        assert result.returncode == 0, f"package_zip.py failed: {result.stderr}"
+        zips = list(Path(tmpdir).glob("*.zip"))
+        assert len(zips) == 1, "Expected exactly one zip file"
+        with zipfile.ZipFile(zips[0]) as zf:
+            names = zf.namelist()
+            assert any("PACKAGE_MANIFEST.json" in n for n in names)
+            assert any("docs/" in n for n in names)
+            assert any("README.md" in n for n in names)
 
 
 def test_examples_directory():

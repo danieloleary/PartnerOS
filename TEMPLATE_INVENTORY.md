@@ -12,10 +12,16 @@
 | **Strategy** | 8 templates |
 | **Recruitment** | 10 templates |
 | **Enablement** | 7 templates |
+| **Legal** | 4 templates |
+| **Finance** | 3 templates |
+| **Security** | 2 templates |
+| **Operations** | 4 templates |
+| **Executive** | 1 template |
+| **Analysis** | 1 template |
 | **Getting Started** | 3 guides |
 | **Resources** | 2 references |
 | **Agent Docs** | 4 pages |
-| **Total** | **34 templates** |
+| **Total** | **49 templates** |
 
 ---
 
@@ -61,6 +67,51 @@
 | 6 | `docs/enablement/06-success-metrics.md` | Partner Success Metrics |
 | 7 | `docs/enablement/07-qbr-template.md` | QBR Template |
 
+### Legal (4)
+
+| # | File | Title |
+|---|------|-------|
+| 1 | `docs/legal/01-nda.md` | NDA |
+| 2 | `docs/legal/02-msa.md` | Master Service Agreement |
+| 3 | `docs/legal/03-dpa.md` | Data Processing Addendum |
+| 4 | `docs/legal/04-sla.md` | SLA Template |
+
+### Finance (3)
+
+| # | File | Title |
+|---|------|-------|
+| 1 | `docs/finance/01-commission.md` | Partner Commission Structure |
+| 2 | `docs/finance/02-rebate.md` | Partner Rebate Program |
+| 3 | `docs/finance/03-revenue-share.md` | Revenue Sharing Model |
+
+### Security (2)
+
+| # | File | Title |
+|---|------|-------|
+| 1 | `docs/security/01-security-questionnaire.md` | Security Questionnaire |
+| 2 | `docs/security/02-soc2-compliance.md` | SOC 2 Compliance Guide for Partners |
+
+### Operations (4)
+
+| # | File | Title |
+|---|------|-------|
+| 1 | `docs/operations/01-deal-registration.md` | Deal Registration Policy |
+| 2 | `docs/operations/02-weekly-standup.md` | Weekly Partner Standup |
+| 3 | `docs/operations/03-monthly-report.md` | Monthly Partner Report |
+| 4 | `docs/operations/04-portal-guide.md` | Partner Portal Guide |
+
+### Executive (1)
+
+| # | File | Title |
+|---|------|-------|
+| 1 | `docs/executive/01-board-deck.md` | Board Deck — Partner Program |
+
+### Analysis (1)
+
+| # | File | Title |
+|---|------|-------|
+| 1 | `docs/analysis/01-health-scorecard.md` | Partner Health Scorecard |
+
 ---
 
 ## Playbooks (7)
@@ -80,7 +131,7 @@
 ## Architecture Notes
 
 - **Single source of truth:** All templates live in `docs/` and are served by MkDocs
-- **Legacy `partner_blueprint/` directory removed** - it was a near-identical copy with only link path differences
+- **Legacy `partner_blueprint/` directory removed** — it was a near-identical copy with only link path differences
 - **Agent and playbooks** now reference `docs/` directly via `templates_dir: ../../docs` in config
 - **Private data** goes in `.partner_data/` (gitignored)
 
