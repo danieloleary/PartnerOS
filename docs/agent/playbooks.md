@@ -1,8 +1,23 @@
 ---
 title: Playbooks
+category: operational
+version: 1.0.0
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: operational
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
 description: Detailed guide to each Partner Agent playbook
+outcomes:
+  - Completed Playbooks
+skills_gained:
 ---
-
 # Playbooks
 
 Playbooks are pre-defined workflows that guide you through common partnership scenarios.

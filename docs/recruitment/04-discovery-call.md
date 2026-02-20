@@ -1,13 +1,26 @@
 ---
 title: Discovery Call Script Template
 section: Recruitment
+category: operational
 template_number: II.4
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["gather key information", "structured conversation guide", "i m excited", "i d like", "key products services", "technical capabilities willingness"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Discovery Call Script Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

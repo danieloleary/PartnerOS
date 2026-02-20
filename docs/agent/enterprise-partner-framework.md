@@ -1,10 +1,27 @@
 ---
 title: Enterprise Partner Framework
+category: operational
+version: 1.0.0
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: operational
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
 description: Generic case study for partner program best practices
-tags: [framework, enterprise, best-practices]
-created: 2026-01-29
+tags:
+  - framework
+  - enterprise
+  - best-practices
+outcomes:
+  - Completed Enterprise Partner Framework
+skills_gained:
 ---
-
 # Enterprise Partner Program Framework
 *Generic Case Study Based on Best Practices - January 2026*
 

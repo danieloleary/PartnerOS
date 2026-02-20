@@ -1,4 +1,22 @@
 ---
+category: operational
+version: 1.0.0
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: operational
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+outcomes:
+  - Completed template
+skills_gained:
+---
+---
 title: Appendix I: Glossary of Key Terms
 keywords: ["appendix i glossary", "service cloud services", "delivering educational courses", "engagement roi return", "wiifp what s", "formal review"]
 ---

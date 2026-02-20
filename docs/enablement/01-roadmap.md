@@ -1,13 +1,26 @@
 ---
 title: Partner Enablement Roadmap (Strategic & Phased)
 section: Enablement
+category: tactical
 template_number: III.1
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["milestone assign owners", "supporting information review", "regular check ins", "essential tools provisioned", "core value proposition", "content action access"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: enablement
+time_required: 2-4 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Enablement Roadmap (Strategic & Phased)
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

@@ -1,17 +1,32 @@
 ---
 title: Partner QBR Template (Quarterly Business Review)
 section: Enablement
+category: tactical
 template_number: III.7
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: enablement
+time_required: 2-4 hours
+difficulty: easy
+prerequisites:
+description: |
   A structured template for conducting productive quarterly business reviews with partners to assess performance, align on strategy, and plan future initiatives.
+  
 related_templates:
   - 06-success-metrics.md
   - ../recruitment/10-icp-tracker.md
   - ../I_Partner_Strategy_Templates/03_Partner_Program_Charter.md
-keywords: ["QBR", "quarterly review", "business review", "partner performance", "executive alignment", "strategic planning", "partner health"]
+outcomes:
+  - Completed Partner QBR Template (Quarterly Business Review)
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

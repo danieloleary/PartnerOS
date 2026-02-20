@@ -1,8 +1,23 @@
 ---
 title: How to Use Templates
+category: operational
+version: 1.0.0
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: onboarding
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
 description: Tips for customizing templates for your organization
+outcomes:
+  - Completed How to Use Templates
+skills_gained:
 ---
-
 # How to Use Templates
 
 Every template in PartnerOS is designed to be customized for your specific situation. Here's how to get the most out of them.

@@ -1,4 +1,22 @@
 ---
+category: operational
+version: 1.0.0
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: operational
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+outcomes:
+  - Completed template
+skills_gained:
+---
+---
 title: Appendix II: Conceptual Partner Program Maturity Model
 keywords: ["often opportunistic driven", "partners early attempts", "joint marketing kpis", "refined deeper dives", "product training available", "partner community engagement"]
 ---

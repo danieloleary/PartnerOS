@@ -1,13 +1,26 @@
 ---
 title: Internal Alignment Playbook Template
 section: Strategy
+category: strategic
 template_number: I.7
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["align internal teams", "partner program objectives", "template purpose use", "use", "template", "stakeholders"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: strategy
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Internal Alignment Playbook Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

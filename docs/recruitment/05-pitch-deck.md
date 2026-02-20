@@ -1,13 +1,26 @@
 ---
 title: Partner Pitch Deck (Strategic Narrative)
 section: Recruitment
+category: operational
 template_number: II.5
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["content prompt customize", "success stories reference", "vision why partnerships", "partners what sets", "market collaboration how", "program key contacts"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 2-4 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Pitch Deck (Strategic Narrative)
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

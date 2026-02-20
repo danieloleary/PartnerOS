@@ -1,13 +1,26 @@
 ---
 title: Partnership Proposal Template
 section: Recruitment
+category: operational
 template_number: II.7
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["clearly communicate value", "proposal outlines how", "thorough show attention", "growth rate together", "capture specific percentage", "deliver specific value"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 2-4 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partnership Proposal Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

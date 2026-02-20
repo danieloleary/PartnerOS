@@ -1,13 +1,26 @@
 ---
 title: Partner Strategy Plan Template
 section: Strategy
+category: strategic
 template_number: I.5
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["comprehensive partner strategy", "company strategy focus", "business objectives align", "template purpose use", "business objectives", "use"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: strategy
+time_required: 8-16 hours
+difficulty: hard
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Strategy Plan Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

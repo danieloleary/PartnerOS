@@ -1,13 +1,26 @@
 ---
 title: Outreach Engagement Sequence Template
 section: Recruitment
+category: operational
 template_number: II.2
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["relevant content participate", "preferred channels create", "template purpose use", "builds relationships", "both work", "area would"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Outreach Engagement Sequence Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

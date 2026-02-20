@@ -1,13 +1,26 @@
 ---
 title: Partner Training Deck (Comprehensive & Engaging)
 section: Enablement
+category: tactical
 template_number: III.2
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["deliver consistent comprehensive", "proof points reference", "partnership briefly reiterate", "partnership linking back", "target market s", "product s explaining"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: enablement
+time_required: 4-8 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Training Deck (Comprehensive & Engaging)
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

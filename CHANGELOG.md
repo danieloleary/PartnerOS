@@ -1,4 +1,31 @@
-# PartnerOS v1.1 - CHANGELOG
+# PartnerOS CHANGELOG
+
+## Version 1.2 (2026-02-19) - Template Schema & Backlog
+
+### Template Schema Standardization
+- **NEW**: Standardized frontmatter schema for all 38 templates
+  - Added `tier`: [Bronze, Silver, Gold]
+  - Added `skill_level`: beginner/intermediate/advanced
+  - Added `purpose`: tactical/strategic/operational
+  - Added `phase`: recruitment/onboarding/enablement/growth/retention/exit
+  - Added `time_required`: estimated completion time
+  - Added `difficulty`: easy/medium/hard
+  - Added `outcomes`: expected results
+  - Added `skills_gained`: competencies developed
+  - Added `category`, `version`, `author`, `prerequisites`
+
+### New Scripts
+- **NEW**: `scripts/standardize_templates.py` - Bulk frontmatter standardization
+
+### Documentation
+- **NEW**: `BACKLOG.md` - Comprehensive feature backlog for partner leaders
+- **UPDATED**: `IMPROVEMENT_PLAN.md` - Updated roadmap with missing templates
+
+### Cleanup
+- **REMOVED**: Redundant `partner_blueprint/` (identical to docs/)
+- **FIXED**: All tests passing (11/11)
+
+---
 
 ## Version 1.1 (2026-02-02)
 

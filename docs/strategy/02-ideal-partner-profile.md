@@ -1,13 +1,26 @@
 ---
 title: Ideal Partner Profile Template
 section: Strategy
+category: strategic
 template_number: I.2
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["scalable objective filter", "partner recruitment prioritization", "criteria gather data", "strategic verticals match", "target accounts percentage", "commitment investment willingness"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: strategy
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Ideal Partner Profile Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

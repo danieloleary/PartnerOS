@@ -1,13 +1,26 @@
 ---
 title: Partner Qualification Framework Template
 section: Recruitment
+category: operational
 template_number: II.3
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["template purpose use", "use", "template", "determine", "suitability"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Qualification Framework Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

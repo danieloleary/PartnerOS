@@ -1,8 +1,23 @@
 ---
 title: Quick Start
+category: operational
+version: 1.0.0
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: onboarding
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
 description: Get up and running with PartnerOS in 5 minutes
+outcomes:
+  - Completed Quick Start
+skills_gained:
 ---
-
 # Quick Start Guide
 
 Get up and running with PartnerOS in under 5 minutes.

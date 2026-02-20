@@ -1,14 +1,28 @@
 ---
 title: Partnership One-Pager (Concise Value Proposition)
 section: Recruitment
+category: operational
 template_number: II.6
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: |
   A succinct, compelling document that quickly communicates the essence of your partner program and the value of partnering.
-related_templates:
-keywords: ["one-pager", "value proposition", "partner benefits", "leave-behind", "partner recruitment", "program overview"]
+  
+outcomes:
+  - Completed Partnership One-Pager (Concise Value Proposition)
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

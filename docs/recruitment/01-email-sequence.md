@@ -1,13 +1,26 @@
 ---
 title: Recruitment Email Sequence Template
 section: Recruitment
+category: operational
 template_number: II.1
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["believe there s", "could work together", "strong alignment between", "i d appreciate", "interest i d", "i ll make"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Recruitment Email Sequence Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

@@ -1,17 +1,32 @@
 ---
 title: Partner Exit Checklist (Graceful Partnership Termination)
 section: Strategy
+category: strategic
 template_number: I.8
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: strategy
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: |
   A comprehensive checklist for professionally and gracefully ending partner relationships while protecting your brand, customers, and legal interests.
+  
 related_templates:
   - 03-evaluation-framework.md
   - ../enablement/06-success-metrics.md
   - 05-strategy-plan.md
-keywords: ["partner exit", "termination", "offboarding", "partnership end", "wind-down", "transition", "decommission"]
+outcomes:
+  - Completed Partner Exit Checklist (Graceful Partnership Termination)
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

@@ -1,13 +1,26 @@
 ---
 title: Partner Certification Program Framework
 section: Enablement
+category: tactical
 template_number: III.3
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["certification tracks", "competency validation", "skill assessment", "badge credentials", "learning paths", "exam requirements"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: enablement
+time_required: 4-8 hours
+difficulty: medium
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Certification Program Framework
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

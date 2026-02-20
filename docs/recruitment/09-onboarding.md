@@ -1,13 +1,26 @@
 ---
 title: Partner Onboarding Checklist
 section: Recruitment
+category: operational
 template_number: II.9
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["roles detailed overview", "executive sponsor sent", "demo joint call", "internal person responsible", "review identify overlaps", "core partner team"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 2-4 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Onboarding Checklist
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

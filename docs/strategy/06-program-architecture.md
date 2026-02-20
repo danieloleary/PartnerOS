@@ -1,13 +1,26 @@
 ---
 title: Partner Program Architecture Template
 section: Strategy
+category: strategic
 template_number: I.6
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["structured partner program", "template purpose use", "use", "template", "design", "implement"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: strategy
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Program Architecture Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

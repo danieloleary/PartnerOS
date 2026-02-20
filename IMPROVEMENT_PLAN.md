@@ -1,21 +1,24 @@
 # PartnerOS Improvement Plan
 *Generated: January 29, 2026*
+*Updated: February 19, 2026*
+
+> **See [BACKLOG.md](BACKLOG.md) for comprehensive feature list and long-term roadmap**
 
 ## Current State Assessment
 
 **Strengths:**
-- ✅ 25 battle-tested templates across Strategy/Recruitment/Enablement
+- ✅ 38 battle-tested templates across Strategy/Recruitment/Enablement/Resources/Agent
+- ✅ Standardized frontmatter schema (tier, skill_level, purpose, phase, time_required, difficulty, outcomes, skills_gained)
 - ✅ MkDocs site with professional styling
-- ✅ AI Partner Agent with 5 playbooks (recruit, onboard, qbr, expand, exit)
+- ✅ AI Partner Agent with 7 playbooks (recruit, onboard, qbr, expand, exit, co-marketing, support-escalation)
 - ✅ GitHub Actions CI/CD for docs deployment
 - ✅ GitHub Pages live at danieloleary.github.io/PartnerOS
+- ✅ Automated template schema standardization script
 
 **Gaps:**
-- ⚠️ Agent requires ANTHROPIC_API_KEY - not integrated with local AI
-- ⚠️ Template inventory (markdown_inventory.csv) exists but may be outdated
-- ⚠️ No automated testing for templates or agent
-- ⚠️ Partner Agent design doc exists but may not match current implementation
-- ⚠️ Scripts directory has 7 items - unclear what each does
+- ⚠️ Missing Legal templates (NDA, MSA, DPA, SLA)
+- ⚠️ Missing Finance templates (commission, revenue share, rebates)
+- ⚠️ Missing Security templates (security questionnaire, compliance)
 - ⚠️ No local AI integration (Whisper, Sherpa TTS, Ollama) for offline work
 
 ---
@@ -24,7 +27,29 @@
 
 ### HIGH PRIORITY (This Week)
 
-#### 1. Integrate Local AI Stack into Partner Agent
+#### 1. Add Missing Template Categories
+**Goal:** Complete template coverage for enterprise partner programs
+
+**Actions:**
+- [ ] Create `docs/legal/` directory
+- [ ] Add NDA Template (`01-nda.md`)
+- [ ] Add Master Service Agreement (`02-msa.md`)
+- [ ] Add Data Processing Agreement (`03-dpa.md`)
+- [ ] Add Service Level Agreement (`04-sla.md`)
+- [ ] Create `docs/finance/` directory
+- [ ] Add Commission Structure Template (`01-commission.md`)
+- [ ] Add Revenue Sharing Model (`02-revenue-share.md`)
+- [ ] Add Partner Rebate Program (`03-rebate.md`)
+- [ ] Create `docs/security/` directory
+- [ ] Add Security Questionnaire (`01-security-questionnaire.md`)
+- [ ] Add SOC2 Compliance Guide (`02-soc2-compliance.md`)
+- [ ] Apply standard frontmatter to all new templates
+
+**Estimated Effort:** 4-6 hours
+
+**Impact:** Complete template coverage for enterprise needs
+
+#### 2. Integrate Local AI Stack into Partner Agent
 **Goal:** Remove Anthropic API dependency, run partner agent locally
 
 **Actions:**
@@ -109,14 +134,15 @@
 
 ### Week 1 (This Week)
 ```
-Day 1-2: Local AI integration for partner agent
-Day 3: Template inventory cleanup
-Day 4-5: Automated tests setup
+Day 1:   Add missing template categories (Legal, Finance, Security)
+Day 2-3: Create 11 new templates with standardized frontmatter
+Day 4:   Template inventory cleanup
+Day 5:   Update IMPROVEMENT_PLAN.md
 ```
 
 ### Week 2-3
 ```
-Week 2: Documentation improvements + 2 new playbooks
+Week 2: Local AI integration improvements + 2 new playbooks
 Week 3: Voice integration (Whisper + Sherpa TTS)
 ```
 
@@ -131,12 +157,15 @@ Community features + CRM integrations
 
 | Metric | Current | Target (30 days) | Target (90 days) |
 |--------|---------|------------------|------------------|
-| Templates documented | 25 | 25 | 30 |
-| Agent runs locally | ❌ | ✅ | ✅ |
-| Automated tests | 0 | 10 | 25 |
-| Local AI integration | ❌ | ✅ | ✅ |
-| Voice commands | ❌ | ❌ | ✅ |
-| Partner agent playbooks | 5 | 5 | 8 |
+| Templates documented | 38 | 48 | 55 |
+| Template schema standardized | ✅ | N/A | N/A |
+| Legal templates | 0 | 4 | 4 |
+| Finance templates | 0 | 3 | 3 |
+| Security templates | 0 | 2 | 2 |
+| Agent runs locally | ✅ | N/A | N/A |
+| Automated tests | 2 | 10 | 25 |
+| Local AI integration | ✅ | N/A | N/A |
+| Partner agent playbooks | 7 | 7 | 10 |
 
 ---
 
@@ -144,16 +173,20 @@ Community features + CRM integrations
 
 ```
 Modified:
-- scripts/partner_agent/agent.py (local AI)
-- requirements.txt (ollama-python)
-- markdown_inventory.csv (sync)
+- IMPROVEMENT_PLAN.md (updated with new tasks)
+- docs/*/*.md (standardized frontmatter schema applied)
+- scripts/standardize_templates.py (new - schema standardizer)
 
 Created:
-- docs/agent/local-setup.md
-- tests/test_templates.py
-- tests/test_agent.py
-- .github/workflows/tests.yml
-- IMPROVEMENT_PLAN.md (this file)
+- docs/legal/01-nda.md
+- docs/legal/02-msa.md
+- docs/legal/03-dpa.md
+- docs/legal/04-sla.md
+- docs/finance/01-commission.md
+- docs/finance/02-revenue-share.md
+- docs/finance/03-rebate.md
+- docs/security/01-security-questionnaire.md
+- docs/security/02-soc2-compliance.md
 ```
 
 ---

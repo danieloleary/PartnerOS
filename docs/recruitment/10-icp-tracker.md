@@ -1,14 +1,28 @@
 ---
 title: ICP Alignment Tracker (Strategic Account Mapping)
 section: Recruitment
+category: operational
 template_number: II.10
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: |
   Systematically identify and track alignment between your ICPs, target accounts, and joint opportunities with partners.
-related_templates:
-keywords: ["account mapping", "ICP alignment", "target accounts", "joint opportunities", "strategic accounts", "partner overlap"]
+  
+outcomes:
+  - Completed ICP Alignment Tracker (Strategic Account Mapping)
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

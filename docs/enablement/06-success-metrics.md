@@ -1,13 +1,26 @@
 ---
 title: Partner Success Metrics Dashboard
 section: Enablement
+category: tactical
 template_number: III.6
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["KPIs", "performance tracking", "partner scorecard", "business metrics", "ROI measurement", "quarterly reviews"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: enablement
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Partner Success Metrics Dashboard
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

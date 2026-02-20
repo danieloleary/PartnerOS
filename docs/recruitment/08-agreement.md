@@ -1,13 +1,26 @@
 ---
 title: Partnership Agreement Template
 section: Recruitment
+category: operational
 template_number: II.8
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["confidentiality obligations shall", "indemnification process shall", "liability limits shall", "detailed exceptions term", "agreement shall commence", "specific purpose term"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: recruitment
+time_required: 4-8 hours
+difficulty: hard
+prerequisites:
+description: 
+outcomes:
+  - Completed Partnership Agreement Template
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

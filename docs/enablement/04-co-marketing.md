@@ -1,13 +1,26 @@
 ---
 title: Co-Marketing Playbook
 section: Enablement
+category: tactical
 template_number: III.4
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["joint marketing", "co-branded campaigns", "MDF funds", "demand generation", "marketing collaboration", "brand guidelines"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: enablement
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed Co-Marketing Playbook
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**

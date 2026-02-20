@@ -1,13 +1,26 @@
 ---
 title: 3C/4C Partner Evaluation Framework
 section: Strategy
+category: strategic
 template_number: I.3
+version: 1.0.0
 last_updated: 2024-06-10
-description: >
-related_templates:
-keywords: ["excellence presence training", "necessary skills expertise", "business approach align", "partner genuinely committed", "template purpose use", "partner have"]
+author: PartnerOS Team
+tier:
+  - Bronze
+  - Silver
+  - Gold
+skill_level: intermediate
+purpose: operational
+phase: strategy
+time_required: 1-2 hours
+difficulty: easy
+prerequisites:
+description: 
+outcomes:
+  - Completed 3C/4C Partner Evaluation Framework
+skills_gained:
 ---
-
 ## How to Use This Template
 
 **Purpose:**
