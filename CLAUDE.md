@@ -46,6 +46,8 @@ PartnerOS/
 │   │   └── state/                 # Partner session state (gitignored)
 │   ├── standardize_templates.py   # Bulk frontmatter standardization
 │   ├── generate_template.py        # CLI template generator
+│   ├── onboard.py                 # Company onboarding setup
+│   ├── fill_template.py          # Replace {{variables}} in templates
 │   ├── lint_markdown.py           # Custom markdown linter
 │   ├── generate_file_list.py      # Template inventory generator
 │   ├── manage_templates.py        # Template management utilities

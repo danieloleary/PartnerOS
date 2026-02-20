@@ -33,5 +33,8 @@ scripts/partner_agent/*.log
 # Private partner data (YOUR data, never committed upstream)
 .partner_data/
 
+# Company-specific configuration (customized per installation)
+.company-config/
+
 # Testing
 tests/.pytest_cache/
