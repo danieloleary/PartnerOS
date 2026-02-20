@@ -13,6 +13,8 @@ on:
           - qbr
           - expand
           - exit
+          - co-marketing
+          - support-escalation
       partner:
         description: 'Partner name'
         required: true
@@ -25,6 +27,7 @@ on:
         options:
           - anthropic
           - openai
+          - ollama
 
 jobs:
   run-agent:
