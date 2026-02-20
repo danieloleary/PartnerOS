@@ -42,7 +42,7 @@ graph LR
     onboard --> qbr[QBR<br/>Review]
     qbr --> expand[expand<br/>Grow]
     qbr --> exit[exit<br/>Terminate]
-    
+
     style recruit fill:#e3f2fd
     style onboard fill:#e8f5e9
     style qbr fill:#fff3e0
@@ -85,7 +85,7 @@ graph LR
     C --> D[Pitch]
     D --> E[Proposal]
     E --> F((Signed))
-    
+
     style A fill:#e3f2fd
     style B fill:#e3f2fd
     style C fill:#e3f2fd
@@ -143,7 +143,7 @@ graph LR
     C --> D[Training]
     D --> E[ICP Alignment]
     E --> F((Active))
-    
+
     style A fill:#e8f5e9
     style B fill:#e8f5e9
     style C fill:#e8f5e9
@@ -196,7 +196,7 @@ graph LR
     B --> C[QBR Doc]
     C --> D[Strategy]
     D --> E((Aligned))
-    
+
     style A fill:#fff3e0
     style B fill:#fff3e0
     style C fill:#fff3e0
@@ -252,7 +252,7 @@ graph LR
     C --> D[Integration]
     D --> E[Alignment]
     E --> F((Expanded))
-    
+
     style A fill:#f3e5f5
     style B fill:#f3e5f5
     style C fill:#f3e5f5
@@ -305,7 +305,7 @@ graph LR
     B --> C[Metrics Doc]
     C --> D[Wind-Down]
     D --> E((Closed))
-    
+
     style A fill:#ffebee
     style B fill:#ffebee
     style C fill:#ffebee

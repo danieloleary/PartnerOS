@@ -16,7 +16,7 @@ phase: enablement
 time_required: 4-8 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Partner Training Deck (Comprehensive & Engaging)
 skills_gained:

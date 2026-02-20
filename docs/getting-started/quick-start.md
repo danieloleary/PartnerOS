@@ -107,18 +107,18 @@ Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today
         ```bash
         python scripts/onboard.py
         ```
-    
+
     2. **Follow the prompts:**
         - Your company name
         - Website
         - Primary partner contact
         - Brand color
-    
+
     3. **Start using templates:**
         ```bash
         # See available variables
         python scripts/fill_template.py --list-vars
-        
+
         # Fill a template
         python scripts/fill_template.py --template docs/recruitment/01-email-sequence.md
         ```

@@ -18,7 +18,7 @@ difficulty: easy
 prerequisites:
 description: |
   A structured template for conducting productive quarterly business reviews with partners to assess performance, align on strategy, and plan future initiatives.
-  
+
 related_templates:
   - 06-success-metrics.md
   - ../recruitment/10-icp-tracker.md

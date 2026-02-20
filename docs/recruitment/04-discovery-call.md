@@ -16,7 +16,7 @@ phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Discovery Call Script Template
 skills_gained:

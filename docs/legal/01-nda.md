@@ -56,7 +56,7 @@ Use this template to create a mutual non-disclosure agreement that protects both
 
 This Mutual Non-Disclosure Agreement ("Agreement") is entered into by and between:
 
-**Disclosing Party:** [Your Company Name] ("Company")  
+**Disclosing Party:** [Your Company Name] ("Company")
 **Receiving Party:** [Partner Company Name] ("Partner")
 
 ## 1. DEFINITION OF CONFIDENTIAL INFORMATION
@@ -125,16 +125,16 @@ Neither party may assign this Agreement without the prior written consent of the
 
 **Company:** [Your Company Name]
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 **Partner:** [Partner Company Name]
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 ---
@@ -153,6 +153,6 @@ Date: _______________________
 
 ## Related Templates
 
-- [Partnership Agreement](recruitment/08-agreement.md)
-- [Proposal Template](recruitment/07-proposal.md)
-- [Discovery Call Script](recruitment/04-discovery-call.md)
+- [Partnership Agreement](../recruitment/08-agreement.md)
+- [Proposal Template](../recruitment/07-proposal.md)
+- [Discovery Call Script](../recruitment/04-discovery-call.md)

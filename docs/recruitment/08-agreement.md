@@ -16,7 +16,7 @@ phase: recruitment
 time_required: 4-8 hours
 difficulty: hard
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Partnership Agreement Template
 skills_gained:

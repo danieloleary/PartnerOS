@@ -22,15 +22,15 @@ The method selected a partner and playbook but never actually resumed the playbo
 ```python
 def _continue_playbook_interactive(self):
     # ... code to select partner and playbook ...
-    
+
     # Load saved context
     context = incomplete[playbook_name].get("context", {"messages": []})
-    
+
     # Continue from saved step
     for i in range(step, len(playbook["steps"])):
         result = self.run_playbook_step(playbook, i, partner_data["name"], context)
         context = {"messages": result["messages"]}
-        
+
         # Save progress after each step
         partner_data["playbooks"][playbook_name]["context"] = context
         self.save_partner_state(partner_data["name"], partner_data)
@@ -104,18 +104,18 @@ def _sanitize_partner_name(self, name: str) -> str:
     """Sanitize partner name for safe directory/file usage."""
     if not name or not name.strip():
         raise ValueError("Partner name cannot be empty")
-    
+
     name = name.strip()
-    
+
     if len(name) > 100:
         raise ValueError("Partner name exceeds 100 characters")
-    
+
     if any(char in name for char in ['/', '\\', '..', '.']):
         raise ValueError("Partner name contains invalid characters")
-    
+
     if not re.match(r'^[\w\s-]+$', name):
         raise ValueError("Partner name contains invalid characters")
-    
+
     return name
 ```
 
@@ -176,7 +176,7 @@ class RetryConfig:
 class OllamaClient:
     def __init__(self, ..., retry_config: RetryConfig = None):
         self.retry_config = retry_config or RetryConfig()
-    
+
     def _retry_with_backoff(self, func, *args, **kwargs):
         for attempt in range(self.retry_config.max_retries + 1):
             try:
@@ -211,7 +211,7 @@ logger = logging.getLogger(__name__)
 class PartnerAgent:
     def __init__(self, verbose: bool = False):
         self._setup_logging()
-    
+
     def _setup_logging(self):
         level = logging.DEBUG if self.verbose else logging.INFO
         logging.basicConfig(level=level, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")

@@ -157,11 +157,13 @@ nav:
     - Maturity Model: resources/maturity-model.md
     - Tags: tags.md
   - Legal:
+    - legal/index.md
     - NDA: legal/01-nda.md
     - Master Service Agreement: legal/02-msa.md
     - Data Processing Addendum: legal/03-dpa.md
     - SLA Template: legal/04-sla.md
   - Finance:
+    - finance/index.md
     - Commission Structure: finance/01-commission.md
     - Rebate Program: finance/02-rebate.md
     - Revenue Sharing Model: finance/03-revenue-share.md

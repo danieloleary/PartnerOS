@@ -18,7 +18,7 @@ difficulty: easy
 prerequisites:
 description: |
   Systematically identify and track alignment between your ICPs, target accounts, and joint opportunities with partners.
-  
+
 outcomes:
   - Completed ICP Alignment Tracker (Strategic Account Mapping)
 skills_gained:

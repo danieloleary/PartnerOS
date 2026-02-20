@@ -16,7 +16,7 @@ phase: enablement
 time_required: 4-8 hours
 difficulty: medium
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Partner Certification Program Framework
 skills_gained:

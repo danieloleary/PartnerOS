@@ -43,7 +43,7 @@ skills_gained:
 PartnerOS is a complete partner program toolkit that helps companies:
 
 - **Recruit** the right partners
-- **Onboard** them effectively  
+- **Onboard** them effectively
 - **Enable** them to succeed
 - **Scale** partner revenue
 
@@ -143,8 +143,8 @@ Proven processes from successful partner programs:
 
 ## Contact
 
-**Website:** [partneros.io](#)  
-**Email:** [hello@partneros.io](#)  
+**Website:** [partneros.io](#)
+**Email:** [hello@partneros.io](#)
 **GitHub:** [github.com/danieloleary/PartnerOS](#)
 
 ---

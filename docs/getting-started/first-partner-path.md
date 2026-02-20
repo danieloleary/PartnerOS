@@ -134,7 +134,7 @@ Customize for top prospect:
 
 ### Day 1-2: Create Proposal
 
-**Template:** [Proposal Template](../recnership/07-proposal.md)
+**Template:** [Proposal Template](../recruitment/07-proposal.md)
 
 Include:
 - Partnership terms
@@ -194,7 +194,7 @@ Create:
 - [ ] Prospect list of 10-20 companies
 - [ ] Email templates created
 
-### Week 2: Qualify & Pitch  
+### Week 2: Qualify & Pitch
 - [ ] All prospects qualified (score 7+)
 - [ ] Discovery calls completed (3-5)
 - [ ] Custom pitch deck prepared

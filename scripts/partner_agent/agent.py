@@ -136,6 +136,7 @@ class PartnerAgent:
         self.verbose = verbose
         self._setup_logging()
         self.base_dir = Path(__file__).parent
+        self.config_path = config_path
         self.config = self._load_config(config_path)
         self.templates_dir = self.base_dir / self.config.get("templates_dir", "../../docs")
         self.state_dir = self.base_dir / self.config.get("state_dir", "./state")
@@ -213,7 +214,7 @@ class PartnerAgent:
     def reload_config(self):
         """Reload configuration from disk without restarting."""
         logger.info("Reloading configuration...")
-        self.config = self._load_config()
+        self.config = self._load_config(self.config_path)
         logger.info("Configuration reloaded successfully")
     
     def _init_llm(self):

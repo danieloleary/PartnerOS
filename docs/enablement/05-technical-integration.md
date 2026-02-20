@@ -16,7 +16,7 @@ phase: enablement
 time_required: 1-2 hours
 difficulty: hard
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Technical Integration Guide
 skills_gained:

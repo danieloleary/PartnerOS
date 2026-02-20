@@ -16,7 +16,7 @@ phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Recruitment Email Sequence Template
 skills_gained:

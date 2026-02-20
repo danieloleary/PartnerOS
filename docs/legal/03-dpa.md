@@ -55,8 +55,8 @@ Use this Data Processing Agreement to ensure compliance with GDPR and other priv
 
 This Data Processing Agreement ("DPA") is entered into as of [Date] and forms part of the Master Service Agreement dated [MSA Date] between:
 
-**[Your Company Name]** ("Data Controller" or "Company")  
-AND  
+**[Your Company Name]** ("Data Controller" or "Company")
+AND
 **[Partner Company Name]** ("Data Processor" or "Partner")
 
 ## 1. DEFINITIONS
@@ -125,8 +125,8 @@ Partner shall assist Company in responding to data subject requests within [30] 
 ## 4. DATA TRANSFERS
 
 ### 4.1 Transfers Outside EEA
-[ ] Standard Contractual Clauses (SCCs) apply  
-[ ] Adequacy decision in place  
+[ ] Standard Contractual Clauses (SCCs) apply
+[ ] Adequacy decision in place
 [ ] Binding Corporate Rules (BCRs) apply
 
 ### 4.2 Transfer Mechanism
@@ -180,16 +180,16 @@ This DPA shall be governed by the laws of [State/Country].
 
 **COMPANY:**
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 **PARTNER:**
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 ---
@@ -220,4 +220,4 @@ Date: _______________________
 
 - [Mutual NDA](01-nda.md)
 - [Master Service Agreement](02-msa.md)
-- [Security Questionnaire](security/01-security-questionnaire.md)
+- [Security Questionnaire](../security/01-security-questionnaire.md)

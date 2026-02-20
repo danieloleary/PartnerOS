@@ -126,7 +126,7 @@ PartnerOS is available in multiple tiers to fit different needs:
 
 1. **Self-Service** - Just download from GitHub!
 
-2. **Implementation** - 
+2. **Implementation** -
    - Contact us: [hello@partneros.io](#)
    - We'll schedule a call to understand your needs
    - Invoice sent, delivery within 5 business days
@@ -159,7 +159,7 @@ PartnerOS is available in multiple tiers to fit different needs:
 
 ## Contact
 
-**Email:** [hello@partneros.io](#)  
+**Email:** [hello@partneros.io](#)
 **GitHub:** [github.com/danieloleary/PartnerOS](#)
 
 ---

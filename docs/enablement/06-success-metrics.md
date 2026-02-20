@@ -16,7 +16,7 @@ phase: enablement
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Partner Success Metrics Dashboard
 skills_gained:

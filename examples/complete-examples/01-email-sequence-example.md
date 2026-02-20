@@ -30,8 +30,8 @@ I'd love to explore if there might be a natural fit between our organizations.
 
 Best regards,
 
-Sarah Johnson  
-Partner Manager, TechCorp Solutions  
+Sarah Johnson
+Partner Manager, TechCorp Solutions
 sarah@techcorpsolutions.com | (555) 123-4567
 
 ---
@@ -51,7 +51,7 @@ We see a strong fit because:
 
 Would you have 15 minutes this week for a quick call?
 
-Best,  
+Best,
 Sarah
 
 ---
@@ -79,7 +79,7 @@ I wanted to share more about what makes TechCorp a strong partner:
 
 Looking forward to exploring this further.
 
-Best,  
+Best,
 Sarah
 
 ---
@@ -98,7 +98,7 @@ If not, I'm happy to do a virtual call at your convenience.
 
 **Book time directly:** https://calendly.com/sarah-techcorp
 
-Best,  
+Best,
 Sarah
 
 ---

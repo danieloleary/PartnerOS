@@ -16,7 +16,7 @@ phase: enablement
 time_required: 2-4 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Partner Enablement Roadmap (Strategic & Phased)
 skills_gained:

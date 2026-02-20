@@ -57,14 +57,14 @@ Use this Master Service Agreement template to establish the legal and commercial
 
 This Master Service Agreement ("Agreement") is entered into as of [Date] by and between:
 
-**[Your Company Name]** ("Company")  
-[Address]  
+**[Your Company Name]** ("Company")
+[Address]
 [City, State, ZIP]
 
 AND
 
-**[Partner Company Name]** ("Partner")  
-[Address]  
+**[Partner Company Name]** ("Partner")
+[Address]
 [City, State, ZIP]
 
 ## 1. DEFINITIONS
@@ -86,7 +86,7 @@ Partner is designated as a [Reseller / System Integrator / Strategic Partner] un
 Partner is authorized to promote and sell Services in the following territory: [Global / Specific Countries / Specific Regions]
 
 ### 2.3 Exclusivity
-[ ] Non-Exclusive: Partner may represent other companies selling competing products.  
+[ ] Non-Exclusive: Partner may represent other companies selling competing products.
 [ ] Exclusive: Partner is the only authorized partner for [specific products/territory].
 
 ## 3. OBLIGATIONS OF PARTNER
@@ -213,16 +213,16 @@ This Agreement, including all Exhibits, constitutes the entire agreement and sup
 
 **COMPANY:**
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 **PARTNER:**
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 ---
@@ -251,6 +251,6 @@ Date: _______________________
 ## Related Templates
 
 - [NDA](01-nda.md)
-- [Commission Structure](finance/01-commission.md)
-- [Deal Registration Policy](operations/04-deal-registration.md)
-- [Partner Program One-Pager](recruitment/06-one-pager.md)
+- [Commission Structure](../finance/01-commission.md)
+- [Deal Registration Policy](../operations/01-deal-registration.md)
+- [Partner Program One-Pager](../recruitment/06-one-pager.md)

@@ -18,7 +18,7 @@ difficulty: easy
 prerequisites:
 description: |
   A succinct, compelling document that quickly communicates the essence of your partner program and the value of partnering.
-  
+
 outcomes:
   - Completed Partnership One-Pager (Concise Value Proposition)
 skills_gained:

@@ -56,8 +56,8 @@ Use this Service Level Agreement to define support commitments between your comp
 
 This Service Level Agreement ("SLA") is entered into as of [Date] and forms part of the Master Service Agreement dated [MSA Date] between:
 
-**[Your Company Name]** ("Company")  
-AND  
+**[Your Company Name]** ("Company")
+AND
 **[Partner Company Name]** ("Partner")
 
 ## 1. SUPPORT SCOPE
@@ -114,7 +114,7 @@ This SLA applies to:
 Level 1: Support Team (Tier 1)
     ↓ No resolution in [X] hours
 Level 2: Support Manager (Tier 2)
-    ↓ No resolution in [X] hours  
+    ↓ No resolution in [X] hours
 Level 3: Director of Support
     ↓ No resolution in [X] hours
 Level 4: VP of Customer Success
@@ -188,16 +188,16 @@ This SLA shall be effective for [1] year from the Effective Date and shall autom
 
 **COMPANY:**
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 **PARTNER:**
 
-Signature: _______________________  
-Name: _______________________  
-Title: _______________________  
+Signature: _______________________
+Name: _______________________
+Title: _______________________
 Date: _______________________
 
 ---
@@ -229,5 +229,5 @@ Date: _______________________
 ## Related Templates
 
 - [Master Service Agreement](02-msa.md)
-- [Partner Success Metrics](enablement/06-success-metrics.md)
-- [QBR Template](enablement/07-qbr-template.md)
+- [Partner Success Metrics](../enablement/06-success-metrics.md)
+- [QBR Template](../enablement/07-qbr-template.md)

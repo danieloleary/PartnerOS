@@ -16,7 +16,7 @@ phase: strategy
 time_required: 8-16 hours
 difficulty: hard
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Partner Strategy Plan Template
 skills_gained:

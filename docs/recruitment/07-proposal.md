@@ -16,7 +16,7 @@ phase: recruitment
 time_required: 2-4 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Partnership Proposal Template
 skills_gained:

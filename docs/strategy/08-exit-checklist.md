@@ -18,7 +18,7 @@ difficulty: easy
 prerequisites:
 description: |
   A comprehensive checklist for professionally and gracefully ending partner relationships while protecting your brand, customers, and legal interests.
-  
+
 related_templates:
   - 03-evaluation-framework.md
   - ../enablement/06-success-metrics.md

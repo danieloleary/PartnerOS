@@ -16,7 +16,7 @@ phase: strategy
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Internal Alignment Playbook Template
 skills_gained:

@@ -130,7 +130,7 @@ def enhance_template(args):
         return 1
     fm, body = read_file(path)
     try:
-        import openai  # type: ignore
+        from openai import OpenAI  # type: ignore
     except ImportError:
         print("openai package is required for this command", file=sys.stderr)
         return 1
@@ -138,9 +138,9 @@ def enhance_template(args):
     if not api_key:
         print("OPENAI_API_KEY environment variable not set", file=sys.stderr)
         return 1
-    openai.api_key = api_key
+    client = OpenAI(api_key=api_key)
     prompt = args.prompt or "Clean up and format the following Markdown template:\n\n" + "\n".join(body)
-    resp = openai.ChatCompletion.create(
+    resp = client.chat.completions.create(
         model=args.model,
         messages=[
             {"role": "system", "content": "You format and enhance markdown templates."},
@@ -148,7 +148,7 @@ def enhance_template(args):
         ],
         temperature=0.3,
     )
-    improved = resp.choices[0].message["content"]
+    improved = resp.choices[0].message.content
     body = improved.splitlines()
     if args.update_last_updated:
         fm["last_updated"] = str(datetime.date.today())

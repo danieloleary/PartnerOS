@@ -16,7 +16,7 @@ phase: strategy
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed 3C/4C Partner Evaluation Framework
 skills_gained:
@@ -46,16 +46,16 @@ graph TD
         B[Capability<br/>30%] --> C
         CC[Commitment<br/>25%] --> C
     end
-    
+
     subgraph Extended_4C[Extended Criteria - 20%]
         D[Cultural Fit<br/>20%] --> C
     end
-    
+
     C --> E[Weighted<br/>Score]
     E --> F{Go/No-Go<br/>Threshold: 3.5}
     F -->|Pass| G[Proceed]
     F -->|Fail| H[Develop<br/>Plan]
-    
+
     style Core_3C fill:#e1f5fe
     style Extended_4C fill:#f3e5f5
     style C fill:#fff3e0
@@ -259,14 +259,14 @@ flowchart LR
         A3 --> A4[Analyze Data]
         A4 --> A5[Score Criteria]
     end
-    
+
     subgraph Ongoing[Ongoing Review]
         B1[Quarterly Review] --> B2[Annual Assessment]
         B2 --> B3[Continuous Monitoring]
         B3 --> B4[Feedback Sessions]
         B4 --> B5[Update Plans]
     end
-    
+
     subgraph Decision[Decision Framework]
         C1[Calculate Score] --> C2{Avg ≥ 3.5?}
         C2 -->|Yes| C3[Go / Continue]
@@ -274,10 +274,10 @@ flowchart LR
         C4 -->|Yes| C5[Dev Plan]
         C4 -->|No| C6[Exit / Terminate]
     end
-    
+
     A5 --> C1
     B5 --> C1
-    
+
     style Initial fill:#e3f2fd
     style Ongoing fill:#e8f5e9
     style Decision fill:#fff3e0

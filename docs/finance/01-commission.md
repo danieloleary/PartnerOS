@@ -192,7 +192,7 @@ Commission: 50,000 × 15% = $7,500
 ### Example 2: Gold Partner with Accelerator
 ```
 Deal: $200,000 new SaaS subscription
-Type: Partner-sourced  
+Type: Partner-sourced
 Annual Revenue: $600,000 (Gold tier)
 Base Commission: 200,000 × 25% = $50,000
 Accelerator (+5% for 110%+ quota): 200,000 × 5% = $10,000
@@ -242,5 +242,5 @@ Commission: 100,000 × 10% = $10,000
 
 - [Partner Rebate Program](02-rebate.md)
 - [Revenue Sharing Model](03-revenue-share.md)
-- [Deal Registration Policy](operations/04-deal-registration.md)
-- [Partner Success Metrics](enablement/06-success-metrics.md)
+- [Deal Registration Policy](../operations/01-deal-registration.md)
+- [Partner Success Metrics](../enablement/06-success-metrics.md)

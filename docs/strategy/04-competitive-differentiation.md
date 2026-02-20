@@ -16,7 +16,7 @@ phase: strategy
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
-description: 
+description:
 outcomes:
   - Completed Competitive Differentiation Template
 skills_gained:
