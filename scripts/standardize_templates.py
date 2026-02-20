@@ -36,6 +36,9 @@ SECTION_TO_PHASE = {
     "getting-started": "onboarding",
     "resources": "operational",
     "agent": "operational",
+    "legal": "recruitment",
+    "finance": "operational",
+    "security": "recruitment",
 }
 
 SECTION_TO_CATEGORY = {
@@ -45,6 +48,9 @@ SECTION_TO_CATEGORY = {
     "getting-started": "operational",
     "resources": "operational",
     "agent": "operational",
+    "legal": "legal",
+    "finance": "financial",
+    "security": "compliance",
 }
 
 DEFAULT_TIER = ["Bronze", "Silver", "Gold"]
@@ -63,6 +69,23 @@ def get_category_from_section(section):
 
 def estimate_time_required(section, filename):
     filename_lower = filename.lower()
+
+    if section.lower() == "legal":
+        if "nda" in filename_lower or "sla" in filename_lower:
+            return "1-2 hours"
+        elif "msa" in filename_lower or "dpa" in filename_lower:
+            return "4-8 hours"
+        return "2-4 hours"
+
+    if section.lower() == "finance":
+        if "commission" in filename_lower or "revenue" in filename_lower:
+            return "2-4 hours"
+        return "1-2 hours"
+
+    if section.lower() == "security":
+        if "questionnaire" in filename_lower or "compliance" in filename_lower:
+            return "2-4 hours"
+        return "1-2 hours"
 
     if "email" in filename_lower or "sequence" in filename_lower:
         return "1-2 hours"
@@ -84,6 +107,15 @@ def estimate_time_required(section, filename):
 
 def estimate_difficulty(section, filename):
     filename_lower = filename.lower()
+
+    if section.lower() == "legal":
+        return "hard"
+
+    if section.lower() == "finance":
+        return "medium"
+
+    if section.lower() == "security":
+        return "medium"
 
     if "business-case" in filename_lower or "strategy" in filename_lower:
         return "hard"

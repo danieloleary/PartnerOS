@@ -44,6 +44,8 @@ PartnerOS/
 │   │   ├── partner_agent/         # Python package wrapper
 │   │   │   └── __init__.py        # Re-exports PartnerAgent from agent.py
 │   │   └── state/                 # Partner session state (gitignored)
+│   ├── standardize_templates.py   # Bulk frontmatter standardization
+│   ├── generate_template.py        # CLI template generator
 │   ├── lint_markdown.py           # Custom markdown linter
 │   ├── generate_file_list.py      # Template inventory generator
 │   ├── manage_templates.py        # Template management utilities
@@ -130,15 +132,44 @@ export PROVIDER=openai
 ### Testing
 
 ```bash
-# Run template tests
+# Run all tests (recommended)
+pytest tests/ -v
+
+# Run only template tests
+pytest tests/test_templates.py -v
+
+# Run only agent tests
+pytest tests/test_agent.py -v
+
+# Or with Python directly
 python3 tests/test_templates.py
-
-# Run agent tests
 python3 tests/test_agent.py
-
-# Or with pytest (from repo root)
-pytest tests/
 ```
+
+### Test Suite (20 tests)
+
+**Tier 1 - Critical:**
+- `test_templates_exist` - At least 1 template exists
+- `test_templates_have_frontmatter` - All .md files have YAML frontmatter
+- `test_frontmatter_schema_validation` - 17 required fields present
+- `test_template_count_per_category` - Correct counts per folder
+- `test_folder_structure` - All directories exist
+- `test_playbook_template_references` - Playbooks reference existing templates
+- `test_frontmatter_yaml_parseable` - No YAML syntax errors
+
+**Tier 2 - Site/Docs/Architecture:**
+- `test_config_yaml_valid` - config.yaml has required fields
+- `test_playbook_yaml_schema` - All playbooks valid schema
+- `test_no_duplicate_template_titles` - No duplicate titles
+- `test_template_files_have_content` - Templates not empty
+- `test_mkdocs_yml_valid` - mkdocs.yml parses
+
+**Agent Tests:**
+- `test_agent_import` - Agent.py compiles without errors
+- `test_env_example_exists` - .env.example has required vars
+- `test_partner_sanitization` - Partner name validation works
+- `test_path_validation` - Path traversal prevented
+- `test_slugify` - URL slug generation works
 
 ### Markdown Linting
 

@@ -156,3 +156,12 @@ nav:
     - Glossary: resources/glossary.md
     - Maturity Model: resources/maturity-model.md
     - Tags: tags.md
+  - Legal:
+    - legal/01-nda.md
+    - legal/02-msa.md
+    - legal/03-dpa.md
+    - legal/04-sla.md
+  - Finance:
+    - finance/01-commission.md
+  - Security:
+    - security/01-security-questionnaire.md
