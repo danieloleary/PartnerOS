@@ -1,22 +1,50 @@
-name: "Support Escalation"
-description: "Escalate partner issues to the support team effectively and track resolution."
+name: Support Escalation
+description: Escalate partner issues to the support team effectively and track resolution
+tags: [support, escalation, issue-resolution]
+
+prerequisites:
+  - Partner has reported an issue
+  - Initial triage completed
+  - Partner contact information confirmed
+
 steps:
-  - name: "Identify Issue Severity"
-    template: "docs/enablement/support/severity-assessment.md"
-    prompt: "Help assess the severity and impact of the partner's issue."
-  
-  - name: "Document Issue Details"
-    template: "docs/enablement/support/issue-documentation.md"
-    prompt: "Gather all necessary information to document the issue clearly."
-  
-  - name: "Route to Appropriate Team"
-    template: "docs/enablement/support/routing.md"
-    prompt: "Determine which team should handle this issue based on type and severity."
-  
-  - name: "Track Resolution"
-    template: "docs/enablement/support/tracking.md"
-    prompt: "Set up tracking for the escalation and expected resolution time."
-  
-  - name: "Follow Up and Close"
-    template: "docs/enablement/support/followup.md"
-    prompt: "Create a follow-up process to confirm resolution and document lessons learned."
+  - name: Identify Issue Severity
+    template: enablement/06-success-metrics.md
+    prompt: |
+      Help assess the severity and impact of the partner's issue.
+      What tier is this partner? What is the business impact?
+      Classify as P1 (critical), P2 (high), P3 (medium), or P4 (low).
+
+  - name: Document Issue Details
+    template: enablement/07-qbr-template.md
+    prompt: |
+      Gather all necessary information to document the issue clearly.
+      What happened? When? Who is affected? What has been tried?
+      Create a structured issue report for the support team.
+
+  - name: Route to Appropriate Team
+    template: strategy/07-internal-alignment.md
+    prompt: |
+      Determine which team should handle this issue based on type and severity.
+      Technical issues go to engineering. Commercial issues to partner management.
+      Escalate to leadership if this is a P1 or threatens the partnership.
+
+  - name: Track Resolution
+    template: enablement/06-success-metrics.md
+    prompt: |
+      Set up tracking for the escalation and expected resolution time.
+      Define SLA based on partner tier and issue severity.
+      Schedule check-in points and status updates.
+
+  - name: Follow Up and Close
+    template: enablement/07-qbr-template.md
+    prompt: |
+      Create a follow-up process to confirm resolution and document lessons learned.
+      Was the partner satisfied with the resolution? Did we meet SLA?
+      Update the partner health score and add notes for next QBR.
+
+success_criteria:
+  - Issue resolved within SLA
+  - Partner confirms satisfaction
+  - Root cause documented
+  - Preventive measures identified

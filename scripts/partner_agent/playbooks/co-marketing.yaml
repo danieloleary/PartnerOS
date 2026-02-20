@@ -1,22 +1,50 @@
-name: "Co-Marketing Campaign"
-description: "Run a joint marketing campaign with a partner to generate leads and awareness."
+name: Co-Marketing Campaign
+description: Run a joint marketing campaign with a partner to generate leads and awareness
+tags: [marketing, co-marketing, campaigns, leads]
+
+prerequisites:
+  - Active partnership with co-marketing agreement
+  - MDF or shared budget allocated
+  - Marketing contacts on both sides identified
+
 steps:
-  - name: "Define Campaign Objectives"
-    template: "docs/enablement/co-marketing/campaign-objectives.md"
-    prompt: "Guide me through defining clear, measurable objectives for this co-marketing campaign."
-  
-  - name: "Identify Target Audience"
-    template: "docs/enablement/co-marketing/target-audience.md"
-    prompt: "Help identify the overlapping target audience between both partners."
-  
-  - name: "Develop Campaign Content"
-    template: "docs/enablement/co-marketing/content-plan.md"
-    prompt: "Outline a content plan for the campaign including messaging, channels, and timeline."
-  
-  - name: "Set Up Tracking"
-    template: "docs/enablement/co-marketing/tracking.md"
-    prompt: "Define KPIs and tracking mechanisms for the campaign."
-  
-  - name: "Execute and Measure"
-    template: "docs/enablement/co-marketing/execution.md"
-    prompt: "Create an execution checklist and measurement process."
+  - name: Define Campaign Objectives
+    template: enablement/04-co-marketing.md
+    prompt: |
+      Guide me through defining clear, measurable objectives for this co-marketing campaign.
+      What are the joint goals? Lead targets? Revenue influence targets?
+      How does this align with both partners' quarterly priorities?
+
+  - name: Identify Target Audience
+    template: recruitment/10-icp-tracker.md
+    prompt: |
+      Help identify the overlapping target audience between both partners.
+      Review ICPs from both sides and find the intersection.
+      Define the campaign's target segments and account lists.
+
+  - name: Develop Campaign Content
+    template: enablement/04-co-marketing.md
+    prompt: |
+      Outline a content plan for the campaign including messaging, channels, and timeline.
+      What assets do we need? Who creates what? What are the approval workflows?
+      Draft the campaign brief for both teams.
+
+  - name: Set Up Tracking
+    template: enablement/06-success-metrics.md
+    prompt: |
+      Define KPIs and tracking mechanisms for the campaign.
+      How will we attribute leads and pipeline? What tools do we need?
+      Set up shared dashboards and reporting cadence.
+
+  - name: Execute and Measure
+    template: enablement/06-success-metrics.md
+    prompt: |
+      Create an execution checklist and measurement process.
+      Track campaign performance against objectives.
+      Plan the post-campaign review and ROI analysis.
+
+success_criteria:
+  - Campaign launched on schedule
+  - Lead targets met or exceeded
+  - Pipeline influence documented
+  - Post-campaign ROI report delivered

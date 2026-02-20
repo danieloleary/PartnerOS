@@ -123,7 +123,7 @@ provider: anthropic
 model: claude-sonnet-4-20250514
 
 # Template paths
-templates_dir: ../../partner_blueprint
+templates_dir: ../../docs
 
 # State storage
 state_dir: ./state
@@ -190,13 +190,13 @@ Create a new YAML file in `playbooks/`:
 name: Partner Renewal
 description: Annual partnership renewal process
 steps:
-  - template: III_Partner_Enablement_Templates/06_Partner_Success_Metrics.md
+  - template: enablement/06-success-metrics.md
     name: Review Metrics
     prompt: |
       Review the partner's performance over the past year.
       Highlight achievements and areas for improvement.
 
-  - template: III_Partner_Enablement_Templates/07_Partner_QBR_Template.md
+  - template: enablement/07-qbr-template.md
     name: Renewal Discussion
     prompt: |
       Prepare talking points for the renewal conversation.

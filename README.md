@@ -25,7 +25,7 @@ Building a world-class partner program is hard. Most companies:
 | Benefit | Description |
 |---------|-------------|
 | **Complete Playbooks** | 7 end-to-end automation playbooks covering the entire partner lifecycle |
-| **67 Ready-to-Use Templates** | Strategy, recruitment, and enablement templates (34 in docs + 33 in code) |
+| **34 Ready-to-Use Templates** | Strategy (8), recruitment (10), and enablement (7) templates plus getting started guides and resources |
 | **AI-Powered Agent** | Local AI partner assistant runs offline with Ollama — no API keys required |
 | **Enterprise-Ready** | Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths |
 | **Tested & Validated** | Automated template validation and agent tests ensure reliability |
@@ -55,8 +55,8 @@ Browse the full documentation, explore templates, and see the AI Agent in action
 ### Option 1: Run the AI Partner Agent (Recommended)
 
 ```bash
- repo
-git clone https# Clone the://github.com/danieloleary/PartnerOS.git
+# Clone the repo
+git clone https://github.com/danieloleary/PartnerOS.git
 cd PartnerOS/scripts/partner_agent
 
 # Install dependencies
@@ -137,19 +137,24 @@ PartnerOS implements a three-tier partner model:
 
 ```
 PartnerOS/
-├── docs/                      # MkDocs documentation
+├── docs/                      # Templates & documentation (single source of truth)
 │   ├── strategy/              # Strategy templates (8)
 │   ├── recruitment/           # Recruitment templates (10)
 │   ├── enablement/            # Enablement templates (7)
+│   ├── getting-started/       # Quick start guides
+│   ├── resources/             # Glossary, maturity model
 │   └── agent/                 # Partner Agent docs
 ├── scripts/
 │   └── partner_agent/         # AI Partner Agent
 │       ├── agent.py           # Main agent (Ollama + Anthropic)
+│       ├── config.yaml        # Agent & company configuration
 │       ├── playbooks/         # Playbook definitions (7 total)
 │       └── .env.example       # Environment config
+├── .partner_data/             # YOUR private partner data (gitignored)
 ├── tests/                     # Automated tests
-├── partner_blueprint/         # Original template source
 ├── mkdocs.yml                 # Site configuration
+├── ROADMAP.md                 # Product roadmap
+├── BACKLOG.md                 # Missing templates backlog
 └── README.md                  # This file
 ```
 

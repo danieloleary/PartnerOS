@@ -1,7 +1,7 @@
 import os, json
 
 # List of directories to include
-paths = ['partner_blueprint', 'Source Materials']
+paths = ['docs', 'Source Materials']
 files = []
 
 for path in paths:
