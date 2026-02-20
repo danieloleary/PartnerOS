@@ -1,0 +1,74 @@
+# PartnerOS Demo Configuration
+# This file contains demo data for showing PartnerOS to prospects
+# DO NOT USE IN PRODUCTION - For demo purposes only
+
+company:
+  name: "Acme Partners"
+  website: "https://acmepartners.demo"
+  
+contact:
+  name: "Demo User"
+  email: "demo@acmepartners.demo"
+  role: "Partner Manager"
+  
+branding:
+  logo_url: "https://via.placeholder.com/200x50?text=Acme+Partners"
+  brand_color: "#6366F1"
+
+# Demo settings
+demo:
+  enabled: true
+  company_type: "Managed Service Provider"
+  target_market: "Mid-market companies (100-1000 employees)"
+  current_partners: 12
+  partner_tiers:
+    gold: 2
+    silver: 5
+    bronze: 5
+
+# Sample partners for demo
+partners:
+  - name: "TechStart Solutions"
+    tier: gold
+    status: active
+    revenue: 250000
+    since: "2024-01-15"
+    
+  - name: "CloudFirst Consulting"
+    tier: silver
+    status: active
+    revenue: 85000
+    since: "2024-06-01"
+    
+  - name: "Digital Dynamics"
+    tier: bronze
+    status: onboarding
+    revenue: 0
+    since: "2025-01-10"
+
+# Sample pipeline
+pipeline:
+  - partner: "NewCo Enterprises"
+    stage: qualification
+    value: 75000
+    expected_close: "2025-03-01"
+    
+  - partner: "Startup Labs"
+    stage: proposal
+    value: 120000
+    expected_close: "2025-02-15"
+    
+  - partner: "Enterprise Corp"
+    stage: negotiation
+    value: 350000
+    expected_close: "2025-02-01"
+
+# Demo notes for presenter
+notes: |
+  This is demo data for showing PartnerOS capabilities.
+  Feel free to use realistic scenarios:
+  - Show onboarding flow with "Digital Dynamics"
+  - Show QBR metrics with "TechStart Solutions"
+  - Show expansion opportunity with "CloudFirst Consulting"
+  
+  Tip: Use the Agent to walk through a playbook live!

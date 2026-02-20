@@ -152,7 +152,7 @@ def test_template_count_per_category():
         "enablement": 7,
         "agent": 4,
         "getting-started": 3,
-        "resources": 2,
+        "resources": 4,
         "legal": 4,
         "finance": 1,
         "security": 1,
@@ -381,6 +381,85 @@ def test_mkdocs_yml_valid():
     # Verify basic structure
     assert "site_name" in config, "mkdocs.yml missing 'site_name'"
     assert "nav" in config, "mkdocs.yml missing 'nav'"
+
+
+def test_scripts_exist():
+    """Verify required scripts exist."""
+    scripts_dir = REPO_ROOT / "scripts"
+
+    required_scripts = [
+        "onboard.py",
+        "fill_template.py",
+        "demo_mode.py",
+        "generate_template.py",
+        "standardize_templates.py",
+    ]
+
+    for script in required_scripts:
+        path = scripts_dir / script
+        assert path.exists(), f"Missing script: {script}"
+
+
+def test_onboard_script_valid():
+    """Verify onboard.py is valid Python."""
+    script = REPO_ROOT / "scripts" / "onboard.py"
+
+    if not script.exists():
+        pytest.skip("onboard.py not found")
+
+    with open(script, "r") as f:
+        code = f.read()
+
+    try:
+        compile(code, "onboard.py", "exec")
+    except SyntaxError as e:
+        pytest.fail(f"Syntax error in onboard.py: {e}")
+
+
+def test_fill_template_script_valid():
+    """Verify fill_template.py is valid Python."""
+    script = REPO_ROOT / "scripts" / "fill_template.py"
+
+    if not script.exists():
+        pytest.skip("fill_template.py not found")
+
+    with open(script, "r") as f:
+        code = f.read()
+
+    try:
+        compile(code, "fill_template.py", "exec")
+    except SyntaxError as e:
+        pytest.fail(f"Syntax error in fill_template.py: {e}")
+
+
+def test_demo_mode_script_valid():
+    """Verify demo_mode.py is valid Python."""
+    script = REPO_ROOT / "scripts" / "demo_mode.py"
+
+    if not script.exists():
+        pytest.skip("demo_mode.py not found")
+
+    with open(script, "r") as f:
+        code = f.read()
+
+    try:
+        compile(code, "demo_mode.py", "exec")
+    except SyntaxError as e:
+        pytest.fail(f"Syntax error in demo_mode.py: {e}")
+
+
+def test_examples_directory():
+    """Verify examples directory structure."""
+    examples_dir = REPO_ROOT / "examples"
+
+    assert examples_dir.exists(), "examples/ directory not found"
+
+    # Check for demo-company
+    demo_dir = examples_dir / "demo-company"
+    assert demo_dir.exists(), "examples/demo-company/ not found"
+
+    demo_config = demo_dir / "demo-config.yaml"
+    assert demo_config.exists(), "examples/demo-company/demo-config.yaml not found"
 
 
 # =============================================================================
