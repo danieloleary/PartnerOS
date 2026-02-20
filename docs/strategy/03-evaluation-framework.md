@@ -24,6 +24,36 @@ Use this framework to objectively evaluate potential partners and assess ongoing
 
 # 3C/4C Partner Evaluation Framework
 
+## Framework Overview
+
+```mermaid
+graph TD
+    subgraph Core_3C[Core Criteria - 80%]
+        A[Capacity<br/>25%] --> C[3C/4C<br/>Evaluation]
+        B[Capability<br/>30%] --> C
+        CC[Commitment<br/>25%] --> C
+    end
+    
+    subgraph Extended_4C[Extended Criteria - 20%]
+        D[Cultural Fit<br/>20%] --> C
+    end
+    
+    C --> E[Weighted<br/>Score]
+    E --> F{Go/No-Go<br/>Threshold: 3.5}
+    F -->|Pass| G[Proceed]
+    F -->|Fail| H[Develop<br/>Plan]
+    
+    style Core_3C fill:#e1f5fe
+    style Extended_4C fill:#f3e5f5
+    style C fill:#fff3e0
+    style E fill:#fff3e0
+    style F fill:#ffebee
+    style G fill:#e8f5e9
+    style H fill:#fff3e0
+```
+
+---
+
 ## Core Criteria (3C)
 
 ### 1. Capacity
@@ -207,6 +237,41 @@ Use this framework to objectively evaluate potential partners and assess ongoing
 - **Critical Areas:** Must score at least 3.0 in each core criterion
 - **Improvement Plans:** Required for scores below 3.0
 - **Termination Triggers:** Scores below 2.0 in critical areas
+
+```mermaid
+flowchart LR
+    subgraph Initial[Initial Assessment]
+        A1[Gather Docs] --> A2[Conduct Interviews]
+        A2 --> A3[Review References]
+        A3 --> A4[Analyze Data]
+        A4 --> A5[Score Criteria]
+    end
+    
+    subgraph Ongoing[Ongoing Review]
+        B1[Quarterly Review] --> B2[Annual Assessment]
+        B2 --> B3[Continuous Monitoring]
+        B3 --> B4[Feedback Sessions]
+        B4 --> B5[Update Plans]
+    end
+    
+    subgraph Decision[Decision Framework]
+        C1[Calculate Score] --> C2{Avg ≥ 3.5?}
+        C2 -->|Yes| C3[Go / Continue]
+        C2 -->|No| C4{Core ≥ 3.0?}
+        C4 -->|Yes| C5[Dev Plan]
+        C4 -->|No| C6[Exit / Terminate]
+    end
+    
+    A5 --> C1
+    B5 --> C1
+    
+    style Initial fill:#e3f2fd
+    style Ongoing fill:#e8f5e9
+    style Decision fill:#fff3e0
+    style C3 fill:#c8e6c9
+    style C5 fill:#fff9c4
+    style C6 fill:#ffcdd2
+```
 
 ## Action Planning
 

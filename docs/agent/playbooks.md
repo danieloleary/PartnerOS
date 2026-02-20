@@ -19,6 +19,22 @@ Playbooks are pre-defined workflows that guide you through common partnership sc
 | `expand` | 5 | Grow an existing partnership |
 | `exit` | 4 | End a partnership gracefully |
 
+## Playbook Flow Visualization
+
+```mermaid
+graph LR
+    recruit[recruit<br/>Sign Partner] --> onboard[onboard<br/>Activate]
+    onboard --> qbr[QBR<br/>Review]
+    qbr --> expand[expand<br/>Grow]
+    qbr --> exit[exit<br/>Terminate]
+    
+    style recruit fill:#e3f2fd
+    style onboard fill:#e8f5e9
+    style qbr fill:#fff3e0
+    style expand fill:#f3e5f5
+    style exit fill:#ffebee
+```
+
 ---
 
 ## Recruit {#recruit}
@@ -46,6 +62,22 @@ Playbooks are pre-defined workflows that guide you through common partnership sc
 | 3 | [Discovery Call Script](../recruitment/04-discovery-call.md) | Prepare qualification call |
 | 4 | [Pitch Deck](../recruitment/05-pitch-deck.md) | Customize your pitch |
 | 5 | [Proposal Template](../recruitment/07-proposal.md) | Draft the partnership proposal |
+
+```mermaid
+graph LR
+    A[IPP] --> B[Qualification]
+    B --> C[Discovery]
+    C --> D[Pitch]
+    D --> E[Proposal]
+    E --> F((Signed))
+    
+    style A fill:#e3f2fd
+    style B fill:#e3f2fd
+    style C fill:#e3f2fd
+    style D fill:#e3f2fd
+    style E fill:#e3f2fd
+    style F fill:#c8e6c9
+```
 
 ### Run It
 
@@ -89,6 +121,22 @@ python agent.py --playbook recruit --partner "Acme Corp"
 | 4 | [Training Deck](../enablement/02-training-deck.md) | Customize training plan |
 | 5 | [ICP Alignment Tracker](../recruitment/10-icp-tracker.md) | Align on target accounts |
 
+```mermaid
+graph LR
+    A[Agreement] --> B[Checklist]
+    B --> C[Enablement]
+    C --> D[Training]
+    D --> E[ICP Alignment]
+    E --> F((Active))
+    
+    style A fill:#e8f5e9
+    style B fill:#e8f5e9
+    style C fill:#e8f5e9
+    style D fill:#e8f5e9
+    style E fill:#e8f5e9
+    style F fill:#c8e6c9
+```
+
 ### Run It
 
 ```bash
@@ -126,6 +174,20 @@ python agent.py --playbook onboard --partner "Acme Corp"
 | 2 | [ICP Alignment Tracker](../recruitment/10-icp-tracker.md) | Review pipeline and accounts |
 | 3 | [QBR Template](../enablement/07-qbr-template.md) | Prepare full QBR document |
 | 4 | [Strategy Plan](../strategy/05-strategy-plan.md) | Update strategic alignment |
+
+```mermaid
+graph LR
+    A[Metrics] --> B[ICP Review]
+    B --> C[QBR Doc]
+    C --> D[Strategy]
+    D --> E((Aligned))
+    
+    style A fill:#fff3e0
+    style B fill:#fff3e0
+    style C fill:#fff3e0
+    style D fill:#fff3e0
+    style E fill:#c8e6c9
+```
 
 ### Run It
 
@@ -168,6 +230,22 @@ python agent.py --playbook qbr --partner "Acme Corp"
 | 4 | [Technical Integration](../enablement/05-technical-integration.md) | Deepen integration |
 | 5 | [Internal Alignment](../strategy/07-internal-alignment.md) | Get internal buy-in |
 
+```mermaid
+graph LR
+    A[Business Case] --> B[Strategy]
+    B --> C[Co-Marketing]
+    C --> D[Integration]
+    D --> E[Alignment]
+    E --> F((Expanded))
+    
+    style A fill:#f3e5f5
+    style B fill:#f3e5f5
+    style C fill:#f3e5f5
+    style D fill:#f3e5f5
+    style E fill:#f3e5f5
+    style F fill:#c8e6c9
+```
+
 ### Run It
 
 ```bash
@@ -205,6 +283,20 @@ python agent.py --playbook expand --partner "Acme Corp"
 | 2 | [ICP Alignment Tracker](../recruitment/10-icp-tracker.md) | Review affected customers |
 | 3 | [Success Metrics](../enablement/06-success-metrics.md) | Document final performance |
 | 4 | [Exit Checklist](../strategy/08-exit-checklist.md) | Execute wind-down |
+
+```mermaid
+graph LR
+    A[Exit Planning] --> B[Customer Review]
+    B --> C[Metrics Doc]
+    C --> D[Wind-Down]
+    D --> E((Closed))
+    
+    style A fill:#ffebee
+    style B fill:#ffebee
+    style C fill:#ffebee
+    style D fill:#ffebee
+    style E fill:#ffcdd2
+```
 
 ### Run It
 

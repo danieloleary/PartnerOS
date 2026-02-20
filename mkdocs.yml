@@ -1,9 +1,11 @@
 site_name: PartnerOS
 site_description: The complete playbook for building and scaling strategic partnerships
 site_url: https://danieloleary.github.io/PartnerOS
-base_url: /PartnerOS
+site_author: Daniel O'Leary
 repo_url: https://github.com/danieloleary/PartnerOS
 repo_name: danieloleary/PartnerOS
+
+copyright: Copyright &copy; 2024 Daniel O'Leary
 
 theme:
   name: material
@@ -18,9 +20,9 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-    # Dark mode
+    # Dark mode - improved contrast
     - scheme: slate
-      primary: indigo
+      primary: deep purple
       accent: amber
       toggle:
         icon: material/brightness-4
@@ -54,11 +56,14 @@ plugins:
   - search:
       separator: '[\s\-,:!=\[\]()\"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - tags
+  - social
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/danieloleary/PartnerOS
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/danieloleary
   generator: false
   # Analytics disabled (remove placeholder or configure real property)
   # analytics:
@@ -83,9 +88,7 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.emoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -98,7 +101,6 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:

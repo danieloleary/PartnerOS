@@ -11,6 +11,13 @@
   --md-primary-fg-color: #818cf8;
   --md-primary-fg-color--light: #a5b4fc;
   --md-primary-fg-color--dark: #6366f1;
+  --md-accent-fg-color: #fbbf24;
+}
+
+/* Dark mode text contrast improvements */
+[data-md-color-scheme="slate"] {
+  --md-typeset-color: #e2e8f0;
+  --md-typeset-a-color: #818cf8;
 }
 
 /* Hero section on homepage */
