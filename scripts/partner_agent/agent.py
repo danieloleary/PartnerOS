@@ -390,15 +390,29 @@ class PartnerAgent:
         partner = self._sanitize_partner_name(partner)
         slug = self.slugify(partner)
         state_file = self.state_dir / slug / "metadata.json"
-        
+
         if state_file.exists():
             with open(state_file) as f:
-                return json.load(f)
-        
+                state = json.load(f)
+            # Back-fill new fields for existing state files
+            state.setdefault("tier", None)
+            state.setdefault("vertical", None)
+            state.setdefault("health_score", None)
+            state.setdefault("rm", None)
+            state.setdefault("notes", [])
+            state.setdefault("milestones", [])
+            return state
+
         return {
             "name": partner,
             "slug": slug,
             "created": datetime.now().isoformat(),
+            "tier": None,          # Registered / Silver / Gold / Strategic
+            "vertical": None,      # SaaS, Healthcare, etc.
+            "health_score": None,  # 0-100
+            "rm": None,            # Relationship Manager name
+            "notes": [],           # [{"ts": iso, "text": str}]
+            "milestones": [],      # [{"ts": iso, "name": str}]
             "playbooks": {}
         }
 
@@ -431,6 +445,93 @@ class PartnerAgent:
                         with open(meta_file) as f:
                             partners.append(json.load(f))
         return partners
+
+    # -------------------------------------------------------------------------
+    # Agent Superpowers
+    # -------------------------------------------------------------------------
+
+    PLAYBOOK_NEXT_STEPS: Dict[str, List[str]] = {
+        "recruit":            ["onboard"],
+        "onboard":            ["qbr", "co-marketing"],
+        "qbr":                ["expand"],
+        "expand":             ["co-marketing"],
+        "co-marketing":       ["qbr"],
+        "support-escalation": ["qbr"],
+    }
+
+    TIER_EXTRA_PLAYBOOKS: Dict[str, List[str]] = {
+        "Gold":       ["co-marketing", "expand"],
+        "Strategic":  ["co-marketing", "expand", "qbr"],
+    }
+
+    def recommend_templates(self, partner_data: dict) -> List[str]:
+        """
+        Return an ordered list of recommended next playbooks for a partner
+        based on completed playbooks and their tier.
+        """
+        completed = {k for k, v in partner_data.get("playbooks", {}).items() if v.get("completed")}
+        tier = partner_data.get("tier") or ""
+        recommended: List[str] = []
+
+        # Follow natural progression from completed playbooks
+        for pb in completed:
+            for nxt in self.PLAYBOOK_NEXT_STEPS.get(pb, []):
+                if nxt not in completed and nxt not in recommended:
+                    recommended.append(nxt)
+
+        # Add tier-specific extras
+        for pb in self.TIER_EXTRA_PLAYBOOKS.get(tier, []):
+            if pb not in completed and pb not in recommended:
+                recommended.append(pb)
+
+        # Default: start with recruit if nothing done yet
+        if not recommended and not completed:
+            recommended = ["recruit"]
+        elif not recommended:
+            recommended = ["qbr", "expand"]
+
+        return recommended
+
+    def generate_email(self, partner_data: dict, situation: str) -> str:
+        """
+        Generate a contextual partner email using the LLM.
+        Returns the full email text (Subject + body).
+        """
+        company = self.config.get("company", {})
+        system = self._get_system_prompt(partner_data)
+        messages = [{
+            "role": "user",
+            "content": (
+                f"Write a professional partner email for the following situation.\n\n"
+                f"Sender company: {company.get('name', '[Your Company]')}\n"
+                f"Recipient partner: {partner_data.get('name')}\n"
+                f"Partner tier: {partner_data.get('tier') or 'Unclassified'}\n"
+                f"Situation: {situation}\n\n"
+                "Format: Subject line first, then a blank line, then the full email body "
+                "with greeting, body paragraphs, and a professional sign-off."
+            )
+        }]
+        return self.chat(messages, system_prompt=system)
+
+    def add_note(self, partner_data: dict, text: str) -> dict:
+        """Append a timestamped note to a partner's record and save state."""
+        partner_data.setdefault("notes", [])
+        partner_data["notes"].append({
+            "ts": datetime.now().isoformat(),
+            "text": text.strip()
+        })
+        self.save_partner_state(partner_data["name"], partner_data)
+        return partner_data
+
+    def add_milestone(self, partner_data: dict, name: str) -> dict:
+        """Record a partner milestone and save state."""
+        partner_data.setdefault("milestones", [])
+        partner_data["milestones"].append({
+            "ts": datetime.now().isoformat(),
+            "name": name.strip()
+        })
+        self.save_partner_state(partner_data["name"], partner_data)
+        return partner_data
 
     def chat(self, messages: list, system_prompt: str = None) -> str:
         """Send messages to LLM and get response."""
@@ -466,9 +567,43 @@ class PartnerAgent:
 
         return "[Unknown provider]"
 
-    def _get_system_prompt(self) -> str:
-        """Get the system prompt for the agent."""
+    def _get_system_prompt(self, partner_data: dict = None) -> str:
+        """Get the system prompt for the agent, optionally enriched with partner context."""
         company = self.config.get("company", {})
+        tiers = {t["name"]: t for t in self.config.get("tiers", [])}
+        qbr_freq = self.config.get("qbr_frequency", {})
+
+        partner_section = ""
+        if partner_data:
+            tier_name = partner_data.get("tier") or "Unclassified"
+            tier_cfg = tiers.get(tier_name, {})
+            health = partner_data.get("health_score")
+            health_str = f"{health}/100" if health is not None else "Not assessed"
+            recent_notes = partner_data.get("notes", [])[-3:]
+            notes_str = "; ".join(n["text"] for n in recent_notes) if recent_notes else "None"
+            milestones = [m["name"] for m in partner_data.get("milestones", [])]
+
+            tier_details = ""
+            if tier_cfg:
+                tier_details = (
+                    f"\n  Revenue threshold: ${tier_cfg.get('revenue_threshold', 0):,}"
+                    f"\n  Certification required: {tier_cfg.get('certification_required', False)}"
+                    f"\n  QBR cadence: {qbr_freq.get(tier_name, 'annually')}"
+                )
+
+            partner_section = f"""
+Partner context:
+- Partner: {partner_data.get('name')}
+- Tier: {tier_name}{tier_details}
+- Vertical: {partner_data.get('vertical') or 'Unknown'}
+- Health score: {health_str}
+- Relationship manager: {partner_data.get('rm') or 'Unassigned'}
+- Completed milestones: {', '.join(milestones) if milestones else 'None'}
+- Recent notes: {notes_str}
+
+Tailor your advice to the partner's tier. {tier_name} partners get {qbr_freq.get(tier_name, 'annual')} QBRs.
+"""
+
         return f"""You are a Partnership Expert Agent helping to run partnership playbooks.
 
 Your role is to guide users through filling out partnership templates by:
@@ -481,12 +616,12 @@ Company context:
 - Company: {company.get('name', '[Your Company]')}
 - Product: {company.get('product', '[Your Product]')}
 - Value Prop: {company.get('value_prop', '[Your Value Proposition]')}
-
+{partner_section}
 Be concise and actionable. Ask one question at a time.
 When you have enough information for a section, fill it in and move to the next.
 Format filled sections in markdown."""
 
-    def run_playbook_step(self, playbook: dict, step_index: int, partner: str, context: dict) -> dict:
+    def run_playbook_step(self, playbook: dict, step_index: int, partner: str, context: dict, partner_data: dict = None) -> dict:
         """Run a single step of a playbook."""
         step = playbook["steps"][step_index]
         template = self.load_template(step["template"])
@@ -507,7 +642,8 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
 {step.get('prompt', 'Guide me through filling out this template.')}"""
         })
 
-        response = self.chat(messages)
+        system = self._get_system_prompt(partner_data)
+        response = self.chat(messages, system_prompt=system)
         messages.append({"role": "assistant", "content": response})
 
         return {
@@ -521,7 +657,7 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
     def interactive_mode(self):
         """Run the agent in interactive mode."""
         self._print("\n" + "=" * 50)
-        self._print("Partner Agent v1.1", style="bold blue")
+        self._print("Partner Agent v1.2", style="bold blue")
         self._print("=" * 50 + "\n")
 
         while True:
@@ -530,7 +666,10 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
             self._print("2. Continue existing playbook")
             self._print("3. View partner status")
             self._print("4. List templates")
-            self._print("5. Exit")
+            self._print("5. Get next-step recommendations")
+            self._print("6. Generate partner email")
+            self._print("7. Add note to partner")
+            self._print("8. Exit")
 
             choice = self._prompt("\nSelect option", default="1")
 
@@ -543,10 +682,75 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
             elif choice == "4":
                 self._list_templates()
             elif choice == "5":
+                self._show_recommendations()
+            elif choice == "6":
+                self._generate_email_interactive()
+            elif choice == "7":
+                self._add_note_interactive()
+            elif choice == "8":
                 self._print("\nGoodbye!", style="blue")
                 break
             else:
                 self._print("Invalid choice", style="red")
+
+    def _pick_partner(self) -> Optional[dict]:
+        """Helper: let user pick an existing partner; returns partner_data or None."""
+        partners = self.list_partners()
+        if not partners:
+            self._print("No saved partners found.")
+            return None
+        self._print("\nSaved partners:")
+        for i, p in enumerate(partners, 1):
+            tier = p.get("tier") or "Unclassified"
+            self._print(f"  {i}. {p['name']}  [{tier}]")
+        choice = self._prompt("Select partner number")
+        try:
+            return partners[int(choice) - 1]
+        except (ValueError, IndexError):
+            self._print_error("Invalid selection")
+            return None
+
+    def _show_recommendations(self):
+        """Show next-step playbook recommendations for a partner."""
+        partner_data = self._pick_partner()
+        if not partner_data:
+            return
+        recs = self.recommend_templates(partner_data)
+        if recs:
+            self._print(f"\nRecommended next steps for {partner_data['name']}:")
+            for pb in recs:
+                self._print(f"  → {pb}", style="green")
+        else:
+            self._print("No further playbook recommendations — partner looks complete!")
+
+    def _generate_email_interactive(self):
+        """Generate a partner email interactively."""
+        partner_data = self._pick_partner()
+        if not partner_data:
+            return
+        self._print("\nExamples: 'QBR invite', 'follow-up after missed target', 'co-marketing proposal'")
+        situation = self._prompt("Describe the email situation")
+        if not situation.strip():
+            self._print_error("Situation required")
+            return
+        self._print("\nGenerating email...\n")
+        result = self.generate_email(partner_data, situation)
+        if RICH_AVAILABLE:
+            console.print(Markdown(result))
+        else:
+            self._print(result)
+
+    def _add_note_interactive(self):
+        """Add a note to a partner record."""
+        partner_data = self._pick_partner()
+        if not partner_data:
+            return
+        note = self._prompt("Note text")
+        if not note.strip():
+            self._print_error("Note cannot be empty")
+            return
+        self.add_note(partner_data, note)
+        self._print_success(f"Note added to {partner_data['name']}")
 
     def _start_playbook_interactive(self):
         """Start a new playbook interactively."""
@@ -599,7 +803,7 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
         for i, step in enumerate(playbook["steps"]):
             self._print(f"\n--- Step {i+1}/{len(playbook['steps'])}: {step['name']} ---\n")
 
-            result = self.run_playbook_step(playbook, i, partner, context)
+            result = self.run_playbook_step(playbook, i, partner, context, partner_data=state)
             context = {"messages": result["messages"]}
 
             if RICH_AVAILABLE:
@@ -621,6 +825,12 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
         state["playbooks"][playbook_name]["completed_at"] = datetime.now().isoformat()
         self.save_partner_state(partner, state)
         self._print_success(f"\nPlaybook '{playbook['name']}' completed for {partner}!")
+        # Surface next-step recommendations immediately after completion
+        recs = self.recommend_templates(state)
+        if recs:
+            self._print("\nSuggested next playbooks:")
+            for r in recs:
+                self._print(f"  → {r}", style="green")
 
     def _continue_playbook_interactive(self):
         """Continue an existing playbook - NOW COMPLETE."""

@@ -60,11 +60,11 @@
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 3.1 | **Partner Memory** | Remember each partner's history across sessions | 4 hrs | PENDING |
-| 3.2 | **Template Recommendations** | "Based on what you're doing, try this" | 3 hrs | PENDING |
-| 3.3 | **Tier Guidance** | Bronze vs Gold different advice | 2 hrs | PENDING |
-| 3.4 | **Email Generation** | Agent writes emails for you | 2 hrs | PENDING |
-| 3.5 | **Report Generation** | Auto-generate monthly partner reports | 3 hrs | PENDING |
+| 4.1 | **Partner Memory** | tier, health_score, notes, milestones persisted per partner | 4 hrs | ✅ DONE |
+| 4.2 | **Template Recommendations** | `recommend_templates()` suggests next playbooks by stage + tier | 3 hrs | ✅ DONE |
+| 4.3 | **Tier Guidance** | Tier config (Gold/Silver/Registered) wired into every LLM system prompt | 2 hrs | ✅ DONE |
+| 4.4 | **Email Generation** | `generate_email()` + interactive menu option 6 | 2 hrs | ✅ DONE |
+| 4.5 | **Report Generation** | `scripts/generate_report.py` — markdown report for all or one partner | 3 hrs | ✅ DONE |
 
 ---
 
@@ -102,7 +102,13 @@
 
 | Item | Date |
 |------|------|
-| Tests (20 tests) | Feb 20, 2026 |
+| Partner Memory (tier, health, notes, milestones) | Feb 20, 2026 |
+| Tier Guidance in LLM prompts | Feb 20, 2026 |
+| Template Recommendations engine | Feb 20, 2026 |
+| Email Generation (generate_email + menu) | Feb 20, 2026 |
+| Report Generation (scripts/generate_report.py) | Feb 20, 2026 |
+| Agent tests expanded to 40 (9 new superpower tests) | Feb 20, 2026 |
+| Tests (31 tests) | Feb 20, 2026 |
 | Legal Templates (NDA, MSA, DPA, SLA) | Feb 20, 2026 |
 | Commission Structure | Feb 20, 2026 |
 | Security Questionnaire | Feb 20, 2026 |
