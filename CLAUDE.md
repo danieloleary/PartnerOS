@@ -6,8 +6,7 @@ This file provides guidance for AI assistants working in this repository.
 
 **PartnerOS** is a complete playbook system for building and scaling strategic partnerships, combining:
 
-- 34+ Markdown documentation templates (rendered via MkDocs Material)
-- 33 source templates in `partner_blueprint/` (used by the AI agent)
+- 38+ Markdown documentation templates (rendered via MkDocs Material)
 - An AI-powered Partner Agent (`scripts/partner_agent/agent.py`) supporting local Ollama, Anthropic, and OpenAI
 - 7 automation playbooks covering the full partner lifecycle
 - GitHub Actions for doc deployment and markdown linting
@@ -21,18 +20,13 @@ This file provides guidance for AI assistants working in this repository.
 ```
 PartnerOS/
 ├── docs/                          # MkDocs documentation source (rendered site)
-│   ├── strategy/                  # 8 strategy templates
+│   ├── strategy/                  # 9 strategy templates
 │   ├── recruitment/               # 10 recruitment templates
-│   ├── enablement/                # 7 enablement templates
+│   ├── enablement/                # 8 enablement templates
 │   ├── agent/                     # Partner Agent docs
 │   ├── getting-started/           # Quick start, lifecycle, how-to-use
 │   ├── resources/                 # Glossary, maturity model
-│   ├── assets/                    # Logo, favicon SVGs
 │   └── stylesheets/extra.css      # Custom CSS overrides
-├── partner_blueprint/             # Source templates used by the agent
-│   ├── I_Partner_Strategy_Templates/     # Strategy templates (raw source)
-│   ├── II_Partner_Recruitment_Templates/ # Recruitment templates (raw source)
-│   └── III_Partner_Enablement_Templates/ # Enablement templates (raw source)
 ├── scripts/
 │   ├── partner_agent/             # AI Partner Agent
 │   │   ├── agent.py               # Main agent (1 file, ~775 lines)
@@ -189,7 +183,7 @@ tags: [tag1, tag2]
 
 steps:
   - name: Step Name
-    template: II_Partner_Recruitment_Templates/01_Foo.md  # relative to partner_blueprint/
+    template: docs/recruitment/01-foo.md  # relative to repo root
     prompt: |
       Instruction to the AI for this step.
     # KPIs, checklist, and automation hints as comments
@@ -201,7 +195,7 @@ success_criteria:
 next_playbook: onboard   # optional — which playbook to run next
 ```
 
-Template paths in playbooks are relative to `partner_blueprint/` (the agent's `templates_dir`).
+Template paths in playbooks are relative to the repo root (e.g., `docs/recruitment/01-foo.md`).
 
 ### Partner State Storage
 
@@ -217,7 +211,7 @@ Partner state is saved to `scripts/partner_agent/state/<slug>/metadata.json` (gi
 provider: anthropic        # anthropic | openai | ollama | auto
 model: sonnet-4-20250514   # model identifier
 
-templates_dir: ../../partner_blueprint   # relative to agent.py
+templates_dir: ../../docs   # relative to agent.py - points to docs/
 state_dir: ./state
 
 company:
@@ -300,44 +294,44 @@ Linting runs on every `*.md` push via `markdown_lint.yml`.
 
 ## Template Categories
 
-### Strategy Templates (`docs/strategy/`, `partner_blueprint/I_Partner_Strategy_Templates/`)
+### Strategy Templates (`docs/strategy/`)
 
 | # | Template | Purpose |
 |---|---|---|
-| I.1 | Partner Business Case | Business justification for a partnership |
-| I.2 | Ideal Partner Profile | Define target partner characteristics |
-| I.3 | 3C/4C Evaluation Framework | Structured partner scoring |
-| I.4 | Competitive Differentiation | Position vs. competitors |
-| I.5 | Partner Strategy Plan | Full GTM strategy |
-| I.6 | Program Architecture | Bronze/Silver/Gold tier design |
-| I.7 | Internal Alignment Playbook | Stakeholder buy-in |
-| I.8 | Partner Exit Checklist | Graceful partner offboarding |
+| 1 | Partner Business Case | Business justification for a partnership |
+| 2 | Ideal Partner Profile | Define target partner characteristics |
+| 3 | 3C/4C Evaluation Framework | Structured partner scoring |
+| 4 | Competitive Differentiation | Position vs. competitors |
+| 5 | Partner Strategy Plan | Full GTM strategy |
+| 6 | Program Architecture | Bronze/Silver/Gold tier design |
+| 7 | Internal Alignment Playbook | Stakeholder buy-in |
+| 8 | Partner Exit Checklist | Graceful partner offboarding |
 
-### Recruitment Templates (`docs/recruitment/`, `partner_blueprint/II_Partner_Recruitment_Templates/`)
-
-| # | Template | Purpose |
-|---|---|---|
-| II.1 | Email Sequence | Cold outreach cadence |
-| II.2 | Outreach/Engagement Sequence | Multi-touch engagement |
-| II.3 | Qualification Framework | Scoring potential partners |
-| II.4 | Discovery Call Script | First-call structure |
-| II.5 | Partner Pitch Deck | Slide deck outline |
-| II.6 | Partnership One-Pager | Executive summary leave-behind |
-| II.7 | Proposal Template | Formal partnership proposal |
-| II.8 | Agreement Template | Contract structure |
-| II.9 | Onboarding Checklist | New partner activation steps |
-| II.10 | ICP Alignment Tracker | Ideal customer profile tracking |
-
-### Enablement Templates (`docs/enablement/`, `partner_blueprint/III_Partner_Enablement_Templates/`)
+### Recruitment Templates (`docs/recruitment/`)
 
 | # | Template | Purpose |
 |---|---|---|
-| III.1 | Enablement Roadmap | Training timeline |
-| III.2 | Training Deck | Partner training materials |
-| III.3 | Certification Program | Partner certification structure |
-| III.4 | Co-Marketing Playbook | Joint marketing campaigns |
-| III.5 | Technical Integration Guide | Integration documentation |
-| III.6 | Partner Success Metrics | KPI tracking framework |
+| 1 | Email Sequence | Cold outreach cadence |
+| 2 | Outreach/Engagement Sequence | Multi-touch engagement |
+| 3 | Qualification Framework | Scoring potential partners |
+| 4 | Discovery Call Script | First-call structure |
+| 5 | Partner Pitch Deck | Slide deck outline |
+| 6 | Partnership One-Pager | Executive summary leave-behind |
+| 7 | Proposal Template | Formal partnership proposal |
+| 8 | Agreement Template | Contract structure |
+| 9 | Onboarding Checklist | New partner activation steps |
+| 10 | ICP Alignment Tracker | Ideal customer profile tracking |
+
+### Enablement Templates (`docs/enablement/`)
+
+| # | Template | Purpose |
+|---|---|---|
+| 1 | Enablement Roadmap | Training timeline |
+| 2 | Training Deck | Partner training materials |
+| 3 | Certification Program | Partner certification structure |
+| 4 | Co-Marketing Playbook | Joint marketing campaigns |
+| 5 | Technical Integration Guide | Integration documentation |
+| 6 | Partner Success Metrics | KPI tracking framework |
 | III.7 | QBR Template | Quarterly business review |
 
 ---
@@ -375,7 +369,7 @@ QBR frequency by tier: Gold → quarterly, Silver → semi-annually, Bronze → 
 
 ### Adding a New Source Template
 
-1. Add the `.md` file to the relevant `partner_blueprint/` subdirectory
+1. Add the `.md` file to the relevant `docs/` subdirectory (strategy, recruitment, enablement)
 2. Reference it in a playbook step's `template` field if applicable
 3. Ensure the file has YAML frontmatter
 
