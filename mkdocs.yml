@@ -1,6 +1,7 @@
 site_name: PartnerOS
 site_description: The complete playbook for building and scaling strategic partnerships
 site_url: https://danieloleary.github.io/PartnerOS
+base_url: /PartnerOS
 site_author: Daniel O'Leary
 repo_url: https://github.com/danieloleary/PartnerOS
 repo_name: danieloleary/PartnerOS
