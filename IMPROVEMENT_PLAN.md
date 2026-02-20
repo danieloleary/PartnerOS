@@ -9,110 +9,67 @@
 
 ## Current State (February 20, 2026)
 
-**What's Done:**
-- ✅ 44 templates across 9 categories
-- ✅ 20 automated tests
-- ✅ Template generator script
-- ✅ Standardize script
-- ✅ MkDocs documentation site
-- ✅ 7 Agent playbooks
-- ✅ Legal/Finance/Security templates
-- ✅ Pre-commit hooks
+**Phase 1-2 Complete:**
+- ✅ 45 templates across 9 categories
+- ✅ Company onboarding (scripts/onboard.py)
+- ✅ Template variables (scripts/fill_template.py)
+- ✅ Demo mode (scripts/demo_mode.py)
+- ✅ Quick Start Guide
+- ✅ One-Pager & Licensing docs
+- ✅ 25 automated tests
 
 ---
 
-## Phase 1: Foundation (Drop-Ready) ⚡
+## Phase 3: Onboarding Flow 🎯
 
-*Goal: A company can download and get started in 30 minutes*
+*Goal: Validate the system works end-to-end*
 
-### 1.1 Company Config Script
-**File:** `scripts/onboard.py`
+### 3.1 First Partner Onboarding Path
+**File:** `docs/getting-started/first-partner-path.md`
 
-**Features:**
-- Interactive prompts for company name, website, logo URL, colors
-- Generates `.company-config/customize.yaml`
-- Optional: walks through key templates
-
-**Prompt Questions:**
-```
-Welcome to PartnerOS Setup!
-What's your company name? [Acme Corp]
-What's your website? [acmecorp.com]
-Who should partners contact? [name, email]
-What's your primary brand color? [#000000]
-Logo URL (optional)? [https://...]
-```
-
-### 1.2 Template Variable System
-**Files:** `scripts/fill_template.py` (new)
-
-**Variables Supported:**
-```
-{{company_name}}
-{{company_website}}
-{{contact_name}}
-{{contact_email}}
-{{logo_url}}
-{{brand_color}}
-{{today_date}}
-```
-
-### 1.3 Quick Start Guide
-**File:** `docs/getting-started/quick-start.md`
-
-**Sections:**
-1. What is PartnerOS?
-2. How to customize for your company (5 min)
-3. Finding the right template (template selection guide)
-4. First week checklist
-5. Resources & help
-
-### 1.4 Example Fills
-**Directory:** `examples/complete-examples/`
-
-**Create 3-5 filled examples:**
-- `example-partner-onboarding.md` - Full onboarding example
-- `example-partner-business-case.md` - Completed business case
-- `example-qbr-template.md` - Filled QBR
-
----
-
-## Phase 2: Sales Ready 📦
-
-*Goal: Something to show prospects, easy to demo*
-
-### 2.1 Demo Mode
-**Features:**
-- Pre-configured `.company-config` with fake company
-- Example partners (Acme Partners, Beta Resellers)
-- Sample pipeline and deals
-
-### 2.2 One-Pager
-**File:** `docs/resources/partner-os-one-pager.md`
+**Purpose:** Document the exact sequence of templates to use for first partner
 
 **Content:**
-- What is PartnerOS
-- Key features (3-4 bullet points)
-- Who is it for
-- Pricing/licensing
-- Contact info
+1. Week 1: Define & Find
+2. Week 2: Qualify & Pitch
+3. Week 3: Propose & Sign
+4. Week 4: Onboard
 
-### 2.3 Pricing Sheet
-**File:** `docs/resources/licensing.md`
+### 3.2 Test Partner Design
+**File:** `examples/test-partner/`
 
-**Options:**
-- Self-service (free)
-- Implementation + Training (TBD)
-- Enterprise (custom)
+**Purpose:** A realistic test case ("TechStart Inc") for validating the system
+
+**Test Partner Data:**
+- Company: TechStart Inc
+- Type: Managed Service Provider (MSP)
+- Stage: Mid-qualification
+- Documents: All filled templates for this partner
+
+### 3.3 Onboarding Test Cases
+**File:** `tests/test_onboarding.py`
+
+**Purpose:** Automated tests simulating partner lifecycle
+
+**Test Cases:**
+- test_first_partner_path_completes
+- test_partner_qualification_flow
+- test_onboarding_checklist_completion
+- test_agent_playbook_integration
+
+### 3.4 End-to-End Validation
+**Action:** Run full onboarding simulation, document gaps
 
 ---
 
 ## Execution Log
 
-### Completed This Session (Feb 20, 2026)
-- Created ARCHITECTURE.md
-- Updated BACKLOG.md with 5-phase plan
-- Created/improved tests (20 total)
+### Completed (Feb 20, 2026)
+- Phase 1: Foundation (Company Config, Variables, Quick Start, Examples)
+- Phase 2: Sales Ready (Demo Mode, One-Pager, Licensing)
+
+### In Progress
+- Phase 3: Onboarding Flow (Onboarding Path, Test Partner, Test Cases)
 
 ---
 

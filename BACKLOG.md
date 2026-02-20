@@ -21,10 +21,10 @@
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 1.1 | **Company Config Script** | `python scripts/onboard.py` - prompts for company info, generates config | 2 hrs | PENDING |
-| 1.2 | **Template Variable System** | Replace `{{company_name}}` etc with their company | 2 hrs | PENDING |
-| 1.3 | **Quick Start Guide** | "From zero to first partner in 30 minutes" | 3 hrs | PENDING |
-| 1.4 | **Example Fills** | 3-5 completed templates showing format | 4 hrs | PENDING |
+| 1.1 | **Company Config Script** | `python scripts/onboard.py` - prompts for company info, generates config | 2 hrs | ✅ DONE |
+| 1.2 | **Template Variable System** | Replace `{{company_name}}` etc with their company | 2 hrs | ✅ DONE |
+| 1.3 | **Quick Start Guide** | "From zero to first partner in 30 minutes" | 3 hrs | ✅ DONE |
+| 1.4 | **Example Fills** | 3-5 completed templates showing format | 4 hrs | ✅ DONE |
 
 ---
 
@@ -34,14 +34,27 @@
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 2.1 | **Demo Mode** | Pre-filled fake company data for demos | 2 hrs | PENDING |
-| 2.2 | **One-Pager** | Product sheet to give prospects | 1 hr | PENDING |
-| 2.3 | **Pricing Sheet** | How to license/subscribe | 1 hr | PENDING |
+| 2.1 | **Demo Mode** | Pre-filled fake company data for demos | 2 hrs | ✅ DONE |
+| 2.2 | **One-Pager** | Product sheet to give prospects | 1 hr | ✅ DONE |
+| 2.3 | **Pricing Sheet** | How to license/subscribe | 1 hr | ✅ DONE |
 | 2.4 | **Testimonials/Case Study Template** | Social proof | 2 hrs | PENDING |
 
 ---
 
-## Phase 3: Agent Superpowers 🤖
+## Phase 3: Onboarding Flow 🎯
+
+*Goal: Clear "first partner" path that actually works*
+
+| # | Item | Purpose | Effort | Status |
+|---|------|---------|--------|--------|
+| 3.1 | **First Partner Onboarding Path** | Documented sequence: which templates in what order | 3 hrs | PENDING |
+| 3.2 | **Test Partner Design** | "TechStart Inc" - realistic test case for validation | 2 hrs | PENDING |
+| 3.3 | **Onboarding Test Cases** | Automated tests simulating partner lifecycle | 4 hrs | PENDING |
+| 3.4 | **End-to-End Validation** | Run full onboarding flow, fix gaps | 3 hrs | PENDING |
+
+---
+
+## Phase 4: Agent Superpowers 🤖
 
 *Goal: The agent becomes a real "coach"*
 

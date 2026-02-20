@@ -151,7 +151,7 @@ def test_template_count_per_category():
         "recruitment": 10,
         "enablement": 7,
         "agent": 4,
-        "getting-started": 3,
+        "getting-started": 4,
         "resources": 4,
         "legal": 4,
         "finance": 1,
