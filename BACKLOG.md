@@ -1,346 +1,122 @@
-# PartnerOS Backlog - Comprehensive Feature List
+# PartnerOS Backlog - Prioritized Roadmap
 *Generated: February 19, 2026*
-*For: Partner Leader Use (Job + Sharing)*
+*Updated: February 20, 2026*
+*Based on: ARCHITECTURE.md*
 
 ---
 
 ## Vision
-Make PartnerOS the complete partner management operating system for enterprise partner leaders - usable daily at work and shareable with peer partner managers.
+**"Give them the playbook + the coach"**
+- Templates = The playbook (what to do)
+- Agent = The coach (guides them through it)
+- You = The advisor (help customize and implement)
+
+**Target:** Companies that can drop in PartnerOS and immediately have a world-class partner program.
 
 ---
 
-## Priority 1: TEMPLATES (Immediate Need)
+## Phase 1: Foundation (Drop-Ready) ⚡
 
-### 1.1 Missing Categories (Already Identified)
+*Goal: A company can download and get started in 30 minutes*
 
-| Category | Template | Purpose | Priority |
-|----------|----------|---------|----------|
-| **Legal** | NDA Template | Mutual NDA for initial discussions | HIGH |
-| **Legal** | Master Service Agreement (MSA) | Full partnership agreement | HIGH |
-| **Legal** | Data Processing Agreement (DPA) | GDPR/compliance data handling | HIGH |
-| **Legal** | Service Level Agreement (SLA) | Support response times | HIGH |
-| **Finance** | Commission Structure | Tiered commission rates | HIGH |
-| **Finance** | Revenue Sharing Model | Joint venture/equity partnerships | MEDIUM |
-| **Finance** | Partner Rebate Program | Volume-based rebates | MEDIUM |
-| **Security** | Security Questionnaire | Vendor assessment | HIGH |
-| **Security** | SOC2 Compliance Guide | Compliance requirements | MEDIUM |
-
-### 1.2 Templates for Day-to-Day Partner Management
-
-| Category | Template | Purpose | Priority |
-|----------|----------|---------|----------|
-| **Operations** | Weekly Partner Standup Template | Weekly team sync on partner activities | HIGH |
-| **Operations** | Monthly Partner Report | Roll-up of partner metrics | HIGH |
-| **Operations** | Partner Territory Plan | Geographic/vertical account mapping | HIGH |
-| **Operations** | Deal Registration Policy | Rules and eligibility | HIGH |
-| **Operations** | Partner Portal Guide | Internal guide to PRM system | MEDIUM |
-| **Executive** | Board Deck - Partner Program | Quarterly board update | HIGH |
-| **Executive** | Stakeholder Update Email | Monthly update to execs | HIGH |
-| **Executive** | Partner Business Review (Executive) | 1-page exec summary | HIGH |
-| **Communication** | Partner Newsletter Template | Monthly partner communication | MEDIUM |
-| **Communication** | Partner Announcement Template | New program/product launches | MEDIUM |
-| **Communication** | Partner Holiday Card | Seasonal greetings | LOW |
-| **Training** | Partner Manager Onboarding | New PM ramp guide | HIGH |
-| **Training** | Sales to Partner Manager Transition | Career path guide | MEDIUM |
-| **Analysis** | Competitive Intelligence Report | Partner competitive analysis | MEDIUM |
-| **Analysis** | Market Analysis Template | TAM/SAM for partner segments | MEDIUM |
-| **Analysis** | Partner Health Scorecard | Quarterly health assessment | HIGH |
-
-### 1.3 Templates for Sharing with Partner Leaders
-
-| Category | Template | Purpose | Priority |
-|----------|----------|---------|----------|
-| **Benchmarking** | Partner Program Comparison | Compare programs peer-to-peer | HIGH |
-| **Benchmarking** | KPIs & Metrics Guide | Industry standard metrics | HIGH |
-| **Benchmarking** | Tier Comparison Worksheet | Compare Bronze/Silver/Gold | HIGH |
-| **Playbooks** | Partner Round Table Agenda | Facilitate peer learning | MEDIUM |
-| **Playbooks** | Partner Leader Lunch & Learn | Internal training series | MEDIUM |
-| **Resources** | Budget Template | Partner program budget | HIGH |
-| **Resources** | Headcount Planning | Partner team org chart | MEDIUM |
-| **Resources** | Vendor Evaluation | Tools assessment | MEDIUM |
-
-### 1.4 Specialized Partner Types
-
-| Category | Template | Purpose | Priority |
-|----------|----------|---------|----------|
-| **ISV** | ISV Partnership Agreement | Software integration partners | HIGH |
-| **ISV** | API Partnership Terms | API access agreements | MEDIUM |
-| **SI** | System Integrator Agreement | Implementation partners | HIGH |
-| **SI** | Solution Brief Template | Joint solution one-pager | MEDIUM |
-| **Reseller** | Reseller Agreement | VAR/distributor terms | HIGH |
-| **Reseller** | Pricing Schedule | Reseller pricing tiers | HIGH |
-| **Referral** | Referral Partner Agreement | Lead generation partners | HIGH |
-| **Referral** | Referral Fee Structure | Commission rates | HIGH |
-| **Marketplace** | Marketplace Partner Program | App marketplace partners | MEDIUM |
-| **Marketplace** | Marketplace Listing Guide | Go-to-market support | MEDIUM |
-| **Technology** | Technology Alliance | Co-development partners | MEDIUM |
-| **Education** | Training Partner Agreement | Certified training partners | LOW |
+| # | Item | Purpose | Effort | Status |
+|---|------|---------|--------|--------|
+| 1.1 | **Company Config Script** | `python scripts/onboard.py` - prompts for company info, generates config | 2 hrs | PENDING |
+| 1.2 | **Template Variable System** | Replace `{{company_name}}` etc with their company | 2 hrs | PENDING |
+| 1.3 | **Quick Start Guide** | "From zero to first partner in 30 minutes" | 3 hrs | PENDING |
+| 1.4 | **Example Fills** | 3-5 completed templates showing format | 4 hrs | PENDING |
 
 ---
 
-## Priority 2: AGENT ENHANCEMENTS
+## Phase 2: Sales Ready 📦
 
-### 2.1 Core Agent Improvements
+*Goal: Something to show prospects, easy to demo*
 
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| **Template Recommendations** | Agent suggests right template based on context | HIGH |
-| **Partner Context Memory** | Remember partner history across sessions | HIGH |
-| **Tier-Based Guidance** | Different advice for Bronze vs Gold partners | HIGH |
-| **Skill Gap Analysis** | Identify what skills partner needs | MEDIUM |
-| **Automated Reminders** | Send follow-up reminders to users | MEDIUM |
-
-### 2.2 Integration Capabilities
-
-| Integration | Description | Priority |
-|-------------|-------------|----------|
-| **Salesforce** | Sync partners, deals, pipeline | HIGH |
-| **HubSpot** | CRM partner data sync | HIGH |
-| **Slack** | Agent notifications, commands | MEDIUM |
-| **Google Calendar** | Schedule QBRs, meetings | MEDIUM |
-| **Notion** | Export templates to Notion | MEDIUM |
-| **Google Docs** | Generate docs in Drive | MEDIUM |
-
-### 2.3 Agent Skills
-
-| Skill | Description | Priority |
-|-------|-------------|----------|
-| **Contract Review** | Analyze agreement terms | MEDIUM |
-| **Email Generation** | Create partner emails | HIGH |
-| **Report Generation** | Build monthly/quarterly reports | HIGH |
-| **Objection Handling** | Handle partner pushback | MEDIUM |
-| **Negotiation Assistant** | Guide on deal terms | MEDIUM |
+| # | Item | Purpose | Effort | Status |
+|---|------|---------|--------|--------|
+| 2.1 | **Demo Mode** | Pre-filled fake company data for demos | 2 hrs | PENDING |
+| 2.2 | **One-Pager** | Product sheet to give prospects | 1 hr | PENDING |
+| 2.3 | **Pricing Sheet** | How to license/subscribe | 1 hr | PENDING |
+| 2.4 | **Testimonials/Case Study Template** | Social proof | 2 hrs | PENDING |
 
 ---
 
-## Priority 3: USER EXPERIENCE
+## Phase 3: Agent Superpowers 🤖
 
-### 3.1 Navigation & Discovery
+*Goal: The agent becomes a real "coach"*
 
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| **Template Search** | Full-text search across templates | HIGH |
-| **Filter by Tier** | Show templates relevant to Bronze/Silver/Gold | HIGH |
-| **Filter by Skill** | Filter by skill level needed | HIGH |
-| **Filter by Phase** | Lifecycle-stage filtering | HIGH |
-| **Wizard/Assistant** | Step-by-step template selection | MEDIUM |
-
-### 3.2 Output & Export
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| **PDF Export** | Export filled templates to PDF | HIGH |
-| **Word Doc Export** | Export to editable Word | HIGH |
-| **Email Integration** | Send directly via email | MEDIUM |
-| **Brand Customization** | Apply company branding | MEDIUM |
-| **Fillable Forms** | Interactive PDF forms | MEDIUM |
-
-### 3.3 Collaboration
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| **Comments** | Add comments to templates | LOW |
-| **Version History** | Track changes to filled templates | LOW |
-| **Sharing Links** | Generate shareable links | MEDIUM |
-| **Team Library** | Shared team template collection | MEDIUM |
+| # | Item | Purpose | Effort | Status |
+|---|------|---------|--------|--------|
+| 3.1 | **Partner Memory** | Remember each partner's history across sessions | 4 hrs | PENDING |
+| 3.2 | **Template Recommendations** | "Based on what you're doing, try this" | 3 hrs | PENDING |
+| 3.3 | **Tier Guidance** | Bronze vs Gold different advice | 2 hrs | PENDING |
+| 3.4 | **Email Generation** | Agent writes emails for you | 2 hrs | PENDING |
+| 3.5 | **Report Generation** | Auto-generate monthly partner reports | 3 hrs | PENDING |
 
 ---
 
-## Priority 4: OPERATIONAL TOOLS
+## Phase 4: Template Completion 📋
 
-### 4.1 Automation
+*Goal: Complete the template library*
 
-| Tool | Description | Priority |
-|------|-------------|----------|
-| **Auto-Fill Company Info** | Pre-fill from config.yaml | HIGH |
-| **Template Variables** | Placeholder replacement | HIGH |
-| **Bulk Generation** | Generate multiple templates at once | MEDIUM |
-| **Workflow Automation** | Chain multiple templates together | MEDIUM |
-
-### 4.2 Analytics & Reporting
-
-| Tool | Description | Priority |
-|------|-------------|----------|
-| **Template Usage Stats** | Track which templates are used | MEDIUM |
-| **Partner Progress Dashboard** | Visualize partner journey | MEDIUM |
-| **ROI Calculator** | Calculate partner program ROI | MEDIUM |
-| **Benchmarking Tool** | Compare against industry data | LOW |
-
-### 4.3 Knowledge Management
-
-| Tool | Description | Priority |
-|------|-------------|----------|
-| **Best Practices Library** | Curated tips per template | MEDIUM |
-| **Example Fills** | Sample completed templates | HIGH |
-| **Video Tutorials** | How-to videos for key templates | MEDIUM |
-| **FAQ Section** | Common questions per template | MEDIUM |
+| # | Item | Category | Purpose | Effort | Status |
+|---|------|----------|---------|--------|--------|
+| 4.1 | Revenue Sharing Model | Finance | Joint venture partnerships | 2 hrs | PENDING |
+| 4.2 | Partner Rebate Program | Finance | Volume-based incentives | 2 hrs | PENDING |
+| 4.3 | SOC2 Compliance Guide | Security | Compliance requirements | 2 hrs | PENDING |
+| 4.4 | Deal Registration Policy | Operations | Rules and eligibility | 2 hrs | PENDING |
+| 4.5 | Weekly Partner Standup | Operations | Weekly team sync | 1 hr | PENDING |
+| 4.6 | Monthly Partner Report | Operations | Roll-up metrics | 2 hrs | PENDING |
+| 4.7 | Partner Portal Guide | Operations | PRM system guide | 2 hrs | PENDING |
+| 4.8 | Board Deck - Partner Program | Executive | Quarterly board update | 3 hrs | PENDING |
+| 4.9 | Partner Health Scorecard | Analysis | Quarterly assessment | 2 hrs | PENDING |
 
 ---
 
-## Priority 5: COMMUNITY & DISTRIBUTION
+## Phase 5: Polish & Package 🎁
 
-### 5.1 Sharing Features
+*Goal: Professional product ready for distribution*
 
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| **Shareable Links** | Generate read-only sharing links | HIGH |
-| **Embed Widget** | Embed templates on external sites | MEDIUM |
-| **White Label** | Remove PartnerOS branding | MEDIUM |
-| **Custom Domain** | Host on custom domain | LOW |
-
-### 5.2 Community Features
-
-| Feature | Description | Priority |
-|---------|-------------|----------|
-| **Template Submissions** | Community contributed templates | LOW |
-| **Discussion Forum** | Peer-to-peer help | LOW |
-| **Office Hours** | Live Q&A sessions | LOW |
+| # | Item | Purpose | Effort | Status |
+|---|------|---------|--------|--------|
+| 5.1 | **PDF Export Script** | Convert markdown to PDF | 3 hrs | PENDING |
+| 5.2 | **Package as .zip** | No git required to use | 1 hr | PENDING |
+| 5.3 | **Video Walkthroughs** | For key templates | 8 hrs | PENDING |
 
 ---
 
-## Implementation Roadmap
+## Completed Items ✅
 
-### Phase 1: Core Templates (Week 1-2)
-```
-- Legal (4 templates)
-- Finance (3 templates)  
-- Security (2 templates)
-- Operations (4 templates)
-- Executive (3 templates)
-```
-
-### Phase 2: Agent & UX (Week 3-4)
-```
-- Template recommendations
-- Search & filtering
-- PDF/Word export
-- Company auto-fill
-```
-
-### Phase 3: Integrations (Week 5-6)
-```
-- Salesforce/HubSpot
-- Slack
-- Calendar
-```
-
-### Phase 4: Community (Week 7+)
-```
-- Sharing features
-- Best practices library
-- Example fills
-```
+| Item | Date |
+|------|------|
+| Tests (20 tests) | Feb 20, 2026 |
+| Legal Templates (NDA, MSA, DPA, SLA) | Feb 20, 2026 |
+| Commission Structure | Feb 20, 2026 |
+| Security Questionnaire | Feb 20, 2026 |
+| Template Generator Script | Feb 20, 2026 |
+| Standardize Script | Feb 20, 2026 |
+| MkDocs Navigation | Feb 20, 2026 |
+| Pre-commit Hooks | Feb 20, 2026 |
 
 ---
 
-## Files to Create/Modify
+## Quick Reference
 
-### New Template Files
-```
-docs/legal/
-  01-nda.md
-  02-msa.md
-  03-dpa.md
-  04-sla.md
-
-docs/finance/
-  01-commission.md
-  02-revenue-share.md
-  03-rebate.md
-
-docs/security/
-  01-security-questionnaire.md
-  02-soc2-compliance.md
-
-docs/operations/
-  01-weekly-standup.md
-  02-monthly-report.md
-  03-territory-plan.md
-  04-deal-registration.md
-  05-portal-guide.md
-
-docs/executive/
-  01-board-deck.md
-  02-stakeholder-update.md
-  03-executive-summary.md
-
-docs/communication/
-  01-newsletter.md
-  02-announcement.md
-
-docs/training/
-  01-pm-onboarding.md
-  02-sales-to-pm-transition.md
-
-docs/analysis/
-  01-competitive-intel.md
-  02-market-analysis.md
-  03-health-scorecard.md
-
-docs/benchmarking/
-  01-program-comparison.md
-  02-kpis-metrics.md
-  03-tier-comparison.md
-
-docs/partner-types/
-  01-isv-agreement.md
-  02-si-agreement.md
-  03-reseller-agreement.md
-  04-referral-agreement.md
-```
-
-### Scripts to Create
-```
-scripts/
-  generate_template.py        # Batch template generator
-  export_to_pdf.py            # PDF export functionality
-  template_search.py          # Search engine
-  fill_template.py            # Variable replacement
-```
-
----
-
-## Success Metrics
-
-| Metric | Current | Phase 1 Target | Phase 2 Target |
-|--------|---------|----------------|----------------|
-| Total Templates | 38 | 55 | 75 |
-| Legal Templates | 0 | 4 | 4 |
-| Finance Templates | 0 | 3 | 3 |
-| Security Templates | 0 | 2 | 2 |
-| Operations Templates | 0 | 4 | 9 |
-| Executive Templates | 0 | 3 | 3 |
-| Agent Recommendations | No | Yes | Yes |
-| PDF Export | No | Yes | Yes |
-| Template Search | No | Yes | Yes |
-| Integrations | 0 | 0 | 3 |
-
----
-
-## Notes for Cursor/OpenCode Usage
-
-### Useful Commands for This Project
+### Running Tests
 ```bash
-# Standardize all template frontmatter
-python scripts/standardize_templates.py
-
-# Generate template inventory
-python scripts/generate_file_list.py
-
-# Run tests
-python -m pytest tests/
-
-# Serve docs locally
-mkdocs serve
+pytest tests/ -v
 ```
 
-### Key Files to Know
-- `docs/` - Main template source
-- `scripts/partner_agent/` - AI agent code
-- `scripts/standardize_templates.py` - Schema standardizer
-- `IMPROVEMENT_PLAN.md` - Current roadmap
-- `TEMPLATE_INVENTORY.md` - Template listing
+### Generating Template
+```bash
+python scripts/generate_template.py --category legal --name my-template
+```
+
+### Onboarding (Future)
+```bash
+python scripts/onboard.py
+```
 
 ---
 
-*End of Backlog*
+*Backlog managed per ARCHITECTURE.md vision - "Give them the playbook + the coach"*
