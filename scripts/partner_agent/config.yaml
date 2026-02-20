@@ -2,7 +2,7 @@
 
 # AI Provider: anthropic or openai
 provider: anthropic
-model: claude-sonnet-4-20250514
+model: sonnet-4-20250514
 
 # Alternative OpenAI config:
 # provider: openai

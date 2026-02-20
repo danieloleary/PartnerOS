@@ -14,8 +14,8 @@ PartnerOS provides enterprise-grade templates and an AI-powered Partner Agent to
 
 | Feature | Description |
 |---------|-------------|
-| **8 Playbooks** | End-to-end partner lifecycle automation |
-| **39 Templates** | Strategy, recruitment, and enablement |
+| **7 Playbooks** | End-to-end partner lifecycle automation |
+| **67 Templates** | Strategy, recruitment, and enablement (34 in docs, 33 in partner_blueprint) |
 | **Local AI** | Runs offline with Ollama (no API keys needed) |
 | **Enterprise Framework** | Three-tier partner model (Bronze/Silver/Gold) |
 | **Automated Testing** | Template validation and agent tests |
@@ -72,6 +72,8 @@ mkdocs serve
 | **co-marketing** | 5 | Joint marketing campaigns |
 | **support-escalation** | 5 | Handle partner issues |
 
+**Total: 7 Playbooks**
+
 ---
 
 ## Enterprise Partner Framework
@@ -112,7 +114,7 @@ PartnerOS/
 ├── scripts/
 │   └── partner_agent/         # AI Partner Agent
 │       ├── agent.py           # Main agent (Ollama + Anthropic)
-│       ├── playbooks/         # Playbook definitions (8 total)
+│       ├── playbooks/         # Playbook definitions (7 total)
 │       ├── .env.example       # Environment config
 │       └── agent.py.backup    # Original backup
 ├── tests/                     # Automated tests

@@ -146,10 +146,9 @@ nav:
     - agent/index.md
     - Setup: agent/setup.md
     - Playbooks: agent/playbooks.md
+    - Enterprise Framework: agent/enterprise-partner-framework.md
     - Configuration: agent/configuration.md
   - Resources:
     - Glossary: resources/glossary.md
     - Maturity Model: resources/maturity-model.md
     - Tags: tags.md
-  - Changelog: CHANGELOG.md
-  - Fixes: FIXES.md
