@@ -148,6 +148,65 @@
 
 ---
 
+## Phase 9: Multi-Agent Architecture Fixes (`partner_agents/`) 🔧
+
+*Goal: Resolve 30 verified issues in the new multi-agent system before merge*
+*Source: Full code review of `scripts/partner_agents/` — February 21, 2026*
+
+### 9A. Critical (Must Fix) 🚨
+
+| # | Item | File(s) | Description | Effort | Status |
+|---|------|---------|-------------|--------|--------|
+| 9A.1 | **Path traversal vulnerability** | `state.py` | `partner_id` used directly in filesystem paths with no sanitization — bypasses existing `_validate_path` controls | 1 hr | PENDING |
+| 9A.2 | **Gitignore `partners.json`** | `partner_state.py`, `.gitignore` | Committed file contains partner data (Acme Corp, email). Should be gitignored like `partner_agent/state/` | 15 min | PENDING |
+| 9A.3 | **`full_course_yellow` is a no-op** | `orchestrator.py` | Emergency handler iterates drivers with `pass` body — silently does nothing | 1 hr | PENDING |
+| 9A.4 | **Bare `except:` clause** | `partner_state.py` | Catches all exceptions including `SystemExit`, `KeyboardInterrupt`. Use `except Exception:` minimum | 15 min | PENDING |
+| 9A.5 | **Unify competing state systems** | `state.py`, `partner_state.py` | Two incompatible state systems (one-file-per-partner dataclass vs single JSON raw dicts) with no clear ownership | 4 hrs | PENDING |
+| 9A.6 | **`show_partners` displays hardcoded data** | `chat.py` | Always shows same 4 fictional partners regardless of actual state | 1 hr | PENDING |
+| 9A.7 | **`AgentSkill.callback` typed as `Any`** | `base.py` | Should be `Callable[[Dict[str, Any]], Any]` for type safety | 15 min | PENDING |
+
+### 9B. High Priority (Should Fix) ⚠️
+
+| # | Item | File(s) | Description | Effort | Status |
+|---|------|---------|-------------|--------|--------|
+| 9B.1 | **Add test coverage** | `tests/` | Zero tests for any of the 8 new files + 7 driver files | 6 hrs | PENDING |
+| 9B.2 | **`save_partner` drops `expansion_opportunity`** | `state.py` | Field exists on dataclass but not included in JSON serialization — silent data loss | 15 min | PENDING |
+| 9B.3 | **Replace 4 module-level singletons** | `orchestrator.py`, `state.py`, `messages.py`, `config.py` | Global singletons with import-time side effects break testing and isolation | 2 hrs | PENDING |
+| 9B.4 | **Config defaults reference wrong agent IDs** | `config.py` | `pit_sequence` defaults to F1 names (`"max"`, `"lando"`) but actual IDs are `"dan"`, `"architect"`, etc. | 30 min | PENDING |
+| 9B.5 | **`receive_handoff` silently drops current task** | `base.py` | Overwrites `current_task` with no check if one is in progress — data loss | 30 min | PENDING |
+| 9B.6 | **`complete_handoff` crashes on None** | `base.py` | Accesses `self.current_task.skill_name` without None guard → `AttributeError` | 15 min | PENDING |
+| 9B.7 | **Fragile message routing** | `chat.py` | Substring matching (`"onboard" in message`) misroutes input (e.g., "offboard" matches "board") | 2 hrs | PENDING |
+| 9B.8 | **`extract_partner_name` almost always returns default** | `chat.py` | Naive word-after-trigger logic; usually returns `"Partner"` | 1 hr | PENDING |
+| 9B.9 | **`handle_financial` ignores user input** | `chat.py` | Always passes hardcoded costs/benefits to ROI calculation | 1 hr | PENDING |
+
+### 9C. Medium Priority 📋
+
+| # | Item | File(s) | Description | Effort | Status |
+|---|------|---------|-------------|--------|--------|
+| 9C.1 | **Naive `datetime.now()` throughout** | `base.py`, `state.py` | No timezone awareness — use `datetime.now(timezone.utc)` | 30 min | PENDING |
+| 9C.2 | **`get_recent` filters after slicing** | `messages.py` | Driver-specific queries miss older relevant messages; filter should precede slice | 15 min | PENDING |
+| 9C.3 | **No error handling in `_notify`** | `messages.py` | One failing subscriber crashes entire notification chain | 30 min | PENDING |
+| 9C.4 | **`session_history` never populated** | `chat.py` | Initialized as `[]`, never appended to — chat history is lost | 30 min | PENDING |
+| 9C.5 | **Fragile `sys.path` manipulation** | `chat.py` | Inserts `scripts/` into `sys.path` at import time — circular import risk | 30 min | PENDING |
+| 9C.6 | **Message IDs collide after history trim** | `messages.py` | Count-based `MSG-{N}` IDs reuse after `max_history` trim; use UUIDs | 15 min | PENDING |
+| 9C.7 | **`state_dir` is relative path** | `state.py` | Depends on working directory; should be relative to script location | 15 min | PENDING |
+| 9C.8 | **Unbounded `activity_log`** | `state.py` | Grows without limit unlike `TeamRadio.max_history` | 15 min | PENDING |
+| 9C.9 | **`get_partner` return type mismatch** | `partner_state.py` | Annotated as `Dict` but can return `None` | 15 min | PENDING |
+| 9C.10 | **Sequential IDs can collide after deletions** | `partner_state.py` | `partner-{N}` and `deal-{N}` based on current count; use UUIDs | 30 min | PENDING |
+| 9C.11 | **No `rich` fallback** | `chat.py` | Hard dependency on `rich`; existing `agent.py` gracefully degrades | 1 hr | PENDING |
+| 9C.12 | **`extract_deal_value` defaults silently** | `chat.py` | Registers $10,000 deal with no user confirmation when no number found | 30 min | PENDING |
+| 9C.13 | **`transmit` field mismatch** | `orchestrator.py` | Orchestrator passes `"from"`, `"to"`, `"priority"` keys but `transmit()` expects `"type"`, `"content"` — data silently lost | 1 hr | PENDING |
+| 9C.14 | **No input validation on `PartnerState`** | `state.py` | `health_score` unbounded, `tier` unvalidated, `partner_id` unconstrained | 1 hr | PENDING |
+
+### 9D. Low / Style 🎨
+
+| # | Item | File(s) | Description | Effort | Status |
+|---|------|---------|-------------|--------|--------|
+| 9D.1 | **F1 metaphor reduces clarity** | All files | "Driver", "pit stop", "chassis" terminology obscures intent for new contributors | 2 hrs | PENDING |
+| 9D.2 | **No relationship documented** | README / docs | No docs explaining `partner_agent` (singular) vs `partner_agents` (plural) | 30 min | PENDING |
+
+---
+
 ## Completed Items
 
 | Item | Date |

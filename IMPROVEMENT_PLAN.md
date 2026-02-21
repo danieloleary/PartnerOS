@@ -126,6 +126,65 @@ The custom search separator in `mkdocs.yml` is aggressive and may over-split som
 
 ---
 
+## Multi-Agent Architecture Audit (February 21, 2026)
+
+A comprehensive code review of the new `scripts/partner_agents/` (plural) multi-agent system identified **30 verified issues** across 8 source files and 7 driver files. The system introduces a team of 7 specialized agents coordinated by an orchestrator, with a CLI chat interface, messaging bus, telemetry, and configuration.
+
+All 30 issues were verified against the actual codebase.
+
+### Critical Findings (7 issues)
+
+| ID | Issue | File | Impact |
+|----|-------|------|--------|
+| 9A.1 | **Path traversal vulnerability** | `state.py` | `partner_id` used directly in file paths without sanitization — bypasses `_validate_path` controls that exist in the original `partner_agent` system. Allows reading/writing arbitrary filesystem locations |
+| 9A.2 | **Partner data committed to repo** | `partners.json` | Contains Acme Corp with contact email, phone, deal data. Should be gitignored like `partner_agent/state/` |
+| 9A.3 | **Emergency handler is a no-op** | `orchestrator.py` | `full_course_yellow()` iterates drivers with `pass` body — silently does nothing. No `NotImplementedError` or TODO |
+| 9A.4 | **Bare `except:` swallows all exceptions** | `partner_state.py` | Catches `SystemExit`, `KeyboardInterrupt`, `MemoryError` — widely recognized Python anti-pattern |
+| 9A.5 | **Two competing state systems** | `state.py` + `partner_state.py` | Incompatible: one-file-per-partner dataclass vs single JSON raw dicts. No clear ownership or integration |
+| 9A.6 | **Hardcoded partner display** | `chat.py` | `show_partners()` always displays 4 fictional partners regardless of actual data store |
+| 9A.7 | **Callback typed as `Any`** | `base.py` | `AgentSkill.callback: Any` accepts anything with no validation. Should be `Callable` |
+
+### High Priority Findings (9 issues)
+
+| ID | Issue | File | Impact |
+|----|-------|------|--------|
+| 9B.1 | **Zero test coverage** | — | None of the 43 existing tests cover `partner_agents/`. No new tests added |
+| 9B.2 | **Silent data loss on save** | `state.py` | `save_partner` omits `expansion_opportunity` field from JSON — data lost on save/load cycles |
+| 9B.3 | **4 module-level singletons** | Multiple | `orchestrator`, `telemetry`, `radio`, `config` created at import time with side effects. Breaks test isolation |
+| 9B.4 | **Config defaults wrong** | `config.py` | `pit_sequence` uses F1 names (`"max"`, `"lando"`) but actual agent IDs are `"dan"`, `"architect"`, etc. |
+| 9B.5 | **Task silently dropped** | `base.py` | `receive_handoff` overwrites in-progress task without warning — data loss |
+| 9B.6 | **Crash on None task** | `base.py` | `complete_handoff` accesses `current_task.skill_name` without None guard → `AttributeError` |
+| 9B.7 | **Fragile message routing** | `chat.py` | Substring matching misroutes input: "offboard" matches "board", "launch a QBR" triggers campaigns |
+| 9B.8 | **Partner name extraction broken** | `chat.py` | Usually returns default `"Partner"` — naive word-after-trigger logic fails on multi-word names |
+| 9B.9 | **Financial handler ignores input** | `chat.py` | Always passes hardcoded `$10K/$5K/$50K` values to ROI calculation |
+
+### Medium Priority Findings (14 issues)
+
+- Naive `datetime.now()` without timezone (base.py, state.py)
+- `get_recent` filters after slicing — misses relevant messages (messages.py)
+- No error handling in subscriber notifications — one failure crashes chain (messages.py)
+- `session_history` never populated — chat history lost (chat.py)
+- Fragile `sys.path` manipulation — circular import risk (chat.py)
+- Message IDs collide after history trimming (messages.py)
+- `state_dir` relative path depends on working directory (state.py)
+- Unbounded `activity_log` — no memory cap (state.py)
+- `get_partner` return type mismatch — says Dict but can be None (partner_state.py)
+- Sequential IDs collide after deletions (partner_state.py)
+- No `rich` fallback — crashes without library; original agent degrades gracefully (chat.py)
+- `extract_deal_value` silently defaults to $10,000 (chat.py)
+- Orchestrator `transmit` passes wrong dict keys — data silently lost (orchestrator.py)
+- No input validation on `PartnerState` fields (state.py)
+
+### Architecture Concerns
+
+1. **Security regression**: The original `partner_agent` has `_validate_path` and `_sanitize_partner_name`. The new `partner_agents` has none of these controls — a direct regression against CLAUDE.md guidance
+2. **Naming confusion**: `partner_agent/` (singular, existing) vs `partner_agents/` (plural, new) with no documentation explaining the relationship or migration path
+3. **F1 metaphor**: "Driver", "pit stop", "chassis", "green flag" terminology throughout reduces code clarity for new contributors
+
+**Action:** See Phase 9 in BACKLOG.md for the full remediation plan (30 items across 4 priority tiers).
+
+---
+
 ## Phase 5: Documentation Refresh (Current)
 
 *Goal: All meta-documentation accurately reflects the codebase*
@@ -192,6 +251,7 @@ The custom search separator in `mkdocs.yml` is aggressive and may over-split som
 | Feb 19, 2026 | 2 | Sales ready: demo mode, one-pager, licensing, schema standardization |
 | Feb 20, 2026 | 3-4 | Onboarding flow, agent superpowers, legal/finance/security/ops/exec/analysis templates |
 | Feb 21, 2026 | 5 | Documentation refresh: full audit, all meta-docs updated |
+| Feb 21, 2026 | 9 | Multi-agent architecture review: 30 verified issues logged to BACKLOG.md |
 
 ---
 
