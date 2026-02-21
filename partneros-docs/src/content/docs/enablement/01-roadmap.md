@@ -26,15 +26,8 @@ skills_gained:
 - Content creation
 ---
 
-## Outcomes
+> **Partner Enablement Roadmap (Strategic & Phased) template**
 
-- Completed Partner Enablement Roadmap (Strategic & Phased)
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -136,28 +129,3 @@ Core Sections & Example Prompts (Expanded with Strategic Context):
 ## Related Templates
 - [Partner Training Deck](02-training-deck.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Partner Enablement Roadmap (Strategic & Phased)
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)

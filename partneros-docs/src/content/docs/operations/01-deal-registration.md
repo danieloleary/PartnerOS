@@ -36,20 +36,9 @@ skills_gained:
 - Conflict resolution
 ---
 
+> **Rules, eligibility criteria, and protection periods for partner deal registration.**
 
-## Outcomes
 
-- Clear registration rules and deadlines
-- Defined protection periods by tier
-- Channel conflict resolution process
-
-## Skills Gained
-
-- Channel operations
-- Pipeline management
-- Conflict resolution
-
----
 
 ## How to Use This Template
 
@@ -225,32 +214,3 @@ or partner agreement termination.
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
 - [Partnership Agreement](../recruitment/08-agreement.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | O.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | beginner |
-| **Phase** | recruitment |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Clear registration rules and deadlines
-- Defined protection periods by tier
-- Channel conflict resolution process
-
-## Skills Gained
-
-- Channel operations
-- Pipeline management
-- Conflict resolution
-
-## Prerequisites
-
-- (No prerequisites)

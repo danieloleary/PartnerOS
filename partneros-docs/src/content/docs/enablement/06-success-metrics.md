@@ -26,15 +26,8 @@ skills_gained:
 - Content creation
 ---
 
-## Outcomes
+> **Partner Success Metrics Dashboard template**
 
-- Completed Partner Success Metrics Dashboard
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -439,28 +432,3 @@ NEXT MONTH FOCUS
 - [Partner Certification Program](03-certification.md/)
 - [Co-Marketing Playbook](04-co-marketing.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.6 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Partner Success Metrics Dashboard
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)

@@ -33,20 +33,9 @@ skills_gained:
 - Meeting facilitation
 ---
 
+> **Lightweight weekly standup agenda for Partner Account Managers.**
 
-## Outcomes
 
-- Consistent pipeline visibility
-- Early blocker identification
-- Clear weekly action items
-
-## Skills Gained
-
-- Partner relationship management
-- Pipeline cadence
-- Meeting facilitation
-
----
 
 ## How to Use This Template
 
@@ -176,32 +165,3 @@ every active deal, the meeting failed.
 - [Deal Registration Policy](01-deal-registration.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | O.2 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 0.5 hours |
-| **Difficulty** | easy |
-| **Skill Level** | beginner |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Consistent pipeline visibility
-- Early blocker identification
-- Clear weekly action items
-
-## Skills Gained
-
-- Partner relationship management
-- Pipeline cadence
-- Meeting facilitation
-
-## Prerequisites
-
-- (No prerequisites)

@@ -26,15 +26,8 @@ skills_gained:
 - Content creation
 ---
 
-## Outcomes
+> **Partner Certification Program Framework template**
 
-- Completed Partner Certification Program Framework
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -294,28 +287,3 @@ Quarter 2: First recertification cycle begins
 - [Partner Training Deck](02-training-deck.md/)
 - [Partner Success Metrics](06-success-metrics.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.3 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 4-8 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Partner Certification Program Framework
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)

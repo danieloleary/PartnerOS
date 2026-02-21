@@ -26,15 +26,8 @@ skills_gained:
 - Partner qualification
 ---
 
-## Outcomes
+> **Partnership Agreement Template template**
 
-- Completed Partnership Agreement Template
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -380,28 +373,3 @@ Date: [Date]
 - [Partnership Proposal Template](07-proposal.md/)
 - [Partner Onboarding Checklist](09-onboarding.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | II.8 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 4-8 hours |
-| **Difficulty** | hard |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Partnership Agreement Template
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)

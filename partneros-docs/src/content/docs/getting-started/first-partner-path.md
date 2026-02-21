@@ -35,20 +35,9 @@ skills_gained:
 - Partner program management
 ---
 
+> **The exact sequence to go from zero to your first signed partner in 4 weeks.**
 
-## Outcomes
 
-- First partner signed and onboarded
-- Complete understanding of partner lifecycle
-- Templates customized for your company
-
-## Skills Gained
-
-- Partner recruitment
-- Partner onboarding
-- Partner program management
-
----
 
 # First Partner Onboarding Path
 
@@ -263,32 +252,3 @@ After first partner:
 
 *Follow this path and you'll have a signed, onboarded partner in 4 weeks.*
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | GS.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 4 weeks |
-| **Difficulty** | easy |
-| **Skill Level** | beginner |
-| **Phase** | onboarding |
-| **Purpose** | operational |
-
-## Outcomes
-
-- First partner signed and onboarded
-- Complete understanding of partner lifecycle
-- Templates customized for your company
-
-## Skills Gained
-
-- Partner recruitment
-- Partner onboarding
-- Partner program management
-
-## Prerequisites
-
-- (No prerequisites)

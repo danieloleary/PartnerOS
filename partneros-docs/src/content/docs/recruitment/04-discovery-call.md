@@ -26,15 +26,8 @@ skills_gained:
 - Partner qualification
 ---
 
-## Outcomes
+> **Discovery Call Script Template template**
 
-- Completed Discovery Call Script Template
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -281,28 +274,3 @@ Follow-up Required:
 - [Partnership Proposal Template](07-proposal.md/)
 - [ICP Alignment Tracker](10-icp-tracker.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | II.4 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Discovery Call Script Template
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)

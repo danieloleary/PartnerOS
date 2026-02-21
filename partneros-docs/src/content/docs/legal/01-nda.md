@@ -35,23 +35,12 @@ skills_gained:
 - Confidentiality clauses
 ---
 
+> **Mutual Non-Disclosure Agreement template for initial partner discussions.**
+
+
 :::tip
 This template is for **Bronze**, **Silver**, and **Gold** tier partners.
 :::
-
-## Outcomes
-
-- Signed NDA with potential partner
-- Legal protection for confidential information
-- Clear definition of confidential vs. non-confidential information
-
-## Skills Gained
-
-- Contract basics
-- Legal terminology
-- Confidentiality clauses
-
----
 
 ## How to Use This Template
 
@@ -174,32 +163,3 @@ Date: _______________________
 - [Proposal Template](../recruitment/07-proposal.md/)
 - [Discovery Call Script](../recruitment/04-discovery-call.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | L.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | medium |
-| **Skill Level** | beginner |
-| **Phase** | recruitment |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Signed NDA with potential partner
-- Legal protection for confidential information
-- Clear definition of confidential vs. non-confidential information
-
-## Skills Gained
-
-- Contract basics
-- Legal terminology
-- Confidentiality clauses
-
-## Prerequisites
-
-- (No prerequisites)

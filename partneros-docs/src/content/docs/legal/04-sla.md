@@ -36,20 +36,9 @@ skills_gained:
   - Escalation management
 ---
 
+> **Service Level Agreement defining support response times and commitments.**
 
-## Outcomes
 
-- Clear support expectations
-- Defined response times by severity
-- Escalation procedures
-
-## Skills Gained
-
-- SLA structuring
-- Support metrics
-- Escalation management
-
----
 
 ## How to Use This Template
 
@@ -247,32 +236,3 @@ Date: _______________________
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
 - [QBR Template](../enablement/07-qbr-template.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | L.4 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Clear support expectations
-- Defined response times by severity
-- Escalation procedures
-
-## Skills Gained
-
-- SLA structuring
-- Support metrics
-- Escalation management
-
-## Prerequisites
-
-- Master Service Agreement (L.2)

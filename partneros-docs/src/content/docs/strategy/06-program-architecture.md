@@ -26,15 +26,8 @@ skills_gained:
 - Competitive analysis
 ---
 
-## Outcomes
+> **Partner Program Architecture Template template**
 
-- Completed Partner Program Architecture Template
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -258,28 +251,3 @@ Use this template to design and implement a structured partner program that scal
 - [Partner Strategy Plan](05-strategy-plan.md/)
 - [Internal Alignment Playbook](07-internal-alignment.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.6 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Partner Program Architecture Template
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)

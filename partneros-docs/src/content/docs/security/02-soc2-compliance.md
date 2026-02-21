@@ -37,20 +37,9 @@ skills_gained:
   - Partner security governance
 ---
 
+> **Guide for partners to understand and demonstrate SOC 2 compliance requirements.**
 
-## Outcomes
 
-- Defined SOC 2 requirements for partner access
-- Clear evidence collection process
-- Shared security controls baseline
-
-## Skills Gained
-
-- Security compliance management
-- Third-party risk assessment
-- Partner security governance
-
----
 
 ## How to Use This Template
 
@@ -244,32 +233,3 @@ Include in notification:
 - [Partnership Agreement](../recruitment/08-agreement.md/)
 - [Technical Integration Guide](../enablement/05-technical-integration.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | S.2 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Defined SOC 2 requirements for partner access
-- Clear evidence collection process
-- Shared security controls baseline
-
-## Skills Gained
-
-- Security compliance management
-- Third-party risk assessment
-- Partner security governance
-
-## Prerequisites
-
-- Security Questionnaire (S.1)

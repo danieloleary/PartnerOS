@@ -34,20 +34,9 @@ skills_gained:
 - Incentive program design
 ---
 
+> **Tiered commission structure for partner-generated revenue.**
 
-## Outcomes
 
-- Clear commission structure
-- Defined tiers and eligibility
-- Payment schedule
-
-## Skills Gained
-
-- Revenue structuring
-- Partner economics
-- Incentive program design
-
----
 
 ## How to Use This Template
 
@@ -258,32 +247,3 @@ Commission: 100,000 × 10% = $10,000
 - [Deal Registration Policy](../operations/01-deal-registration.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | F.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | strategic |
-
-## Outcomes
-
-- Clear commission structure
-- Defined tiers and eligibility
-- Payment schedule
-
-## Skills Gained
-
-- Revenue structuring
-- Partner economics
-- Incentive program design
-
-## Prerequisites
-
-- (No prerequisites)

@@ -26,15 +26,8 @@ skills_gained:
 - Content creation
 ---
 
-## Outcomes
+> **Technical Integration Guide template**
 
-- Completed Technical Integration Guide
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -65,16 +58,6 @@ This guide provides technical partners with the knowledge and resources needed t
 | **UI/Embed Integration** | Embed functionality in partner apps | ISVs, Platform Partners |
 | **Workflow Integration** | Automate cross-platform processes | Automation Partners, SIs |
 | **SSO/Identity** | Unified authentication | All partner types |
-
-### Prerequisites
-Before beginning integration work, partners should have:
-- [ ] Signed partnership agreement
-- [ ] Completed Technical 101 certification
-- [ ] Access to Partner Portal and documentation
-- [ ] Sandbox/development environment credentials
-- [ ] Assigned Technical Partner Manager contact
-
----
 
 ## 2. Platform Architecture
 
@@ -529,28 +512,3 @@ Before going live, integrations must meet:
 - [Partner Certification Program](03-certification.md/)
 - [Partner Success Metrics](06-success-metrics.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.5 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | hard |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Technical Integration Guide
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)

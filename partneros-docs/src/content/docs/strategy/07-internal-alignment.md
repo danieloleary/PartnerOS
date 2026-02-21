@@ -26,15 +26,8 @@ skills_gained:
 - Competitive analysis
 ---
 
-## Outcomes
+> **Internal Alignment Playbook Template template**
 
-- Completed Internal Alignment Playbook Template
-
-## Skills Gained
-
-- (No skills defined)
-
----
 
 ## How to Use This Template
 
@@ -268,28 +261,3 @@ Use this template to align internal teams and stakeholders with partner program 
 - [Partner Strategy Plan](05-strategy-plan.md/)
 - [Program Architecture](06-program-architecture.md/)
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.7 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
-
-## Outcomes
-
-- Completed Internal Alignment Playbook Template
-
-## Skills Gained
-
-- (No skills defined)
-
-## Prerequisites
-
-- (No prerequisites)
