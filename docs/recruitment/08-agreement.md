@@ -7,19 +7,19 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 4-8 hours
 difficulty: hard
-prerequisites:
-description:
+prerequisites: []
+description: Partnership Agreement Template template
 outcomes:
-  - Completed Partnership Agreement Template
-skills_gained:
+- Completed Partnership Agreement Template
+skills_gained: []
 ---
 ## How to Use This Template
 

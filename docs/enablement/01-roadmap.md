@@ -7,19 +7,19 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 2-4 hours
 difficulty: easy
-prerequisites:
-description:
+prerequisites: []
+description: Partner Enablement Roadmap (Strategic & Phased) template
 outcomes:
-  - Completed Partner Enablement Roadmap (Strategic & Phased)
-skills_gained:
+- Completed Partner Enablement Roadmap (Strategic & Phased)
+skills_gained: []
 ---
 ## How to Use This Template
 

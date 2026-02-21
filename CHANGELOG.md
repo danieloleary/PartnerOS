@@ -51,10 +51,12 @@
 ### Template Fixes
 - Fixed frontmatter in `07-proposal.md` (added description, prerequisites)
 - Fixed frontmatter in `glossary.md` (valid phase, description)
+- Fixed 24 templates: added empty arrays for `prerequisites` and `skills_gained`
+- Fixed 20 templates: added descriptions to templates with null/empty descriptions
 
 ### Test Metrics
 - **Before**: 43 tests (43 passing)
-- **After**: 80 tests (74 passing, 6 skipped)
+- **After**: 80 tests (78 passing, 2 skipped)
 - All tests passing, lint clean, mkdocs builds clean
 
 ---

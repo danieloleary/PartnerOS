@@ -7,21 +7,22 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-description: |
-  A succinct, compelling document that quickly communicates the essence of your partner program and the value of partnering.
+prerequisites: []
+description: 'A succinct, compelling document that quickly communicates the essence
+  of your partner program and the value of partnering.
 
+  '
 outcomes:
-  - Completed Partnership One-Pager (Concise Value Proposition)
-skills_gained:
+- Completed Partnership One-Pager (Concise Value Proposition)
+skills_gained: []
 ---
 ## How to Use This Template
 

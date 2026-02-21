@@ -7,19 +7,19 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: strategy
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-description:
+prerequisites: []
+description: 3C/4C Partner Evaluation Framework template
 outcomes:
-  - Completed 3C/4C Partner Evaluation Framework
-skills_gained:
+- Completed 3C/4C Partner Evaluation Framework
+skills_gained: []
 ---
 ## How to Use This Template
 

@@ -7,19 +7,19 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: strategy
 time_required: 8-16 hours
 difficulty: hard
-prerequisites:
-description:
+prerequisites: []
+description: Partner Strategy Plan Template template
 outcomes:
-  - Completed Partner Strategy Plan Template
-skills_gained:
+- Completed Partner Strategy Plan Template
+skills_gained: []
 ---
 ## How to Use This Template
 

@@ -7,19 +7,19 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-description:
+prerequisites: []
+description: Partner Success Metrics Dashboard template
 outcomes:
-  - Completed Partner Success Metrics Dashboard
-skills_gained:
+- Completed Partner Success Metrics Dashboard
+skills_gained: []
 ---
 ## How to Use This Template
 

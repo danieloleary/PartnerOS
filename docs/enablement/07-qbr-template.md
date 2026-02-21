@@ -7,25 +7,26 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 2-4 hours
 difficulty: easy
-prerequisites:
-description: |
-  A structured template for conducting productive quarterly business reviews with partners to assess performance, align on strategy, and plan future initiatives.
+prerequisites: []
+description: 'A structured template for conducting productive quarterly business reviews
+  with partners to assess performance, align on strategy, and plan future initiatives.
 
+  '
 related_templates:
-  - 06-success-metrics.md
-  - ../recruitment/10-icp-tracker.md
-  - ../I_Partner_Strategy_Templates/03_Partner_Program_Charter.md
+- 06-success-metrics.md
+- ../recruitment/10-icp-tracker.md
+- ../I_Partner_Strategy_Templates/03_Partner_Program_Charter.md
 outcomes:
-  - Completed Partner QBR Template (Quarterly Business Review)
-skills_gained:
+- Completed Partner QBR Template (Quarterly Business Review)
+skills_gained: []
 ---
 ## How to Use This Template
 

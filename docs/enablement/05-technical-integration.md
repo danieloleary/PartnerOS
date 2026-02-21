@@ -7,19 +7,19 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 1-2 hours
 difficulty: hard
-prerequisites:
-description:
+prerequisites: []
+description: Technical Integration Guide template
 outcomes:
-  - Completed Technical Integration Guide
-skills_gained:
+- Completed Technical Integration Guide
+skills_gained: []
 ---
 ## How to Use This Template
 

@@ -7,21 +7,22 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-description: |
-  Systematically identify and track alignment between your ICPs, target accounts, and joint opportunities with partners.
+prerequisites: []
+description: 'Systematically identify and track alignment between your ICPs, target
+  accounts, and joint opportunities with partners.
 
+  '
 outcomes:
-  - Completed ICP Alignment Tracker (Strategic Account Mapping)
-skills_gained:
+- Completed ICP Alignment Tracker (Strategic Account Mapping)
+skills_gained: []
 ---
 ## How to Use This Template
 
