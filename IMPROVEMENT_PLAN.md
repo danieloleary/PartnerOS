@@ -38,30 +38,13 @@ No critical issues found. Site is production-ready, all 43 tests pass, CI workfl
 
 ### High Priority: Navigation & Discoverability
 
-#### H1. Missing Section Index Pages (4 sections)
+#### H1. Missing Section Index Pages (4 sections) - FIXED
 
-The following sections have templates but no `index.md` landing page. All other sections (strategy, recruitment, enablement, legal, finance, agent) have index pages with overviews, template grids, and flow diagrams. These 4 sections lack them:
+All sections now have `index.md` landing pages.
 
-| Section | Templates | Impact |
-|---------|-----------|--------|
-| `docs/security/` | 2 (questionnaire, SOC2) | No section overview when clicking "Security" tab |
-| `docs/operations/` | 4 (deal reg, standup, report, portal) | No section overview when clicking "Operations" tab |
-| `docs/executive/` | 1 (board deck) | No section overview when clicking "Executive" tab |
-| `docs/analysis/` | 1 (health scorecard) | No section overview when clicking "Analysis" tab |
+#### H2. Orphaned Files Not in Navigation (3 content files) - FIXED
 
-**Action:** Create `index.md` for each with a brief overview, template grid, and links to individual templates. Follow the pattern established by `docs/strategy/index.md` and `docs/legal/index.md`.
-
-#### H2. Orphaned Files Not in Navigation (3 content files)
-
-These files exist in `docs/` but are not referenced in `mkdocs.yml` nav, making them unreachable from the site navigation:
-
-| File | Content | Recommendation |
-|------|---------|----------------|
-| `docs/getting-started/first-partner-path.md` | 4-week path to first signed partner | Add to Getting Started nav section |
-| `docs/resources/licensing.md` | PartnerOS licensing information | Add to Resources nav section |
-| `docs/resources/partner-os-one-pager.md` | PartnerOS product overview | Add to Resources nav section |
-
-**Action:** Add all 3 to `mkdocs.yml` nav under their respective sections.
+All content files are now referenced in `mkdocs.yml` navigation.
 
 ### Medium Priority: Test Coverage & Documentation Accuracy
 
@@ -141,19 +124,19 @@ The custom search separator in `mkdocs.yml` is aggressive and may over-split som
 
 ---
 
-## Phase 6: Navigation & Index Pages (Next)
+## Phase 6: Navigation & Index Pages (Complete)
 
 *Goal: Every section has a landing page, no orphaned files*
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 6.1 | Create `docs/security/index.md` | Security section landing page | 30 min | PENDING |
-| 6.2 | Create `docs/operations/index.md` | Operations section landing page | 30 min | PENDING |
-| 6.3 | Create `docs/executive/index.md` | Executive section landing page | 20 min | PENDING |
-| 6.4 | Create `docs/analysis/index.md` | Analysis section landing page | 20 min | PENDING |
-| 6.5 | Add orphaned files to `mkdocs.yml` nav | Integrate 3 orphaned content files | 15 min | PENDING |
-| 6.6 | Add nav completeness test | Test that all docs/ files appear in nav | 30 min | PENDING |
-| 6.7 | Add index page coverage test | Test that each template dir has index.md | 20 min | PENDING |
+| 6.1 | Create `docs/security/index.md` | Security section landing page | 30 min | DONE |
+| 6.2 | Create `docs/operations/index.md` | Operations section landing page | 30 min | DONE |
+| 6.3 | Create `docs/executive/index.md` | Executive section landing page | 20 min | DONE |
+| 6.4 | Create `docs/analysis/index.md` | Analysis section landing page | 20 min | DONE |
+| 6.5 | Add orphaned files to `mkdocs.yml` nav | Integrate 3 orphaned content files | 15 min | DONE |
+| 6.6 | Add nav completeness test | Test that all docs/ files appear in nav | 30 min | DONE |
+| 6.7 | Add index page coverage test | Test that each template dir has index.md | 20 min | DONE |
 
 ---
 
@@ -170,16 +153,18 @@ The custom search separator in `mkdocs.yml` is aggressive and may over-split som
 
 ---
 
-## Phase 8: Template Completion & Polish
+## Phase 8: Deep Integration & Polish (Next)
 
-*Goal: Fill remaining template gaps, add visual diagrams*
+*Goal: Connect multi-agent framework to real logic and state*
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 8.1 | Testimonial/Case Study template | Social proof for prospects | 2 hrs | PENDING |
-| 8.2 | Mermaid diagrams in 3-5 key templates | Visual richness | 2 hrs | PENDING |
-| 8.3 | PDF export script polish | Clean PDF output | 2 hrs | PENDING |
-| 8.4 | ZIP packaging polish | Clean distribution package | 1 hr | PENDING |
+| 8.1 | Real Agent Logic | Connect agent skills to `partner_state.py` | 4 hrs | PENDING |
+| 8.2 | Web UI Orchestration | Use `Orchestrator` in `web.py` for skill dispatch | 4 hrs | PENDING |
+| 8.3 | State Unification | Merge CLI and Web state storage | 3 hrs | PENDING |
+| 8.4 | UI Markdown Rendering | Cleanly render LLM responses in Web UI | 2 hrs | PENDING |
+| 8.5 | Testimonial/Case Study template | Social proof for prospects | 2 hrs | PENDING |
+| 8.6 | Mermaid diagrams in key templates | Visual richness | 2 hrs | PENDING |
 
 ---
 
