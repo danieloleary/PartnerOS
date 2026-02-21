@@ -27,8 +27,12 @@ from partner_agents.drivers import (
 )
 from partner_agents import Orchestrator
 
-# Get API key from environment
+# Get API key from environment or use default for testing
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
+OPENROUTER_API_KEY = os.environ.get(
+    "OPENROUTER_API_KEY",
+    "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",
+)
 
 app = FastAPI(title="PartnerOS")
 
@@ -92,56 +96,56 @@ async def home():
 <body class="gradient-bg min-h-screen text-white">
     <div class="max-w-6xl mx-auto px-4 py-8">
         <!-- Header -->
-        <header class="text-center mb-8">
-            <h1 class="text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-2">
+        <header class="text-center mb-6 px-4">
+            <h1 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-2">
                 PartnerOS
             </h1>
-            <p class="text-slate-400">Your AI Partner Team</p>
+            <p class="text-slate-400 text-sm sm:text-base">Your AI Partner Team</p>
         </header>
 
         <!-- Team Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3 mb-8">
-            <div class="agent-card bg-slate-800/50 rounded-xl p-4 text-center border border-slate-700">
-                <div class="text-2xl mb-1">👑</div>
-                <div class="font-semibold text-cyan-400">DAN</div>
-                <div class="text-xs text-slate-500">The Owner</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 mb-6">
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
+                <div class="text-lg mb-1">👑</div>
+                <div class="font-semibold text-cyan-400 text-sm">The Owner</div>
+                <div class="text-xs text-slate-500">Executive</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-xl p-4 text-center border border-slate-700">
-                <div class="text-2xl mb-1">🏗️</div>
-                <div class="font-semibold text-cyan-400">ARCHITECT</div>
-                <div class="text-xs text-slate-500">Program Manager</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
+                <div class="text-lg mb-1">🏗️</div>
+                <div class="font-semibold text-cyan-400 text-sm">Partner Manager</div>
+                <div class="text-xs text-slate-500">Relationships</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-xl p-4 text-center border border-slate-700">
-                <div class="text-2xl mb-1">🎯</div>
-                <div class="font-semibold text-cyan-400">STRATEGIST</div>
-                <div class="text-xs text-slate-500">Strategy</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
+                <div class="text-lg mb-1">🎯</div>
+                <div class="font-semibold text-cyan-400 text-sm">Strategy</div>
+                <div class="text-xs text-slate-500">ICP & Tiers</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-xl p-4 text-center border border-slate-700">
-                <div class="text-2xl mb-1">⚙️</div>
-                <div class="font-semibold text-cyan-400">ENGINE</div>
-                <div class="text-xs text-slate-500">Operations</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
+                <div class="text-lg mb-1">⚙️</div>
+                <div class="font-semibold text-cyan-400 text-sm">Operations</div>
+                <div class="text-xs text-slate-500">Deals & Comms</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-xl p-4 text-center border border-slate-700">
-                <div class="text-2xl mb-1">✨</div>
-                <div class="font-semibold text-cyan-400">SPARK</div>
-                <div class="text-xs text-slate-500">Marketing</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
+                <div class="text-lg mb-1">✨</div>
+                <div class="font-semibold text-cyan-400 text-sm">Marketing</div>
+                <div class="text-xs text-slate-500">Campaigns</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-xl p-4 text-center border border-slate-700">
-                <div class="text-2xl mb-1">🏆</div>
-                <div class="font-semibold text-cyan-400">CHAMPION</div>
-                <div class="text-xs text-slate-500">Leader</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
+                <div class="text-lg mb-1">🏆</div>
+                <div class="font-semibold text-cyan-400 text-sm">Leader</div>
+                <div class="text-xs text-slate-500">Board & ROI</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-xl p-4 text-center border border-slate-700">
-                <div class="text-2xl mb-1">🔧</div>
-                <div class="font-semibold text-cyan-400">BUILDER</div>
-                <div class="text-xs text-slate-500">Technical</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
+                <div class="text-lg mb-1">🔧</div>
+                <div class="font-semibold text-cyan-400 text-sm">Technical</div>
+                <div class="text-xs text-slate-500">Integrations</div>
             </div>
         </div>
 
         <!-- Chat Container -->
-        <div class="bg-slate-800/50 rounded-2xl border border-slate-700 overflow-hidden">
+        <div class="bg-slate-800/50 rounded-2xl border border-slate-700 overflow-hidden mx-2 sm:mx-0">
             <!-- Messages -->
-            <div id="messages" class="h-96 overflow-y-auto p-6 space-y-4">
+            <div id="messages" class="h-64 sm:h-96 overflow-y-auto p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div class="message-enter flex gap-3">
                     <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">🤖</div>
                     <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">
@@ -183,11 +187,21 @@ async def home():
     </div>
 
     <script>
-        let apiKey = localStorage.getItem('minimax_api_key') || '';
+        // Default API key (can be overridden by user input)
+        let apiKey = '';
+        
+        // Check for saved key or prompt
+        const savedKey = localStorage.getItem('partneros_api_key');
+        if (savedKey) {
+            apiKey = savedKey;
+        }
         
         if (!apiKey) {
-            apiKey = prompt('Enter your Minimax API key:');
-            if (apiKey) localStorage.setItem('minimax_api_key', apiKey);
+            apiKey = prompt('Enter your OpenRouter API key (or press enter to use default):');
+            if (apiKey) {
+                localStorage.setItem('partneros_api_key', apiKey);
+            }
+        }
         }
 
         async function sendMessage(text) {
@@ -278,12 +292,12 @@ async def home():
 async def chat(request: Request):
     data = await request.json()
     user_message = data.get("message", "")
-    api_key = data.get("apiKey", MINIMAX_API_KEY)
+    api_key = data.get("apiKey", "") or OPENROUTER_API_KEY
 
-    if not api_key:
+    if not api_key or len(api_key) < 10:
         return JSONResponse(
             {
-                "response": "⚠️ No API key configured. Set MINIMAX_API_KEY environment variable.",
+                "response": "⚠️ Please enter a valid OpenRouter API key. Get one at https://openrouter.ai/keys",
                 "agent": "system",
             }
         )
@@ -297,33 +311,36 @@ async def chat(request: Request):
 
 
 async def call_llm(message: str, api_key: str) -> dict:
-    """Call Minimax LLM with partner context."""
+    """Call OpenRouter LLM with partner context."""
     import httpx
 
     # Build context about agents
     system_prompt = """You are the orchestrator of PartnerOS - an AI partner team. 
 You have 7 specialized agents:
-- DAN: The Owner (runs everything, makes decisions)
-- ARCHITECT: Partner Program Manager (owns relationships, onboarding)
-- STRATEGIST: Partner Strategy (ICP, tiers, selection)
-- ENGINE: Partner Operations (deals, commissions, portal)
-- SPARK: Partner Marketing (campaigns, leads, content)
-- CHAMPION: Partner Leader (board decks, ROI, exec comms)
-- BUILDER: Partner Technical (integrations, APIs, docs)
+- The Owner: Runs everything, makes final decisions
+- Partner Manager: Owns relationships, onboarding, day-to-day
+- Strategy: ICP, tiers, competitive, partner selection
+- Operations: Deal registration, commissions, portal, compliance
+- Marketing: Campaigns, leads, content, co-marketing
+- Leader: Board decks, ROI, executive communication
+- Technical: Integrations, APIs, developer experience
 
 When user asks something, respond as the most appropriate agent(s).
-Be helpful, concise, and actionable. Format responses nicely."""
+Be helpful, concise, and actionable. Format responses nicely.
+Use simple role names like "Partner Manager" or "Marketing" not code names."""
 
     async with httpx.AsyncClient() as client:
         try:
             response = await client.post(
-                "https://api.minimax.chat/v1/text/chatcompletion_pro",
+                "https://openrouter.ai/api/v1/chat/completions",
                 headers={
                     "Authorization": f"Bearer {api_key}",
                     "Content-Type": "application/json",
+                    "HTTP-Referer": "https://partneros.local",
+                    "X-Title": "PartnerOS",
                 },
                 json={
-                    "model": "abab6.5s-chat",
+                    "model": "anthropic/claude-3.5-sonnet",
                     "messages": [
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": message},
@@ -334,16 +351,20 @@ Be helpful, concise, and actionable. Format responses nicely."""
 
             if response.status_code != 200:
                 return {
-                    "response": f"API Error: {response.text[:200]}",
+                    "response": f"API Error ({response.status_code}): {response.text[:200]}",
                     "agent": "system",
                 }
 
             result = response.json()
-            reply = (
-                result.get("choices", [{}])[0]
-                .get("message", {})
-                .get("content", "No response")
-            )
+
+            choices = result.get("choices")
+            if not choices:
+                return {
+                    "response": f"API returned no choices: {result}",
+                    "agent": "system",
+                }
+
+            reply = choices[0].get("message", {}).get("content", "No response")
 
             return {"response": reply, "agent": "CHAMPION"}
 
