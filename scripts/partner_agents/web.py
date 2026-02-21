@@ -350,6 +350,17 @@ Be helpful, concise, and actionable."""
                 # API key invalid - use fallback responses
                 return get_fallback_response(message)
 
+            # Check for invalid API key errors (2049)
+            try:
+                result = response.json()
+                if (
+                    "base_resp" in result
+                    and result.get("base_resp", {}).get("status_code") == 2049
+                ):
+                    return get_fallback_response(message)
+            except:
+                pass
+
             if response.status_code != 200:
                 return {
                     "response": f"API Error ({response.status_code}): {response.text[:200]}",
