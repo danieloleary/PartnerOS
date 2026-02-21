@@ -57,7 +57,6 @@ plugins:
   - search:
       separator: '[\s\-,:!=\[\]()\"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - tags
-  - social
 
 extra:
   social:
