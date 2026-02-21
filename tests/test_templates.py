@@ -851,7 +851,9 @@ def test_no_broken_internal_links():
         # Build a lookup of all files by basename (for relative link resolution)
         all_files = {}
         all_folders = set()
-        for f in docs_dir.rglob("*.md"):
+
+        # Include both .md and .mdx files
+        for f in list(docs_dir.rglob("*.md")) + list(docs_dir.rglob("*.mdx")):
             rel = str(f.relative_to(docs_dir))
             basename = rel.rsplit("/", 1)[-1]
             folder = rel.rsplit("/", 1)[0] if "/" in rel else ""
@@ -863,14 +865,17 @@ def test_no_broken_internal_links():
             if basename not in all_files:
                 all_files[basename] = []
             all_files[basename].append(rel)
-            # Also add folder-style versions
-            if basename.endswith(".md"):
-                folder_name = basename[:-3]
+
+            # Also add folder-style versions (index.mdx -> index)
+            if basename.endswith(".md") or basename.endswith(".mdx"):
+                folder_name = basename.rsplit(".", 1)[0]  # Remove extension
                 if folder_name not in all_files:
                     all_files[folder_name] = []
                 all_files[folder_name].append(rel)
+                # Also add with trailing slash
+                all_files[folder_name + "/"] = [rel]
 
-        for f in docs_dir.rglob("*.md"):
+        for f in list(docs_dir.rglob("*.md")) + list(docs_dir.rglob("*.mdx")):
             content = f.read_text()
             links = re.findall(r"\[([^\]]+)\]\(([^)]+)\)", content)
 
@@ -914,6 +919,16 @@ def test_no_broken_internal_links():
                     found = True
                 elif link_basename in all_folders:
                     found = True
+                # Check for index/ links (e.g., ../recruitment/index/)
+                elif link_clean.endswith("/index") or link_basename == "index":
+                    # Check if there's an index file in the folder
+                    folder_path = (
+                        link_clean.rsplit("/", 1)[0]
+                        if "/" in link_clean
+                        else link_clean
+                    )
+                    if folder_path in all_folders:
+                        found = True
 
                 if not found:
                     failures.append(f"{f.relative_to(docs_dir)}: broken link to {link}")

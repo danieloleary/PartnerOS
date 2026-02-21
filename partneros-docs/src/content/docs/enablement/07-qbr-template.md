@@ -22,9 +22,9 @@ description: 'A structured template for conducting productive quarterly business
 
   '
 related_templates:
-- 06-success-metrics.md
-- ../recruitment/10-icp-tracker.md
-- [Partner Program Architecture](../strategy/06-program-architecture/)
+  - 06-success-metrics.md
+  - ../recruitment/10-icp-tracker.md
+  - ../strategy/06-program-architecture.md
 outcomes:
 - Completed Partner QBR Template (Quarterly Business Review)
 skills_gained:
