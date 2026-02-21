@@ -73,7 +73,7 @@ agents = {
 
 # Call skills
 result = agents['partner_manager'].call_skill('architect_onboard', {
-    'partner_id': 'Acme', 
+    'partner_id': 'Acme',
     'tier': 'Gold'
 })
 ```
