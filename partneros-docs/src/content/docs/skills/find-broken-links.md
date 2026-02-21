@@ -147,13 +147,6 @@ for md_file in DOCS_DIR.rglob("*.md"):
 
 ---
 
-## Related Templates
-
-- [Test Templates](/PartnerOS/tests/) - Template testing suite
-- [Starlight Configuration](/PartnerOS/partneros-docs/astro.config.mjs/) - Docs configuration
-
----
-
 ## Metadata
 
 | | |
