@@ -1,21 +1,21 @@
 # PartnerOS Improvement Plan
 
 *Generated: January 29, 2026*
-*Updated: February 21, 2026*
+*Updated: February 20, 2026*
 
 > **See [ARCHITECTURE.md](ARCHITECTURE.md) for architecture decisions**
 > **See [BACKLOG.md](BACKLOG.md) for prioritized roadmap**
 
 ---
 
-## Current State (February 21, 2026)
+## Current State (February 20, 2026)
 
-**Phase 1-4 Complete:**
+**Phase 1-6 Complete:**
 
-- 40 templates across 9 categories (strategy 8, recruitment 10, enablement 7, legal 4, finance 3, security 2, operations 4, executive 1, analysis 1)
-- 7 section index pages (strategy, recruitment, enablement, legal, finance, agent, getting-started)
+- 44 templates across 9 categories (strategy 8, recruitment 10, enablement 7, legal 4, finance 3, security 2, operations 4, executive 1, analysis 1)
+- 9 section index pages (strategy, recruitment, enablement, legal, finance, security, operations, executive, analysis)
 - 7 automation playbooks (recruit, onboard, qbr, expand, exit, co-marketing, support-escalation)
-- 43 automated tests passing (test_agent 14, test_templates 24, test_onboarding 5)
+- 80 automated tests (74 passing, 6 skipped)
 - Company onboarding (`scripts/onboard.py`)
 - Template variables (`scripts/fill_template.py`)
 - Demo mode (`scripts/demo_mode.py`)

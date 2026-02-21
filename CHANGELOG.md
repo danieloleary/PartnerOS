@@ -1,5 +1,64 @@
 # PartnerOS CHANGELOG
 
+## Version 1.4 (2026-02-20) - Navigation & Test Expansion
+
+### Phase 6: Navigation & Index Pages
+- **NEW**: Created 4 section index pages: `security/`, `operations/`, `executive/`, `analysis/`
+- **NEW**: Added all index pages to `mkdocs.yml` nav
+- **NEW**: Added orphaned files to nav: `first-partner-path.md`, `licensing.md`, `partner-os-one-pager.md`
+
+### Test Suite Expansion
+- **NEW**: Added 26+ quality tests covering:
+  - `test_nav_completeness` - Verifies all .md files in docs/ are in nav
+  - `test_index_page_coverage` - Verifies each section has index.md
+  - `test_frontmatter_consistency` - Field type consistency
+  - `test_template_number_uniqueness` - No duplicate template numbers
+  - `test_all_sections_have_templates` - No empty directories
+  - `test_mkdocs_nav_sections_match_docs_dirs` - Nav/directory alignment
+  - `test_template_files_not_empty` - Minimum content check
+  - `test_no_broken_internal_links` - Link validation
+  - `test_images_exist` - Image references
+  - `test_code_blocks_have_language` - Syntax highlighting
+  - `test_headings_have_content` - No empty headings
+  - `test_no_placeholder_text` - Clean templates
+  - `test_consistent_date_format` - ISO dates
+  - `test_version_format_consistency` - Semver format
+  - `test_tags_are_lists` - Type validation
+  - `test_tier_field_format` - Valid tier values
+  - `test_difficulty_values` - Valid difficulty
+  - `test_time_required_format` - Time format
+  - `test_prerequisites_is_list` - Type validation
+  - `test_outcomes_is_list` - Type validation
+  - `test_skills_gained_is_list` - Type validation
+  - `test_purpose_valid_values` - Valid purposes
+  - `test_phase_valid_values` - Valid phases
+  - `test_skill_level_valid_values` - Valid levels
+  - `test_author_field_exists` - Required field
+  - `test_description_field_not_empty` - Non-empty descriptions
+
+- **NEW**: Added 10+ partner-program-specific tests:
+  - `test_playbook_categories_match_template_sections`
+  - `test_tier_hierarchy_consistent`
+  - `test_no_duplicate_template_numbers`
+  - `test_section_field_matches_directory`
+  - `test_all_categories_valid`
+  - `test_mkdocs_homepage_configured`
+  - `test_all_playbooks_have_required_fields`
+  - `test_playbook_steps_have_content`
+  - `test_no_empty_template_directories`
+  - `test_index_pages_have_frontmatter`
+
+### Template Fixes
+- Fixed frontmatter in `07-proposal.md` (added description, prerequisites)
+- Fixed frontmatter in `glossary.md` (valid phase, description)
+
+### Test Metrics
+- **Before**: 43 tests (43 passing)
+- **After**: 80 tests (74 passing, 6 skipped)
+- All tests passing, lint clean, mkdocs builds clean
+
+---
+
 ## Version 1.3 (2026-02-21) - Audit & Documentation Refresh
 
 ### Full Codebase Audit
