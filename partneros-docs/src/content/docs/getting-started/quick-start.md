@@ -63,10 +63,10 @@ branding:
 
 | Your Stage | Start Here |
 |-----------|-----------|
-| No partners yet | [Recruitment templates](../recruitment/) |
-| Need process | [Enablement templates](../enablement/) |
-| Design program | [Strategy templates](../strategy/) |
-| Legal needed | [Legal templates](../legal/) |
+| No partners yet | [Recruitment templates](../../recruitment/) |
+| Need process | [Enablement templates](../../enablement/) |
+| Design program | [Strategy templates](../../strategy/) |
+| Legal needed | [Legal templates](../../legal/) |
 
 ---
 
@@ -90,11 +90,11 @@ Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today
 
 ### Recommended Path
 
-1. [Ideal Partner Profile](../strategy/02-ideal-partner-profile/)
-2. [Email Sequence](../recruitment/01-email-sequence/)
-3. [Qualification Framework](../recruitment/03-qualification-framework/)
-4. [Pitch Deck](../recruitment/05-pitch-deck/)
-5. [Agreement Template](../recruitment/08-agreement/)
+1. [Ideal Partner Profile](../../strategy/02-ideal-partner-profile/)
+2. [Email Sequence](../../recruitment/01-email-sequence/)
+3. [Qualification Framework](../../recruitment/03-qualification-framework/)
+4. [Pitch Deck](../../recruitment/05-pitch-deck/)
+5. [Agreement Template](../../recruitment/08-agreement/)
 
 ---
 
@@ -125,18 +125,18 @@ Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today
         ```
 
     4. **Browse templates by category:**
-        - [Strategy](../strategy/) - Program design
-        - [Recruitment](../recruitment/) - Find partners
-        - [Enablement](../enablement/) - Train partners
-        - [Legal](../legal/) - Contracts
-        - [Finance](../finance/) - Commissions
+        - [Strategy](../../strategy/) - Program design
+        - [Recruitment](../../recruitment/) - Find partners
+        - [Enablement](../../enablement/) - Train partners
+        - [Legal](../../legal/) - Contracts
+        - [Finance](../../finance/) - Commissions
 
     **Best for:** Teams who want to browse and use templates directly.
 
     1. Browse the template sections:
-        - [Strategy](../strategy/) - Define your partnership vision
-        - [Recruitment](../recruitment/) - Find and sign partners
-        - [Enablement](../enablement/) - Train and support partners
+        - [Strategy](../../strategy/) - Define your partnership vision
+        - [Recruitment](../../recruitment/) - Find and sign partners
+        - [Enablement](../../enablement/) - Train and support partners
 
     2. Find a template that fits your need
 
@@ -227,10 +227,10 @@ graph LR
     C --> D[Start Recruiting]
 ```
 
-1. Start with [Partner Business Case](../strategy/01-partner-business-case/)
-2. Define your [Ideal Partner Profile](../strategy/02-ideal-partner-profile/)
-3. Design your [Program Architecture](../strategy/06-program-architecture/)
-4. Begin [Recruitment](../recruitment/)
+1. Start with [Partner Business Case](../../strategy/01-partner-business-case/)
+2. Define your [Ideal Partner Profile](../../strategy/02-ideal-partner-profile/)
+3. Design your [Program Architecture](../../strategy/06-program-architecture/)
+4. Begin [Recruitment](../../recruitment/)
 
 ### For Signing a Specific Partner
 
@@ -242,16 +242,16 @@ graph LR
     D --> E[Agreement]
 ```
 
-1. Use the [Qualification Framework](../recruitment/03-qualification-framework/)
-2. Run a [Discovery Call](../recruitment/04-discovery-call/)
-3. Present the [Pitch Deck](../recruitment/05-pitch-deck/)
-4. Send a [Proposal](../recruitment/07-proposal/)
+1. Use the [Qualification Framework](../../recruitment/03-qualification-framework/)
+2. Run a [Discovery Call](../../recruitment/04-discovery-call/)
+3. Present the [Pitch Deck](../../recruitment/05-pitch-deck/)
+4. Send a [Proposal](../../recruitment/07-proposal/)
 
 ### For Ongoing Management
 
-- Run quarterly [QBRs](../enablement/07-qbr-template/)
-- Track [Success Metrics](../enablement/06-success-metrics/)
-- Update [ICP Alignment](../recruitment/10-icp-tracker/)
+- Run quarterly [QBRs](../../enablement/07-qbr-template/)
+- Track [Success Metrics](../../enablement/06-success-metrics/)
+- Update [ICP Alignment](../../recruitment/10-icp-tracker/)
 
 ---
 
