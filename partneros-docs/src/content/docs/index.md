@@ -16,17 +16,29 @@ hero:
       icon: open-book
 ---
 
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
 ## Why PartnerOS?
 
-- **40 Ready-to-Use Templates** - Strategy, Recruitment, Enablement, Legal, Finance, Security, Operations, Executive, Analysis
-- **7 AI-Powered Agents** - Multi-agent system with specialized AI collaborators
-- **7 Automation Playbooks** - End-to-end workflows for the entire partner lifecycle
-- **Enterprise-Ready** - Three-tier partner framework (Bronze/Silver/Gold)
+<CardGrid stagger>
+	<Card title="40 Ready-to-Use Templates" icon="📋">
+		Strategy (8), Recruitment (10), Enablement (7), Legal (4), Finance (3), Security (2), Operations (4), Executive (1), Analysis (1)
+	</Card>
+	<Card title="7 AI-Powered Agents" icon="🤖">
+		Multi-agent system with 7 specialized AI agents that collaborate on partner work
+	</Card>
+	<Card title="7 Automation Playbooks" icon="⚡">
+		Cover the entire partner lifecycle: recruit, onboard, QBR, expand, exit, co-marketing, support
+	</Card>
+	<Card title="Enterprise-Ready" icon="🏢">
+		Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths
+	</Card>
+</CardGrid>
 
 ## Quick Start
 
 ```bash
-# Clone and run
+# Clone the repo
 git clone https://github.com/danieloleary/PartnerOS.git
 cd PartnerOS
 
@@ -45,6 +57,14 @@ python scripts/partner_agents/web.py
 | **Enablement** | Train and equip partners | 7 templates |
 | **Operations** | Day-to-day partner management | 4 templates |
 | **Analysis** | Measure and optimize | 1 template |
+
+## Enterprise Partner Framework
+
+| Tier | Revenue Target | Key Benefits |
+|------|----------------|--------------|
+| **Bronze** | Under $100K | Self-service portal, deal registration |
+| **Silver** | $100K-$500K | Certification, co-marketing, priority leads |
+| **Gold** | $500K+ | Executive sponsor, joint GTM, QBRs |
 
 ---
 
