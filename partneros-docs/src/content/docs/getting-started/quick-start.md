@@ -1,8 +1,8 @@
 ---
 title: Quick Start
 category: operational
-version: 1.0.0
-last_updated: 2026-02-20
+version: 1.1.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
@@ -11,193 +11,183 @@ tier:
 skill_level: beginner
 purpose: operational
 phase: onboarding
-time_required: 30 minutes
+time_required: 10 minutes
 difficulty: easy
 prerequisites:
 - None - good starting point
-description: Get up and running with PartnerOS in 30 minutes
+description: Get up and running with PartnerOS in 10 minutes - no install required
 outcomes:
-- PartnerOS configured for your company
-- Understanding of available templates
-- First partner recruitment started
+- Know how to find templates
+- Understand how to use them
+- Ready to start your partner program
 skills_gained:
-- Partner program setup
 - Template selection
-- Customization basics
----
----
-# PartnerOS Quick Start Guide
-
-*From zero to your first partner in 30 minutes*
-
+- Partner program setup basics
 ---
 
-## Step 1: Set Up (5 minutes)
+# PartnerOS Quick Start
 
-### Interactive Setup (Recommended)
+*From zero to your first partner in 10 minutes — no install required*
+
+---
+
+## Step 1: Browse Online (2 minutes)
+
+**No install needed.** Just explore at [danieloleary.github.io/PartnerOS](https://danieloleary.github.io/PartnerOS/)
+
+Browse the template categories:
+
+| What You Need | Start Here |
+|--------------|------------|
+| Don't know where to start | [Strategy Templates](../strategy/) |
+| Need to find partners | [Recruitment Templates](../recruitment/) |
+| Need to train partners | [Enablement Templates](../enablement/) |
+| Need contracts | [Legal Templates](../legal/) |
+| Need commission structure | [Finance Templates](../finance/) |
+
+---
+
+## Step 2: Pick a Template (5 minutes)
+
+Find the template that fits your need. Each template includes:
+
+- **What it is** - Purpose and use case
+- **How to use it** - Step-by-step instructions
+- **What to fill in** - Brackets like `[Your Company]` where you add your info
+- **Related templates** - Other templates that pair well
+
+### Most Popular Starting Points
+
+For new partner programs:
+
+1. [Ideal Partner Profile](../strategy/02-ideal-partner-profile/) — Who do you want as partners?
+2. [Partner Business Case](../strategy/01-partner-business-case/) — Justify the investment
+3. [Program Architecture](../strategy/06-program-architecture/) — Design your tiers and benefits
+
+---
+
+## Step 3: Copy & Customize (10 minutes)
+
+### Option A: Copy Directly (Easiest)
+
+1. Open any template
+2. Click "Copy" on the code block
+3. Paste into your document
+4. Replace `[bracketed text]` with your info
+
+### Option B: Use Variables (If You Clone the Repo)
 
 ```bash
-python scripts/onboard.py
-```
-
-This prompts for your company name, website, contact info, and brand color.
-
-### Manual Setup
-
-Create `.company-config/customize.yaml`:
-
-```yaml
-company:
-  name: "Your Company"
-  website: "https://yourcompany.com"
-contact:
-  name: "Partner Manager"
-  email: "partners@yourcompany.com"
-branding:
-  brand_color: "#3B82F6"
-```
-
----
-
-## Step 2: Find Templates (5 minutes)
-
-| Your Stage | Start Here |
-|-----------|-----------|
-| No partners yet | [Recruitment templates](../../recruitment/) |
-| Need process | [Enablement templates](../../enablement/) |
-| Design program | [Strategy templates](../../strategy/) |
-| Legal needed | [Legal templates](../../legal/) |
-
----
-
-## Step 3: Customize (10 minutes)
-
-### Use Variables
-
-```bash
-# See all variables
+# See all variables in a template
 python scripts/fill_template.py --list-vars
 
-# Fill a template
-python scripts/fill_template.py --template docs/recruitment/01-email-sequence.md
+# Fill a template with your company info
+python scripts/fill_template.py --template partneros-docs/src/content/docs/recruitment/01-email-sequence.md
 ```
 
-Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today_date}}`
+**Common variables:** `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today_date}}`
 
 ---
 
-## Step 4: Your First Partner (10 minutes)
+## Step 4: Optional Full Setup
 
-### Recommended Path
+Want more power? Clone the repo:
 
-1. [Ideal Partner Profile](../../strategy/02-ideal-partner-profile/)
-2. [Email Sequence](../../recruitment/01-email-sequence/)
-3. [Qualification Framework](../../recruitment/03-qualification-framework/)
-4. [Pitch Deck](../../recruitment/05-pitch-deck/)
-5. [Agreement Template](../../recruitment/08-agreement/)
+```bash
+# Clone the repo
+git clone https://github.com/danieloleary/PartnerOS.git
+cd PartnerOS
+
+# Set up your company info
+python scripts/onboard.py
+
+# Run the AI Partner Agent
+cd scripts/partner_agent
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY=sk-ant-...
+python agent.py --playbook recruit --partner "Acme Corp"
+```
 
 ---
 
 ## Choose Your Path
 
-=== ":material-account-cog: Full Setup (30 min)"
+=== ":globe_with_meridians: Browse Only"
 
-    **Best for:** Companies who want PartnerOS customized for their use.
+    **Best for:** Just need a few templates, no setup.
 
-    1. **Run the setup script:**
-        ```bash
-        python scripts/onboard.py
-        ```
+    1. Browse [danieloleary.github.io/PartnerOS](https://danieloleary.github.io/PartnerOS/)
+    2. Find templates that fit your needs
+    3. Copy and customize
 
-    2. **Follow the prompts:**
-        - Your company name
-        - Website
-        - Primary partner contact
-        - Brand color
+    **Time:** 5 minutes
 
-    3. **Start using templates:**
-        ```bash
-        # See available variables
-        python scripts/fill_template.py --list-vars
+=== ":computer: Full Setup"
 
-        # Fill a template
-        python scripts/fill_template.py --template docs/recruitment/01-email-sequence.md
-        ```
+    **Best for:** Want to use the AI agent and automation.
 
-    4. **Browse templates by category:**
-        - [Strategy](../../strategy/) - Program design
-        - [Recruitment](../../recruitment/) - Find partners
-        - [Enablement](../../enablement/) - Train partners
-        - [Legal](../../legal/) - Contracts
-        - [Finance](../../finance/) - Commissions
+    1. Clone the repo
+    2. Run `python scripts/onboard.py`
+    3. Use `python scripts/fill_template.py` to fill templates
+    4. Run AI agent with `python agent.py`
 
-    **Best for:** Teams who want to browse and use templates directly.
+    **Time:** 30 minutes
 
-    1. Browse the template sections:
-        - [Strategy](../../strategy/) - Define your partnership vision
-        - [Recruitment](../../recruitment/) - Find and sign partners
-        - [Enablement](../../enablement/) - Train and support partners
+=== ":robot: AI Partner Agent"
 
-    2. Find a template that fits your need
-
-    3. Copy the content and customize for your company
-
-=== ":material-robot: Partner Agent (AI)"
-
-    **Best for:** Teams who want AI-assisted playbook execution.
+    **Best for:** Want AI to help execute playbooks.
 
     ```bash
-    # Clone the repo
-    git clone https://github.com/danieloleary/PartnerOS.git
     cd PartnerOS/scripts/partner_agent
-
-    # Install dependencies
     pip install -r requirements.txt
-
-    # Set your API key
     export ANTHROPIC_API_KEY=sk-ant-...
-    # or
-    export OPENAI_API_KEY=sk-...
-
-    # Run interactively
-    python agent.py
+    python agent.py --playbook recruit --partner "Your Partner"
     ```
 
-=== ":material-web: Self-Host Docs"
+    **Time:** 15 minutes
 
-    **Best for:** Teams who want their own internal documentation site.
+---
 
-    ```bash
-    # Clone the repo
-    git clone https://github.com/danieloleary/PartnerOS.git
-    cd PartnerOS
+## What's Next?
 
-    # Install dependencies
-    cd partneros-docs
-    npm install
+### For New Partner Programs
 
-    # Preview locally
-    npm run dev
+1. [Define your Ideal Partner](../strategy/02-ideal-partner-profile/) — Who do you want?
+2. [Build the Business Case](../strategy/01-partner-business-case/) — Why is this worth it?
+3. [Design Your Program](../strategy/06-program-architecture/) — Tiers and benefits
 
-    # Deploy to GitHub Pages
-    # (automatic on push to main)
-    ```
+### For Signing a Specific Partner
+
+1. [Qualify them](../recruitment/03-qualification-framework/) — Are they a good fit?
+2. [Discovery Call](../recruitment/04-discovery-call/) — Learn about them
+3. [Send Proposal](../recruitment/07-proposal/) — Make it official
+
+### For Ongoing Management
+
+- [QBR Template](../enablement/07-qbr-template/) — Quarterly reviews
+- [Success Metrics](../enablement/06-success-metrics/) — Track performance
+
+---
+
+## Need Help?
+
+- **Questions?** Open an issue on [GitHub](https://github.com/danieloleary/PartnerOS/issues)
+- **Want a specific template?** Suggest it on GitHub
+- **Found an issue?** Fix it and PR!
 
 ---
 
 ## Template Structure
 
-Every template follows a consistent structure:
+Every template follows this pattern:
 
 ```markdown
 ---
 title: Template Name
 description: What this template is for
-keywords: [searchable, tags]
 ---
 
 ## How to Use This Template
-
 Step-by-step instructions...
 
 ---
@@ -211,70 +201,4 @@ Step-by-step instructions...
 [More content...]
 ```
 
-!!! tip "Placeholders"
-    Look for text in `[brackets]` - these are placeholders for you to fill in with your specific information.
-
----
-
-## Recommended Workflow
-
-### For New Partner Programs
-
-```mermaid
-graph LR
-    A[Business Case] --> B[Ideal Partner Profile]
-    B --> C[Program Architecture]
-    C --> D[Start Recruiting]
-```
-
-1. Start with [Partner Business Case](../../strategy/01-partner-business-case/)
-2. Define your [Ideal Partner Profile](../../strategy/02-ideal-partner-profile/)
-3. Design your [Program Architecture](../../strategy/06-program-architecture/)
-4. Begin [Recruitment](../../recruitment/)
-
-### For Signing a Specific Partner
-
-```mermaid
-graph LR
-    A[Qualify] --> B[Discovery Call]
-    B --> C[Pitch]
-    C --> D[Proposal]
-    D --> E[Agreement]
-```
-
-1. Use the [Qualification Framework](../../recruitment/03-qualification-framework/)
-2. Run a [Discovery Call](../../recruitment/04-discovery-call/)
-3. Present the [Pitch Deck](../../recruitment/05-pitch-deck/)
-4. Send a [Proposal](../../recruitment/07-proposal/)
-
-### For Ongoing Management
-
-- Run quarterly [QBRs](../../enablement/07-qbr-template/)
-- Track [Success Metrics](../../enablement/06-success-metrics/)
-- Update [ICP Alignment](../../recruitment/10-icp-tracker/)
-
----
-
-## Next Steps
-
-<div class="grid">
-
-<div class="card" markdown>
-
-### :material-book-open-variant: Learn the Lifecycle
-Understand the partner journey from strategy to enablement.
-
-[Partner Lifecycle →](lifecycle/)
-
-</div>
-
-<div class="card" markdown>
-
-### :material-pencil: Customize Templates
-Tips for making templates your own.
-
-[How to Use Templates →](how-to-use/)
-
-</div>
-
-</div>
+**Tip:** Look for text in `[brackets]` — that's where you add your specific info.
