@@ -102,39 +102,39 @@ async def home():
         </header>
 
         <!-- Team Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 mb-6">
-            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-                <div class="text-lg mb-1">👑</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-2 mb-6" role="list" aria-label="AI Partner Team">
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700" role="listitem" title="The Owner - Executive decisions">
+                <div class="text-lg mb-1" role="img" aria-label="Crown">👑</div>
                 <div class="font-semibold text-cyan-400 text-sm">The Owner</div>
                 <div class="text-xs text-slate-500">Executive</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-                <div class="text-lg mb-1">🏗️</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700" role="listitem" title="Partner Manager - Relationship management">
+                <div class="text-lg mb-1" role="img" aria-label="Construction">🏗️</div>
                 <div class="font-semibold text-cyan-400 text-sm">Partner Manager</div>
                 <div class="text-xs text-slate-500">Relationships</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-                <div class="text-lg mb-1">🎯</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700" role="listitem" title="Strategy - ICP & Tiers">
+                <div class="text-lg mb-1" role="img" aria-label="Target">🎯</div>
                 <div class="font-semibold text-cyan-400 text-sm">Strategy</div>
                 <div class="text-xs text-slate-500">ICP & Tiers</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-                <div class="text-lg mb-1">⚙️</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700" role="listitem" title="Operations - Deals & Communications">
+                <div class="text-lg mb-1" role="img" aria-label="Gears">⚙️</div>
                 <div class="font-semibold text-cyan-400 text-sm">Operations</div>
                 <div class="text-xs text-slate-500">Deals & Comms</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-                <div class="text-lg mb-1">✨</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700" role="listitem" title="Marketing - Campaigns & Content">
+                <div class="text-lg mb-1" role="img" aria-label="Sparkles">✨</div>
                 <div class="font-semibold text-cyan-400 text-sm">Marketing</div>
                 <div class="text-xs text-slate-500">Campaigns</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-                <div class="text-lg mb-1">🏆</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700" role="listitem" title="Leader - Board & ROI">
+                <div class="text-lg mb-1" role="img" aria-label="Trophy">🏆</div>
                 <div class="font-semibold text-cyan-400 text-sm">Leader</div>
                 <div class="text-xs text-slate-500">Board & ROI</div>
             </div>
-            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-                <div class="text-lg mb-1">🔧</div>
+            <div class="agent-card bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700" role="listitem" title="Technical - Integrations & API">
+                <div class="text-lg mb-1" role="img" aria-label="Wrench">🔧</div>
                 <div class="font-semibold text-cyan-400 text-sm">Technical</div>
                 <div class="text-xs text-slate-500">Integrations</div>
             </div>
@@ -144,27 +144,53 @@ async def home():
         <div class="mb-8">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-bold text-white">Partners</h2>
-                <button onclick="showAddPartnerForm()" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg text-sm transition">+ Add Partner</button>
+                <button onclick="showAddPartnerForm()" aria-haspopup="dialog" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg text-sm transition font-medium focus:ring-2 focus:ring-cyan-500 outline-none">
+                    + Add Partner
+                </button>
             </div>
             <div id="partnersList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="text-slate-400 text-sm">Loading partners...</div>
+                <div class="text-slate-400 text-sm italic">Loading partners...</div>
             </div>
         </div>
 
         <!-- Add Partner Modal -->
-        <div id="addPartnerModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div class="bg-slate-800 rounded-xl p-6 max-w-md w-full mx-4">
-                <h3 class="text-lg font-bold mb-4">Add New Partner</h3>
-                <input id="partnerName" type="text" placeholder="Company Name" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3">
-                <select id="partnerTier" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3">
-                    <option value="Bronze">Bronze</option>
-                    <option value="Silver">Silver</option>
-                    <option value="Gold">Gold</option>
-                </select>
-                <input id="partnerEmail" type="email" placeholder="Contact Email" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-4">
-                <div class="flex gap-3">
-                    <button onclick="addPartner()" class="flex-1 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg">Add Partner</button>
-                    <button onclick="hideAddPartnerForm()" class="px-4 py-2 bg-slate-600 hover:bg-slate-500 rounded-lg">Cancel</button>
+        <div id="addPartnerModal"
+             class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="modalTitle"
+             onclick="if(event.target===this)hideAddPartnerForm()">
+            <div class="bg-slate-800 rounded-xl p-6 max-w-md w-full mx-4 shadow-2xl border border-slate-700">
+                <h3 id="modalTitle" class="text-lg font-bold mb-4 text-white">Add New Partner</h3>
+
+                <div class="space-y-4">
+                    <div>
+                        <label for="partnerName" class="block text-sm font-medium text-slate-300 mb-1">Company Name</label>
+                        <input id="partnerName" type="text" placeholder="e.g. Acme Corp" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-cyan-500 outline-none transition text-white">
+                    </div>
+
+                    <div>
+                        <label for="partnerTier" class="block text-sm font-medium text-slate-300 mb-1">Partner Tier</label>
+                        <select id="partnerTier" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-cyan-500 outline-none transition text-white">
+                            <option value="Bronze">Bronze</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="partnerEmail" class="block text-sm font-medium text-slate-300 mb-1">Contact Email</label>
+                        <input id="partnerEmail" type="email" placeholder="contact@company.com" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-cyan-500 outline-none transition text-white">
+                    </div>
+                </div>
+
+                <div class="flex gap-3 mt-6">
+                    <button id="addPartnerBtn" onclick="addPartner()" class="flex-1 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg font-semibold transition flex items-center justify-center">
+                        Add Partner
+                    </button>
+                    <button onclick="hideAddPartnerForm()" class="px-4 py-2 bg-slate-600 hover:bg-slate-500 rounded-lg font-semibold transition">
+                        Cancel
+                    </button>
                 </div>
             </div>
         </div>
@@ -174,14 +200,14 @@ async def home():
             <!-- Messages -->
             <div id="messages" class="h-64 sm:h-96 overflow-y-auto p-4 sm:p-6 space-y-3 sm:space-y-4">
                 <div class="message-enter flex gap-3">
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">🤖</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">
-                        <p class="text-sm">Welcome to PartnerOS! 👋</p>
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0" role="img" aria-label="PartnerOS Bot">🤖</div>
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg shadow-sm">
+                        <p class="text-sm">Welcome to PartnerOS! <span role="img" aria-label="Waving hand">👋</span></p>
                         <p class="text-sm mt-2 text-slate-300">I'm connected to your AI partner team. What would you like to do?</p>
                         <div class="mt-3 flex flex-wrap gap-2">
-                            <button onclick="sendMessage('Onboard Acme Corp as Gold partner')" class="px-3 py-1 bg-cyan-600 hover:bg-cyan-500 rounded-full text-xs transition">Onboard partner</button>
-                            <button onclick="sendMessage('Register a deal for TechCorp, $50000')" class="px-3 py-1 bg-purple-600 hover:bg-purple-500 rounded-full text-xs transition">Register deal</button>
-                            <button onclick="sendMessage('Launch a welcome campaign')" class="px-3 py-1 bg-pink-600 hover:bg-pink-500 rounded-full text-xs transition">Launch campaign</button>
+                            <button onclick="sendMessage('Onboard Acme Corp as Gold partner')" class="px-3 py-1 bg-cyan-600 hover:bg-cyan-500 rounded-full text-xs transition font-medium focus:ring-2 focus:ring-cyan-500 outline-none shadow-sm">Onboard partner</button>
+                            <button onclick="sendMessage('Register a deal for TechCorp, $50000')" class="px-3 py-1 bg-purple-600 hover:bg-purple-500 rounded-full text-xs transition font-medium focus:ring-2 focus:ring-purple-500 outline-none shadow-sm">Register deal</button>
+                            <button onclick="sendMessage('Launch a welcome campaign')" class="px-3 py-1 bg-pink-600 hover:bg-pink-500 rounded-full text-xs transition font-medium focus:ring-2 focus:ring-pink-500 outline-none shadow-sm">Launch campaign</button>
                         </div>
                     </div>
                 </div>
@@ -189,17 +215,19 @@ async def home():
 
             <!-- Input -->
             <div class="border-t border-slate-700 p-4">
-                <div class="flex gap-3">
+                <div class="flex gap-3 items-center">
+                    <label for="messageInput" class="sr-only">Type your message</label>
                     <input 
                         id="messageInput"
                         type="text" 
                         placeholder="Type your message..." 
-                        class="flex-1 bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition"
+                        class="flex-1 bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition text-white"
                         onkeypress="if(event.key==='Enter')sendMessage()"
+                        aria-label="Message input"
                     >
                     <button 
                         onclick="sendMessage()"
-                        class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-semibold hover:opacity-90 transition"
+                        class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-semibold hover:opacity-90 transition shadow-lg flex-shrink-0"
                     >
                         Send
                     </button>
@@ -257,19 +285,24 @@ async def home():
             
             if (role === 'user') {
                 div.innerHTML = `
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">👤</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${text}</div>
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0" role="img" aria-label="User">👤</div>
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg shadow-sm">${text}</div>
                 `;
             } else {
-                const emoji = agent === 'ARCHITECT' ? '🏗️' : 
-                              agent === 'ENGINE' ? '⚙️' : 
-                              agent === 'SPARK' ? '✨' : 
-                              agent === 'CHAMPION' ? '🏆' : 
-                              agent === 'BUILDER' ? '🔧' : 
-                              agent === 'STRATEGIST' ? '🎯' : '👑';
+                const lowerAgent = (agent || '').toLowerCase();
+                const emoji = (lowerAgent.includes('architect') || lowerAgent.includes('manager')) ? '🏗️' :
+                              (lowerAgent.includes('engine') || lowerAgent.includes('operations')) ? '⚙️' :
+                              (lowerAgent.includes('spark') || lowerAgent.includes('marketing')) ? '✨' :
+                              (lowerAgent.includes('champion') || lowerAgent.includes('leader')) ? '🏆' :
+                              (lowerAgent.includes('builder') || lowerAgent.includes('technical')) ? '🔧' :
+                              (lowerAgent.includes('strategist') || lowerAgent.includes('strategy')) ? '🎯' : '👑';
+                const label = agent || 'Assistant';
                 div.innerHTML = `
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">${emoji}</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${text}</div>
+                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0" role="img" aria-label="${label}">${emoji}</div>
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg shadow-sm">
+                        ${agent ? `<div class="text-[10px] uppercase tracking-wider text-cyan-400 font-bold mb-1">${agent}</div>` : ''}
+                        ${text}
+                    </div>
                 `;
             }
             
@@ -283,9 +316,9 @@ async def home():
             div.id = 'typing';
             div.className = 'message-enter flex gap-3';
             div.innerHTML = `
-                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">🤖</div>
-                <div class="bg-slate-700/50 rounded-xl p-4">
-                    <div class="typing-indicator flex gap-1">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0" role="img" aria-label="System typing">🤖</div>
+                <div class="bg-slate-700/50 rounded-xl p-4 shadow-sm">
+                    <div class="typing-indicator flex gap-1" aria-label="Thinking...">
                         <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
                         <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
                         <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
@@ -339,30 +372,57 @@ async def home():
         }
         
         async function addPartner() {
-            const name = document.getElementById('partnerName').value;
+            const btn = document.getElementById('addPartnerBtn');
+            const name = document.getElementById('partnerName').value.trim();
             const tier = document.getElementById('partnerTier').value;
-            const email = document.getElementById('partnerEmail').value;
+            const email = document.getElementById('partnerEmail').value.trim();
             
             if (!name) {
                 alert('Please enter a company name');
                 return;
             }
             
+            // Show loading state
+            btn.disabled = true;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Adding...
+            `;
+
             try {
-                await fetch('/api/partners', {
+                const response = await fetch('/api/partners', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({name, tier, email})
                 });
+
+                if (!response.ok) throw new Error('Failed to add partner');
+
                 hideAddPartnerForm();
                 loadPartners();
+
+                // Clear form
                 document.getElementById('partnerName').value = '';
                 document.getElementById('partnerEmail').value = '';
             } catch (e) {
                 alert('Error adding partner: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
             }
         }
         
+        // Global keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                hideAddPartnerForm();
+            }
+        });
+
         // Load partners on page load
         loadPartners();
     </script>
