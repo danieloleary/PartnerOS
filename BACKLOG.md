@@ -248,12 +248,15 @@ python scripts/onboard.py
 | Responsive design | DONE |
 | Chat interface | DONE |
 | Quick action buttons | DONE |
-| LLM integration (fallback mode) | DONE |
-| OpenRouter API | DONE |
+| LLM integration (Minimax via OpenRouter) | DONE |
+| Hardcoded API key | DONE |
+| Fallback mode | DONE (on error) |
 
 **Run:** `python scripts/partner_agents/web.py`
 
 **Access:** http://localhost:8000
+
+**NOTE:** LLM output formatting needs improvement - responses are too verbose/ugly
 
 ### Tests
 
@@ -277,8 +280,9 @@ python scripts/onboard.py
 |----------|------|-------------|
 | P1 | **Partner Persistence** | Save partners to local JSON file |
 | P1 | **Partner Dashboard** | Show list of partners in UI |
+| P1 | **Partner Onboarding Flow** | Full onboarding workflow in UI |
+| P2 | **Fix LLM Output Formatting** | Make responses cleaner/compact |
 | P2 | **More Actions** | Add clickable actions (QBR, ICP, etc) |
-| P2 | **LLM Integration** | Connect real LLM (optional - fallback works well) |
 | P3 | **Landing Page** | Product-ready page for selling |
 
 ---
