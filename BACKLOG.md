@@ -278,11 +278,14 @@ python scripts/onboard.py
 
 | Priority | Item | Description |
 |----------|------|-------------|
-| P1 | **Partner Persistence** | Save partners to local JSON file |
-| P1 | **Partner Dashboard** | Show list of partners in UI |
+| P1 | **Real Agent Logic** | Connect agent skills (Engine, etc) to `partner_state.py` |
+| P1 | **Web UI Orchestration** | Use `Orchestrator` in `web.py` to dispatch agent skills |
 | P1 | **Partner Onboarding Flow** | Full onboarding workflow in UI |
+| P2 | **State Unification** | Merge CLI `state/` and Web `partners.json` storage |
+| P2 | **UI Markdown Rendering** | Cleanly render LLM responses in Web UI |
 | P2 | **Fix LLM Output Formatting** | Make responses cleaner/compact |
 | P2 | **More Actions** | Add clickable actions (QBR, ICP, etc) |
+| P3 | **Interactive Web Playbooks** | Port CLI playbook engine to Web UI |
 | P3 | **Landing Page** | Product-ready page for selling |
 
 ---

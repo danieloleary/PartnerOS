@@ -29,7 +29,7 @@ Building a world-class partner program is hard. Most companies:
 | **Multi-Agent AI Team** | 7 specialized AI agents that collaborate on partner work |
 | **AI-Powered Agent** | Local AI partner assistant runs offline with Ollama — no API keys required |
 | **Enterprise-Ready** | Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths |
-| **Tested & Validated** | Automated template validation and agent tests ensure reliability |
+| **Tested & Validated** | 144 automated tests ensure reliability across templates and agents |
 
 ---
 
@@ -37,15 +37,15 @@ Building a world-class partner program is hard. Most companies:
 
 PartnerOS includes a multi-agent system with 7 specialized AI agents that collaborate on partner work:
 
-| Agent | Role | Skills |
-|-------|------|--------|
-| **The Owner** | Executive - runs everything | 6 |
-| **Partner Manager** | Relationships - day-to-day | 6 |
-| **Strategy** | ICP & tiers | 5 |
-| **Operations** | Deals & commissions | 5 |
-| **Marketing** | Campaigns | 5 |
-| **Leader** | Board & ROI | 5 |
-| **Technical** | Integrations | 4 |
+| Agent | Role | Skills | Templates |
+|-------|------|--------|-----------|
+| **The Owner** | Executive | 6 | 6 |
+| **Partner Manager** | Relationships | 6 | 9 |
+| **Strategy** | ICP & Tiers | 5 | 6 |
+| **Operations** | Deals & Comms | 5 | 9 |
+| **Marketing** | Campaigns | 5 | 7 |
+| **Leader** | Board & ROI | 5 | 6 |
+| **Technical** | Integrations | 4 | 4 |
 
 **Total: 7 agents | 36 skills | 47 templates**
 
@@ -73,7 +73,7 @@ agents = {
 
 # Call skills
 result = agents['partner_manager'].call_skill('architect_onboard', {
-    'partner_id': 'Acme', 
+    'partner_id': 'Acme',
     'tier': 'Gold'
 })
 ```
@@ -228,13 +228,13 @@ PartnerOS/
 ## Testing
 
 ```bash
-# Run all 43 tests
+# Run all 144 tests
 pytest tests/ -v
 
 # Run by test file
-pytest tests/test_templates.py -v   # 24 template/structure tests
-pytest tests/test_agent.py -v       # 14 agent tests
-pytest tests/test_onboarding.py -v  # 5 onboarding tests
+pytest tests/test_templates.py -v   # 63 template/structure tests
+pytest tests/test_agents_comprehensive.py -v # 32 agent tests
+pytest tests/test_web_comprehensive.py -v    # 15 web interface tests
 ```
 
 ---

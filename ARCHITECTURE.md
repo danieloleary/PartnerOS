@@ -30,16 +30,16 @@ PartnerOS is designed to be dropped into any company and immediately provide a w
 
 ```
 PartnerOS/
-├── docs/                          # Templates (the core product) — 40 templates, 61 .md files
+├── docs/                          # Templates (the core product) — 47 templates, 72 .md files
 │   ├── strategy/                  # Strategy templates (8) + index
 │   ├── recruitment/               # Recruitment templates (10) + index
 │   ├── enablement/                # Enablement templates (7) + index
 │   ├── legal/                     # Legal templates (4) + index
 │   ├── finance/                   # Finance templates (3) + index
-│   ├── security/                  # Security templates (2)
-│   ├── operations/                # Operations templates (4)
-│   ├── executive/                 # Executive templates (1)
-│   ├── analysis/                  # Analysis templates (1)
+│   ├── security/                  # Security templates (2) + index
+│   ├── operations/                # Operations templates (4) + index
+│   ├── executive/                 # Executive templates (1) + index
+│   ├── analysis/                  # Analysis templates (1) + index
 │   ├── getting-started/           # Onboarding docs (4)
 │   ├── agent/                     # Agent docs (5) + index
 │   └── resources/                 # Reference docs (4)
@@ -190,10 +190,12 @@ python scripts/fill_template.py --template docs/recruitment/01-email-sequence.md
 
 ## Quality Assurance
 
-### Test Suite (43 tests)
-- Template structure and frontmatter validation (24 tests)
-- Agent unit tests — security, imports, superpowers (14 tests)
-- Onboarding flow tests (5 tests)
+### Test Suite (144 tests)
+- Template structure and frontmatter validation (63 tests)
+- Multi-agent skill and driver tests (32 tests)
+- Web interface and fallback tests (18 tests)
+- CLI agent unit tests (14 tests)
+- Onboarding and lifecycle tests (11 tests)
 - Playbook schema and references
 - Script compilation checks
 
