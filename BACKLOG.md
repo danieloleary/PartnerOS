@@ -151,7 +151,8 @@
 ## Phase 9: Multi-Agent Architecture Fixes (`partner_agents/`) 🔧
 
 *Goal: Resolve 30 verified issues in the new multi-agent system before merge*
-*Source: Full code review of `scripts/partner_agents/` — February 21, 2026*
+*Source: Full code review of `scripts/partner_agents/` on `origin/main` — February 21, 2026*
+*Note: These files exist on `main` branch only (not on feature branches). Fixes should be applied against `main`.*
 
 ### 9A. Critical (Must Fix) 🚨
 

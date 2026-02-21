@@ -130,7 +130,9 @@ The custom search separator in `mkdocs.yml` is aggressive and may over-split som
 
 A comprehensive code review of the new `scripts/partner_agents/` (plural) multi-agent system identified **30 verified issues** across 8 source files and 7 driver files. The system introduces a team of 7 specialized agents coordinated by an orchestrator, with a CLI chat interface, messaging bus, telemetry, and configuration.
 
-All 30 issues were verified against the actual codebase.
+**Location:** These files exist on `origin/main` only (commits `5730818` through `0ae1d5f`). They are not present on feature branches. The original `partner_agent/` (singular, monolithic `agent.py`) remains the only agent on feature branches and has solid security controls.
+
+All 30 issues were verified against the actual codebase on `origin/main`.
 
 ### Critical Findings (7 issues)
 
@@ -182,6 +184,17 @@ All 30 issues were verified against the actual codebase.
 3. **F1 metaphor**: "Driver", "pit stop", "chassis", "green flag" terminology throughout reduces code clarity for new contributors
 
 **Action:** See Phase 9 in BACKLOG.md for the full remediation plan (30 items across 4 priority tiers).
+
+### Existing `partner_agent/` (Singular) Status — GOOD
+
+The original monolithic `agent.py` (~985 lines) on feature branches was also reviewed and found to be in solid shape:
+
+- **Security:** `_validate_path()` and `_sanitize_partner_name()` are properly implemented and used at all file path boundaries
+- **State management:** Single approach (per-partner `state/<slug>/metadata.json`), saves all fields correctly
+- **No singletons:** Agent instantiated in `main()`, no import-time side effects
+- **Minor issues found (2):**
+  1. Naive `datetime.now()` without timezone in 3 locations (lines 410, 521, 531) — should use `datetime.now(timezone.utc)`
+  2. `sys.path.insert()` in nested `partner_agent/__init__.py` — fragile but functional
 
 ---
 
