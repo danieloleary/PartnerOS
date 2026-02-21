@@ -2,7 +2,14 @@
 
 *Generated: February 19, 2026*
 *Updated: February 21, 2026*
-*Based on: ARCHITECTURE.md + Full Audit (Feb 21)*
+
+---
+
+## Tracking Issues
+
+- **GitHub Issues:** https://github.com/danieloleary/PartnerOS/issues
+- **Labels:** `p1`, `p2`, `p3` for priority, `enhancement`, `bug`, `docs`
+- **Use issues to track detailed tasks** - link PRs to issues
 
 ---
 
