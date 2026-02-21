@@ -18,6 +18,37 @@
 
 ---
 
+## Current State (v1.5 - February 21, 2026)
+
+**Platform:** Starlight/Astro (no more MkDocs!)
+**Live Site:** https://danieloleary.github.io/PartnerOS/
+
+### What's Built
+- 44 templates across 9 categories
+- 9 section index pages with Starlight Cards
+- 7 automation playbooks
+- 130 automated tests (all passing)
+- AI Partner Agent with memory, recommendations, email generation
+- Web UI with chat interface
+- 3 CI/CD workflows
+
+### Test Suite
+| Suite | Count | Status |
+|-------|-------|--------|
+| test_templates.py | 35 | ✅ |
+| test_agent.py | 14 | ✅ |
+| test_onboarding.py | 6 | ✅ |
+| test_agents_comprehensive.py | 40 | ✅ |
+| test_web_comprehensive.py | 15 | ✅ |
+| test_starlight.py | 14 | ✅ |
+| test_links.py | 9 | ✅ |
+| test_content.py | 8 | ✅ |
+| test_build.py | 7 | ✅ |
+| test_deployed_links.py | 6 | ✅ |
+| **Total** | **130** | ✅ |
+
+---
+
 ## Phase 1: Foundation (Drop-Ready) ⚡
 
 *Goal: A company can download and get started in 30 minutes*
