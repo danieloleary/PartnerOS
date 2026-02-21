@@ -55,6 +55,27 @@ PartnerOS/
 │   │   ├── partner_agent/         # Python package wrapper
 │   │   │   └── __init__.py        # Re-exports PartnerAgent from agent.py
 │   │   └── state/                 # Partner session state (gitignored)
+│   ├── partner_agents/            # Multi-agent system (on main branch) — UNDER REVIEW
+│   │   ├── __init__.py            # Package exports
+│   │   ├── base.py                # BaseAgent ABC, AgentSkill, HandoffRequest
+│   │   ├── orchestrator.py        # Agent coordination and handoffs
+│   │   ├── state.py               # Telemetry and per-partner state persistence
+│   │   ├── partner_state.py       # CRUD partner management (separate state system)
+│   │   ├── messages.py            # TeamRadio pub/sub messaging bus
+│   │   ├── chat.py                # Rich CLI chat interface
+│   │   ├── config.py              # TeamConfig dataclass + YAML load/save
+│   │   ├── web.py                 # Web UI
+│   │   ├── partners.json          # ⚠️ Committed partner data (should be gitignored)
+│   │   ├── drivers/               # 7 specialized agent implementations
+│   │   │   ├── __init__.py
+│   │   │   ├── dan.py             # Lead coordinator agent
+│   │   │   ├── architect.py       # Architecture agent
+│   │   │   ├── strategist.py      # Strategy agent
+│   │   │   ├── engine.py          # Engine agent
+│   │   │   ├── spark.py           # Spark agent
+│   │   │   ├── champion.py        # Champion agent
+│   │   │   └── builder.py         # Builder agent
+│   │   └── demos/                 # Demo scenarios
 │   ├── onboard.py                 # Company onboarding setup
 │   ├── fill_template.py           # Replace {{variables}} in templates
 │   ├── generate_template.py       # CLI template generator
@@ -342,6 +363,43 @@ All agent output goes through `_print()`, `_print_error()`, `_print_success()`, 
 
 ---
 
+## Architecture: Multi-Agent System (`partner_agents/`) — UNDER REVIEW
+
+> **Status:** This system exists on `origin/main` only. A code review identified **30 issues** (7 critical, 9 high, 14 medium). See `BACKLOG.md` Phase 9 and `IMPROVEMENT_PLAN.md` for the full list. **Do not extend this system until the critical issues are resolved.**
+
+### Overview
+
+The `scripts/partner_agents/` (plural) directory is a newer multi-agent system with 7 specialized agents coordinated by an orchestrator, alongside the original monolithic `partner_agent/` (singular). The two systems are independent with no shared code or migration path documented.
+
+### Key Files
+
+| File | Purpose |
+|---|---|
+| `base.py` | `BaseAgent` ABC, `AgentSkill`, `HandoffRequest` dataclasses |
+| `orchestrator.py` | Routes tasks between agents, manages handoffs |
+| `state.py` | `Telemetry` class, per-partner state persistence (one JSON per partner) |
+| `partner_state.py` | Separate CRUD partner management (single `partners.json`) |
+| `messages.py` | `TeamRadio` pub/sub messaging bus with `TeamMessage` |
+| `chat.py` | Rich CLI interface with message routing |
+| `config.py` | `TeamConfig` dataclass with YAML serialization |
+| `drivers/` | 7 agent implementations: Dan (lead), Architect, Strategist, Engine, Spark, Champion, Builder |
+
+### Critical Issues (Must Address)
+
+1. **Path traversal vulnerability** in `state.py` — `partner_id` used directly in file paths without sanitization (bypasses `_validate_path` controls from the original agent)
+2. **Partner data committed** — `partners.json` contains real partner data and should be gitignored
+3. **Two competing state systems** — `state.py` and `partner_state.py` are incompatible approaches to the same problem
+4. **No security controls** — None of the path traversal or input sanitization from `partner_agent/agent.py` is present
+5. **No test coverage** — Zero of the 43 existing tests cover this system
+6. **Hardcoded data** — `show_partners()` displays static fictional partners; `handle_financial()` ignores user input
+7. **Emergency handler no-op** — `full_course_yellow()` silently does nothing
+
+### Security Warning
+
+The original `partner_agent` system has `_validate_path()` and `_sanitize_partner_name()`. The new `partner_agents` system has **none of these controls**. This is a security regression. Do not merge changes that further expose the path traversal vulnerability in `state.py`.
+
+---
+
 ## CI/CD Workflows
 
 | Workflow | Trigger | What it does |
@@ -510,6 +568,8 @@ QBR frequency by tier: Gold → quarterly, Silver → semi-annually, Bronze → 
 
 - Do not commit `.env` files — use `.env.example` as the template
 - Do not commit `scripts/partner_agent/state/` — it contains partner data and is gitignored
+- Do not commit `scripts/partner_agents/partners.json` — it contains partner data and should be gitignored
+- Do not extend `scripts/partner_agents/` until Phase 9 critical issues are resolved (see BACKLOG.md)
 - Do not commit to `main` directly — use pull requests
 - Do not skip YAML frontmatter in `docs/` Markdown files — CI enforces it
 - Do not weaken `_validate_path` or `_sanitize_partner_name` — these prevent path traversal attacks
