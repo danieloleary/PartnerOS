@@ -30,10 +30,7 @@ from partner_agents import partner_state
 
 # Get API key from environment or use default for testing
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
-OPENROUTER_API_KEY = os.environ.get(
-    "OPENROUTER_API_KEY",
-    "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",
-)
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 
 app = FastAPI(title="PartnerOS")
 
@@ -217,8 +214,8 @@ async def home():
     </div>
 
     <script>
-        // Hardcoded API key for testing
-        let apiKey = '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';
+        // API key should be provided by the user at runtime when needed
+        let apiKey = '';
 
         async function sendMessage(text) {
             const input = document.getElementById('messageInput');
@@ -382,7 +379,7 @@ async def chat(request: Request):
     if not api_key or len(api_key) < 10:
         return JSONResponse(
             {
-                "response": "⚠️ No API key. Try pressing Enter to use the default, or get one at https://openrouter.ai/keys",
+                "response": "⚠️ No API key provided. Add one from https://openrouter.ai/keys to use live LLM responses.",
                 "agent": "system",
             }
         )
