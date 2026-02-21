@@ -263,9 +263,29 @@ python scripts/onboard.py
 | test_agent.py (14 tests) | PASSING |
 | test_onboarding.py (5 tests) | PASSING |
 | test_agents.py (13 tests) | PASSING |
+| test_agents_comprehensive.py (32 tests) | PASSING |
 | test_web.py (3 tests) | PASSING |
+| test_web_comprehensive.py (15 tests) | PASSING |
 
-**Total: 97 tests passing**
+**Total: 144 tests passing**
+
+---
+
+## Next Steps (Priority Order)
+
+| Priority | Item | Description |
+|----------|------|-------------|
+| P1 | **Partner Persistence** | Save partners to local JSON file |
+| P1 | **Partner Dashboard** | Show list of partners in UI |
+| P2 | **More Actions** | Add clickable actions (QBR, ICP, etc) |
+| P2 | **LLM Integration** | Connect real LLM (optional - fallback works well) |
+| P3 | **Landing Page** | Product-ready page for selling |
+
+---
+
+## Current Mode: Fallback
+
+The system currently runs in **fallback mode** - responses are generated locally rather than via LLM. This is more reliable. LLM can be enabled later with a valid API key.
 
 ---
 
