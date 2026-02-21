@@ -257,8 +257,8 @@ Score each dimension 0–20 based on the criteria below.
 
 ## Related Templates
 
-- [Monthly Partner Report](../operations/03-monthly-report.md/)
-- [QBR Template](../enablement/07-qbr-template.md/)
-- [Partner Success Metrics](../enablement/06-success-metrics.md/)
-- [Board Deck — Partner Program](../executive/01-board-deck.md/)
+- [Monthly Partner Report](../operations/03-monthly-report/)
+- [QBR Template](../enablement/07-qbr-template/)
+- [Partner Success Metrics](../enablement/06-success-metrics/)
+- [Board Deck — Partner Program](../executive/01-board-deck/)
 ---

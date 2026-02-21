@@ -89,7 +89,7 @@ Track these KPIs for each partner:
 | **Revenue** | Partner-influenced closed revenue | Varies by tier |
 | **Engagement Score** | Portal logins, training completion, etc. | > 70% |
 
-[Success Metrics Template →](06-success-metrics.md/)
+[Success Metrics Template →](06-success-metrics/)
 
 ---
 
@@ -102,7 +102,7 @@ Track these KPIs for each partner:
 | Silver | Semi-annually | 45 min |
 | Registered | Annually | 30 min |
 
-[QBR Template →](07-qbr-template.md/)
+[QBR Template →](07-qbr-template/)
 
 !!! tip "QBR Best Practice"
     Send the QBR document to your partner **one week before** the meeting so they can review data and come prepared.

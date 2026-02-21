@@ -28,9 +28,9 @@ Executive templates help you communicate partner program performance and strateg
 
 | Situation | Template |
 |-----------|----------|
-| Quarterly board update | [Board Deck](01-board-deck.md/) |
-| Executive briefing | [Board Deck](01-board-deck.md/) |
-| Budget approval | [Board Deck](01-board-deck.md/) |
+| Quarterly board update | [Board Deck](01-board-deck/) |
+| Executive briefing | [Board Deck](01-board-deck/) |
+| Budget approval | [Board Deck](01-board-deck/) |
 
 !!! tip "Pro Tip"
     Tailor your board deck to highlight revenue impact and strategic alignment. Executives care about numbers and strategy.

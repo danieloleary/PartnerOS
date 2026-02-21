@@ -248,6 +248,6 @@ Use this template to analyze competitive positioning and develop compelling diff
 ---
 
 ## Related Templates
-- [Partner Business Case](01-partner-business-case.md/)
-- [Partner Strategy Plan](05-strategy-plan.md/)
+- [Partner Business Case](01-partner-business-case/)
+- [Partner Strategy Plan](05-strategy-plan/)
 ---

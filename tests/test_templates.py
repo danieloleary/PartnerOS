@@ -921,6 +921,134 @@ def test_no_broken_internal_links():
     assert len(failures) == 0, f"Broken links:\n" + "\n".join(failures)
 
 
+def test_no_md_extension_in_links():
+    """Verify internal links don't use .md extension (Starlight uses folder-style)."""
+    import re
+
+    docs_dirs = [
+        REPO_ROOT / "partneros-docs" / "src" / "content" / "docs",
+    ]
+
+    failures = []
+
+    for docs_dir in docs_dirs:
+        if not docs_dir.exists():
+            continue
+
+        for f in docs_dir.rglob("*.md"):
+            content = f.read_text()
+            # Find links with .md in them (but not images)
+            links = re.findall(r"\[([^\]]+)\]\(([^)]+)\)", content)
+
+            for text, link in links:
+                # Skip external links and images
+                if any(
+                    link.startswith(p) for p in ("http:", "https:", "mailto:", "/", "#")
+                ):
+                    continue
+                if link.rstrip("/").endswith((".png", ".jpg", ".jpeg", ".svg", ".gif")):
+                    continue
+
+                # Check for .md in link path
+                if ".md" in link and not link.startswith("http"):
+                    failures.append(
+                        f"{f.relative_to(docs_dir)}: link contains .md: {link}"
+                    )
+
+    assert len(failures) == 0, (
+        f"Links with .md extension (use folder-style instead):\n" + "\n".join(failures)
+    )
+
+
+def test_no_double_parentheses():
+    """Verify no malformed links with double parentheses.
+
+    Excludes:
+    - Mermaid diagrams (valid syntax: E --> F((Signed)))
+    - Code examples in skill docs
+    """
+    docs_dirs = [
+        REPO_ROOT / "partneros-docs" / "src" / "content" / "docs",
+    ]
+
+    failures = []
+
+    for docs_dir in docs_dirs:
+        if not docs_dir.exists():
+            continue
+
+        for f in docs_dir.rglob("*.md"):
+            content = f.read_text()
+
+            # Skip Mermaid code blocks
+            in_mermaid = False
+            lines = content.split("\n")
+            for i, line in enumerate(lines, 1):
+                # Track mermaid blocks
+                if (
+                    line.strip().startswith("```mermaid")
+                    or line.strip() == "```mermaid"
+                ):
+                    in_mermaid = not in_mermaid
+                    continue
+                if in_mermaid:
+                    continue
+
+                # Skip code blocks entirely
+                if line.strip().startswith("```"):
+                    continue
+
+                # Look for (( but not in valid contexts
+                if "((" in line:
+                    # Exclude Mermaid shapes (E --> F((Signed)))
+                    if "-->" in line and "((" in line:
+                        continue
+                    # Exclude skill documentation
+                    if "skills/" in str(f):
+                        continue
+                    failures.append(
+                        f"{f.relative_to(docs_dir)}:{i}: {line.strip()[:80]}"
+                    )
+
+    assert len(failures) == 0, f"Double parentheses found:\n" + "\n".join(failures)
+
+
+def test_no_known_bad_references():
+    """Verify no known bad reference paths exist.
+
+    Excludes skill documentation that references these as examples.
+    """
+    docs_dirs = [
+        REPO_ROOT / "partneros-docs" / "src" / "content" / "docs",
+        REPO_ROOT / "docs",
+    ]
+
+    known_bad = [
+        "I_Partner_Strategy_Templates",
+        "I_Partner_Enablement_Templates",
+    ]
+
+    failures = []
+
+    for docs_dir in docs_dirs:
+        if not docs_dir.exists():
+            continue
+
+        for f in docs_dir.rglob("*.md"):
+            # Skip skill documentation
+            if "skills/" in str(f):
+                continue
+
+            content = f.read_text()
+            for bad_ref in known_bad:
+                if bad_ref in content:
+                    failures.append(
+                        f"{f.relative_to(docs_dir)}: contains bad reference: {bad_ref}"
+                    )
+
+    assert len(failures) == 0, f"Known bad references found:\n" + "\n".join(failures)
+
+
 def test_images_exist():
     """Verify referenced images exist in assets directory."""
     import re

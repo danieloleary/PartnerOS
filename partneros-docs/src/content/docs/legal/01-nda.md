@@ -159,7 +159,7 @@ Date: _______________________
 
 ## Related Templates
 
-- [Partnership Agreement](../recruitment/08-agreement.md/)
-- [Proposal Template](../recruitment/07-proposal.md/)
-- [Discovery Call Script](../recruitment/04-discovery-call.md/)
+- [Partnership Agreement](../recruitment/08-agreement/)
+- [Proposal Template](../recruitment/07-proposal/)
+- [Discovery Call Script](../recruitment/04-discovery-call/)
 ---

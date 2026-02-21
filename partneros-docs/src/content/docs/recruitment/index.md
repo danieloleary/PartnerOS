@@ -97,8 +97,8 @@ graph LR
 
 Before investing time in a prospect, verify:
 
-- [ ]( Matches [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md/))
-- [ ]( Passes [3C/4C Evaluation](../strategy/03-evaluation-framework.md/))
+- [x] Matches [Ideal Partner Profile](../strategy/02-ideal-partner-profile/)
+- [x] Passes [3C/4C Evaluation](../strategy/03-evaluation-framework/)
 - [ ] Has executive sponsor
 - [ ] Willing to commit resources
 - [ ] Strategic fit confirmed

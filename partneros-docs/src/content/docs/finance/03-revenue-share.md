@@ -226,8 +226,8 @@ are grounds for renegotiation or termination.
 
 ## Related Templates
 
-- [Partner Commission Structure](01-commission.md/)
-- [Partner Rebate Program](02-rebate.md/)
-- [Partnership Agreement](../recruitment/08-agreement.md/)
-- [QBR Template](../enablement/07-qbr-template.md/)
+- [Partner Commission Structure](01-commission/)
+- [Partner Rebate Program](02-rebate/)
+- [Partnership Agreement](../recruitment/08-agreement/)
+- [QBR Template](../enablement/07-qbr-template/)
 ---

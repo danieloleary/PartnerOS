@@ -50,10 +50,10 @@ graph LR
 
 | Activity | Template |
 |----------|----------|
-| Protect opportunities | [Deal Registration Policy](01-deal-registration.md/) |
-| Weekly sync | [Weekly Standup](02-weekly-standup.md/) |
-| Monthly review | [Monthly Report](03-monthly-report.md/) |
-| PRM setup | [Partner Portal Guide](04-portal-guide.md/) |
+| Protect opportunities | [Deal Registration Policy](01-deal-registration/) |
+| Weekly sync | [Weekly Standup](02-weekly-standup/) |
+| Monthly review | [Monthly Report](03-monthly-report/) |
+| PRM setup | [Partner Portal Guide](04-portal-guide/) |
 
 !!! tip "Pro Tip"
     Run weekly standups consistently to catch issues early and keep partners engaged.

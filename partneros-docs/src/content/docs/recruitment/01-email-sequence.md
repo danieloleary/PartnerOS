@@ -276,6 +276,6 @@ Best regards,
 ---
 
 ## Related Templates
-- [Outreach Engagement Sequence](02-outreach-engagement.md/)
-- [Discovery Call Script](04-discovery-call.md/)
+- [Outreach Engagement Sequence](02-outreach-engagement/)
+- [Discovery Call Script](04-discovery-call/)
 ---

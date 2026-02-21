@@ -44,9 +44,9 @@ graph LR
 
 | Model | Template | Best For |
 |-------|----------|----------|
-| **Commissions** | [Commission Structure](01-commission.md/) | Standard partner-sourced deals |
-| **Rebates** | [Rebate Program](02-rebate.md/) | Volume incentives for high performers |
-| **Revenue Share** | [Revenue Sharing Model](03-revenue-share.md/) | Joint ventures and OEM relationships |
+| **Commissions** | [Commission Structure](01-commission/) | Standard partner-sourced deals |
+| **Rebates** | [Rebate Program](02-rebate/) | Volume incentives for high performers |
+| **Revenue Share** | [Revenue Sharing Model](03-revenue-share/) | Joint ventures and OEM relationships |
 
 ---
 

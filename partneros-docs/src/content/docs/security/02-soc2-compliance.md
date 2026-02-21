@@ -228,8 +228,8 @@ Include in notification:
 
 ## Related Templates
 
-- [Security Questionnaire](01-security-questionnaire.md/)
-- [Data Processing Addendum](../legal/03-dpa.md/)
-- [Partnership Agreement](../recruitment/08-agreement.md/)
-- [Technical Integration Guide](../enablement/05-technical-integration.md/)
+- [Security Questionnaire](01-security-questionnaire/)
+- [Data Processing Addendum](../legal/03-dpa/)
+- [Partnership Agreement](../recruitment/08-agreement/)
+- [Technical Integration Guide](../enablement/05-technical-integration/)
 ---

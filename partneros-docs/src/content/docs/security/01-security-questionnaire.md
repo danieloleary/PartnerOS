@@ -258,7 +258,7 @@ Use this questionnaire to assess the security posture of partners before grantin
 
 ## Related Templates
 
-- [Mutual NDA](../legal/01-nda.md/)
-- [Data Processing Agreement](../legal/03-dpa.md/)
-- [SOC2 Compliance Guide](02-soc2-compliance.md/)
+- [Mutual NDA](../legal/01-nda/)
+- [Data Processing Agreement](../legal/03-dpa/)
+- [SOC2 Compliance Guide](02-soc2-compliance/)
 ---

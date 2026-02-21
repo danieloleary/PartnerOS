@@ -33,9 +33,9 @@ Security templates help you demonstrate compliance and protect sensitive data wh
 
 | Situation | Start With |
 |-----------|------------|
-| Onboarding new partners | [Security Questionnaire](01-security-questionnaire.md/) |
-| Demonstrating compliance | [SOC 2 Compliance Guide](02-soc2-compliance.md/) |
-| Due diligence review | [Security Questionnaire](01-security-questionnaire.md/) |
+| Onboarding new partners | [Security Questionnaire](01-security-questionnaire/) |
+| Demonstrating compliance | [SOC 2 Compliance Guide](02-soc2-compliance/) |
+| Due diligence review | [Security Questionnaire](01-security-questionnaire/) |
 
 !!! tip "Pro Tip"
     Complete security questionnaires early in the partner onboarding process to avoid delays in going live.
