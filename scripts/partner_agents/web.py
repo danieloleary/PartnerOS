@@ -202,7 +202,6 @@ async def home():
                 localStorage.setItem('partneros_api_key', apiKey);
             }
         }
-        }
 
         async function sendMessage(text) {
             const input = document.getElementById('messageInput');
