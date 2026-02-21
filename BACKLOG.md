@@ -111,13 +111,13 @@
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 6.1 | **Create `docs/security/index.md`** | Security section landing page with template grid | 30 min | DONE |
-| 6.2 | **Create `docs/operations/index.md`** | Operations section landing page with template grid | 30 min | DONE |
-| 6.3 | **Create `docs/executive/index.md`** | Executive section landing page | 20 min | DONE |
-| 6.4 | **Create `docs/analysis/index.md`** | Analysis section landing page | 20 min | DONE |
-| 6.5 | **Add orphaned files to nav** | Add `first-partner-path.md`, `licensing.md`, `partner-os-one-pager.md` to `mkdocs.yml` | 15 min | DONE |
-| 6.6 | **Add nav completeness test** | Verify all docs/ files appear in mkdocs.yml nav | 30 min | DONE |
-| 6.7 | **Add index coverage test** | Verify each template dir has index.md | 20 min | DONE |
+| 6.1 | **Create `partneros-docs/.../security/index.mdx`** | Security section landing page with template grid | 30 min | DONE |
+| 6.2 | **Create `partneros-docs/.../operations/index.mdx`** | Operations section landing page with template grid | 30 min | DONE |
+| 6.3 | **Create `partneros-docs/.../executive/index.mdx`** | Executive section landing page | 20 min | DONE |
+| 6.4 | **Create `partneros-docs/.../analysis/index.mdx`** | Analysis section landing page | 20 min | DONE |
+| 6.5 | **Starlight auto-discovery** | Starlight auto-generates nav via `autogenerate` | 15 min | DONE |
+| 6.6 | **Add nav completeness test** | Verify Starlight builds successfully | 30 min | DONE |
+| 6.7 | **Add index coverage test** | Verify each template dir has index.mdx | 20 min | DONE |
 
 ---
 
@@ -128,7 +128,7 @@
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
 | 7.1 | **Cross-reference test** | Verify internal markdown links between templates resolve | 1 hr | DONE |
-| 7.2 | **MkDocs build test** | Run `mkdocs build --strict` in CI to catch broken pages | 30 min | DONE |
+| 7.2 | **Starlight build test** | Run `npm run build` to verify site compiles | 30 min | DONE |
 | 7.3 | **Playbook dry-run test** | Validate playbook step execution without LLM calls | 1 hr | DONE |
 | 7.4 | **Template polish** | Fix frontmatter in 44 templates (prerequisites, skills_gained, descriptions) | 2 hrs | DONE |
 
@@ -374,7 +374,20 @@ The system currently runs in **fallback mode** - responses are generated locally
 
 ## Version 1.6: Future 🚀
 
-*Goal: Web UI enhancements and deeper integration*
+*Goal: Web UI enhancements and Starlight-powered documentation*
+
+### Starlight Enhancement Ideas
+
+Based on Starlight's built-in components to improve UX:
+
+| # | Feature | Description | Effort |
+|---|---------|-------------|--------|
+| S1 | **`<Steps>` Component** | Use Starlight's Steps for visual task progression in onboarding | 2 hrs |
+| S2 | **`<Badge>` for T-Shirt Sizing** | Add time/difficulty badges to tasks (90 min, Deep Work, Quick Win) | 1 hr |
+| S3 | **Interactive Checklists** | Client-side LocalStorage to save checkbox progress | 4 hrs |
+| S4 | **`<CardGrid>` Resource Discovery** | Replace inline links with visual card grids for templates | 2 hr |
+| S5 | **Enhanced Code Blocks** | Use `title` attribute for AI agent commands | 1 hr |
+| S6 | **First Partner Path MDX** | Draft full Week 1 as MDX with all Starlight components | 3 hrs |
 
 ### Planned Items
 
@@ -389,6 +402,7 @@ The system currently runs in **fallback mode** - responses are generated locally
 | P2 | More Actions | Add clickable actions (QBR, ICP, etc) |
 | P3 | Interactive Web Playbooks | Port CLI playbook engine to Web UI |
 | P3 | Landing Page | Product-ready page for selling |
+| P3 | Starlight S1-S6 | Enhance docs with Starlight components |
 
 ---
 

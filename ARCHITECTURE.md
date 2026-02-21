@@ -62,8 +62,10 @@ PartnerOS/
 │   └── package_zip.py             # Package as distributable .zip
 ├── .company-config/               # Company customization (gitignored)
 │   └── customize.yaml             # Their company name, logo, colors
-├── tests/                         # Quality gates (43 tests)
-├── mkdocs.yml                     # Documentation site config
+├── tests/                         # Quality gates (130 tests)
+├── partneros-docs/                  # Starlight/Astro docs site
+│   ├── src/content/docs/           # Documentation source
+│   └── astro.config.mjs           # Starlight configuration
 └── README.md                      # Entry point
 ```
 

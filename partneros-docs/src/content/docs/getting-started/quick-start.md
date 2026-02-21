@@ -172,14 +172,15 @@ Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today
     git clone https://github.com/danieloleary/PartnerOS.git
     cd PartnerOS
 
-    # Install MkDocs
-    pip install mkdocs-material
+    # Install dependencies
+    cd partneros-docs
+    npm install
 
     # Preview locally
-    mkdocs serve
+    npm run dev
 
     # Deploy to GitHub Pages
-    mkdocs gh-deploy
+    # (automatic on push to main)
     ```
 
 ---

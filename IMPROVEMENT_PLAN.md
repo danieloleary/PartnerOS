@@ -8,14 +8,14 @@
 
 ---
 
-## Current State (February 20, 2026)
+## Current State (February 21, 2026)
 
 **Phase 1-6 Complete:**
 
 - 44 templates across 9 categories (strategy 8, recruitment 10, enablement 7, legal 4, finance 3, security 2, operations 4, executive 1, analysis 1)
 - 9 section index pages (strategy, recruitment, enablement, legal, finance, security, operations, executive, analysis)
 - 7 automation playbooks (recruit, onboard, qbr, expand, exit, co-marketing, support-escalation)
-- 124 automated tests (124 passing, 3 skipped)
+- 130 automated tests (130 passing, 3 skipped)
 - Company onboarding (`scripts/onboard.py`)
 - Template variables (`scripts/fill_template.py`)
 - Demo mode (`scripts/demo_mode.py`)
@@ -23,7 +23,7 @@
 - ZIP packaging (`scripts/package_zip.py`)
 - Report generation (`scripts/generate_report.py`)
 - Partner memory, tier guidance, template recommendations, email generation in agent
-- MkDocs Material site with custom CSS, dark mode, responsive design
+- **Starlight/Astro site** with custom CSS, dark mode, responsive design
 - 3 CI/CD workflows (deploy-docs, markdown-lint, run-partner-agent)
 
 ---
@@ -40,17 +40,17 @@ No critical issues found. Site is production-ready, all 43 tests pass, CI workfl
 
 #### H1. Missing Section Index Pages (4 sections) - FIXED
 
-All sections now have `index.md` landing pages.
+All sections now have `index.mdx` landing pages.
 
 #### H2. Orphaned Files Not in Navigation (3 content files) - FIXED
 
-All content files are now referenced in `mkdocs.yml` navigation.
+All content files are now auto-discovered by Starlight via `autogenerate` in `astro.config.mjs`.
 
 ### Medium Priority: Test Coverage & Documentation Accuracy
 
 #### M1. Test Suite Gaps
 
-The test suite (43 tests) covers template structure, agent functionality, and onboarding flow. However, several areas lack coverage:
+The test suite (130 tests) covers template structure, agent functionality, and onboarding flow. However, several areas lack coverage:
 
 **Missing test categories:**
 
@@ -58,12 +58,12 @@ The test suite (43 tests) covers template structure, agent functionality, and on
 |-----|-------------|----------|
 | Agent security tests | `_sanitize_partner_name`, `_validate_path`, `slugify` are tested but only in `test_agent.py` via import-level checks | Medium |
 | Playbook integration | No test runs a playbook end-to-end (even in dry-run mode) | Medium |
-| Nav completeness | No test verifies every file in `docs/` appears in `mkdocs.yml` nav | High |
-| Index page coverage | No test checks that each template directory has an `index.md` | Medium |
-| Orphaned file detection | No test flags `.md` files missing from nav | Medium |
-| MkDocs build test | No test runs `mkdocs build` to verify site compiles | Low |
+| Nav completeness | Starlight auto-generates nav via `autogenerate` in `astro.config.mjs` | Done |
+| Index page coverage | Test verifies each template directory has an `index.mdx` | Done |
+| Starlight build test | Test verifies `npm run build` succeeds | Done |
 | CSS validation | No test checks `extra.css` is valid/loadable | Low |
-| Cross-reference integrity | No test verifies internal links between templates resolve | Medium |
+| Cross-reference integrity | Test verifies internal links between templates resolve | Done |
+| Deployed link validation | Test validates relative links work in built site | Done |
 
 **Action:** Add tests for nav completeness, index page coverage, and orphaned file detection to `test_templates.py`. These are the highest-value additions.
 
@@ -105,11 +105,11 @@ Dark mode works well overall. The gradient hero text effect could benefit from s
 
 #### L3. Search Separator Pattern
 
-The custom search separator in `mkdocs.yml` is aggressive and may over-split some terms. Monitor search quality.
+Starlight uses Pagefind for search. Search quality is generally good.
 
 ---
 
-## Phase 5: Documentation Refresh (Current)
+## Phase 5: Documentation Refresh (Complete)
 
 *Goal: All meta-documentation accurately reflects the codebase*
 
@@ -130,25 +130,25 @@ The custom search separator in `mkdocs.yml` is aggressive and may over-split som
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 6.1 | Create `docs/security/index.md` | Security section landing page | 30 min | DONE |
-| 6.2 | Create `docs/operations/index.md` | Operations section landing page | 30 min | DONE |
-| 6.3 | Create `docs/executive/index.md` | Executive section landing page | 20 min | DONE |
-| 6.4 | Create `docs/analysis/index.md` | Analysis section landing page | 20 min | DONE |
-| 6.5 | Add orphaned files to `mkdocs.yml` nav | Integrate 3 orphaned content files | 15 min | DONE |
-| 6.6 | Add nav completeness test | Test that all docs/ files appear in nav | 30 min | DONE |
-| 6.7 | Add index page coverage test | Test that each template dir has index.md | 20 min | DONE |
+| 6.1 | Create `partneros-docs/.../security/index.mdx` | Security section landing page | 30 min | DONE |
+| 6.2 | Create `partneros-docs/.../operations/index.mdx` | Operations section landing page | 30 min | DONE |
+| 6.3 | Create `partneros-docs/.../executive/index.mdx` | Executive section landing page | 20 min | DONE |
+| 6.4 | Create `partneros-docs/.../analysis/index.mdx` | Analysis section landing page | 20 min | DONE |
+| 6.5 | Starlight auto-discovery | Starlight auto-generates nav via `autogenerate` | 15 min | DONE |
+| 6.6 | Add nav completeness test | Test that Starlight builds successfully | 30 min | DONE |
+| 6.7 | Add index page coverage test | Test that each template dir has index.mdx | 20 min | DONE |
 
 ---
 
-## Phase 7: Test Expansion
+## Phase 7: Test Expansion (Complete)
 
 *Goal: Comprehensive test coverage for site integrity*
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 7.1 | Nav completeness test | Verify all .md files in docs/ are in mkdocs.yml | 30 min | PENDING |
-| 7.2 | Cross-reference test | Verify internal links between templates resolve | 1 hr | PENDING |
-| 7.3 | MkDocs build test | Run `mkdocs build --strict` in CI | 30 min | PENDING |
+| 7.1 | Nav completeness test | Verify Starlight auto-generates nav correctly | 30 min | DONE |
+| 7.2 | Cross-reference test | Verify internal links between templates resolve | 1 hr | DONE |
+| 7.3 | Starlight build test | Run `npm run build` in CI | 30 min | DONE |
 | 7.4 | Playbook dry-run test | Validate playbook step execution without LLM | 1 hr | PENDING |
 
 ---

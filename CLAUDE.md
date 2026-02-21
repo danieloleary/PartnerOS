@@ -64,17 +64,15 @@ PartnerOS/
 │   ├── demo-company/              # Fake company data for demos
 │   └── test-partner/              # TechStart Inc test case
 ├── tests/
-│   ├── test_templates.py          # Template structure/frontmatter tests (24 tests)
+│   ├── test_templates.py          # Template structure/frontmatter tests (35 tests)
 │   ├── test_agent.py              # Agent unit tests (14 tests)
-│   ├── test_onboarding.py         # Onboarding flow tests (5 tests)
+│   ├── test_onboarding.py         # Onboarding flow tests (6 tests)
+│   ├── test_deployed_links.py     # Link validation tests (6 tests)
 │   └── requirements.txt           # Test dependencies (pytest, pyyaml)
-├── site/                          # Built MkDocs output (gitignored)
 ├── .github/workflows/
 │   ├── deploy-docs.yml            # Deploys docs to GitHub Pages on push to main
 │   ├── markdown_lint.yml          # Runs markdown linter on all *.md changes
 │   └── run_partner_agent.yml      # Manual workflow to run a playbook via Actions
-├── mkdocs.yml                     # MkDocs site configuration
-├── requirements.txt               # Python deps for MkDocs (mkdocs-material, etc.)
 ├── package.json                   # Node.js: npm run lint:md → python lint script
 ├── CHANGELOG.md                   # Version history
 ├── IMPROVEMENT_PLAN.md            # Audit findings and improvement roadmap

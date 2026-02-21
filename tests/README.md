@@ -41,7 +41,8 @@ These tests validate the overall site structure and configuration.
 | `test_playbook_yaml_schema` | All playbooks have valid schema |
 | `test_no_duplicate_template_titles` | No duplicate template titles |
 | `test_template_files_have_content` | Templates have meaningful content |
-| `test_mkdocs_yml_valid` | mkdocs.yml parses correctly |
+| `test_starlight_build_succeeds` | Starlight builds without errors |
+| `test_astro_config_valid` | astro.config.mjs is valid |
 
 ### Agent Tests
 Security and validation tests for the Partner Agent.

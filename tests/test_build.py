@@ -50,42 +50,8 @@ class TestStarlightBuild:
         assert "build" in data["scripts"], "package.json should have build script"
 
 
-class TestMkDocsBuild:
-    """Test MkDocs build process (legacy)."""
-
-    def test_mkdocs_build_succeeds(self):
-        """Verify MkDocs build completes without errors."""
-        import shutil
-
-        if not shutil.which("mkdocs"):
-            pytest.skip("mkdocs not installed")
-
-        result = subprocess.run(
-            ["mkdocs", "build"],
-            cwd=str(REPO_ROOT),
-            capture_output=True,
-            text=True,
-            timeout=120,
-        )
-
-        assert result.returncode == 0, f"MkDocs build failed:\n{result.stderr}"
-
-    def test_mkdocs_site_created(self):
-        """Verify MkDocs site directory is created."""
-        site_dir = REPO_ROOT / "site"
-
-        if not site_dir.exists():
-            pytest.skip("site directory not found")
-
-        assert (site_dir / "index.html").exists(), "index.html should exist"
-
-
 class TestConfiguration:
     """Test configuration files."""
-
-    def test_mkdocs_yml_valid(self):
-        """Verify mkdocs.yml is valid YAML (legacy - skipped since we use Starlight)."""
-        pytest.skip("MkDocs has been removed - using Starlight only")
 
     def test_astro_config_valid(self):
         """Verify astro.config.mjs is valid."""

@@ -134,9 +134,10 @@ python agent.py
 ### Option 3: Run Locally
 
 ```bash
-pip install mkdocs-material
-mkdocs serve
-# Open http://localhost:8000
+cd partneros-docs
+npm install
+npm run dev
+# Open http://localhost:4321
 ```
 
 ---
@@ -216,7 +217,9 @@ PartnerOS/
 │   ├── demo-company/          # Fake company data for demos
 │   └── test-partner/          # TechStart Inc test case
 ├── tests/                     # 124 automated tests
-├── mkdocs.yml                 # Site configuration
+├── partneros-docs/            # Starlight/Astro docs site
+│   ├── src/content/docs/    # Documentation source
+│   └── astro.config.mjs    # Starlight configuration
 ├── BACKLOG.md                 # Prioritized feature backlog
 ├── IMPROVEMENT_PLAN.md        # Audit findings and roadmap
 ├── ARCHITECTURE.md            # Architecture decisions

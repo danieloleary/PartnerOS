@@ -27,12 +27,10 @@ ALWAYS_INCLUDE = [
     "ARCHITECTURE.md",
     "CHANGELOG.md",
     "TEMPLATE_INVENTORY.md",
-    "mkdocs.yml",
-    "requirements.txt",
 ]
 
 ALWAYS_INCLUDE_DIRS = [
-    "docs/",
+    "partneros-docs/",
     "examples/",
 ]
 
@@ -71,7 +69,9 @@ def should_exclude(path: Path) -> bool:
     path_str = str(path)
     for pattern in EXCLUDE_PATTERNS:
         if pattern.endswith("/"):
-            if f"/{pattern[:-1]}/" in f"/{path_str}/" or path_str.startswith(pattern[:-1]):
+            if f"/{pattern[:-1]}/" in f"/{path_str}/" or path_str.startswith(
+                pattern[:-1]
+            ):
                 return True
         elif path.match(pattern):
             return True
@@ -152,17 +152,16 @@ def main():
     parser.add_argument(
         "--templates-only",
         action="store_true",
-        help="Include only docs/ and essential files (no scripts/tests)"
+        help="Include only docs/ and essential files (no scripts/tests)",
     )
     parser.add_argument(
-        "--output", "-o",
-        default="dist",
-        help="Output directory (default: dist/)"
+        "--output", "-o", default="dist", help="Output directory (default: dist/)"
     )
     parser.add_argument(
-        "--version", "-v",
+        "--version",
+        "-v",
         default=datetime.now().strftime("%Y.%m.%d"),
-        help="Version string for the zip filename"
+        help="Version string for the zip filename",
     )
     args = parser.parse_args()
 

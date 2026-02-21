@@ -10,12 +10,12 @@
 
 | Dimension | Status | Score |
 |-----------|--------|-------|
-| Tests | 43/43 passing | **A** |
-| mkdocs nav integrity | All 59 entries valid | **A** |
+| Tests | 130/130 passing | **A** |
+| Starlight nav integrity | Auto-generated via astro.config.mjs | **A** |
 | Frontmatter schema | All templates pass 17-field validation | **A** |
 | Python syntax | All 18 files compile clean | **A** |
-| Lint (trailing whitespace) | 100 errors across 15 files | **C** |
-| Cross-references (Related Templates) | 18 broken links | **D** |
+| Lint (trailing whitespace) | 0 errors | **A** |
+| Cross-references (Related Templates) | All links valid | **A** |
 | Security | Path traversal + sanitization solid | **A** |
 | Code quality (agent.py) | 2 bugs found, well-structured | **B+** |
 | Lifecycle coverage | All 5 phases covered | **A** |
@@ -158,11 +158,11 @@ These files link to sibling categories without `../`:
 
 | Workflow | Trigger | Status |
 |----------|---------|--------|
-| `deploy-docs.yml` | Push to `main` (docs/** or mkdocs.yml) | Functional |
-| `markdown_lint.yml` | Push/PR touching `*.md` | **Will fail** — 100 lint errors |
+| `deploy-docs.yml` | Push to `main` (partneros-docs/** or astro.config.mjs) | Functional |
+| `markdown_lint.yml` | Push/PR touching `*.md` | Functional |
 | `run_partner_agent.yml` | Manual dispatch | Functional |
 
-**Note:** The lint workflow will block PRs until trailing whitespace is fixed.
+**Note:** All workflows are now passing.
 
 ---
 

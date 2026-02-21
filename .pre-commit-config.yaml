@@ -14,7 +14,7 @@ repos:
     rev: v4.5.0
     hooks:
       - id: check-yaml
-        args: ['--unsafe']  # Allow custom tags for MkDocs
+        args: ['--unsafe']  # Allow custom tags for Starlight
       - id: check-json
       - id: check-toml
 
@@ -60,5 +60,7 @@ exclude: |
     site/|
     .venv/|
     partner_blueprint/|
-    .git/
+    .git/|
+    partneros-docs/dist/|
+    partneros-docs/node_modules/
   )
