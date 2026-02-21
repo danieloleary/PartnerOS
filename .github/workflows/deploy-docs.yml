@@ -5,8 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'docs/**'
-      - 'mkdocs.yml'
+      - 'partneros-docs/**'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
@@ -28,32 +27,25 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.11'
-
-      - name: Cache dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: partneros-docs/package-lock.json
 
       - name: Install dependencies
-        run: |
-          pip install mkdocs-material
-          pip install mkdocs-minify-plugin
-          pip install pillow cairosvg  # For social cards
+        working-directory: partneros-docs
+        run: npm ci
 
       - name: Build documentation
-        run: mkdocs build
+        working-directory: partneros-docs
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: partneros-docs/dist
 
   deploy:
     environment:
