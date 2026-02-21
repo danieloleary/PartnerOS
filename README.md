@@ -39,30 +39,40 @@ PartnerOS includes a multi-agent system with 7 specialized AI agents that collab
 
 | Agent | Role | Skills |
 |-------|------|--------|
-| **DAN** | The Owner - runs everything | 6 |
-| **ARCHITECT** | Partner Program Manager | 6 |
-| **STRATEGIST** | Partner Strategy | 5 |
-| **ENGINE** | Partner Operations | 5 |
-| **SPARK** | Partner Marketing | 5 |
-| **CHAMPION** | Partner Leader | 5 |
-| **BUILDER** | Partner Technical | 4 |
+| **The Owner** | Executive - runs everything | 6 |
+| **Partner Manager** | Relationships - day-to-day | 6 |
+| **Strategy** | ICP & tiers | 5 |
+| **Operations** | Deals & commissions | 5 |
+| **Marketing** | Campaigns | 5 |
+| **Leader** | Board & ROI | 5 |
+| **Technical** | Integrations | 4 |
 
 **Total: 7 agents | 36 skills | 47 templates**
 
 Each agent has distinct skills and can collaborate with others. The system is company-customizable with drop-in backgrounds.
 
+### Web Interface
+
+Run the beautiful web UI:
+
+```bash
+python scripts/partner_agents/web.py
+```
+
+Then open http://localhost:8000
+
 ```python
-from scripts.partner_agents.drivers import DanAgent, ArchitectAgent, etc
+from scripts.partner_agents.drivers import ArchitectAgent, EngineAgent, etc
 
 # Instantiate the team
 agents = {
-    'dan': DanAgent(),
-    'architect': ArchitectAgent(),
+    'partner_manager': ArchitectAgent(),
+    'operations': EngineAgent(),
     # ...
 }
 
 # Call skills
-result = agents['architect'].call_skill('architect_onboard', {
+result = agents['partner_manager'].call_skill('architect_onboard', {
     'partner_id': 'Acme', 
     'tier': 'Gold'
 })
