@@ -20,18 +20,29 @@ class TestDeployedLinks:
         """Verify source docs don't use hardcoded /PartnerOS/ links."""
         failures = []
 
+        # Skip example/documentation files that intentionally show links
+        skip_files = [
+            "skills/find-broken-links.md",  # Shows example links as documentation
+        ]
+
         for f in DOCS_DIR.rglob("*.md"):
+            rel_path = str(f.relative_to(DOCS_DIR))
+            if any(skip in rel_path for skip in skip_files):
+                continue
+
             content = f.read_text()
             matches = re.findall(r"\]\(/PartnerOS/[^)]+\)", content)
             if matches:
-                rel_path = f.relative_to(DOCS_DIR)
                 failures.append(f"{rel_path}: {matches}")
 
         for f in DOCS_DIR.rglob("*.mdx"):
+            rel_path = str(f.relative_to(DOCS_DIR))
+            if any(skip in rel_path for skip in skip_files):
+                continue
+
             content = f.read_text()
             matches = re.findall(r"\]\(/PartnerOS/[^)]+\)", content)
             if matches:
-                rel_path = f.relative_to(DOCS_DIR)
                 failures.append(f"{rel_path}: {matches}")
 
         assert len(failures) == 0, (
@@ -39,22 +50,74 @@ class TestDeployedLinks:
             + "\n".join(failures)
         )
 
+    def test_no_absolute_root_links_in_source(self):
+        """Verify source docs don't use absolute / links (breaks deployed site).
+
+        Links like [foo](/foo/) will work locally but 404 on deployed site
+        because base is /PartnerOS. Use relative links (../foo/) instead.
+        """
+        failures = []
+
+        # Patterns that indicate broken absolute links
+        # Exclude Starlight hero action 'link:' which uses absolute paths
+        for f in DOCS_DIR.rglob("*.md"):
+            content = f.read_text()
+            # Find markdown links starting with / but not in code blocks
+            in_code_block = False
+            for i, line in enumerate(content.split("\n"), 1):
+                stripped = line.strip()
+                if stripped.startswith("```"):
+                    in_code_block = not in_code_block
+                    continue
+                if in_code_block:
+                    continue
+                # Match markdown links like [text](/some-path/)
+                matches = re.findall(r"\]\(/[a-z][^)]*\)", line)
+                if matches:
+                    rel_path = f.relative_to(DOCS_DIR)
+                    failures.append(f"{rel_path}:{i} - {matches}")
+
+        for f in DOCS_DIR.rglob("*.mdx"):
+            content = f.read_text()
+            in_code_block = False
+            for i, line in enumerate(content.split("\n"), 1):
+                stripped = line.strip()
+                if stripped.startswith("```"):
+                    in_code_block = not in_code_block
+                    continue
+                if in_code_block:
+                    continue
+                # Skip Starlight hero action links (they use 'link:' YAML)
+                if "link:" in line:
+                    continue
+                matches = re.findall(r"\]\(/[a-z][^)]*\)", line)
+                if matches:
+                    rel_path = f.relative_to(DOCS_DIR)
+                    failures.append(f"{rel_path}:{i} - {matches}")
+
+        assert len(failures) == 0, (
+            f"Found absolute / links in source - these will 404 on deployed site!\n"
+            f"Use relative links (../folder/) instead.\n" + "\n".join(failures[:20])
+        )
+
     def test_relative_links_in_built_site(self):
-        """Verify built site uses relative links for navigation."""
+        """Verify built site uses correct links for navigation.
+
+        Starlight auto-handles the base URL. Hero actions should have
+        /PartnerOS/ prefix (configured in index.mdx).
+        """
         index_html = DIST_DIR / "index.html"
         if not index_html.exists():
             pytest.skip("Build required")
 
         content = index_html.read_text()
 
-        # Hero actions should NOT have /PartnerOS/ in the href
-        # They should be relative (e.g., /getting-started/quick-start/)
-        # Starlight automatically handles the base URL
-        assert 'href="/PartnerOS/getting-started/' not in content, (
-            "Hero links should NOT have /PartnerOS/ prefix in built HTML"
+        # Hero actions SHOULD have /PartnerOS/ prefix now (fixed in index.mdx)
+        assert 'href="/PartnerOS/getting-started/' in content, (
+            "Hero links should have /PartnerOS/ prefix in built HTML"
         )
-        assert 'href="/PartnerOS/strategy/' not in content, (
-            "Hero links should NOT have /PartnerOS/ prefix in built HTML"
+        assert 'href="/PartnerOS/strategy/' in content, (
+            "Hero links should have /PartnerOS/ prefix in built HTML"
         )
 
     def test_base_url_config_present(self):
