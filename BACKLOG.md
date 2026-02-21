@@ -296,4 +296,23 @@ The system currently runs in **fallback mode** - responses are generated locally
 
 ---
 
+## Phase 9: Web UI Enhancements 🖥️
+
+*Goal: Transform the Web UI into a full-featured partner management platform*
+
+| # | Item | Purpose | Effort | Status |
+|---|------|---------|--------|--------|
+| 9.1 | **Unified State Management** | Consolidate CLI state (partner_agent/state/) and Web state (partners.json) into single JSON database | 4 hrs | PENDING |
+| 9.2 | **Web UI Markdown Rendering** | Integrate marked.js to render AI responses as formatted Markdown (tables, checklists) | 2 hrs | PENDING |
+| 9.3 | **Real Orchestrator Integration** | Update Web chat to use Orchestrator class and specialized agents (Architect, Strategist, etc.) | 4 hrs | PENDING |
+| 9.4 | **Interactive Playbooks in Web** | Port core playbook engine from CLI to Web UI for guided visual workflows | 6 hrs | PENDING |
+| 9.5 | **Secure API Key Management** | Add Settings modal for OpenRouter/Anthropic API keys in browser localStorage | 2 hrs | PENDING |
+| 9.6 | **Partner CRM Dashboard** | Detailed dashboard per partner: tier, health score, deal history, activity timeline | 4 hrs | PENDING |
+| 9.7 | **Logic-Driven Agent Skills** | Upgrade agent skills to perform actual state updates and record milestones | 4 hrs | PENDING |
+| 9.8 | **In-Browser Document Generation** | Integrate export_pdf.py and template filling in Web UI | 3 hrs | PENDING |
+| 9.9 | **Decouple Web Frontend** | Refactor monolithic HTML in web.py into Jinja2 templates + static assets | 4 hrs | PENDING |
+| 9.10 | **Cross-Platform Integration Tests** | E2E tests verifying partner data integrity between CLI and Web | 3 hrs | PENDING |
+
+---
+
 *Backlog managed per ARCHITECTURE.md vision - "Give them the playbook + the coach"*
