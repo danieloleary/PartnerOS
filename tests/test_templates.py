@@ -1657,3 +1657,76 @@ def test_all_required_frontmatter_fields():
         missing = required_fields - set(frontmatter.keys())
         if missing:
             assert False, f"{f.name} missing frontmatter fields: {missing}"
+
+
+# =============================================================================
+# PHASE 8: STARLIGHT DOCS TESTS
+# =============================================================================
+
+
+def test_starlight_docs_exist():
+    """Verify Starlight docs directory exists."""
+    starlight_docs = REPO_ROOT / "partneros-docs" / "src" / "content" / "docs"
+    assert starlight_docs.exists(), "Starlight docs directory not found"
+    assert starlight_docs.is_dir(), "partneros-docs/src/content/docs is not a directory"
+
+
+def test_starlight_index_mdx():
+    """Verify Starlight homepage is .mdx (required for Astro components)."""
+    starlight_index = (
+        REPO_ROOT / "partneros-docs" / "src" / "content" / "docs" / "index.mdx"
+    )
+    assert starlight_index.exists(), (
+        "Starlight index.mdx not found (must be .mdx for Astro components)"
+    )
+
+
+def test_starlight_astro_config():
+    """Verify Astro config exists."""
+    astro_config = REPO_ROOT / "partneros-docs" / "astro.config.mjs"
+    assert astro_config.exists(), "astro.config.mjs not found"
+
+
+def test_starlight_package_json():
+    """Verify package.json exists for Starlight."""
+    package_json = REPO_ROOT / "partneros-docs" / "package.json"
+    assert package_json.exists(), "partneros-docs/package.json not found"
+
+
+def test_starlight_template_categories():
+    """Verify Starlight docs have same template categories as legacy docs."""
+    starlight_docs = REPO_ROOT / "partneros-docs" / "src" / "content" / "docs"
+    legacy_docs = REPO_ROOT / "docs"
+
+    # Get categories from both
+    starlight_cats = set(
+        d.name
+        for d in starlight_docs.iterdir()
+        if d.is_dir() and not d.name.startswith(".")
+    )
+    legacy_cats = set(
+        d.name
+        for d in legacy_docs.iterdir()
+        if d.is_dir() and not d.name.startswith(".")
+    )
+
+    # Check key categories exist in Starlight
+    assert starlight_cats >= {
+        "strategy",
+        "recruitment",
+        "enablement",
+        "legal",
+        "finance",
+        "security",
+        "operations",
+    }
+
+
+def test_starlight_index_mdx():
+    """Verify Starlight homepage is .mdx (required for Astro components)."""
+    starlight_index = (
+        REPO_ROOT / "partneros-docs" / "src" / "content" / "docs" / "index.mdx"
+    )
+    assert starlight_index.exists(), (
+        "Starlight index.mdx not found (must be .mdx for Astro components)"
+    )
