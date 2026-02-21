@@ -19,10 +19,15 @@ ICON_MAP = {
     "executive": "briefcase",
     "analysis": "bar-chart",
     "agent": "puzzle",
+    "getting-started": "book",
 }
 
 # Title and description overrides
 CATEGORY_INFO = {
+    "getting-started": {
+        "title": "Getting Started",
+        "description": "Start here! Quick guides to help you get up and running with PartnerOS.",
+    },
     "strategy": {
         "title": "Partner Strategy Templates",
         "description": "Define *why* you need partners and *who* you're looking for.\n\nStrategy templates help you build the foundation for a successful partner program before you start recruiting.",
