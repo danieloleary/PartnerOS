@@ -26,9 +26,7 @@ export default defineConfig({
 				{ label: 'Executive', autogenerate: { directory: 'executive' } },
 				{ label: 'Analysis', autogenerate: { directory: 'analysis' } },
 				{ label: 'Partner Agent', autogenerate: { directory: 'agent' } },
-				{ label: 'Resources', autogenerate: { directory: 'resources' } },
 			],
-			customCss: ['./src/styles/custom.css'],
 		}),
 	],
 });

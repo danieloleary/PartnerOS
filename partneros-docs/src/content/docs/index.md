@@ -16,24 +16,12 @@ hero:
       icon: open-book
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
-
 ## Why PartnerOS?
 
-<CardGrid stagger>
-	<Card title="40 Ready-to-Use Templates" icon="seti:json">
-		Strategy (8), Recruitment (10), Enablement (7), Legal (4), Finance (3), Security (2), Operations (4), Executive (1), Analysis (1)
-	</Card>
-	<Card title="7 AI-Powered Agents" icon="seti:ai">
-		Multi-agent system with 7 specialized AI agents that collaborate on partner work
-	</Card>
-	<Card title="7 Automation Playbooks" icon="seti:pipeline">
-		Cover the entire partner lifecycle: recruit, onboard, QBR, expand, exit, co-marketing, support
-	</Card>
-	<Card title="Enterprise-Ready" icon="seti:org">
-		Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths
-	</Card>
-</CardGrid>
+- **40 Ready-to-Use Templates** - Strategy, Recruitment, Enablement, Legal, Finance, Security, Operations, Executive, Analysis
+- **7 AI-Powered Agents** - Multi-agent system with specialized AI collaborators
+- **7 Automation Playbooks** - End-to-end workflows for the entire partner lifecycle
+- **Enterprise-Ready** - Three-tier partner framework (Bronze/Silver/Gold)
 
 ## Quick Start
 
