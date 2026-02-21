@@ -6,11 +6,16 @@ This file provides guidance for AI assistants working in this repository.
 
 **PartnerOS** is a complete playbook system for building and scaling strategic partnerships, combining:
 
-- 40 Markdown documentation templates across 9 categories (rendered via MkDocs Material)
+- 40 Markdown documentation templates across 9 categories (rendered via **Starlight/Astro**)
 - An AI-powered Partner Agent (`scripts/partner_agent/agent.py`) supporting local Ollama, Anthropic, and OpenAI
 - 7 automation playbooks covering the full partner lifecycle
 - 12 utility scripts for onboarding, templates, reporting, and packaging
 - GitHub Actions for doc deployment and markdown linting
+- **146 tests** (144 passing, 2 skipped)
+
+**Requirements:**
+- **Python 3.10+** (for union type syntax `type | None`)
+- **Node.js 20+** (for Starlight docs build)
 
 **Live site:** https://danieloleary.github.io/PartnerOS
 
@@ -20,24 +25,28 @@ This file provides guidance for AI assistants working in this repository.
 
 ```
 PartnerOS/
-├── docs/                          # MkDocs documentation source (61 .md files)
-│   ├── index.md                   # Homepage with hero, stats, lifecycle cards
-│   ├── 404.md                     # Custom 404 page
-│   ├── tags.md                    # Auto-generated tag browsing page
-│   ├── strategy/                  # 8 strategy templates + index
-│   ├── recruitment/               # 10 recruitment templates + index
-│   ├── enablement/                # 7 enablement templates + index
-│   ├── legal/                     # 4 legal templates + index (NDA, MSA, DPA, SLA)
-│   ├── finance/                   # 3 finance templates + index (commission, rebate, revenue share)
-│   ├── security/                  # 2 security templates (questionnaire, SOC2) — missing index
-│   ├── operations/                # 4 operations templates (deal reg, standup, report, portal) — missing index
-│   ├── executive/                 # 1 executive template (board deck) — missing index
-│   ├── analysis/                  # 1 analysis template (health scorecard) — missing index
-│   ├── agent/                     # 5 Partner Agent docs + index
-│   ├── getting-started/           # 4 guides (quick-start, lifecycle, how-to-use, first-partner-path)
-│   ├── resources/                 # 4 docs (glossary, maturity-model, licensing, one-pager)
-│   ├── assets/                    # logo.svg, favicon.svg
-│   └── stylesheets/extra.css      # Custom CSS overrides (257 lines)
+├── partneros-docs/                  # Starlight/Astro docs site (NEW!)
+│   ├── src/content/docs/           # Documentation source (~65 .md files)
+│   ├── astro.config.mjs            # Starlight configuration
+│   └── dist/                       # Built static site
+├── docs/                           # Legacy MkDocs source (being migrated)
+│   ├── index.md                    # Homepage with hero, stats, lifecycle cards
+│   ├── 404.md                      # Custom 404 page
+│   ├── tags.md                     # Auto-generated tag browsing page
+│   ├── strategy/                    # 8 strategy templates + index
+│   ├── recruitment/                 # 10 recruitment templates + index
+│   ├── enablement/                 ment templates + index # 7 enable
+│   ├── legal/                      # 4 legal templates + index (NDA, MSA, DPA, SLA)
+│   ├── finance/                    # 3 finance templates + index (commission, rebate, revenue share)
+│   ├── security/                   # 2 security templates (questionnaire, SOC2) — missing index
+│   ├── operations/                 # 4 operations templates (deal reg, standup, report, portal) — missing index
+│   ├── executive/                  # 1 executive template (board deck) — missing index
+│   ├── analysis/                   # 1 analysis template (health scorecard) — missing index
+│   ├── agent/                      # 5 Partner Agent docs + index
+│   ├── getting-started/            # 4 guides (quick-start, lifecycle, how-to-use, first-partner-path)
+│   ├── resources/                  # 4 docs (glossary, maturity-model, licensing, one-pager)
+│   ├── assets/                     # logo.svg, favicon.svg
+│   └── stylesheets/extra.css       # Custom CSS overrides
 ├── scripts/
 │   ├── partner_agent/             # AI Partner Agent
 │   │   ├── agent.py               # Main agent (~985 lines)
@@ -97,7 +106,23 @@ PartnerOS/
 
 ## Development Commands
 
-### Documentation (MkDocs)
+### Documentation (Starlight/Astro - PRIMARY)
+
+```bash
+# Install docs dependencies
+cd partneros-docs
+npm install
+
+# Preview locally (hot reload at http://localhost:4321)
+npm run dev
+
+# Build static site to dist/
+npm run build
+
+# Deploys to https://danieloleary.github.io/PartnerOS/ on push to main
+```
+
+### Legacy: MkDocs (being migrated)
 
 ```bash
 # Install docs dependencies
@@ -171,9 +196,9 @@ python3 tests/test_templates.py
 python3 tests/test_agent.py
 ```
 
-### Test Suite (43 tests)
+### Test Suite (146 tests)
 
-**Template Tests (`test_templates.py` — 24 tests):**
+**Template Tests (`test_templates.py` — 61 tests):**
 
 - `test_templates_exist` - At least 1 template exists
 - `test_templates_have_frontmatter` - All .md files have YAML frontmatter

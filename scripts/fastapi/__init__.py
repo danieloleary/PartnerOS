@@ -1,7 +1,7 @@
 """Lightweight FastAPI test shim for environments without fastapi installed."""
 
 from dataclasses import dataclass
-from typing import Any, Callable
+from typing import Any, Callable, Optional, Union
 
 
 @dataclass
@@ -12,7 +12,7 @@ class _Route:
 
 
 class Request:
-    def __init__(self, payload: dict | None = None):
+    def __init__(self, payload: Optional[dict] = None):
         self._payload = payload or {}
 
     async def json(self) -> dict:
