@@ -2,6 +2,7 @@
 
 import json
 import os
+import html
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Any
@@ -31,6 +32,12 @@ def add_partner(
 ) -> Dict:
     """Add a new partner."""
     partners = load_partners()
+
+    # Sanitize inputs
+    name = html.escape(name.strip())[:100]
+    email = html.escape(email.strip())[:100]
+    contact = html.escape(contact.strip())[:100]
+    tier = html.escape(tier.strip())[:50]
 
     # Check if exists
     for p in partners:
@@ -86,6 +93,9 @@ def register_deal(partner_name: str, deal_value: int, account: str) -> Dict:
     partners = load_partners()
     for p in partners:
         if p["name"].lower() == partner_name.lower():
+            # Sanitize inputs
+            account = html.escape(account.strip())[:100]
+
             deal = {
                 "id": f"deal-{len(p.get('deals', [])) + 1}",
                 "value": deal_value,

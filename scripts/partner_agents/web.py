@@ -37,7 +37,7 @@ app = FastAPI(title="PartnerOS")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -220,6 +220,10 @@ async def home():
     </div>
 
     <script>
+        const escapeHTML = (str) => String(str).replace(/[&<>"']/g, m => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        })[m]);
+
         // API key should be provided by the user at runtime when needed
         let apiKey = '';
 
@@ -271,7 +275,7 @@ async def home():
             if (role === 'user') {
                 div.innerHTML = `
                     <div role="img" aria-label="User" class="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">👤</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${text}</div>
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${escapeHTML(text)}</div>
                 `;
             } else {
                 const emoji = agent === 'ARCHITECT' ? '🏗️' : 
@@ -285,7 +289,7 @@ async def home():
                     <div role="img" aria-label="${agentName}" class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">${emoji}</div>
                     <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">
                         <span class="sr-only">${agentName}: </span>
-                        ${text}
+                        ${escapeHTML(text)}
                     </div>
                 `;
             }
@@ -334,8 +338,8 @@ async def home():
                     <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <div class="font-semibold text-white">${p.name}</div>
-                                <div class="text-xs text-slate-400">${p.email || 'No email'}</div>
+                                <div class="font-semibold text-white">${escapeHTML(p.name)}</div>
+                                <div class="text-xs text-slate-400">${escapeHTML(p.email || 'No email')}</div>
                             </div>
                             <span class="px-2 py-1 rounded-full text-xs ${p.tier === 'Gold' ? 'bg-yellow-600' : p.tier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${p.tier}</span>
                         </div>
