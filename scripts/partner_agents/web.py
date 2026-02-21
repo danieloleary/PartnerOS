@@ -28,12 +28,9 @@ from partner_agents.drivers import (
 from partner_agents import Orchestrator
 from partner_agents import partner_state
 
-# Get API key from environment or use default for testing
+# Get API key from environment
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
-OPENROUTER_API_KEY = os.environ.get(
-    "OPENROUTER_API_KEY",
-    "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",
-)
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 
 app = FastAPI(title="PartnerOS")
 
@@ -211,14 +208,33 @@ async def home():
         </div>
 
         <!-- Status -->
-        <div class="text-center mt-6 text-slate-500 text-sm">
-            <span id="status">● Ready</span> • 7 Agents • 36 Skills • LLM Connected
+        <div class="text-center mt-6 text-slate-500 text-sm flex flex-col items-center gap-2">
+            <div><span id="status">● Ready</span> • 7 Agents • 36 Skills • LLM Connected</div>
+            <button onclick="setApiKey()" class="text-xs text-slate-600 hover:text-cyan-400 transition underline">Set API Key</button>
         </div>
     </div>
 
     <script>
-        // Hardcoded API key for testing
-        let apiKey = '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';
+        // Set API key via environment variable or prompt
+        let apiKey = localStorage.getItem('partneros_api_key') || '';
+
+        function setApiKey() {
+            const key = prompt('Enter your OpenRouter API Key (sk-or-...):', apiKey);
+            if (key !== null) {
+                apiKey = key;
+                localStorage.setItem('partneros_api_key', key);
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
 
         async function sendMessage(text) {
             const input = document.getElementById('messageInput');
@@ -258,10 +274,12 @@ async def home():
             const div = document.createElement('div');
             div.className = 'message-enter flex gap-3';
             
+            const escapedText = escapeHtml(text).replace(/\\n/g, '<br>');
+
             if (role === 'user') {
                 div.innerHTML = `
                     <div class="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">👤</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${text}</div>
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg whitespace-pre-wrap">${escapedText}</div>
                 `;
             } else {
                 const emoji = agent === 'ARCHITECT' ? '🏗️' : 
@@ -272,7 +290,7 @@ async def home():
                               agent === 'STRATEGIST' ? '🎯' : '👑';
                 div.innerHTML = `
                     <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">${emoji}</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${text}</div>
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg whitespace-pre-wrap">${escapedText}</div>
                 `;
             }
             
@@ -320,12 +338,12 @@ async def home():
                     <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <div class="font-semibold text-white">${p.name}</div>
-                                <div class="text-xs text-slate-400">${p.email || 'No email'}</div>
+                                <div class="font-semibold text-white">${escapeHtml(p.name)}</div>
+                                <div class="text-xs text-slate-400">${escapeHtml(p.email) || 'No email'}</div>
                             </div>
-                            <span class="px-2 py-1 rounded-full text-xs ${p.tier === 'Gold' ? 'bg-yellow-600' : p.tier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${p.tier}</span>
+                            <span class="px-2 py-1 rounded-full text-xs ${p.tier === 'Gold' ? 'bg-yellow-600' : p.tier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${escapeHtml(p.tier)}</span>
                         </div>
-                        <div class="text-xs text-slate-500">${p.deals?.length || 0} deals • ${p.status || 'Onboarding'}</div>
+                        <div class="text-xs text-slate-500">${p.deals?.length || 0} deals • ${escapeHtml(p.status) || 'Onboarding'}</div>
                     </div>
                 `).join('');
             } catch (e) {
@@ -382,7 +400,7 @@ async def chat(request: Request):
     if not api_key or len(api_key) < 10:
         return JSONResponse(
             {
-                "response": "⚠️ No API key. Try pressing Enter to use the default, or get one at https://openrouter.ai/keys",
+                "response": "⚠️ No API key found. Please set your OpenRouter API key using the 'Set API Key' button below or by setting the OPENROUTER_API_KEY environment variable.",
                 "agent": "system",
             }
         )
