@@ -153,18 +153,22 @@ async def home():
 
         <!-- Add Partner Modal -->
         <div id="addPartnerModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div class="bg-slate-800 rounded-xl p-6 max-w-md w-full mx-4">
+            <div class="bg-slate-800 rounded-xl p-6 max-w-md w-full mx-4 relative">
+                <button onclick="hideAddPartnerForm()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="Close modal">✕</button>
                 <h3 class="text-lg font-bold mb-4">Add New Partner</h3>
-                <input id="partnerName" type="text" placeholder="Company Name" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3">
-                <select id="partnerTier" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3">
+                <label for="partnerName" class="block text-sm font-medium text-slate-400 mb-1">Company Name</label>
+                <input id="partnerName" type="text" placeholder="e.g. Acme Corp" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3 focus:border-cyan-500 outline-none">
+                <label for="partnerTier" class="block text-sm font-medium text-slate-400 mb-1">Partner Tier</label>
+                <select id="partnerTier" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3 focus:border-cyan-500 outline-none">
                     <option value="Bronze">Bronze</option>
                     <option value="Silver">Silver</option>
                     <option value="Gold">Gold</option>
                 </select>
-                <input id="partnerEmail" type="email" placeholder="Contact Email" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-4">
+                <label for="partnerEmail" class="block text-sm font-medium text-slate-400 mb-1">Contact Email</label>
+                <input id="partnerEmail" type="email" placeholder="contact@company.com" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-4 focus:border-cyan-500 outline-none">
                 <div class="flex gap-3">
-                    <button onclick="addPartner()" class="flex-1 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg">Add Partner</button>
-                    <button onclick="hideAddPartnerForm()" class="px-4 py-2 bg-slate-600 hover:bg-slate-500 rounded-lg">Cancel</button>
+                    <button id="addPartnerBtn" onclick="addPartner()" class="flex-1 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed">Add Partner</button>
+                    <button onclick="hideAddPartnerForm()" class="px-4 py-2 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors">Cancel</button>
                 </div>
             </div>
         </div>
@@ -190,16 +194,18 @@ async def home():
             <!-- Input -->
             <div class="border-t border-slate-700 p-4">
                 <div class="flex gap-3">
+                    <label for="messageInput" class="sr-only">Type your message</label>
                     <input 
                         id="messageInput"
                         type="text" 
                         placeholder="Type your message..." 
-                        class="flex-1 bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition"
+                        class="flex-1 bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-3 focus:outline-none focus:border-cyan-500 transition disabled:opacity-50"
                         onkeypress="if(event.key==='Enter')sendMessage()"
                     >
                     <button 
+                        id="sendBtn"
                         onclick="sendMessage()"
-                        class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-semibold hover:opacity-90 transition"
+                        class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl font-semibold hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                         Send
                     </button>
@@ -219,10 +225,13 @@ async def home():
 
         async function sendMessage(text) {
             const input = document.getElementById('messageInput');
+            const btn = document.getElementById('sendBtn');
             const message = text || input.value.trim();
             if (!message) return;
             
             input.value = '';
+            input.disabled = true;
+            btn.disabled = true;
             
             // Add user message
             addMessage(message, 'user');
@@ -247,6 +256,10 @@ async def home():
                 console.error('Error:', e);
                 hideTyping();
                 addMessage('Error: ' + e.message, 'assistant');
+            } finally {
+                input.disabled = false;
+                btn.disabled = false;
+                input.focus();
             }
         }
         
@@ -257,7 +270,7 @@ async def home():
             
             if (role === 'user') {
                 div.innerHTML = `
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">👤</div>
+                    <div role="img" aria-label="User" class="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">👤</div>
                     <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${text}</div>
                 `;
             } else {
@@ -267,9 +280,13 @@ async def home():
                               agent === 'CHAMPION' ? '🏆' : 
                               agent === 'BUILDER' ? '🔧' : 
                               agent === 'STRATEGIST' ? '🎯' : '👑';
+                const agentName = agent || 'Assistant';
                 div.innerHTML = `
-                    <div class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">${emoji}</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">${text}</div>
+                    <div role="img" aria-label="${agentName}" class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">${emoji}</div>
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">
+                        <span class="sr-only">${agentName}: </span>
+                        ${text}
+                    </div>
                 `;
             }
             
@@ -342,12 +359,16 @@ async def home():
             const name = document.getElementById('partnerName').value;
             const tier = document.getElementById('partnerTier').value;
             const email = document.getElementById('partnerEmail').value;
+            const btn = document.getElementById('addPartnerBtn');
             
             if (!name) {
                 alert('Please enter a company name');
                 return;
             }
             
+            btn.disabled = true;
+            btn.innerText = 'Adding...';
+
             try {
                 await fetch('/api/partners', {
                     method: 'POST',
@@ -360,6 +381,9 @@ async def home():
                 document.getElementById('partnerEmail').value = '';
             } catch (e) {
                 alert('Error adding partner: ' + e.message);
+            } finally {
+                btn.disabled = false;
+                btn.innerText = 'Add Partner';
             }
         }
         
