@@ -111,13 +111,13 @@
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 6.1 | **Create `docs/security/index.md`** | Security section landing page with template grid | 30 min | PENDING |
-| 6.2 | **Create `docs/operations/index.md`** | Operations section landing page with template grid | 30 min | PENDING |
-| 6.3 | **Create `docs/executive/index.md`** | Executive section landing page | 20 min | PENDING |
-| 6.4 | **Create `docs/analysis/index.md`** | Analysis section landing page | 20 min | PENDING |
-| 6.5 | **Add orphaned files to nav** | Add `first-partner-path.md`, `licensing.md`, `partner-os-one-pager.md` to `mkdocs.yml` | 15 min | PENDING |
-| 6.6 | **Add nav completeness test** | Verify all docs/ files appear in mkdocs.yml nav | 30 min | PENDING |
-| 6.7 | **Add index coverage test** | Verify each template dir has index.md | 20 min | PENDING |
+| 6.1 | **Create `docs/security/index.md`** | Security section landing page with template grid | 30 min | DONE |
+| 6.2 | **Create `docs/operations/index.md`** | Operations section landing page with template grid | 30 min | DONE |
+| 6.3 | **Create `docs/executive/index.md`** | Executive section landing page | 20 min | DONE |
+| 6.4 | **Create `docs/analysis/index.md`** | Analysis section landing page | 20 min | DONE |
+| 6.5 | **Add orphaned files to nav** | Add `first-partner-path.md`, `licensing.md`, `partner-os-one-pager.md` to `mkdocs.yml` | 15 min | DONE |
+| 6.6 | **Add nav completeness test** | Verify all docs/ files appear in mkdocs.yml nav | 30 min | DONE |
+| 6.7 | **Add index coverage test** | Verify each template dir has index.md | 20 min | DONE |
 
 ---
 
@@ -127,24 +127,22 @@
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 7.1 | **Nav completeness test** | Verify all .md files in docs/ are referenced in mkdocs.yml | 30 min | PENDING |
-| 7.2 | **Cross-reference test** | Verify internal markdown links between templates resolve | 1 hr | PENDING |
-| 7.3 | **MkDocs build test** | Run `mkdocs build --strict` in CI to catch broken pages | 30 min | PENDING |
-| 7.4 | **Playbook dry-run test** | Validate playbook step execution without LLM calls | 1 hr | PENDING |
+| 7.1 | **Cross-reference test** | Verify internal markdown links between templates resolve | 1 hr | DONE |
+| 7.2 | **MkDocs build test** | Run `mkdocs build --strict` in CI to catch broken pages | 30 min | DONE |
+| 7.3 | **Playbook dry-run test** | Validate playbook step execution without LLM calls | 1 hr | DONE |
+| 7.4 | **Template polish** | Fix frontmatter in 44 templates (prerequisites, skills_gained, descriptions) | 2 hrs | DONE |
 
 ---
 
-## Phase 8: Polish & Package 🎁
+## Phase 8: Polish & Release 🎁
 
 *Goal: Professional product ready for distribution*
 
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
-| 8.1 | **Testimonial/Case Study template** | Social proof for prospects | 2 hrs | PENDING |
-| 8.2 | **Mermaid diagrams in key templates** | Visual richness in strategy, recruitment, enablement | 2 hrs | PENDING |
-| 8.3 | **PDF Export Script polish** | Clean PDF output for offline use | 2 hrs | PENDING |
-| 8.4 | **Package as .zip polish** | Clean distribution package | 1 hr | PENDING |
-| 8.5 | **Video Walkthroughs** | For key templates | 8 hrs | PENDING |
+| 8.1 | **Template Frontmatter Polish** | Fix 44 templates with missing/empty fields | 2 hrs | DONE |
+| 8.2 | **Test Suite Polish** | Enable skipped tests, reach 78+ passing | 1 hr | DONE |
+| 8.3 | **Release v1.4** | Final validation, CHANGELOG, tag | 30 min | PENDING |
 
 ---
 
@@ -152,6 +150,10 @@
 
 | Item | Date |
 |------|------|
+| Version 1.4 Release | Feb 20, 2026 |
+| Test Suite Expansion (43 → 80 tests) | Feb 20, 2026 |
+| Phase 6 Complete (4 index pages, nav updates) | Feb 20, 2026 |
+| Template Frontmatter Polish (44 templates) | Feb 20, 2026 |
 | Documentation refresh (CLAUDE.md, README, BACKLOG, CHANGELOG, ARCHITECTURE, IMPROVEMENT_PLAN) | Feb 21, 2026 |
 | Full test suite + UI/UX audit | Feb 21, 2026 |
 | Partner Memory (tier, health, notes, milestones) | Feb 20, 2026 |

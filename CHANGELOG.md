@@ -1,11 +1,17 @@
 # PartnerOS CHANGELOG
 
-## Version 1.4 (2026-02-20) - Navigation & Test Expansion
+## Version 1.4 (2026-02-20) - Navigation, Test Expansion & Polish
 
 ### Phase 6: Navigation & Index Pages
 - **NEW**: Created 4 section index pages: `security/`, `operations/`, `executive/`, `analysis/`
 - **NEW**: Added all index pages to `mkdocs.yml` nav
 - **NEW**: Added orphaned files to nav: `first-partner-path.md`, `licensing.md`, `partner-os-one-pager.md`
+
+### Phase 7: Test Expansion
+- **NEW**: Added 3 new tests:
+  - `test_mkdocs_build_succeeds` - Validates mkdocs build runs without errors
+  - `test_no_orphaned_md_files` - Verifies no .md files outside known directories
+  - `test_all_required_frontmatter_fields` - Validates all 17 frontmatter fields present
 
 ### Test Suite Expansion
 - **NEW**: Added 26+ quality tests covering:
@@ -56,7 +62,7 @@
 
 ### Test Metrics
 - **Before**: 43 tests (43 passing)
-- **After**: 80 tests (78 passing, 2 skipped)
+- **After**: 81 tests (79 passing, 2 skipped)
 - All tests passing, lint clean, mkdocs builds clean
 
 ---

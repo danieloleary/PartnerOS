@@ -1569,3 +1569,91 @@ def test_index_pages_have_frontmatter():
 
         if "title:" not in content:
             assert False, f"{f.name} missing title in frontmatter"
+
+
+def test_mkdocs_build_succeeds():
+    """Verify mkdocs build runs without errors."""
+    import subprocess
+
+    result = subprocess.run(
+        ["python3", "-m", "mkdocs", "build"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, f"mkdocs build failed: {result.stderr}"
+
+
+def test_no_orphaned_md_files():
+    """Verify no .md files outside of known directories."""
+    docs_dir = REPO_ROOT / "docs"
+
+    known_dirs = {
+        "strategy",
+        "recruitment",
+        "enablement",
+        "legal",
+        "finance",
+        "security",
+        "operations",
+        "executive",
+        "analysis",
+        "agent",
+        "getting-started",
+        "resources",
+        "assets",
+        "stylesheets",
+    }
+    special_files = {"index.md", "404.md", "tags.md"}
+
+    for f in docs_dir.rglob("*.md"):
+        rel_path = f.relative_to(docs_dir)
+        directory = rel_path.parts[0] if len(rel_path.parts) > 1 else None
+
+        if directory and directory not in known_dirs:
+            assert False, f"Orphaned directory: {directory}"
+
+        if f.name not in special_files and not directory:
+            assert False, f"Orphaned file: {f.name}"
+
+
+def test_all_required_frontmatter_fields():
+    """Verify all templates have all 17 required frontmatter fields."""
+    required_fields = {
+        "title",
+        "description",
+        "section",
+        "category",
+        "template_number",
+        "version",
+        "author",
+        "last_updated",
+        "tier",
+        "skill_level",
+        "purpose",
+        "phase",
+        "time_required",
+        "difficulty",
+        "prerequisites",
+        "outcomes",
+        "skills_gained",
+    }
+
+    docs_dir = REPO_ROOT / "docs"
+
+    for f in docs_dir.rglob("*.md"):
+        if f.name in ["index.md", "404.md", "tags.md"]:
+            continue
+        if "agent/" in str(f) or "getting-started/" in str(f):
+            continue
+        if "resources/" in str(f):
+            continue
+
+        content = f.read_text()
+        frontmatter = parse_frontmatter(content)
+        if not frontmatter:
+            continue
+
+        missing = required_fields - set(frontmatter.keys())
+        if missing:
+            assert False, f"{f.name} missing frontmatter fields: {missing}"
