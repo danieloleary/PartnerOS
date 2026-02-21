@@ -26,6 +26,7 @@ from partner_agents.drivers import (
     BuilderAgent,
 )
 from partner_agents import Orchestrator
+from partner_agents import partner_state
 
 # Get API key from environment or use default for testing
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
@@ -139,6 +140,35 @@ async def home():
                 <div class="text-lg mb-1">🔧</div>
                 <div class="font-semibold text-cyan-400 text-sm">Technical</div>
                 <div class="text-xs text-slate-500">Integrations</div>
+            </div>
+        </div>
+
+        <!-- Partners Section -->
+        <div class="mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-white">Partners</h2>
+                <button onclick="showAddPartnerForm()" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg text-sm transition">+ Add Partner</button>
+            </div>
+            <div id="partnersList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="text-slate-400 text-sm">Loading partners...</div>
+            </div>
+        </div>
+
+        <!-- Add Partner Modal -->
+        <div id="addPartnerModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+            <div class="bg-slate-800 rounded-xl p-6 max-w-md w-full mx-4">
+                <h3 class="text-lg font-bold mb-4">Add New Partner</h3>
+                <input id="partnerName" type="text" placeholder="Company Name" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3">
+                <select id="partnerTier" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-3">
+                    <option value="Bronze">Bronze</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                </select>
+                <input id="partnerEmail" type="email" placeholder="Contact Email" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 mb-4">
+                <div class="flex gap-3">
+                    <button onclick="addPartner()" class="flex-1 px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg">Add Partner</button>
+                    <button onclick="hideAddPartnerForm()" class="px-4 py-2 bg-slate-600 hover:bg-slate-500 rounded-lg">Cancel</button>
+                </div>
             </div>
         </div>
 
@@ -273,6 +303,71 @@ async def home():
             const typing = document.getElementById('typing');
             if (typing) typing.remove();
         }
+        
+        // Partner management
+        async function loadPartners() {
+            try {
+                const response = await fetch('/api/partners');
+                const data = await response.json();
+                const container = document.getElementById('partnersList');
+                
+                if (data.partners.length === 0) {
+                    container.innerHTML = '<div class="text-slate-400 text-sm">No partners yet. Add one above!</div>';
+                    return;
+                }
+                
+                container.innerHTML = data.partners.map(p => `
+                    <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <div class="font-semibold text-white">${p.name}</div>
+                                <div class="text-xs text-slate-400">${p.email || 'No email'}</div>
+                            </div>
+                            <span class="px-2 py-1 rounded-full text-xs ${p.tier === 'Gold' ? 'bg-yellow-600' : p.tier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${p.tier}</span>
+                        </div>
+                        <div class="text-xs text-slate-500">${p.deals?.length || 0} deals • ${p.status || 'Onboarding'}</div>
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error('Error loading partners:', e);
+            }
+        }
+        
+        function showAddPartnerForm() {
+            document.getElementById('addPartnerModal').classList.remove('hidden');
+        }
+        
+        function hideAddPartnerForm() {
+            document.getElementById('addPartnerModal').classList.add('hidden');
+        }
+        
+        async function addPartner() {
+            const name = document.getElementById('partnerName').value;
+            const tier = document.getElementById('partnerTier').value;
+            const email = document.getElementById('partnerEmail').value;
+            
+            if (!name) {
+                alert('Please enter a company name');
+                return;
+            }
+            
+            try {
+                await fetch('/api/partners', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({name, tier, email})
+                });
+                hideAddPartnerForm();
+                loadPartners();
+                document.getElementById('partnerName').value = '';
+                document.getElementById('partnerEmail').value = '';
+            } catch (e) {
+                alert('Error adding partner: ' + e.message);
+            }
+        }
+        
+        // Load partners on page load
+        loadPartners();
     </script>
 </body>
 </html>"""
@@ -301,6 +396,36 @@ async def chat(request: Request):
     except Exception as e:
         # Fallback on any error
         return JSONResponse(get_fallback_response(user_message))
+
+
+@app.get("/api/partners")
+async def get_partners():
+    """Get all partners."""
+    partners = partner_state.list_partners()
+    stats = partner_state.get_partner_stats()
+    return JSONResponse({"partners": partners, "stats": stats})
+
+
+@app.post("/api/partners")
+async def create_partner(request: Request):
+    """Create a new partner."""
+    data = await request.json()
+    partner = partner_state.add_partner(
+        name=data.get("name", ""),
+        tier=data.get("tier", "Bronze"),
+        contact=data.get("contact", ""),
+        email=data.get("email", ""),
+    )
+    return JSONResponse(partner)
+
+
+@app.get("/api/partners/{name}")
+async def get_partner(name: str):
+    """Get a specific partner."""
+    partner = partner_state.get_partner(name)
+    if partner:
+        return JSONResponse(partner)
+    return JSONResponse({"error": "Partner not found"}, status_code=404)
 
 
 async def call_llm(message: str, api_key: str) -> dict:

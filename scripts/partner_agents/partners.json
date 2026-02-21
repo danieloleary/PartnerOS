@@ -1,0 +1,14 @@
+[
+  {
+    "id": "partner-1",
+    "name": "Acme Corp",
+    "tier": "Gold",
+    "contact": "",
+    "email": "john@acme.com",
+    "status": "Onboarding",
+    "created_at": "2026-02-20T22:22:08.688633",
+    "deals": [],
+    "campaigns": [],
+    "notes": []
+  }
+]
