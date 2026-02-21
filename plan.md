@@ -212,3 +212,52 @@ These files link to sibling categories without `../`:
 11. Add partner marketing asset templates
 12. Add renewal/retention playbook
 13. Add ISV/tech partner track templates
+
+---
+
+## 9. MULTI-AGENT ARCHITECTURE (NEW - v2.0)
+
+**Date:** February 20, 2026
+
+PartnerOS now includes a multi-agent architecture with 7 specialized agents:
+
+| Agent | Role | Skills | Templates |
+|-------|------|--------|-----------|
+| DAN | The Owner - runs everything | 6 | 6 |
+| ARCHITECT | Partner Program Manager | 6 | 9 |
+| STRATEGIST | Partner Strategy | 5 | 6 |
+| ENGINE | Partner Operations | 5 | 9 |
+| SPARK | Partner Marketing | 5 | 7 |
+| CHAMPION | Partner Leader | 5 | 6 |
+| BUILDER | Partner Technical | 4 | 4 |
+
+**Total: 7 agents | 36 skills | 47 templates**
+
+### Key Features
+
+- **Skill-based collaboration:** Each agent exposes skills other agents can call
+- **Handoff protocol:** Agents can transfer work to each other via orchestrator
+- **Telemetry:** Built-in state tracking for all agent activities
+- **Company-customizable:** Drop-in backgrounds for each agent persona
+- **Backward compatible:** Old `partner_agent/agent.py` still works as standalone
+
+### Files Added
+
+```
+scripts/partner_agents/
+├── __init__.py              # Package exports
+├── base.py                  # BaseAgent class
+├── messages.py              # TeamRadio communication
+├── state.py                 # Telemetry system
+├── orchestrator.py          # Work coordination
+├── config.py                # Team configuration
+└── drivers/
+    ├── __init__.py
+    ├── dan.py              # The Owner
+    ├── architect.py        # Partner Program Manager
+    ├── strategist.py       # Partner Strategy
+    ├── engine.py           # Partner Operations
+    ├── spark.py            # Partner Marketing
+    ├── champion.py         # Partner Leader
+    └── builder.py          # Partner Technical
+```

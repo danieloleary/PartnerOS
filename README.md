@@ -26,9 +26,47 @@ Building a world-class partner program is hard. Most companies:
 |---------|-------------|
 | **Complete Playbooks** | 7 end-to-end automation playbooks covering the entire partner lifecycle |
 | **40 Ready-to-Use Templates** | Strategy (8), recruitment (10), enablement (7), legal (4), finance (3), security (2), operations (4), executive (1), analysis (1) |
+| **Multi-Agent AI Team** | 7 specialized AI agents that collaborate on partner work |
 | **AI-Powered Agent** | Local AI partner assistant runs offline with Ollama — no API keys required |
 | **Enterprise-Ready** | Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths |
 | **Tested & Validated** | Automated template validation and agent tests ensure reliability |
+
+---
+
+## The PartnerOS AI Team
+
+PartnerOS includes a multi-agent system with 7 specialized AI agents that collaborate on partner work:
+
+| Agent | Role | Skills |
+|-------|------|--------|
+| **DAN** | The Owner - runs everything | 6 |
+| **ARCHITECT** | Partner Program Manager | 6 |
+| **STRATEGIST** | Partner Strategy | 5 |
+| **ENGINE** | Partner Operations | 5 |
+| **SPARK** | Partner Marketing | 5 |
+| **CHAMPION** | Partner Leader | 5 |
+| **BUILDER** | Partner Technical | 4 |
+
+**Total: 7 agents | 36 skills | 47 templates**
+
+Each agent has distinct skills and can collaborate with others. The system is company-customizable with drop-in backgrounds.
+
+```python
+from scripts.partner_agents.drivers import DanAgent, ArchitectAgent, etc
+
+# Instantiate the team
+agents = {
+    'dan': DanAgent(),
+    'architect': ArchitectAgent(),
+    # ...
+}
+
+# Call skills
+result = agents['architect'].call_skill('architect_onboard', {
+    'partner_id': 'Acme', 
+    'tier': 'Gold'
+})
+```
 
 ---
 

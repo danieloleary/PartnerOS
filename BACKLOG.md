@@ -191,6 +191,21 @@
 pytest tests/ -v
 ```
 
+### Testing Multi-Agent System
+
+```python
+from scripts.partner_agents.drivers import DanAgent, ArchitectAgent, etc
+
+agents = {
+    'dan': DanAgent(),
+    'architect': ArchitectAgent(),
+    # ...
+}
+
+# Call a skill
+result = agents['architect'].call_skill('architect_onboard', {'partner_id': 'Acme', 'tier': 'Gold'})
+```
+
 ### Generating Template
 
 ```bash
@@ -204,5 +219,21 @@ python scripts/onboard.py
 ```
 
 ---
+
+## Multi-Agent Architecture (v2.0)
+
+Added February 20, 2026:
+
+| Agent | Role | Skills | Templates |
+|-------|------|--------|-----------|
+| DAN | The Owner | 6 | 6 |
+| ARCHITECT | Partner Program Manager | 6 | 9 |
+| STRATEGIST | Partner Strategy | 5 | 6 |
+| ENGINE | Partner Operations | 5 | 9 |
+| SPARK | Partner Marketing | 5 | 7 |
+| CHAMPION | Partner Leader | 5 | 6 |
+| BUILDER | Partner Technical | 4 | 4 |
+
+**Total: 7 agents | 36 skills | 47 templates**
 
 *Backlog managed per ARCHITECTURE.md vision - "Give them the playbook + the coach"*
