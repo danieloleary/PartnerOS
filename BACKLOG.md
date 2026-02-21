@@ -222,18 +222,51 @@ python scripts/onboard.py
 
 ## Multi-Agent Architecture (v2.0)
 
-Added February 20, 2026:
+*Updated: February 21, 2026*
+
+### Team (v2.0 - Role Names)
 
 | Agent | Role | Skills | Templates |
 |-------|------|--------|-----------|
-| DAN | The Owner | 6 | 6 |
-| ARCHITECT | Partner Program Manager | 6 | 9 |
-| STRATEGIST | Partner Strategy | 5 | 6 |
-| ENGINE | Partner Operations | 5 | 9 |
-| SPARK | Partner Marketing | 5 | 7 |
-| CHAMPION | Partner Leader | 5 | 6 |
-| BUILDER | Partner Technical | 4 | 4 |
+| The Owner | Executive | 6 | 6 |
+| Partner Manager | Relationships | 6 | 9 |
+| Strategy | ICP & Tiers | 5 | 6 |
+| Operations | Deals & Comms | 5 | 9 |
+| Marketing | Campaigns | 5 | 7 |
+| Leader | Board & ROI | 5 | 6 |
+| Technical | Integrations | 4 | 4 |
 
 **Total: 7 agents | 36 skills | 47 templates**
+
+### Web UI (v2.1)
+
+*Added: February 21, 2026*
+
+| Feature | Status |
+|---------|--------|
+| Beautiful dark theme | DONE |
+| Responsive design | DONE |
+| Chat interface | DONE |
+| Quick action buttons | DONE |
+| LLM integration (fallback mode) | DONE |
+| OpenRouter API | DONE |
+
+**Run:** `python scripts/partner_agents/web.py`
+
+**Access:** http://localhost:8000
+
+### Tests
+
+| Test Suite | Status |
+|------------|--------|
+| test_templates.py (24 tests) | PASSING |
+| test_agent.py (14 tests) | PASSING |
+| test_onboarding.py (5 tests) | PASSING |
+| test_agents.py (13 tests) | PASSING |
+| test_web.py (3 tests) | PASSING |
+
+**Total: 97 tests passing**
+
+---
 
 *Backlog managed per ARCHITECTURE.md vision - "Give them the playbook + the coach"*
