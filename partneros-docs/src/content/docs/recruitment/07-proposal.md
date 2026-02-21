@@ -303,5 +303,5 @@ The partnership will generate revenue through [specific model], with projected r
 ---
 
 ## Related Templates
-- [Discovery Call Script](04-discovery-call.md)
-- [Partnership Agreement Template](08-agreement.md)
+- [Discovery Call Script]((04-discovery-call.md/))
+- [Partnership Agreement Template]((08-agreement.md/))

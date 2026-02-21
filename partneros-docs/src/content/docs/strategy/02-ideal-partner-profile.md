@@ -296,5 +296,5 @@ Use this template to define the characteristics of ideal partners and create a s
 ---
 
 ## Related Templates
-- [Partner Business Case](01-partner-business-case.md)
-- [3C/4C Evaluation Framework](03-evaluation-framework.md)
+- [Partner Business Case]((01-partner-business-case.md/))
+- [3C/4C Evaluation Framework]((03-evaluation-framework.md/))

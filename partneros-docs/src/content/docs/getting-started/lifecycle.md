@@ -54,13 +54,13 @@ graph TB
 
 | Template | Purpose |
 |----------|---------|
-| [Partner Business Case](../strategy/01-partner-business-case.md) | Justify the investment in partnerships |
-| [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md) | Define your target partner characteristics |
-| [3C/4C Evaluation](../strategy/03-evaluation-framework.md) | Framework for assessing partner fit |
-| [Competitive Differentiation](../strategy/04-competitive-differentiation.md) | Position against competitor programs |
-| [Partner Strategy Plan](../strategy/05-strategy-plan.md) | Overall partnership strategy document |
-| [Program Architecture](../strategy/06-program-architecture.md) | Design tiers, benefits, requirements |
-| [Internal Alignment](../strategy/07-internal-alignment.md) | Get buy-in across your organization |
+| [Partner Business Case]((../strategy/01-partner-business-case.md/)) | Justify the investment in partnerships |
+| [Ideal Partner Profile]((../strategy/02-ideal-partner-profile.md/)) | Define your target partner characteristics |
+| [3C/4C Evaluation]((../strategy/03-evaluation-framework.md/)) | Framework for assessing partner fit |
+| [Competitive Differentiation]((../strategy/04-competitive-differentiation.md/)) | Position against competitor programs |
+| [Partner Strategy Plan]((../strategy/05-strategy-plan.md/)) | Overall partnership strategy document |
+| [Program Architecture]((../strategy/06-program-architecture.md/)) | Design tiers, benefits, requirements |
+| [Internal Alignment]((../strategy/07-internal-alignment.md/)) | Get buy-in across your organization |
 
 !!! tip "Start Here"
     If you're building a partner program from scratch, start with the **Business Case** to align stakeholders, then define your **Ideal Partner Profile**.
@@ -73,16 +73,16 @@ graph TB
 
 | Template | Purpose |
 |----------|---------|
-| [Email Sequences](../recruitment/01-email-sequence.md) | Outreach templates for prospecting |
-| [Outreach Engagement](../recruitment/02-outreach-engagement.md) | Multi-touch engagement cadence |
-| [Qualification Framework](../recruitment/03-qualification-framework.md) | Score and prioritize prospects |
-| [Discovery Call Script](../recruitment/04-discovery-call.md) | Structured qualification call |
-| [Partner Pitch Deck](../recruitment/05-pitch-deck.md) | Present your partner program |
-| [Partnership One-Pager](../recruitment/06-one-pager.md) | Quick overview for prospects |
-| [Proposal Template](../recruitment/07-proposal.md) | Formal partnership proposal |
-| [Agreement Template](../recruitment/08-agreement.md) | Legal partnership agreement |
-| [Onboarding Checklist](../recruitment/09-onboarding.md) | Activation checklist |
-| [ICP Alignment Tracker](../recruitment/10-icp-tracker.md) | Track customer overlap |
+| [Email Sequences]((../recruitment/01-email-sequence.md/)) | Outreach templates for prospecting |
+| [Outreach Engagement]((../recruitment/02-outreach-engagement.md/)) | Multi-touch engagement cadence |
+| [Qualification Framework]((../recruitment/03-qualification-framework.md/)) | Score and prioritize prospects |
+| [Discovery Call Script]((../recruitment/04-discovery-call.md/)) | Structured qualification call |
+| [Partner Pitch Deck]((../recruitment/05-pitch-deck.md/)) | Present your partner program |
+| [Partnership One-Pager]((../recruitment/06-one-pager.md/)) | Quick overview for prospects |
+| [Proposal Template]((../recruitment/07-proposal.md/)) | Formal partnership proposal |
+| [Agreement Template]((../recruitment/08-agreement.md/)) | Legal partnership agreement |
+| [Onboarding Checklist]((../recruitment/09-onboarding.md/)) | Activation checklist |
+| [ICP Alignment Tracker]((../recruitment/10-icp-tracker.md/)) | Track customer overlap |
 
 !!! example "Typical Recruitment Flow"
     ```
@@ -97,13 +97,13 @@ graph TB
 
 | Template | Purpose |
 |----------|---------|
-| [Enablement Roadmap](../enablement/01-roadmap.md) | Plan partner learning journey |
-| [Training Deck](../enablement/02-training-deck.md) | Core training materials |
-| [Certification Program](../enablement/03-certification.md) | Design certification tracks |
-| [Co-Marketing Playbook](../enablement/04-co-marketing.md) | Joint marketing activities |
-| [Technical Integration](../enablement/05-technical-integration.md) | Integration guidance |
-| [Success Metrics](../enablement/06-success-metrics.md) | KPIs and measurement |
-| [QBR Template](../enablement/07-qbr-template.md) | Quarterly business reviews |
+| [Enablement Roadmap]((../enablement/01-roadmap.md/)) | Plan partner learning journey |
+| [Training Deck]((../enablement/02-training-deck.md/)) | Core training materials |
+| [Certification Program]((../enablement/03-certification.md/)) | Design certification tracks |
+| [Co-Marketing Playbook]((../enablement/04-co-marketing.md/)) | Joint marketing activities |
+| [Technical Integration]((../enablement/05-technical-integration.md/)) | Integration guidance |
+| [Success Metrics]((../enablement/06-success-metrics.md/)) | KPIs and measurement |
+| [QBR Template]((../enablement/07-qbr-template.md/)) | Quarterly business reviews |
 
 ---
 
@@ -122,27 +122,27 @@ graph LR
     E --> |Next Quarter| A
 ```
 
-[QBR Template →](../enablement/07-qbr-template.md)
+[QBR Template →]((../enablement/07-qbr-template.md/))
 
 ### Partner Expansion
 
 When a partnership is thriving, use these to grow:
 
-- Update [Partner Strategy Plan](../strategy/05-strategy-plan.md)
-- Expand [Co-Marketing](../enablement/04-co-marketing.md)
-- Deepen [Technical Integration](../enablement/05-technical-integration.md)
+- Update [Partner Strategy Plan]((../strategy/05-strategy-plan.md/))
+- Expand [Co-Marketing]((../enablement/04-co-marketing.md/))
+- Deepen [Technical Integration]((../enablement/05-technical-integration.md/))
 
 ### Partner Exit
 
 When it's time to part ways, do it gracefully:
 
-[Partner Exit Checklist →](../strategy/08-exit-checklist.md)
+[Partner Exit Checklist →]((../strategy/08-exit-checklist.md/))
 
 ---
 
 ## Partner Agent Playbooks
 
-The [Partner Agent](../agent/index.md) automates these workflows:
+The [Partner Agent]((../agent/index.md/)) automates these workflows:
 
 | Playbook | Lifecycle Phase | Templates Used |
 |----------|-----------------|----------------|
@@ -152,4 +152,4 @@ The [Partner Agent](../agent/index.md) automates these workflows:
 | `expand` | Growth | Business Case → Strategy → Co-Marketing |
 | `exit` | Termination | Exit Checklist → Customer Transition |
 
-[Learn about Partner Agent →](../agent/index.md)
+[Learn about Partner Agent →]((../agent/index.md/))

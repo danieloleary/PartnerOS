@@ -69,11 +69,11 @@ graph LR
 
 | Phase | Templates | Timeline |
 |-------|-----------|----------|
-| **Onboard** | [Enablement Roadmap](01-roadmap.md) | Week 1-2 |
-| **Train** | [Training Deck](02-training-deck.md) | Week 2-4 |
-| **Certify** | [Certification Program](03-certification.md) | Week 4-8 |
-| **Launch** | [Co-Marketing](04-co-marketing.md) | Week 6+ |
-| **Ongoing** | [Success Metrics](06-success-metrics.md), [QBR](07-qbr-template.md) | Quarterly |
+| **Onboard** | [Enablement Roadmap](01-roadmap/) | Week 1-2 |
+| **Train** | [Training Deck](02-training-deck/) | Week 2-4 |
+| **Certify** | [Certification Program](03-certification/) | Week 4-8 |
+| **Launch** | [Co-Marketing](04-co-marketing/) | Week 6+ |
+| **Ongoing** | [Success Metrics](06-success-metrics/), [QBR](07-qbr-template/) | Quarterly |
 
 ---
 
@@ -89,7 +89,7 @@ Track these KPIs for each partner:
 | **Revenue** | Partner-influenced closed revenue | Varies by tier |
 | **Engagement Score** | Portal logins, training completion, etc. | > 70% |
 
-[Success Metrics Template →](06-success-metrics.md)
+[Success Metrics Template →]((06-success-metrics.md/))
 
 ---
 
@@ -102,7 +102,7 @@ Track these KPIs for each partner:
 | Silver | Semi-annually | 45 min |
 | Registered | Annually | 30 min |
 
-[QBR Template →](07-qbr-template.md)
+[QBR Template →]((07-qbr-template.md/))
 
 !!! tip "QBR Best Practice"
     Send the QBR document to your partner **one week before** the meeting so they can review data and come prepared.

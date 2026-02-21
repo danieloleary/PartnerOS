@@ -150,7 +150,7 @@ What I find particularly interesting about [Partner Company] is [specific observ
 ## 4. Qualification & Next Steps
 
 ### Key Qualification Criteria
-- Alignment with Ideal Partner Profile (see [ICP Alignment Tracker](10-icp-tracker.md))
+- Alignment with Ideal Partner Profile (see [ICP Alignment Tracker]((10-icp-tracker.md/)))
 - Complementary solutions, market reach, or technical capabilities
 - Willingness and ability to invest in partnership
 - Executive sponsorship and decision-maker engagement
@@ -262,6 +262,6 @@ Follow-up Required:
 ---
 
 ## Related Templates
-- [Partner Qualification Framework](03-qualification-framework.md)
-- [Partnership Proposal Template](07-proposal.md)
-- [ICP Alignment Tracker](10-icp-tracker.md)
+- [Partner Qualification Framework]((03-qualification-framework.md/))
+- [Partnership Proposal Template]((07-proposal.md/))
+- [ICP Alignment Tracker]((10-icp-tracker.md/))

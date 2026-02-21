@@ -156,6 +156,6 @@ Run playbooks directly from GitHub with the click of a button.
 
 ## Next Steps
 
-- [Setup Guide](setup.md) - Detailed installation and configuration
-- [Playbooks](playbooks.md) - Deep dive into each playbook
-- [Configuration](configuration.md) - Customize the agent
+- [Setup Guide]((setup.md/)) - Detailed installation and configuration
+- [Playbooks]((playbooks.md/)) - Deep dive into each playbook
+- [Configuration]((configuration.md/)) - Customize the agent

@@ -90,4 +90,4 @@ A strategic, visually engaging presentation to communicate your partner program'
 ---
 
 ## Related Templates
-- [Partnership One-Pager](06-one-pager.md)
+- [Partnership One-Pager]((06-one-pager.md/))

@@ -63,14 +63,14 @@ Strategy templates help you build the foundation for a successful partner progra
 
 | Situation | Start With |
 |-----------|------------|
-| Building a new partner program | [Partner Business Case](01-partner-business-case.md) |
-| Defining who to recruit | [Ideal Partner Profile](02-ideal-partner-profile.md) |
-| Evaluating a specific partner | [3C/4C Framework](03-evaluation-framework.md) |
-| Selling your program to partners | [Competitive Differentiation](04-competitive-differentiation.md) |
-| Documenting your strategy | [Partner Strategy Plan](05-strategy-plan.md) |
-| Designing tiers and benefits | [Program Architecture](06-program-architecture.md) |
-| Getting internal buy-in | [Internal Alignment](07-internal-alignment.md) |
-| Ending a partnership | [Exit Checklist](08-exit-checklist.md) |
+| Building a new partner program | [Partner Business Case]((01-partner-business-case.md/)) |
+| Defining who to recruit | [Ideal Partner Profile]((02-ideal-partner-profile.md/)) |
+| Evaluating a specific partner | [3C/4C Framework]((03-evaluation-framework.md/)) |
+| Selling your program to partners | [Competitive Differentiation]((04-competitive-differentiation.md/)) |
+| Documenting your strategy | [Partner Strategy Plan]((05-strategy-plan.md/)) |
+| Designing tiers and benefits | [Program Architecture]((06-program-architecture.md/)) |
+| Getting internal buy-in | [Internal Alignment]((07-internal-alignment.md/)) |
+| Ending a partnership | [Exit Checklist]((08-exit-checklist.md/)) |
 
 ---
 

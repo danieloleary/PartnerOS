@@ -83,13 +83,13 @@ graph LR
 
 | Stage | Templates |
 |-------|-----------|
-| **Prospect** | [Qualification Framework](03-qualification-framework.md) |
-| **Outreach** | [Email Sequences](01-email-sequence.md), [Outreach Engagement](02-outreach-engagement.md) |
-| **Discovery** | [Discovery Call Script](04-discovery-call.md) |
-| **Pitch** | [Pitch Deck](05-pitch-deck.md), [One-Pager](06-one-pager.md) |
-| **Proposal** | [Proposal Template](07-proposal.md) |
-| **Agreement** | [Agreement Template](08-agreement.md) |
-| **Onboard** | [Onboarding Checklist](09-onboarding.md) |
+| **Prospect** | [Qualification Framework](03-qualification-framework/) |
+| **Outreach** | [Email Sequences](01-email-sequence/), [Outreach Engagement](02-outreach-engagement/) |
+| **Discovery** | [Discovery Call Script](04-discovery-call/) |
+| **Pitch** | [Pitch Deck](05-pitch-deck/), [One-Pager](06-one-pager/) |
+| **Proposal** | [Proposal Template](07-proposal/) |
+| **Agreement** | [Agreement Template](08-agreement/) |
+| **Onboard** | [Onboarding Checklist](09-onboarding/) |
 
 ---
 
@@ -97,8 +97,8 @@ graph LR
 
 Before investing time in a prospect, verify:
 
-- [ ] Matches [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md)
-- [ ] Passes [3C/4C Evaluation](../strategy/03-evaluation-framework.md)
+- [ ]( Matches [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md/))
+- [ ]( Passes [3C/4C Evaluation](../strategy/03-evaluation-framework.md/))
 - [ ] Has executive sponsor
 - [ ] Willing to commit resources
 - [ ] Strategic fit confirmed

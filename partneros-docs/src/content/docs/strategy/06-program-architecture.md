@@ -240,5 +240,5 @@ Use this template to design and implement a structured partner program that scal
 ---
 
 ## Related Templates
-- [Partner Strategy Plan](05-strategy-plan.md)
-- [Internal Alignment Playbook](07-internal-alignment.md)
+- [Partner Strategy Plan]((05-strategy-plan.md/))
+- [Internal Alignment Playbook]((07-internal-alignment.md/))

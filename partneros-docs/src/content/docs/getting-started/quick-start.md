@@ -62,10 +62,10 @@ branding:
 
 | Your Stage | Start Here |
 |-----------|-----------|
-| No partners yet | [Recruitment templates](../recruitment/index.md) |
-| Need process | [Enablement templates](../enablement/index.md) |
-| Design program | [Strategy templates](../strategy/index.md) |
-| Legal needed | [Legal templates](../legal/index.md) |
+| No partners yet | [Recruitment templates]((../recruitment/index.md/)) |
+| Need process | [Enablement templates]((../enablement/index.md/)) |
+| Design program | [Strategy templates]((../strategy/index.md/)) |
+| Legal needed | [Legal templates]((../legal/index.md/)) |
 
 ---
 
@@ -89,11 +89,11 @@ Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today
 
 ### Recommended Path
 
-1. [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md)
-2. [Email Sequence](../recruitment/01-email-sequence.md)
-3. [Qualification Framework](../recruitment/03-qualification-framework.md)
-4. [Pitch Deck](../recruitment/05-pitch-deck.md)
-5. [Agreement Template](../recruitment/08-agreement.md)
+1. [Ideal Partner Profile]((../strategy/02-ideal-partner-profile.md/))
+2. [Email Sequence]((../recruitment/01-email-sequence.md/))
+3. [Qualification Framework]((../recruitment/03-qualification-framework.md/))
+4. [Pitch Deck]((../recruitment/05-pitch-deck.md/))
+5. [Agreement Template]((../recruitment/08-agreement.md/))
 
 ---
 
@@ -124,18 +124,18 @@ Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today
         ```
 
     4. **Browse templates by category:**
-        - [Strategy](../strategy/index.md) - Program design
-        - [Recruitment](../recruitment/index.md) - Find partners
-        - [Enablement](../enablement/index.md) - Train partners
-        - [Legal](../legal/index.md) - Contracts
-        - [Finance](../finance/index.md) - Commissions
+        - [Strategy]((../strategy/index.md/)) - Program design
+        - [Recruitment]((../recruitment/index.md/)) - Find partners
+        - [Enablement]((../enablement/index.md/)) - Train partners
+        - [Legal]((../legal/index.md/)) - Contracts
+        - [Finance]((../finance/index.md/)) - Commissions
 
     **Best for:** Teams who want to browse and use templates directly.
 
     1. Browse the template sections:
-        - [Strategy](../strategy/index.md) - Define your partnership vision
-        - [Recruitment](../recruitment/index.md) - Find and sign partners
-        - [Enablement](../enablement/index.md) - Train and support partners
+        - [Strategy]((../strategy/index.md/)) - Define your partnership vision
+        - [Recruitment]((../recruitment/index.md/)) - Find and sign partners
+        - [Enablement]((../enablement/index.md/)) - Train and support partners
 
     2. Find a template that fits your need
 
@@ -225,10 +225,10 @@ graph LR
     C --> D[Start Recruiting]
 ```
 
-1. Start with [Partner Business Case](../strategy/01-partner-business-case.md)
-2. Define your [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md)
-3. Design your [Program Architecture](../strategy/06-program-architecture.md)
-4. Begin [Recruitment](../recruitment/index.md)
+1. Start with [Partner Business Case]((../strategy/01-partner-business-case.md/))
+2. Define your [Ideal Partner Profile]((../strategy/02-ideal-partner-profile.md/))
+3. Design your [Program Architecture]((../strategy/06-program-architecture.md/))
+4. Begin [Recruitment]((../recruitment/index.md/))
 
 ### For Signing a Specific Partner
 
@@ -240,16 +240,16 @@ graph LR
     D --> E[Agreement]
 ```
 
-1. Use the [Qualification Framework](../recruitment/03-qualification-framework.md)
-2. Run a [Discovery Call](../recruitment/04-discovery-call.md)
-3. Present the [Pitch Deck](../recruitment/05-pitch-deck.md)
-4. Send a [Proposal](../recruitment/07-proposal.md)
+1. Use the [Qualification Framework]((../recruitment/03-qualification-framework.md/))
+2. Run a [Discovery Call]((../recruitment/04-discovery-call.md/))
+3. Present the [Pitch Deck]((../recruitment/05-pitch-deck.md/))
+4. Send a [Proposal]((../recruitment/07-proposal.md/))
 
 ### For Ongoing Management
 
-- Run quarterly [QBRs](../enablement/07-qbr-template.md)
-- Track [Success Metrics](../enablement/06-success-metrics.md)
-- Update [ICP Alignment](../recruitment/10-icp-tracker.md)
+- Run quarterly [QBRs]((../enablement/07-qbr-template.md/))
+- Track [Success Metrics]((../enablement/06-success-metrics.md/))
+- Update [ICP Alignment]((../recruitment/10-icp-tracker.md/))
 
 ---
 
@@ -262,7 +262,7 @@ graph LR
 ### :material-book-open-variant: Learn the Lifecycle
 Understand the partner journey from strategy to enablement.
 
-[Partner Lifecycle →](lifecycle.md)
+[Partner Lifecycle →]((lifecycle.md/))
 
 </div>
 
@@ -271,7 +271,7 @@ Understand the partner journey from strategy to enablement.
 ### :material-pencil: Customize Templates
 Tips for making templates your own.
 
-[How to Use Templates →](how-to-use.md)
+[How to Use Templates →]((how-to-use.md/))
 
 </div>
 

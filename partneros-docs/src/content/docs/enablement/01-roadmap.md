@@ -119,4 +119,4 @@ Core Sections & Example Prompts (Expanded with Strategic Context):
 ---
 
 ## Related Templates
-- [Partner Training Deck](02-training-deck.md)
+- [Partner Training Deck]((02-training-deck.md/))

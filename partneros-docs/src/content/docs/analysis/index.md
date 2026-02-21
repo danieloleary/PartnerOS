@@ -28,9 +28,9 @@ Analysis templates help you track partner performance, identify at-risk relation
 
 | Situation | Template |
 |-----------|----------|
-| Quarterly partner review | [Health Scorecard](01-health-scorecard.md) |
-| Identify at-risk partners | [Health Scorecard](01-health-scorecard.md) |
-| Plan engagement activities | [Health Scorecard](01-health-scorecard.md) |
+| Quarterly partner review | [Health Scorecard]((01-health-scorecard.md/)) |
+| Identify at-risk partners | [Health Scorecard]((01-health-scorecard.md/)) |
+| Plan engagement activities | [Health Scorecard]((01-health-scorecard.md/)) |
 
 ## Health Scorecard Dimensions
 

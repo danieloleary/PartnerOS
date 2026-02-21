@@ -210,7 +210,7 @@ recommend executive outreach. Next month's focus: [key theme].
 
 ## Related Templates
 
-- [QBR Template](../enablement/07-qbr-template.md)
-- [Partner Health Scorecard](../analysis/01-health-scorecard.md)
-- [Partner Success Metrics](../enablement/06-success-metrics.md)
-- [Weekly Partner Standup](02-weekly-standup.md)
+- [QBR Template]((../enablement/07-qbr-template.md/))
+- [Partner Health Scorecard]((../analysis/01-health-scorecard.md/))
+- [Partner Success Metrics]((../enablement/06-success-metrics.md/))
+- [Weekly Partner Standup]((02-weekly-standup.md/))

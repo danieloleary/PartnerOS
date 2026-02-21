@@ -36,6 +36,37 @@ skills_gained:
   - Confidentiality clauses
 ---
 
+:::tip
+This template is for **Bronze**, **Silver**, and **Gold** tier partners.
+:::
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | L.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | Medium |
+| **Skill Level** | Beginner |
+| **Phase** | Recruitment |
+| **Purpose** | Operational |
+
+## Outcomes
+
+- Signed NDA with potential partner
+- Legal protection for confidential information
+- Clear definition of confidential vs. non-confidential information
+
+## Skills Gained
+
+- Contract basics
+- Legal terminology
+- Confidentiality clauses
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -153,6 +184,6 @@ Date: _______________________
 
 ## Related Templates
 
-- [Partnership Agreement](../recruitment/08-agreement.md)
-- [Proposal Template](../recruitment/07-proposal.md)
-- [Discovery Call Script](../recruitment/04-discovery-call.md)
+- [Partnership Agreement]((../recruitment/08-agreement.md/))
+- [Proposal Template]((../recruitment/07-proposal.md/))
+- [Discovery Call Script]((../recruitment/04-discovery-call.md/))

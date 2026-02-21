@@ -114,5 +114,5 @@ This checklist is designed to operationalize and streamline the ramp-up process 
 ---
 
 ## Related Templates
-- [ICP Alignment Tracker](10-icp-tracker.md)
-- [Partner Recruitment Email Sequence](01-email-sequence.md)
+- [ICP Alignment Tracker]((10-icp-tracker.md/))
+- [Partner Recruitment Email Sequence]((01-email-sequence.md/))
