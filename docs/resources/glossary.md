@@ -1,20 +1,23 @@
 ---
-category: operational
+title: Glossary of Key Terms
+section: Resources
+category: reference
 version: 1.0.0
+last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
-skill_level: intermediate
+  - All
+skill_level: beginner
 purpose: operational
-phase: operational
-time_required: 1-2 hours
+phase: strategy
+time_required: 15 minutes
 difficulty: easy
-prerequisites:
+prerequisites: []
+description: Reference guide for partner program terminology and definitions.
 outcomes:
-  - Completed template
-skills_gained:
+  - Understanding of key partner program terms
+skills_gained: []
+tags: [reference, glossary, terminology]
 ---
 ---
 title: Appendix I: Glossary of Key Terms

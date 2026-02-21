@@ -15,11 +15,11 @@ purpose: operational
 phase: recruitment
 time_required: 2-4 hours
 difficulty: easy
-prerequisites:
-description:
+prerequisites: []
+description: Create professional partnership proposals that clearly communicate value and drive partner engagement.
 outcomes:
   - Completed Partnership Proposal Template
-skills_gained:
+skills_gained: []
 ---
 ## How to Use This Template
 
