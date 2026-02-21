@@ -6,9 +6,10 @@ This file provides guidance for AI assistants working in this repository.
 
 **PartnerOS** is a complete playbook system for building and scaling strategic partnerships, combining:
 
-- 38+ Markdown documentation templates (rendered via MkDocs Material)
+- 40 Markdown documentation templates across 9 categories (rendered via MkDocs Material)
 - An AI-powered Partner Agent (`scripts/partner_agent/agent.py`) supporting local Ollama, Anthropic, and OpenAI
 - 7 automation playbooks covering the full partner lifecycle
+- 12 utility scripts for onboarding, templates, reporting, and packaging
 - GitHub Actions for doc deployment and markdown linting
 
 **Live site:** https://danieloleary.github.io/PartnerOS
@@ -19,17 +20,27 @@ This file provides guidance for AI assistants working in this repository.
 
 ```
 PartnerOS/
-├── docs/                          # MkDocs documentation source (rendered site)
-│   ├── strategy/                  # 9 strategy templates
-│   ├── recruitment/               # 10 recruitment templates
-│   ├── enablement/                # 8 enablement templates
-│   ├── agent/                     # Partner Agent docs
-│   ├── getting-started/           # Quick start, lifecycle, how-to-use
-│   ├── resources/                 # Glossary, maturity model
-│   └── stylesheets/extra.css      # Custom CSS overrides
+├── docs/                          # MkDocs documentation source (61 .md files)
+│   ├── index.md                   # Homepage with hero, stats, lifecycle cards
+│   ├── 404.md                     # Custom 404 page
+│   ├── tags.md                    # Auto-generated tag browsing page
+│   ├── strategy/                  # 8 strategy templates + index
+│   ├── recruitment/               # 10 recruitment templates + index
+│   ├── enablement/                # 7 enablement templates + index
+│   ├── legal/                     # 4 legal templates + index (NDA, MSA, DPA, SLA)
+│   ├── finance/                   # 3 finance templates + index (commission, rebate, revenue share)
+│   ├── security/                  # 2 security templates (questionnaire, SOC2) — missing index
+│   ├── operations/                # 4 operations templates (deal reg, standup, report, portal) — missing index
+│   ├── executive/                 # 1 executive template (board deck) — missing index
+│   ├── analysis/                  # 1 analysis template (health scorecard) — missing index
+│   ├── agent/                     # 5 Partner Agent docs + index
+│   ├── getting-started/           # 4 guides (quick-start, lifecycle, how-to-use, first-partner-path)
+│   ├── resources/                 # 4 docs (glossary, maturity-model, licensing, one-pager)
+│   ├── assets/                    # logo.svg, favicon.svg
+│   └── stylesheets/extra.css      # Custom CSS overrides (257 lines)
 ├── scripts/
 │   ├── partner_agent/             # AI Partner Agent
-│   │   ├── agent.py               # Main agent (1 file, ~775 lines)
+│   │   ├── agent.py               # Main agent (~985 lines)
 │   │   ├── config.yaml            # Agent configuration
 │   │   ├── .env.example           # Environment variable template
 │   │   ├── requirements.txt       # Python dependencies
@@ -44,19 +55,28 @@ PartnerOS/
 │   │   ├── partner_agent/         # Python package wrapper
 │   │   │   └── __init__.py        # Re-exports PartnerAgent from agent.py
 │   │   └── state/                 # Partner session state (gitignored)
-│   ├── standardize_templates.py   # Bulk frontmatter standardization
-│   ├── generate_template.py        # CLI template generator
 │   ├── onboard.py                 # Company onboarding setup
-│   ├── fill_template.py          # Replace {{variables}} in templates
-│   ├── lint_markdown.py           # Custom markdown linter
+│   ├── fill_template.py           # Replace {{variables}} in templates
+│   ├── generate_template.py       # CLI template generator
+│   ├── generate_report.py         # Partner report generation
 │   ├── generate_file_list.py      # Template inventory generator
+│   ├── standardize_templates.py   # Bulk frontmatter standardization
 │   ├── manage_templates.py        # Template management utilities
-│   └── update_keywords.py         # YAML frontmatter keyword updater
+│   ├── update_keywords.py         # YAML frontmatter keyword updater
+│   ├── lint_markdown.py           # Custom markdown linter
+│   ├── demo_mode.py               # Pre-filled demo company data
+│   ├── export_pdf.py              # Markdown to PDF conversion
+│   └── package_zip.py             # Package repo as distributable .zip
+├── examples/                      # Example fills and test data
+│   ├── complete-examples/         # Fully filled template examples
+│   ├── demo-company/              # Fake company data for demos
+│   └── test-partner/              # TechStart Inc test case
 ├── tests/
-│   ├── test_templates.py          # Template structure/frontmatter tests
-│   ├── test_agent.py              # Agent unit tests (sanitization, path validation)
+│   ├── test_templates.py          # Template structure/frontmatter tests (24 tests)
+│   ├── test_agent.py              # Agent unit tests (14 tests)
+│   ├── test_onboarding.py         # Onboarding flow tests (5 tests)
 │   └── requirements.txt           # Test dependencies (pytest, pyyaml)
-├── site/                          # Built MkDocs output (gitignored in practice)
+├── site/                          # Built MkDocs output (gitignored)
 ├── .github/workflows/
 │   ├── deploy-docs.yml            # Deploys docs to GitHub Pages on push to main
 │   ├── markdown_lint.yml          # Runs markdown linter on all *.md changes
@@ -65,6 +85,9 @@ PartnerOS/
 ├── requirements.txt               # Python deps for MkDocs (mkdocs-material, etc.)
 ├── package.json                   # Node.js: npm run lint:md → python lint script
 ├── CHANGELOG.md                   # Version history
+├── IMPROVEMENT_PLAN.md            # Audit findings and improvement roadmap
+├── BACKLOG.md                     # Prioritized feature backlog
+├── ARCHITECTURE.md                # Architecture decisions and philosophy
 ├── README.md                      # Project overview
 ├── Example_Partner_Plan.md        # Sample partner plan document
 └── PartnerOS_Assistant_Agent_Design.md  # Agent architecture design doc
@@ -148,9 +171,10 @@ python3 tests/test_templates.py
 python3 tests/test_agent.py
 ```
 
-### Test Suite (20 tests)
+### Test Suite (43 tests)
 
-**Tier 1 - Critical:**
+**Template Tests (`test_templates.py` — 24 tests):**
+
 - `test_templates_exist` - At least 1 template exists
 - `test_templates_have_frontmatter` - All .md files have YAML frontmatter
 - `test_frontmatter_schema_validation` - 17 required fields present
@@ -158,20 +182,38 @@ python3 tests/test_agent.py
 - `test_folder_structure` - All directories exist
 - `test_playbook_template_references` - Playbooks reference existing templates
 - `test_frontmatter_yaml_parseable` - No YAML syntax errors
-
-**Tier 2 - Site/Docs/Architecture:**
 - `test_config_yaml_valid` - config.yaml has required fields
 - `test_playbook_yaml_schema` - All playbooks valid schema
 - `test_no_duplicate_template_titles` - No duplicate titles
 - `test_template_files_have_content` - Templates not empty
 - `test_mkdocs_yml_valid` - mkdocs.yml parses
-
-**Agent Tests:**
-- `test_agent_import` - Agent.py compiles without errors
+- `test_scripts_exist` - Utility scripts present
+- `test_onboard_script_valid` - onboard.py compiles
+- `test_fill_template_script_valid` - fill_template.py compiles
+- `test_demo_mode_script_valid` - demo_mode.py compiles
+- `test_export_pdf_script_valid` - export_pdf.py compiles
+- `test_package_zip_script_valid` - package_zip.py compiles
+- `test_package_zip_produces_output` - ZIP packaging works
+- `test_examples_directory` - examples/ structure exists
+- `test_docs_structure` - docs/ directory structure valid
+- `test_playbooks_exist` - All 7 playbooks present
 - `test_env_example_exists` - .env.example has required vars
+
+**Agent Tests (`test_agent.py` — 14 tests):**
+
+- `test_agent_import` - Agent.py compiles without errors
 - `test_partner_sanitization` - Partner name validation works
 - `test_path_validation` - Path traversal prevented
 - `test_slugify` - URL slug generation works
+- Plus 10 agent superpower tests (memory, recommendations, tier guidance, email, reporting)
+
+**Onboarding Tests (`test_onboarding.py` — 5 tests):**
+
+- `test_onboarding_path_document_exists` - First partner path doc exists
+- `test_test_partner_directory_exists` - Test partner data exists
+- `test_onboarding_templates_have_frontmatter` - Onboarding docs have frontmatter
+- `test_getting_started_folder_structure` - Getting started folder valid
+- `test_examples_directory_structure` - Examples directory structure valid
 
 ### Markdown Linting
 
@@ -189,16 +231,27 @@ python3 scripts/lint_markdown.py
 
 ### Markdown Templates (docs/)
 
-Every `.md` file in `docs/` **must** start with YAML frontmatter:
+Every `.md` file in `docs/` **must** start with YAML frontmatter. The standardized schema includes 17 fields:
 
 ```yaml
 ---
 title: Template Title
-section: Strategy          # or Recruitment, Enablement, etc.
+description: Brief description of this template's purpose.
+section: Strategy          # Strategy, Recruitment, Enablement, Legal, Finance, Security, Operations, Executive, Analysis
+category: strategic        # strategic, operational, tactical, legal, financial, security, executive, analytical
 template_number: I.1       # Roman numeral section + number
-last_updated: 2024-06-10
-description: >
-  Brief description of this template's purpose.
+version: "1.0.0"
+author: PartnerOS Team
+last_updated: 2026-02-20
+tier: Silver               # Bronze, Silver, Gold
+skill_level: intermediate  # beginner, intermediate, advanced
+purpose: strategic         # tactical, strategic, operational
+phase: recruitment         # recruitment, onboarding, enablement, growth, retention, exit
+time_required: "2-3 hours"
+difficulty: medium         # easy, medium, hard
+prerequisites: []
+outcomes: [Expected outcome 1, Expected outcome 2]
+skills_gained: [Skill 1, Skill 2]
 tags: [strategy, business-case]
 ---
 ```
@@ -325,47 +378,92 @@ Linting runs on every `*.md` push via `markdown_lint.yml`.
 
 ---
 
-## Template Categories
+## Template Categories (40 templates across 9 categories)
 
-### Strategy Templates (`docs/strategy/`)
-
-| # | Template | Purpose |
-|---|---|---|
-| 1 | Partner Business Case | Business justification for a partnership |
-| 2 | Ideal Partner Profile | Define target partner characteristics |
-| 3 | 3C/4C Evaluation Framework | Structured partner scoring |
-| 4 | Competitive Differentiation | Position vs. competitors |
-| 5 | Partner Strategy Plan | Full GTM strategy |
-| 6 | Program Architecture | Bronze/Silver/Gold tier design |
-| 7 | Internal Alignment Playbook | Stakeholder buy-in |
-| 8 | Partner Exit Checklist | Graceful partner offboarding |
-
-### Recruitment Templates (`docs/recruitment/`)
+### Strategy Templates (`docs/strategy/`) — 8 templates
 
 | # | Template | Purpose |
 |---|---|---|
-| 1 | Email Sequence | Cold outreach cadence |
-| 2 | Outreach/Engagement Sequence | Multi-touch engagement |
-| 3 | Qualification Framework | Scoring potential partners |
-| 4 | Discovery Call Script | First-call structure |
-| 5 | Partner Pitch Deck | Slide deck outline |
-| 6 | Partnership One-Pager | Executive summary leave-behind |
-| 7 | Proposal Template | Formal partnership proposal |
-| 8 | Agreement Template | Contract structure |
-| 9 | Onboarding Checklist | New partner activation steps |
-| 10 | ICP Alignment Tracker | Ideal customer profile tracking |
+| I.1 | Partner Business Case | Business justification for a partnership |
+| I.2 | Ideal Partner Profile | Define target partner characteristics |
+| I.3 | 3C/4C Evaluation Framework | Structured partner scoring |
+| I.4 | Competitive Differentiation | Position vs. competitors |
+| I.5 | Partner Strategy Plan | Full GTM strategy |
+| I.6 | Program Architecture | Bronze/Silver/Gold tier design |
+| I.7 | Internal Alignment Playbook | Stakeholder buy-in |
+| I.8 | Partner Exit Checklist | Graceful partner offboarding |
 
-### Enablement Templates (`docs/enablement/`)
+### Recruitment Templates (`docs/recruitment/`) — 10 templates
 
 | # | Template | Purpose |
 |---|---|---|
-| 1 | Enablement Roadmap | Training timeline |
-| 2 | Training Deck | Partner training materials |
-| 3 | Certification Program | Partner certification structure |
-| 4 | Co-Marketing Playbook | Joint marketing campaigns |
-| 5 | Technical Integration Guide | Integration documentation |
-| 6 | Partner Success Metrics | KPI tracking framework |
+| II.1 | Email Sequence | Cold outreach cadence |
+| II.2 | Outreach/Engagement Sequence | Multi-touch engagement |
+| II.3 | Qualification Framework | Scoring potential partners |
+| II.4 | Discovery Call Script | First-call structure |
+| II.5 | Partner Pitch Deck | Slide deck outline |
+| II.6 | Partnership One-Pager | Executive summary leave-behind |
+| II.7 | Proposal Template | Formal partnership proposal |
+| II.8 | Agreement Template | Contract structure |
+| II.9 | Onboarding Checklist | New partner activation steps |
+| II.10 | ICP Alignment Tracker | Ideal customer profile tracking |
+
+### Enablement Templates (`docs/enablement/`) — 7 templates
+
+| # | Template | Purpose |
+|---|---|---|
+| III.1 | Enablement Roadmap | Training timeline |
+| III.2 | Training Deck | Partner training materials |
+| III.3 | Certification Program | Partner certification structure |
+| III.4 | Co-Marketing Playbook | Joint marketing campaigns |
+| III.5 | Technical Integration Guide | Integration documentation |
+| III.6 | Partner Success Metrics | KPI tracking framework |
 | III.7 | QBR Template | Quarterly business review |
+
+### Legal Templates (`docs/legal/`) — 4 templates
+
+| # | Template | Purpose |
+|---|---|---|
+| L.1 | Mutual NDA | Non-disclosure agreement |
+| L.2 | Master Service Agreement | Service contract framework |
+| L.3 | Data Processing Agreement | Data handling and GDPR compliance |
+| L.4 | SLA Template | Service level agreement |
+
+### Finance Templates (`docs/finance/`) — 3 templates
+
+| # | Template | Purpose |
+|---|---|---|
+| F.1 | Commission Structure | Partner commission tiers and payouts |
+| F.2 | Rebate Program | Volume-based partner incentives |
+| F.3 | Revenue Sharing Model | Joint revenue partnership models |
+
+### Security Templates (`docs/security/`) — 2 templates
+
+| # | Template | Purpose |
+|---|---|---|
+| S.1 | Security Questionnaire | Partner security assessment |
+| S.2 | SOC 2 Compliance Guide | Compliance requirements and checklist |
+
+### Operations Templates (`docs/operations/`) — 4 templates
+
+| # | Template | Purpose |
+|---|---|---|
+| O.1 | Deal Registration Policy | Rules, eligibility, conflict resolution |
+| O.2 | Weekly Partner Standup | Weekly team sync agenda |
+| O.3 | Monthly Partner Report | Roll-up metrics and dashboard |
+| O.4 | Partner Portal Guide | PRM system setup and usage |
+
+### Executive Templates (`docs/executive/`) — 1 template
+
+| # | Template | Purpose |
+|---|---|---|
+| X.1 | Board Deck | Quarterly board update on partner program |
+
+### Analysis Templates (`docs/analysis/`) — 1 template
+
+| # | Template | Purpose |
+|---|---|---|
+| A.1 | Partner Health Scorecard | Quarterly partner assessment and scoring |
 
 ---
 
@@ -402,7 +500,7 @@ QBR frequency by tier: Gold → quarterly, Silver → semi-annually, Bronze → 
 
 ### Adding a New Source Template
 
-1. Add the `.md` file to the relevant `docs/` subdirectory (strategy, recruitment, enablement)
+1. Add the `.md` file to the relevant `docs/` subdirectory (strategy, recruitment, enablement, legal, finance, security, operations, executive, analysis)
 2. Reference it in a playbook step's `template` field if applicable
 3. Ensure the file has YAML frontmatter
 

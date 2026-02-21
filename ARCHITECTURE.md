@@ -1,5 +1,5 @@
 # PartnerOS Architecture
-*Last Updated: February 20, 2026*
+*Last Updated: February 21, 2026*
 
 ---
 
@@ -30,32 +30,41 @@ PartnerOS is designed to be dropped into any company and immediately provide a w
 
 ```
 PartnerOS/
-├── docs/                          # Templates (the core product)
-│   ├── strategy/                  # Strategy templates (8)
-│   ├── recruitment/              # Recruitment templates (10)
-│   ├── enablement/               # Enablement templates (7)
-│   ├── legal/                    # Legal templates (4)
-│   ├── finance/                 # Finance templates (1+)
-│   ├── security/                 # Security templates (1+)
-│   ├── getting-started/         # Onboarding docs
-│   ├── agent/                    # Agent docs
-│   └── resources/               # Reference docs
-├── examples/                     # Example fills (what good looks like)
-│   ├── complete-examples/        # Fully filled templates
-│   └── demo-company/            # Fake company data for demos
+├── docs/                          # Templates (the core product) — 40 templates, 61 .md files
+│   ├── strategy/                  # Strategy templates (8) + index
+│   ├── recruitment/               # Recruitment templates (10) + index
+│   ├── enablement/                # Enablement templates (7) + index
+│   ├── legal/                     # Legal templates (4) + index
+│   ├── finance/                   # Finance templates (3) + index
+│   ├── security/                  # Security templates (2)
+│   ├── operations/                # Operations templates (4)
+│   ├── executive/                 # Executive templates (1)
+│   ├── analysis/                  # Analysis templates (1)
+│   ├── getting-started/           # Onboarding docs (4)
+│   ├── agent/                     # Agent docs (5) + index
+│   └── resources/                 # Reference docs (4)
+├── examples/                      # Example fills (what good looks like)
+│   ├── complete-examples/         # Fully filled templates
+│   ├── demo-company/              # Fake company data for demos
+│   └── test-partner/              # TechStart Inc test case
 ├── scripts/
-│   ├── partner_agent/           # The AI agent
-│   │   ├── agent.py            # Main agent
-│   │   ├── config.yaml         # Agent configuration
-│   │   └── playbooks/          # 7 playbook definitions
-│   ├── generate_template.py     # Create new templates
-│   ├── standardize_templates.py # Fix frontmatter
-│   └── onboard.py              # Company onboarding script
-├── .company-config/             # Company customization (gitignored)
-│   └── customize.yaml          # Their company name, logo, colors
-├── tests/                      # Quality gates (20 tests)
-├── mkdocs.yml                  # Documentation site config
-└── README.md                   # Entry point
+│   ├── partner_agent/             # The AI agent
+│   │   ├── agent.py               # Main agent (~985 lines)
+│   │   ├── config.yaml            # Agent configuration
+│   │   └── playbooks/             # 7 playbook definitions
+│   ├── onboard.py                 # Company onboarding script
+│   ├── fill_template.py           # Template variable replacement
+│   ├── generate_template.py       # Create new templates
+│   ├── generate_report.py         # Partner report generation
+│   ├── standardize_templates.py   # Fix frontmatter
+│   ├── demo_mode.py               # Demo mode with fake data
+│   ├── export_pdf.py              # Markdown to PDF conversion
+│   └── package_zip.py             # Package as distributable .zip
+├── .company-config/               # Company customization (gitignored)
+│   └── customize.yaml             # Their company name, logo, colors
+├── tests/                         # Quality gates (43 tests)
+├── mkdocs.yml                     # Documentation site config
+└── README.md                      # Entry point
 ```
 
 ---
@@ -70,7 +79,7 @@ These elements are owned by PartnerOS and should not be modified by using compan
 | Agent Playbooks | 7 core playbooks (recruit, onboard, QBR, etc.) |
 | Best Practices | Proven processes and frameworks |
 | Agent Instructions | How the AI guides users |
-| Test Suite | 20 automated quality tests |
+| Test Suite | 43 automated quality tests |
 
 ---
 
@@ -135,12 +144,12 @@ python scripts/fill_template.py --template docs/recruitment/01-email-sequence.md
 - Answer partnership questions
 - Generate custom content
 
-### Planned Features
-- **Partner Memory** - Remember each partner's history
-- **Template Recommendations** - Suggest relevant templates
-- **Tier-Based Guidance** - Different advice for Bronze/Silver/Gold
-- **Email Generation** - Write partner emails
-- **Report Generation** - Create monthly partner reports
+### Completed Features (v1.2)
+- **Partner Memory** - Tier, health_score, notes, milestones persisted per partner
+- **Template Recommendations** - `recommend_templates()` suggests next playbooks by stage + tier
+- **Tier-Based Guidance** - Tier config (Gold/Silver/Bronze) wired into every LLM system prompt
+- **Email Generation** - `generate_email()` + interactive menu option
+- **Report Generation** - `scripts/generate_report.py` for markdown partner reports
 
 ---
 
@@ -181,12 +190,12 @@ python scripts/fill_template.py --template docs/recruitment/01-email-sequence.md
 
 ## Quality Assurance
 
-### Test Suite (20 tests)
-- Frontmatter validation
-- Template references
-- Playbook schema
-- YAML parsing
-- Content checks
+### Test Suite (43 tests)
+- Template structure and frontmatter validation (24 tests)
+- Agent unit tests — security, imports, superpowers (14 tests)
+- Onboarding flow tests (5 tests)
+- Playbook schema and references
+- Script compilation checks
 
 ### CI/CD
 - Tests run on every push
