@@ -187,21 +187,8 @@ async def home():
     </div>
 
     <script>
-        // Default API key (can be overridden by user input)
-        let apiKey = '';
-        
-        // Check for saved key or prompt
-        const savedKey = localStorage.getItem('partneros_api_key');
-        if (savedKey) {
-            apiKey = savedKey;
-        }
-        
-        if (!apiKey) {
-            apiKey = prompt('Enter your OpenRouter API key (or press enter to use default):');
-            if (apiKey) {
-                localStorage.setItem('partneros_api_key', apiKey);
-            }
-        }
+        // Hardcoded API key for testing
+        let apiKey = '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';
 
         async function sendMessage(text) {
             const input = document.getElementById('messageInput');
@@ -305,12 +292,14 @@ async def chat(request: Request):
             }
         )
 
-    # Route to LLM - but always fallback for reliability
+    # Try LLM first, fallback on error
     try:
         response = await call_llm(user_message, api_key)
-        return JSONResponse(response)
+        if response.get("response"):
+            return JSONResponse(response)
+        raise Exception("Empty response")
     except Exception as e:
-        # Always fallback on any error
+        # Fallback on any error
         return JSONResponse(get_fallback_response(user_message))
 
 
