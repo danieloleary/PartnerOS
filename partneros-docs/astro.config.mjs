@@ -16,7 +16,10 @@ export default defineConfig({
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/danieloleary/PartnerOS' },
 				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://linkedin.com/in/danieloleary' },
 			],
-		sidebar: [
+			customCss: [
+				'./src/content/docs/stylesheets/extra.css',
+			],
+			sidebar: [
 			{ label: 'Getting Started', autogenerate: { directory: 'getting-started' } },
 			{ label: 'Strategy', autogenerate: { directory: 'strategy' } },
 			{ label: 'Recruitment', autogenerate: { directory: 'recruitment' } },

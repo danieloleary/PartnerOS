@@ -1,49 +1,110 @@
-/* PartnerOS Custom Styles for Starlight */
+/* PartnerOS Custom Styles - Modern Slate/Enterprise Theme */
 
-/* Primary brand colors - Teal + Coral theme */
+/* ============================================
+   MODERN SLATE COLOR PALETTE
+   Inspired by Stripe, Linear, Raycast
+   ============================================ */
+
 :root {
-	--sl-color-accent-low: #134e4a;
-	--sl-color-accent: #0d9488;
-	--sl-color-accent-high: #5eead4;
-	--sl-color-white: #f0fdfa;
-	--sl-color-gray-1: #ccfbf1;
-	--sl-color-gray-2: #99f6e4;
-	--sl-color-gray-3: #5eead4;
-	--sl-color-gray-4: #2dd4bf;
-	--sl-color-gray-5: #14b8a6;
-	--sl-color-gray-6: #0f766e;
-	--sl-color-black: #042f2e;
+	/* Primary - Indigo (Trust + Authority) */
+	--sl-color-accent-low: #312e81;
+	--sl-color-accent: #6366f1;
+	--sl-color-accent-high: #a5b4fc;
+	
+	/* Neutrals - Slate (Professional) */
+	--sl-color-white: #f8fafc;
+	--sl-color-gray-1: #f1f5f9;
+	--sl-color-gray-2: #e2e8f0;
+	--sl-color-gray-3: #cbd5e1;
+	--sl-color-gray-4: #94a3b8;
+	--sl-color-gray-5: #64748b;
+	--sl-color-gray-6: #475569;
+	--sl-color-black: #0f172a;
+	
+	/* Success - Emerald (Growth + Revenue) */
+	--sl-color-success-low: #064e3b;
+	--sl-color-success: #10b981;
+	--sl-color-success-high: #6ee7b7;
+	
+	/* Warning - Amber */
+	--sl-color-warning-low: #78350f;
+	--sl-color-warning: #f59e0b;
+	--sl-color-warning-high: #fcd34d;
+	
+	/* Error - Rose */
+	--sl-color-error-low: #881337;
+	--sl-color-error: #f43f5e;
+	--sl-color-error-high: #fda4af;
 }
 
-/* Dark mode adjustments */
+/* Dark mode enhancements */
 [data-theme='dark'] {
-	--sl-color-accent-low: #134e4a;
-	--sl-color-accent: #2dd4bf;
-	--sl-color-accent-high: #5eead4;
+	--sl-color-bg: #0f172a;
+	--sl-color-bg-nav: #0f172a;
+	--sl-color-bg-sidebar: #0f172a;
+	--sl-color-hairline: #1e293b;
+	--sl-color-hairline-light: #334155;
+	
+	/* Surface colors for depth */
+	--sl-color-gray-7: #1e293b;
+	--sl-color-gray-8: #1e293b;
+	--sl-color-gray-9: #0f172a;
 }
 
-/* Card improvements */
+/* ============================================
+   TYPOGRAPHY - Executive Tech Look
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+	--sl-font-system: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--sl-font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+body {
+	font-family: var(--sl-font-system);
+	font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* Code blocks get JetBrains Mono */
+.sl-markdown-content pre {
+	font-family: var(--sl-font-mono) !important;
+	font-size: 0.875rem;
+}
+
+/* ============================================
+   GLASSMORPHISM CARDS
+   ============================================ */
+
 .sl-markdown-content .card {
-	border-radius: 12px;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	border: 1px solid var(--sl-color-gray-5);
+	background: rgba(30, 41, 59, 0.6) !important;
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 12px !important;
+	transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .sl-markdown-content .card:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	transform: translateY(-4px);
+	border-color: var(--sl-color-accent) !important;
+	box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
 }
 
-/* Card Grid stagger animation */
+/* ============================================
+   CARD GRID ANIMATIONS
+   ============================================ */
+
 .sl-markdown-content CardGrid[stagger] > * {
-	animation: cardFadeIn 0.4s ease-out forwards;
+	animation: cardFadeIn 0.5s ease-out forwards;
 	opacity: 0;
 }
 
 @keyframes cardFadeIn {
 	from {
 		opacity: 0;
-		transform: translateY(10px);
+		transform: translateY(16px);
 	}
 	to {
 		opacity: 1;
@@ -51,67 +112,200 @@
 	}
 }
 
-/* Template badges styling */
-.sl-markdown-content .card .tip {
-	margin-top: 0.75rem;
-	padding: 0.5rem;
-	background: var(--sl-color-accent-low);
-	border-radius: 6px;
-	font-size: 0.8rem;
-}
+/* Stagger delay for grid items */
+.sl-markdown-content CardGrid[stagger] > *:nth-child(1) { animation-delay: 0ms; }
+.sl-markdown-content CardGrid[stagger] > *:nth-child(2) { animation-delay: 50ms; }
+.sl-markdown-content CardGrid[stagger] > *:nth-child(3) { animation-delay: 100ms; }
+.sl-markdown-content CardGrid[stagger] > *:nth-child(4) { animation-delay: 150ms; }
+.sl-markdown-content CardGrid[stagger] > *:nth-child(5) { animation-delay: 200ms; }
+.sl-markdown-content CardGrid[stagger] > *:nth-child(6) { animation-delay: 250ms; }
 
-/* Hero section improvements */
+/* ============================================
+   HERO SECTION - Modern Gradient
+   ============================================ */
+
 .sl-markdown-content > h1 {
 	font-size: 2.5rem;
 	font-weight: 700;
-	background: linear-gradient(135deg, #0d9488 0%, #f97316 100%);
+	background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 50%, #10b981 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
+	letter-spacing: -0.02em;
 }
 
-/* Link styling in cards */
+/* ============================================
+   SIDEBAR - Active Page Glow
+   ============================================ */
+
+nav.sidebar a[aria-current="page"] {
+	background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, transparent 100%);
+	border-left: 2px solid var(--sl-color-accent);
+}
+
+/* Sidebar depth */
+nav.sidebar {
+	background: linear-gradient(180deg, #0f172a 0%, #0f172a 100%);
+}
+
+/* ============================================
+   TEMPLATE BADGES - Enhanced
+   ============================================ */
+
+.sl-markdown-content .card .tip {
+	margin-top: 0.75rem;
+	padding: 0.5rem 0.75rem;
+	background: rgba(99, 102, 241, 0.15);
+	border: 1px solid rgba(99, 102, 241, 0.3);
+	border-radius: 6px;
+	font-size: 0.8rem;
+	color: var(--sl-color-accent-high);
+}
+
+/* ============================================
+   LINK STYLING
+   ============================================ */
+
 .sl-markdown-content .card a {
 	color: var(--sl-color-accent);
 	font-weight: 600;
+	transition: color 0.15s ease;
 }
 
 .sl-markdown-content .card a:hover {
-	text-decoration: underline;
+	color: var(--sl-color-accent-high);
+	text-decoration: none;
 }
 
-/* Improve table styling */
+/* ============================================
+   TABLES - Modern Styling
+   ============================================ */
+
 .sl-markdown-content table {
 	width: 100%;
 	border-collapse: collapse;
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 .sl-markdown-content th {
-	background: var(--sl-color-accent-low);
+	background: rgba(99, 102, 241, 0.15);
+	font-weight: 600;
+	text-align: left;
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Admonition improvements */
+.sl-markdown-content td {
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sl-markdown-content tr:hover td {
+	background: rgba(99, 102, 241, 0.05);
+}
+
+/* ============================================
+   ADMONITIONS - Enhanced
+   ============================================ */
+
 .sl-markdown-content .tip {
 	border-left-color: var(--sl-color-accent);
+	background: rgba(16, 185, 129, 0.1);
 }
 
-/* Mermaid diagram styling */
+.sl-markdown-content .caution {
+	border-left-color: var(--sl-color-warning);
+	background: rgba(245, 158, 11, 0.1);
+}
+
+/* ============================================
+   CODE BLOCKS - JetBrains Mono
+   ============================================ */
+
+.sl-markdown-content pre {
+	background: #1e293b !important;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	font-family: var(--sl-font-mono);
+}
+
+.sl-markdown-content code {
+	font-family: var(--sl-font-mono);
+	background: rgba(99, 102, 241, 0.15);
+	padding: 0.125rem 0.375rem;
+	border-radius: 4px;
+	font-size: 0.875em;
+}
+
+/* ============================================
+   MERMAID DIAGRAMS
+   ============================================ */
+
 .sl-markdown-content pre.mermaid {
-	background: var(--sl-color-gray-6);
+	background: #1e293b;
 	padding: 1rem;
 	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive adjustments */
+/* ============================================
+   PROGRESS INDICATOR - Steps Enhancement
+   ============================================ */
+
+.sl-markdown-content steps {
+	border-inline-start: 2px solid var(--sl-color-gray-5);
+	padding-inline-start: 2rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
 @media (max-width: 768px) {
 	.sl-markdown-content > h1 {
 		font-size: 1.75rem;
 	}
+	
+	.sl-markdown-content .card:hover {
+		transform: translateY(-2px);
+	}
 }
 
-/* Print styles */
+/* ============================================
+   PRINT
+   ============================================ */
+
 @media print {
 	.sl-markdown-content .card {
 		break-inside: avoid;
 	}
+}
+
+/* ============================================
+   SELECTION
+   ============================================ */
+
+::selection {
+	background: rgba(99, 102, 241, 0.3);
+	color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #334155;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #475569;
 }
