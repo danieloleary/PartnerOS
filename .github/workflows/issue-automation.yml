@@ -1,0 +1,32 @@
+name: Issue Automation
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  close-issue:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close linked issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            
+            // Find issue references in PR body (Fixes #123, Closes #123, etc.)
+            const issueMatch = body.match(/(fixes|closes|resolves)\s+#(\d+)/i);
+            
+            if (issueMatch) {
+              const issueNumber = issueMatch[2];
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber,
+                state: 'closed',
+                state_reason: 'completed'
+              });
+              console.log(`Closed issue #${issueNumber}`);
+            }
