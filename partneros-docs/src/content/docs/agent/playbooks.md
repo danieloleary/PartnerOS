@@ -57,7 +57,7 @@ graph LR
 
 ---
 
-## Recruit {#recruit}
+## Recruit
 
 **Purpose:** Take a partner prospect from qualification through signed agreement.
 
@@ -115,7 +115,7 @@ python agent.py --playbook recruit --partner "Acme Corp"
 
 ---
 
-## Onboard {#onboard}
+## Onboard
 
 **Purpose:** Activate a newly signed partner with training and first wins.
 
@@ -172,7 +172,7 @@ python agent.py --playbook onboard --partner "Acme Corp"
 
 ---
 
-## QBR {#qbr}
+## QBR
 
 **Purpose:** Conduct a structured quarterly business review.
 
@@ -224,7 +224,7 @@ python agent.py --playbook qbr --partner "Acme Corp"
 
 ---
 
-## Expand {#expand}
+## Expand
 
 **Purpose:** Deepen investment in a successful partnership.
 
@@ -281,7 +281,7 @@ python agent.py --playbook expand --partner "Acme Corp"
 
 ---
 
-## Exit {#exit}
+## Exit
 
 **Purpose:** End a partnership professionally while protecting customers.
 

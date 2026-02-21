@@ -25,28 +25,11 @@ This file provides guidance for AI assistants working in this repository.
 
 ```
 PartnerOS/
-├── partneros-docs/                  # Starlight/Astro docs site (NEW!)
-│   ├── src/content/docs/           # Documentation source (~65 .md files)
+├── partneros-docs/                  # Starlight/Astro docs site
+│   ├── src/content/docs/           # Documentation source (~65 .md/.mdx files)
 │   ├── astro.config.mjs            # Starlight configuration
 │   └── dist/                       # Built static site
-├── docs/                           # Legacy MkDocs source (being migrated)
-│   ├── index.md                    # Homepage with hero, stats, lifecycle cards
-│   ├── 404.md                      # Custom 404 page
-│   ├── tags.md                     # Auto-generated tag browsing page
-│   ├── strategy/                    # 8 strategy templates + index
-│   ├── recruitment/                 # 10 recruitment templates + index
-│   ├── enablement/                 ment templates + index # 7 enable
-│   ├── legal/                      # 4 legal templates + index (NDA, MSA, DPA, SLA)
-│   ├── finance/                    # 3 finance templates + index (commission, rebate, revenue share)
-│   ├── security/                   # 2 security templates (questionnaire, SOC2) — missing index
-│   ├── operations/                 # 4 operations templates (deal reg, standup, report, portal) — missing index
-│   ├── executive/                  # 1 executive template (board deck) — missing index
-│   ├── analysis/                   # 1 analysis template (health scorecard) — missing index
-│   ├── agent/                      # 5 Partner Agent docs + index
-│   ├── getting-started/            # 4 guides (quick-start, lifecycle, how-to-use, first-partner-path)
-│   ├── resources/                  # 4 docs (glossary, maturity-model, licensing, one-pager)
-│   ├── assets/                     # logo.svg, favicon.svg
-│   └── stylesheets/extra.css       # Custom CSS overrides
+├── docs/                           # Symlink → partneros-docs/src/content/docs
 ├── scripts/
 │   ├── partner_agent/             # AI Partner Agent
 │   │   ├── agent.py               # Main agent (~985 lines)
@@ -120,19 +103,6 @@ npm run dev
 npm run build
 
 # Deploys to https://danieloleary.github.io/PartnerOS/ on push to main
-```
-
-### Legacy: MkDocs (being migrated)
-
-```bash
-# Install docs dependencies
-pip install mkdocs-material mkdocs-minify-plugin pillow cairosvg
-
-# Preview locally (hot reload at http://localhost:8000)
-mkdocs serve
-
-# Build static site to site/
-mkdocs build
 ```
 
 ### Partner Agent
@@ -211,7 +181,7 @@ python3 tests/test_agent.py
 - `test_playbook_yaml_schema` - All playbooks valid schema
 - `test_no_duplicate_template_titles` - No duplicate titles
 - `test_template_files_have_content` - Templates not empty
-- `test_mkdocs_yml_valid` - mkdocs.yml parses
+- `test_starlight_docs_exist` - Starlight docs directory exists
 - `test_scripts_exist` - Utility scripts present
 - `test_onboard_script_valid` - onboard.py compiles
 - `test_fill_template_script_valid` - fill_template.py compiles
@@ -220,7 +190,7 @@ python3 tests/test_agent.py
 - `test_package_zip_script_valid` - package_zip.py compiles
 - `test_package_zip_produces_output` - ZIP packaging works
 - `test_examples_directory` - examples/ structure exists
-- `test_docs_structure` - docs/ directory structure valid
+- `test_starlight_index_mdx` - Starlight index.mdx exists
 - `test_playbooks_exist` - All 7 playbooks present
 - `test_env_example_exists` - .env.example has required vars
 
@@ -232,7 +202,7 @@ python3 tests/test_agent.py
 - `test_slugify` - URL slug generation works
 - Plus 10 agent superpower tests (memory, recommendations, tier guidance, email, reporting)
 
-**Onboarding Tests (`test_onboarding.py` — 5 tests):**
+**Onboarding Tests (`test_onboarding.py` — 6 tests):**
 
 - `test_onboarding_path_document_exists` - First partner path doc exists
 - `test_test_partner_directory_exists` - Test partner data exists
@@ -371,14 +341,14 @@ All agent output goes through `_print()`, `_print_error()`, `_print_success()`, 
 
 | Workflow | Trigger | What it does |
 |---|---|---|
-| `deploy-docs.yml` | Push to `main` (docs/** or mkdocs.yml) | Builds MkDocs site, deploys to GitHub Pages |
+| `deploy-docs.yml` | Push to `main` (partneros-docs/** or astro.config.mjs) | Builds Starlight site, deploys to GitHub Pages |
 | `markdown_lint.yml` | Push/PR touching `*.md` | Runs `scripts/lint_markdown.py` via `npm run lint:md` |
 | `run_partner_agent.yml` | Manual (`workflow_dispatch`) | Runs a specific playbook + partner via GitHub Actions |
 
 ### Deploy Docs Requirements
 
+- Node.js 20+
 - Python 3.11
-- `mkdocs-material`, `mkdocs-minify-plugin`, `pillow`, `cairosvg`
 - Pushes to `main` only; requires `contents: read`, `pages: write`, `id-token: write` permissions
 
 ### Manual Agent Workflow Inputs
@@ -510,10 +480,10 @@ QBR frequency by tier: Gold → quarterly, Silver → semi-annually, Bronze → 
 
 ### Adding a New Documentation Template
 
-1. Create a `.md` file in the appropriate `docs/` subdirectory
+1. Create a `.md` file in the appropriate `partneros-docs/src/content/docs/` subdirectory
 2. Add YAML frontmatter at the top (required — CI will fail without it)
-3. Add the file to `mkdocs.yml` under the appropriate `nav` section
-4. Run `mkdocs serve` locally to verify rendering
+3. Starlight automatically includes it in the sidebar via `autogenerate` in `astro.config.mjs`
+4. Run `cd partneros-docs && npm run dev` locally to verify rendering
 
 ### Adding a New Playbook
 
@@ -525,7 +495,7 @@ QBR frequency by tier: Gold → quarterly, Silver → semi-annually, Bronze → 
 
 ### Adding a New Source Template
 
-1. Add the `.md` file to the relevant `docs/` subdirectory (strategy, recruitment, enablement, legal, finance, security, operations, executive, analysis)
+1. Add the `.md` file to the relevant `partneros-docs/src/content/docs/` subdirectory (strategy, recruitment, enablement, legal, finance, security, operations, executive, analysis)
 2. Reference it in a playbook step's `template` field if applicable
 3. Ensure the file has YAML frontmatter
 

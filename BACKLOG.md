@@ -271,8 +271,9 @@ python scripts/onboard.py
 | test_links.py (9 tests) | PASSING |
 | test_content.py (8 tests) | PASSING |
 | test_build.py (7 tests) | PASSING (3 skipped) |
+| test_deployed_links.py (6 tests) | PASSING |
 
-**Total: 124 tests passing, 3 skipped**
+**Total: 130 tests passing, 3 skipped**
 
 ---
 
@@ -331,6 +332,63 @@ The system currently runs in **fallback mode** - responses are generated locally
 | 10.6 | **Cross-Reference Audit** | Templates link to related templates appropriately | 2 hrs | PENDING |
 | 10.7 | **Legal/Compliance Review** | Legal templates reviewed by counsel | 8 hrs | PENDING |
 | 10.8 | **Example Fills** | Add filled examples for each template category | 8 hrs | PENDING |
+
+---
+
+## Version 1.5: Stabilization Release 📦
+
+*Released: February 21, 2026*
+*Goal: Stabilize docs, fix links, clean up anchors*
+
+### Changes in v1.5
+
+| # | Item | Status |
+|---|------|--------|
+| 1 | Migrate from MkDocs to Starlight-only | DONE |
+| 2 | Fix relative links (works in local + deployed) | DONE |
+| 3 | Add site config for proper URL generation | DONE |
+| 4 | Add test_deployed_links.py (6 tests) | DONE |
+| 5 | Add CI pre-build link validation | DONE |
+| 6 | Remove anchor ID conflicts ({#anchor}) | DONE |
+| 7 | Update CLAUDE.md for Starlight | DONE |
+| 8 | Clean up trailing whitespace | DONE |
+
+### Test Suite (v1.5)
+
+| Test Suite | Status |
+|------------|--------|
+| test_templates.py (35 tests) | PASSING |
+| test_agent.py (14 tests) | PASSING |
+| test_onboarding.py (6 tests) | PASSING |
+| test_agents_comprehensive.py (40 tests) | PASSING |
+| test_web_comprehensive.py (15 tests) | PASSING |
+| test_starlight.py (14 tests) | PASSING |
+| test_links.py (9 tests) | PASSING |
+| test_content.py (8 tests) | PASSING |
+| test_build.py (7 tests) | PASSING (3 skipped) |
+| test_deployed_links.py (6 tests) | PASSING |
+
+**Total: 130 tests passing, 3 skipped**
+
+---
+
+## Version 1.6: Future 🚀
+
+*Goal: Web UI enhancements and deeper integration*
+
+### Planned Items
+
+| Priority | Item | Description |
+|----------|------|-------------|
+| P1 | Real Agent Logic | Connect agent skills to `partner_state.py` |
+| P1 | Web UI Orchestration | Use `Orchestrator` in `web.py` to dispatch agent skills |
+| P1 | Partner Onboarding Flow | Full onboarding workflow in UI |
+| P2 | State Unification | Merge CLI `state/` and Web `partners.json` storage |
+| P2 | UI Markdown Rendering | Cleanly render LLM responses in Web UI |
+| P2 | Fix LLM Output Formatting | Make responses cleaner/compact |
+| P2 | More Actions | Add clickable actions (QBR, ICP, etc) |
+| P3 | Interactive Web Playbooks | Port CLI playbook engine to Web UI |
+| P3 | Landing Page | Product-ready page for selling |
 
 ---
 
