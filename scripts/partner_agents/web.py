@@ -31,7 +31,7 @@ from partner_agents import Orchestrator
 MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
 OPENROUTER_API_KEY = os.environ.get(
     "OPENROUTER_API_KEY",
-    "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",
+    "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",
 )
 
 app = FastAPI(title="PartnerOS")
@@ -337,7 +337,7 @@ Be helpful, concise, and actionable."""
                     "Content-Type": "application/json",
                 },
                 json={
-                    "model": "google/gemini-2.0-flash-001",
+                    "model": "minimax/minimax-m2.5",
                     "messages": [
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": message},
