@@ -218,16 +218,20 @@ async def home():
             showTyping();
             
             try {
+                console.log('Sending message:', message, 'API key:', apiKey ? 'present' : 'missing');
                 const response = await fetch('/chat', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({message, apiKey})
+                    body: JSON.stringify({message: message, apiKey: apiKey || ''})
                 });
                 
+                console.log('Response status:', response.status);
                 const data = await response.json();
+                console.log('Response data:', data);
                 hideTyping();
                 addMessage(data.response, 'assistant', data.agent);
             } catch (e) {
+                console.error('Error:', e);
                 hideTyping();
                 addMessage('Error: ' + e.message, 'assistant');
             }
@@ -302,12 +306,13 @@ async def chat(request: Request):
             }
         )
 
-    # Route to LLM
+    # Route to LLM - but always fallback for reliability
     try:
         response = await call_llm(user_message, api_key)
         return JSONResponse(response)
     except Exception as e:
-        return JSONResponse({"response": f"Error: {str(e)}", "agent": "system"})
+        # Always fallback on any error
+        return JSONResponse(get_fallback_response(user_message))
 
 
 async def call_llm(message: str, api_key: str) -> dict:
