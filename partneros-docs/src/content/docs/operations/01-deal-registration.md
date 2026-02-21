@@ -37,6 +37,34 @@ skills_gained:
   - Conflict resolution
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | O.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | beginner |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Clear registration rules and deadlines
+- Defined protection periods by tier
+- Channel conflict resolution process
+
+## Skills Gained
+
+- Channel operations
+- Pipeline management
+- Conflict resolution
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -206,7 +234,7 @@ or partner agreement termination.
 
 ## Related Templates
 
-- [Partner Commission Structure]((../finance/01-commission.md/))
-- [ICP Alignment Tracker]((../recruitment/10-icp-tracker.md/))
-- [Partner Success Metrics]((../enablement/06-success-metrics.md/))
-- [Partnership Agreement]((../recruitment/08-agreement.md/))
+- [Partner Commission Structure](../finance/01-commission.md/)
+- [ICP Alignment Tracker](../recruitment/10-icp-tracker.md/)
+- [Partner Success Metrics](../enablement/06-success-metrics.md/)
+- [Partnership Agreement](../recruitment/08-agreement.md/)

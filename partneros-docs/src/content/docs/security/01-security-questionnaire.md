@@ -36,6 +36,34 @@ skills_gained:
   - Risk evaluation
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | S.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | medium |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Security assessment completed
+- Risk areas identified
+- Compliance verification
+
+## Skills Gained
+
+- Security assessment
+- Compliance verification
+- Risk evaluation
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -254,6 +282,6 @@ Use this questionnaire to assess the security posture of partners before grantin
 
 ## Related Templates
 
-- [Mutual NDA]((../legal/01-nda.md/))
-- [Data Processing Agreement]((../legal/03-dpa.md/))
-- [SOC2 Compliance Guide]((02-soc2-compliance.md/))
+- [Mutual NDA](../legal/01-nda.md/)
+- [Data Processing Agreement](../legal/03-dpa.md/)
+- [SOC2 Compliance Guide](02-soc2-compliance.md/)

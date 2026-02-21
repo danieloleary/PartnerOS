@@ -51,10 +51,10 @@ graph LR
 
 | Stage | Template | When to Use |
 |-------|----------|-------------|
-| **Initial Discussions** | [Mutual NDA]((01-nda.md/)) | Before sharing confidential information |
-| **Formal Partnership** | [Master Service Agreement]((02-msa.md/)) | When signing a partner |
-| **Data Sharing** | [Data Processing Agreement]((03-dpa.md/)) | When processing personal data |
-| **Support Commitments** | [Service Level Agreement]((04-sla.md/)) | For Silver and Gold tier partners |
+| **Initial Discussions** | [Mutual NDA](01-nda.md/) | Before sharing confidential information |
+| **Formal Partnership** | [Master Service Agreement](02-msa.md/) | When signing a partner |
+| **Data Sharing** | [Data Processing Agreement](03-dpa.md/) | When processing personal data |
+| **Support Commitments** | [Service Level Agreement](04-sla.md/) | For Silver and Gold tier partners |
 
 ---
 

@@ -21,6 +21,30 @@ outcomes:
 - Completed Discovery Call Script Template
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.4 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Discovery Call Script Template
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -150,7 +174,7 @@ What I find particularly interesting about [Partner Company] is [specific observ
 ## 4. Qualification & Next Steps
 
 ### Key Qualification Criteria
-- Alignment with Ideal Partner Profile (see [ICP Alignment Tracker]((10-icp-tracker.md/)))
+- Alignment with Ideal Partner Profile (see [ICP Alignment Tracker](10-icp-tracker.md/))
 - Complementary solutions, market reach, or technical capabilities
 - Willingness and ability to invest in partnership
 - Executive sponsorship and decision-maker engagement
@@ -262,6 +286,6 @@ Follow-up Required:
 ---
 
 ## Related Templates
-- [Partner Qualification Framework]((03-qualification-framework.md/))
-- [Partnership Proposal Template]((07-proposal.md/))
-- [ICP Alignment Tracker]((10-icp-tracker.md/))
+- [Partner Qualification Framework](03-qualification-framework.md/)
+- [Partnership Proposal Template](07-proposal.md/)
+- [ICP Alignment Tracker](10-icp-tracker.md/)

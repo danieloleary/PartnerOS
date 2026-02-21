@@ -28,6 +28,30 @@ outcomes:
 - Completed Partner QBR Template (Quarterly Business Review)
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.7 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner QBR Template (Quarterly Business Review)
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -379,6 +403,6 @@ Use this template to conduct structured quarterly business reviews with your par
 
 ## Related Templates
 
-- [Partner Success Metrics]((06-success-metrics.md/))
-- [ICP Alignment Tracker]((../recruitment/10-icp-tracker.md/))
-- [Partner Program Charter]((../strategy/06-program-architecture.md/))
+- [Partner Success Metrics](06-success-metrics.md/)
+- [ICP Alignment Tracker](../recruitment/10-icp-tracker.md/)
+- [Partner Program Charter](../strategy/06-program-architecture.md/)

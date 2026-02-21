@@ -21,6 +21,30 @@ outcomes:
 - Completed Partner Onboarding Checklist
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.9 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Onboarding Checklist
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -114,5 +138,5 @@ This checklist is designed to operationalize and streamline the ramp-up process 
 ---
 
 ## Related Templates
-- [ICP Alignment Tracker]((10-icp-tracker.md/))
-- [Partner Recruitment Email Sequence]((01-email-sequence.md/))
+- [ICP Alignment Tracker](10-icp-tracker.md/)
+- [Partner Recruitment Email Sequence](01-email-sequence.md/)

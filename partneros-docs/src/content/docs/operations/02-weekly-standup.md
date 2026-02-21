@@ -36,6 +36,34 @@ skills_gained:
   - Meeting facilitation
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | O.2 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 0.5 hours |
+| **Difficulty** | easy |
+| **Skill Level** | beginner |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Consistent pipeline visibility
+- Early blocker identification
+- Clear weekly action items
+
+## Skills Gained
+
+- Partner relationship management
+- Pipeline cadence
+- Meeting facilitation
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -159,7 +187,7 @@ every active deal, the meeting failed.
 
 ## Related Templates
 
-- [Monthly Partner Report]((03-monthly-report.md/))
-- [QBR Template]((../enablement/07-qbr-template.md/))
-- [Deal Registration Policy]((01-deal-registration.md/))
-- [Partner Success Metrics]((../enablement/06-success-metrics.md/))
+- [Monthly Partner Report](03-monthly-report.md/)
+- [QBR Template](../enablement/07-qbr-template.md/)
+- [Deal Registration Policy](01-deal-registration.md/)
+- [Partner Success Metrics](../enablement/06-success-metrics.md/)

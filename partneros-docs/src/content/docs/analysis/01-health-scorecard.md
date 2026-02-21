@@ -38,6 +38,34 @@ skills_gained:
   - Data-driven partner management
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | A.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 1-2 hours per partner |
+| **Difficulty** | medium |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Composite health score (0–100) per partner
+- Identified churn risks
+- Recommended actions by health category
+
+## Skills Gained
+
+- Partner health analysis
+- Churn prevention
+- Data-driven partner management
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -253,7 +281,7 @@ Score each dimension 0–20 based on the criteria below.
 
 ## Related Templates
 
-- [Monthly Partner Report]((../operations/03-monthly-report.md/))
-- [QBR Template]((../enablement/07-qbr-template.md/))
-- [Partner Success Metrics]((../enablement/06-success-metrics.md/))
-- [Board Deck — Partner Program]((../executive/01-board-deck.md/))
+- [Monthly Partner Report](../operations/03-monthly-report.md/)
+- [QBR Template](../enablement/07-qbr-template.md/)
+- [Partner Success Metrics](../enablement/06-success-metrics.md/)
+- [Board Deck — Partner Program](../executive/01-board-deck.md/)

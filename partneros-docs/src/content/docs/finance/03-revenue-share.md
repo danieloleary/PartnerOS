@@ -38,6 +38,34 @@ skills_gained:
   - Partner governance
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | F.3 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 3-4 hours |
+| **Difficulty** | hard |
+| **Skill Level** | advanced |
+| **Phase** | enablement |
+| **Purpose** | strategic |
+
+## Outcomes
+
+- Defined revenue split percentages
+- Clear attribution methodology
+- Governance and dispute resolution process
+
+## Skills Gained
+
+- Joint venture structuring
+- Revenue attribution
+- Partner governance
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -222,7 +250,7 @@ are grounds for renegotiation or termination.
 
 ## Related Templates
 
-- [Partner Commission Structure]((01-commission.md/))
-- [Partner Rebate Program]((02-rebate.md/))
-- [Partnership Agreement]((../recruitment/08-agreement.md/))
-- [QBR Template]((../enablement/07-qbr-template.md/))
+- [Partner Commission Structure](01-commission.md/)
+- [Partner Rebate Program](02-rebate.md/)
+- [Partnership Agreement](../recruitment/08-agreement.md/)
+- [QBR Template](../enablement/07-qbr-template.md/)

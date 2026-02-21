@@ -21,6 +21,30 @@ outcomes:
 - Completed Partner Training Deck (Comprehensive & Engaging)
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.2 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 4-8 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Training Deck (Comprehensive & Engaging)
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -138,4 +162,4 @@ Core Slides & Enhanced Prompts/Content:
 ---
 
 ## Related Templates
-- [Partner Enablement Roadmap]((01-roadmap.md/))
+- [Partner Enablement Roadmap](01-roadmap.md/)

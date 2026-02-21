@@ -829,37 +829,94 @@ def test_template_files_not_empty():
 
 
 def test_no_broken_internal_links():
-    """Verify internal markdown links resolve to existing files."""
-    pytest.skip(
-        "Skipping - too many false positives with directory-style links in mkdocs"
-    )
+    """Verify internal markdown links resolve to existing files.
+
+    This test checks that links in markdown files point to existing files.
+    Supports both legacy .md links and Starlight folder-style links.
+    """
     import re
 
-    docs_dir = REPO_ROOT / "docs"
-
-    all_files = set()
-    for f in docs_dir.rglob("*.md"):
-        rel = str(f.relative_to(docs_dir))
-        all_files.add(rel)
+    # Check both docs/ (legacy) and partneros-docs/ (Starlight)
+    docs_dirs = [
+        REPO_ROOT / "docs",
+        REPO_ROOT / "partneros-docs" / "src" / "content" / "docs",
+    ]
 
     failures = []
 
-    for f in docs_dir.rglob("*.md"):
-        content = f.read_text()
-        links = re.findall(r"\[([^\]]+)\]\(([^)]+)\)", content)
+    for docs_dir in docs_dirs:
+        if not docs_dir.exists():
+            continue
 
-        for text, link in links:
-            if link.startswith(("http:", "https:", "mailto:", "#", "/")):
-                continue
-            if ".." in link:
-                continue
+        # Build a lookup of all files by basename (for relative link resolution)
+        all_files = {}
+        all_folders = set()
+        for f in docs_dir.rglob("*.md"):
+            rel = str(f.relative_to(docs_dir))
+            basename = rel.rsplit("/", 1)[-1]
+            folder = rel.rsplit("/", 1)[0] if "/" in rel else ""
 
-            link_clean = link.rstrip("/")
-            if not link_clean.endswith(".md"):
-                link_clean += ".md"
+            # Track folders
+            if folder:
+                all_folders.add(folder)
 
-            if link_clean not in all_files:
-                failures.append(f"{f.relative_to(docs_dir)}: broken link to {link}")
+            if basename not in all_files:
+                all_files[basename] = []
+            all_files[basename].append(rel)
+            # Also add folder-style versions
+            if basename.endswith(".md"):
+                folder_name = basename[:-3]
+                if folder_name not in all_files:
+                    all_files[folder_name] = []
+                all_files[folder_name].append(rel)
+
+        for f in docs_dir.rglob("*.md"):
+            content = f.read_text()
+            links = re.findall(r"\[([^\]]+)\]\(([^)]+)\)", content)
+
+            for text, link in links:
+                # Skip external links
+                if any(
+                    link.startswith(prefix)
+                    for prefix in ("http:", "https:", "mailto:", "/", "#")
+                ):
+                    continue
+
+                # Normalize link
+                link_clean = link.rstrip("/")
+
+                # Handle Starlight folder-style: filename.md/ -> filename
+                if link_clean.endswith(".md/"):
+                    link_clean = link_clean[:-1]
+
+                # Get the basename of the link
+                link_basename = link_clean.rsplit("/", 1)[-1]
+
+                # Check if we have this file
+                found = False
+
+                # Direct match
+                if link_clean in all_files:
+                    found = True
+                # Match by basename
+                elif link_basename in all_files:
+                    found = True
+                # Try with .md extension
+                elif link_basename + ".md" in all_files:
+                    found = True
+                # Try folder style (for Starlight)
+                elif link_basename.endswith(".md"):
+                    folder_name = link_basename[:-3]
+                    if folder_name in all_files:
+                        found = True
+                # Check if it's a folder link (e.g., "recruitment" -> recruitment/index.md)
+                elif link_clean in all_folders:
+                    found = True
+                elif link_basename in all_folders:
+                    found = True
+
+                if not found:
+                    failures.append(f"{f.relative_to(docs_dir)}: broken link to {link}")
 
     assert len(failures) == 0, f"Broken links:\n" + "\n".join(failures)
 

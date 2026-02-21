@@ -36,6 +36,34 @@ skills_gained:
   - Escalation management
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | L.4 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | medium |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Clear support expectations
+- Defined response times by severity
+- Escalation procedures
+
+## Skills Gained
+
+- SLA structuring
+- Support metrics
+- Escalation management
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -228,6 +256,6 @@ Date: _______________________
 
 ## Related Templates
 
-- [Master Service Agreement]((02-msa.md/))
-- [Partner Success Metrics]((../enablement/06-success-metrics.md/))
-- [QBR Template]((../enablement/07-qbr-template.md/))
+- [Master Service Agreement](02-msa.md/)
+- [Partner Success Metrics](../enablement/06-success-metrics.md/)
+- [QBR Template](../enablement/07-qbr-template.md/)

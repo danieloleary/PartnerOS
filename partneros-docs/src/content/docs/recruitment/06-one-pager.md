@@ -24,6 +24,30 @@ outcomes:
 - Completed Partnership One-Pager (Concise Value Proposition)
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.6 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partnership One-Pager (Concise Value Proposition)
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -261,6 +285,6 @@ A succinct, compelling "leave-behind" or introductory document that quickly comm
 ---
 
 ## Related Templates
-- [Partner Pitch Deck]((05-pitch-deck.md/))
-- [Partnership Proposal Template]((07-proposal.md/))
-- [Recruitment Email Sequence]((01-email-sequence.md/))
+- [Partner Pitch Deck](05-pitch-deck.md/)
+- [Partnership Proposal Template](07-proposal.md/)
+- [Recruitment Email Sequence](01-email-sequence.md/)

@@ -21,6 +21,30 @@ outcomes:
 - Completed Partner Strategy Plan Template
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.5 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 8-16 hours |
+| **Difficulty** | hard |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Strategy Plan Template
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -256,5 +280,5 @@ Use this template to develop a comprehensive partner strategy that aligns with b
 ---
 
 ## Related Templates
-- [Partner Business Case]((01-partner-business-case.md/))
-- [Ideal Partner Profile]((02-ideal-partner-profile.md/))
+- [Partner Business Case](01-partner-business-case.md/)
+- [Ideal Partner Profile](02-ideal-partner-profile.md/)

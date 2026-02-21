@@ -35,6 +35,34 @@ skills_gained:
   - Partner program management
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | GS.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 4 weeks |
+| **Difficulty** | easy |
+| **Skill Level** | beginner |
+| **Phase** | onboarding |
+| **Purpose** | operational |
+
+## Outcomes
+
+- First partner signed and onboarded
+- Complete understanding of partner lifecycle
+- Templates customized for your company
+
+## Skills Gained
+
+- Partner recruitment
+- Partner onboarding
+- Partner program management
+
+---
+
 # First Partner Onboarding Path
 
 *The exact 4-week sequence to your first signed partner*
@@ -60,7 +88,7 @@ This path guides you from "no partners" to "first partner signed and onboarded" 
 
 ### Day 1-2: Define Your Ideal Partner
 
-**Template:** [Ideal Partner Profile]((../strategy/02-ideal-partner-profile.md/))
+**Template:** [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md/)
 
 This defines:
 - Company size and type
@@ -72,7 +100,7 @@ This defines:
 
 ### Day 3-4: Build Your Outreach List
 
-**Template:** [ICP Alignment Tracker]((../recruitment/10-icp-tracker.md/))
+**Template:** [ICP Alignment Tracker](../recruitment/10-icp-tracker.md/)
 
 Document:
 - 10-20 potential partners
@@ -81,7 +109,7 @@ Document:
 
 ### Day 5: Create Outreach Templates
 
-**Template:** [Email Sequence]((../recruitment/01-email-sequence.md/))
+**Template:** [Email Sequence](../recruitment/01-email-sequence.md/)
 
 Create:
 - Initial outreach email
@@ -96,7 +124,7 @@ Create:
 
 ### Day 1-2: Qualify Prospects
 
-**Template:** [Qualification Framework]((../recruitment/03-qualification-framework.md/))
+**Template:** [Qualification Framework](../recruitment/03-qualification-framework.md/)
 
 Score each prospect on:
 - Fit score (1-10)
@@ -106,7 +134,7 @@ Score each prospect on:
 
 ### Day 3: Prepare for Discovery Call
 
-**Template:** [Discovery Call Script]((../recruitment/04-discovery-call.md/))
+**Template:** [Discovery Call Script](../recruitment/04-discovery-call.md/)
 
 Customize:
 - Questions to ask
@@ -119,7 +147,7 @@ Customize:
 
 ### Day 5: Prepare Custom Pitch
 
-**Template:** [Partner Pitch Deck]((../recruitment/05-pitch-deck.md/))
+**Template:** [Partner Pitch Deck](../recruitment/05-pitch-deck.md/)
 
 Customize for top prospect:
 - Their pain points
@@ -134,7 +162,7 @@ Customize for top prospect:
 
 ### Day 1-2: Create Proposal
 
-**Template:** [Proposal Template]((../recruitment/07-proposal.md/))
+**Template:** [Proposal Template](../recruitment/07-proposal.md/)
 
 Include:
 - Partnership terms
@@ -161,7 +189,7 @@ Include:
 
 ### Day 1: Sign Agreement
 
-**Template:** [Agreement Template]((../recruitment/08-agreement.md/))
+**Template:** [Agreement Template](../recruitment/08-agreement.md/)
 
 Finalize:
 - Full MSA or partnership agreement
@@ -169,7 +197,7 @@ Finalize:
 
 ### Day 2-3: Onboarding Checklist
 
-**Template:** [Onboarding Checklist]((../recruitment/09-onboarding.md/))
+**Template:** [Onboarding Checklist](../recruitment/09-onboarding.md/)
 
 Complete:
 - Portal access
@@ -178,7 +206,7 @@ Complete:
 
 ### Day 4-5: Enable Partner
 
-**Template:** [Enablement Roadmap]((../enablement/01-roadmap.md/))
+**Template:** [Enablement Roadmap](../enablement/01-roadmap.md/)
 
 Create:
 - 30-60-90 day plan
@@ -230,7 +258,7 @@ The agent will guide you through the recruitment playbook, recommending template
 Start with your existing customers who could become partners, or companies you admire in your space.
 
 ### What if prospects say no?
-Use the [Email Sequence]((../recruitment/01-email-sequence.md/)) follow-ups. Keep building relationships.
+Use the [Email Sequence](../recruitment/01-email-sequence.md/) follow-ups. Keep building relationships.
 
 ### How long should each week take?
 This is a guide - adjust based on your timeline. Some companies do this in 2 weeks, others in 8.
@@ -240,9 +268,9 @@ This is a guide - adjust based on your timeline. Some companies do this in 2 wee
 ## Next Steps
 
 After first partner:
-1. Start QBR process - [QBR Template]((../enablement/07-qbr-template.md/))
-2. Track success - [Success Metrics]((../enablement/06-success-metrics.md/))
-3. Plan expansion - [Expansion Playbook]((../strategy/05-strategy-plan.md/))
+1. Start QBR process - [QBR Template](../enablement/07-qbr-template.md/)
+2. Track success - [Success Metrics](../enablement/06-success-metrics.md/)
+3. Plan expansion - [Expansion Playbook](../strategy/05-strategy-plan.md/)
 
 ---
 

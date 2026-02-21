@@ -36,6 +36,34 @@ skills_gained:
   - Data processing terms
 ---
 
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | L.3 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | hard |
+| **Skill Level** | advanced |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Compliant data processing framework
+- GDPR/privacy compliance documentation
+- Clear data handling responsibilities
+
+## Skills Gained
+
+- Privacy regulations
+- GDPR compliance
+- Data processing terms
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -218,6 +246,6 @@ Date: _______________________
 
 ## Related Templates
 
-- [Mutual NDA]((01-nda.md/))
-- [Master Service Agreement]((02-msa.md/))
-- [Security Questionnaire]((../security/01-security-questionnaire.md/))
+- [Mutual NDA](01-nda.md/)
+- [Master Service Agreement](02-msa.md/)
+- [Security Questionnaire](../security/01-security-questionnaire.md/)

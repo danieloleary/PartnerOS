@@ -28,6 +28,30 @@ outcomes:
 - Completed Partner Exit Checklist (Graceful Partnership Termination)
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.8 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Exit Checklist (Graceful Partnership Termination)
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -509,6 +533,6 @@ Retain the following for [X years] post-exit:
 
 ## Related Templates
 
-- [3C/4C Evaluation Framework]((03-evaluation-framework.md/)) - For evaluating partnerships
-- [Partner Success Metrics]((../enablement/06-success-metrics.md/)) - Performance tracking
-- [Partner Strategy Plan]((05-strategy-plan.md/)) - Strategic context for exits
+- [3C/4C Evaluation Framework](03-evaluation-framework.md/) - For evaluating partnerships
+- [Partner Success Metrics](../enablement/06-success-metrics.md/) - Performance tracking
+- [Partner Strategy Plan](05-strategy-plan.md/) - Strategic context for exits

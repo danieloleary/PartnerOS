@@ -21,6 +21,30 @@ outcomes:
 - Completed Co-Marketing Playbook
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.4 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Co-Marketing Playbook
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -399,6 +423,6 @@ Example:
 ---
 
 ## Related Templates
-- [Partner Enablement Roadmap]((01-roadmap.md/))
-- [Partner Training Deck]((02-training-deck.md/))
-- [Partner Success Metrics]((06-success-metrics.md/))
+- [Partner Enablement Roadmap](01-roadmap.md/)
+- [Partner Training Deck](02-training-deck.md/)
+- [Partner Success Metrics](06-success-metrics.md/)

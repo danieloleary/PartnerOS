@@ -21,6 +21,30 @@ outcomes:
 - Completed Outreach Engagement Sequence Template
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.2 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Outreach Engagement Sequence Template
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -244,5 +268,5 @@ Call to Action:
 ---
 
 ## Related Templates
-- [Recruitment Email Sequence]((01-email-sequence.md/))
-- [Discovery Call Script]((04-discovery-call.md/))
+- [Recruitment Email Sequence](01-email-sequence.md/)
+- [Discovery Call Script](04-discovery-call.md/)

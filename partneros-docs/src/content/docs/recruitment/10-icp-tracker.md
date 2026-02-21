@@ -24,6 +24,30 @@ outcomes:
 - Completed ICP Alignment Tracker (Strategic Account Mapping)
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.10 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed ICP Alignment Tracker (Strategic Account Mapping)
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -215,6 +239,6 @@ Use this template to systematically identify and track alignment between your IC
 ---
 
 ## Related Templates
-- [Partner Qualification Framework]((03-qualification-framework.md/))
-- [Partnership Proposal Template]((07-proposal.md/))
-- [Ideal Partner Profile]((../strategy/02-ideal-partner-profile.md/))
+- [Partner Qualification Framework](03-qualification-framework.md/)
+- [Partnership Proposal Template](07-proposal.md/)
+- [Ideal Partner Profile](../strategy/02-ideal-partner-profile.md/)

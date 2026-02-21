@@ -21,6 +21,30 @@ outcomes:
 - Completed Partner Qualification Framework Template
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.3 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Qualification Framework Template
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -259,5 +283,5 @@ Use this template to systematically evaluate potential partners and determine th
 ---
 
 ## Related Templates
-- [Outreach Engagement Sequence]((02-outreach-engagement.md/))
-- [Discovery Call Script]((04-discovery-call.md/))
+- [Outreach Engagement Sequence](02-outreach-engagement.md/)
+- [Discovery Call Script](04-discovery-call.md/)

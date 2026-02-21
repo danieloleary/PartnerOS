@@ -21,6 +21,30 @@ outcomes:
   - Completed Partnership Proposal Template
 skills_gained: []
 ---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.7 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partnership Proposal Template
+
+## Skills Gained
+
+- (No skills defined)
+
+---
+
 ## How to Use This Template
 
 **Purpose:**
@@ -303,5 +327,5 @@ The partnership will generate revenue through [specific model], with projected r
 ---
 
 ## Related Templates
-- [Discovery Call Script]((04-discovery-call.md/))
-- [Partnership Agreement Template]((08-agreement.md/))
+- [Discovery Call Script](04-discovery-call.md/)
+- [Partnership Agreement Template](08-agreement.md/)
