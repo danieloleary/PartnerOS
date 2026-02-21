@@ -15,7 +15,7 @@
 - 44 templates across 9 categories (strategy 8, recruitment 10, enablement 7, legal 4, finance 3, security 2, operations 4, executive 1, analysis 1)
 - 9 section index pages (strategy, recruitment, enablement, legal, finance, security, operations, executive, analysis)
 - 7 automation playbooks (recruit, onboard, qbr, expand, exit, co-marketing, support-escalation)
-- 80 automated tests (74 passing, 6 skipped)
+- 124 automated tests (124 passing, 3 skipped)
 - Company onboarding (`scripts/onboard.py`)
 - Template variables (`scripts/fill_template.py`)
 - Demo mode (`scripts/demo_mode.py`)

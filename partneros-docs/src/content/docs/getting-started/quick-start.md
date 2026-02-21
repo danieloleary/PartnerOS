@@ -63,10 +63,10 @@ branding:
 
 | Your Stage | Start Here |
 |-----------|-----------|
-| No partners yet | [Recruitment templates](../recruitment/index/) |
-| Need process | [Enablement templates](../enablement/index/) |
-| Design program | [Strategy templates](../strategy/index/) |
-| Legal needed | [Legal templates](../legal/index/) |
+| No partners yet | [Recruitment templates](../recruitment/) |
+| Need process | [Enablement templates](../enablement/) |
+| Design program | [Strategy templates](../strategy/) |
+| Legal needed | [Legal templates](../legal/) |
 
 ---
 
@@ -125,18 +125,18 @@ Variables: `{{company_name}}`, `{{contact_name}}`, `{{contact_email}}`, `{{today
         ```
 
     4. **Browse templates by category:**
-        - [Strategy](../strategy/index/) - Program design
-        - [Recruitment](../recruitment/index/) - Find partners
-        - [Enablement](../enablement/index/) - Train partners
-        - [Legal](../legal/index/) - Contracts
-        - [Finance](../finance/index/) - Commissions
+        - [Strategy](../strategy/) - Program design
+        - [Recruitment](../recruitment/) - Find partners
+        - [Enablement](../enablement/) - Train partners
+        - [Legal](../legal/) - Contracts
+        - [Finance](../finance/) - Commissions
 
     **Best for:** Teams who want to browse and use templates directly.
 
     1. Browse the template sections:
-        - [Strategy](../strategy/index/) - Define your partnership vision
-        - [Recruitment](../recruitment/index/) - Find and sign partners
-        - [Enablement](../enablement/index/) - Train and support partners
+        - [Strategy](../strategy/) - Define your partnership vision
+        - [Recruitment](../recruitment/) - Find and sign partners
+        - [Enablement](../enablement/) - Train and support partners
 
     2. Find a template that fits your need
 
@@ -229,7 +229,7 @@ graph LR
 1. Start with [Partner Business Case](../strategy/01-partner-business-case/)
 2. Define your [Ideal Partner Profile](../strategy/02-ideal-partner-profile/)
 3. Design your [Program Architecture](../strategy/06-program-architecture/)
-4. Begin [Recruitment](../recruitment/index/)
+4. Begin [Recruitment](../recruitment/)
 
 ### For Signing a Specific Partner
 

@@ -3,10 +3,14 @@ name: Lint Markdown
 on:
   push:
     paths:
-      - '**/*.md'
+      - 'partneros-docs/src/content/docs/**/*.md'
+      - 'partneros-docs/src/content/docs/**/*.mdx'
+      - 'scripts/lint_markdown.py'
   pull_request:
     paths:
-      - '**/*.md'
+      - 'partneros-docs/src/content/docs/**/*.md'
+      - 'partneros-docs/src/content/docs/**/*.mdx'
+      - 'scripts/lint_markdown.py'
 
 jobs:
   lint:

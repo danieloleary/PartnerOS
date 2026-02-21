@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 
 export default defineConfig({
 	base: '/PartnerOS',
+	site: 'https://danieloleary.github.io',
 	integrations: [
 		starlight({
 			title: 'PartnerOS',

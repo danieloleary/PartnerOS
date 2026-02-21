@@ -11,7 +11,7 @@ This file provides guidance for AI assistants working in this repository.
 - 7 automation playbooks covering the full partner lifecycle
 - 12 utility scripts for onboarding, templates, reporting, and packaging
 - GitHub Actions for doc deployment and markdown linting
-- **146 tests** (144 passing, 2 skipped)
+- **~127 tests** (124 passing, 3 skipped)
 
 **Requirements:**
 - **Python 3.10+** (for union type syntax `type | None`)
@@ -196,7 +196,7 @@ python3 tests/test_templates.py
 python3 tests/test_agent.py
 ```
 
-### Test Suite (146 tests)
+### Test Suite (~127 tests)
 
 **Template Tests (`test_templates.py` — 61 tests):**
 

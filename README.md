@@ -29,7 +29,7 @@ Building a world-class partner program is hard. Most companies:
 | **Multi-Agent AI Team** | 7 specialized AI agents that collaborate on partner work |
 | **AI-Powered Agent** | Local AI partner assistant runs offline with Ollama — no API keys required |
 | **Enterprise-Ready** | Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths |
-| **Tested & Validated** | 144 automated tests ensure reliability across templates and agents |
+| **Tested & Validated** | 124 automated tests ensure reliability across templates and agents |
 
 ---
 
@@ -215,7 +215,7 @@ PartnerOS/
 │   ├── complete-examples/     # Fully filled template examples
 │   ├── demo-company/          # Fake company data for demos
 │   └── test-partner/          # TechStart Inc test case
-├── tests/                     # 43 automated tests
+├── tests/                     # 124 automated tests
 ├── mkdocs.yml                 # Site configuration
 ├── BACKLOG.md                 # Prioritized feature backlog
 ├── IMPROVEMENT_PLAN.md        # Audit findings and roadmap
@@ -228,13 +228,14 @@ PartnerOS/
 ## Testing
 
 ```bash
-# Run all 144 tests
+# Run all 124 tests
 pytest tests/ -v
 
 # Run by test file
-pytest tests/test_templates.py -v   # 63 template/structure tests
-pytest tests/test_agents_comprehensive.py -v # 32 agent tests
+pytest tests/test_templates.py -v   # 35 template/structure tests
+pytest tests/test_agents_comprehensive.py -v # 40 agent tests
 pytest tests/test_web_comprehensive.py -v    # 15 web interface tests
+pytest tests/test_starlight.py -v           # 14 Starlight-specific tests
 ```
 
 ---

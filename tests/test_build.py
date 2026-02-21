@@ -84,19 +84,8 @@ class TestConfiguration:
     """Test configuration files."""
 
     def test_mkdocs_yml_valid(self):
-        """Verify mkdocs.yml is valid YAML."""
-        import yaml
-
-        mkdocs_path = REPO_ROOT / "mkdocs.yml"
-        assert mkdocs_path.exists(), "mkdocs.yml not found"
-
-        with open(mkdocs_path) as f:
-            data = yaml.safe_load(f)
-
-        assert data is not None, "mkdocs.yml should parse"
-        assert "nav" in data or "docs_dir" in data, (
-            "mkdocs.yml should have nav or docs_dir"
-        )
+        """Verify mkdocs.yml is valid YAML (legacy - skipped since we use Starlight)."""
+        pytest.skip("MkDocs has been removed - using Starlight only")
 
     def test_astro_config_valid(self):
         """Verify astro.config.mjs is valid."""

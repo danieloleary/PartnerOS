@@ -7,7 +7,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 # Key directories
-DOCS_DIR = REPO_ROOT / "docs"
+# DOCS_DIR is deprecated - we now use Starlight only (partneros-docs)
+DOCS_DIR = REPO_ROOT / "docs"  # Deprecated - kept for backward compat only
 STARLIGHT_DOCS_DIR = REPO_ROOT / "partneros-docs" / "src" / "content" / "docs"
 PARTNER_AGENT_DIR = REPO_ROOT / "scripts" / "partner_agent"
 

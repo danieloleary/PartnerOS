@@ -262,15 +262,17 @@ python scripts/onboard.py
 
 | Test Suite | Status |
 |------------|--------|
-| test_templates.py (24 tests) | PASSING |
+| test_templates.py (35 tests) | PASSING |
 | test_agent.py (14 tests) | PASSING |
-| test_onboarding.py (5 tests) | PASSING |
-| test_agents.py (13 tests) | PASSING |
-| test_agents_comprehensive.py (32 tests) | PASSING |
-| test_web.py (3 tests) | PASSING |
+| test_onboarding.py (6 tests) | PASSING |
+| test_agents_comprehensive.py (40 tests) | PASSING |
 | test_web_comprehensive.py (15 tests) | PASSING |
+| test_starlight.py (14 tests) | PASSING |
+| test_links.py (9 tests) | PASSING |
+| test_content.py (8 tests) | PASSING |
+| test_build.py (7 tests) | PASSING (3 skipped) |
 
-**Total: 144 tests passing**
+**Total: 124 tests passing, 3 skipped**
 
 ---
 

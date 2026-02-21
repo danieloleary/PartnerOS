@@ -24,6 +24,26 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install test dependencies
+        run: pip install pytest pyyaml
+
+      - name: Validate link configuration
+        run: |
+          echo "Checking for absolute /PartnerOS links in source..."
+          if grep -r '](/PartnerOS/' partneros-docs/src/content/docs/ 2>/dev/null; then
+            echo "ERROR: Found absolute /PartnerOS links - use relative links instead"
+            exit 1
+          fi
+          echo "✓ No absolute /PartnerOS links found"
+
+      - name: Run link tests
+        run: pytest tests/test_deployed_links.py -v
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
