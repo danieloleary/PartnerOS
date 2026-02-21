@@ -113,6 +113,7 @@ nav:
   - Home: index.md
   - Getting Started:
     - Quick Start: getting-started/quick-start.md
+    - First Partner Path: getting-started/first-partner-path.md
     - Partner Lifecycle: getting-started/lifecycle.md
     - How to Use Templates: getting-started/how-to-use.md
   - Strategy:
@@ -155,6 +156,8 @@ nav:
   - Resources:
     - Glossary: resources/glossary.md
     - Maturity Model: resources/maturity-model.md
+    - PartnerOS One-Pager: resources/partner-os-one-pager.md
+    - Licensing: resources/licensing.md
     - Tags: tags.md
   - Legal:
     - legal/index.md
@@ -168,14 +171,18 @@ nav:
     - Rebate Program: finance/02-rebate.md
     - Revenue Sharing Model: finance/03-revenue-share.md
   - Security:
+    - security/index.md
     - Security Questionnaire: security/01-security-questionnaire.md
     - SOC 2 Compliance Guide: security/02-soc2-compliance.md
   - Operations:
+    - operations/index.md
     - Deal Registration Policy: operations/01-deal-registration.md
     - Weekly Partner Standup: operations/02-weekly-standup.md
     - Monthly Partner Report: operations/03-monthly-report.md
     - Partner Portal Guide: operations/04-portal-guide.md
   - Executive:
+    - executive/index.md
     - Board Deck: executive/01-board-deck.md
   - Analysis:
+    - analysis/index.md
     - Partner Health Scorecard: analysis/01-health-scorecard.md
