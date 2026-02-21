@@ -15,7 +15,8 @@ purpose: operational
 phase: strategy
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Clear partner program vision
 description: 'A comprehensive checklist for professionally and gracefully ending partner
   relationships while protecting your brand, customers, and legal interests.
 
@@ -26,21 +27,11 @@ related_templates:
 - 05-strategy-plan.md
 outcomes:
 - Completed Partner Exit Checklist (Graceful Partnership Termination)
-skills_gained: []
+skills_gained:
+- Strategic planning
+- Partner program design
+- Competitive analysis
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.8 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -536,3 +527,29 @@ Retain the following for [X years] post-exit:
 - [3C/4C Evaluation Framework](03-evaluation-framework.md/) - For evaluating partnerships
 - [Partner Success Metrics](../enablement/06-success-metrics.md/) - Performance tracking
 - [Partner Strategy Plan](05-strategy-plan.md/) - Strategic context for exits
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.8 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Exit Checklist (Graceful Partnership Termination)
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

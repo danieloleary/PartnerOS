@@ -4,19 +4,23 @@ category: operational
 version: 1.0.0
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: onboarding
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
+- None - good starting point
 description: Tips for customizing templates for your organization
 outcomes:
-  - Completed How to Use Templates
+- Completed How to Use Templates
 skills_gained:
+- Onboarding
+- Process implementation
+- Best practices
 ---
 # How to Use Templates
 

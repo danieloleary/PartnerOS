@@ -15,25 +15,16 @@ purpose: operational
 phase: strategy
 time_required: 8-16 hours
 difficulty: hard
-prerequisites: []
+prerequisites:
+- Clear partner program vision
 description: Partner Strategy Plan Template template
 outcomes:
 - Completed Partner Strategy Plan Template
-skills_gained: []
+skills_gained:
+- Strategic planning
+- Partner program design
+- Competitive analysis
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.5 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 8-16 hours |
-| **Difficulty** | hard |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -282,3 +273,29 @@ Use this template to develop a comprehensive partner strategy that aligns with b
 ## Related Templates
 - [Partner Business Case](01-partner-business-case.md/)
 - [Ideal Partner Profile](02-ideal-partner-profile.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.5 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 8-16 hours |
+| **Difficulty** | hard |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Strategy Plan Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

@@ -15,25 +15,16 @@ purpose: operational
 phase: enablement
 time_required: 4-8 hours
 difficulty: medium
-prerequisites: []
+prerequisites:
+- Partner-signed agreement
 description: Partner Certification Program Framework template
 outcomes:
 - Completed Partner Certification Program Framework
-skills_gained: []
+skills_gained:
+- Training development
+- Certification design
+- Content creation
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.3 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 4-8 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -302,3 +293,29 @@ Quarter 2: First recertification cycle begins
 - [Partner Enablement Roadmap](01-roadmap.md/)
 - [Partner Training Deck](02-training-deck.md/)
 - [Partner Success Metrics](06-success-metrics.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.3 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 4-8 hours |
+| **Difficulty** | medium |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Certification Program Framework
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

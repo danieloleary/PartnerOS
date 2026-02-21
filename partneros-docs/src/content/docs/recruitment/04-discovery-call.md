@@ -15,25 +15,16 @@ purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Target partner list
 description: Discovery Call Script Template template
 outcomes:
 - Completed Discovery Call Script Template
-skills_gained: []
+skills_gained:
+- Sales outreach
+- Negotiation
+- Partner qualification
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | II.4 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -289,3 +280,29 @@ Follow-up Required:
 - [Partner Qualification Framework](03-qualification-framework.md/)
 - [Partnership Proposal Template](07-proposal.md/)
 - [ICP Alignment Tracker](10-icp-tracker.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.4 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Discovery Call Script Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

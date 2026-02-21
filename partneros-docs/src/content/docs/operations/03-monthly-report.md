@@ -39,19 +39,6 @@ skills_gained:
 ---
 
 
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | O.3 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 2-3 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
 ## Outcomes
 
 - Pipeline and revenue snapshot
@@ -242,3 +229,33 @@ recommend executive outreach. Next month's focus: [key theme].
 - [Partner Health Scorecard](../analysis/01-health-scorecard.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
 - [Weekly Partner Standup](02-weekly-standup.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | O.3 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 2-3 hours |
+| **Difficulty** | medium |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Pipeline and revenue snapshot
+- Partner health status by tier
+- Recommended actions for at-risk partners
+
+## Skills Gained
+
+- Program reporting
+- Partner health analysis
+- Executive communication
+
+## Prerequisites
+
+- Partner Success Metrics (E.6)

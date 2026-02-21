@@ -15,25 +15,16 @@ purpose: operational
 phase: enablement
 time_required: 2-4 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Partner-signed agreement
 description: Partner Enablement Roadmap (Strategic & Phased) template
 outcomes:
 - Completed Partner Enablement Roadmap (Strategic & Phased)
-skills_gained: []
+skills_gained:
+- Training development
+- Certification design
+- Content creation
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -144,3 +135,29 @@ Core Sections & Example Prompts (Expanded with Strategic Context):
 
 ## Related Templates
 - [Partner Training Deck](02-training-deck.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Enablement Roadmap (Strategic & Phased)
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

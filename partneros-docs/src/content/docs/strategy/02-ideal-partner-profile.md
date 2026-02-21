@@ -15,25 +15,16 @@ purpose: operational
 phase: strategy
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Clear partner program vision
 description: Ideal Partner Profile Template template
 outcomes:
 - Completed Ideal Partner Profile Template
-skills_gained: []
+skills_gained:
+- Strategic planning
+- Partner program design
+- Competitive analysis
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.2 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -322,3 +313,29 @@ Use this template to define the characteristics of ideal partners and create a s
 ## Related Templates
 - [Partner Business Case](01-partner-business-case.md/)
 - [3C/4C Evaluation Framework](03-evaluation-framework.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.2 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Ideal Partner Profile Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

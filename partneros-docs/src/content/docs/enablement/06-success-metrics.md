@@ -15,25 +15,16 @@ purpose: operational
 phase: enablement
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Partner-signed agreement
 description: Partner Success Metrics Dashboard template
 outcomes:
 - Completed Partner Success Metrics Dashboard
-skills_gained: []
+skills_gained:
+- Training development
+- Certification design
+- Content creation
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.6 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -447,3 +438,29 @@ NEXT MONTH FOCUS
 - [Partner Enablement Roadmap](01-roadmap.md/)
 - [Partner Certification Program](03-certification.md/)
 - [Co-Marketing Playbook](04-co-marketing.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.6 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Success Metrics Dashboard
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

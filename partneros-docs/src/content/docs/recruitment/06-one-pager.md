@@ -15,28 +15,19 @@ purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Target partner list
 description: 'A succinct, compelling document that quickly communicates the essence
   of your partner program and the value of partnering.
 
   '
 outcomes:
 - Completed Partnership One-Pager (Concise Value Proposition)
-skills_gained: []
+skills_gained:
+- Sales outreach
+- Negotiation
+- Partner qualification
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | II.6 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -288,3 +279,29 @@ A succinct, compelling "leave-behind" or introductory document that quickly comm
 - [Partner Pitch Deck](05-pitch-deck.md/)
 - [Partnership Proposal Template](07-proposal.md/)
 - [Recruitment Email Sequence](01-email-sequence.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.6 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partnership One-Pager (Concise Value Proposition)
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

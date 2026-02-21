@@ -15,25 +15,16 @@ purpose: operational
 phase: strategy
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Clear partner program vision
 description: Competitive Differentiation Template template
 outcomes:
 - Completed Competitive Differentiation Template
-skills_gained: []
+skills_gained:
+- Strategic planning
+- Partner program design
+- Competitive analysis
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.4 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -266,3 +257,29 @@ Use this template to analyze competitive positioning and develop compelling diff
 ## Related Templates
 - [Partner Business Case](01-partner-business-case.md/)
 - [Partner Strategy Plan](05-strategy-plan.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.4 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Competitive Differentiation Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

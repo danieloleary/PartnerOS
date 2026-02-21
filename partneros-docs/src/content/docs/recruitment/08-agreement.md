@@ -15,25 +15,16 @@ purpose: operational
 phase: recruitment
 time_required: 4-8 hours
 difficulty: hard
-prerequisites: []
+prerequisites:
+- Target partner list
 description: Partnership Agreement Template template
 outcomes:
 - Completed Partnership Agreement Template
-skills_gained: []
+skills_gained:
+- Sales outreach
+- Negotiation
+- Partner qualification
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | II.8 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 4-8 hours |
-| **Difficulty** | hard |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -388,3 +379,29 @@ Date: [Date]
 ## Related Templates
 - [Partnership Proposal Template](07-proposal.md/)
 - [Partner Onboarding Checklist](09-onboarding.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.8 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 4-8 hours |
+| **Difficulty** | hard |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partnership Agreement Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

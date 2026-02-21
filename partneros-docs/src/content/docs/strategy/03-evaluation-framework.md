@@ -15,25 +15,16 @@ purpose: operational
 phase: strategy
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Clear partner program vision
 description: 3C/4C Partner Evaluation Framework template
 outcomes:
 - Completed 3C/4C Partner Evaluation Framework
-skills_gained: []
+skills_gained:
+- Strategic planning
+- Partner program design
+- Competitive analysis
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.3 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -366,3 +357,29 @@ flowchart LR
 ## Related Templates
 - [Ideal Partner Profile](02-ideal-partner-profile.md/)
 - [Partner Strategy Plan](05-strategy-plan.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.3 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed 3C/4C Partner Evaluation Framework
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

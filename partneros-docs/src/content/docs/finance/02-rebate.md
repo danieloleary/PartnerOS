@@ -38,19 +38,6 @@ skills_gained:
 ---
 
 
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | F.2 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 2-3 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | strategic |
-
 ## Outcomes
 
 - Defined rebate tiers and thresholds
@@ -229,3 +216,33 @@ Partners can earn additional rebate percentage for:
 - [Revenue Sharing Model](03-revenue-share.md/)
 - [Deal Registration Policy](../operations/01-deal-registration.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | F.2 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 2-3 hours |
+| **Difficulty** | medium |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | strategic |
+
+## Outcomes
+
+- Defined rebate tiers and thresholds
+- Clear measurement period and payment schedule
+- Eligibility and compliance requirements
+
+## Skills Gained
+
+- Incentive program design
+- Partner economics
+- Finance operations
+
+## Prerequisites
+
+- Partner Commission Structure (F.1)

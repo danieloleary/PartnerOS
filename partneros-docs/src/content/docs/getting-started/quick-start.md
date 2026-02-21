@@ -5,24 +5,25 @@ version: 1.0.0
 last_updated: 2026-02-20
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: beginner
 purpose: operational
 phase: onboarding
 time_required: 30 minutes
 difficulty: easy
-prerequisites: []
+prerequisites:
+- None - good starting point
 description: Get up and running with PartnerOS in 30 minutes
 outcomes:
-  - PartnerOS configured for your company
-  - Understanding of available templates
-  - First partner recruitment started
+- PartnerOS configured for your company
+- Understanding of available templates
+- First partner recruitment started
 skills_gained:
-  - Partner program setup
-  - Template selection
-  - Customization basics
+- Partner program setup
+- Template selection
+- Customization basics
 ---
 ---
 # PartnerOS Quick Start Guide

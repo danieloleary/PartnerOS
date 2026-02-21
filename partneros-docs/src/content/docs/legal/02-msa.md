@@ -38,19 +38,6 @@ skills_gained:
 ---
 
 
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | L.2 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 4-8 hours |
-| **Difficulty** | hard |
-| **Skill Level** | advanced |
-| **Phase** | recruitment |
-| **Purpose** | strategic |
-
 ## Outcomes
 
 - Signed MSA with partner
@@ -282,3 +269,33 @@ Date: _______________________
 - [Commission Structure](../finance/01-commission.md/)
 - [Deal Registration Policy](../operations/01-deal-registration.md/)
 - [Partner Program One-Pager](../recruitment/06-one-pager.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | L.2 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 4-8 hours |
+| **Difficulty** | hard |
+| **Skill Level** | advanced |
+| **Phase** | recruitment |
+| **Purpose** | strategic |
+
+## Outcomes
+
+- Signed MSA with partner
+- Clear commercial terms
+- Legal framework for partnership
+
+## Skills Gained
+
+- Contract negotiation
+- Commercial terms structuring
+- Liability and indemnification
+
+## Prerequisites
+
+- Mutual NDA (L.1)

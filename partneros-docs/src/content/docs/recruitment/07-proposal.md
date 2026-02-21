@@ -7,33 +7,25 @@ version: 1.0.0
 last_updated: 2024-06-10
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 2-4 hours
 difficulty: easy
-prerequisites: []
-description: Create professional partnership proposals that clearly communicate value and drive partner engagement.
+prerequisites:
+- Target partner list
+description: Create professional partnership proposals that clearly communicate value
+  and drive partner engagement.
 outcomes:
-  - Completed Partnership Proposal Template
-skills_gained: []
+- Completed Partnership Proposal Template
+skills_gained:
+- Sales outreach
+- Negotiation
+- Partner qualification
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | II.7 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -329,3 +321,29 @@ The partnership will generate revenue through [specific model], with projected r
 ## Related Templates
 - [Discovery Call Script](04-discovery-call.md/)
 - [Partnership Agreement Template](08-agreement.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.7 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partnership Proposal Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

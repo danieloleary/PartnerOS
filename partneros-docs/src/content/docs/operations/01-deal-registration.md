@@ -6,50 +6,36 @@ template_number: O.1
 version: 1.0.0
 last_updated: 2026-02-20
 author: PartnerOS Team
-
 tier:
-  - Registered
-  - Silver
-  - Gold
-  - Strategic
+- Registered
+- Silver
+- Gold
+- Strategic
 skill_level: beginner
 purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Partner CRM or tracking system
+description: 'Rules, eligibility criteria, and protection periods for partner deal
+  registration.
 
-description: >
-  Rules, eligibility criteria, and protection periods for partner deal registration.
+  '
+purpose_detailed: 'A deal registration policy protects partners who invest in sourcing
+  and developing opportunities, while preventing channel conflict and double-crediting.
 
-purpose_detailed: >
-  A deal registration policy protects partners who invest in sourcing and developing
-  opportunities, while preventing channel conflict and double-crediting.
-
+  '
 outcomes:
-  - Clear registration rules and deadlines
-  - Defined protection periods by tier
-  - Channel conflict resolution process
-
+- Clear registration rules and deadlines
+- Defined protection periods by tier
+- Channel conflict resolution process
 skills_gained:
-  - Channel operations
-  - Pipeline management
-  - Conflict resolution
+- Channel operations
+- Pipeline management
+- Conflict resolution
 ---
 
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | O.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | beginner |
-| **Phase** | recruitment |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -238,3 +224,33 @@ or partner agreement termination.
 - [ICP Alignment Tracker](../recruitment/10-icp-tracker.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
 - [Partnership Agreement](../recruitment/08-agreement.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | O.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | beginner |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Clear registration rules and deadlines
+- Defined protection periods by tier
+- Channel conflict resolution process
+
+## Skills Gained
+
+- Channel operations
+- Pipeline management
+- Conflict resolution
+
+## Prerequisites
+
+- (No prerequisites)

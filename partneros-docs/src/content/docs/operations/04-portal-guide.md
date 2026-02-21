@@ -40,19 +40,6 @@ skills_gained:
 ---
 
 
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | O.4 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | beginner |
-| **Phase** | enablement |
-| **Purpose** | operational |
-
 ## Outcomes
 
 - Partners know how to register deals
@@ -310,3 +297,33 @@ To request co-branded versions of key materials:
 - [Deal Registration Policy](01-deal-registration.md/)
 - [Co-Marketing Playbook](../enablement/04-co-marketing.md/)
 - [Partner Certification Program](../enablement/03-certification.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | O.4 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | beginner |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Partners know how to register deals
+- Partners know how to access collateral and training
+- Partners know how to submit MDF requests
+
+## Skills Gained
+
+- Partner enablement
+- PRM administration
+- Self-serve partner onboarding
+
+## Prerequisites
+
+- Onboarding Checklist

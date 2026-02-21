@@ -15,25 +15,16 @@ purpose: operational
 phase: enablement
 time_required: 1-2 hours
 difficulty: hard
-prerequisites: []
+prerequisites:
+- Partner-signed agreement
 description: Technical Integration Guide template
 outcomes:
 - Completed Technical Integration Guide
-skills_gained: []
+skills_gained:
+- Training development
+- Certification design
+- Content creation
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.5 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | hard |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -537,3 +528,29 @@ Before going live, integrations must meet:
 - [Partner Enablement Roadmap](01-roadmap.md/)
 - [Partner Certification Program](03-certification.md/)
 - [Partner Success Metrics](06-success-metrics.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.5 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | hard |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Technical Integration Guide
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

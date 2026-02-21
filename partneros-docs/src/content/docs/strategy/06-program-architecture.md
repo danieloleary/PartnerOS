@@ -15,25 +15,16 @@ purpose: operational
 phase: strategy
 time_required: 1-2 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Clear partner program vision
 description: Partner Program Architecture Template template
 outcomes:
 - Completed Partner Program Architecture Template
-skills_gained: []
+skills_gained:
+- Strategic planning
+- Partner program design
+- Competitive analysis
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.6 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -266,3 +257,29 @@ Use this template to design and implement a structured partner program that scal
 ## Related Templates
 - [Partner Strategy Plan](05-strategy-plan.md/)
 - [Internal Alignment Playbook](07-internal-alignment.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.6 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Program Architecture Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

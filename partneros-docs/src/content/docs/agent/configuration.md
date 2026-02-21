@@ -4,19 +4,24 @@ category: operational
 version: 1.0.0
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: operational
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
+- Python 3.10+
+- API keys configured
 description: Customize the Partner Agent for your organization
 outcomes:
-  - Completed Configuration
+- Completed Configuration
 skills_gained:
+- AI prompting
+- Automation
+- Workflow design
 ---
 # Configuration
 

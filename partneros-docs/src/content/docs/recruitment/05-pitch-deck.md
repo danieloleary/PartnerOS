@@ -15,25 +15,16 @@ purpose: operational
 phase: recruitment
 time_required: 2-4 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Target partner list
 description: Partner Pitch Deck (Strategic Narrative) template
 outcomes:
 - Completed Partner Pitch Deck (Strategic Narrative)
-skills_gained: []
+skills_gained:
+- Sales outreach
+- Negotiation
+- Partner qualification
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | II.5 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -115,3 +106,29 @@ A strategic, visually engaging presentation to communicate your partner program'
 
 ## Related Templates
 - [Partnership One-Pager](06-one-pager.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | II.5 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Pitch Deck (Strategic Narrative)
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

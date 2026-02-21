@@ -15,7 +15,8 @@ purpose: operational
 phase: enablement
 time_required: 2-4 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Partner-signed agreement
 description: 'A structured template for conducting productive quarterly business reviews
   with partners to assess performance, align on strategy, and plan future initiatives.
 
@@ -26,21 +27,11 @@ related_templates:
 - ../I_Partner_Strategy_Templates/03_Partner_Program_Charter.md
 outcomes:
 - Completed Partner QBR Template (Quarterly Business Review)
-skills_gained: []
+skills_gained:
+- Training development
+- Certification design
+- Content creation
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | III.7 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | easy |
-| **Skill Level** | intermediate |
-| **Phase** | enablement |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -406,3 +397,29 @@ Use this template to conduct structured quarterly business reviews with your par
 - [Partner Success Metrics](06-success-metrics.md/)
 - [ICP Alignment Tracker](../recruitment/10-icp-tracker.md/)
 - [Partner Program Charter](../strategy/06-program-architecture.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | III.7 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | easy |
+| **Skill Level** | intermediate |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner QBR Template (Quarterly Business Review)
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

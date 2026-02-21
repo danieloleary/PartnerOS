@@ -39,19 +39,6 @@ skills_gained:
 ---
 
 
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | X.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 4-6 hours |
-| **Difficulty** | hard |
-| **Skill Level** | advanced |
-| **Phase** | enablement |
-| **Purpose** | strategic |
-
 ## Outcomes
 
 - Board-level program narrative
@@ -288,3 +275,34 @@ Total revenue:         $[total]M
 - [Partner Health Scorecard](../analysis/01-health-scorecard.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
 - [QBR Template](../enablement/07-qbr-template.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | X.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 4-6 hours |
+| **Difficulty** | hard |
+| **Skill Level** | advanced |
+| **Phase** | enablement |
+| **Purpose** | strategic |
+
+## Outcomes
+
+- Board-level program narrative
+- Revenue and ROI metrics
+- Forward-looking investment ask (if applicable)
+
+## Skills Gained
+
+- Executive storytelling
+- Program ROI analysis
+- Board-level communication
+
+## Prerequisites
+
+- Monthly Partner Report
+- Partner Success Metrics

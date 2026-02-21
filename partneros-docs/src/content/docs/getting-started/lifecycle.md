@@ -4,19 +4,23 @@ category: operational
 version: 1.0.0
 author: PartnerOS Team
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: operational
 phase: onboarding
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
+- None - good starting point
 description: Understanding the end-to-end partner journey
 outcomes:
-  - Completed Partner Lifecycle
+- Completed Partner Lifecycle
 skills_gained:
+- Onboarding
+- Process implementation
+- Best practices
 ---
 # Partner Lifecycle
 

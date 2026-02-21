@@ -6,52 +6,38 @@ template_number: L.1
 version: 1.0.0
 last_updated: 2026-02-20
 author: PartnerOS Team
-
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: beginner
 purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: medium
-prerequisites: []
+prerequisites:
+- Legal team review
+description: 'Mutual Non-Disclosure Agreement template for initial partner discussions.
 
-description: >
-  Mutual Non-Disclosure Agreement template for initial partner discussions.
+  '
+purpose_detailed: 'Use this template when starting discussions with potential partners
+  to protect confidential information exchanged during the qualification and discovery
+  process.
 
-purpose_detailed: >
-  Use this template when starting discussions with potential partners to protect
-  confidential information exchanged during the qualification and discovery process.
-
+  '
 outcomes:
-  - Signed NDA with potential partner
-  - Legal protection for confidential information
-  - Clear definition of confidential vs. non-confidential information
-
+- Signed NDA with potential partner
+- Legal protection for confidential information
+- Clear definition of confidential vs. non-confidential information
 skills_gained:
-  - Contract basics
-  - Legal terminology
-  - Confidentiality clauses
+- Contract basics
+- Legal terminology
+- Confidentiality clauses
 ---
 
 :::tip
 This template is for **Bronze**, **Silver**, and **Gold** tier partners.
 :::
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | L.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 1-2 hours |
-| **Difficulty** | Medium |
-| **Skill Level** | Beginner |
-| **Phase** | Recruitment |
-| **Purpose** | Operational |
 
 ## Outcomes
 
@@ -187,3 +173,33 @@ Date: _______________________
 - [Partnership Agreement](../recruitment/08-agreement.md/)
 - [Proposal Template](../recruitment/07-proposal.md/)
 - [Discovery Call Script](../recruitment/04-discovery-call.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | L.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 1-2 hours |
+| **Difficulty** | medium |
+| **Skill Level** | beginner |
+| **Phase** | recruitment |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Signed NDA with potential partner
+- Legal protection for confidential information
+- Clear definition of confidential vs. non-confidential information
+
+## Skills Gained
+
+- Contract basics
+- Legal terminology
+- Confidentiality clauses
+
+## Prerequisites
+
+- (No prerequisites)

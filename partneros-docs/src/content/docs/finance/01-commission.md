@@ -6,49 +6,34 @@ template_number: F.1
 version: 1.0.0
 last_updated: 2026-02-20
 author: PartnerOS Team
-
 tier:
-  - Bronze
-  - Silver
-  - Gold
+- Bronze
+- Silver
+- Gold
 skill_level: intermediate
 purpose: strategic
 phase: recruitment
 time_required: 2-4 hours
 difficulty: medium
-prerequisites: []
+prerequisites:
+- Budget approval
+description: 'Tiered commission structure for partner-generated revenue.
 
-description: >
-  Tiered commission structure for partner-generated revenue.
-
-purpose_detailed: >
-  Use this template to define commission rates, payment terms, and
+  '
+purpose_detailed: 'Use this template to define commission rates, payment terms, and
   eligibility criteria for partner-generated sales.
 
+  '
 outcomes:
-  - Clear commission structure
-  - Defined tiers and eligibility
-  - Payment schedule
-
+- Clear commission structure
+- Defined tiers and eligibility
+- Payment schedule
 skills_gained:
-  - Revenue structuring
-  - Partner economics
-  - Incentive program design
+- Revenue structuring
+- Partner economics
+- Incentive program design
 ---
 
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | F.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 2-4 hours |
-| **Difficulty** | medium |
-| **Skill Level** | intermediate |
-| **Phase** | recruitment |
-| **Purpose** | strategic |
 
 ## Outcomes
 
@@ -272,3 +257,33 @@ Commission: 100,000 × 10% = $10,000
 - [Revenue Sharing Model](03-revenue-share.md/)
 - [Deal Registration Policy](../operations/01-deal-registration.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | F.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 2-4 hours |
+| **Difficulty** | medium |
+| **Skill Level** | intermediate |
+| **Phase** | recruitment |
+| **Purpose** | strategic |
+
+## Outcomes
+
+- Clear commission structure
+- Defined tiers and eligibility
+- Payment schedule
+
+## Skills Gained
+
+- Revenue structuring
+- Partner economics
+- Incentive program design
+
+## Prerequisites
+
+- (No prerequisites)

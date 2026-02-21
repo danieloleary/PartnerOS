@@ -15,25 +15,16 @@ purpose: operational
 phase: strategy
 time_required: 8-16 hours
 difficulty: hard
-prerequisites: []
+prerequisites:
+- Clear partner program vision
 description: Partner Business Case Template template
 outcomes:
 - Completed Partner Business Case Template
-skills_gained: []
+skills_gained:
+- Strategic planning
+- Partner program design
+- Competitive analysis
 ---
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | I.1 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2024-06-10 |
-| **Time Required** | 8-16 hours |
-| **Difficulty** | hard |
-| **Skill Level** | intermediate |
-| **Phase** | strategy |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -265,3 +256,29 @@ Use this template to build a business case for launching, expanding, or refining
 ## Related Templates
 - [Ideal Partner Profile](02-ideal-partner-profile.md/)
 - [Partner Strategy Plan](05-strategy-plan.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | I.1 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2024-06-10 |
+| **Time Required** | 8-16 hours |
+| **Difficulty** | hard |
+| **Skill Level** | intermediate |
+| **Phase** | strategy |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Completed Partner Business Case Template
+
+## Skills Gained
+
+- (No skills defined)
+
+## Prerequisites
+
+- (No prerequisites)

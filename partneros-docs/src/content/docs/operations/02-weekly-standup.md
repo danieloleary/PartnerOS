@@ -6,49 +6,33 @@ template_number: O.2
 version: 1.0.0
 last_updated: 2026-02-20
 author: PartnerOS Team
-
 tier:
-  - Silver
-  - Gold
-  - Strategic
+- Silver
+- Gold
+- Strategic
 skill_level: beginner
 purpose: operational
 phase: enablement
 time_required: 0.5 hours
 difficulty: easy
-prerequisites: []
+prerequisites:
+- Partner CRM or tracking system
+description: 'Lightweight weekly standup agenda for Partner Account Managers.
 
-description: >
-  Lightweight weekly standup agenda for Partner Account Managers.
-
-purpose_detailed: >
-  A 15–30 minute weekly sync that keeps partner pipeline moving, surfaces
-  blockers early, and maintains momentum without requiring heavy reporting overhead.
-
+  '
+purpose_detailed: "A 15\u201330 minute weekly sync that keeps partner pipeline moving,\
+  \ surfaces blockers early, and maintains momentum without requiring heavy reporting\
+  \ overhead.\n"
 outcomes:
-  - Consistent pipeline visibility
-  - Early blocker identification
-  - Clear weekly action items
-
+- Consistent pipeline visibility
+- Early blocker identification
+- Clear weekly action items
 skills_gained:
-  - Partner relationship management
-  - Pipeline cadence
-  - Meeting facilitation
+- Partner relationship management
+- Pipeline cadence
+- Meeting facilitation
 ---
 
-
-## Template Metadata
-
-| Attribute | Value |
-|-----------|-------|
-| **Template Number** | O.2 |
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-02-20 |
-| **Time Required** | 0.5 hours |
-| **Difficulty** | easy |
-| **Skill Level** | beginner |
-| **Phase** | enablement |
-| **Purpose** | operational |
 
 ## Outcomes
 
@@ -191,3 +175,33 @@ every active deal, the meeting failed.
 - [QBR Template](../enablement/07-qbr-template.md/)
 - [Deal Registration Policy](01-deal-registration.md/)
 - [Partner Success Metrics](../enablement/06-success-metrics.md/)
+---
+
+## Template Metadata
+
+| Attribute | Value |
+|-----------|-------|
+| **Template Number** | O.2 |
+| **Version** | 1.0.0 |
+| **Last Updated** | 2026-02-20 |
+| **Time Required** | 0.5 hours |
+| **Difficulty** | easy |
+| **Skill Level** | beginner |
+| **Phase** | enablement |
+| **Purpose** | operational |
+
+## Outcomes
+
+- Consistent pipeline visibility
+- Early blocker identification
+- Clear weekly action items
+
+## Skills Gained
+
+- Partner relationship management
+- Pipeline cadence
+- Meeting facilitation
+
+## Prerequisites
+
+- (No prerequisites)
