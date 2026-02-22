@@ -221,3 +221,75 @@ class TestConsistency:
         assert len(failures) == 0, f"Invalid version formats:\n" + "\n".join(
             failures[:10]
         )
+
+
+class TestContentEdgeCases:
+    """Test edge cases in content."""
+
+    def test_no_binary_content(self):
+        """Verify no binary content in markdown files."""
+        failures = []
+        for docs_dir in [DOCS_DIR, STARLIGHT_DOCS_DIR]:
+            for f in docs_dir.rglob("*.md"):
+                content = f.read_text(errors="ignore")
+                # Check for null bytes
+                if "\x00" in content:
+                    failures.append(f"{f.name}: contains null bytes")
+                # Check for very long lines (possible binary)
+                for i, line in enumerate(content.split("\n")):
+                    if len(line) > 10000:
+                        failures.append(
+                            f"{f.name}: line {i} is {len(line)} chars (possible binary)"
+                        )
+                        break
+
+        assert len(failures) == 0, f"Binary content found:\n" + "\n".join(failures[:5])
+
+    def test_no_excessive_emoji(self):
+        """Check for excessive emoji usage (spammy)."""
+        failures = []
+        emoji_pattern = re.compile(
+            "["
+            "\U0001f600-\U0001f64f"  # emoticons
+            "\U0001f300-\U0001f5ff"  # symbols & pictographs
+            "\U0001f680-\U0001f6ff"  # transport & map symbols
+            "\U0001f1e0-\U0001f1ff"  # flags
+            "]+"
+        )
+
+        for docs_dir in [DOCS_DIR, STARLIGHT_DOCS_DIR]:
+            for f in docs_dir.rglob("*.md"):
+                content = f.read_text()
+                emojis = emoji_pattern.findall(content)
+                if len(emojis) > 20:
+                    failures.append(f"{f.name}: {len(emojis)} emojis (possible spam)")
+
+        assert len(failures) < 5, f"Excessive emoji usage:\n" + "\n".join(failures[:5])
+
+    def test_consistent_line_endings(self):
+        """Verify consistent line endings (LF)."""
+        failures = []
+        for docs_dir in [DOCS_DIR, STARLIGHT_DOCS_DIR]:
+            for f in docs_dir.rglob("*.md"):
+                content = f.read_text()
+                if "\r\n" in content:  # CRLF
+                    failures.append(f"{f.name}: uses CRLF line endings")
+
+        assert len(failures) == 0, f"Inconsistent line endings:\n" + "\n".join(
+            failures[:5]
+        )
+
+    def test_no_very_short_content(self):
+        """Check for suspiciously short template content."""
+        failures = []
+        for docs_dir in [DOCS_DIR, STARLIGHT_DOCS_DIR]:
+            for f in docs_dir.rglob("*.md"):
+                content = f.read_text()
+                # Skip index files
+                if "index" in f.name:
+                    continue
+                # Check content length (should be at least 500 chars for templates)
+                if len(content) < 500:
+                    failures.append(f"{f.name}: only {len(content)} chars")
+
+        assert len(failures) < 5, f"Very short content:\n" + "\n".join(failures[:5])
