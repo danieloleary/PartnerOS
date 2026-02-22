@@ -309,3 +309,27 @@ nav.sidebar {
 ::-webkit-scrollbar-thumb:hover {
 	background: #475569;
 }
+
+/* Interactive Checklists */
+li.completed {
+	opacity: 0.6;
+	text-decoration: line-through;
+}
+
+li.completed input[type="checkbox"] {
+	filter: grayscale(0);
+}
+
+/* Mermaid Diagrams */
+.mermaid-diagram {
+	margin: 1rem 0;
+	padding: 1rem;
+	background: var(--sl-color-gray-6);
+	border-radius: 8px;
+	overflow-x: auto;
+}
+
+.mermaid-diagram svg {
+	max-width: 100%;
+	height: auto;
+}

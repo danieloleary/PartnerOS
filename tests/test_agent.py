@@ -130,10 +130,52 @@ def test_slugify():
         os.unlink(config_path)
 
 
+def test_reload_config_uses_correct_path():
+    """reload_config() should use the original config_path, not default."""
+    from partner_agent import PartnerAgent
+    import tempfile
+
+    # Create initial config
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".yaml", delete=False) as f:
+        f.write("provider: anthropic\n")
+        f.write("model: test-model\n")
+        original_config_path = f.name
+
+    # Create a second config with different values
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".yaml", delete=False) as f:
+        f.write("provider: openai\n")
+        f.write("model: gpt-4\n")
+        new_config_path = f.name
+
+    try:
+        # Initialize agent with original config
+        agent = PartnerAgent(config_path=original_config_path)
+
+        # Verify initial config
+        assert agent.config.get("model") == "test-model"
+        assert agent.config.get("provider") == "anthropic"
+
+        # Manually change config_path to new config
+        agent.config_path = new_config_path
+
+        # Reload config
+        agent.reload_config()
+
+        # Verify reload used the new config_path
+        assert agent.config.get("model") == "gpt-4"
+        assert agent.config.get("provider") == "openai"
+
+        print("✓ reload_config uses correct config_path")
+    finally:
+        os.unlink(original_config_path)
+        os.unlink(new_config_path)
+
+
 def _make_agent():
     """Create a PartnerAgent with a minimal temp config."""
     import tempfile
     from partner_agent import PartnerAgent
+
     config_content = (
         "provider: anthropic\n"
         "model: claude-sonnet-4-6\n"
@@ -179,6 +221,7 @@ def test_partner_state_defaults():
 def test_add_note():
     """add_note appends a timestamped entry and saves state."""
     import tempfile
+
     agent, config_path = _make_agent()
     try:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -195,6 +238,7 @@ def test_add_note():
 def test_add_milestone():
     """add_milestone appends a timestamped entry and saves state."""
     import tempfile
+
     agent, config_path = _make_agent()
     try:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -223,8 +267,9 @@ def test_recommend_templates_after_recruit():
     agent, config_path = _make_agent()
     try:
         state = {
-            "name": "AcmeCorp", "tier": "Silver",
-            "playbooks": {"recruit": {"completed": True}}
+            "name": "AcmeCorp",
+            "tier": "Silver",
+            "playbooks": {"recruit": {"completed": True}},
         }
         recs = agent.recommend_templates(state)
         assert "onboard" in recs
@@ -237,8 +282,12 @@ def test_recommend_templates_gold_tier():
     agent, config_path = _make_agent()
     try:
         state = {
-            "name": "BigPartner", "tier": "Gold",
-            "playbooks": {"recruit": {"completed": True}, "onboard": {"completed": True}}
+            "name": "BigPartner",
+            "tier": "Gold",
+            "playbooks": {
+                "recruit": {"completed": True},
+                "onboard": {"completed": True},
+            },
         }
         recs = agent.recommend_templates(state)
         assert "co-marketing" in recs or "expand" in recs
@@ -251,9 +300,13 @@ def test_system_prompt_includes_tier():
     agent, config_path = _make_agent()
     try:
         partner_data = {
-            "name": "AcmeCorp", "tier": "Gold",
-            "vertical": "SaaS", "health_score": 85,
-            "rm": "Jane Smith", "notes": [], "milestones": []
+            "name": "AcmeCorp",
+            "tier": "Gold",
+            "vertical": "SaaS",
+            "health_score": 85,
+            "rm": "Jane Smith",
+            "notes": [],
+            "milestones": [],
         }
         prompt = agent._get_system_prompt(partner_data)
         assert "Gold" in prompt
@@ -279,11 +332,17 @@ def test_generate_report_no_partners():
     """generate_report produces output even with zero partners."""
     import tempfile
     import subprocess
+
     with tempfile.TemporaryDirectory() as tmpdir:
         result = subprocess.run(
-            ["python3", str(REPO_ROOT / "scripts" / "generate_report.py"),
-             "--state-dir", tmpdir],
-            capture_output=True, text=True
+            [
+                "python3",
+                str(REPO_ROOT / "scripts" / "generate_report.py"),
+                "--state-dir",
+                tmpdir,
+            ],
+            capture_output=True,
+            text=True,
         )
         # Should exit 0 (no partners = informational message to stderr, clean exit)
         assert result.returncode == 0 or "No partner state found" in result.stderr

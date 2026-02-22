@@ -1,4 +1,4 @@
-name: Lint Markdown
+name: Lint Markdown & Links
 
 on:
   push:
@@ -6,11 +6,13 @@ on:
       - 'partneros-docs/src/content/docs/**/*.md'
       - 'partneros-docs/src/content/docs/**/*.mdx'
       - 'scripts/lint_markdown.py'
+      - '.github/workflows/markdown_lint.yml'
   pull_request:
     paths:
       - 'partneros-docs/src/content/docs/**/*.md'
       - 'partneros-docs/src/content/docs/**/*.mdx'
       - 'scripts/lint_markdown.py'
+      - '.github/workflows/markdown_lint.yml'
 
 jobs:
   lint:
@@ -25,3 +27,15 @@ jobs:
         run: |
           npm install
           npm run lint:md
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Link Checker (Lychee)
+        uses: lycheeverse/lychee-action@v1.10.0
+        with:
+          args: --verbose --no-progress './partneros-docs/src/content/docs/**/*.md' './partneros-docs/src/content/docs/**/*.mdx'
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

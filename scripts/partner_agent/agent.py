@@ -583,23 +583,37 @@ class PartnerAgent:
             return self.llm_client.chat(messages, system_prompt)
 
         if provider == "anthropic":
-            response = self.llm_client.messages.create(
-                model=model,
-                max_tokens=4096,
-                system=system_prompt or self._get_system_prompt(),
-                messages=messages,
-            )
-            return response.content[0].text
+            try:
+                response = self.llm_client.messages.create(
+                    model=model,
+                    max_tokens=4096,
+                    system=system_prompt or self._get_system_prompt(),
+                    messages=messages,
+                )
+                if not response or not response.content:
+                    return "[Empty response from LLM]"
+                return response.content[0].text
+            except Exception as e:
+                logger.error(f"Anthropic API error: {e}")
+                return f"[Error: {str(e)}]"
 
         elif provider == "openai":
-            msgs = []
-            if system_prompt:
-                msgs.append({"role": "system", "content": system_prompt})
-            msgs.extend(messages)
-            response = self.llm_client.chat.completions.create(
-                model=model, messages=msgs
-            )
-            return response.choices[0].message.content
+            try:
+                msgs = []
+                if system_prompt:
+                    msgs.append({"role": "system", "content": system_prompt})
+                msgs.extend(messages)
+                response = self.llm_client.chat.completions.create(
+                    model=model, messages=msgs
+                )
+                if not response or not response.choices:
+                    return "[Empty response from LLM]"
+                if not response.choices[0].message:
+                    return "[Empty message from LLM]"
+                return response.choices[0].message.content or "[Empty content]"
+            except Exception as e:
+                logger.error(f"OpenAI API error: {e}")
+                return f"[Error: {str(e)}]"
 
         return "[Unknown provider]"
 

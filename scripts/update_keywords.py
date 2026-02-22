@@ -1,26 +1,70 @@
 #!/usr/bin/env python3
-"""Update Markdown files with keyword front matter."""
+"""
+Update Markdown files with keyword front matter using RAKE algorithm.
+
+This script scans all .md files and adds/updates the 'keywords' front matter field
+using a Rapid Automatic Keyword Extraction (RAKE) algorithm.
+
+Usage:
+    python update_keywords.py
+
+Note: This is a utility for template maintenance. Run on a copy of your files first.
+"""
 
 from pathlib import Path
 import csv
 import re
 
 STOPWORDS = {
-    'the', 'and', 'of', 'to', 'a', 'in', 'for', 'our', 'your', 'with', 'on',
-    'by', 'an', 'is', 'this', 'that', 'are', 'be', 'can', 'we', 'us', 'you',
-    'from', 'or', 'as', 'at', 'it', 'its', 'into', 'these', 'those', 'their',
-    'your', 'but', 'if', 'they', 'them', 'our', 'so', 'such', 'not'
+    "the",
+    "and",
+    "of",
+    "to",
+    "a",
+    "in",
+    "for",
+    "our",
+    "your",
+    "with",
+    "on",
+    "by",
+    "an",
+    "is",
+    "this",
+    "that",
+    "are",
+    "be",
+    "can",
+    "we",
+    "us",
+    "you",
+    "from",
+    "or",
+    "as",
+    "at",
+    "it",
+    "its",
+    "into",
+    "these",
+    "those",
+    "their",
+    "your",
+    "but",
+    "if",
+    "they",
+    "them",
+    "our",
+    "so",
+    "such",
+    "not",
 }
 
 
-
-def rake_keywords(text: str, limit: int = 6) -> list[str]:
+def rake_keywords(text: str, limit: int = 6) -> list:
     """Return a list of keywords using a simple RAKE algorithm."""
-    # Clean and tokenize
     text = re.sub(r"[^A-Za-z ]+", " ", text.lower())
     words = text.split()
 
-    # Build candidate phrases
     phrases = []
     current = []
     for word in words:
@@ -33,10 +77,8 @@ def rake_keywords(text: str, limit: int = 6) -> list[str]:
     if current:
         phrases.append(current)
 
-    # limit phrase length
     phrases = [p for p in phrases if 0 < len(p) <= 3]
 
-    # Calculate frequency and degree
     freq = {}
     degree = {}
     for phrase in phrases:
@@ -49,7 +91,6 @@ def rake_keywords(text: str, limit: int = 6) -> list[str]:
 
     word_score = {w: degree[w] / freq[w] for w in freq}
 
-    # Score phrases
     scores = {}
     for phrase in phrases:
         score = sum(word_score[w] for w in phrase)
@@ -68,77 +109,72 @@ def rake_keywords(text: str, limit: int = 6) -> list[str]:
 
 
 def parse_front_matter(lines):
-    if not lines or not lines[0].startswith('---'):
+    if not lines or not lines[0].startswith("---"):
         return {}, 0
     end = 1
     fm_lines = []
     for idx in range(1, len(lines)):
         line = lines[idx]
-        if line.startswith('---'):
+        if line.startswith("---"):
             end = idx + 1
             break
         fm_lines.append(line)
     fm = {}
     for line in fm_lines:
-        if ':' in line:
-            key, val = line.split(':', 1)
+        if ":" in line:
+            key, val = line.split(":", 1)
             fm[key.strip()] = val.strip()
     return fm, end
 
 
 def format_front_matter(fm):
-    lines = ['---']
+    lines = ["---"]
     for key, value in fm.items():
         lines.append(f"{key}: {value}")
-    lines.append('---\n')
-    return '\n'.join(lines)
+    lines.append("---")
+    return "\n".join(lines) + "\n"
 
 
 def update_file(path: Path):
     content = path.read_text().splitlines()
     fm, start_idx = parse_front_matter(content)
     body = content[start_idx:]
-    if 'title' not in fm:
-        # use first heading as title
+
+    # Skip leading empty lines in body
+    while body and not body[0].strip():
+        body = body[1:]
+
+    if "title" not in fm:
         for line in body:
-            if line.startswith('#'):
-                fm['title'] = line.lstrip('#').strip()
+            if line.startswith("#"):
+                fm["title"] = line.lstrip("#").strip()
                 break
-    text = '\n'.join(body)
-    if 'title' in fm:
-        text = fm['title'] + ' ' + text
+    text = "\n".join(body)
+    if "title" in fm:
+        text = fm["title"] + " " + text
     keywords = rake_keywords(text)
-    quoted = ', '.join(f'"{kw}"' for kw in keywords)
-    fm['keywords'] = '[' + quoted + ']'
-    new_content = format_front_matter(fm) + '\n'.join(body)
-    # ensure trailing newline
-    if not new_content.endswith('\n'):
-        new_content += '\n'
+    quoted = ", ".join(f'"{kw}"' for kw in keywords)
+    fm["keywords"] = "[" + quoted + "]"
+    new_content = format_front_matter(fm) + "\n".join(body)
+    # Ensure single newline at end
+    new_content = new_content.rstrip("\n") + "\n"
     path.write_text(new_content)
 
 
 def main():
-    md_files = sorted(Path('.').rglob('*.md'))
-    # record inventory
-    with open('markdown_inventory.csv', 'w', newline='') as f:
-        writer = csv.writer(f)
-        for p in md_files:
-            writer.writerow([str(p)])
+    md_files = sorted(Path("docs").rglob("*.md"))
+
+    if not md_files:
+        print("No markdown files found in docs/")
+        return
+
+    print(f"Processing {len(md_files)} markdown files...")
 
     for p in md_files:
         update_file(p)
 
-    # compute word counts for analysis
-    lengths = []
-    for p in md_files:
-        text = p.read_text()
-        word_count = len(re.findall(r"\w+", text))
-        lengths.append((word_count, p))
-    lengths.sort()
-    print("Shortest files:")
-    for count, p in lengths[:4]:
-        print(count, p)
+    print(f"Updated keywords in {len(md_files)} files.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
