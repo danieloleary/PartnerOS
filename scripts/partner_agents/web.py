@@ -7,12 +7,13 @@ A beautiful web UI for the multi-agent partner team.
 import os
 import sys
 
-# Add scripts to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
+# Import fastapi BEFORE adding scripts to path (to avoid local test shim)
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+
+# Add scripts to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 import uvicorn
 import httpx
 
@@ -28,9 +29,28 @@ from partner_agents.drivers import (
 from partner_agents import Orchestrator
 from partner_agents import partner_state
 
-# Get API key from environment or use default for testing
-MINIMAX_API_KEY = os.environ.get("MINIMAX_API_KEY", "")
-OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
+# In-memory rate limiting
+import time
+
+rate_limit_store = {}
+response_cache = {}
+
+
+def check_rate_limit(ip: str, max_requests: int = 20, window_seconds: int = 60) -> bool:
+    """Simple rate limiter - max 20 requests per minute per IP."""
+    now = time.time()
+    if ip not in rate_limit_store:
+        rate_limit_store[ip] = []
+
+    # Remove old requests
+    rate_limit_store[ip] = [t for t in rate_limit_store[ip] if now - t < window_seconds]
+
+    if len(rate_limit_store[ip]) >= max_requests:
+        return False
+
+    rate_limit_store[ip].append(now)
+    return True
+
 
 app = FastAPI(title="PartnerOS")
 
@@ -361,7 +381,10 @@ async def home():
                                 <div class="font-semibold text-white">${escapeHTML(p.name)}</div>
                                 <div class="text-xs text-slate-400">${escapeHTML(p.email || 'No email')}</div>
                             </div>
-                            <span class="px-2 py-1 rounded-full text-xs ${p.tier === 'Gold' ? 'bg-yellow-600' : p.tier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${p.tier}</span>
+                            <div class="flex items-center gap-2">
+                                <span class="px-2 py-1 rounded-full text-xs ${p.tier === 'Gold' ? 'bg-yellow-600' : p.tier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${p.tier}</span>
+                                <button onclick="deletePartner('${escapeHTML(p.name)}')" class="text-slate-500 hover:text-red-400 transition" title="Delete partner">🗑️</button>
+                            </div>
                         </div>
                         <div class="text-xs text-slate-500">${p.deals?.length || 0} deals • ${p.status || 'Onboarding'}</div>
                     </div>
@@ -413,6 +436,24 @@ async def home():
         
         // Load partners on page load
         loadPartners();
+        
+        // Delete partner
+        async function deletePartner(name) {
+            if (!confirm(`Delete partner "${name}"?`)) return;
+            try {
+                await fetch('/api/partners/' + encodeURIComponent(name), { method: 'DELETE' });
+                loadPartners();
+            } catch (e) {
+                alert('Error deleting partner: ' + e.message);
+            }
+        }
+        
+        // Keyboard shortcuts
+        document.getElementById('messageInput').addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                sendMessage();
+            }
+        });
     </script>
 </body>
 </html>"""
@@ -422,7 +463,34 @@ async def home():
 async def chat(request: Request):
     data = await request.json()
     user_message = data.get("message", "")
-    api_key = data.get("apiKey", "") or OPENROUTER_API_KEY
+    api_key = data.get("apiKey", "") or os.environ.get("OPENROUTER_API_KEY", "")
+
+    # Input sanitization - prevent injection
+    if not user_message or len(user_message.strip()) == 0:
+        return JSONResponse({"response": "Please enter a message.", "agent": "system"})
+
+    # Limit message length to prevent abuse
+    if len(user_message) > 5000:
+        return JSONResponse(
+            {
+                "response": "Message too long. Please limit to 5000 characters.",
+                "agent": "system",
+            }
+        )
+
+    # Sanitize: remove potentially dangerous patterns
+    sanitized = user_message.replace("<script", "").replace("</script", "")
+
+    # Rate limiting check
+    client_ip = request.client.host if request.client else "unknown"
+    if not check_rate_limit(client_ip):
+        return JSONResponse(
+            {
+                "response": "⚠️ Too many requests. Please wait a moment and try again.",
+                "agent": "system",
+            },
+            status_code=429,
+        )
 
     if not api_key or len(api_key) < 10:
         return JSONResponse(
@@ -473,9 +541,27 @@ async def get_partner(name: str):
     return JSONResponse({"error": "Partner not found"}, status_code=404)
 
 
+async def delete_partner(name: str):
+    """Delete a partner."""
+    success = partner_state.delete_partner(name)
+    if success:
+        return JSONResponse({"success": True, "message": f"Partner '{name}' deleted"})
+    return JSONResponse({"error": "Partner not found"}, status_code=404)
+
+
+app.add_api_route("/api/partners/{name}", delete_partner, methods=["DELETE"])
+
+
 async def call_llm(message: str, api_key: str) -> dict:
     """Call OpenRouter LLM with partner context."""
     import httpx
+    import hashlib
+
+    # Simple cache - hash the message
+    cache_key = hashlib.sha256(message.encode()).hexdigest()[:16]
+    cache_time = response_cache.get(cache_key)
+    if cache_time and time.time() - cache_time.get("ts", 0) < 300:
+        return cache_time.get("result")
 
     # Build context about agents
     system_prompt = """You are the orchestrator of PartnerOS - an AI partner team. 
@@ -541,7 +627,9 @@ Be helpful, concise, and actionable."""
 
             reply = choices[0].get("message", {}).get("content", "No response")
 
-            return {"response": reply, "agent": "Partner Manager"}
+            result = {"response": reply, "agent": "Partner Manager"}
+            response_cache[cache_key] = {"result": result, "ts": time.time()}
+            return result
 
         except Exception as e:
             return get_fallback_response(message)

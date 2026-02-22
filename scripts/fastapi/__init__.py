@@ -27,6 +27,14 @@ class FastAPI:
     def add_middleware(self, *args, **kwargs) -> None:
         return None
 
+    def add_api_route(
+        self, path: str, endpoint: Callable[..., Any], methods: list[str] = None
+    ):
+        self.routes.append(
+            _Route(path=path, endpoint=endpoint, methods=set(methods or []))
+        )
+        return endpoint
+
     def get(self, path: str, response_class: Any = None):
         def decorator(func: Callable[..., Any]):
             self.routes.append(_Route(path=path, endpoint=func, methods={"GET"}))
@@ -37,6 +45,13 @@ class FastAPI:
     def post(self, path: str):
         def decorator(func: Callable[..., Any]):
             self.routes.append(_Route(path=path, endpoint=func, methods={"POST"}))
+            return func
+
+        return decorator
+
+    def delete(self, path: str):
+        def decorator(func: Callable[..., Any]):
+            self.routes.append(_Route(path=path, endpoint=func, methods={"DELETE"}))
             return func
 
         return decorator

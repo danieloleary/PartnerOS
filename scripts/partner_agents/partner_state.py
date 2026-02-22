@@ -131,3 +131,14 @@ def get_partner_stats() -> Dict:
         "total_deals": total_deals,
         "total_value": total_value,
     }
+
+
+def delete_partner(name: str) -> bool:
+    """Delete a partner by name."""
+    partners = load_partners()
+    original_len = len(partners)
+    partners = [p for p in partners if p["name"].lower() != name.lower()]
+    if len(partners) < original_len:
+        save_partners(partners)
+        return True
+    return False
