@@ -3,7 +3,7 @@ title: Partner Business Case Template
 section: Strategy
 category: strategic
 template_number: I.1
-version: 2.0.0
+version: 3.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
@@ -25,7 +25,8 @@ purpose_detailed: >
   The difference between a partner program that gets funded and one that dies
   in committee is the quality of the business case. This template walks you
   through every section a CFO needs to say yes—including ROI, risk mitigation,
-  and clear milestones.
+  and clear milestones. Use this with the Partner Program Glossary to ensure
+  you use the correct terminology.
 outcomes:
 - Executive-approved business case
 - Budget allocation secured
@@ -37,22 +38,20 @@ skills_gained:
 - Stakeholder alignment
 ---
 
+This template walks you through building a business case that will get CFO approval. Every section is designed to answer the questions executives actually ask—and use the metrics they actually care about. This is not a generic template. It's built from what works in real boardrooms.
+
 > **"The biggest mistake I see in partner business cases is asking for money without proving ROI. Every number in this document traces back to a specific revenue assumption. That's how you get buy-in from CFOs."**
 > — Dan O'Leary, PartnerOS
 
-:::tip INSIDER TIP
-The "Do Nothing" scenario is your secret weapon. CFOs are risk-averse—showing them the cost of inaction often works better than showing the upside.
+:::tip[Insider Tip]
+The "Do Nothing" scenario is your secret weapon. CFOs are risk-averse—showing them the cost of inaction often works better than showing the upside. See Section 7 for how to frame this.
 :::
 
 ## How to Use This Template
 
-**Purpose:**
-Build a business case that convinces executives to fund your partner program—using their language, their metrics, and their risk tolerance.
-
-**Why It Works:**
 This template is built around what actually gets approved. It addresses the CFO's ROI concerns, the CEO's strategic questions, and the VP Sales' channel conflict fears—all in one document.
 
-**Choose Your Level:**
+### Choose Your Level
 
 | Level | Time | Best For |
 |-------|------|----------|
@@ -60,9 +59,22 @@ This template is built around what actually gets approved. It addresses the CFO'
 | Standard | 8 hours | Full program launch |
 | Strategic | 16 hours | Board-level approval, major investment |
 
----
+### Key Terms Used
 
-# Partner Business Case Template
+This template uses specific terminology from the Partner Program Glossary. Understanding these terms ensures your business case sounds like an expert wrote it:
+
+- **TAM** (Total Addressable Market) - The total market opportunity
+- **SAM** (Serviceable Addressable Market) - Your addressable segment  
+- **SOM** (Serviceable Obtainable Market) - Realistic capture
+- **ARR** (Annual Recurring Revenue) - Your revenue metric
+- **CAC** (Customer Acquisition Cost) - Cost to acquire customers
+- **LTV** (Lifetime Value) - Customer lifetime value
+- **MDF** (Marketing Development Funds) - Co-marketing budget
+- **QBR** (Quarterly Business Review) - Partner check-in cadence
+
+See the Partner Program Glossary for complete definitions.
+
+---
 
 ## What I Wish I Knew Before I Started
 
@@ -91,51 +103,61 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ---
 
-## 1. Executive Summary
+## Executive Summary
+
+The Executive Summary is the only section most executives will read. Make it count. It should stand alone as a one-page document that answers: What do you want? Why should they care? What's the cost? What's the return?
 
 ### Core Recommendation
 
-*In 2-3 concise sentences, what is the specific partnership initiative being proposed, and what primary business objective does it address?*
+In 2-3 concise sentences, what is the specific partnership initiative being proposed, and what primary business objective does it address?
 
 **Example:** "We recommend launching a co-sell program with strategic ISVs in the cybersecurity space to penetrate the enterprise FSI market and accelerate new logo acquisition. This initiative will generate $3M in partner-influenced ARR within 24 months while reducing customer acquisition costs by 35%."
 
-### Strategic Rationale & Urgency
+### Strategic Rationale and Urgency
 
-*Why is this initiative critical for our business now? What market forces, competitive pressures, or unique opportunities necessitate this action?*
+Why is this initiative critical for our business now? What market forces, competitive pressures, or unique opportunities necessitate this action?
 
 **Example:** "Three forces make this urgent: (1) Market window—MSPs are consolidating vendor relationships now, missing this cycle means 3+ year wait; (2) Competitive pressure—three competitors have launched partner programs in our territory in the last 6 months; (3) Sales capacity—our enterprise team is at capacity, adding 5 more AEs would cost $750K/year vs. $180K for this program."
 
-### Anticipated Impact & Key Metric
+### Anticipated Impact and Key Metric
 
-*What is the single most significant, measurable outcome expected?*
+What is the single most significant, measurable outcome expected?
 
-| Metric | Target | Timeline |
-|--------|--------|----------|
-| Partner-Influenced ARR | $3M | 24 months |
-| CAC Reduction | 35% | 24 months |
-| Active Partners | 20 | 18 months |
+| Metric | Target | Timeline | Definition |
+|--------|--------|----------|------------|
+| Partner-Influenced ARR | $3M | 24 months | Total ARR from partner-sourced and influenced deals |
+| CAC Reduction | 35% | 24 months | (Direct CAC - Partner CAC) ÷ Direct CAC |
+| Active Partners | 20 | 18 months | Partners with at least one deal in last 6 months |
 
 ### Investment Ask
 
-*What is the high-level resource commitment required?*
+What is the high-level resource commitment required?
+
+The table below breaks down the investment over two years. Note that Year 1 focuses on foundation (hiring, tooling, initial recruitment), while Year 2 scales the program.
 
 | Category | Year 1 | Year 2 | Total |
 |----------|--------|--------|-------|
 | Headcount (1 FTE Partner Manager) | $120,000 | $130,000 | $250,000 |
-| Partner Enablement & Training | $45,000 | $25,000 | $70,000 |
-| Marketing Development Funds | $30,000 | $40,000 | $70,000 |
+| Partner Enablement and Training | $45,000 | $25,000 | $70,000 |
+| MDF | $30,000 | $40,000 | $70,000 |
 | Technology (PRM, Portal) | $20,000 | $10,000 | $30,000 |
-| **Total** | $215,000 | $205,000 | $420,000 |
+| **Total** | **$215,000** | **$205,000** | **$420,000** |
 
 **Expected ROI:** $3M ÷ $420K = **7.1x**
 
+:::tip
+When presenting the Investment Ask, always lead with the total and then break it down. Executives want to see the number first, then understand the components.
+:::
+
 ---
 
-## 2. Market Opportunity & Ecosystem Analysis
+## Market Opportunity and Ecosystem Analysis
 
-### Total Addressable Market (TAM)
+This section establishes the market context. You're proving there's a real opportunity worth chasing—and that you understand it better than anyone.
 
-*Define TAM, SAM, and SOM for this specific partner motion with specific numbers.*
+### Total Addressable Market
+
+Define your market opportunity using the standard framework: TAM, SAM, and SOM. Each level has a specific purpose in your argument.
 
 | Level | Definition | Amount | Source |
 |-------|------------|--------|--------|
@@ -143,16 +165,21 @@ This template is built around what actually gets approved. It addresses the CFO'
 | SAM | Serviceable Addressable Market | $12B | Geographic focus: North America |
 | SOM | Serviceable Obtainable Market | $180M | 1.5% market share assumption |
 
+**What each level means:**
+- **TAM** is the ceiling—the total market if everyone used your product
+- **SAM** is what you can actually reach with your go-to-market
+- **SOM** is what you can realistically capture given competition and capacity
+
 ### Target Customer Segment Analysis
 
-**Who are your ideal partners?**
+Who are your ideal partners? This isn't about your end customers—it's about the partners who will sell on your behalf.
 
 | Attribute | Target | Why It Matters |
 |-----------|--------|----------------|
 | Company Size | 15-50 employees | Big enough to sell, small enough to partner |
 | Revenue | $2M-$15M ARR | Growth-minded, investing in capabilities |
 | Customer Base | 50-300 SMBs | High volume, needs your solution |
-| Technical Capability | Can deploy & manage | Reduces your support burden |
+| Technical Capability | Can deploy and manage | Reduces your support burden |
 | Sales Model | Recurring revenue | Aligned incentives |
 
 **Key Pain Points You're Solving:**
@@ -164,6 +191,8 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ### Competitive Landscape
 
+Understanding how competitors approach the channel informs your differentiation strategy.
+
 | Competitor | Channel Model | Their Strength | Your Response |
 |------------|---------------|----------------|---------------|
 | SentinelOne | 40% via channel | Scale, brand recognition | Better support, faster onboarding |
@@ -173,11 +202,13 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ---
 
-## 3. Strategic Alignment & Internal Readiness
+## Strategic Alignment and Internal Readiness
+
+This section answers: "Why should we do this now, and why can't we just do it ourselves?" It also addresses the political reality of internal alignment.
 
 ### CFO Language: The ROI Argument
 
-**For your CFO, emphasize:**
+For your CFO, emphasize numbers they can verify. CFOs speak the language of returns, payback, and risk mitigation.
 
 - **Payback period**: "Breaks even in 18 months"
 - **ROI**: "2.3x return over 3 years"
@@ -186,7 +217,7 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ### CEO Language: The Growth Argument
 
-**For your CEO, emphasize:**
+For your CEO, emphasize growth, market share, and competitive positioning. CEOs think in terms of market capture and competitive moats.
 
 - **Market share**: "Competitor X has 40% revenue via channel—we're at 0%"
 - **Competitive moat**: "First-mover advantage in our vertical"
@@ -195,7 +226,7 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ### VP Sales Language: The Partnership Argument
 
-**For VP Sales, emphasize:**
+For VP Sales, address their fears about channel conflict head-on. Show you understand their concerns.
 
 - **No conflict**: "Deal registration prevents channel conflict"
 - **New pipeline**: "Partners sell to ICP we can't reach"
@@ -203,6 +234,8 @@ This template is built around what actually gets approved. It addresses the CFO'
 - **Support**: "No displacement of direct sales"
 
 ### Cross-Functional Impact
+
+Every new initiative affects other teams. Map the impact and your mitigation plan.
 
 | Department | Impact | Mitigation |
 |------------|--------|------------|
@@ -212,11 +245,19 @@ This template is built around what actually gets approved. It addresses the CFO'
 | Finance | Commission processing | Automate via CRM integration |
 | Legal | Contract templates needed | Reuse existing MSA template |
 
+:::caution
+If you can't get VP Sales on board, don't proceed. Channel conflict will kill your program before it starts.
+:::
+
 ---
 
-## 4. ROI & Financial Model
+## ROI and Financial Model
 
-### Revenue Projections (3-Year)
+This is the heart of your business case. Every number must be traceable to an assumption. If you can't explain where a number comes from, remove it.
+
+### Revenue Projections
+
+Here's a 3-year projection based on realistic partner acquisition and productivity curves. Notice how partner productivity increases over time as they mature.
 
 | Year | Partners | Partner Revenue | Commission | Net Revenue |
 |------|---------|----------------|------------|--------------|
@@ -225,7 +266,9 @@ This template is built around what actually gets approved. It addresses the CFO'
 | Y3 | 27 | $2,000,000 | $450,000 | $1,550,000 |
 | **Total** | — | $3,000,000 | $641,000 | $2,359,000 |
 
-### Cost Model (3-Year)
+### Cost Model
+
+These costs include everything needed to launch and scale the program. Year 1 is heavier due to foundational investments.
 
 | Category | Year 1 | Year 2 | Year 3 | Total |
 |----------|--------|--------|--------|-------|
@@ -234,9 +277,11 @@ This template is built around what actually gets approved. It addresses the CFO'
 | MDF (15% of partner rev) | $27,000 | $123,000 | $300,000 | $450,000 |
 | Technology/Platform | $20,000 | $20,000 | $22,000 | $62,000 |
 | Marketing Collateral | $15,000 | $10,000 | $10,000 | $35,000 |
-| **Total Cost** | $227,000 | $308,000 | $492,000 | $1,027,000 |
+| **Total Cost** | **$227,000** | **$308,000** | **$492,000** | **$1,027,000** |
 
 ### ROI Summary
+
+This is the number your CFO is waiting for. Make it prominent.
 
 | Metric | Value |
 |--------|-------|
@@ -248,6 +293,8 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ### Sensitivity Analysis
 
+Always show you understand risk. Present conservative, base, and optimistic scenarios.
+
 | Scenario | Revenue | Cost | Profit | ROI |
 |----------|---------|------|--------|-----|
 | Conservative (60%) | $1,415,000 | $1,027,000 | $388,000 | 1.4x |
@@ -258,16 +305,20 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ### Key Metrics to Track
 
+These are the KPIs that prove your program is working. Track these monthly.
+
 | Metric | Target | How to Measure |
 |--------|--------|----------------|
 | Partner-Influenced Revenue | 30% of total | Marked deals in CRM |
-| Time to First Revenue | < 90 days | First deal date - contract signed |
-| Partner NPS | 50+ | Quarterly survey via PRM |
-| CAC Reduction | 35% | (Direct CAC - Partner CAC) / Direct CAC |
+| Time to Revenue | < 90 days | First deal date - contract signed |
+| NPS | 50+ | Quarterly survey via PRM |
+| CAC Reduction | 35% | (Direct CAC - Partner CAC) ÷ Direct CAC |
 
 ---
 
-## 5. Risk Assessment & Mitigation Plan
+## Risk Assessment and Mitigation Plan
+
+Executives respect honesty about risk. The question isn't "are there risks?"—it's "can you manage them?"
 
 ### Common Pitfalls
 
@@ -281,17 +332,9 @@ This template is built around what actually gets approved. It addresses the CFO'
 - **Warning sign:** Sales team not referring leads to partners
 - **Prevention:** Deal registration system, clear territory rules, VP Sales involved from day 1
 
-**Pitfall #3: Partner Churn After Year 1**
-- **What happens:** Partners leave after initial enthusiasm fades
-- **Warning sign:** No tier progression, declining engagement
 - **Prevention:** Clear value proposition, regular QBRs, tier advancement path
 
-### Risk Matrix
-
-| Risk | Likelihood | Impact | Mitigation |
-|------|------------|--------|------------|
-| Partners not productive | Medium | High | Strong onboarding, clear expectations |
-| Channel conflict | Medium | Medium | Deal registration, protected territories |
+- **Channel conflict** | Medium | Medium | Deal registration, protected territories |
 | Key partner churn | Low | High | Multi-partner strategy, no single dominant |
 | Market shift | Low | High | Quarterly reviews, flexibility |
 | Operational complexity | High | Medium | Phased rollout, clear processes |
@@ -303,9 +346,15 @@ This template is built around what actually gets approved. It addresses the CFO'
 - Program continues with reduced scope
 - No additional investment required
 
+:::tip
+Always include a worst-case scenario. It shows you've thought through what could go wrong—and builds trust.
+:::
+
 ---
 
-## 6. Implementation Plan
+## Implementation Plan
+
+A phased approach reduces risk and builds momentum. Every phase should have clear milestones and success criteria.
 
 ### Phased Rollout
 
@@ -334,6 +383,8 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ### Success Metrics
 
+Track these metrics at each milestone to prove the program is working.
+
 | Metric | Month 6 | Month 12 | Month 24 |
 |--------|----------|----------|----------|
 | Active Partners | 5 | 12 | 20 |
@@ -343,7 +394,9 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ---
 
-## 7. The "Do Nothing" Scenario
+## The "Do Nothing" Scenario
+
+This is your secret weapon. CFOs are trained to say no to new initiatives. Make the cost of inaction louder than the cost of action.
 
 ### Consequences of Inaction
 
@@ -362,7 +415,7 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ---
 
-## 8. Executive Approval
+## Executive Approval
 
 ### Sign-Off
 
@@ -384,6 +437,7 @@ This template is built around what actually gets approved. It addresses the CFO'
 
 ## Related Templates
 
-- [Ideal Partner Profile](02-ideal-partner-profile/)
-- [Partner Strategy Plan](05-strategy-plan/)
-- [Program Architecture](06-program-architecture/)
+- [Ideal Partner Profile](./02-ideal-partner-profile/)
+- [Partner Strategy Plan](./05-strategy-plan/)
+- [Program Architecture](./06-program-architecture/)
+- [Partner Program Glossary](../resources/glossary/)

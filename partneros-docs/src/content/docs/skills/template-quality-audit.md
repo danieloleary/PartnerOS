@@ -63,6 +63,93 @@ An A+ template meets ALL of these criteria:
 
 ---
 
+## Starlight Formatting Rules
+
+Templates are rendered using **Astro Starlight**, which has specific formatting requirements. Following these ensures your template looks professional and renders correctly.
+
+### Critical Rules
+
+1. **Start with paragraphs, NOT headings**
+   - Starlight automatically adds an H1 from the frontmatter title
+   - Start your page with 2-3 sentences of intro, then use H2 (`##`) for sections
+   - Never use H1 after the frontmatter
+
+2. **Each major section needs context paragraphs**
+   - BEFORE a table: Explain what the table shows and why it matters
+   - AFTER a table: Interpret the data, explain what the numbers mean
+   - Never just drop a table without explanation
+
+3. **Use Starlight asides for callouts**
+   ```markdown
+   :::tip[Custom Title]
+   Your content here
+   :::
+   
+   :::note
+   For important information
+   :::
+   
+   :::caution
+   For warnings
+   :::
+   ```
+
+4. **Glossary cross-references**
+   - Use links to the [Partner Program Glossary](../resources/glossary/)
+   - Link terms like: `TAM`, `SAM`, `SOM` (plain text, not links)
+   - Every metric in tables should have a definition
+
+### Table Best Practices
+
+**WRONG (AI slop):**
+```
+| Metric | Value |
+|--------|-------|
+| TAM | $48B |
+```
+
+**RIGHT (Expert):**
+```
+Here's what each market level means:
+- TAM is the ceiling—the total market
+- SAM is what you can reach
+- SOM is what you can capture
+
+| Level | Definition | Amount |
+|-------|------------|--------|
+| TAM | Total Addressable Market | $48B |
+```
+
+### Heading Hierarchy
+
+Starlight expects this structure:
+```markdown
+---
+title: My Page Title
+---
+
+Intro paragraph goes here...
+
+## Section 1 (H2)
+### Subsection (H3)
+
+## Section 2 (H2)
+### Subsection (H3)
+```
+
+### Common AI Slop Patterns to Avoid
+
+| Bad Pattern | Why It's Bad | Fix |
+|-------------|--------------|-----|
+| Tables without context | Confusing, no interpretation | Add paragraph before AND after |
+| Headings without intro | Cluttered TOC | Start with paragraph |
+| Placeholder brackets `[ ]` | Looks unfinished | Use real examples |
+| Generic examples | Not actionable | Use specific company names |
+| No glossary links | Sounds amateur | Link to glossary terms |
+| Only bullets | No depth | Add paragraphs |
+
+---
+
 ## Expert Tactics: The Secret Sauce
 
 ### What Expert Partner Leaders Know
@@ -427,6 +514,10 @@ Before marking a template as A+ complete, verify:
 - [ ] No broken internal links
 - [ ] Stakeholder language included (CFO/CEO/VP Sales)
 - [ ] Progressive levels available (Quick Win / Standard / Strategic)
+- [ ] **Starlight formatting** - paragraphs before headings, no H1 after frontmatter
+- [ ] **Table context** - paragraphs before AND after every major table
+- [ ] **Glossary links** - all metrics link to [Glossary](/resources/glossary/)
+- [ ] **Asides used** - :::tip, :::note, :::caution for callouts
 ```
 
 ---
@@ -437,6 +528,7 @@ Before marking a template as A+ complete, verify:
 |---------|------|---------|
 | 1.0 | 2026-02-21 | Initial release |
 | 2.0 | 2026-02-21 | Added expert tactics, metrics, stakeholder playbooks, failure modes, progressive levels |
+| 3.0 | 2026-02-21 | Added Starlight formatting rules, table best practices, glossary integration |
 
 ---
 
