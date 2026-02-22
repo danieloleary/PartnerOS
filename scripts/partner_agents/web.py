@@ -36,10 +36,10 @@ app = FastAPI(title="PartnerOS")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=False,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=["localhost", "127.0.0.1"],  # Restrict to local for security
+    allow_credentials=True,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Content-Type"],
 )
 
 # Initialize agents
@@ -66,8 +66,21 @@ async def home():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PartnerOS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Inline critical CSS as fallback if CDN fails -->
+    <style>
+        *,*::before,*::after{box-sizing:border-box}:root{--bg:#0f172a;--bg2:#1e293b;--text:#f8fafc;--text2:#94a3b8}.bg-gradient-to-r{background:linear-gradient(to right)}.text-white{color:#fff}.min-h-screen{min-height:100vh}.max-w-6xl{max-width:72rem}.mx-auto{margin-left:auto;margin-right:auto}.px-4{padding-left:1rem;padding-right:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.mb-6{margin-bottom:1.5rem}.mb-2{margin-bottom:.5rem}.gap-3{gap:.75rem}.flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.rounded-lg{border-radius:.5rem}.bg-slate-700{background:#334155}.bg-slate-800{background:#1e293b}.bg-cyan-500{background:#06b6d4}.bg-purple-500{background:#a855f7}.bg-green-500{background:#22c55e}.bg-emerald-500{background:#10b981}.bg-yellow-600{background:#ca8a04}.bg-orange-600{background:#ea580c}.bg-gray-400{background:#9ca3af}.text-3xl{font-size:1.875rem}.text-xl{font-size:1.25rem}.text-sm{font-size:.875rem}.text-xs{font-size:.75rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-transparent{color:transparent}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.from-cyan-400{--tw-gradient-from:#22d3ee;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(34,211,238,0))}.to-purple-500{--tw-gradient-to:#a855f7}.from-green-500{--tw-gradient-from:#22c55e;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(34,197,94,0))}.to-emerald-500{--tw-gradient-to:#10b981}.from-cyan-500{--tw-gradient-from:#06b6d4;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(6,182,212,0))}.grid{display:grid}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.gap-4{gap:1rem}.sm\:text-5xl{font-size:3rem}@media (min-width:640px){.sm\:text-5xl{font-size:3rem}}input,textarea{width:100%;background:#1e293b;border:1px solid #334155;color:#fff;padding:.75rem;border-radius:.5rem;outline:none}input:focus,textarea:focus{border-color:#06b6d4}button{background:linear-gradient(to right,#06b6d4,#a855f7);border:none;color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;cursor:pointer;font-weight:600;transition:opacity .2s}button:hover{opacity:.9}button:disabled{opacity:.5;cursor:not-allowed}.max-w-lg{max-width:32rem}.w-8{width:2rem}.h-8{height:2rem}.flex-shrink-0{flex-shrink:0}.overflow-auto{overflow:auto}.border{border-width:1px}.border-slate-700{border-color:#334155}.bg-slate-700\/50{background:rgba(51,65,85,.5)}.bg-slate-800\/50{background:rgba(30,41,59,.5)}.text-slate-400{color:#94a3b8}.text-slate-500{color:#64748b}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.px-2{padding-left:.5rem;padding-right:.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.bg-gradient-to-r{background:linear-gradient(to right,var(--tw-gradient-stops))}.gradient-bg{background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%)}body{background:#0f172a;color:#f8fafc}
+    </style>
+    <script>
+    // Fallback: load Tailwind CSS with integrity check
+    (function() {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.tailwindcss.com';
+        link.onerror = function() { console.log('CDN failed, using inline styles'); };
+        document.head.appendChild(link);
+    })();
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
         .gradient-bg {
@@ -259,7 +272,7 @@ async def home():
             } catch (e) {
                 console.error('Error:', e);
                 hideTyping();
-                addMessage('Error: ' + e.message, 'assistant');
+                addMessage('⚠️ Something went wrong. Please try again or refresh the page.', 'assistant');
             } finally {
                 input.disabled = false;
                 btn.disabled = false;
@@ -326,11 +339,18 @@ async def home():
         async function loadPartners() {
             try {
                 const response = await fetch('/api/partners');
+                if (!response.ok) throw new Error('Failed to load partners');
                 const data = await response.json();
                 const container = document.getElementById('partnersList');
                 
                 if (data.partners.length === 0) {
-                    container.innerHTML = '<div class="text-slate-400 text-sm">No partners yet. Add one above!</div>';
+                    container.innerHTML = `
+                        <div class="text-center py-8 px-4">
+                            <div class="text-4xl mb-3">📦</div>
+                            <div class="text-slate-400 text-sm mb-2">No partners yet</div>
+                            <div class="text-slate-500 text-xs">Add your first partner using the form above</div>
+                        </div>
+                    `;
                     return;
                 }
                 

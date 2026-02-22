@@ -33,9 +33,6 @@ export default defineConfig({
 			{ label: 'Partner Agent', autogenerate: { directory: 'agent' } },
 			{ label: 'Skills', autogenerate: { directory: 'skills' } },
 		],
-		customCss: [
-			'./src/content/docs/stylesheets/extra.css',
-		],
 		}),
 	],
 });
