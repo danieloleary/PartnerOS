@@ -1,3 +1,7 @@
+---
+title: PartnerOS Assistant Agent Design
+keywords: ["chase surface risks", "messy inputs then", "calendar meeting notes", "already exist memory", "db tables matching", "blocked feedback loop"]
+---
 # PartnerOS Assistant Agent Design
 
 ## What it does

@@ -1,3 +1,7 @@
+---
+title: Example: Completed Email Sequence
+keywords: ["i m impressed", "natural fit between", "lunch learn about", "i m happy", "too salesy focused", "customer success would"]
+---
 # Example: Completed Email Sequence
 
 *This is a fully completed example showing what a filled template looks like.*

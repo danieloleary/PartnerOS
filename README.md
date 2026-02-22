@@ -1,3 +1,7 @@
+---
+title: PartnerOS
+keywords: ["scaling strategic partnerships", "scale manual workflows", "startup founders building", "multi agent system", "specialized ai agents", "ai agent"]
+---
 # PartnerOS
 
 **The complete playbook for building and scaling strategic partnerships with AI-powered automation.**
@@ -25,12 +29,14 @@ Building a world-class partner program is hard. Most companies:
 | Benefit | Description |
 |---------|-------------|
 | **Complete Playbooks** | 7 end-to-end automation playbooks covering the entire partner lifecycle |
-| **53 Ready-to-Use Templates** | Strategy (10), recruitment (10), enablement (9), legal (5), finance (4), security (2), operations (8), executive (1), analysis (2) |
+| **67 Ready-to-Use Templates** | Strategy (10), recruitment (10), enablement (9), legal (5), finance (4), security (2), operations (8), executive (1), analysis (2) |
+| **14 Agent-First Templates** | 7 skill cards + 7 workflow templates for AI-driven partner management |
 | **Multi-Agent AI Team** | 7 specialized AI agents that collaborate on partner work |
 | **AI-Powered Agent** | Local AI partner assistant runs offline with Ollama — no API keys required |
 | **Enterprise-Ready** | Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths |
 | **Tested & Validated** | 141 automated tests ensure reliability across templates and agents |
 | **A+ Quality Templates** | Every template rewritten with expert voice, Starlight formatting, and progressive levels |
+| **Beautiful Web UI** | Chat interface with Markdown rendering, API key management, and partner CRM |
 
 ---
 
@@ -48,7 +54,7 @@ PartnerOS includes a multi-agent system with 7 specialized AI agents that collab
 | **Leader** | Board & ROI | 5 | 6 |
 | **Technical** | Integrations | 4 | 4 |
 
-**Total: 7 agents | 36 skills | 53 templates**
+**Total: 7 agents | 36 skills | 67 templates | 14 agent-first templates**
 
 Each agent has distinct skills and can collaborate with others. The system is company-customizable with drop-in backgrounds.
 
@@ -222,7 +228,6 @@ PartnerOS/
 │   ├── src/content/docs/    # Documentation source
 │   └── astro.config.mjs    # Starlight configuration
 ├── BACKLOG.md                 # Prioritized feature backlog
-├── IMPROVEMENT_PLAN.md        # Audit findings and roadmap
 ├── ARCHITECTURE.md            # Architecture decisions
 └── README.md                  # This file
 ```
@@ -248,7 +253,7 @@ pytest tests/test_starlight.py -v           # 14 Starlight-specific tests
 
 ### v1.3 (February 2026)
 - Full test suite + UI/UX site audit
-- Updated all meta-documentation (CLAUDE.md, README, BACKLOG, CHANGELOG, ARCHITECTURE, IMPROVEMENT_PLAN)
+- Updated all meta-documentation (CLAUDE.md, README, BACKLOG, CHANGELOG, ARCHITECTURE)
 - Identified and documented next steps: 4 missing section index pages, 3 orphaned nav files, test coverage gaps
 
 ### v1.2 (February 2026)

@@ -1,13 +1,10 @@
 ---
 title: Tags
 description: Browse templates by topic
-skills_gained:
-- Template usage
-- Best practices
-prerequisites:
-- Completed prior templates in this section
+skills_gained: 
+prerequisites: 
+keywords: ["topic tags"]
 ---
-
 # Tags
 
 Browse templates by topic.

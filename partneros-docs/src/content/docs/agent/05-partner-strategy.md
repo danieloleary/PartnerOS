@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: advanced
 purpose: strategic
 phase: strategy
+keywords: ["partner", "how"]
 ---
-
 ## Agent Overview
 
 **Partner Strategy** defines Ideal Partner Profiles (ICP), evaluates partners, and designs tier structures.
@@ -33,9 +33,9 @@ phase: strategy
 ## Example Prompts
 
 > "Define ICP for enterprise SaaS partners"
-> 
+>
 > "Evaluate TechCorp as a partner - they do $10M ARR"
-> 
+>
 > "Design tier structure for 2025"
 
 ---

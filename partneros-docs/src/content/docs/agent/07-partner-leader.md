@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: advanced
 purpose: executive
 phase: strategy
+keywords: ["partner strategy how", "day execution"]
 ---
-
 ## Agent Overview
 
 **Partner Leader** handles board presentations, ROI calculations, and executive-level communications.
@@ -33,9 +33,9 @@ phase: strategy
 ## Example Prompts
 
 > "Create Q4 board deck for partner program"
-> 
+>
 > "Calculate ROI for 2025 partner program"
-> 
+>
 > "Prepare CEO update on partner strategy"
 
 ---

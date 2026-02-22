@@ -6,30 +6,18 @@ template_number: II.10
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- Ideal Partner Profile defined
+prerequisites: 
 description: >
-  Systematically track alignment between your Ideal Customer Profile and partner-covered accounts. Maximize joint coverage and identify co-sell opportunities.
-outcomes:
-- Complete ICP alignment tracking
-- Account mapping by partner
-- Co-sell opportunity identification
-skills_gained:
-- Account mapping
-- Partner alignment
-- Pipeline development
-- Co-sell strategy
+outcomes: 
+skills_gained: 
+keywords: ["re leaving money", "t reach map", "complementary coverage how", "icp alignment tracker", "tracker maps", "template purpose"]
 ---
-
 > **If you don't know which accounts your partners can access, you're leaving money on the table.** — Dan O'Leary
 
 :::tip[Insider Tip]

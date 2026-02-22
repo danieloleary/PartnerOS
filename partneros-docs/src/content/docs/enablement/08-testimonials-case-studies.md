@@ -6,30 +6,18 @@ template_number: III.8
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: beginner
 purpose: operational
 phase: enablement
 time_required: 2-3 hours
 difficulty: easy
-prerequisites:
-- At least one active partner
-- Customer willing to participate
+prerequisites: 
 description: >
-  A guide to capturing powerful partner testimonials and case studies. Build social proof that sells.
-outcomes:
-- Complete testimonial framework
-- Case study template
-- Process for capturing stories
-skills_gained:
-- Content creation
-- Social proof development
-- Partner marketing
+outcomes: 
+skills_gained: 
+keywords: ["great case study", "solution what did", "template purpose", "solution", "re", "use"]
 ---
-
 > **A great case study is worth 100 sales calls. Invest in capturing partner success stories—they're your most powerful sales tool.** — Dan O'Leary
 
 ## How to Use This Template

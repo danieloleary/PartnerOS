@@ -17,8 +17,8 @@ prerequisites: [Partner Business Case Template]
 outcomes: [ROI calculation spreadsheet, Investment case, Payback period analysis]
 skills_gained: [Financial modeling, ROI analysis, Investment planning]
 tags: [roi, calculator, finance, investment, metrics]
+keywords: ["compelling financial case", "justify investment why", "isn t guesswork", "money back aim", "first minutes define", "board presentations include"]
 ---
-
 Use this template to build a compelling financial case for your partner program—or to validate an existing one.
 
 :::tip[Insider Tip]

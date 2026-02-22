@@ -6,29 +6,18 @@ template_number: A.1
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: analysis
 time_required: 1-2 hours
 difficulty: medium
-prerequisites:
-- Metrics tracked
-- CRM data available
+prerequisites: 
 description: >
-  A comprehensive scorecard to assess partner health across multiple dimensions. Identify issues early and drive improvement.
-outcomes:
-- Complete health assessment
-- Risk identification
-- Improvement plan
-skills_gained:
-- Partner assessment
-- Performance analysis
-- Health scoring
+outcomes: 
+skills_gained: 
+keywords: ["partner health scorecard", "template purpose", "growth", "use", "executives"]
 ---
-
 > **The best partners aren't just profitable—they're healthy. Track engagement, capability, and growth—not just revenue.** — Dan O'Leary
 
 ## How to Use This Template

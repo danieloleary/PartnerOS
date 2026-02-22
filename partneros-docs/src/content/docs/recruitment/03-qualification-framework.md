@@ -6,32 +6,18 @@ template_number: II.3
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Ideal Partner Profile defined
-- Target partner list identified
+prerequisites: 
 description: >
-  A systematic framework to evaluate and qualify potential partners. Use this to ensure you're pursuing partners who align with your strategy and can deliver results.
-outcomes:
-- Complete qualification scorecard
-- Decision framework for partnership
-- Risk assessment criteria
-- Documentation for stakeholder alignment
-skills_gained:
-- Partner evaluation
-- Risk assessment
-- Strategic decision making
-- Stakeholder alignment
+outcomes: 
+skills_gained: 
+keywords: ["sales team uses", "sales both qualify", "kills partnerships before", "evaluate potential partners", "data driven decisions", "solution integration skills"]
 ---
-
 > **Qualifying partners isn't about saying no—it's about saying yes to the right partners. Skip qualification and you'll spend 18 months pursuing partners who were never going to work.** — Dan O'Leary
 
 :::tip[Insider Tip]

@@ -17,8 +17,8 @@ prerequisites: [Partner Business Case, Ideal Partner Profile]
 outcomes: [Executive-approved charter, Governance framework, Strategic alignment]
 skills_gained: [Strategic planning, Program governance, Executive communication]
 tags: [charter, governance, strategy, executive, mission]
+keywords: ["exist what do", "active partners driving", "strategy excellence best", "vision define values", "dashboard document risks", "board presentations lead"]
 ---
-
 This is your program's founding document. It answers: Why do we exist? What do we believe? How will we operate? Who decides?
 
 :::tip[Insider Tip]

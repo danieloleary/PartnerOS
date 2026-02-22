@@ -17,8 +17,8 @@ prerequisites: [QBR Template, Partner Success Metrics]
 outcomes: [Annual performance summary, Strategic alignment, Growth plan]
 skills_gained: [Strategic planning, Performance review, Executive communication]
 tags: [annual review, performance, planning, strategic, review]
+keywords: ["get wonged how", "strategic partners why", "notes send thank", "partner business review", "confidentiality part year", "biggest mistake making"]
 ---
-
 The annual partner business review is your most important meeting. It sets the tone for the next year and determines whether the partnership grows or dissolves.
 
 :::tip[Insider Tip]

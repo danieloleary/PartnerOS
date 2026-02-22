@@ -4,7 +4,7 @@ about: Create a report to help us improve
 title: '[Bug]: '
 labels: bug
 assignees: ''
-
+keywords: ["applicable add screenshots", "happen actual behavior", "behavior go", "concise description", "help explain", "problem here"]
 ---
 
 ## Description

@@ -6,35 +6,18 @@ template_number: I.5
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: advanced
 purpose: strategic
 phase: strategy
 time_required: 8-16 hours
 difficulty: hard
-prerequisites:
-- Clear partner program vision
-- Ideal Partner Profile defined
-- Competitive analysis completed
+prerequisites: 
 description: >
-  Develop a comprehensive partner strategy that aligns with business objectives and drives mutual success. This plan becomes the blueprint for your entire partner program—everything flows from here.
-outcomes:
-- Complete partner strategy document
-- Go-to-market strategy with partner roles
-- Resource allocation plan
-- Success metrics and KPIs
-- Risk mitigation framework
-skills_gained:
-- Strategic planning
-- Partner program design
-- Go-to-market strategy
-- Resource planning
-- Performance management
+outcomes: 
+skills_gained: 
+keywords: ["actually execute because", "measures program success", "translates business objectives", "most urgent go", "sharepoint i used", "got comments approvals"]
 ---
-
 > **Your partner strategy isn't a document—it's a commitment. Write something you can actually execute, because your partners will read it and decide whether to invest in you.** — Dan O'Leary
 
 :::tip[Insider Tip]

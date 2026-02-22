@@ -3,24 +3,17 @@ title: How to Use Templates
 category: operational
 version: 1.0.0
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: onboarding
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- None - good starting point
+prerequisites: 
 description: Tips for customizing templates for your organization
-outcomes:
-- Completed How to Use Templates
-skills_gained:
-- Onboarding
-- Process implementation
-- Best practices
+outcomes: 
+skills_gained: 
+keywords: ["information placeholder what", "startup pitch differs", "enterprise pitch keep", "first main content", "one workflow integration", "branding correct dates"]
 ---
 # How to Use Templates
 

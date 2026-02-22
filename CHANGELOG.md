@@ -1,4 +1,44 @@
+---
+title: PartnerOS CHANGELOG
+keywords: ["localstorage", "formulas", "remedies", "partnerstate", "docs", "prerequisites"]
+---
 # PartnerOS CHANGELOG
+
+## Version 2.1 (2026-02-22) - Web UI Enhancements
+
+### 🖥️ Web UI Improvements
+- **Settings Modal**: API key management with localStorage persistence
+- **Markdown Rendering**: Added marked.js for beautiful AI responses (tables, lists, code blocks)
+- **API Key Integration**: Chat now uses saved API key from browser storage
+
+### 🔧 Technical
+- Web UI loads API key from localStorage on page load
+- Chat refreshes API key before each message send
+- Markdown CSS styling for tables, blockquotes, code, headers
+- 141 tests passing
+
+---
+
+## Version 2.0 (2026-02-22) - Agent-First Templates
+
+### 🤖 Agent-First Templates
+- **7 Skill Cards**: Owner, Partner Manager, Marketing, Operations, Strategy, Technical, Leader
+- **7 Workflow Templates**: Onboarding, Setup, Campaigns, Comp Plan, Deal Calculator, Pitch, Health Check
+
+### 📝 Template Expansion
+- Grew from 53 to 67 templates
+- Added Agent-First section to docs
+- New interactive templates with AI agent integration
+
+### 🛠️ DevOps Tools Added
+- CODEOWNERS file
+- dependabot.yml for dependencies
+- release.yml workflow
+- stale-bot.yml for issue management
+- Bug report template
+- Pre-commit configuration
+
+---
 
 ## Version 1.8 (2026-02-22) - Golden Templates Expansion
 

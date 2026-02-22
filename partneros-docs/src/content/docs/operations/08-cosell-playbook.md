@@ -17,8 +17,8 @@ prerequisites: [Deal Registration Policy, Partner Territory Plan]
 outcomes: [Co-sell process, Role definitions, Win rates]
 skills_gained: [Joint selling, Partner collaboration, Sales strategy]
 tags: [cosell, joint selling, sales, collaboration, process]
+keywords: ["there s friction", "broken simplify until", "train sales teams", "tracking partner attribution", "t improve what", "flows how"]
 ---
-
 Co-selling is where partner programs prove their value. This playbook turns "we have partners" into "we win with partners."
 
 :::tip[Insider Tip]

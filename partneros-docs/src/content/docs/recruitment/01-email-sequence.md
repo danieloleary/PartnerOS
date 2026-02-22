@@ -6,32 +6,18 @@ template_number: II.1
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Target partner list identified
-- Ideal Partner Profile defined
+prerequisites: 
 description: >
-  A systematic, professional email sequence for recruiting potential partners. This template provides proven outreach scripts that convert prospects into partnership conversations.
-outcomes:
-- Customized 4-email sequence
-- Response templates for common scenarios
-- Timing and personalization guidelines
-- Metrics to track outreach success
-skills_gained:
-- Sales outreach
-- Cold email writing
-- Partner qualification
-- Follow-up strategy
+outcomes: 
+skills_gained: 
+keywords: ["follow up gets", "converts cold prospects", "meeting steps research", "optimize weekly review", "thought there might", "natural fit between"]
 ---
-
 > **The first email gets you read. The follow-up gets you replied to. Most people give up after one email—and that's why they fail at partner recruitment.** — Dan O'Leary
 
 :::tip[Insider Tip]

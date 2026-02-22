@@ -6,29 +6,18 @@ template_number: II.9
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: onboarding
 time_required: 2-4 hours
 difficulty: medium
-prerequisites:
-- Partnership agreement signed
+prerequisites: 
 description: >
-  A comprehensive checklist to systematically onboard new partners. Get them productive fast with this systematic approach.
-outcomes:
-- Complete onboarding workflow
-- Partner productivity timeline
-- Success metrics defined
-skills_gained:
-- Partner onboarding
-- Enablement planning
-- Relationship management
+outcomes: 
+skills_gained: 
+keywords: ["x more likely", "orientation week training", "certification week enablement", "partner onboarding checklist", "first days define", "onboarding why"]
 ---
-
 > **The first 30 days define the partnership. Get them productive fast or watch momentum die.** — Dan O'Leary
 
 :::tip[Insider Tip]

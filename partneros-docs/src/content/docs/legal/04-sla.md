@@ -6,29 +6,18 @@ template_number: L.4
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- MSA executed
-- Legal review
+prerequisites: 
 description: >
-  A service level agreement that defines support commitments and response times. Set clear expectations for partner support.
-outcomes:
-- Clear support commitments
-- Defined SLAs
-- Escalation process
-skills_gained:
-- Support management
-- SLA definition
-- Escalation handling
+outcomes: 
+skills_gained: 
+keywords: ["upfront track", "template purpose", "use"]
 ---
-
 > **Clear SLAs prevent arguments. Define them upfront, track them religiously.** — Dan O'Leary
 
 ## How to Use This Template

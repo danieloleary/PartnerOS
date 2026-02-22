@@ -6,29 +6,18 @@ template_number: L.1
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: beginner
 purpose: operational
 phase: recruitment
 time_required: 1 hour
 difficulty: easy
-prerequisites:
-- Legal review completed
+prerequisites: 
 description: >
-  A mutual non-disclosure agreement to protect confidential information during partnership discussions. Build trust before sharing sensitive information.
-outcomes:
-- Executed NDA
-- Protected confidential information
-- Legal compliance
-skills_gained:
-- Contract management
-- Legal compliance
-- Confidentiality protection
+outcomes: 
+skills_gained: 
+keywords: ["share anything sensitive", "nda before", "about distrust", "s", "template"]
 ---
-
 > **Sign the NDA before you share anything sensitive. It's not about distrust—it's about professionalism.** — Dan O'Leary
 
 :::caution[LEGAL REVIEW REQUIRED]

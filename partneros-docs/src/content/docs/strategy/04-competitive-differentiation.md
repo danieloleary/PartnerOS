@@ -6,32 +6,18 @@ template_number: I.4
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: strategy
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Clear partner program vision
-- Competitive analysis completed
+prerequisites: 
 description: >
-  Analyze competitive positioning and develop compelling differentiation strategies that partners can sell. This framework gives partners the ammunition to win against specific competitors in specific scenarios.
-outcomes:
-- Completed competitive differentiation matrix
-- Partner-facing battle cards
-- Win/loss tracking framework
-- Competitive messaging library
-skills_gained:
-- Competitive positioning
-- Partner enablement
-- Value proposition development
-- Sales strategy
+outcomes: 
+skills_gained: 
+keywords: ["ll fail building", "makes sense price", "capabilities integrations uptime", "don t track", "useless without action", "don t want"]
 ---
-
 > **Your partners won't sell against competitors they don't understand. Give them the specific scenarios, the exact objections, and the precise counters—and watch win rates double.** — Dan O'Leary
 
 :::tip[Insider Tip]

@@ -1,3 +1,7 @@
+---
+title: PartnerOS Backlog - Prioritized Roadmap
+keywords: ["issues vision give", "advisor help customize", "implement target companies", "show prospects easy", "system currently runs", "fallback mode responses"]
+---
 # PartnerOS Backlog - Prioritized Roadmap
 
 *Generated: February 19, 2026*
@@ -25,23 +29,30 @@
 
 ---
 
-## Current State (v1.7 - February 21, 2026)
+## Current State (v2.1 - February 22, 2026)
 
 **Platform:** Starlight/Astro (no more MkDocs!)
 **Live Site:** https://danieloleary.github.io/PartnerOS/
 
 ### What's Built
-- 40 templates across 9 categories (A+ quality standard)
+- 67 templates across 9 categories (A+ quality standard)
+- 14 Agent-First Templates (7 skill cards + 7 workflow templates)
 - ROI Analysis page (v2.0)
 - 9 section index pages with Starlight Cards
 - 7 automation playbooks
 - 141 automated tests (all passing)
 - AI Partner Agent with memory, recommendations, email generation
 - Web UI with chat interface
+- **Web UI Features:**
+  - Settings modal with API key management (localStorage)
+  - Markdown rendering (marked.js)
+  - Response caching (5 min)
+  - Partner CRUD operations
+  - Rate limiting
 - Security: CORS restricted, input sanitization, rate limiting
 - UI/UX: Empty states, error messages, partner deletion, keyboard shortcuts
 - Performance: Response caching, inline CSS fallback
-- 3 CI/CD workflows
+- 3 CI/CD workflows + DevOps tools (CODEOWNERS, dependabot, release, stale-bot)
 
 ### Test Suite
 | Suite | Count | Status |
@@ -60,7 +71,7 @@
 | test_content.py | 8 | ✅ |
 | test_build.py | 7 | ✅ |
 | test_deployed_links.py | 6 | ✅ |
-| **Total** | **130** | ✅ |
+| **Total** | **141** | ✅ |
 
 ---
 
@@ -142,12 +153,11 @@
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
 | 5.1 | **Full Audit** | Test suite + UI/UX site audit | 2 hrs | DONE |
-| 5.2 | **Update IMPROVEMENT_PLAN.md** | Comprehensive findings and roadmap | 1 hr | DONE |
-| 5.3 | **Update BACKLOG.md** | Mark completed items, add new findings | 30 min | DONE |
-| 5.4 | **Update CLAUDE.md** | Accurate file tree, counts, test list | 1 hr | DONE |
-| 5.5 | **Update README.md** | Fix counts, structure, typo | 30 min | DONE |
-| 5.6 | **Update CHANGELOG.md** | Add v1.3 entry | 15 min | DONE |
-| 5.7 | **Update ARCHITECTURE.md** | Current state, completed features | 30 min | DONE |
+| 5.2 | **Update BACKLOG.md** | Mark completed items, add new findings | 30 min | DONE |
+| 5.3 | **Update CLAUDE.md** | Accurate file tree, counts, test list | 1 hr | DONE |
+| 5.4 | **Update README.md** | Fix counts, structure, typo | 30 min | DONE |
+| 5.5 | **Update CHANGELOG.md** | Add v1.3 entry | 15 min | DONE |
+| 5.6 | **Update ARCHITECTURE.md** | Current state, completed features | 30 min | DONE |
 
 ---
 
@@ -200,7 +210,7 @@
 | Test Suite Expansion (43 → 80 tests) | Feb 20, 2026 |
 | Phase 6 Complete (4 index pages, nav updates) | Feb 20, 2026 |
 | Template Frontmatter Polish (44 templates) | Feb 20, 2026 |
-| Documentation refresh (CLAUDE.md, README, BACKLOG, CHANGELOG, ARCHITECTURE, IMPROVEMENT_PLAN) | Feb 21, 2026 |
+| Documentation refresh (CLAUDE.md, README, BACKLOG, CHANGELOG, ARCHITECTURE) | Feb 21, 2026 |
 | Full test suite + UI/UX audit | Feb 21, 2026 |
 | Partner Memory (tier, health, notes, milestones) | Feb 20, 2026 |
 | Tier Guidance in LLM prompts | Feb 20, 2026 |
@@ -218,6 +228,12 @@
 | Glossary Maintenance Skill (SK.3) | Feb 21, 2026 |
 | Link Test Suite Expansion (18 tests) | Feb 21, 2026 |
 | 404.md link fixes | Feb 21, 2026 |
+| Version 2.0 Release (Agent-First Templates) | Feb 22, 2026 |
+| Version 2.1 Release (Web UI Enhancements) | Feb 22, 2026 |
+| Web UI Settings Modal (API key + localStorage) | Feb 22, 2026 |
+| Web UI Markdown Rendering (marked.js) | Feb 22, 2026 |
+| DevOps Tools (CODEOWNERS, dependabot, release, stale-bot) | Feb 22, 2026 |
+| 14 Agent-First Templates (7 skill cards + 7 workflows) | Feb 22, 2026 |
 | Template Quality Pass - Business Case (I.1) as pilot | Feb 21, 2026 |
 | Security Templates (Questionnaire, SOC2) | Feb 20, 2026 |
 | Operations Templates (Deal Reg, Standup, Report, Portal) | Feb 20, 2026 |
@@ -328,7 +344,7 @@ python scripts/onboard.py
 | test_build.py (7 tests) | PASSING (3 skipped) |
 | test_deployed_links.py (6 tests) | PASSING |
 
-**Total: 130 tests passing, 3 skipped**
+**Total: 141 tests passing**
 
 ---
 
@@ -361,10 +377,10 @@ The system currently runs in **fallback mode** - responses are generated locally
 | # | Item | Purpose | Effort | Status |
 |---|------|---------|--------|--------|
 | 9.1 | **Unified State Management** | Consolidate CLI state (partner_agent/state/) and Web state (partners.json) into single JSON database | 4 hrs | PENDING |
-| 9.2 | **Web UI Markdown Rendering** | Integrate marked.js to render AI responses as formatted Markdown (tables, checklists) | 2 hrs | PENDING |
+| 9.2 | **Web UI Markdown Rendering** | Integrate marked.js to render AI responses as formatted Markdown (tables, checklists) | 2 hrs | DONE |
 | 9.3 | **Real Orchestrator Integration** | Update Web chat to use Orchestrator class and specialized agents (Architect, Strategist, etc.) | 4 hrs | PENDING |
 | 9.4 | **Interactive Playbooks in Web** | Port core playbook engine from CLI to Web UI for guided visual workflows | 6 hrs | PENDING |
-| 9.5 | **Secure API Key Management** | Add Settings modal for OpenRouter/Anthropic API keys in browser localStorage | 2 hrs | PENDING |
+| 9.5 | **Secure API Key Management** | Add Settings modal for OpenRouter/Anthropic API keys in browser localStorage | 2 hrs | DONE |
 | 9.6 | **Partner CRM Dashboard** | Detailed dashboard per partner: tier, health score, deal history, activity timeline | 4 hrs | PENDING |
 | 9.7 | **Logic-Driven Agent Skills** | Upgrade agent skills to perform actual state updates and record milestones | 4 hrs | PENDING |
 | 9.8 | **In-Browser Document Generation** | Integrate export_pdf.py and template filling in Web UI | 3 hrs | PENDING |
@@ -423,7 +439,7 @@ The system currently runs in **fallback mode** - responses are generated locally
 | test_build.py (7 tests) | PASSING (3 skipped) |
 | test_deployed_links.py (6 tests) | PASSING |
 
-**Total: 130 tests passing, 3 skipped**
+**Total: 141 tests passing**
 
 ---
 

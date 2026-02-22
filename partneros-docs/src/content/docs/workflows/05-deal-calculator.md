@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: intermediate
 purpose: financial
 phase: operations
+keywords: ["real time tell", "x base rate", "net revenue", "deal economics", "amount deal", "deal"]
 ---
-
 ## Overview
 
 Calculate partner commissions and deal economics in real-time.
@@ -21,5 +21,5 @@ Calculate partner commissions and deal economics in real-time.
 ## Tell Your Agent To...
 
 > **Partner Operations:** "Calculate commission for a $[amount] deal with [X]% base rate and [Y]x accelerator"
-> 
+>
 > **Partner Operations:** "What's the net revenue for a $[deal] at [X]% commission plus $[rebate] rebate?"

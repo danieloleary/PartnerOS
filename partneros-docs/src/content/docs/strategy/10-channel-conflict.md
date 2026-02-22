@@ -17,8 +17,8 @@ prerequisites: [Deal Registration Policy, Partner Territory Plan]
 outcomes: [Conflict prevention, Resolution process, Sales alignment]
 skills_gained: [Conflict resolution, Sales management, Channel management]
 tags: [channel conflict, sales, resolution, territory, playbook]
+keywords: ["tip insider tip", "best channel conflict", "transparent rules prevent", "partner teams types", "split step escalate", "time partner reference"]
 ---
-
 Channel conflict isn't if—it's when. Every successful partner program has faced it. This playbook ensures you survive it.
 
 :::tip[Insider Tip]

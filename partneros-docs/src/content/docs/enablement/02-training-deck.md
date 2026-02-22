@@ -6,30 +6,18 @@ template_number: III.2
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 4-8 hours
 difficulty: medium
-prerequisites:
-- Product knowledge
-- Sales process documented
+prerequisites: 
 description: >
-  Comprehensive training materials to equip partners with product knowledge and sales skills. Build confident sellers who can position your solution effectively.
-outcomes:
-- Complete training deck
-- Sales messaging framework
-- Objection handling guide
-skills_gained:
-- Training development
-- Sales enablement
-- Product positioning
+outcomes: 
+skills_gained: 
+keywords: ["trained poorly represent", "poorly invest", "template purpose", "partner sales", "training", "s"]
 ---
-
 > **Partners who are trained poorly represent you poorly. Invest in training—it's your brand on the line.** — Dan O'Leary
 
 ## How to Use This Template

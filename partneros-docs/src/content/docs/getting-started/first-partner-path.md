@@ -6,35 +6,18 @@ template_number: GS.1
 version: 1.0.0
 last_updated: 2026-02-20
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: Bronze
 skill_level: beginner
 purpose: operational
 phase: onboarding
 time_required: 4 weeks
 difficulty: easy
-prerequisites:
-- None - good starting point
-description: 'The exact sequence to go from zero to your first signed partner in 4
-  weeks.
-
-  '
-purpose_detailed: 'This guide walks you through the exact templates to use, in what
-  order, to recruit, sign, and onboard your first partner.
-
-  '
-outcomes:
-- First partner signed and onboarded
-- Complete understanding of partner lifecycle
-- Templates customized for your company
-skills_gained:
-- Partner recruitment
-- Partner onboarding
-- Partner program management
+prerequisites: []
+outcomes: 
+skills_gained: 
+keywords: ["first signed partner", "first partner signed", "defines company size", "guide adjust based", "common questions what", "prospect list start"]
+description: The exact sequence to go from zero to your first signed partner in 4 weeks.
 ---
-
 > **The exact sequence to go from zero to your first signed partner in 4 weeks.**
 
 

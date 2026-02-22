@@ -17,8 +17,8 @@ prerequisites: [Partner Program Charter, Ideal Partner Profile]
 outcomes: [Geographic coverage map, Segment assignments, Partner coverage matrix]
 skills_gained: [Territory planning, Coverage analysis, Partner management]
 tags: [territory, geography, coverage, segment, operations]
+keywords: ["gaps missed markets", "market opportunities how", "partner disputes before", "region capability partner", "markets better than", "clear plan prevents"]
 ---
-
 Without clear territories, you get overlap (channel conflict) or gaps (missed markets). This template ensures every target market has the right partner coverage.
 
 :::tip[Insider Tip]

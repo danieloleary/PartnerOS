@@ -1,3 +1,7 @@
+---
+title: Test Partner: TechStart Inc
+keywords: ["validating partneros end", "busy total proceed", "proposal documents created", "test partner has", "fictional company created", "one stage"]
+---
 # Test Partner: TechStart Inc
 
 *Realistic test case for validating PartnerOS end-to-end*

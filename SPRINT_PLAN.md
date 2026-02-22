@@ -1,3 +1,7 @@
+---
+title: PartnerOS Tonight Sprint Plan - v1.8
+keywords: ["catch issues early", "prospects", "page"]
+---
 # PartnerOS Tonight Sprint Plan - v1.8
 
 ## Date: February 21-22, 2026

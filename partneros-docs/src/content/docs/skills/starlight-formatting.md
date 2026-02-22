@@ -1,35 +1,23 @@
 ---
 title: Starlight Formatting Guide
 description: >
-  Learn how to format PartnerOS templates for Starlight to ensure they render
-  correctly and look professional.
 section: Skills
 category: operational
 template_number: SK.2
 version: 1.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: operations
 time_required: 30 minutes
 difficulty: easy
-prerequisites:
-- Basic Markdown knowledge
-outcomes:
-- Templates render correctly in Starlight
-- Consistent formatting across all templates
-- No broken links or 404s
-skills_gained:
-- Starlight/Astro formatting
-- Documentation best practices
-- Link validation
+prerequisites: 
+outcomes: 
+skills_gained: 
+keywords: ["starlight formatting guide", "standard markdown following", "frontmatter title start", "important information caution", "roi when presenting", "email note md"]
 ---
-
 > **"The difference between a template that looks amateur and one that looks professional is in the formatting details."**
 > — Dan O'Leary, PartnerOS
 

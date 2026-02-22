@@ -6,30 +6,18 @@ template_number: O.1
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Registered
-- Silver
-- Gold
+tier: 
 skill_level: beginner
 purpose: operational
 phase: operations
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- CRM system
-- Partner program defined
+prerequisites: 
 description: >
-  A deal registration policy that protects partner opportunities and prevents conflicts. Build trust with transparent rules.
-outcomes:
-- Clear registration rules
-- Protection periods
-- Conflict resolution
-skills_gained:
-- Deal management
-- Conflict prevention
-- Partner trust
+outcomes: 
+skills_gained: 
+keywords: ["upfront enforce", "template purpose", "use"]
 ---
-
 > **Clear deal registration rules prevent arguments. Define them upfront, enforce them consistently.** — Dan O'Leary
 
 ## How to Use This Template

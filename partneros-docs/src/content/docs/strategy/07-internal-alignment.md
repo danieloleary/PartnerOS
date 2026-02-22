@@ -6,32 +6,18 @@ template_number: I.7
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: strategy
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Executive buy-in for partner program
-- Clear partner strategy defined
+prerequisites: 
 description: >
-  Get Sales, Marketing, Product, and Support aligned on the partner program—or watch it fail. This playbook provides the frameworks, scripts, and processes to get internal teams actually supporting your partner program.
-outcomes:
-- Cross-functional alignment on partner program goals
-- Clear roles so nothing falls through the cracks
-- Process to resolve conflicts before they derail deals
-- Communication rhythm that drives execution
-skills_gained:
-- Executive alignment
-- Cross-functional communication
-- Political navigation
-- Stakeholder management
+outcomes: 
+skills_gained: 
+keywords: ["one time event", "goal isn t", "re warm intros", "re more willing", "re actually easier", "one more ask"]
 ---
-
 > **The Problem:** Most partner programs fail not because of the partners—but because internal teams (Sales, Marketing, Product) weren't aligned. Sales ignores partners. Marketing doesn't support partner campaigns. Product won't build integrations. This template fixes that. — Dan O'Leary
 
 :::tip[Insider Tip]

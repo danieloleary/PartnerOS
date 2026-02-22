@@ -4,6 +4,7 @@ about: Suggest a new feature or improvement
 title: "[Enhancement] "
 labels: enhancement
 assignees: ''
+keywords: ["improvement why why", "needed what s", "enhancement description describe", "enhancement", "problem"]
 ---
 
 ## Description

@@ -35,6 +35,10 @@ import time
 rate_limit_store = {}
 response_cache = {}
 
+# Cache settings
+CACHE_ENABLED = True
+CACHE_TTL_SECONDS = 300
+
 
 def check_rate_limit(ip: str, max_requests: int = 20, window_seconds: int = 60) -> bool:
     """Simple rate limiter - max 20 requests per minute per IP."""
@@ -319,6 +323,9 @@ async def home():
 
         // API key should be provided by the user at runtime when needed
         let apiKey = getApiKey();
+        
+        // Helper to escape quotes for onclick handlers
+        const escapeQuotes = (str) => String(str).replace(/'/g, "'\\\\''");
 
         async function sendMessage(text) {
             const input = document.getElementById('messageInput');
@@ -339,19 +346,34 @@ async def home():
             // Show typing
             showTyping();
             
+            // Get settings from localStorage
+            const model = localStorage.getItem('partneros_model') || 'openai/gpt-4o-mini';
+            const cacheEnabled = localStorage.getItem('partneros_cache') !== 'false';
+            
             try {
-                console.log('Sending message:', message, 'API key:', apiKey ? 'present' : 'missing');
+                console.log('Sending message:', message, 'API key:', apiKey ? 'present' : 'missing', 'model:', model);
                 const response = await fetch('/chat', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({message: message, apiKey: apiKey || ''})
+                    body: JSON.stringify({
+                        message: message, 
+                        apiKey: apiKey || '',
+                        model: model,
+                        cache: cacheEnabled
+                    })
                 });
                 
                 console.log('Response status:', response.status);
                 const data = await response.json();
                 console.log('Response data:', data);
                 hideTyping();
-                addMessage(data.response, 'assistant', data.agent);
+                
+                // Handle rate limiting response
+                if (data.rate_limited) {
+                    addMessage('⚠️ Too many requests. Please wait a moment before sending another message.', 'assistant');
+                } else {
+                    addMessage(data.response, 'assistant', data.agent);
+                }
             } catch (e) {
                 console.error('Error:', e);
                 hideTyping();
@@ -446,21 +468,26 @@ async def home():
                     return;
                 }
                 
-                container.innerHTML = data.partners.map(p => `
+                container.innerHTML = data.partners.map(p => {
+                    const safeName = escapeHTML(p.name);
+                    const safeEmail = escapeHTML(p.email || 'No email');
+                    const safeTier = escapeHTML(p.tier || 'Bronze');
+                    const safeStatus = escapeHTML(p.status || 'Onboarding');
+                    return `
                     <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
                         <div class="flex justify-between items-start mb-2">
                             <div>
-                                <div class="font-semibold text-white">${escapeHTML(p.name)}</div>
-                                <div class="text-xs text-slate-400">${escapeHTML(p.email || 'No email')}</div>
+                                <div class="font-semibold text-white">${safeName}</div>
+                                <div class="text-xs text-slate-400">${safeEmail}</div>
                             </div>
                             <div class="flex items-center gap-2">
-                                <span class="px-2 py-1 rounded-full text-xs ${p.tier === 'Gold' ? 'bg-yellow-600' : p.tier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${p.tier}</span>
-                                <button onclick="deletePartner('${escapeHTML(p.name)}')" class="text-slate-500 hover:text-red-400 transition" title="Delete partner">🗑️</button>
+                                <span class="px-2 py-1 rounded-full text-xs ${safeTier === 'Gold' ? 'bg-yellow-600' : safeTier === 'Silver' ? 'bg-gray-400' : 'bg-orange-600'}">${safeTier}</span>
+                                <button onclick="deletePartner('${escapeQuotes(safeName)}')" class="text-slate-500 hover:text-red-400 transition" title="Delete partner">🗑️</button>
                             </div>
                         </div>
-                        <div class="text-xs text-slate-500">${p.deals?.length || 0} deals • ${p.status || 'Onboarding'}</div>
+                        <div class="text-xs text-slate-500">${p.deals?.length || 0} deals • ${safeStatus}</div>
                     </div>
-                `).join('');
+                `}).join('');
             } catch (e) {
                 console.error('Error loading partners:', e);
             }
@@ -566,6 +593,8 @@ async def chat(request: Request):
     data = await request.json()
     user_message = data.get("message", "")
     api_key = data.get("apiKey", "") or os.environ.get("OPENROUTER_API_KEY", "")
+    model = data.get("model", "openai/gpt-4o-mini")
+    use_cache = data.get("cache", True)
 
     # Input sanitization - prevent injection
     if not user_message or len(user_message.strip()) == 0:
@@ -590,11 +619,13 @@ async def chat(request: Request):
             {
                 "response": "⚠️ Too many requests. Please wait a moment and try again.",
                 "agent": "system",
+                "rate_limited": True,
             },
             status_code=429,
         )
 
-    if not api_key or len(api_key) < 10:
+    # Stronger API key validation - must be proper format
+    if not api_key:
         return JSONResponse(
             {
                 "response": "⚠️ No API key provided. Add one from https://openrouter.ai/keys to use live LLM responses.",
@@ -602,9 +633,19 @@ async def chat(request: Request):
             }
         )
 
+    # Validate API key format (OpenRouter keys start with sk-or-)
+    api_key = api_key.strip()
+    if len(api_key) < 20 or not api_key.startswith("sk-"):
+        return JSONResponse(
+            {
+                "response": "⚠️ Invalid API key format. Please add a valid OpenRouter key from https://openrouter.ai/keys",
+                "agent": "system",
+            }
+        )
+
     # Try LLM first, fallback on error
     try:
-        response = await call_llm(user_message, api_key)
+        response = await call_llm(user_message, api_key, model, use_cache)
         if response.get("response"):
             return JSONResponse(response)
         raise Exception("Empty response")
@@ -654,16 +695,24 @@ async def delete_partner(name: str):
 app.add_api_route("/api/partners/{name}", delete_partner, methods=["DELETE"])
 
 
-async def call_llm(message: str, api_key: str) -> dict:
+async def call_llm(
+    message: str,
+    api_key: str,
+    model: str = "openai/gpt-4o-mini",
+    use_cache: bool = True,
+) -> dict:
     """Call OpenRouter LLM with partner context."""
     import httpx
     import hashlib
 
-    # Simple cache - hash the message
-    cache_key = hashlib.sha256(message.encode()).hexdigest()[:16]
-    cache_time = response_cache.get(cache_key)
-    if cache_time and time.time() - cache_time.get("ts", 0) < 300:
-        return cache_time.get("result")
+    # Simple cache - hash the message AND model
+    cache_key = hashlib.sha256(f"{model}:{message}".encode()).hexdigest()[:16]
+
+    # Check cache settings - if cache disabled, skip it
+    if use_cache:
+        cache_time = response_cache.get(cache_key)
+        if cache_time and time.time() - cache_time.get("ts", 0) < CACHE_TTL_SECONDS:
+            return cache_time.get("result")
 
     # Build context about agents
     system_prompt = """You are the orchestrator of PartnerOS - an AI partner team. 
@@ -688,7 +737,7 @@ Be helpful, concise, and actionable."""
                     "Content-Type": "application/json",
                 },
                 json={
-                    "model": "minimax/minimax-m2.5",
+                    "model": model,  # Use user-selected model from settings
                     "messages": [
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": message},
@@ -730,7 +779,11 @@ Be helpful, concise, and actionable."""
             reply = choices[0].get("message", {}).get("content", "No response")
 
             result = {"response": reply, "agent": "Partner Manager"}
-            response_cache[cache_key] = {"result": result, "ts": time.time()}
+
+            # Only cache if user has caching enabled
+            if use_cache:
+                response_cache[cache_key] = {"result": result, "ts": time.time()}
+
             return result
 
         except Exception as e:

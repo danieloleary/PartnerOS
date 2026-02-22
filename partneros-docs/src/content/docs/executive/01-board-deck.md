@@ -6,29 +6,18 @@ template_number: X.1
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Gold
-- Strategic
+tier: 
 skill_level: advanced
 purpose: strategic
 phase: enablement
 time_required: 4-8 hours
 difficulty: hard
-prerequisites:
-- Metrics tracked
-- Strategy defined
+prerequisites: 
 description: >
-  A board presentation template to communicate partner program performance and strategy. Secure executive buy-in and resources.
-outcomes:
-- Compelling board presentation
-- Clear performance story
-- Resource requests
-skills_gained:
-- Executive communication
-- Board presentations
-- Strategic storytelling
+outcomes: 
+skills_gained: 
+keywords: ["story numbers matter", "template purpose", "use"]
 ---
-
 > **Board presentations should tell a story. Numbers matter—but narrative matters more.** — Dan O'Leary
 
 ## How to Use This Template

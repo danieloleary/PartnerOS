@@ -17,8 +17,8 @@ prerequisites: [Partner Program Charter, Onboarding Checklist]
 outcomes: [Kickoff presentation, Relationship foundation, Clear expectations]
 skills_gained: [Presentation skills, Partner communication, Enablement planning]
 tags: [kickoff, onboarding, presentation, enablement, relationship]
+keywords: ["specific reasons what", "program benefits what", "expect performance targets", "purpose confirm commitments", "partners who succeed", "ones who leave"]
 ---
-
 This is your chance to make a first impression that lasts. The partner kickoff sets the tone for the entire relationship.
 
 :::tip[Insider Tip]

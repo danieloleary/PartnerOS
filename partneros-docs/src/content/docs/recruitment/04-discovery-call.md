@@ -6,32 +6,18 @@ template_number: II.4
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 1-2 hours
 difficulty: medium
-prerequisites:
-- Target partner identified
-- Qualification framework completed
+prerequisites: 
 description: >
-  A structured discovery call script to effectively qualify prospects, gather critical information, and determine next steps. Build relationships while gathering the data you need.
-outcomes:
-- Complete discovery call structure
-- Question bank for qualification
-- Objection handling responses
-- Documentation template
-skills_gained:
-- Sales conversations
-- Partner qualification
-- Relationship building
-- Discovery questioning
+outcomes: 
+skills_gained: 
+keywords: ["propose something valuable", "structured framework effectively", "balances information gathering", "rapport building why", "natural fit between", "cover quick overview"]
 ---
-
 > **The discovery call is where partnerships are won or lost. Ask the right questions, listen more than you talk, and always leave with a clear next step.** — Dan O'Leary
 
 :::tip[Insider Tip]

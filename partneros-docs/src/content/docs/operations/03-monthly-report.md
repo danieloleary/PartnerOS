@@ -6,29 +6,18 @@ template_number: O.3
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: operations
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- CRM data
-- Metrics tracked
+prerequisites: 
 description: >
-  A monthly report template to track partner program performance. Data-driven insights for continuous improvement.
-outcomes:
-- Complete monthly report
-- Trend analysis
-- Action planning
-skills_gained:
-- Reporting
-- Data analysis
-- Program management
+outcomes: 
+skills_gained: 
+keywords: ["template purpose", "honest", "use"]
 ---
-
 > **Monthly reports keep you honest. The numbers don't lie—use them to improve.** — Dan O'Leary
 
 ## How to Use This Template

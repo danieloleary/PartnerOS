@@ -6,30 +6,18 @@ template_number: III.7
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 2-4 hours
 difficulty: medium
-prerequisites:
-- Metrics tracked
-- Partner manager assigned
+prerequisites: 
 description: >
-  A structured template for conducting productive quarterly business reviews. Strengthen partnerships and drive growth through strategic conversations.
-outcomes:
-- Complete QBR agenda
-- Performance review framework
-- Future planning process
-skills_gained:
-- Executive communication
-- Strategic planning
-- Relationship management
+outcomes: 
+skills_gained: 
+keywords: ["broken come prepared", "partner qbr template", "template purpose", "where partnerships", "always leave", "qbr"]
 ---
-
 > **The QBR is where partnerships are made or broken. Come prepared, be honest, and always leave with clear next steps.** — Dan O'Leary
 
 ## How to Use This Template

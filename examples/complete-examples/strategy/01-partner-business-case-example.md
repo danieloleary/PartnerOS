@@ -6,36 +6,19 @@ template_number: I.1
 version: 1.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: strategic
 phase: strategy
 time_required: 8-16 hours
 difficulty: hard
-prerequisites:
-- Clear partner program vision
-- Market research data
-- Financial projections
+prerequisites: 
 description: >
-  A fully completed Partner Business Case showing what a professional,
-  investment-ready document looks like. This example demonstrates the standard
-  you should aim for when building your own business case.
 purpose_detailed: >
-  This example is based on a fictional but realistic scenario: a mid-market
-  cybersecurity company (CyberShield) launching a channel partner program to
-  accelerate growth. The numbers and strategy are realistic and can be adapted
-  for your specific situation.
-outcomes:
-- Executive-approved business case
-- Budget allocation secured
-- Clear success metrics defined
-skills_gained:
-- Strategic planning
-- Financial modeling
-- Executive presentation
-- Stakeholder alignment
+This example is based on a fictional but realistic scenario: a mid-market
+outcomes: 
+skills_gained: 
+keywords: ["partner business cases", "document traces back", "initiative will enable", "only effectively cover", "sell small enough", "gross margin supports"]
 ---
 
 > **"The biggest mistake I see in partner business cases is asking for money without proving ROI. Every number in this document traces back to a specific revenue assumption. That's how you get buy-in from CFOs."**

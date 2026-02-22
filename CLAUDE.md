@@ -1,3 +1,7 @@
+---
+title: CLAUDE.md — PartnerOS Codebase Guide
+keywords: ["docs must start", "step kpis checklist", "agent py points", "length character set", "main partneros docs", "root linting runs"]
+---
 # CLAUDE.md — PartnerOS Codebase Guide
 
 This file provides guidance for AI assistants working in this repository.
@@ -6,12 +10,14 @@ This file provides guidance for AI assistants working in this repository.
 
 **PartnerOS** is a complete playbook system for building and scaling strategic partnerships, combining:
 
-- 40 Markdown documentation templates across 9 categories (rendered via **Starlight/Astro**)
-- An AI-powered Partner Agent (`scripts/partner_agent/agent.py`) supporting local Ollama, Anthropic, and OpenAI
+- 67 Markdown documentation templates across 9 categories (rendered via **Starlight/Astro**)
+- 14 Agent-First Templates (7 skill cards + 7 workflow templates)
+- An AI-powered Partner Agent (`scripts/partner_agent/agent.py`) supporting local Ollama, Anthropic, OpenAI, and OpenRouter
 - 7 automation playbooks covering the full partner lifecycle
-- 12 utility scripts for onboarding, templates, reporting, and packaging
-- GitHub Actions for doc deployment and markdown linting
-- **~127 tests** (124 passing, 3 skipped)
+- 14 utility scripts for onboarding, templates, reporting, document parsing, and packaging
+- GitHub Actions for doc deployment, markdown linting, releases, and issue management
+- **141 tests** (all passing)
+- Beautiful Web UI with chat interface, Markdown rendering, and Settings modal
 
 **Requirements:**
 - **Python 3.10+** (for union type syntax `type | None`)
@@ -58,6 +64,7 @@ PartnerOS/
 │   ├── lint_markdown.py           # Custom markdown linter
 │   ├── demo_mode.py               # Pre-filled demo company data
 │   ├── export_pdf.py              # Markdown to PDF conversion
+│   ├── parse_document.py         # Docling document parser (PDF, DOCX, PPTX)
 │   └── package_zip.py             # Package repo as distributable .zip
 ├── examples/                      # Example fills and test data
 │   ├── complete-examples/         # Fully filled template examples
@@ -75,7 +82,6 @@ PartnerOS/
 │   └── run_partner_agent.yml      # Manual workflow to run a playbook via Actions
 ├── package.json                   # Node.js: npm run lint:md → python lint script
 ├── CHANGELOG.md                   # Version history
-├── IMPROVEMENT_PLAN.md            # Audit findings and improvement roadmap
 ├── BACKLOG.md                     # Prioritized feature backlog
 ├── ARCHITECTURE.md                # Architecture decisions and philosophy
 ├── README.md                      # Project overview
@@ -164,7 +170,7 @@ python3 tests/test_templates.py
 python3 tests/test_agent.py
 ```
 
-### Test Suite (~127 tests)
+### Test Suite (141 tests)
 
 **Template Tests (`test_templates.py` — 61 tests):**
 

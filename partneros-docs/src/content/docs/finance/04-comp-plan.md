@@ -17,8 +17,8 @@ prerequisites: [Commission Structure Template]
 outcomes: [Complete comp plan, Accelerator matrix, SPIFF program]
 skills_gained: [Compensation design, Incentive planning, Financial modeling]
 tags: [compensation, commission, SPIFF, incentives, finance]
+keywords: ["best comp plans", "support higher commissions", "partner compensation plan", "great product", "template gives", "generous enough"]
 ---
-
 This is where partner programs succeed or fail. A great product with bad compensation = no partners. This template gives you the complete picture.
 
 :::tip[Insider Tip]

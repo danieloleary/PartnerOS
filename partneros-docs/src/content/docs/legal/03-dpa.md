@@ -6,29 +6,18 @@ template_number: L.3
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: advanced
 purpose: operational
 phase: recruitment
 time_required: 2-4 hours
 difficulty: hard
-prerequisites:
-- Legal review
-- GDPR compliance requirements
+prerequisites: 
 description: >
-  A data processing agreement that governs how partner handles customer data. Ensure compliance and protect customer privacy.
-outcomes:
-- Executed DPA
-- GDPR compliance
-- Data protection
-skills_gained:
-- Data privacy
-- Compliance management
-- Legal protection
+outcomes: 
+skills_gained: 
+keywords: ["gdpr compliance work", "right"]
 ---
-
 > **Data protection isn't optional. Get this right or face serious consequences.** — Dan O'Leary
 
 :::caution[LEGAL REVIEW REQUIRED]

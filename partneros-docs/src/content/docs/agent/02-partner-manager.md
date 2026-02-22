@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: intermediate
 purpose: operational
 phase: operations
+keywords: ["onboard acme corp", "k related agents", "next week qbr", "day relationship manager", "run qbr", "execution day"]
 ---
-
 ## Agent Overview
 
 **Partner Manager** is your day-to-day relationship manager. This agent handles partner onboarding, Quarterly Business Reviews (QBRs), and ongoing partner success.
@@ -46,12 +46,12 @@ Use Partner Manager when you need:
 
 ### Onboarding
 > **You:** "Onboard Acme Corp as a new Gold partner"
-> 
+>
 > **Partner Manager:** "Starting onboarding for Acme Corp... ✓ Agreement sent ✓ Portal access created ✓ Kickoff scheduled for next week."
 
 ### QBR
 > **You:** "Run QBR for TechCorp covering Q4"
-> 
+>
 > **Partner Manager:** "QBR complete. Summary: 120% to quota, 3 new logos, Q1 pipeline at $250K."
 
 ---

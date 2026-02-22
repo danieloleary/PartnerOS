@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: intermediate
 purpose: marketing
 phase: enablement
+keywords: ["email welcome sequence", "case study template", "partner wins how", "co marketing campaign", "marketing content", "q generate"]
 ---
-
 ## Agent Overview
 
 **Partner Marketing** creates campaigns, email sequences, and marketing content for partner programs.
@@ -33,9 +33,9 @@ phase: enablement
 ## Example Prompts
 
 > "Write a 5-email welcome sequence for new Silver partners"
-> 
+>
 > "Create a co-marketing campaign for Q2"
-> 
+>
 > "Generate a case study template for partner wins"
 
 ---

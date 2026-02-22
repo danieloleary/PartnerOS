@@ -1,17 +1,12 @@
 ---
 title: Partner Program Glossary
 description: >
-  A comprehensive glossary of partner program terminology. Use this as a reference
-  when building business cases, strategies, or operational documents.
 section: Resources
 template_number: R.1
 version: 1.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: beginner
 purpose: strategic
 phase: strategy
@@ -19,18 +14,10 @@ time_required: 1-2 hours
 difficulty: easy
 prerequisites: []
 purpose_detailed: >
-  This glossary defines all key terms used throughout PartnerOS templates.
-  Each definition includes why the term matters and how to measure it.
-outcomes:
-- Understanding of all partner program terminology
-- Ability to use terms correctly in business cases
-- Clear metrics definitions for tracking
-skills_gained:
-- Partner program vocabulary
-- Channel sales terminology
-- Metrics and KPIs
+outcomes: 
+skills_gained: 
+keywords: ["low barrier entry", "reducing cac compared", "sustainable competitive advantage", "predictable recurring nature", "one year period", "leads generated lead"]
 ---
-
 > **"The difference between a novice and expert partner leader is vocabulary. When you use the right terms with the right metrics, you sound like someone who has done this before—and people trust that."**
 > — Dan O'Leary, PartnerOS
 

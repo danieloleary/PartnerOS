@@ -17,8 +17,8 @@ prerequisites: [Partner Portal Guide, SLA Template]
 outcomes: [Support tier structure, SLA definitions, Escalation paths]
 skills_gained: [Support operations, SLA management, Escalation handling]
 tags: [support, SLA, tiers, escalation, operations]
+keywords: ["update quarterly based", "partner feedback why", "tracking sla metrics", "t improve what", "ll get", "template define"]
 ---
-
 Partners need to know exactly what support they'll get—and what happens when issues escalate. This template defines clear tiers and expectations.
 
 :::tip[Insider Tip]

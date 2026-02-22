@@ -3,25 +3,17 @@ title: Agent Setup
 category: operational
 version: 1.0.0
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: operational
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- Python 3.10+
-- API keys configured
+prerequisites: 
 description: Install and configure the Partner Agent
-outcomes:
-- Completed Agent Setup
-skills_gained:
-- AI prompting
-- Automation
-- Workflow design
+outcomes: 
+skills_gained: 
+keywords: ["repository settings secrets", "form playbook select", "workflow run summary", "set make sure", "agent directly", "ve exported"]
 ---
 # Setup Guide
 

@@ -6,27 +6,18 @@ template_number: SK.1
 version: 1.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-  - Bronze
-  - Silver
-  - Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: operations
 time_required: 15-30 minutes
 difficulty: easy
 prerequisites: []
-outcomes:
-  - Identify all broken links in the documentation
-  - Fix common link patterns automatically
-  - Verify fixes with tests
-skills_gained:
-  - Link auditing
-  - Regex pattern matching
-  - Documentation maintenance
+outcomes: 
+skills_gained: 
 description: How to find and fix broken internal links in PartnerOS documentation.
+keywords: ["starlight documentation when", "fixed pages", "md file", "skill use", "use", "find"]
 ---
-
 > **Find and fix broken internal links in Starlight documentation.**
 
 ## When to Use This Skill

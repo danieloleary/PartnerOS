@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: intermediate
 purpose: operational
 phase: operations
+keywords: ["k deal", "comp plan", "k how", "base"]
 ---
-
 ## Agent Overview
 
 **Partner Operations** manages deal registration, commission calculations, and backend partner processes.
@@ -33,9 +33,9 @@ phase: operations
 ## Example Prompts
 
 > "Calculate commission for $50K deal at 20% with 1.25x accelerator"
-> 
+>
 > "Process TechCorp deal registration"
-> 
+>
 > "Build a comp plan with 15% base, 25% at $100K"
 
 ---

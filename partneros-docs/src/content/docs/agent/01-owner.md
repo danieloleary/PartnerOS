@@ -16,8 +16,8 @@ difficulty: advanced
 prerequisites: []
 outcomes: [Budget approval, Partnership sign-off, Strategic direction]
 skills_gained: [Executive decision making, Strategic planning]
+keywords: ["executive decision maker", "need final approval", "roi analysis how", "final sign offs", "default risk when", "owner agent overview"]
 ---
-
 ## Agent Overview
 
 **The Owner** is your executive decision-maker. This agent handles high-level approvals, strategic decisions, and final sign-offs on partnerships.
@@ -51,12 +51,12 @@ Use The Owner when you need:
 
 ### Budget Request
 > **You:** "Approve $25K for partner marketing funds Q2"
-> 
+>
 > **The Owner:** "Approved. $25K allocated to Q2 MDF. Expected ROI: 3x via co-marketing activities."
 
 ### Strategic Partnership
 > **You:** "Sign off on enterprise partnership with TechCorp"
-> 
+>
 > **The Owner:** "After reviewing the business case, I approve the TechCorp partnership. Expected revenue: $500K ARR."
 
 ---

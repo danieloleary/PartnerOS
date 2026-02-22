@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: intermediate
 purpose: operational
 phase: operations
+keywords: ["x discount", "agent", "systems"]
 ---
-
 ## Overview
 
 Configure systems for a new partner - portal, deals, pricing, and access.

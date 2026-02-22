@@ -6,29 +6,18 @@ template_number: L.2
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: advanced
 purpose: strategic
 phase: recruitment
 time_required: 4-8 hours
 difficulty: hard
-prerequisites:
-- NDA executed
-- Legal team involved
+prerequisites: 
 description: >
-  A comprehensive master service agreement that governs the partnership relationship. Define rights, obligations, and protections.
-outcomes:
-- Executed MSA
-- Clear partnership terms
-- Legal protection
-skills_gained:
-- Contract negotiation
-- Legal compliance
-- Partnership governance
+outcomes: 
+skills_gained: 
+keywords: ["master service agreement", "conditions term duration", "legal", "customize"]
 ---
-
 > **The MSA protects both sides. Don't rush it—get legal involved early.** — Dan O'Leary
 
 :::caution[LEGAL REVIEW REQUIRED]

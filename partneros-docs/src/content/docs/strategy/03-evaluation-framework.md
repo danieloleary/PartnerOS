@@ -6,32 +6,18 @@ template_number: I.3
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: strategy
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Clear partner program vision
-- Ideal Partner Profile defined
+prerequisites: 
 description: >
-  Objectively evaluate potential partners and assess ongoing partner performance using the proven 3C (Capacity, Capability, Commitment) or 4C (adds Cultural Fit) framework. Transform subjective gut checks into data-driven partnership decisions.
-outcomes:
-- Completed 3C/4C evaluation framework with scoring matrix
-- Partner scoring for 10+ prospects
-- Go/No-Go decision framework
-- Quarterly review cadence
-skills_gained:
-- Partner evaluation
-- Strategic planning
-- Data-driven decision making
-- Partner program design
+outcomes: 
+skills_gained: 
+keywords: ["c framework originated", "objective comparable scores", "defensible decisions whether", "designated practice lead", "warning sign profitability", "profitable burning cash"]
 ---
-
 > **The partner evaluation score is only as good as the questions you ask. Skip the hard questions now, and you'll be explaining the partnership failure later.** — Dan O'Leary
 
 :::tip[Insider Tip]

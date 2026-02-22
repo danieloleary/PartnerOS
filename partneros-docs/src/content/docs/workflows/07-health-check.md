@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: intermediate
 purpose: operational
 phase: retention
+keywords: ["partner leader run", "health check", "qbr deck", "agent", "goals"]
 ---
-
 ## Overview
 
 Assess partner health through QBRs, scorecards, and actionable recommendations.
@@ -46,5 +46,5 @@ Assess partner health through QBRs, scorecards, and actionable recommendations.
 ## Tell Your Agent To...
 
 > **Partner Leader:** "Run a health check for [Partner Name] including QBR summary and recommendations"
-> 
+>
 > **Partner Manager:** "Create a QBR deck for [Partner] covering Q4 performance and 2025 goals"

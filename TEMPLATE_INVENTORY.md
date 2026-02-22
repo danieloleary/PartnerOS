@@ -1,3 +1,7 @@
+---
+title: PartnerOS Template Inventory
+keywords: ["near identical copy", "planned templates", "docs", "served", "was"]
+---
 # PartnerOS Template Inventory
 
 **Updated:** February 20, 2026

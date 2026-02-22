@@ -6,29 +6,18 @@ template_number: O.2
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: beginner
 purpose: operational
 phase: enablement
 time_required: 30 minutes
 difficulty: easy
-prerequisites:
-- Partner manager assigned
-- CRM access
+prerequisites: 
 description: >
-  A weekly sync structure to review partner pipeline and address blockers. Keep partnerships moving forward.
-outcomes:
-- Pipeline visibility
-- Blocker identification
-- Action items
-skills_gained:
-- Pipeline management
-- Issue resolution
-- Partner communication
+outcomes: 
+skills_gained: 
+keywords: ["short focused", "template purpose", "use"]
 ---
-
 > **Weekly stands prevent small issues from becoming big problems. Keep them short, focused, and action-oriented.** — Dan O'Leary
 
 ## How to Use This Template

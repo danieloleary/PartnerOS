@@ -6,30 +6,18 @@ template_number: F.1
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: strategic
 phase: recruitment
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Program architecture defined
-- Finance approval
+prerequisites: 
 description: >
-  A commission structure that incentivizes partner performance. Define tiers, rates, and payment terms.
-outcomes:
-- Complete commission framework
-- Tier-based rates
-- Payment process
-skills_gained:
-- Partner incentives
-- Financial planning
-- Commission management
+outcomes: 
+skills_gained: 
+keywords: ["simple partners should", "want keep", "template purpose", "able", "calculate", "earnings"]
 ---
-
 > **Commission structures should reward behavior you want. Keep it simple—partners should be able to calculate their earnings in their head.** — Dan O'Leary
 
 ## How to Use This Template

@@ -6,30 +6,18 @@ template_number: III.4
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Partner signed agreement
-- Marketing funds allocated
+prerequisites: 
 description: >
-  A comprehensive playbook for executing joint marketing campaigns with partners. Generate demand and create pipeline together.
-outcomes:
-- Complete co-marketing campaign plan
-- Content collaboration framework
-- Event coordination process
-skills_gained:
-- Joint marketing
-- Campaign management
-- Content collaboration
+outcomes: 
+skills_gained: 
+keywords: ["s about telling", "template purpose", "story", "use"]
 ---
-
 > **Co-marketing isn't about spending money together—it's about telling a story you couldn't tell alone. Find that story and double down.** — Dan O'Leary
 
 ## How to Use This Template

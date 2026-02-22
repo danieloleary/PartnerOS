@@ -6,29 +6,18 @@ template_number: F.3
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Gold
-- Strategic
+tier: 
 skill_level: advanced
 purpose: strategic
 phase: enablement
 time_required: 2-3 hours
 difficulty: hard
-prerequisites:
-- Legal approved
-- Strategic partnership defined
+prerequisites: 
 description: >
-  A revenue sharing model for deep strategic partnerships. Define how joint revenue is split fairly.
-outcomes:
-- Complete revenue share framework
-- Fair split model
-- Tracking process
-skills_gained:
-- Strategic partnerships
-- Financial negotiation
-- Joint business planning
+outcomes: 
+skills_gained: 
+keywords: ["template purpose", "s", "use"]
 ---
-
 > **Revenue share is for partnerships where both sides bring unique value. It's not for transactional relationships.** — Dan O'Leary
 
 ## How to Use This Template

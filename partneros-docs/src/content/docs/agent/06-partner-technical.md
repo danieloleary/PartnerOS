@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: advanced
 purpose: technical
 phase: enablement
+keywords: []
 ---
-
 ## Agent Overview
 
 **Partner Technical** handles technical integrations, API documentation, and technical partner support.
@@ -33,9 +33,9 @@ phase: enablement
 ## Example Prompts
 
 > "Create API documentation for partner integrations"
-> 
+>
 > "Build integration with Salesforce"
-> 
+>
 > "Prepare technical certification exam"
 
 ---

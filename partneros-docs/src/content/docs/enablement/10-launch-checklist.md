@@ -17,8 +17,8 @@ prerequisites: [Partner Kickoff Deck, Training Deck, Certification Program]
 outcomes: [Launch readiness, Trained partners, Market-ready]
 skills_gained: [Launch planning, Partner preparation, Operations]
 tags: [launch, checklist, go-live, onboarding, enablement]
+keywords: ["sales team needs", "partner launch checklist", "launch like", "ensure everything", "best launches", "ve done"]
 ---
-
 This is it—launch day. Don't wing it. Use this checklist to ensure everything is ready.
 
 :::tip[Insider Tip]

@@ -10,8 +10,8 @@ author: PartnerOS Team
 skill_level: intermediate
 purpose: operational
 phase: onboarding
+keywords: ["partner manager run", "complete onboarding workflow", "workflow guides", "through onboarding", "new partner", "partner name"]
 ---
-
 ## Overview
 
 This workflow guides you through onboarding a new partner from contract signing to first closed deal.

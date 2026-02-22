@@ -1,3 +1,7 @@
+---
+title: PartnerOS Architecture
+keywords: ["own create new", "specific playbooks train", "clone run locally", "scaling strategic partnerships", "key templates option", "company training how"]
+---
 # PartnerOS Architecture
 *Last Updated: February 21, 2026*
 
@@ -62,7 +66,7 @@ PartnerOS/
 │   └── package_zip.py             # Package as distributable .zip
 ├── .company-config/               # Company customization (gitignored)
 │   └── customize.yaml             # Their company name, logo, colors
-├── tests/                         # Quality gates (130 tests)
+├── tests/                         # Quality gates (141 tests)
 ├── partneros-docs/                  # Starlight/Astro docs site
 │   ├── src/content/docs/           # Documentation source
 │   └── astro.config.mjs           # Starlight configuration

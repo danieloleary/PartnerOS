@@ -4,27 +4,18 @@ category: operational
 version: 1.1.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: beginner
 purpose: operational
 phase: onboarding
 time_required: 10 minutes
 difficulty: easy
-prerequisites:
-- None - good starting point
+prerequisites: 
 description: Get up and running with PartnerOS in 10 minutes - no install required
-outcomes:
-- Know how to find templates
-- Understand how to use them
-- Ready to start your partner program
-skills_gained:
-- Template selection
-- Partner program setup basics
+outcomes: 
+skills_gained: 
+keywords: ["code block paste", "recruitment qualification framework", "specific partner qualify", "template categories what", "template minutes find", "step instructions what"]
 ---
-
 # PartnerOS Quick Start
 
 *From zero to your first partner in 10 minutes — no install required*

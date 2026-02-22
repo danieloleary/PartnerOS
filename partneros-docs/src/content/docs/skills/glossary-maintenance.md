@@ -1,36 +1,23 @@
 ---
 title: Glossary Maintenance Guide
 description: >
-  Learn how to add new terms to and maintain the Partner Program Glossary
-  to keep it accurate and comprehensive.
 section: Skills
 category: operational
 template_number: SK.3
 version: 1.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: operations
 time_required: 15-30 minutes
 difficulty: easy
-prerequisites:
-- Understanding of partner program terminology
-outcomes:
-- Add new terms to glossary correctly
-- Update existing terms without breaking links
-- Maintain alphabetical order
-- Run tests to verify integrity
-skills_gained:
-- Glossary management
-- Documentation maintenance
-- Quality assurance
+prerequisites: 
+outcomes: 
+skills_gained: 
+keywords: ["organized alphabetically find", "generating enough opportunities", "update last updated", "hyphenated words sort", "frontmatter run tests", "link related terms"]
 ---
-
 > **"A glossary is only as good as its consistency. Every term should have a definition, a 'why it matters,' and a 'how to measure it.'"**
 > — Dan O'Leary, PartnerOS
 

@@ -6,30 +6,18 @@ template_number: III.5
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: advanced
 purpose: operational
 phase: enablement
 time_required: 2-4 hours
 difficulty: hard
-prerequisites:
-- Technical documentation ready
-- API specs available
+prerequisites: 
 description: >
-  A comprehensive guide for partners building integrations with your platform. Enable technical partners to create robust, maintainable integrations.
-outcomes:
-- Complete integration documentation
-- API reference guide
-- Testing procedures
-skills_gained:
-- Integration development
-- API knowledge
-- Technical enablement
+outcomes: 
+skills_gained: 
+keywords: ["technical integration guide", "best integrations", "customer value", "apis make", "template purpose", "wrestling"]
 ---
-
 > **The best integrations are invisible. Partners should focus on customer value, not wrestling with APIs. Make it easy.** — Dan O'Leary
 
 ## How to Use This Template

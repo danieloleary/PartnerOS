@@ -6,32 +6,18 @@ template_number: II.2
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 2-3 hours
 difficulty: medium
-prerequisites:
-- Target partner list identified
-- Ideal Partner Profile defined
+prerequisites: 
 description: >
-  A multi-channel engagement sequence that builds relationships with potential partners through email, LinkedIn, phone, and events. Move prospects from cold to partnership-ready.
-outcomes:
-- Complete multi-channel engagement plan
-- Channel-specific scripts
-- Content strategy for engagement
-- Metrics to track engagement success
-skills_gained:
-- Multi-channel outreach
-- Relationship building
-- Sales engagement
-- Content strategy
+outcomes: 
+skills_gained: 
+keywords: ["only send emails", "multi channel approach", "optimize weekly review", "think there could", "s useful happy", "engage genuinely ask"]
 ---
-
 > **Email alone doesn't work anymore. Today's partners are reached through 5-7 touchpoints across 3-4 channels before they respond. Single-channel outreach is just hoping.** — Dan O'Leary
 
 :::tip[Insider Tip]

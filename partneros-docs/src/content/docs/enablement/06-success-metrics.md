@@ -6,30 +6,18 @@ template_number: III.6
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: enablement
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- CRM access
-- Reporting tools available
+prerequisites: 
 description: >
-  A comprehensive framework for tracking and reporting partner success. Measure what matters and drive partner performance.
-outcomes:
-- Complete metrics framework
-- Dashboard definitions
-- Reporting cadence
-skills_gained:
-- Performance tracking
-- Data analysis
-- Partner management
+outcomes: 
+skills_gained: 
+keywords: ["template purpose", "partner involvement", "metrics", "matter", "track", "use"]
 ---
-
 > **What gets measured gets managed. Pick the 5 metrics that matter and track them religiously.** — Dan O'Leary
 
 ## How to Use This Template

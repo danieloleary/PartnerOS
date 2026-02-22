@@ -1,3 +1,7 @@
+---
+title: PartnerOS Examples
+keywords: ["showcase best practices", "format add", "own examples"]
+---
 # PartnerOS Examples
 
 This directory contains example fills showing what completed templates look like.

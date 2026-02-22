@@ -17,8 +17,8 @@ prerequisites: [NDA, Mutual NDA]
 outcomes: [Referral agreement, Commission structure, Legal framework]
 skills_gained: [Legal documentation, Referral program, Contract management]
 tags: [legal, referral, agreement, contract, commission]
+keywords: ["pages maximum how", "partner qualified referral", "easiest way", "start building", "agreement formalizes", "lead introduced"]
 ---
-
 Referral partners are the easiest way to start building an ecosystem. This agreement formalizes the relationship.
 
 :::tip[Insider Tip]

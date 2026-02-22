@@ -6,38 +6,19 @@ template_number: I.1
 version: 3.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: strategic
 phase: strategy
 time_required: 8-16 hours
 difficulty: hard
-prerequisites:
-- Clear partner program vision
-- Market research data
-- Financial projections
+prerequisites: 
 description: >
-  Build an investment-ready business case for launching, expanding, or refining
-  a partner program. This template is designed to get CFO approval.
 purpose_detailed: >
-  The difference between a partner program that gets funded and one that dies
-  in committee is the quality of the business case. This template walks you
-  through every section a CFO needs to say yes—including ROI, risk mitigation,
-  and clear milestones. Use this with the Partner Program Glossary to ensure
-  you use the correct terminology.
-outcomes:
-- Executive-approved business case
-- Budget allocation secured
-- Clear success metrics defined
-skills_gained:
-- Strategic planning
-- Financial modeling
-- Executive presentation
-- Stakeholder alignment
+outcomes: 
+skills_gained: 
+keywords: ["document traces back", "secret weapon cfos", "risk averse showing", "one document choose", "once easy wins", "should stand alone"]
 ---
-
 This template walks you through building a business case that will get CFO approval. Every section is designed to answer the questions executives actually ask—and use the metrics they actually care about. This is not a generic template. It's built from what works in real boardrooms.
 
 > **"The biggest mistake I see in partner business cases is asking for money without proving ROI. Every number in this document traces back to a specific revenue assumption. That's how you get buy-in from CFOs."**

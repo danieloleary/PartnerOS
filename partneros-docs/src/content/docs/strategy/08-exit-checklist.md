@@ -6,32 +6,18 @@ template_number: I.8
 version: 2.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: advanced
 purpose: operational
 phase: strategy
 time_required: 2-4 hours
 difficulty: medium
-prerequisites:
-- Executive buy-in for partnership termination
-- Legal review of contract
+prerequisites: 
 description: >
-  A comprehensive checklist for professionally and gracefully ending partner relationships while protecting your brand, customers, and legal interests. Handle exits with class—how you end partnerships defines your reputation.
-outcomes:
-- Complete partner exit process
-- Protected customer relationships
-- Legal compliance maintained
-- Documented learnings for future
-skills_gained:
-- Partner termination
-- Customer transition
-- Legal compliance
-- Process documentation
+outcomes: 
+skills_gained: 
+keywords: ["end partnerships matters", "protects all parties", "make hasty decisions", "coordinated team assign", "ending effective date", "crm access date"]
 ---
-
 > **How you end partnerships matters as much as how you start them. A messy exit creates enemies; a graceful exit creates potential future allies.** — Dan O'Leary
 
 :::caution[DON'T TERMINATE BEFORE READING THIS]

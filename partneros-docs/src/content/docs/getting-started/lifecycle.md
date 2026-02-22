@@ -3,24 +3,17 @@ title: Partner Lifecycle
 category: operational
 version: 1.0.0
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: onboarding
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- None - good starting point
+prerequisites: 
 description: Understanding the end-to-end partner journey
-outcomes:
-- Completed Partner Lifecycle
-skills_gained:
-- Onboarding
-- Process implementation
-- Best practices
+outcomes: 
+skills_gained: 
+keywords: ["part ways do", "need partners", "re looking", "re building", "partner program", "scratch start"]
 ---
 # Partner Lifecycle
 

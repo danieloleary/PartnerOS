@@ -1,3 +1,7 @@
+---
+title: Sentinel's Journal - Critical Security Learnings
+keywords: ["partner management vulnerability", "application was vulnerable", "monolithic string within", "csrf like attacks", "rendered using innerhtml", "partners json"]
+---
 # Sentinel's Journal - Critical Security Learnings
 
 ## 2025-05-15 - Stored XSS in Partner Management

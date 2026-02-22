@@ -17,8 +17,8 @@ prerequisites: [Partner Success Metrics, Partner Health Scorecard]
 outcomes: [Dashboard design, KPI definitions, Reporting cadence]
 skills_gained: [Analytics, Data visualization, Reporting]
 tags: [analytics, dashboard, metrics, KPIs, reporting, data]
+keywords: ["own data quality", "template helps", "build dashboards", "template design", "metrics expand", "second mistake"]
 ---
-
 Data is the language of executives. This template helps you build dashboards that tell the partner program story.
 
 :::tip[Insider Tip]

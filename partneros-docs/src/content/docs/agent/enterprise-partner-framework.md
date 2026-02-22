@@ -3,29 +3,18 @@ title: Enterprise Partner Framework
 category: operational
 version: 1.0.0
 author: PartnerOS Team
-tier:
-- Bronze
-- Silver
-- Gold
+tier: 
 skill_level: intermediate
 purpose: operational
 phase: operational
 time_required: 1-2 hours
 difficulty: easy
-prerequisites:
-- Python 3.10+
-- API keys configured
+prerequisites: 
 description: Generic case study for partner program best practices
-tags:
-- framework
-- enterprise
-- best-practices
-outcomes:
-- Completed Enterprise Partner Framework
-skills_gained:
-- AI prompting
-- Automation
-- Workflow design
+tags: 
+outcomes: 
+skills_gained: 
+keywords: ["specific step templates", "processes structures", "framework should", "workflows integration", "existing crm", "building"]
 ---
 # Enterprise Partner Program Framework
 *Generic Case Study Based on Best Practices - January 2026*
