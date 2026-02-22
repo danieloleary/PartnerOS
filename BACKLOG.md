@@ -510,4 +510,57 @@ Based on Starlight's built-in components to improve UX:
 
 ---
 
+## Agent-First Templates & Skill Cards (v2.0)
+
+*Make templates actionable by specific AI agents - "hire" the right team member for each task*
+
+### Agent Skill Cards
+
+| # | Item | Purpose | Priority | Effort |
+|---|------|---------|----------|--------|
+| A1 | **Create The Owner Skill Card** | Visual card for executive approval skills | p1 | 2 hrs |
+| A2 | **Create Partner Manager Skill Card** | Visual card for relationship management skills | p1 | 2 hrs |
+| A3 | **Create Partner Marketing Skill Card** | Visual card for campaign/content creation skills | p1 | 2 hrs |
+| A4 | **Create Partner Operations Skill Card** | Visual card for comp plans, deal registration | p1 | 2 hrs |
+| A5 | **Create Partner Strategy Skill Card** | Visual card for ICP, evaluation, tier design | p1 | 2 hrs |
+| A6 | **Create Partner Technical Skill Card** | Visual card for integrations, API docs | p1 | 2 hrs |
+| A7 | **Create Partner Leader Skill Card** | Visual card for board decks, ROI, executive comms | p1 | 2 hrs |
+
+### Agent Workflow Templates
+
+| # | Item | Purpose | Priority | Effort |
+|---|------|---------|----------|--------|
+| W1 | **Partner Manager Onboarding Workflow** | Agent builds complete onboarding plan | p1 | 4 hrs |
+| W2 | **Partner Setup Workflow** | Agent configures portal, deals, pricing | p1 | 4 hrs |
+| W3 | **Partner Campaign Generator** | Agent creates email sequences, campaigns | p1 | 3 hrs |
+| W4 | **Partner Comp Plan Builder** | Agent builds commission structures | p1 | 3 hrs |
+| W5 | **Partner Deal Calculator** | Agent calculates commissions, rebates | p1 | 2 hrs |
+| W6 | **Partner Pitch Generator** | Agent creates personalized pitches | p1 | 3 hrs |
+| W7 | **Partner Health Check** | Agent runs QBR, creates board decks | p1 | 3 hrs |
+
+### AI Prompt Integration
+
+Add "Tell Your Agent To..." section to existing templates:
+
+| # | Item | Purpose | Priority | Effort |
+|---|------|---------|----------|--------|
+| P1 | **Add Agent Prompts to Strategy Templates** | Action prompts for strategy agents | p2 | 4 hrs |
+| P2 | **Add Agent Prompts to Operations Templates** | Action prompts for ops agents | p2 | 4 hrs |
+| P3 | **Add Agent Prompts to Finance Templates** | Action prompts for comp calculations | p2 | 2 hrs |
+| P4 | **Add Agent Prompts to Enablement Templates** | Action prompts for marketing/content | p2 | 3 hrs |
+
+### Example Agent Prompt Format
+
+```markdown
+## Tell Your Agent To...
+
+**Partner Manager:** "Run a QBR for Acme Corp covering Q4 performance, 2025 goals, and expansion opportunities"
+
+**Partner Marketing:** "Write a 5-email welcome sequence for our new Silver partner tier"
+
+**Partner Ops:** "Calculate the commission for a $50K deal with 20% base rate and 1.25x accelerator"
+```
+
+---
+
 *Backlog managed per ARCHITECTURE.md vision - "Give them the playbook + the coach"*
