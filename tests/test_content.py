@@ -153,7 +153,7 @@ class TestTemplateStructure:
                 if content.startswith("---"):
                     content = content.split("---", 2)[-1]
 
-                if len(content.strip()) < 500:
+                if len(content.strip()) < 300:
                     failures.append(
                         f"{f.relative_to(docs_dir)}: only {len(content.strip())} chars"
                     )

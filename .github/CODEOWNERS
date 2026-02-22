@@ -1,0 +1,18 @@
+# Code Owners
+# This file defines who owns different parts of the codebase
+
+# Default owner for everything
+* @danieloleary
+
+# Documentation
+partneros-docs/** @danieloleary
+*.md @danieloleary
+
+# Scripts
+scripts/** @danieloleary
+
+# Tests
+tests/** @danieloleary
+
+# GitHub workflows
+.github/workflows/** @danieloleary

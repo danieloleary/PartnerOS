@@ -1,0 +1,67 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g., 1.9.0)'
+        required: true
+        type: string
+      major:
+        description: 'Major version bump'
+        required: false
+        type: boolean
+        default: false
+      minor:
+        description: 'Minor version bump'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run tests
+        run: |
+          pip install pytest pyyaml
+          pytest tests/ -v
+
+      - name: Build documentation
+        run: |
+          cd partneros-docs
+          npm install
+          npm run build
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.event.inputs.version }}
+          release_name: PartnerOS v${{ github.event.inputs.version }}
+          draft: false
+          prerelease: false
+        if: github.event.inputs.major != 'true' && github.event.inputs.minor != 'true'
+
+      - name: Create Major Release
+        if: github.event.inputs.major == 'true'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v2.0.0
+          release_name: PartnerOS v2.0.0 - Major Release
+          draft: false
+          prerelease: false

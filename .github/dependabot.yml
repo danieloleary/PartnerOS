@@ -1,0 +1,25 @@
+version: 2
+updates:
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+
+  # Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+
+  # Node.js dependencies
+  - package-ecosystem: "npm"
+    directory: "/partneros-docs"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
