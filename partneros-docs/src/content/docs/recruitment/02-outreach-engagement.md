@@ -1,10 +1,10 @@
 ---
-title: Outreach Engagement Sequence Template
+title: Multi-Channel Outreach & Engagement Sequence
 section: Recruitment
 category: operational
 template_number: II.2
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
@@ -13,245 +13,360 @@ tier:
 skill_level: intermediate
 purpose: operational
 phase: recruitment
-time_required: 1-2 hours
-difficulty: easy
+time_required: 2-3 hours
+difficulty: medium
 prerequisites:
-- Target partner list
-description: Outreach Engagement Sequence Template template
+- Target partner list identified
+- Ideal Partner Profile defined
+description: >
+  A multi-channel engagement sequence that builds relationships with potential partners through email, LinkedIn, phone, and events. Move prospects from cold to partnership-ready.
 outcomes:
-- Completed Outreach Engagement Sequence Template
+- Complete multi-channel engagement plan
+- Channel-specific scripts
+- Content strategy for engagement
+- Metrics to track engagement success
 skills_gained:
-- Sales outreach
-- Negotiation
-- Partner qualification
+- Multi-channel outreach
+- Relationship building
+- Sales engagement
+- Content strategy
 ---
 
-> **Outreach Engagement Sequence Template template**
+> **Email alone doesn't work anymore. Today's partners are reached through 5-7 touchpoints across 3-4 channels before they respond. Single-channel outreach is just hoping.** — Dan O'Leary
 
+:::tip INSIDER TIP
+The "Rule of 7" applies to partner outreach: prospects need to see your message 7 times before they act. If you only send emails, you're hoping for a 1-in-7 success rate. Use multiple channels to hit 7 touchpoints faster.
+:::
 
 ## How to Use This Template
 
 **Purpose:**
-Use this template to create a multi-channel engagement sequence that builds relationships with potential partners through various touchpoints.
+This template provides a multi-channel approach to partner outreach that combines email, LinkedIn, phone, and content to build relationships and convert prospects into partnership conversations.
+
+**Why It Works:**
+Single-channel outreach has low success rates. Multi-channel sequences that combine email + LinkedIn + phone achieve 3x higher conversion. This template sequences those touchpoints for maximum impact.
 
 **Steps:**
-1. Identify target partners and their preferred channels
-2. Create a multi-channel engagement plan
-3. Develop content for each channel
-4. Set up tracking and measurement
-5. Adjust strategy based on engagement
+
+1. **Identify channels** — Which channels does your prospect prefer? (15 min)
+2. **Build the sequence** — Map touchpoints across 21 days (30 min)
+3. **Create scripts** — Customize channel-specific messages (45 min)
+4. **Set up tracking** — Measure engagement across channels (15 min)
+5. **Execute and optimize** — Weekly review of what's working (ongoing)
 
 ---
 
-# Outreach Engagement Sequence Template
+# Multi-Channel Outreach Sequence
 
-## 1. Channel Strategy
+## The Engagement Framework
 
-### Primary Channels
-- Email
-- LinkedIn
-- Phone
-- Events
-- Direct Mail
-- Social Media
+### Why Multi-Channel Works
 
-### Channel Selection Criteria
-- Partner preferences
-- Industry norms
-- Message complexity
-- Relationship stage
-- Resource availability
+| Channel | Strength | Best For |
+|---------|----------|----------|
+| **Email** | Scalable, documented | Initial outreach, proposals |
+| **LinkedIn** | Personal, researchable | Social proof, relationship building |
+| **Phone** | Immediate, personal | Breaking through, closing |
+| **Content** | Value-first approach | Building authority |
+| **Events** | Deep connection | Final conversion |
 
-### Channel Mix by Stage
-1. **Initial Contact**
-   - LinkedIn
-   - Email
-   - Phone
+### The Sequence Overview
 
-2. **Relationship Building**
-   - Email
-   - LinkedIn
-   - Events
-   - Social Media
-
-3. **Partnership Discussion**
-   - Phone
-   - In-person meetings
-   - Video calls
-
-## 2. Engagement Timeline
-
-### Week 1: Initial Outreach
-- Day 1: LinkedIn connection request
-- Day 2: Follow-up message on LinkedIn
-- Day 3: Initial email
-- Day 4: Phone call attempt
-- Day 5: Follow-up email
-
-### Week 2: Value Building
-- Day 7: Share relevant content
-- Day 8: Comment on social posts
-- Day 9: Send industry insights
-- Day 10: Follow-up call
-- Day 11: Partnership proposal
-
-### Week 3: Partnership Discussion
-- Day 14: Schedule meeting
-- Day 15: Send meeting agenda
-- Day 16: Conduct meeting
-- Day 17: Send follow-up
-- Day 18: Next steps
-
-## 3. Channel-Specific Content
-
-### LinkedIn Engagement
-```
-Connection Request:
-"Hi [Name], I noticed we both work in [industry]. I'd love to connect and share insights about [specific topic]."
-
-Follow-up Message:
-"Thanks for connecting! I've been following [Company]'s work in [area]. Would you be open to a brief conversation about [specific topic]?"
-
-Content Sharing:
-"Thought you might find this interesting: [link to relevant content]"
-```
-
-### Phone Script
-```
-Introduction:
-"Hi [Name], this is [Your Name] from [Your Company]. I'm reaching out because [specific reason]."
-
-Value Proposition:
-"We've been helping companies like [example] achieve [specific outcome] through [specific solution]."
-
-Call to Action:
-"Would you be open to a 15-minute conversation about how we might create similar value together?"
-```
-
-### Social Media Engagement
-- Like relevant posts
-- Share industry insights
-- Comment on updates
-- Tag in relevant content
-- Participate in discussions
-
-## 4. Content Strategy
-
-### Content Types
-1. **Educational**
-   - Industry insights
-   - Best practices
-   - Case studies
-   - Research findings
-
-2. **Value-Focused**
-   - Partnership benefits
-   - Success stories
-   - ROI examples
-   - Market opportunities
-
-3. **Relationship-Building**
-   - Company updates
-   - Team introductions
-   - Event invitations
-   - Industry news
-
-### Content Calendar
-- Weekly industry insights
-- Bi-weekly case studies
-- Monthly partnership updates
-- Quarterly event invitations
-
-## 5. Engagement Metrics
-
-### Key Metrics
-- Response rates
-- Engagement levels
-- Meeting conversion
-- Partnership initiation
-- Time to response
-
-### Channel Performance
-- Email open rates
-- LinkedIn response rates
-- Phone call success
-- Social media engagement
-- Event attendance
-
-## 6. Best Practices
-
-### Channel Management
-- Maintain consistent messaging
-- Respect channel preferences
-- Time communications appropriately
-- Track all interactions
-- Follow up promptly
-
-### Content Guidelines
-- Keep messages concise
-- Focus on value
-- Personalize content
-- Use clear calls to action
-- Maintain professional tone
-
-### Relationship Building
-- Show genuine interest
-- Provide value first
-- Build trust gradually
-- Respect boundaries
-- Follow through on promises
-
-## 7. Success Metrics
-
-### Engagement Metrics
-- Response rates
-- Meeting conversion
-- Partnership initiation
-- Time to response
-- Channel effectiveness
-
-### Optimization
-- A/B testing
-- Message refinement
-- Timing adjustment
-- Content updates
-- Channel mix optimization
+| Week | Focus | Channels | Goal |
+|------|-------|----------|------|
+| Week 1 | Awareness | Email + LinkedIn | Get noticed |
+| Week 2 | Interest | LinkedIn + Content | Add value |
+| Week 3 | Consideration | Phone + Email | Break through |
+| Week 4 | Decision | Phone + Meeting | Close the meeting |
 
 ---
 
-## Pro Tips
+## Week 1: Initial Contact
 
-1. **Channel Selection:**
-   - Research partner preferences
-   - Consider industry norms
-   - Match message to channel
-   - Use multiple channels
-   - Track effectiveness
+### Day 1: LinkedIn Connection
 
-2. **Content Strategy:**
-   - Create valuable content
-   - Personalize messages
-   - Maintain consistency
-   - Focus on benefits
-   - Use clear calls to action
+**Connection Request:**
+```
+Hi [Name], I run partner programs at [Your Company]. I've been following [Their Company]'s work in [specific area] and think there could be a natural fit. Would love to connect.
+```
 
-3. **Timing:**
-   - Respect time zones
-   - Consider busy periods
-   - Space communications
-   - Follow up promptly
-   - Be patient
+### Day 2: LinkedIn Follow-up (After Accept)
 
-4. **Relationship Building:**
-   - Show genuine interest
-   - Provide value first
-   - Build trust gradually
-   - Respect boundaries
-   - Follow through
+**First Message:**
+```
+Thanks for connecting, [Name]! Quick note — I see you're expanding in [their focus area]. We're helping companies like [similar company] achieve [specific result]. Would you be open to a conversation if there's fit?
+```
+
+### Day 3: Initial Email
+
+```
+Hi [Name],
+
+Following up on my LinkedIn message — I believe there's a strong fit between [Your Company] and [Their Company].
+
+Here's the quick version:
+- We help partners generate [specific outcome]
+- Partners like [similar company] have seen [specific result]
+- We're looking for partners in [their space]
+
+Would a 15-minute call this week work?
+
+Best,
+[Your Name]
+```
+
+### Day 4: Phone Attempt
+
+**Script:**
+```
+Hi, this is [Your Name] from [Your Company]. I'm trying to reach [Prospect Name] regarding a partnership opportunity.
+
+[If available]: Hi [Name], thanks for taking my call. I'm reaching out because I believe there's a fit between our companies. Do you have 2 minutes?
+
+[Pitch]: We help companies like [example] achieve [result]. We're looking for partners in [their space]. I'd love to share more — would a brief call work this week?
+```
+
+### Day 5: Follow-up Email
+
+```
+Hi [Name],
+
+One more touchpoint — then I'll stop (I promise).
+
+I've been impressed by [specific observation about their company]. We're helping companies like [example] achieve [result], and I think there's a fit.
+
+No pressure — just wanted to make sure you had the option.
+
+Best,
+[Your Name]
+```
+
+---
+
+## Week 2: Value Building
+
+### Day 7: Share Relevant Content
+
+**LinkedIn Message or Email:**
+```
+Hi [Name], came across this and thought of you: [relevant article about their industry]. 
+
+[Your take]: The key insight is [specific point]. We see this playing out with our partners in [their segment].
+
+Let me know if it's useful — happy to discuss further.
+```
+
+### Day 8: Comment on Their Content
+
+Find something they posted and engage genuinely:
+- Ask a thoughtful question
+- Add useful context
+- Share a relevant experience
+
+**Not:** "Great post!" (generic)
+
+**Yes:** "Interesting perspective on [specific point]. In our partner work, we've found [different angle]. Would love to discuss."
+
+### Day 9: Industry Insights Email
+
+```
+Hi [Name],
+
+Been thinking about [industry trend] and how it impacts companies like yours.
+
+Here's what we're seeing with partners:
+- [Insight #1]
+- [Insight #2]
+- [Insight #3]
+
+Worth a conversation if any of this resonates.
+
+Best,
+[Your Name]
+```
+
+### Day 10: Phone Follow-up + Voicemail
+
+**Script:**
+```
+Hi [Name], this is [Your Name] from [Your Company]. I'm following up on a few messages about a potential partnership.
+
+The quick version: We help companies like yours generate [result]. I think there's a fit, and I'd love to discuss.
+
+If you're interested, I'm available [times]. If not, no worries — just wanted to make sure you had the info.
+
+Thanks.
+```
+
+### Day 11: Partnership Proposal Email
+
+```
+Hi [Name],
+
+Based on our conversations and what I've learned about [Their Company], here's what I'd propose:
+
+**Partnership Model:** [Referral / Reseller / Co-sell]
+
+**What we'd provide:**
+- [Benefit #1]
+- [Benefit #2]
+- [Benefit #3]
+
+**What we'd need:**
+- [Requirement #1]
+- [Requirement #2]
+
+Would you like to schedule a call to discuss?
+
+Best,
+[Your Name]
+```
+
+---
+
+## Week 3-4: Conversion
+
+### Phone Script for "Hard to Reach"
+
+```
+Hi [Name], I know you're busy. I'll be brief.
+
+I've been trying to reach you about a partnership opportunity with [Your Company]. 
+
+[If they seem interested]: Great — here's what I'd propose [brief summary].
+
+[If they seem hesitant]: What would it take to make this worth 15 minutes of your time?
+
+[If they say no]: Completely understand. If anything changes, what's the best way to reach you?
+```
+
+### Meeting Close Script
+
+```
+Great — let's make it happen.
+
+Here's what I'd propose:
+- 15 minutes this week or next
+- I'll share what we're seeing in [their industry]
+- You share what you're looking for
+- We see if there's fit
+
+What works for your schedule?
+```
+
+---
+
+## Channel-Specific Best Practices
+
+### Email
+
+| Do | Don't |
+|----|-------|
+| Keep under 100 words | Send attachments first touch |
+| Use specific subject lines | Be generic |
+| Include clear CTA | Multiple asks in one email |
+| Follow up 3-4 times | Give up after 1 try |
+
+### LinkedIn
+
+| Do | Don't |
+|----|-------|
+| Personalize every message | Send mass connection requests |
+| Engage with their content first | Pitch immediately |
+| Build relationship before pitching | Connect and pitch same day |
+| Be helpful and relevant | Be promotional |
+
+### Phone
+
+| Do | Don't |
+|----|-------|
+| Have a clear opener | Read a script verbatim |
+| Lead with value | Talk about yourself first |
+| Ask questions | Dominate the conversation |
+| Know when to stop | Leave long voicemails |
+
+---
+
+## What I Wish I Knew
+
+**LinkedIn before email:**
+Starting with LinkedIn (connection + message) before email builds relationship first. Response rates are 3x higher when they've "met" you digitally before your email arrives.
+
+**Phone at Day 10:**
+The phone works best after 7-10 days of multi-touch outreach. Cold calls have <1% success. Warmed-up calls (after email + LinkedIn) have 5-10% success.
+
+**Content is not pitching:**
+Week 2 content shouldn't sell — it should help. Share articles, insights, useful information. The pitch comes later. Lead with value.
+
+---
+
+## Common Pitfalls
+
+**Pitfall #1: Same Message, Different Channel**
+- **What happens:** Prospects feel spammed
+- **Warning sign:** "I just got this on email AND LinkedIn"
+- **Prevention:** Customize message for each channel
+
+**Pitfall #2: Too Many Channels**
+- **What happens:** Prospect feels harassed
+- **Warning sign:** "Please stop contacting me"
+- **Prevention:** Max 4 touchpoints per week
+
+**Pitfall #3: No Value, Just Pitch**
+- **What happens:** Zero engagement
+- **Warning sign:** No opens, no responses
+- **Prevention:** Week 2 should be all value, no pitch
+
+---
+
+## Success Metrics
+
+### Track These Numbers
+
+| Metric | Target | What It Tells You |
+|--------|--------|-------------------|
+| Channel engagement rate | >20% per channel | Which channels work |
+| Meeting conversion | >30% | Overall sequence effectiveness |
+| Time to response | <14 days | Urgency and interest |
+| Channel sequence | Optimized | Best path to conversion |
+
+### Optimization Checklist
+
+- [ ] A/B test subject lines
+- [ ] Test send times by channel
+- [ ] Compare channel effectiveness
+- [ ] Measure content engagement
+- [ ] Track meeting conversion rate
+
+---
+
+## Quick Win Checklist
+
+*Complete these first (30 minutes)*
+
+- [ ] Customize templates for your company
+- [ ] Identify top 20 target partners
+- [ ] Research channel preferences
+- [ ] Set up tracking spreadsheet
+- [ ] Execute Week 1 sequence
+
+## Full Implementation
+
+*Complete for standard implementation (2-3 hours)*
+
+- [ ] Complete 21-day sequence customization
+- [ ] Create all channel-specific scripts
+- [ ] Build content library for Week 2
+- [ ] Set up multi-channel tracking
+- [ ] Execute 100+ prospect campaign
+- [ ] Weekly analysis and optimization
 
 ---
 
 ## Related Templates
-- [Recruitment Email Sequence](01-email-sequence/)
-- [Discovery Call Script](04-discovery-call/)
----
+
+- [Email Sequence](../recruitment/01-email-sequence/) — Core email templates
+- [Discovery Call Script](../recruitment/04-discovery-call/) — What to do after they say yes
+- [Pitch Deck](../recruitment/05-pitch-deck/) — Visual for meetings
+- [Partnership One-Pager](../recruitment/06-one-pager/) — Leave-behind document
+- [Partner Program Glossary](../resources/glossary/) — Definitions of all terms used here

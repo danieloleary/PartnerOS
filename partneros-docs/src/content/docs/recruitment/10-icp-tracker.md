@@ -1,10 +1,10 @@
 ---
-title: ICP Alignment Tracker (Strategic Account Mapping)
+title: ICP Alignment Tracker
 section: Recruitment
 category: operational
 template_number: II.10
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
@@ -16,214 +16,99 @@ phase: recruitment
 time_required: 1-2 hours
 difficulty: easy
 prerequisites:
-- Target partner list
-description: 'Systematically identify and track alignment between your ICPs, target
-  accounts, and joint opportunities with partners.
-
-  '
+- Ideal Partner Profile defined
+description: >
+  Systematically track alignment between your Ideal Customer Profile and partner-covered accounts. Maximize joint coverage and identify co-sell opportunities.
 outcomes:
-- Completed ICP Alignment Tracker (Strategic Account Mapping)
+- Complete ICP alignment tracking
+- Account mapping by partner
+- Co-sell opportunity identification
 skills_gained:
-- Sales outreach
-- Negotiation
-- Partner qualification
+- Account mapping
+- Partner alignment
+- Pipeline development
+- Co-sell strategy
 ---
 
-> **Systematically identify and track alignment between your ICPs, target accounts, and joint opportunities with partners.**
+> **If you don't know which accounts your partners can access, you're leaving money on the table.** — Dan O'Leary
 
+:::tip INSIDER TIP
+The best partners don't just sell to your ICP—they sell to accounts you can't reach. Map the overlap AND the complementary coverage.
+:::
 
 ## How to Use This Template
 
 **Purpose:**
-Use this template to systematically identify and track alignment between your ICPs, target accounts, and joint opportunities with partners.
+This tracker maps your target accounts against partner coverage to identify co-sell opportunities and maximize market penetration.
+
+**Why It Works:**
+Understanding account overlap prevents channel conflict and enables smarter co-sell strategies.
 
 **Steps:**
-1. Review the ICP definitions and mapping fields.
-2. Gather and compare account lists with your partner (under NDA if needed).
-3. Fill in overlap, opportunity, and action plan sections.
-4. Reference the "Related Templates" for supporting information.
-5. Update regularly and use in joint business planning sessions.
+
+1. **List your ICP accounts** — Your target accounts (30 min)
+2. **Map partner coverage** — Which partners serve which accounts (1 hour)
+3. **Identify opportunities** — Overlap and complementary coverage (30 min)
+4. **Prioritize** — Focus on high-value overlaps (ongoing)
 
 ---
 
-# ICP Alignment Tracker (Strategic Account Mapping)
+# ICP Alignment Tracker
 
-## 1. ICP Definition Comparison
+## Partner Coverage Matrix
 
-### Your Company's ICP
-| Attribute | Definition |
-|-----------|------------|
-| **Industry** | [e.g., Financial Services, Healthcare, Technology] |
-| **Company Size** | [e.g., 500-5,000 employees, $50M-$500M revenue] |
-| **Geography** | [e.g., North America, EMEA, specific regions] |
-| **Technology Stack** | [e.g., Salesforce, AWS, specific platforms] |
-| **Business Challenges** | [e.g., digital transformation, compliance, growth] |
-| **Buying Center** | [e.g., CTO, VP Engineering, IT Director] |
-| **Budget Range** | [e.g., $50K-$500K annual spend] |
+### Your ICP Accounts
 
-### Partner's ICP
-| Attribute | Definition |
-|-----------|------------|
-| **Industry** | [Partner's target industries] |
-| **Company Size** | [Partner's target company size] |
-| **Geography** | [Partner's geographic focus] |
-| **Technology Stack** | [Partner's technology requirements] |
-| **Business Challenges** | [Problems partner solves] |
-| **Buying Center** | [Partner's typical buyer] |
-| **Budget Range** | [Partner's typical deal size] |
+| Account | Industry | Size | Priority | Current Status |
+|--------|----------|------|----------|----------------|
+| [Name] | [Industry] | [Size] | [High/Med/Low] | [Prospect/Partner/Customer] |
 
-### ICP Overlap Analysis
-| Attribute | Alignment Score (1-5) | Notes |
-|-----------|----------------------|-------|
-| Industry | [Score] | [Where do we align?] |
-| Company Size | [Score] | [Sweet spot overlap?] |
-| Geography | [Score] | [Shared territories?] |
-| Technology Stack | [Score] | [Complementary tech?] |
-| Business Challenges | [Score] | [Joint value prop?] |
-| Buying Center | [Score] | [Same stakeholders?] |
-| **Overall Alignment** | [Average] | [Summary] |
+### Partner Coverage
+
+| Partner | Accounts They Serve | Overlap Score |
+|---------|-------------------|---------------|
+| [Partner 1] | [List accounts] | [High/Med/Low] |
+| [Partner 2] | [List accounts] | [High/Med/Low] |
 
 ---
 
-## 2. Account List Exchange
+## Overlap Analysis
 
-### Ground Rules
-- [ ] Mutual NDA in place
-- [ ] Agreed-upon data sharing format
-- [ ] Clear rules on account ownership
-- [ ] Defined engagement protocols
-- [ ] Regular refresh cadence established
+### High Overlap (>60%)
 
-### Account Categories
-| Category | Definition | Action |
-|----------|------------|--------|
-| **Greenfield** | Neither party has relationship | Joint prospecting |
-| **Your Accounts** | You have existing relationship | Introduce partner |
-| **Partner Accounts** | Partner has existing relationship | Get introduction |
-| **Overlap Accounts** | Both have relationships | Coordinate approach |
-| **Exclusions** | Accounts off-limits | Document reasons |
+| Your Account | Partner | Opportunity |
+|--------------|--------|-------------|
+| [Account] | [Partner] | [Co-sell] |
+
+### Complementary Coverage (No Overlap)
+
+| Your Gap | Partner Coverage | Opportunity |
+|----------|----------------|-------------|
+| [Gap] | [Partner covers] | [Recruit partner] |
 
 ---
 
-## 3. Strategic Account Mapping
+## Co-Sell Priorities
 
-### Tier 1: High-Priority Joint Targets
-| Account Name | Industry | Size | Your Relationship | Partner Relationship | Joint Opportunity | Owner | Status |
-|--------------|----------|------|-------------------|---------------------|-------------------|-------|--------|
-| [Account 1] | | | [None/Prospect/Customer] | [None/Prospect/Customer] | [$Value] | [Name] | [Active/Pending] |
-| [Account 2] | | | | | | | |
-| [Account 3] | | | | | | | |
-
-### Tier 2: Secondary Targets
-| Account Name | Industry | Size | Your Relationship | Partner Relationship | Joint Opportunity | Next Step |
-|--------------|----------|------|-------------------|---------------------|-------------------|-----------|
-| [Account 1] | | | | | | |
-| [Account 2] | | | | | | |
-
-### Tier 3: Long-Term Targets
-| Account Name | Industry | Why Target | Timeline | Notes |
-|--------------|----------|------------|----------|-------|
-| [Account 1] | | | | |
-| [Account 2] | | | | |
+| Priority | Account | Partner | Strategy |
+|----------|---------|--------|----------|
+| 1 | [Account] | [Partner] | [Joint call] |
+| 2 | [Account] | [Partner] | [Referral] |
 
 ---
 
-## 4. Opportunity Tracking
+## Quick Win Checklist
 
-### Active Joint Opportunities
-| Account | Opportunity Name | Stage | Value | Your Role | Partner Role | Expected Close | Probability |
-|---------|-----------------|-------|-------|-----------|--------------|----------------|-------------|
-| [Account] | [Opp Name] | [Stage] | [$X] | [Lead/Support] | [Lead/Support] | [Date] | [%] |
+*Complete in 1 hour*
 
-### Pipeline Summary
-| Metric | Value |
-|--------|-------|
-| Total Joint Pipeline | $[X] |
-| Number of Opportunities | [X] |
-| Average Deal Size | $[X] |
-| Win Rate (Historical) | [X]% |
-| Average Sales Cycle | [X] days |
-
----
-
-## 5. Account Engagement Tracking
-
-### Engagement Log
-| Date | Account | Activity Type | Participants | Outcome | Next Steps |
-|------|---------|--------------|--------------|---------|------------|
-| [Date] | [Account] | [Meeting/Call/Demo] | [Names] | [Summary] | [Actions] |
-
-### Engagement Types
-- **Discovery Call**: Initial joint call to understand needs
-- **Solution Demo**: Joint demonstration of combined value
-- **Executive Briefing**: C-level presentation
-- **Workshop**: Technical or business deep-dive
-- **Proposal Review**: Joint proposal presentation
-- **Negotiation**: Final terms discussion
-
----
-
-## 6. Success Metrics
-
-### Tracking KPIs
-| Metric | Target | Actual | Status |
-|--------|--------|--------|--------|
-| Accounts Mapped | [X] | [X] | [On Track/Behind] |
-| Joint Meetings Held | [X] | [X] | |
-| Pipeline Generated | $[X] | $[X] | |
-| Deals Closed | [X] | [X] | |
-| Revenue Generated | $[X] | $[X] | |
-
-### Quarterly Goals
-| Quarter | Accounts to Engage | Pipeline Target | Revenue Target |
-|---------|-------------------|-----------------|----------------|
-| Q1 | [X] | $[X] | $[X] |
-| Q2 | [X] | $[X] | $[X] |
-| Q3 | [X] | $[X] | $[X] |
-| Q4 | [X] | $[X] | $[X] |
-
----
-
-## 7. Action Plan
-
-### Immediate Actions (Next 30 Days)
-| Action | Owner | Due Date | Status |
-|--------|-------|----------|--------|
-| Exchange account lists | [Name] | [Date] | [ ] |
-| Identify top 10 joint targets | [Name] | [Date] | [ ] |
-| Schedule account mapping session | [Name] | [Date] | [ ] |
-| Create joint outreach plan | [Name] | [Date] | [ ] |
-
-### Ongoing Cadence
-| Activity | Frequency | Owner | Notes |
-|----------|-----------|-------|-------|
-| Account list refresh | Monthly | [Name] | |
-| Pipeline review | Bi-weekly | [Name] | |
-| Joint forecasting | Monthly | [Name] | |
-| Executive alignment | Quarterly | [Name] | |
-
----
-
-## 8. Best Practices
-
-### Do's
-- Start with a focused list (20-50 accounts max)
-- Prioritize based on fit AND likelihood of joint success
-- Establish clear ownership and engagement rules upfront
-- Track all touchpoints in a shared system
-- Celebrate wins together to build momentum
-
-### Don'ts
-- Don't share sensitive account data without proper agreements
-- Don't pursue accounts without partner alignment
-- Don't let the list go stale—refresh regularly
-- Don't ignore account conflicts—address them early
-- Don't measure only pipeline—track engagement quality too
+- [ ] List top 20 ICP accounts
+- [ ] Map partner coverage
+- [ ] Identify high overlaps
 
 ---
 
 ## Related Templates
-- [Partner Qualification Framework](03-qualification-framework/)
-- [Partnership Proposal Template](07-proposal/)
-- [Ideal Partner Profile](../strategy/02-ideal-partner-profile/)
----
+
+- [Ideal Partner Profile](../strategy/02-ideal-partner-profile/) — What to look for
+- [Qualification Framework](../recruitment/03-qualification-framework/) — How to qualify
+- [Partner Program Glossary](../resources/glossary/) — Definitions

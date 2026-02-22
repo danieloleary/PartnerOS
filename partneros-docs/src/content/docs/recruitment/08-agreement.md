@@ -1,375 +1,150 @@
 ---
-title: Partnership Agreement Template
+title: Partnership Agreement
 section: Recruitment
 category: operational
 template_number: II.8
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
 - Silver
 - Gold
-skill_level: intermediate
+skill_level: advanced
 purpose: operational
 phase: recruitment
 time_required: 4-8 hours
 difficulty: hard
 prerequisites:
-- Target partner list
-description: Partnership Agreement Template template
+- Proposal accepted
+- Legal review completed
+description: >
+  A comprehensive partnership agreement template that formalizes the relationship. Work with legal to customize for your specific situation.
 outcomes:
-- Completed Partnership Agreement Template
+- Complete partnership agreement framework
+- Key terms and conditions defined
+- Escalation and termination processes
 skills_gained:
-- Sales outreach
-- Negotiation
-- Partner qualification
+- Contract negotiation
+- Legal compliance
+- Partner relationship management
 ---
 
-> **Partnership Agreement Template template**
+> **The agreement protects both parties. Don't skip it, don't rush it, and always involve legal.** — Dan O'Leary
 
+:::caution LEGAL REVIEW REQUIRED
+This template provides a framework. Work with your legal team to customize for your specific situation, jurisdiction, and risk tolerance. This is not legal advice.
+:::
 
 ## How to Use This Template
 
 **Purpose:**
-Use this template to create comprehensive partnership agreements that clearly define terms, protect both parties, and set the foundation for successful collaboration.
+This agreement formalizes the partnership and defines the rights and obligations of both parties. It provides the legal foundation for the relationship.
+
+**Why It Works:**
+A clear agreement prevents misunderstandings. It defines what's expected, what happens if things go wrong, and how to resolve conflicts.
 
 **Steps:**
-1. Review all sections
-2. Customize for specific partnership
-3. Add required legal language
-4. Define clear terms
-5. Have legal review
+
+1. **Customize** — Work with legal to adapt template (ongoing)
+2. **Negotiate** — Discuss terms with partner (1-2 weeks)
+3. **Review** — Legal team review (1 week)
+4. **Sign** — Execute agreement (1 day)
+5. **Onboard** — Begin partnership (ongoing)
 
 ---
 
-# Partnership Agreement Template
+# Partnership Agreement
 
-## 1. Agreement Overview
+## Key Sections
 
-### Parties
-```
-This Partnership Agreement ("Agreement") is entered into on [Date] by and between:
+### 1. Parties & Effective Date
 
-[Your Company Name], a [State] corporation with its principal place of business at [Address] ("Company")
+**This Agreement** is between:
+- **[Your Company]** ("Company")
+- **[Partner Company]** ("Partner")
 
-and
+**Effective Date:** [Date]
 
-[Partner Company Name], a [State] corporation with its principal place of business at [Address] ("Partner")
-```
+### 2. Term & Termination
 
-### Purpose
-```
-The purpose of this Agreement is to establish a strategic partnership between Company and Partner to [specific purpose].
-```
+| Component | Terms |
+|-----------|-------|
+| Initial term | [X] years |
+| Renewal | Automatic for [X] year periods |
+| Notice period | [X] days |
+| Termination for cause | Immediate upon breach |
 
-### Term
-```
-This Agreement shall commence on [Start Date] and continue for [Duration] unless terminated earlier in accordance with Section [Termination Section].
-```
+### 3. Partnership Model
 
-## 2. Partnership Structure
+| Element | Description |
+|---------|-------------|
+| Type | [Referral / Reseller / Co-sell / Strategic] |
+| Territory | [Geographic scope] |
+| Tier | [Bronze / Silver / Gold] |
 
-### Partnership Type
-```
-This Agreement establishes a [partnership type] partnership between the Parties for the purpose of [specific purpose].
-```
+### 4. Financial Terms
 
-### Scope
-1. **Primary Activities**
-   - [Activity 1]
-   - [Activity 2]
-   - [Activity 3]
+| Component | Terms |
+|-----------|-------|
+| Commission | [X]% |
+| Payment terms | Net [X] days |
+| Rebate | [X]% above threshold |
+| MDF | $[X]/year |
 
-2. **Secondary Activities**
-   - [Activity 1]
-   - [Activity 2]
-   - [Activity 3]
+### 5. Obligations
 
-3. **Excluded Activities**
-   - [Activity 1]
-   - [Activity 2]
-   - [Activity 3]
+**Company will:**
+- [Provide product access]
+- [Offer support]
+- [Pay commissions]
+- [Share marketing resources]
 
-### Governance
-1. **Steering Committee**
-   - Composition
-   - Responsibilities
-   - Meeting Schedule
-   - Decision Making
+**Partner will:**
+- [Sell/promote products]
+- [Maintain certifications]
+- [Meet revenue targets]
+- [Maintain confidentiality]
 
-2. **Working Groups**
-   - Composition
-   - Responsibilities
-   - Reporting Structure
-   - Decision Making
+### 6. Intellectual Property
 
-## 3. Responsibilities
+- **Company IP:** [Owned by Company]
+- **Partner IP:** [Owned by Partner]
+- **Joint IP:** [Jointly owned]
 
-### Company Responsibilities
-1. **Primary Responsibilities**
-   - [Responsibility 1]
-   - [Responsibility 2]
-   - [Responsibility 3]
+### 7. Confidentiality
 
-2. **Support Responsibilities**
-   - [Responsibility 1]
-   - [Responsibility 2]
-   - [Responsibility 3]
+- [Standard confidentiality terms]
+- [Survives termination]
 
-3. **Resource Commitments**
-   - [Resource 1]
-   - [Resource 2]
-   - [Resource 3]
+### 8. Liability
 
-### Partner Responsibilities
-1. **Primary Responsibilities**
-   - [Responsibility 1]
-   - [Responsibility 2]
-   - [Responsibility 3]
+- [Limitation of liability]
+- [Indemnification terms]
 
-2. **Support Responsibilities**
-   - [Responsibility 1]
-   - [Responsibility 2]
-   - [Responsibility 3]
+### 9. Dispute Resolution
 
-3. **Resource Commitments**
-   - [Resource 1]
-   - [Resource 2]
-   - [Resource 3]
-
-## 4. Financial Terms
-
-### Revenue Sharing
-```
-The Parties shall share revenue from the Partnership as follows:
-[Detailed revenue sharing terms]
-```
-
-### Payment Terms
-```
-Payments shall be made [frequency] in accordance with the following terms:
-[Detailed payment terms]
-```
-
-### Expenses
-```
-Each Party shall be responsible for the following expenses:
-[Detailed expense allocation]
-```
-
-## 5. Intellectual Property
-
-### Existing IP
-```
-Each Party retains ownership of its existing intellectual property, including but not limited to:
-[Detailed IP ownership terms]
-```
-
-### Joint IP
-```
-Intellectual property developed jointly by the Parties shall be owned as follows:
-[Detailed joint IP ownership terms]
-```
-
-### Licenses
-```
-Each Party grants the other the following licenses:
-[Detailed license terms]
-```
-
-## 6. Confidentiality
-
-### Confidential Information
-```
-"Confidential Information" means:
-[Detailed definition]
-```
-
-### Obligations
-```
-Each Party agrees to:
-[Detailed confidentiality obligations]
-```
-
-### Exceptions
-```
-The confidentiality obligations shall not apply to:
-[Detailed exceptions]
-```
-
-## 7. Term and Termination
-
-### Term
-```
-This Agreement shall commence on [Start Date] and continue for [Duration].
-```
-
-### Termination
-```
-Either Party may terminate this Agreement:
-[Detailed termination terms]
-```
-
-### Post-Termination
-```
-Upon termination:
-[Detailed post-termination obligations]
-```
-
-## 8. Representations and Warranties
-
-### Company Warranties
-```
-Company represents and warrants that:
-[Detailed warranties]
-```
-
-### Partner Warranties
-```
-Partner represents and warrants that:
-[Detailed warranties]
-```
-
-### Mutual Warranties
-```
-Each Party represents and warrants that:
-[Detailed mutual warranties]
-```
-
-## 9. Indemnification
-
-### Company Indemnification
-```
-Company shall indemnify Partner as follows:
-[Detailed indemnification terms]
-```
-
-### Partner Indemnification
-```
-Partner shall indemnify Company as follows:
-[Detailed indemnification terms]
-```
-
-### Indemnification Process
-```
-The indemnification process shall be as follows:
-[Detailed process]
-```
-
-## 10. Limitation of Liability
-
-### Liability Limits
-```
-Neither Party shall be liable for:
-[Detailed liability limits]
-```
-
-### Exceptions
-```
-The liability limits shall not apply to:
-[Detailed exceptions]
-```
-
-## 11. Dispute Resolution
-
-### Resolution Process
-```
-Disputes shall be resolved as follows:
-[Detailed resolution process]
-```
-
-### Governing Law
-```
-This Agreement shall be governed by:
-[Detailed governing law]
-```
-
-### Jurisdiction
-```
-The Parties agree to jurisdiction in:
-[Detailed jurisdiction]
-```
-
-## 12. General Provisions
-
-### Assignment
-```
-Neither Party may assign this Agreement without:
-[Detailed assignment terms]
-```
-
-### Notices
-```
-Notices shall be sent to:
-[Detailed notice requirements]
-```
-
-### Force Majeure
-```
-Neither Party shall be liable for:
-[Detailed force majeure terms]
-```
-
-### Entire Agreement
-```
-This Agreement constitutes the entire agreement between the Parties regarding:
-[Detailed entire agreement terms]
-```
-
-## 13. Signatures
-
-### Company
-```
-[Company Name]
-By: [Name]
-Title: [Title]
-Date: [Date]
-```
-
-### Partner
-```
-[Partner Name]
-By: [Name]
-Title: [Title]
-Date: [Date]
-```
+1. Escalation to executives
+2. Mediation
+3. Binding arbitration
+4. [Jurisdiction]
 
 ---
 
-## Pro Tips
+## Quick Win Checklist
 
-1. **Legal Review:**
-   - Have legal counsel review
-   - Ensure compliance
-   - Protect interests
-   - Define terms clearly
-   - Address all issues
+*Work with legal*
 
-2. **Clarity:**
-   - Use clear language
-   - Define terms
-   - Be specific
-   - Avoid ambiguity
-   - Include examples
-
-3. **Completeness:**
-   - Cover all aspects
-   - Address contingencies
-   - Include schedules
-   - Define processes
-   - Set expectations
-
-4. **Protection:**
-   - Include safeguards
-   - Define remedies
-   - Set limits
-   - Address risks
-   - Plan for issues
+- [ ] Customize key terms
+- [ ] Legal review
+- [ ] Partner negotiation
+- [ ] Sign and execute
+- [ ] Begin onboarding
 
 ---
 
 ## Related Templates
-- [Partnership Proposal Template](07-proposal/)
-- [Partner Onboarding Checklist](09-onboarding/)
----
+
+- [Proposal Template](../recruitment/07-proposal/) — What leads to agreement
+- [Onboarding Checklist](../recruitment/09-onboarding/) — What happens after signing
+- [Partner Program Glossary](../resources/glossary/) — Definitions

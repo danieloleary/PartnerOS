@@ -1,10 +1,10 @@
 ---
-title: Partnership One-Pager (Concise Value Proposition)
+title: Partnership One-Pager
 section: Recruitment
 category: operational
 template_number: II.6
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
@@ -13,263 +13,127 @@ tier:
 skill_level: intermediate
 purpose: operational
 phase: recruitment
-time_required: 1-2 hours
+time_required: 1 hour
 difficulty: easy
 prerequisites:
-- Target partner list
-description: 'A succinct, compelling document that quickly communicates the essence
-  of your partner program and the value of partnering.
-
-  '
+- Pitch deck prepared
+- Value proposition defined
+description: >
+  A succinct, compelling document that quickly communicates your partner program value. This one-pager leaves behind converts interest into action.
 outcomes:
-- Completed Partnership One-Pager (Concise Value Proposition)
+- Complete one-page leave-behind
+- Clear value proposition
+- Partner benefits highlighted
 skills_gained:
-- Sales outreach
-- Negotiation
-- Partner qualification
+- Value communication
+- Executive selling
+- Partner recruitment
 ---
 
-> **A succinct, compelling document that quickly communicates the essence of your partner program and the value of partnering.**
+> **If you can't explain your partnership value in one page, you don't understand it well enough.** — Dan O'Leary
 
+:::tip INSIDER TIP
+This one-pager should be readable in 2 minutes. Executives receive hundreds of documents—the shorter and clearer yours is, the more likely it gets read.
+:::
 
 ## How to Use This Template
 
 **Purpose:**
-Use this template to quickly communicate the essence of your partner program and the value of partnering with you.
+This one-page document provides a concise summary of your partnership value proposition. Use it as a leave-behind after meetings or as an attachment to outreach emails.
+
+**Why It Works:**
+One-pagers are scannable and shareable. They work as both a standalone document and a complement to your pitch deck.
 
 **Steps:**
-1. Review each section and prompt.
-2. Fill in with concise, benefit-driven language and proof points.
-3. Customize for different audiences or events as needed.
-4. Reference the "Related Templates" for supporting information.
-5. Distribute as a PDF or print handout, and make available online.
+
+1. **Fill in blanks** — Customize to your company (15 min)
+2. **Add proof** — Include 1-2 success stories (10 min)
+3. **Format** — Keep to one page (10 min)
+4. **Distribute** — Use in outreach and meetings (ongoing)
 
 ---
 
-# Partnership One-Pager (Concise Value Proposition)
+# Partnership One-Pager
 
-## Purpose
-A succinct, compelling "leave-behind" or introductory document that quickly communicates the essence of your partner program and the value of partnering with you.
+## Header
 
----
+**[Your Company] + [Partner Company]: A Strategic Partnership**
 
-## Template Structure
-
-### Section 1: Header
-```
-┌─────────────────────────────────────────────────────────────┐
-│  [YOUR LOGO]                              [PARTNER PROGRAM] │
-│                                                             │
-│        GROW FASTER WITH [YOUR COMPANY]                      │
-│           Partner Program                                   │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
-
-**Elements:**
-- Your company logo (high resolution)
-- Partner program name/badge
-- Compelling headline that speaks to partner outcomes
-- Optional: Partner's logo if customizing for specific partner
+*Transforming [target market] together*
 
 ---
 
-### Section 2: Program Overview (2-3 sentences)
+## The Opportunity
 
-**Template:**
-> [Your Company] partners with industry-leading [partner types] to deliver [outcome] for [target customers]. Our partner program provides [key benefit 1], [key benefit 2], and [key benefit 3] to help you [partner outcome].
+[Target market] faces [key challenge]. [Your Company] solves this with [your solution], helping customers achieve [key outcome].
 
-**Example:**
-> Acme partners with leading technology consultants to deliver digital transformation for mid-market enterprises. Our partner program provides technical enablement, co-selling support, and generous margins to help you grow your practice and delight your customers.
+We're looking for strategic partners to help us reach more customers and build deeper solutions.
 
 ---
 
-### Section 3: Key Benefits (3-5 bullets)
+## Why Partner With Us
 
-**Format each benefit as: Icon + Benefit Title + One-line description**
-
-| Icon | Benefit | Description |
-|------|---------|-------------|
-| 💰 | **Attractive Economics** | Competitive margins up to X% plus deal registration bonuses |
-| 🎯 | **Lead Sharing** | Qualified leads in your territory delivered to your pipeline |
-| 🛠️ | **Technical Enablement** | Free training, certifications, and sandbox environments |
-| 📣 | **Co-Marketing Support** | MDF funds, co-branded assets, and joint campaign support |
-| 🤝 | **Dedicated Support** | Named partner manager and priority technical assistance |
+| Benefit | Description |
+|---------|-------------|
+| **Revenue Growth** | Average partner earns $200K/year within 18 months |
+| **Competitive Advantage** | Differentiate with [unique capability] |
+| **Market Access** | Reach [X] new customers in [vertical] |
+| **Enablement Support** | Dedicated training, support, and co-marketing |
 
 ---
 
-### Section 4: How It Works
+## Partnership Models
 
-**Visual Journey (3-4 steps):**
-
-```
-    ┌─────────┐      ┌─────────┐      ┌─────────┐      ┌─────────┐
-    │  APPLY  │ ──▶  │ ONBOARD │ ──▶  │  ENABLE │ ──▶  │  GROW   │
-    └─────────┘      └─────────┘      └─────────┘      └─────────┘
-    Complete our      Access portal    Complete         Start selling
-    simple online     and training     certification    and earning
-    application       resources        requirements     together
-```
-
-**Detailed Steps:**
-1. **Apply** - Complete our online application (5 minutes)
-2. **Onboard** - Access partner portal, sign agreement, meet your PAM
-3. **Enable** - Complete required training and get certified
-4. **Grow** - Register deals, access resources, earn revenue
+| Model | Investment | Revenue Potential |
+|-------|------------|------------------|
+| **Referral** | Minimal | $50K-100K/year |
+| **Reseller** | Moderate | $200K-500K/year |
+| **Strategic** | Significant | $500K+/year |
 
 ---
 
-### Section 5: Program Tiers (if applicable)
+## Success Story
 
-| Tier | Requirements | Key Benefits |
-|------|--------------|--------------|
-| **Registered** | Sign up | Portal access, basic training |
-| **Silver** | $50K revenue, 1 cert | 20% margin, MDF access |
-| **Gold** | $200K revenue, 3 certs | 25% margin, leads, dedicated PAM |
-| **Platinum** | $500K+ revenue, 5 certs | 30% margin, executive sponsor, custom programs |
+**[Partner Name]** grew [vertical] revenue 140% in 18 months.
+
+> "The partnership helped us access enterprise customers we couldn't reach before. The enablement support was exceptional." — [Partner Contact]
 
 ---
 
-### Section 6: Proof Points
+## Next Steps
 
-**Choose 2-3 compelling stats or quotes:**
+1. **Discovery Call** — 30-minute conversation
+2. **Proposal** — Customized partnership plan
+3. **Agreement** — Sign and onboard
+4. **First Deal** — Typically within 60 days
 
-**Option A: Statistics**
-```
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│      150+       │  │       35%       │  │       $2M+      │
-│    Partners     │  │   Faster Deal   │  │  Partner Revenue│
-│   Worldwide     │  │     Cycles      │  │    Last Year    │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
-```
-
-**Option B: Testimonial**
-> "Partnering with [Your Company] helped us grow our practice by 40% in the first year. The enablement resources and co-selling support made all the difference."
-> — [Name], [Title], [Partner Company]
-
-**Option C: Case Study Snippet**
-> **[Partner Name]** increased their average deal size by 2.5x after joining our program, closing $1.2M in joint revenue in Q1 alone.
+**Contact:** [Your Name] | [Email] | [Phone]
 
 ---
 
-### Section 7: Call to Action
+## Quick Win Checklist
 
-**Primary CTA:**
-```
-┌─────────────────────────────────────────────────────────────┐
-│                                                             │
-│         Ready to Partner? Let's Talk.                       │
-│                                                             │
-│     📧 partners@yourcompany.com                            │
-│     🌐 yourcompany.com/partners                            │
-│     📱 Scan to apply: [QR CODE]                            │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
+*Complete in 30 minutes*
 
-**Elements to include:**
-- Partner program email
-- Partner portal URL
-- QR code linking to application
-- Social media handles (optional)
-- Partner manager contact (if sending to specific prospect)
+- [ ] Customize header and opportunity
+- [ ] Add revenue numbers
+- [ ] Insert success story
+- [ ] Format to one page
 
----
+## Full Implementation
 
-## Customization Guide
+*Complete in 1 hour*
 
-### By Partner Type
-| Partner Type | Emphasize | Adjust Language |
-|--------------|-----------|-----------------|
-| Resellers | Margins, deal registration | Revenue, sales enablement |
-| System Integrators | Technical training, certifications | Implementation, services |
-| Technology Partners | Integration support, API access | Joint solutions, roadmap |
-| Referral Partners | Referral fees, simplicity | Easy process, quick payouts |
-
-### By Industry
-- **Healthcare**: Compliance, HIPAA, patient outcomes
-- **Financial Services**: Security, regulatory, risk management
-- **Technology**: Innovation, scalability, integration
-- **Manufacturing**: Efficiency, supply chain, IoT
-
-### By Event/Context
-- **Trade Show**: Visual, bold stats, easy-to-scan
-- **Executive Meeting**: Sophisticated, ROI-focused
-- **Cold Outreach**: Problem-focused, clear next steps
-- **Partner Referral**: Warm intro, relationship-based
-
----
-
-## Design Best Practices
-
-### Do's
-- ✅ Keep it to ONE page (front only, or front/back max)
-- ✅ Use your brand colors and fonts consistently
-- ✅ Include plenty of white space
-- ✅ Use icons and visuals to break up text
-- ✅ Make the CTA prominent and easy to act on
-- ✅ Proofread carefully—this represents your brand
-
-### Don'ts
-- ❌ Don't use tiny fonts to fit more content
-- ❌ Don't include every program detail
-- ❌ Don't use jargon or internal terminology
-- ❌ Don't forget contact information
-- ❌ Don't make it text-heavy—keep it scannable
-
----
-
-## File Format Recommendations
-
-| Format | Use Case | Notes |
-|--------|----------|-------|
-| **PDF** | Email attachment, downloads | Most versatile |
-| **PNG/JPG** | Social media, presentations | Single image version |
-| **Print** | Trade shows, meetings | High-quality paper stock |
-| **Interactive PDF** | Digital distribution | Clickable links, QR codes |
-
----
-
-## Sample One-Pager Layout
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│ [LOGO]                         PARTNER PROGRAM              │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│           GROW YOUR BUSINESS WITH [COMPANY]                 │
-│                                                             │
-│  [2-3 sentence program overview]                            │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│                     WHY PARTNER WITH US?                    │
-│                                                             │
-│  💰 Benefit 1          🎯 Benefit 2          🛠️ Benefit 3   │
-│  Description           Description           Description    │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│                      HOW IT WORKS                           │
-│                                                             │
-│    Apply ──▶ Onboard ──▶ Enable ──▶ Grow                   │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│ ┌─────────┐  ┌─────────┐  ┌─────────┐                      │
-│ │  150+   │  │   35%   │  │  $2M+   │  "Partner quote..."  │
-│ │Partners │  │ Faster  │  │ Revenue │                      │
-│ └─────────┘  └─────────┘  └─────────┘                      │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│     📧 partners@company.com    🌐 company.com/partners     │
-│                                                             │
-│              [QR CODE]   SCAN TO APPLY                      │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
+- [ ] Add all 4 benefit sections
+- [ ] Include partnership models table
+- [ ] Add contact information
+- [ ] Test print layout
 
 ---
 
 ## Related Templates
-- [Partner Pitch Deck](05-pitch-deck/)
-- [Partnership Proposal Template](07-proposal/)
-- [Recruitment Email Sequence](01-email-sequence/)
----
+
+- [Pitch Deck](../recruitment/05-pitch-deck/) — Full presentation version
+- [Proposal Template](../recruitment/07-proposal/) — Detailed follow-up
+- [Discovery Call Script](../recruitment/04-discovery-call/) — What leads here
+- [Partner Program Glossary](../resources/glossary/) — Definitions

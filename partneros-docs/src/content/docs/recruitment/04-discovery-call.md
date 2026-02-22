@@ -1,10 +1,10 @@
 ---
-title: Discovery Call Script Template
+title: Partner Discovery Call Script
 section: Recruitment
 category: operational
 template_number: II.4
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
@@ -14,263 +14,353 @@ skill_level: intermediate
 purpose: operational
 phase: recruitment
 time_required: 1-2 hours
-difficulty: easy
+difficulty: medium
 prerequisites:
-- Target partner list
-description: Discovery Call Script Template template
+- Target partner identified
+- Qualification framework completed
+description: >
+  A structured discovery call script to effectively qualify prospects, gather critical information, and determine next steps. Build relationships while gathering the data you need.
 outcomes:
-- Completed Discovery Call Script Template
+- Complete discovery call structure
+- Question bank for qualification
+- Objection handling responses
+- Documentation template
 skills_gained:
-- Sales outreach
-- Negotiation
+- Sales conversations
 - Partner qualification
+- Relationship building
+- Discovery questioning
 ---
 
-> **Discovery Call Script Template template**
+> **The discovery call is where partnerships are won or lost. Ask the right questions, listen more than you talk, and always leave with a clear next step.** — Dan O'Leary
 
+:::tip INSIDER TIP
+The best discovery calls feel like conversations, not interrogations. Your goal is to understand their business deeply enough to propose something valuable. If you're pitching more than 30% of the time, you're doing it wrong.
+:::
 
-## How to Use This Template
+## How to UsePurpose:**
+This script This Template
 
-**Purpose:**
-Use this template to conduct structured, effective discovery calls that gather key information and build relationships with potential partners.
+** provides a structured framework effectively for discovery calls that qualifies partners while building genuine relationships. It balances information gathering with rapport building.
+
+**Why It Works:**
+Discovery calls that are too salesy push partners away. Calls that are too passive miss critical qualification data. This script balances structured questions with conversational flow.
 
 **Steps:**
-1. Prepare using the pre-call checklist
-2. Follow the call structure
-3. Use the question bank
-4. Document key information
-5. Plan next steps
+
+1. **Prepare** — Research the prospect, review your qualification criteria (15 min)
+2. **Structure** — Follow the call flow, adapt to conversation (30 min)
+3. **Document** — Capture key insights in your notes (5 min)
+4. **Follow up** — Send summary within 24 hours (15 min)
 
 ---
 
-# Discovery Call Script Template
+# Partner Discovery Call Script
 
-## Strategic Purpose
+## Call Overview
 
-This script is designed to help you effectively qualify a prospective partner, gather critical information for segmentation and Ideal Partner Profile (IPP) alignment, assess mutual interest, and determine appropriate next steps. Use this as a structured conversation guide, not an interrogation.
+| Section | Time | Goal |
+|---------|------|------|
+| Introduction | 3 min | Build rapport, set agenda |
+| Company Overview | 5 min | Share your value prop |
+| Partner Discovery | 15 min | Gather qualification data |
+| Partnership Discussion | 10 min | Explore mutual fit |
+| Close | 5 min | Confirm next steps |
 
-## 1. Pre-Call Preparation
+**Total: 30-40 minutes**
 
-### Research Checklist
-- Company overview
-- Recent news
-- Leadership team
-- Market position
-- Potential synergies
-- Previous interactions
-- Mutual connections
-- Industry context
+---
 
-### Call Objectives
-- Understand partner's business
-- Identify potential value
-- Assess strategic fit
-- Explore partnership interest
-- Determine next steps
+## Section 1: Introduction (3 minutes)
 
-### Required Materials
-- Call script
-- Company information
-- Partnership overview
-- Value proposition
-- Next steps plan
+### The Opener
 
-## 2. Call Structure
-
-### Introduction (2-3 minutes)
 ```
-"Hi [Name], thanks for taking the time to meet today. I'm [Your Name] from [Your Company], and I'm excited to learn more about [Partner Company] and explore how we might work together.
+Hi [Name], thanks for making time for this call. I'm [Your Name] from [Your Company].
 
-Before we dive in, I'd like to:
-1. Confirm we have 30 minutes for our discussion
-2. Share a brief overview of [Your Company]
-3. Learn more about [Partner Company]
-4. Explore potential partnership opportunities
+I've been following [Their Company]'s work in [specific area], and I think there could be a natural fit between our organizations.
 
-Does that agenda work for you?"
+Here's what I'd like to cover:
+1. Quick overview of what we do
+2. Learn more about your business and priorities
+3. Explore whether there's mutual opportunity
+4. Agree on next steps
+
+Sound good?
 ```
 
-### Company Overview (5-7 minutes)
+### Why This Works
+
+- **Acknowledges their time** — Shows respect
+- **Shows research** — "I've been following..." proves homework
+- **Sets agenda** — They know what to expect
+- **Asks permission** — "Sound good?" creates buy-in
+
+---
+
+## Section 2: Company Overview (5 minutes)
+
+### Your Value Prop (Keep It Brief)
+
 ```
-"[Your Company] is [brief value proposition]. We help [target customers] achieve [specific outcomes] through [key solutions].
+[Your Company] helps [target customers] achieve [specific outcome].
 
-What I find particularly interesting about [Partner Company] is [specific observation or potential synergy]."
+We do this through [key differentiator]. Our partners typically see [specific result] within [timeframe].
+
+What I'm particularly excited about is [specific observation about their company] — that's why I reached out.
 ```
 
-### Partner Discussion (10-15 minutes)
-- Use question bank
-- Listen actively
-- Take notes
-- Identify opportunities
-- Build rapport
+### Share Something Relevant
 
-### Partnership Discussion (5-7 minutes)
-- Share partnership models
-- Discuss potential value
-- Address questions
-- Gauge interest
-- Identify next steps
+- If they're growing: "Your healthcare practice growth is impressive"
+- If they won an award: "Congratulations on [Award]"
+- If they're expanding: "I see you're entering [new market]"
 
-### Closing (2-3 minutes)
-- Summarize key points
-- Confirm next steps
-- Set timeline
-- Express appreciation
-- End professionally
+---
 
-## 3. Question Bank
+## Section 3: Partner Discovery (15 minutes)
 
-### Company Understanding
-1. "Could you tell me about [Partner Company]'s journey and current focus?"
-2. "What are your key products/services and target markets?"
-3. "How do you differentiate in your market?"
-4. "What are your growth priorities for the next 12-18 months?"
-5. "What challenges are you currently facing?"
+### The Question Framework
 
-### Market Position
-1. "How do you position yourself in the market?"
-2. "Who are your primary competitors?"
-3. "What's your market share in key segments?"
-4. "How do you approach market expansion?"
-5. "What trends are impacting your business?"
+Use this structure:
 
-### Partnership Experience
-1. "What types of partnerships have you pursued in the past?"
-2. "What's been most successful for you?"
-3. "What challenges have you faced?"
-4. "How do you measure partnership success?"
-5. "What's your ideal partnership model?"
+1. **Open** — "Tell me about..."
+2. **Probe** — "What does that mean for..."
+3. **Validate** — "So what you're saying is..."
+4. **Document** — Write down insights
 
-### Technical Capabilities
-1. "What's your technology stack?"
-2. "How do you handle integration?"
-3. "What's your development process?"
-4. "How do you ensure security?"
-5. "What's your support model?"
+### Key Questions
 
-### Business Operations
-1. "How is your sales team structured?"
-2. "What's your go-to-market approach?"
-3. "How do you handle customer success?"
-4. "What's your project management methodology?"
-5. "How do you measure success?"
+#### Business Priorities
+- "What are your top 2-3 priorities for this year?"
+- "What's driving those priorities?"
+- "What would success look like in 12 months?"
 
-## 4. Qualification & Next Steps
+#### Partner Experience
+- "What's your experience with vendor partnerships?"
+- "What has worked well? What hasn't?"
+- "How do you measure partnership success?"
 
-### Key Qualification Criteria
-- Alignment with Ideal Partner Profile (see [ICP Alignment Tracker](10-icp-tracker/))
-- Complementary solutions, market reach, or technical capabilities
-- Willingness and ability to invest in partnership
-- Executive sponsorship and decision-maker engagement
-- Clear mutual value and opportunity for joint wins
+#### Capability Assessment
+- "Walk me through your sales process..."
+- "Who handles implementation?"
+- "What's your support model?"
 
-### Next Steps Guidance
-- If qualified: Schedule a follow-up deep-dive, share NDA, and begin formal application or proposal process.
-- If not a fit: Thank them for their time, provide feedback, and keep the door open for future opportunities.
-- Always document key findings and update your PRM or tracking system.
+#### Interest & Commitment
+- "What would make this partnership worth your time?"
+- "What's your timeline for evaluating new partnerships?"
+- "Who else would need to be involved in this decision?"
 
-## 5. Response Handling
+### Example Discovery Flow
 
-### Common Objections
-1. **Timing**
-   - "We're focused on other priorities"
-   - "It's not the right time"
-   - "We need to complete current initiatives"
+```
+You: "What's top of mind for [Their Company] right now?"
 
-2. **Resources**
-   - "We don't have the bandwidth"
-   - "Our team is already stretched"
-   - "We need to hire more people"
+Them: "We're trying to break into the healthcare market."
 
-3. **Value**
-   - "We're not seeing the ROI"
-   - "The market isn't ready"
-   - "Our customers aren't asking for this"
+You: "Healthcare — that's a big opportunity. What's the challenge?"
 
-4. **Competition**
-   - "We're already working with [competitor]"
-   - "We have our own solution"
-   - "The market is too crowded"
+Them: "We don't have the certifications or relationships."
 
-### Response Strategies
-1. **Acknowledge**
-   - "I understand your concern"
-   - "That's a valid point"
-   - "I appreciate your perspective"
+You: "That makes sense. How are you thinking about solving that?"
 
-2. **Explore**
-   - "Could you tell me more about that?"
-   - "What would make this more valuable?"
-   - "How could we address this?"
+Them: "We're looking for partners who already have that access."
 
-3. **Address**
-   - Share relevant examples
-   - Provide data points
-   - Offer solutions
+You: "That's exactly what we offer. Let me share how we've helped others..."
+```
 
-4. **Move Forward**
-   - Suggest next steps
-   - Offer alternatives
-   - Set follow-up
+---
 
-## 6. Documentation
+## Section 4: Partnership Discussion (10 minutes)
 
-### Call Notes Template
+### After Discovery: Pivot to Solution
+
+Once you understand their needs:
+
+```
+Based on what you've shared, here's what I'd propose:
+
+[Partnership Model]: [Brief description]
+
+The value for you:
+- [Benefit #1]
+- [Benefit #2]
+- [Benefit #3]
+
+The investment from your side:
+- [Requirement #1]
+- [Requirement #2]
+
+Does this feel like a fit worth exploring further?
+```
+
+### Gauge Interest
+
+- "Does this align with what you're looking for?"
+- "What's your initial reaction?"
+- "What would the next step look like for you?"
+
+---
+
+## Section 5: Close (5 minutes)
+
+### Always Confirm Next Steps
+
+```
+Great — here's what I'd propose for next steps:
+
+1. [Specific action item]
+2. [Specific action item]
+3. [Timeline]
+
+I'll send a summary email by end of day. Does that work for your schedule?
+```
+
+### If Not a Fit
+
+```
+I appreciate your time today. Based on our conversation, I don't think this is the right fit right now — but I'd love to stay connected as things evolve.
+
+Is that okay with you?
+```
+
+---
+
+## Handling Objections
+
+### "It's Not the Right Time"
+
+**Acknowledge:**
+"I completely understand — timing is everything."
+
+**Explore:**
+"What would need to change for this to become a priority?"
+
+**Address:**
+"Here's what I'd propose: let's connect in 90 days when [current initiative] is complete. I'll follow up then."
+
+### "We Don't Have Resources"
+
+**Acknowledge:**
+"That's a common challenge."
+
+**Explore:**
+"What would need to be true for resources to become available?"
+
+**Address:**
+"Many of our partners started small. Here's a minimal investment that still delivers value..."
+
+### "We're Already Working with [Competitor]"
+
+**Acknowledge:**
+"[Competitor] is a solid company."
+
+**Explore:**
+"What's working well? What would you improve?"
+
+**Address:**
+"Most partners work with multiple vendors. Here's where we differ..."
+
+### "I Need to Think About It"
+
+**Acknowledge:**
+"Absolutely — this is an important decision."
+
+**Explore:**
+"What specifically do you need to think about?"
+
+**Address:**
+"Let me address those points directly..."
+
+---
+
+## Documentation Template
+
+### Call Notes
+
 ```
 Date: [Date]
-Time: [Time]
-Participants: [Names]
-Duration: [Length]
+Prospect: [Company Name]
+Attendees: [Names + Titles]
 
-Key Points:
-- [Point 1]
-- [Point 2]
-- [Point 3]
+## Key Insights
+- [Insight 1]
+- [Insight 2]
+- [Insight 3]
 
-Opportunities:
-- [Opportunity 1]
-- [Opportunity 2]
-- [Opportunity 3]
+## Qualification Status
+- [ ] Fits IPP criteria
+- [ ] Technical capability confirmed
+- [ ] Interest level: High / Medium / Low
 
-Challenges:
-- [Challenge 1]
-- [Challenge 2]
-- [Challenge 3]
+## Next Steps
+1. [Action item] — Owner: [Name] — Due: [Date]
+2. [Action item] — Owner: [Name] — Due: [Date]
 
-Next Steps:
-- [Step 1]
-- [Step 2]
-- [Step 3]
-
-Follow-up Required:
-- [Action 1]
-- [Action 2]
-- [Action 3]
+## Follow-up
+- Send summary email by: [Date]
+- Next call scheduled: [Date]
 ```
 
-### Information to Capture
-- Company details
-- Key contacts
-- Decision makers
-- Timeline
-- Budget
-- Requirements
-- Concerns
-- Next steps
+---
 
-## 7. Best Practices & Pro Tips
+## What I Wish I Knew
 
-- **Build Rapport:** Start with genuine curiosity and respect for the partner's business.
-- **Listen Actively:** Let the partner speak 60–70% of the time; use open-ended questions.
-- **Document Diligently:** Capture key points, opportunities, and challenges in your PRM or CRM.
-- **Be Transparent:** Clearly outline your program's requirements, expectations, and next steps.
-- **Follow Up Promptly:** Send a summary email with agreed next steps within 24 hours.
-- **Continuous Improvement:** After each call, review what worked and refine your approach.
+**Listen 70%, talk 30%:**
+Early in my career, I talked too much. Now I use the "5 Whys" technique — keep asking "why" until you understand the real motivation. Partners open up when they feel heard.
+
+**The close is in the discovery:**
+If you've done good discovery, the close is obvious. If you need to hard-sell at the end, discovery failed. The close should feel like a natural next step.
+
+**Document or forget:**
+I once had a great discovery call, didn't take notes, and forgot the key insight two weeks later. Now I document in real-time or immediately after.
+
+---
+
+## Common Pitfalls
+
+**Pitfall #1: Pitching Too Early**
+- **What happens:** They tune out, call ends too soon
+- **Warning sign:** You're talking more than 30%
+- **Prevention:** Let them share first
+
+**Pitfall #2: No Clear Next Step**
+- **What happens:** Good conversation, zero follow-through
+- **Warning sign:** "Let's stay in touch"
+- **Prevention:** Always end with specific action + timeline
+
+**Pitfall #3: Not Researching**
+- **What happens:** Generic conversation, no rapport
+- **Warning sign:** "How did you find us?"
+- **Prevention:** 15 min of LinkedIn research before call
+
+---
+
+## Quick Win Checklist
+
+*Complete before call (15 minutes)*
+
+- [ ] Research prospect on LinkedIn
+- [ ] Review qualification criteria
+- [ ] Prepare 5 discovery questions
+- [ ] Set up note-taking
+- [ ] Test audio/video
+
+## Full Implementation
+
+*After call (30 minutes)*
+
+- [ ] Complete documentation within 24 hours
+- [ ] Update CRM/PRM
+- [ ] Send summary email
+- [ ] Schedule follow-up
+- [ ] Score against qualification framework
 
 ---
 
 ## Related Templates
-- [Partner Qualification Framework](03-qualification-framework/)
-- [Partnership Proposal Template](07-proposal/)
-- [ICP Alignment Tracker](10-icp-tracker/)
----
+
+- [Qualification Framework](../recruitment/03-qualification-framework/) — How to score this prospect
+- [Proposal Template](../recruitment/07-proposal/) — What to send after discovery
+- [Pitch Deck](../recruitment/05-pitch-deck/) — Visual for deeper dives
+- [Partner Program Glossary](../resources/glossary/) — Definitions of all terms used here

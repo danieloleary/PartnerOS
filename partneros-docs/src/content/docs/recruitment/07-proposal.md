@@ -1,10 +1,10 @@
 ---
-title: Partnership Proposal Template
+title: Partnership Proposal
 section: Recruitment
 category: operational
 template_number: II.7
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
@@ -13,305 +13,288 @@ tier:
 skill_level: intermediate
 purpose: operational
 phase: recruitment
-time_required: 2-4 hours
-difficulty: easy
+time_required: 2-3 hours
+difficulty: medium
 prerequisites:
-- Target partner list
-description: Create professional partnership proposals that clearly communicate value
-  and drive partner engagement.
+- Discovery call completed
+- Pitch deck presented
+- Partner qualified
+description: >
+  A professional, detailed proposal that converts qualified partners into signed agreements. This document makes the business case for partnership.
 outcomes:
-- Completed Partnership Proposal Template
+- Complete partnership proposal
+- Customized terms for partner
+- Clear next steps
+- Professional presentation
 skills_gained:
-- Sales outreach
-- Negotiation
-- Partner qualification
+- Proposal writing
+- Partner negotiations
+- Business case development
+- Executive communication
 ---
 
-> **Create professional partnership proposals that clearly communicate value and drive partner engagement.**
+> **The proposal is where deals are won or lost. A weak proposal kills strong interest. A strong proposal closes the deal.** — Dan O'Leary
 
+:::tip INSIDER TIP
+Send proposals within 48 hours of the discovery call. Speed signals seriousness. If you take 2 weeks, you've lost momentum.
+:::
 
 ## How to Use This Template
 
 **Purpose:**
-Use this template to create professional, compelling partnership proposals that clearly communicate value and drive partner engagement.
+This proposal formalizes the partnership discussion and provides the partner with everything they need to make a decision and get approvals.
+
+**Why It Works:**
+A complete, professional proposal reduces friction. It answers every question before they ask it, making the decision easy.
 
 **Steps:**
-1. Customize for target partner
-2. Include all required sections
-3. Add specific value propositions
-4. Define clear next steps
-5. Review and refine
+
+1. **Customize** — Fill in partner-specific details (1 hour)
+2. **Review** — Ensure accuracy and completeness (30 min)
+3. **Format** — Professional layout and branding (15 min)
+4. **Send** — With personalized cover note (5 min)
+5. **Follow up** — Within 3-5 days (15 min)
 
 ---
 
-# Partnership Proposal Template
+# Partnership Proposal
 
-## 1. Executive Summary
+## Cover Letter
 
-### Overview
 ```
-[Your Company] and [Partner Company] have a unique opportunity to create significant value through a strategic partnership. This proposal outlines how we can work together to [specific goal or outcome].
+Dear [Name],
+
+Thank you for our conversation earlier this week. I enjoyed learning about [Their Company] and exploring how we might work together.
+
+Based on our discussion, I've put together a proposal that outlines how a partnership would work. Key highlights:
+
+- [Benefit #1 relevant to them]
+- [Benefit #2 relevant to them]  
+- [Benefit #3 relevant to them]
+
+I'd love to walk you through it. Are you available [date/time] for a 15-minute call?
+
+Best regards,
+[Your Name]
 ```
+
+---
+
+## Section 1: Executive Summary
+
+### Partnership Overview
+
+[Your Company] and [Partner Company] are proposing a strategic partnership to [specific goal]. This partnership will enable [Partner] to [benefit] while helping [Your Company] [benefit].
 
 ### Key Benefits
-- [Benefit 1]
-- [Benefit 2]
-- [Benefit 3]
-- [Benefit 4]
-- [Benefit 5]
 
-### Partnership Vision
-```
-Together, we will [vision statement] by [specific approach] to achieve [specific outcomes].
-```
-
-## 2. Company Overview
-
-### Your Company
-```
-[Your Company] is [brief description] that helps [target customers] achieve [specific outcomes] through [key solutions].
-
-Key strengths:
-- [Strength 1]
-- [Strength 2]
-- [Strength 3]
-```
-
-### Partner Company
-```
-[Partner Company] is [brief description] that [key value proposition].
-
-Key strengths:
-- [Strength 1]
-- [Strength 2]
-- [Strength 3]
-```
-
-### Market Opportunity
-```
-The [specific market] represents a [size] opportunity, growing at [growth rate]. Together, we can capture [specific percentage] of this market by [specific approach].
-```
-
-## 3. Partnership Value
-
-### Joint Value Proposition
-```
-By combining [Your Company]'s [strength] with [Partner Company]'s [strength], we can deliver [specific value] to [target customers].
-```
-
-### Customer Benefits
-1. **Primary Benefit**
-   - Description
-   - Impact
-   - Examples
-
-2. **Secondary Benefit**
-   - Description
-   - Impact
-   - Examples
-
-3. **Additional Benefits**
-   - Description
-   - Impact
-   - Examples
-
-### Market Differentiation
-```
-Our partnership will differentiate us in the market by [specific differentiators] and enable us to [specific advantages].
-```
-
-## 4. Partnership Model
-
-### Partnership Type
-```
-This will be a [partnership type] partnership focused on [specific goals].
-```
-
-### Key Components
-1. **Component 1**
-   - Description
-   - Responsibilities
-   - Resources
-
-2. **Component 2**
-   - Description
-   - Responsibilities
-   - Resources
-
-3. **Component 3**
-   - Description
-   - Responsibilities
-   - Resources
-
-### Success Metrics
-- [Metric 1]
-- [Metric 2]
-- [Metric 3]
-- [Metric 4]
-- [Metric 5]
-
-## 5. Implementation Plan
-
-### Phase 1: Setup (Months 1-2)
-- [Activity 1]
-- [Activity 2]
-- [Activity 3]
-- [Activity 4]
-- [Activity 5]
-
-### Phase 2: Launch (Months 3-4)
-- [Activity 1]
-- [Activity 2]
-- [Activity 3]
-- [Activity 4]
-- [Activity 5]
-
-### Phase 3: Scale (Months 5-6)
-- [Activity 1]
-- [Activity 2]
-- [Activity 3]
-- [Activity 4]
-- [Activity 5]
-
-## 6. Resource Requirements
-
-### Your Company
-- [Resource 1]
-- [Resource 2]
-- [Resource 3]
-- [Resource 4]
-- [Resource 5]
-
-### Partner Company
-- [Resource 1]
-- [Resource 2]
-- [Resource 3]
-- [Resource 4]
-- [Resource 5]
-
-### Joint Resources
-- [Resource 1]
-- [Resource 2]
-- [Resource 3]
-- [Resource 4]
-- [Resource 5]
-
-## 7. Financial Model
-
-### Revenue Model
-```
-The partnership will generate revenue through [specific model], with projected revenue of [amount] in Year 1, growing to [amount] in Year 3.
-```
-
-### Cost Structure
-- [Cost 1]
-- [Cost 2]
-- [Cost 3]
-- [Cost 4]
-- [Cost 5]
-
-### Investment Requirements
-- [Investment 1]
-- [Investment 2]
-- [Investment 3]
-- [Investment 4]
-- [Investment 5]
-
-## 8. Risk Management
-
-### Identified Risks
-1. **Risk 1**
-   - Impact
-   - Mitigation
-   - Contingency
-
-2. **Risk 2**
-   - Impact
-   - Mitigation
-   - Contingency
-
-3. **Risk 3**
-   - Impact
-   - Mitigation
-   - Contingency
-
-### Risk Mitigation
-- [Strategy 1]
-- [Strategy 2]
-- [Strategy 3]
-- [Strategy 4]
-- [Strategy 5]
-
-## 9. Next Steps
-
-### Immediate Actions
-1. [Action 1]
-2. [Action 2]
-3. [Action 3]
-
-### Timeline
-- [Milestone 1]: [Date]
-- [Milestone 2]: [Date]
-- [Milestone 3]: [Date]
-
-### Required Approvals
-- [Approval 1]
-- [Approval 2]
-- [Approval 3]
-
-## 10. Appendix
-
-### Supporting Materials
-- [Material 1]
-- [Material 2]
-- [Material 3]
-
-### Additional Information
-- [Info 1]
-- [Info 2]
-- [Info 3]
-
-### Contact Information
-- [Name]
-- [Position]
-- [Email]
-- [Phone]
+| For [Partner Company] | For [Your Company] |
+|----------------------|-------------------|
+| [Benefit] | [Benefit] |
+| [Benefit] | [Benefit] |
+| [Benefit] | [Benefit] |
 
 ---
 
-## Pro Tips
+## Section 2: Partner Profile
 
-1. **Customization:**
-   - Research partner thoroughly
-   - Address specific needs
-   - Use partner's language
-   - Include relevant examples
-   - Show understanding
+### About [Partner Company]
 
-2. **Value Focus:**
-   - Quantify benefits
-   - Use clear metrics
-   - Show ROI
-   - Highlight differentiation
-   - Demonstrate impact
+[2-3 sentences on their company, position, and key strengths]
 
-3. **Clarity:**
-   - Use clear language
-   - Structure logically
-   - Include visuals
-   - Define terms
-   - Be specific
+### Why This Partnership Makes Sense
 
-4. **Professionalism:**
-   - Proofread carefully
-   - Use consistent formatting
-   - Include all sections
-   - Be thorough
-   - Show attention to detail
+- **Strategic alignment:** [How you complement each other]
+- **Market opportunity:** [Specific opportunity you're pursuing together]
+- **Capability match:** [Their capabilities + your solution]
+
+---
+
+## Section 3: Proposed Partnership Model
+
+### Partnership Tier: [Bronze/Silver/Gold]
+
+| Component | Details |
+|-----------|---------|
+| **Model** | [Referral / Reseller / Co-sell / Strategic] |
+| **Territory** | [Geographic scope] |
+| **Target customers** | [ICP alignment] |
+| **Minimum commitment** | [Revenue or activity requirements] |
+
+---
+
+## Section 4: Value Proposition
+
+### What [Your Company] Provides
+
+| Benefit | Description | Value |
+|---------|-------------|-------|
+| [Benefit 1] | [Description] | $[Value] |
+| [Benefit 2] | [Description] | $[Value] |
+| [Benefit 3] | [Description] | $[Value] |
+
+### What [Partner Company] Provides
+
+| Contribution | Description |
+|--------------|-------------|
+| [Contribution 1] | [Description] |
+| [Contribution 2] | [Description] |
+
+---
+
+## Section 5: Financial Terms
+
+### Revenue Share Model
+
+| Tier | Revenue Range | Commission |
+|------|---------------|------------|
+| [Tier 1] | $[X] | [X]% |
+| [Tier 2] | $[X] | [X]% |
+
+### Additional Benefits
+
+- **Deal registration discount:** [X]%
+- **MDF available:** $[X]/year
+- **Training:** [Free / Discounted]
+
+---
+
+## Section 6: Support & Enablement
+
+### Partner Support
+
+| Support Type | Level |
+|--------------|-------|
+| **Partner Manager** | [Dedicated / Shared] |
+| **Technical support** | [Hours/days] |
+| **Marketing support** | [Details] |
+| **Training** | [Certification path] |
+
+### Enablement Resources
+
+- [ ] Product certification (online)
+- [ ] Sales training (online + in-person)
+- [ ] Technical training (online)
+- [ ] Marketing co-branded assets
+- [ ] Dedicated Slack/Teams channel
+
+---
+
+## Section 7: Success Metrics
+
+### Year 1 Targets
+
+| Metric | Target |
+|--------|--------|
+| Revenue | $[X] |
+| New customers | [X] |
+| Certified professionals | [X] |
+| Co-marketing activities | [X] |
+
+---
+
+## Section 8: Timeline & Next Steps
+
+### Proposed Timeline
+
+| Milestone | Date |
+|-----------|------|
+| Proposal review | [Date] |
+| Decision | [Date] |
+| Agreement signature | [Date] |
+| Onboarding complete | [Date] |
+| First co-sell deal | [Date] |
+
+### Next Steps
+
+1. Review proposal
+2. Discuss with stakeholders
+3. Provide feedback
+4. Sign agreement
+5. Begin onboarding
+
+---
+
+## Section 9: Terms & Conditions
+
+### Standard Terms
+
+- **Agreement duration:** [X] years
+- **Notice period:** [X] days
+- **Termination:** [Terms]
+- **Confidentiality:** [Standard]
+
+*Full terms in attached partnership agreement*
+
+---
+
+## Appendix: Reference Information
+
+- [Your Company] one-pager
+- Partner program overview
+- Success stories
+- Certification details
+
+---
+
+## What I Wish I Knew
+
+**Send proposals same week:**
+I used to take 2 weeks to send proposals. Then the prospect lost interest or moved on. Now I send within 48 hours—while the conversation is fresh.
+
+**Personalize the cover letter:**
+The first page should feel written for them, not mass-produced. Reference specific things they said in the discovery call.
+
+**Follow up on day 3:**
+Don't wait for them to respond. Follow up on day 3: "Just wanted to make sure you received the proposal. Any questions?"
+
+---
+
+## Common Pitfalls
+
+**Pitfall #1: Generic Proposals**
+- **What happens:** Feels mass-produced, low conversion
+- **Warning sign:** Same template for every partner
+- **Prevention:** Customize each section to the partner
+
+**Pitfall #2: Too Complex**
+- **What happens:** Decision paralysis
+- **Warning sign:** >15 pages
+- **Prevention:** Keep to 8-10 pages, move details to appendix
+
+**Pitfall #3: No Clear Timeline**
+- **What happens:** Proposal sits in limbo
+- **Warning sign:** "We'll review and get back to you"
+- **Prevention:** Include specific decision dates
+
+---
+
+## Quick Win Checklist
+
+*Complete in 1 hour*
+
+- [ ] Customize executive summary
+- [ ] Fill in financial terms
+- [ ] Add success metrics
+- [ ] Include timeline
+- [ ] Send within 48 hours
+
+## Full Implementation
+
+*Complete in 2-3 hours*
+
+- [ ] Complete all 9 sections
+- [ ] Customize every section
+- [ ] Professional formatting
+- [ ] Include appendix
+- [ ] Follow up within 3-5 days
 
 ---
 
 ## Related Templates
-- [Discovery Call Script](04-discovery-call/)
-- [Partnership Agreement Template](08-agreement/)
----
+
+- [Discovery Call Script](../recruitment/04-discovery-call/) — What leads to this
+- [Pitch Deck](../recruitment/05-pitch-deck/) — Presentation version
+- [One-Pager](../recruitment/06-one-pager/) — Concise version
+- [Agreement Template](../recruitment/08-agreement/) — Legal follow-up
+- [Partner Program Glossary](../resources/glossary/) — Definitions
