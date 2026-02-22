@@ -1,214 +1,171 @@
-# PartnerOS — Complete Project Review
+# What's New on `origin/main` — Full Findings Report
 
-**Date:** February 20, 2026
-**Branch:** `claude/partner-business-templates-GwyA4`
-**Reviewer:** Claude (automated)
-
----
-
-## 1. PROJECT HEALTH DASHBOARD
-
-| Dimension | Status | Score |
-|-----------|--------|-------|
-| Tests | 43/43 passing | **A** |
-| mkdocs nav integrity | All 59 entries valid | **A** |
-| Frontmatter schema | All templates pass 17-field validation | **A** |
-| Python syntax | All 18 files compile clean | **A** |
-| Lint (trailing whitespace) | 100 errors across 15 files | **C** |
-| Cross-references (Related Templates) | 18 broken links | **D** |
-| Security | Path traversal + sanitization solid | **A** |
-| Code quality (agent.py) | 2 bugs found, well-structured | **B+** |
-| Lifecycle coverage | All 5 phases covered | **A** |
-| Tier coverage | Registered is thin (2 templates) | **B** |
-| CI/CD | 3 workflows, all functional | **A** |
-| Documentation | README, CLAUDE.md, ARCHITECTURE, CHANGELOG all present | **A** |
-
-**Overall: B+ (82/100)** — shippable, with known lint/link debt.
+**Date:** February 22, 2026
+**Compared:** Our branch (`claude/partner-business-templates-GwyA4`) vs `origin/main`
+**Scope:** 23 commits, 177 files changed, ~279,000 lines added
 
 ---
 
-## 2. SITE & TEMPLATE INVENTORY (49 templates)
+## The Big Picture
 
-| Category | Count | Phase Coverage |
-|----------|-------|---------------|
-| Strategy | 8 | strategy |
-| Recruitment | 10 | recruitment |
-| Enablement | 7 | enablement |
-| Legal | 4 | recruitment |
-| Finance | 3 | recruitment + enablement |
-| Security | 2 | recruitment + enablement |
-| Operations | 4 | recruitment + enablement |
-| Executive | 1 | enablement |
-| Analysis | 1 | enablement |
-| Getting Started | 4 guides | onboarding |
-| Resources | 4 references | operational |
-| Agent Docs | 4 pages | operational |
+You shipped **two major milestones** since we last talked:
 
-### Lifecycle Phase Distribution
+1. **v1.4** — Navigation polish, test expansion, template fixes (Phase 6 & 7)
+2. **v2.0** — Full multi-agent architecture with 7 AI agents, CLI chat, web UI, and partner persistence
 
-| Phase | Templates | Assessment |
-|-------|-----------|------------|
-| Strategy | 8 | Complete |
-| Recruitment | 16 | Complete |
-| Enablement | 16 | Complete |
-| Onboarding | 6 | Complete |
-| Operational | 6 | Complete |
-
-### Tier Coverage
-
-| Tier | Templates Available | Assessment |
-|------|-------------------|------------|
-| Registered | 2 | Thin — only Deal Registration + Portal Guide |
-| Bronze | 39 | Solid |
-| Silver | 49 | Comprehensive |
-| Gold | 52 | Comprehensive |
-| Strategic | 9 | Adequate for high-touch tier |
+Here's the breakdown:
 
 ---
 
-## 3. CODE QUALITY REVIEW (18 Python files)
+## 1. Multi-Agent System (`scripts/partner_agents/`) — THE HEADLINE
 
-### Critical Issues (2)
+You built an entirely new multi-agent architecture with **3,550 lines of Python** across 18 files:
 
-| # | File | Line | Issue | Impact |
-|---|------|------|-------|--------|
-| 1 | `scripts/manage_templates.py` | 133–143 | Uses deprecated OpenAI v0.x API (`openai.ChatCompletion.create`) | `enhance` subcommand will crash with modern openai |
-| 2 | `scripts/partner_agent/agent.py` | 216 | `reload_config()` doesn't pass the original config_path | `--reload` silently reverts to default config.yaml |
+### The Team (7 Agents)
 
-### Medium Issues (5)
+| Agent | Class | Lines | Role | Skills |
+|-------|-------|-------|------|--------|
+| DAN ("The Owner") | `DanAgent` | 185 | Executive coordinator | 6 |
+| Architect | `ArchitectAgent` | 211 | Partner Program Manager | 6 |
+| Strategist | `StrategistAgent` | 184 | ICP & tier strategy | 5 |
+| Engine | `EngineAgent` | 172 | Operations & deals | 5 |
+| Spark | `SparkAgent` | 174 | Marketing & campaigns | 5 |
+| Champion | `ChampionAgent` | 177 | Board & ROI leadership | 5 |
+| Builder | `BuilderAgent` | 141 | Technical integrations | 4 |
 
-| # | File | Issue |
-|---|------|-------|
-| 3 | `scripts/lint_markdown.py:20-24` | Redundant double file read for EOF newline check |
-| 4 | `scripts/generate_file_list.py` | Dead code — references nonexistent `Source Materials/` and `webapp/` dirs |
-| 5 | `scripts/update_keywords.py` | Likely orphaned — output `markdown_inventory.csv` not consumed anywhere |
-| 6 | `scripts/manage_templates.py:62` | Filename format uses underscores (inconsistent with repo convention of hyphens) |
-| 7 | `scripts/partner_agent/agent.py:548-566` | LLM response parsing doesn't handle empty/malformed content |
+### Infrastructure
 
-### Strengths
+| Component | File | Lines | What It Does |
+|-----------|------|-------|-------------|
+| Base agent | `base.py` | 138 | `BaseAgent` ABC, `AgentSkill` dataclass, `HandoffRequest` |
+| Orchestrator | `orchestrator.py` | 140 | Routes tasks between agents, manages handoffs |
+| Messaging | `messages.py` | 115 | `TeamRadio` pub/sub bus with `TeamMessage` |
+| Telemetry | `state.py` | 134 | Per-partner state persistence (JSON files) |
+| Partner CRUD | `partner_state.py` | 123 | Separate partner management (single `partners.json`) |
+| Config | `config.py` | 118 | `TeamConfig` dataclass with YAML serialization |
 
-- `agent.py` (775 lines): Excellent architecture — graceful dependency degradation for `rich`, `anthropic`, `openai`, `requests`
-- Security controls (`_validate_path`, `_sanitize_partner_name`) are robust and well-tested
-- `export_pdf.py` and `package_zip.py`: Clean CLI tools with proper fallbacks
-- All 3 test files (43 tests total) cover critical paths well
+### Two User Interfaces
 
----
+| Interface | File | Lines | Tech |
+|-----------|------|-------|------|
+| CLI Chat | `chat.py` | 580 | Rich library — themed panels, markdown rendering, agent routing |
+| Web UI | `web.py` | 607 | FastAPI + embedded HTML/JS — agent selection, chat, partner management |
 
-## 4. LINT REPORT — 100 Trailing Whitespace Errors
+### Demo
 
-All 100 lint errors are **trailing whitespace**. No other lint categories fail.
+| File | Lines | What It Does |
+|------|-------|-------------|
+| `demos/onboarding.py` | 292 | Simulates full 7-agent partner onboarding flow for "Acme Corp" |
 
-| File | Errors | Notes |
-|------|--------|-------|
-| `docs/legal/02-msa.md` | 11 | Worst offender |
-| `FIXES.md` | 10 | Non-template file |
-| `docs/legal/03-dpa.md` | 10 | |
-| `docs/legal/04-sla.md` | 9 | |
-| `docs/strategy/03-evaluation-framework.md` | 8 | |
-| `docs/legal/01-nda.md` | 7 | |
-| `docs/agent/playbooks.md` | 6 | |
-| `examples/complete-examples/01-email-sequence-example.md` | 5 | |
-| Others (7 files) | 1–3 each | |
+### What's Cool
+- Skill-based agent collaboration (each agent exposes callable skills)
+- Handoff protocol via orchestrator
+- Beautiful Rich CLI with custom theme
+- Full web UI with FastAPI backend
+- 36 total skills across 7 agents
+- Company-customizable agent personas
 
-**Fix:** A single `sed` pass would clear all 100 in seconds.
-
----
-
-## 5. BROKEN CROSS-REFERENCES (18 broken links)
-
-These are `[Related Templates](path.md)` links pointing to files that don't exist at the relative path used.
-
-### Missing `../` prefix (relative path errors) — 14 links
-
-These files link to sibling categories without `../`:
-
-| Source File | Broken Link | Should Be |
-|-------------|------------|-----------|
-| `finance/01-commission.md` | `operations/04-deal-registration.md` | `../operations/01-deal-registration.md` |
-| `finance/01-commission.md` | `enablement/06-success-metrics.md` | `../enablement/06-success-metrics.md` |
-| `legal/04-sla.md` | `enablement/06-success-metrics.md` | `../enablement/06-success-metrics.md` |
-| `legal/04-sla.md` | `enablement/07-qbr-template.md` | `../enablement/07-qbr-template.md` |
-| `legal/01-nda.md` | `recruitment/08-agreement.md` | `../recruitment/08-agreement.md` |
-| `legal/01-nda.md` | `recruitment/07-proposal.md` | `../recruitment/07-proposal.md` |
-| `legal/01-nda.md` | `recruitment/04-discovery-call.md` | `../recruitment/04-discovery-call.md` |
-| `legal/03-dpa.md` | `security/01-security-questionnaire.md` | `../security/01-security-questionnaire.md` |
-| `legal/02-msa.md` | `finance/01-commission.md` | `../finance/01-commission.md` |
-| `legal/02-msa.md` | `operations/04-deal-registration.md` | `../operations/01-deal-registration.md` |
-| `legal/02-msa.md` | `recruitment/06-one-pager.md` | `../recruitment/06-one-pager.md` |
-| `security/01-security-questionnaire.md` | `legal/01-nda.md` | `../legal/01-nda.md` |
-| `security/01-security-questionnaire.md` | `legal/03-dpa.md` | `../legal/03-dpa.md` |
-| `security/01-security-questionnaire.md` | `security/02-soc2-compliance.md` | `02-soc2-compliance.md` |
-
-### Missing index files — 3 links
-
-| Source File | Broken Link | Issue |
-|-------------|------------|-------|
-| `getting-started/quick-start.md` | `../legal/index.md` (x2) | `docs/legal/index.md` doesn't exist |
-| `getting-started/quick-start.md` | `../finance/index.md` | `docs/finance/index.md` doesn't exist |
-
-### Typo — 1 link
-
-| Source File | Broken Link | Issue |
-|-------------|------------|-------|
-| `getting-started/first-partner-path.md` | `../recnership/07-proposal.md` | Typo: "recnership" should be "recruitment" |
+### What Needs Attention (flagged in our earlier review)
+- **Hardcoded API key** in `web.py` (line 34-35) — OpenRouter key committed to source
+- **No path sanitization** — `state.py` uses `partner_id` directly in file paths
+- **Two competing state systems** — `state.py` vs `partner_state.py`
+- **`partners.json` committed** — contains partner data (Acme Corp)
+- **`site/` directory committed** — 116 built HTML files on `main` (should be gitignored)
+- **No `site/` in `.gitignore`** on main branch
 
 ---
 
-## 6. CI/CD REVIEW
+## 2. v1.4 — Navigation & Test Expansion (Phase 6 & 7)
 
-| Workflow | Trigger | Status |
-|----------|---------|--------|
-| `deploy-docs.yml` | Push to `main` (docs/** or mkdocs.yml) | Functional |
-| `markdown_lint.yml` | Push/PR touching `*.md` | **Will fail** — 100 lint errors |
-| `run_partner_agent.yml` | Manual dispatch | Functional |
+### 4 New Index Pages
+Previously missing section landing pages now exist:
+- `docs/security/index.md` — Security templates hub
+- `docs/operations/index.md` — Operations templates hub
+- `docs/executive/index.md` — Executive templates hub
+- `docs/analysis/index.md` — Analysis templates hub
 
-**Note:** The lint workflow will block PRs until trailing whitespace is fixed.
+All use the `template-grid` + `template-card` CSS pattern with Material icons.
 
----
+### MkDocs Navigation Fixed
+- Added `first-partner-path.md` to nav (was orphaned)
+- Added `partner-os-one-pager.md` to nav (was orphaned)
+- Added `licensing.md` to nav (was orphaned)
+- Added all 4 new index pages to their sections
 
-## 7. BUSINESS COMPLETENESS ASSESSMENT
-
-### What's Strong
-
-- **Full partner lifecycle covered:** Strategy → Recruitment → Enablement → Operations → Analysis → Exit
-- **Tiered program model:** Bronze/Silver/Gold with clear criteria and differentiated templates
-- **AI agent with 7 playbooks:** recruit, onboard, qbr, expand, exit, co-marketing, support-escalation
-- **Enterprise-grade templates:** Legal (NDA, MSA, DPA, SLA), Finance (Commission, Rebate, Revenue Share), Security (Questionnaire, SOC 2)
-- **Operational cadence:** Weekly standup → Monthly report → QBR → Board deck — full reporting stack
-- **Distribution-ready:** PDF export and zip packager scripts
-
-### Gaps to Consider (not blocking)
-
-1. **Registered tier has only 2 templates** — these are your highest-volume, lowest-touch partners. Consider adding a self-serve welcome kit or FAQ.
-2. **No partner marketing asset templates** — the co-marketing playbook exists, but there are no actual asset templates (email co-brand, case study template, joint webinar brief).
-3. **No renewal/retention playbook** — there's an exit playbook but nothing focused on proactive retention.
-4. **No integration/API partner track** — all templates assume reseller/referral. Technology/ISV partnerships have different needs (integration docs, API partner agreement, marketplace listing).
+### Template Frontmatter Fixes
+- Fixed `07-proposal.md` — added description, prerequisites
+- Fixed `glossary.md` — valid phase, description
+- Fixed 24 templates — added empty arrays for `prerequisites` and `skills_gained`
+- Fixed 20 templates — added descriptions to templates with null/empty descriptions
 
 ---
 
-## 8. RECOMMENDED FIXES (prioritized)
+## 3. Test Suite Explosion
 
-### P0 — Fix before merging to main (blocks CI)
+Test count went from **43 → 81 tests** (79 passing, 2 skipped). Plus 4 entirely new test files:
 
-1. **Fix 100 trailing whitespace lint errors** — single automated pass
-2. **Fix 18 broken cross-reference links** — all are path prefix issues
-3. **Add `docs/legal/index.md` and `docs/finance/index.md`** — referenced by quick-start guide
+### Existing Tests Enhanced (`test_templates.py`)
++1,070 lines added. 26+ new quality tests including:
+- `test_nav_completeness` — all `.md` files referenced in `mkdocs.yml` nav
+- `test_index_page_coverage` — each section has `index.md`
+- `test_frontmatter_consistency` — field type validation
+- `test_template_number_uniqueness` — no duplicate numbers
+- `test_no_broken_internal_links` — link validation
+- `test_no_placeholder_text` — clean templates
+- `test_consistent_date_format` — ISO dates
+- `test_tier_field_format` — valid tier values
+- ...plus 18 more
 
-### P1 — Fix soon (bugs)
+### New Test Files
 
-4. **Update `manage_templates.py` OpenAI API** from v0.x to v1.x syntax
-5. **Fix `agent.py` `reload_config()`** to use stored config path
-6. **Fix typo** in `first-partner-path.md`: "recnership" → "recruitment"
+| File | Lines | Coverage |
+|------|-------|---------|
+| `test_agents.py` | 222 | Multi-agent system unit tests |
+| `test_agents_comprehensive.py` | 510 | Deep agent behavior tests |
+| `test_web.py` | 49 | Web interface basics |
+| `test_web_comprehensive.py` | 155 | Full web UI test coverage |
 
-### P2 — Cleanup (tech debt)
+**Total new test code: ~2,000 lines**
 
-7. **Remove `generate_file_list.py`** — dead code referencing nonexistent directories
-8. **Review `update_keywords.py`** — output not consumed; archive or document
-9. **Fix `lint_markdown.py` redundant double-read** on EOF check
+---
 
-### P3 — Business enhancements (optional)
+## 4. README & Docs Updates
 
-10. Add 2–3 Registered-tier self-serve templates
-11. Add partner marketing asset templates
-12. Add renewal/retention playbook
-13. Add ISV/tech partner track templates
+- **README.md** (+48 lines): Added "PartnerOS AI Team" section with agent table, web UI instructions, and Python usage example
+- **CHANGELOG.md** (+67 lines): Added v1.4 entry with Phase 6, 7, test expansion, and template fixes
+- **BACKLOG.md** (+124/-): Updated with v2.0 multi-agent milestones, LLM working status, partner onboarding
+- **IMPROVEMENT_PLAN.md** (+12/-): Updates reflecting completed work
+
+---
+
+## 5. Things to Watch Out For
+
+### Security Issues
+1. **Hardcoded OpenRouter API key** in `web.py` lines 34-35 and 221 — committed to git history
+2. **No input sanitization** in the entire `partner_agents/` system — path traversal risk in `state.py`
+3. **`partners.json` committed** with partner data
+
+### Build Artifacts
+- **116 `site/` HTML files committed** to main — these are MkDocs build output and should be gitignored
+
+### Architecture
+- **Two independent agent systems** — `partner_agent/` (monolithic, battle-tested) and `partner_agents/` (multi-agent, new) with no shared code or migration path
+- **Two competing state systems** within `partner_agents/` — `state.py` (per-partner JSON files) vs `partner_state.py` (single `partners.json`)
+
+---
+
+## Summary Stats
+
+| Metric | Before | After |
+|--------|--------|-------|
+| Python files | 18 | 36 (+18 new) |
+| Total Python LOC (new) | — | ~3,550 (agents) + ~936 (tests) |
+| Test files | 3 | 7 (+4 new) |
+| Test count | 43 | 81 |
+| Doc index pages | 7 of 11 | 11 of 11 |
+| Nav entries | missing 3 | complete |
+| Agent systems | 1 (monolithic) | 2 (monolithic + multi-agent) |
+| User interfaces | CLI only | CLI + Rich CLI + Web UI |
+| Template fixes | — | 44 templates updated |
+
+**Verdict:** Major leap — you went from a playbook system to a full AI team platform. The multi-agent architecture is ambitious and functional. The main cleanup items are the security issues (API key, path sanitization) and build artifacts (`site/`).
