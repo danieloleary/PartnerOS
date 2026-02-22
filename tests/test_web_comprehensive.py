@@ -153,3 +153,43 @@ def test_all_agents_registered():
 
     # Just verify orchestrator has drivers attribute
     assert hasattr(orchestrator, "drivers") or hasattr(orchestrator, "_drivers")
+
+
+def test_input_validation_empty_message():
+    """Test handling of empty messages."""
+    from scripts.partner_agents.web import get_fallback_response
+
+    # Empty message should still return a response (fallback)
+    result = get_fallback_response("")
+    assert "response" in result
+
+
+def test_input_validation_unicode_message():
+    """Test handling of unicode in messages."""
+    from scripts.partner_agents.web import get_fallback_response
+
+    # Unicode should be handled
+    result = get_fallback_response(" партнер")
+    assert "response" in result
+
+
+def test_input_validation_special_chars():
+    """Test handling of special characters in messages."""
+    from scripts.partner_agents.web import get_fallback_response
+
+    # Special chars should be handled
+    result = get_fallback_response("Test <script>alert('xss')</script>")
+    assert "response" in result
+
+    result = get_fallback_response("Test ' OR '1'='1")
+    assert "response" in result
+
+
+def test_input_validation_very_long_message():
+    """Test handling of very long messages."""
+    from scripts.partner_agents.web import get_fallback_response
+
+    # Very long message (10KB)
+    long_msg = "test " * 2500  # ~15KB
+    result = get_fallback_response(long_msg)
+    assert "response" in result

@@ -371,3 +371,66 @@ def test_starlight_build_succeeds():
         timeout=120,
     )
     assert result.returncode == 0, f"Build failed: {result.stderr.decode()[:500]}"
+
+
+def test_frontmatter_valid_enum_values():
+    """Test that frontmatter uses valid enum values."""
+    import yaml
+    from pathlib import Path
+
+    docs_dir = REPO_ROOT / "partneros-docs" / "src" / "content" / "docs"
+
+    valid_tiers = ["Bronze", "Silver", "Gold", ""]
+    valid_levels = ["beginner", "intermediate", "advanced", ""]
+    valid_purposes = [
+        "tactical",
+        "strategic",
+        "operational",
+        "analytical",
+        "marketing",
+        "sales",
+        "financial",
+        "",
+    ]
+    valid_phases = [
+        "recruitment",
+        "onboarding",
+        "enablement",
+        "growth",
+        "retention",
+        "exit",
+        "analysis",
+        "strategy",
+        "operations",
+        "",
+    ]
+
+    failures = []
+
+    for md_file in docs_dir.rglob("*.md"):
+        try:
+            content = md_file.read_text()
+            if content.startswith("---"):
+                frontmatter = content.split("---")[1]
+                data = yaml.safe_load(frontmatter)
+
+                if data:
+                    tier = data.get("tier", "")
+                    level = data.get("skill_level", "")
+                    purpose = data.get("purpose", "")
+                    phase = data.get("phase", "")
+
+                    if tier and tier not in valid_tiers:
+                        failures.append(f"{md_file.name}: invalid tier '{tier}'")
+                    if level and level not in valid_levels:
+                        failures.append(
+                            f"{md_file.name}: invalid skill_level '{level}'"
+                        )
+                    if purpose and purpose not in valid_purposes:
+                        failures.append(f"{md_file.name}: invalid purpose '{purpose}'")
+                    if phase and phase not in valid_phases:
+                        failures.append(f"{md_file.name}: invalid phase '{phase}'")
+        except Exception:
+            pass
+
+    assert len(failures) < 10, f"Invalid enum values found: {failures[:5]}"

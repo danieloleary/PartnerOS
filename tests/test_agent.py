@@ -68,6 +68,38 @@ def test_partner_sanitization():
         except ValueError:
             pass
 
+        # Edge cases - Unicode, emojis, special chars
+        assert agent._sanitize_partner_name("Acme Corp") == "Acme Corp"  # ASCII
+        assert (
+            agent._sanitize_partner_name("日本語パートナー") == "日本語パートナー"
+        )  # Unicode
+        assert (
+            agent._sanitize_partner_name("Société Générale") == "Société Générale"
+        )  # Accented
+        assert (
+            agent._sanitize_partner_name("Česká spořitelna") == "Česká spořitelna"
+        )  # Czech
+
+        # Special characters that should be rejected
+        try:
+            agent._sanitize_partner_name("Partner & Co.")  # & not allowed
+            assert False, "Should reject & character"
+        except ValueError:
+            pass
+
+        try:
+            agent._sanitize_partner_name("Test @ Company")  # @ not allowed
+            assert False, "Should reject @ character"
+        except ValueError:
+            pass
+
+        # Valid special chars - dash and underscore
+        assert agent._sanitize_partner_name("Partner-Co") == "Partner-Co"
+        assert agent._sanitize_partner_name("Partner_Co") == "Partner_Co"
+
+        # Whitespace handling
+        assert agent._sanitize_partner_name("  Trimmed  ") == "Trimmed"
+
         print("✓ Partner sanitization tests passed")
     finally:
         os.unlink(config_path)
