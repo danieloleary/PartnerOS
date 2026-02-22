@@ -87,6 +87,7 @@ async def home():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PartnerOS</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- Inline critical CSS as fallback if CDN fails -->
     <style>
         *,*::before,*::after{box-sizing:border-box}:root{--bg:#0f172a;--bg2:#1e293b;--text:#f8fafc;--text2:#94a3b8}.bg-gradient-to-r{background:linear-gradient(to right)}.text-white{color:#fff}.min-h-screen{min-height:100vh}.max-w-6xl{max-width:72rem}.mx-auto{margin-left:auto;margin-right:auto}.px-4{padding-left:1rem;padding-right:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.mb-6{margin-bottom:1.5rem}.mb-2{margin-bottom:.5rem}.gap-3{gap:.75rem}.flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.rounded-lg{border-radius:.5rem}.bg-slate-700{background:#334155}.bg-slate-800{background:#1e293b}.bg-cyan-500{background:#06b6d4}.bg-purple-500{background:#a855f7}.bg-green-500{background:#22c55e}.bg-emerald-500{background:#10b981}.bg-yellow-600{background:#ca8a04}.bg-orange-600{background:#ea580c}.bg-gray-400{background:#9ca3af}.text-3xl{font-size:1.875rem}.text-xl{font-size:1.25rem}.text-sm{font-size:.875rem}.text-xs{font-size:.75rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-transparent{color:transparent}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.from-cyan-400{--tw-gradient-from:#22d3ee;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(34,211,238,0))}.to-purple-500{--tw-gradient-to:#a855f7}.from-green-500{--tw-gradient-from:#22c55e;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(34,197,94,0))}.to-emerald-500{--tw-gradient-to:#10b981}.from-cyan-500{--tw-gradient-from:#06b6d4;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,rgba(6,182,212,0))}.grid{display:grid}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.gap-4{gap:1rem}.sm\:text-5xl{font-size:3rem}@media (min-width:640px){.sm\:text-5xl{font-size:3rem}}input,textarea{width:100%;background:#1e293b;border:1px solid #334155;color:#fff;padding:.75rem;border-radius:.5rem;outline:none}input:focus,textarea:focus{border-color:#06b6d4}button{background:linear-gradient(to right,#06b6d4,#a855f7);border:none;color:#fff;padding:.75rem 1.5rem;border-radius:.5rem;cursor:pointer;font-weight:600;transition:opacity .2s}button:hover{opacity:.9}button:disabled{opacity:.5;cursor:not-allowed}.max-w-lg{max-width:32rem}.w-8{width:2rem}.h-8{height:2rem}.flex-shrink-0{flex-shrink:0}.overflow-auto{overflow:auto}.border{border-width:1px}.border-slate-700{border-color:#334155}.bg-slate-700\/50{background:rgba(51,65,85,.5)}.bg-slate-800\/50{background:rgba(30,41,59,.5)}.text-slate-400{color:#94a3b8}.text-slate-500{color:#64748b}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.px-2{padding-left:.5rem;padding-right:.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.bg-gradient-to-r{background:linear-gradient(to right,var(--tw-gradient-stops))}.gradient-bg{background:linear-gradient(135deg,#0f172a 0%,#1e293b 50%,#0f172a 100%)}body{background:#0f172a;color:#f8fafc}
@@ -122,16 +123,43 @@ async def home():
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        /* Markdown styling */
+        .markdown-body { font-size: 0.875rem; line-height: 1.6; }
+        .markdown-body h1, .markdown-body h2, .markdown-body h3 { font-weight: 600; margin: 1rem 0 0.5rem; color: #fff; }
+        .markdown-body h1 { font-size: 1.25rem; }
+        .markdown-body h2 { font-size: 1.1rem; }
+        .markdown-body h3 { font-size: 1rem; }
+        .markdown-body p { margin: 0.5rem 0; }
+        .markdown-body ul, .markdown-body ol { margin: 0.5rem 0; padding-left: 1.5rem; }
+        .markdown-body li { margin: 0.25rem 0; }
+        .markdown-body table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.8rem; }
+        .markdown-body th, .markdown-body td { border: 1px solid #475569; padding: 0.5rem; text-align: left; }
+        .markdown-body th { background: #334155; }
+        .markdown-body code { background: #334155; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.8rem; }
+        .markdown-body pre { background: #334155; padding: 0.75rem; border-radius: 0.5rem; overflow-x: auto; margin: 0.5rem 0; }
+        .markdown-body pre code { background: none; padding: 0; }
+        .markdown-body blockquote { border-left: 3px solid #06b6d4; padding-left: 0.75rem; margin: 0.5rem 0; color: #94a3b8; }
+        .markdown-body strong { color: #fff; font-weight: 600; }
+        .markdown-body a { color: #22d3ee; text-decoration: underline; }
+        .markdown-body hr { border: none; border-top: 1px solid #475569; margin: 1rem 0; }
     </style>
 </head>
 <body class="gradient-bg min-h-screen text-white">
     <div class="max-w-6xl mx-auto px-4 py-8">
         <!-- Header -->
-        <header class="text-center mb-6 px-4">
-            <h1 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-2">
-                PartnerOS
-            </h1>
-            <p class="text-slate-400 text-sm sm:text-base">Your AI Partner Team</p>
+        <header class="flex justify-between items-center mb-6 px-4">
+            <div class="flex-1"></div>
+            <div>
+                <h1 class="text-3xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-0">
+                    PartnerOS
+                </h1>
+                <p class="text-slate-400 text-sm sm:text-base">Your AI Partner Team</p>
+            </div>
+            <div class="flex-1 flex justify-end">
+                <button onclick="showSettings()" class="text-slate-400 hover:text-white transition text-sm bg-slate-800/50 px-3 py-2 rounded-lg border border-slate-700">
+                    ⚙️ Settings
+                </button>
+            </div>
         </header>
 
         <!-- Team Grid -->
@@ -206,6 +234,38 @@ async def home():
             </div>
         </div>
 
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+            <div class="bg-slate-800 rounded-xl p-6 max-w-md w-full mx-4 relative">
+                <button onclick="hideSettings()" class="absolute top-4 right-4 text-slate-400 hover:text-white" aria-label="Close settings">✕</button>
+                <h3 class="text-lg font-bold mb-4">⚙️ Settings</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label for="apiKey" class="block text-sm font-medium text-slate-400 mb-1">OpenRouter API Key</label>
+                        <input id="apiKey" type="password" placeholder="sk-or-..." class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:border-cyan-500 outline-none">
+                        <p class="text-xs text-slate-500 mt-1">Stored locally in your browser</p>
+                    </div>
+                    
+                    <div>
+                        <label for="modelSelect" class="block text-sm font-medium text-slate-400 mb-1">AI Model</label>
+                        <select id="modelSelect" class="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-2 focus:border-cyan-500 outline-none">
+                            <option value="openai/gpt-4o-mini">GPT-4o Mini (Fast)</option>
+                            <option value="anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
+                            <option value="google/gemini-flash-1.5-flash">Gemini Flash</option>
+                        </select>
+                    </div>
+                    
+                    <div class="flex items-center gap-2">
+                        <input id="enableCache" type="checkbox" checked class="w-4 h-4 rounded bg-slate-700 border-slate-600">
+                        <label for="enableCache" class="text-sm text-slate-400">Enable response caching (5 min)</label>
+                    </div>
+                    
+                    <button onclick="saveSettings()" class="w-full px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg transition-colors">Save Settings</button>
+                </div>
+            </div>
+        </div>
+
         <!-- Chat Container -->
         <div class="bg-slate-800/50 rounded-2xl border border-slate-700 overflow-hidden mx-2 sm:mx-0">
             <!-- Messages -->
@@ -258,13 +318,16 @@ async def home():
         })[m]);
 
         // API key should be provided by the user at runtime when needed
-        let apiKey = '';
+        let apiKey = getApiKey();
 
         async function sendMessage(text) {
             const input = document.getElementById('messageInput');
             const btn = document.getElementById('sendBtn');
             const message = text || input.value.trim();
             if (!message) return;
+            
+            // Get fresh API key from localStorage in case settings were just saved
+            apiKey = getApiKey();
             
             input.value = '';
             input.disabled = true;
@@ -318,11 +381,20 @@ async def home():
                               agent === 'BUILDER' ? '🔧' : 
                               agent === 'STRATEGIST' ? '🎯' : '👑';
                 const agentName = agent || 'Assistant';
+                // Render Markdown for assistant messages
+                let renderedContent = text;
+                if (typeof marked !== 'undefined') {
+                    try {
+                        renderedContent = marked.parse(text);
+                    } catch (e) {
+                        console.warn('Markdown parse error:', e);
+                    }
+                }
                 div.innerHTML = `
                     <div role="img" aria-label="${agentName}" class="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">${emoji}</div>
-                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg">
+                    <div class="bg-slate-700/50 rounded-xl p-4 max-w-lg markdown-body">
                         <span class="sr-only">${agentName}: </span>
-                        ${escapeHTML(text)}
+                        ${renderedContent}
                     </div>
                 `;
             }
@@ -400,6 +472,36 @@ async def home():
         
         function hideAddPartnerForm() {
             document.getElementById('addPartnerModal').classList.add('hidden');
+        }
+        
+        function showSettings() {
+            document.getElementById('settingsModal').classList.remove('hidden');
+            // Load saved settings from localStorage
+            const savedKey = localStorage.getItem('partneros_api_key');
+            const savedModel = localStorage.getItem('partneros_model') || 'openai/gpt-4o-mini';
+            const savedCache = localStorage.getItem('partneros_cache') !== 'false';
+            if (savedKey) document.getElementById('apiKey').value = savedKey;
+            document.getElementById('modelSelect').value = savedModel;
+            document.getElementById('enableCache').checked = savedCache;
+        }
+        
+        function hideSettings() {
+            document.getElementById('settingsModal').classList.add('hidden');
+        }
+        
+        function saveSettings() {
+            const apiKey = document.getElementById('apiKey').value;
+            const model = document.getElementById('modelSelect').value;
+            const cache = document.getElementById('enableCache').checked;
+            localStorage.setItem('partneros_api_key', apiKey);
+            localStorage.setItem('partneros_model', model);
+            localStorage.setItem('partneros_cache', cache);
+            hideSettings();
+            alert('Settings saved!');
+        }
+        
+        function getApiKey() {
+            return localStorage.getItem('partneros_api_key') || '';
         }
         
         async function addPartner() {

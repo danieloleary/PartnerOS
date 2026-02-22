@@ -1,3 +1,7 @@
+---
+title: Partner Agent
+keywords: ["ai powered assistant", "running partnership playbooks", "partner lifecycle overview", "new yaml file", "partnership expert helping", "agent programmatically python"]
+---
 # Partner Agent
 
 An AI-powered assistant for running partnership playbooks and managing the partner lifecycle.
@@ -250,7 +254,31 @@ openai>=1.0.0
 pyyaml>=6.0
 rich>=13.0.0
 typer>=0.9.0
+docling>=1.0.0
 ```
+
+## Document Processing (Docling)
+
+PartnerOS includes Docling integration for parsing partner documents:
+
+```bash
+# Install with document processing support
+pip install docling
+
+# Parse a PDF to Markdown
+python parse_document.py --input partner_contract.pdf --output contract.md
+
+# Parse to JSON for structured data
+python parse_document.py --input proposal.docx --output proposal.json --format json
+```
+
+**Supported formats:** PDF, DOCX, PPTX, HTML, images
+
+**Use cases:**
+- Parse partner contracts/NDAs into editable Markdown
+- Extract data from security questionnaires
+- Convert proposals to structured JSON
+- Process partner-provided documentation
 
 Install:
 ```bash

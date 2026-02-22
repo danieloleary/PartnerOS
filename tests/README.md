@@ -1,3 +1,7 @@
+---
+title: PartnerOS Test Suite
+keywords: ["overall site structure", "tier which tiers", "skills gained what", "tests validate", "validation tests", "every push"]
+---
 # PartnerOS Test Suite
 
 This directory contains automated tests for PartnerOS.
