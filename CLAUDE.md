@@ -251,6 +251,35 @@ tags: [strategy, business-case]
 
 The `test_templates_have_frontmatter` test enforces this — any file missing `---` at the start will fail CI.
 
+### Starlight Formatting Requirements
+
+Templates are rendered using **Astro Starlight**. Follow these rules to avoid 404s and rendering issues:
+
+**Critical Rules:**
+
+1. **Start with paragraphs, NOT headings**
+   - Starlight adds H1 from frontmatter automatically
+   - Start with 2-3 sentences of intro, then use H2 (`##`)
+
+2. **Folder links MUST have trailing slash**
+   - `[Getting Started](getting-started/)` - correct
+   - `[Getting Started](getting-started)` - will 404!
+
+3. **Cross-folder links use relative paths**
+   - `[Success Metrics](../enablement/06-success-metrics/)` - correct
+   - `[Success Metrics](/enablement/06-success-metrics/)` - breaks on deployed site!
+
+4. **Every table needs context**
+   - Add paragraph BEFORE table: explain what it shows
+   - Add paragraph AFTER table: interpret the data
+
+5. **Use Starlight asides**
+   - `:::tip[Insider Tip]` for tips
+   - `:::note` for information
+   - `:::caution` for warnings
+
+**See also:** [Starlight Formatting Guide](./partneros-docs/src/content/docs/skills/starlight-formatting/)
+
 ### Playbook YAML Format
 
 Playbooks in `scripts/partner_agent/playbooks/` follow this schema:

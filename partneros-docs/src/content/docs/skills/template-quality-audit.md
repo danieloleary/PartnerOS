@@ -1,7 +1,7 @@
 ---
 title: Template Quality Auditor (Expert Edition)
 description: Expert framework for auditing and improving PartnerOS templates to A+ standard - with insider tactics, metrics, and stakeholder strategies
-version: 2.0.0
+version: 3.0.0
 last_updated: 2026-02-21
 author: PartnerOS Team
 tags:
@@ -18,6 +18,18 @@ This skill provides an **expert-level framework** for auditing and improving Par
 
 > **"The difference between a template that's a paperweight and one that drives revenue is understanding the person who'll read it—and what they actually care about."**
 > — Dan O'Leary, PartnerOS
+
+---
+
+## Specialized Skills
+
+This is the master skill. For specific tasks, use these dedicated skills:
+
+| Skill | When to Use |
+|-------|-------------|
+| [Starlight Formatting Guide](./starlight-formatting/) | Formatting templates for Starlight/Astro |
+| [Glossary Maintenance](./glossary-maintenance/) | Adding/updating glossary terms |
+| [Find and Fix Broken Links](./find-broken-links/) | Fixing broken link issues |
 
 ---
 

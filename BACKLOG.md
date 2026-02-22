@@ -204,6 +204,13 @@
 | Finance Templates (Commission, Rebate, Revenue Share) | Feb 20, 2026 |
 | Real Agent Logic (#31) - PartnerState milestone integration | Feb 21, 2026 |
 | Testimonials/Case Study Template (III.8) | Feb 21, 2026 |
+| Partner Program Glossary (45 terms) | Feb 21, 2026 |
+| Template Quality Audit Skill v3 (Starlight rules) | Feb 21, 2026 |
+| Starlight Formatting Skill (SK.2) | Feb 21, 2026 |
+| Glossary Maintenance Skill (SK.3) | Feb 21, 2026 |
+| Link Test Suite Expansion (18 tests) | Feb 21, 2026 |
+| 404.md link fixes | Feb 21, 2026 |
+| Template Quality Pass - Business Case (I.1) as pilot | Feb 21, 2026 |
 | Security Templates (Questionnaire, SOC2) | Feb 20, 2026 |
 | Operations Templates (Deal Reg, Standup, Report, Portal) | Feb 20, 2026 |
 | Executive Template (Board Deck) | Feb 20, 2026 |
