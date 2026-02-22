@@ -380,6 +380,116 @@ def test_generate_report_no_partners():
         assert result.returncode == 0 or "No partner state found" in result.stderr
 
 
+def test_partner_state_xss_protection():
+    """Partner state should escape HTML to prevent XSS."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    from partner_agents import partner_state
+
+    # Create a temp partners file
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        # Monkeypatch the file path
+        original_file = partner_state.PARTNERS_FILE
+        partner_state.PARTNERS_FILE = Path(tmpdir) / "partners.json"
+
+        try:
+            # Add partner with XSS attempt
+            partner = partner_state.add_partner(
+                name='<script>alert("xss")</script>',
+                tier="Gold",
+                email="<img onerror=alert(1) src=x>",
+            )
+
+            # Verify HTML is escaped
+            assert "<script>" not in partner["name"]
+            assert "&lt;script" in partner["name"]
+            assert "<img" not in partner["email"]
+            assert "&lt;img" in partner["email"]
+
+            print("✓ Partner state XSS protection test passed")
+        finally:
+            partner_state.PARTNERS_FILE = original_file
+
+
+def test_partner_state_deal_registration():
+    """Partner state should handle deal registration."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    from partner_agents import partner_state
+
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        original_file = partner_state.PARTNERS_FILE
+        partner_state.PARTNERS_FILE = Path(tmpdir) / "partners.json"
+
+        try:
+            # Add a partner first
+            partner_state.add_partner(name="Acme Corp", tier="Gold")
+
+            # Register a deal
+            deal = partner_state.register_deal(
+                partner_name="Acme Corp",
+                deal_value=50000,
+                account="TechCorp",
+            )
+
+            assert deal is not None
+            assert deal["value"] == 50000
+            assert deal["account"] == "TechCorp"
+            assert deal["status"] == "registered"
+
+            # Verify deal is in partner
+            partner = partner_state.get_partner("Acme Corp")
+            assert len(partner["deals"]) == 1
+            assert partner["deals"][0]["value"] == 50000
+
+            print("✓ Deal registration test passed")
+        finally:
+            partner_state.PARTNERS_FILE = original_file
+
+
+def test_partner_state_delete():
+    """Partner state should handle deletion."""
+    import sys
+    from pathlib import Path
+
+    sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    from partner_agents import partner_state
+
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        original_file = partner_state.PARTNERS_FILE
+        partner_state.PARTNERS_FILE = Path(tmpdir) / "partners.json"
+
+        try:
+            # Add a partner
+            partner_state.add_partner(name="ToDelete", tier="Silver")
+
+            # Verify exists
+            partner = partner_state.get_partner("ToDelete")
+            assert partner is not None
+
+            # Delete
+            result = partner_state.delete_partner("ToDelete")
+            assert result is True
+
+            # Verify gone
+            partner = partner_state.get_partner("ToDelete")
+            assert partner is None
+
+            print("✓ Partner deletion test passed")
+        finally:
+            partner_state.PARTNERS_FILE = original_file
+
+
 if __name__ == "__main__":
     print("Running PartnerOS v1.2 tests...")
 
