@@ -84,7 +84,7 @@ for name, agent in agents.items():
 
 @app.get("/", response_class=HTMLResponse)
 async def home():
-    return """<!DOCTYPE html>
+    return r"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
