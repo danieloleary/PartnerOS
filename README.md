@@ -25,7 +25,7 @@ Building a world-class partner program is hard. Most companies:
 | Benefit | Description |
 |---------|-------------|
 | **Complete Playbooks** | 7 end-to-end automation playbooks covering the entire partner lifecycle |
-| **40 Ready-to-Use Templates** | Strategy (8), recruitment (10), enablement (7), legal (4), finance (3), security (2), operations (4), executive (1), analysis (1) |
+| **53 Ready-to-Use Templates** | Strategy (10), recruitment (10), enablement (9), legal (5), finance (4), security (2), operations (8), executive (1), analysis (2) |
 | **Multi-Agent AI Team** | 7 specialized AI agents that collaborate on partner work |
 | **AI-Powered Agent** | Local AI partner assistant runs offline with Ollama — no API keys required |
 | **Enterprise-Ready** | Three-tier partner framework (Bronze/Silver/Gold) with clear progression paths |
@@ -48,7 +48,7 @@ PartnerOS includes a multi-agent system with 7 specialized AI agents that collab
 | **Leader** | Board & ROI | 5 | 6 |
 | **Technical** | Integrations | 4 | 4 |
 
-**Total: 7 agents | 36 skills | 47 templates**
+**Total: 7 agents | 36 skills | 53 templates**
 
 Each agent has distinct skills and can collaborate with others. The system is company-customizable with drop-in backgrounds.
 

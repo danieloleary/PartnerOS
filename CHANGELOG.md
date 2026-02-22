@@ -1,5 +1,48 @@
 # PartnerOS CHANGELOG
 
+## Version 1.8 (2026-02-22) - Golden Templates Expansion
+
+### 🎯 Template Expansion
+- **12 NEW GOLDEN TEMPLATES**: Expanded from 41 to 53 templates
+- **INTERACTIVE TOOLS**: Added ROI Calculator with formulas and examples
+- **OPERATIONS FOCUS**: Territory plans, co-sell playbooks, support tiers
+- **FINANCE ENHANCED**: Detailed compensation plans with commission matrices
+- **LEGAL EXPANDED**: SLA template with remedies and reporting
+
+### 📝 New Templates (12 total)
+
+#### Strategy (2 new)
+- Partner Program Charter - Executive founding document
+- Channel Conflict Playbook - Sales/partner coexistence
+
+#### Operations (5 new)
+- Partner Territory Plan - Geographic/segment assignments
+- Partner Business Review - Annual partner meeting
+- Partner Support Tiers - Support escalation matrix
+- Partner Launch Checklist - Go-live verification
+- Co-Sell Playbook - Joint selling process
+
+#### Finance (1 new)
+- Partner Comp Plan - Detailed commission matrix
+
+#### Legal (1 new)
+- Partner SLA - Service level agreement with remedies
+
+#### Analysis (2 new)
+- Partner ROI Calculator - Interactive calculation tool
+- Partner Analytics Dashboard - Metrics & KPIs
+
+#### Enablement (1 new)
+- Partner Kickoff Deck - Day 1 meeting template
+
+### 🔧 Platform Improvements
+- Security: Rate limiting, input sanitization, CORS restrictions
+- Web UI: Partner deletion, keyboard shortcuts, response caching
+- Links: Fixed broken relative links in templates
+- Tests: 141 tests passing
+
+---
+
 ## Version 1.7 (2026-02-21) - Template Quality Revolution
 
 ### 🎯 Template Quality Overhaul
