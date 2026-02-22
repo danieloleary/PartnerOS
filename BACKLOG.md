@@ -25,16 +25,16 @@
 
 ---
 
-## Current State (v1.5 - February 21, 2026)
+## Current State (v1.6 - February 21, 2026)
 
 **Platform:** Starlight/Astro (no more MkDocs!)
 **Live Site:** https://danieloleary.github.io/PartnerOS/
 
 ### What's Built
-- 44 templates across 9 categories
+- 45 templates across 9 categories
 - 9 section index pages with Starlight Cards
 - 7 automation playbooks
-- 130 automated tests (all passing)
+- 131 automated tests (all passing)
 - AI Partner Agent with memory, recommendations, email generation
 - Web UI with chat interface
 - 3 CI/CD workflows
@@ -78,7 +78,7 @@
 | 2.1 | **Demo Mode** | Pre-filled fake company data for demos | 2 hrs | DONE |
 | 2.2 | **One-Pager** | Product sheet to give prospects | 1 hr | DONE |
 | 2.3 | **Pricing Sheet** | How to license/subscribe | 1 hr | DONE |
-| 2.4 | **Testimonials/Case Study Template** | Social proof | 2 hrs | PENDING |
+| 2.4 | **Testimonials/Case Study Template** | Social proof | 2 hrs | DONE |
 
 ---
 
@@ -202,6 +202,8 @@
 | Agent tests expanded (43 total) | Feb 20, 2026 |
 | Legal Templates (NDA, MSA, DPA, SLA) | Feb 20, 2026 |
 | Finance Templates (Commission, Rebate, Revenue Share) | Feb 20, 2026 |
+| Real Agent Logic (#31) - PartnerState milestone integration | Feb 21, 2026 |
+| Testimonials/Case Study Template (III.8) | Feb 21, 2026 |
 | Security Templates (Questionnaire, SOC2) | Feb 20, 2026 |
 | Operations Templates (Deal Reg, Standup, Report, Portal) | Feb 20, 2026 |
 | Executive Template (Board Deck) | Feb 20, 2026 |

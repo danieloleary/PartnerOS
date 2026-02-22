@@ -32,6 +32,7 @@ try:
     from rich.panel import Panel
     from rich.prompt import Prompt, Confirm
     from rich.table import Table
+
     console = Console()
     RICH_AVAILABLE = True
 except ImportError:
@@ -41,21 +42,26 @@ except ImportError:
 # LLM clients
 try:
     import anthropic
+
     ANTHROPIC_AVAILABLE = True
 except ImportError:
     ANTHROPIC_AVAILABLE = False
 
 try:
     from openai import OpenAI as OpenAIClient
+
     OPENAI_AVAILABLE = True
 except ImportError:
     OPENAI_AVAILABLE = False
 
 try:
     import requests
+
     REQUESTS_AVAILABLE = True
 except ImportError:
     REQUESTS_AVAILABLE = False
+
+from partner_state import PartnerState
 
 
 # Configure logging
@@ -65,7 +71,10 @@ LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
 class RetryConfig:
     """Configuration for API retry behavior."""
-    def __init__(self, max_retries: int = 3, base_delay: float = 1.0, max_delay: float = 10.0):
+
+    def __init__(
+        self, max_retries: int = 3, base_delay: float = 1.0, max_delay: float = 10.0
+    ):
         self.max_retries = max_retries
         self.base_delay = base_delay
         self.max_delay = max_delay
@@ -73,12 +82,17 @@ class RetryConfig:
 
 class OllamaClient:
     """Local Ollama LLM client with retry support."""
-    
-    def __init__(self, endpoint: str = "http://localhost:11434", model: str = "llama3.2:3b", retry_config: RetryConfig = None):
-        self.endpoint = endpoint.rstrip('/')
+
+    def __init__(
+        self,
+        endpoint: str = "http://localhost:11434",
+        model: str = "llama3.2:3b",
+        retry_config: RetryConfig = None,
+    ):
+        self.endpoint = endpoint.rstrip("/")
         self.model = model
         self.retry_config = retry_config or RetryConfig()
-    
+
     def _retry_with_backoff(self, func, *args, **kwargs):
         """Execute function with exponential backoff retry."""
         last_exception = None
@@ -89,67 +103,71 @@ class OllamaClient:
                 last_exception = e
                 if attempt < self.retry_config.max_retries:
                     delay = min(
-                        self.retry_config.base_delay * (2 ** attempt),
-                        self.retry_config.max_delay
+                        self.retry_config.base_delay * (2**attempt),
+                        self.retry_config.max_delay,
                     )
-                    logger.warning(f"API call failed (attempt {attempt + 1}), retrying in {delay}s: {e}")
+                    logger.warning(
+                        f"API call failed (attempt {attempt + 1}), retrying in {delay}s: {e}"
+                    )
                     time.sleep(delay)
         raise last_exception
-    
+
     def chat(self, messages: list, system_prompt: str = None) -> str:
         """Send chat request to local Ollama with retry."""
         ollama_messages = []
-        
+
         if system_prompt:
             ollama_messages.append({"role": "system", "content": system_prompt})
-        
+
         ollama_messages.extend(messages)
-        
+
         def make_request():
             response = requests.post(
                 f"{self.endpoint}/api/chat",
                 json={
                     "model": self.model,
                     "messages": ollama_messages,
-                    "stream": False
+                    "stream": False,
                 },
-                timeout=120
+                timeout=120,
             )
             response.raise_for_status()
             data = response.json()
             return data.get("message", {}).get("content", "[No response]")
-        
+
         return self._retry_with_backoff(make_request)
 
 
 class PartnerAgent:
     """Main agent class for running partnership playbooks."""
-    
+
     # Class constant for valid models (as of Feb 2026)
     VALID_MODELS = {
         "anthropic": ["sonnet-4-20250514", "haiku-3-20250514"],
         "openai": ["gpt-4o", "gpt-4o-mini", "o1-preview", "o1-mini"],
-        "ollama": ["llama3.2:3b", "qwen2.5:7b", "mistral:7b"]
+        "ollama": ["llama3.2:3b", "qwen2.5:7b", "mistral:7b"],
     }
-    
+
     def __init__(self, config_path: str = "config.yaml", verbose: bool = False):
         self.verbose = verbose
         self._setup_logging()
         self.base_dir = Path(__file__).parent
         self.config_path = config_path
         self.config = self._load_config(config_path)
-        self.templates_dir = self.base_dir / self.config.get("templates_dir", "../../docs")
+        self.templates_dir = self.base_dir / self.config.get(
+            "templates_dir", "../../docs"
+        )
         self.state_dir = self.base_dir / self.config.get("state_dir", "./state")
         self.playbooks_dir = self.base_dir / "playbooks"
         self.llm_client = self._init_llm()
         logger.info("PartnerAgent initialized successfully")
-    
+
     def _setup_logging(self):
         """Configure logging based on verbosity."""
         level = logging.DEBUG if self.verbose else logging.INFO
         logging.basicConfig(level=level, format=LOG_FORMAT)
         logger.setLevel(level)
-    
+
     def _validate_path(self, path: Path, base_dir: Path) -> bool:
         """
         Validate that path is within base directory.
@@ -161,7 +179,7 @@ class PartnerAgent:
             return resolved_path.is_file() and resolved_base in resolved_path.parents
         except (OSError, ValueError):
             return False
-    
+
     def _sanitize_partner_name(self, name: str) -> str:
         """
         Sanitize partner name for safe directory/file usage.
@@ -172,37 +190,39 @@ class PartnerAgent:
         """
         if not name or not name.strip():
             raise ValueError("Partner name cannot be empty")
-        
+
         name = name.strip()
-        
+
         if len(name) > 100:
             raise ValueError("Partner name exceeds 100 characters")
-        
+
         # Check for path traversal attempts
-        if any(char in name for char in ['/', '\\', '..', '.']):
+        if any(char in name for char in ["/", "\\", "..", "."]):
             raise ValueError("Partner name contains invalid characters")
-        
+
         # Only allow alphanumeric, spaces, dashes, underscores
-        if not re.match(r'^[\w\s-]+$', name):
+        if not re.match(r"^[\w\s-]+$", name):
             raise ValueError("Partner name contains invalid characters")
-        
+
         return name
-    
+
     def _load_config(self, config_path: str) -> dict:
         """Load configuration from YAML file with validation."""
         config_file = self.base_dir / config_path
         if config_file.exists():
             with open(config_file) as f:
                 config = yaml.safe_load(f)
-                
+
                 # Validate model if specified
                 provider = config.get("provider", "anthropic")
                 model = config.get("model")
                 if model and model not in self.VALID_MODELS.get(provider, []):
-                    logger.warning(f"Model '{model}' may not exist. Valid models for {provider}: {self.VALID_MODELS.get(provider, [])}")
-                
+                    logger.warning(
+                        f"Model '{model}' may not exist. Valid models for {provider}: {self.VALID_MODELS.get(provider, [])}"
+                    )
+
                 return config
-        
+
         # Default configuration
         return {
             "provider": "anthropic",
@@ -210,13 +230,13 @@ class PartnerAgent:
             "templates_dir": "../../docs",
             "state_dir": "./state",
         }
-    
+
     def reload_config(self):
         """Reload configuration from disk without restarting."""
         logger.info("Reloading configuration...")
         self.config = self._load_config(self.config_path)
         logger.info("Configuration reloaded successfully")
-    
+
     def _init_llm(self):
         """Initialize LLM client based on configuration."""
         provider = self.config.get("provider", "anthropic")
@@ -230,14 +250,20 @@ class PartnerAgent:
                 resp = requests.get(f"{ollama_endpoint}/api/tags", timeout=5)
                 if resp.status_code == 200:
                     self._print_success(f"Using local Ollama: {ollama_model}")
-                    return OllamaClient(endpoint=ollama_endpoint, model=ollama_model, retry_config=retry_config)
+                    return OllamaClient(
+                        endpoint=ollama_endpoint,
+                        model=ollama_model,
+                        retry_config=retry_config,
+                    )
             except Exception as e:
                 logger.warning(f"Ollama health check failed: {e}")
                 pass
 
         if provider == "anthropic":
             if not ANTHROPIC_AVAILABLE:
-                self._print_error("anthropic package not installed. Run: pip install anthropic")
+                self._print_error(
+                    "anthropic package not installed. Run: pip install anthropic"
+                )
                 return None
             api_key = os.environ.get("ANTHROPIC_API_KEY")
             if not api_key:
@@ -247,7 +273,9 @@ class PartnerAgent:
 
         elif provider == "openai":
             if not OPENAI_AVAILABLE:
-                self._print_error("openai package not installed. Run: pip install openai")
+                self._print_error(
+                    "openai package not installed. Run: pip install openai"
+                )
                 return None
             api_key = os.environ.get("OPENAI_API_KEY")
             if not api_key:
@@ -257,7 +285,7 @@ class PartnerAgent:
             return OpenAIClient(api_key=api_key)
 
         return None
-    
+
     def _print(self, text: str, style: str = None):
         """Print with optional rich formatting - all output goes through here."""
         if RICH_AVAILABLE and console:
@@ -293,22 +321,24 @@ class PartnerAgent:
         if RICH_AVAILABLE:
             return Confirm.ask(message, default=default)
         else:
-            result = input(f"{message} [{'Y/n' if default else 'y/N'}]: ").strip().lower()
+            result = (
+                input(f"{message} [{'Y/n' if default else 'y/N'}]: ").strip().lower()
+            )
             if not result:
                 return default
-            return result in ('y', 'yes')
+            return result in ("y", "yes")
 
     def load_playbook(self, name: str) -> dict:
         """Load a playbook definition with path validation."""
         playbook_file = self.playbooks_dir / f"{name}.yaml"
-        
+
         # Validate path before loading
         if not self._validate_path(playbook_file, self.playbooks_dir):
             raise ValueError(f"Invalid playbook path: {name}")
-        
+
         if not playbook_file.exists():
             raise FileNotFoundError(f"Playbook not found: {name}")
-        
+
         with open(playbook_file) as f:
             return yaml.safe_load(f)
 
@@ -319,26 +349,28 @@ class PartnerAgent:
             for f in self.playbooks_dir.glob("*.yaml"):
                 with open(f) as pf:
                     data = yaml.safe_load(pf)
-                    playbooks.append({
-                        "name": f.stem,
-                        "title": data.get("name", f.stem),
-                        "description": data.get("description", ""),
-                        "steps": len(data.get("steps", []))
-                    })
+                    playbooks.append(
+                        {
+                            "name": f.stem,
+                            "title": data.get("name", f.stem),
+                            "description": data.get("description", ""),
+                            "steps": len(data.get("steps", [])),
+                        }
+                    )
         return playbooks
 
     def load_template(self, template_path: str) -> dict:
         """
         Load and parse a template file with security validation.
-        
+
         Security: Validates that template_path doesn't escape templates_dir.
         """
         full_path = self.templates_dir / template_path
-        
+
         # Validate path before loading - prevents path traversal
         if not self._validate_path(template_path, self.templates_dir):
             raise ValueError(f"Invalid template path: {template_path}")
-        
+
         if not full_path.exists():
             raise FileNotFoundError(f"Template not found: {template_path}")
 
@@ -361,16 +393,16 @@ class PartnerAgent:
             "path": template_path,
             "frontmatter": frontmatter,
             "body": body,
-            "placeholders": placeholders
+            "placeholders": placeholders,
         }
 
     def _extract_placeholders(self, content: str) -> list:
         """Extract fillable placeholders from template content."""
         patterns = [
-            r'\[([^\]]+)\]',           # [Your Company], [Partner Name]
-            r'\$\[?(\w+)\]?',          # $X, $[Amount]
-            r'<([^>]+)>',              # <insert value>
-            r'_+([^_]+)_+',            # ___field___
+            r"\[([^\]]+)\]",  # [Your Company], [Partner Name]
+            r"\$\[?(\w+)\]?",  # $X, $[Amount]
+            r"<([^>]+)>",  # <insert value>
+            r"_+([^_]+)_+",  # ___field___
         ]
         placeholders = set()
         for pattern in patterns:
@@ -383,7 +415,7 @@ class PartnerAgent:
         # First sanitize the input
         text = self._sanitize_partner_name(text)
         # Then slugify
-        return re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')
+        return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
     def get_partner_state(self, partner: str) -> dict:
         """Load saved state for a partner."""
@@ -408,13 +440,13 @@ class PartnerAgent:
             "name": partner,
             "slug": slug,
             "created": datetime.now().isoformat(),
-            "tier": None,          # Registered / Silver / Gold / Strategic
-            "vertical": None,      # SaaS, Healthcare, etc.
+            "tier": None,  # Registered / Silver / Gold / Strategic
+            "vertical": None,  # SaaS, Healthcare, etc.
             "health_score": None,  # 0-100
-            "rm": None,            # Relationship Manager name
-            "notes": [],           # [{"ts": iso, "text": str}]
-            "milestones": [],      # [{"ts": iso, "name": str}]
-            "playbooks": {}
+            "rm": None,  # Relationship Manager name
+            "notes": [],  # [{"ts": iso, "text": str}]
+            "milestones": [],  # [{"ts": iso, "name": str}]
+            "playbooks": {},
         }
 
     def save_partner_state(self, partner: str, state: dict):
@@ -425,14 +457,14 @@ class PartnerAgent:
         partner_dir = self.state_dir / slug
         partner_dir.mkdir(parents=True, exist_ok=True)
         state_file = partner_dir / "metadata.json"
-        
+
         # Ensure state matches sanitized partner name
         state["name"] = partner
         state["slug"] = slug
-        
-        with open(state_file, 'w') as f:
+
+        with open(state_file, "w") as f:
             json.dump(state, f, indent=2)
-        
+
         logger.info(f"Saved state for partner: {partner}")
 
     def list_partners(self) -> list:
@@ -452,17 +484,17 @@ class PartnerAgent:
     # -------------------------------------------------------------------------
 
     PLAYBOOK_NEXT_STEPS: Dict[str, List[str]] = {
-        "recruit":            ["onboard"],
-        "onboard":            ["qbr", "co-marketing"],
-        "qbr":                ["expand"],
-        "expand":             ["co-marketing"],
-        "co-marketing":       ["qbr"],
+        "recruit": ["onboard"],
+        "onboard": ["qbr", "co-marketing"],
+        "qbr": ["expand"],
+        "expand": ["co-marketing"],
+        "co-marketing": ["qbr"],
         "support-escalation": ["qbr"],
     }
 
     TIER_EXTRA_PLAYBOOKS: Dict[str, List[str]] = {
-        "Gold":       ["co-marketing", "expand"],
-        "Strategic":  ["co-marketing", "expand", "qbr"],
+        "Gold": ["co-marketing", "expand"],
+        "Strategic": ["co-marketing", "expand", "qbr"],
     }
 
     def recommend_templates(self, partner_data: dict) -> List[str]:
@@ -470,7 +502,11 @@ class PartnerAgent:
         Return an ordered list of recommended next playbooks for a partner
         based on completed playbooks and their tier.
         """
-        completed = {k for k, v in partner_data.get("playbooks", {}).items() if v.get("completed")}
+        completed = {
+            k
+            for k, v in partner_data.get("playbooks", {}).items()
+            if v.get("completed")
+        }
         tier = partner_data.get("tier") or ""
         recommended: List[str] = []
 
@@ -500,37 +536,37 @@ class PartnerAgent:
         """
         company = self.config.get("company", {})
         system = self._get_system_prompt(partner_data)
-        messages = [{
-            "role": "user",
-            "content": (
-                f"Write a professional partner email for the following situation.\n\n"
-                f"Sender company: {company.get('name', '[Your Company]')}\n"
-                f"Recipient partner: {partner_data.get('name')}\n"
-                f"Partner tier: {partner_data.get('tier') or 'Unclassified'}\n"
-                f"Situation: {situation}\n\n"
-                "Format: Subject line first, then a blank line, then the full email body "
-                "with greeting, body paragraphs, and a professional sign-off."
-            )
-        }]
+        messages = [
+            {
+                "role": "user",
+                "content": (
+                    f"Write a professional partner email for the following situation.\n\n"
+                    f"Sender company: {company.get('name', '[Your Company]')}\n"
+                    f"Recipient partner: {partner_data.get('name')}\n"
+                    f"Partner tier: {partner_data.get('tier') or 'Unclassified'}\n"
+                    f"Situation: {situation}\n\n"
+                    "Format: Subject line first, then a blank line, then the full email body "
+                    "with greeting, body paragraphs, and a professional sign-off."
+                ),
+            }
+        ]
         return self.chat(messages, system_prompt=system)
 
     def add_note(self, partner_data: dict, text: str) -> dict:
         """Append a timestamped note to a partner's record and save state."""
         partner_data.setdefault("notes", [])
-        partner_data["notes"].append({
-            "ts": datetime.now().isoformat(),
-            "text": text.strip()
-        })
+        partner_data["notes"].append(
+            {"ts": datetime.now().isoformat(), "text": text.strip()}
+        )
         self.save_partner_state(partner_data["name"], partner_data)
         return partner_data
 
     def add_milestone(self, partner_data: dict, name: str) -> dict:
         """Record a partner milestone and save state."""
         partner_data.setdefault("milestones", [])
-        partner_data["milestones"].append({
-            "ts": datetime.now().isoformat(),
-            "name": name.strip()
-        })
+        partner_data["milestones"].append(
+            {"ts": datetime.now().isoformat(), "name": name.strip()}
+        )
         self.save_partner_state(partner_data["name"], partner_data)
         return partner_data
 
@@ -551,7 +587,7 @@ class PartnerAgent:
                 model=model,
                 max_tokens=4096,
                 system=system_prompt or self._get_system_prompt(),
-                messages=messages
+                messages=messages,
             )
             return response.content[0].text
 
@@ -561,8 +597,7 @@ class PartnerAgent:
                 msgs.append({"role": "system", "content": system_prompt})
             msgs.extend(messages)
             response = self.llm_client.chat.completions.create(
-                model=model,
-                messages=msgs
+                model=model, messages=msgs
             )
             return response.choices[0].message.content
 
@@ -581,7 +616,9 @@ class PartnerAgent:
             health = partner_data.get("health_score")
             health_str = f"{health}/100" if health is not None else "Not assessed"
             recent_notes = partner_data.get("notes", [])[-3:]
-            notes_str = "; ".join(n["text"] for n in recent_notes) if recent_notes else "None"
+            notes_str = (
+                "; ".join(n["text"] for n in recent_notes) if recent_notes else "None"
+            )
             milestones = [m["name"] for m in partner_data.get("milestones", [])]
 
             tier_details = ""
@@ -594,15 +631,15 @@ class PartnerAgent:
 
             partner_section = f"""
 Partner context:
-- Partner: {partner_data.get('name')}
+- Partner: {partner_data.get("name")}
 - Tier: {tier_name}{tier_details}
-- Vertical: {partner_data.get('vertical') or 'Unknown'}
+- Vertical: {partner_data.get("vertical") or "Unknown"}
 - Health score: {health_str}
-- Relationship manager: {partner_data.get('rm') or 'Unassigned'}
-- Completed milestones: {', '.join(milestones) if milestones else 'None'}
+- Relationship manager: {partner_data.get("rm") or "Unassigned"}
+- Completed milestones: {", ".join(milestones) if milestones else "None"}
 - Recent notes: {notes_str}
 
-Tailor your advice to the partner's tier. {tier_name} partners get {qbr_freq.get(tier_name, 'annual')} QBRs.
+Tailor your advice to the partner's tier. {tier_name} partners get {qbr_freq.get(tier_name, "annual")} QBRs.
 """
 
         return f"""You are a Partnership Expert Agent helping to run partnership playbooks.
@@ -614,34 +651,43 @@ Your role is to guide users through filling out partnership templates by:
 4. Highlighting areas that need more information
 
 Company context:
-- Company: {company.get('name', '[Your Company]')}
-- Product: {company.get('product', '[Your Product]')}
-- Value Prop: {company.get('value_prop', '[Your Value Proposition]')}
+- Company: {company.get("name", "[Your Company]")}
+- Product: {company.get("product", "[Your Product]")}
+- Value Prop: {company.get("value_prop", "[Your Value Proposition]")}
 {partner_section}
 Be concise and actionable. Ask one question at a time.
 When you have enough information for a section, fill it in and move to the next.
 Format filled sections in markdown."""
 
-    def run_playbook_step(self, playbook: dict, step_index: int, partner: str, context: dict, partner_data: dict = None) -> dict:
+    def run_playbook_step(
+        self,
+        playbook: dict,
+        step_index: int,
+        partner: str,
+        context: dict,
+        partner_data: dict = None,
+    ) -> dict:
         """Run a single step of a playbook."""
         step = playbook["steps"][step_index]
         template = self.load_template(step["template"])
 
         # Build conversation
         messages = context.get("messages", [])
-        messages.append({
-            "role": "user",
-            "content": f"""We're working on: {playbook['name']}
+        messages.append(
+            {
+                "role": "user",
+                "content": f"""We're working on: {playbook["name"]}
 Partner: {partner}
-Current step: {step['name']}
+Current step: {step["name"]}
 
-Template: {template['frontmatter'].get('title', step['name'])}
-Description: {template['frontmatter'].get('description', '')}
+Template: {template["frontmatter"].get("title", step["name"])}
+Description: {template["frontmatter"].get("description", "")}
 
-Placeholders to fill: {', '.join(template['placeholders'][:10])}
+Placeholders to fill: {", ".join(template["placeholders"][:10])}
 
-{step.get('prompt', 'Guide me through filling out this template.')}"""
-        })
+{step.get("prompt", "Guide me through filling out this template.")}""",
+            }
+        )
 
         system = self._get_system_prompt(partner_data)
         response = self.chat(messages, system_prompt=system)
@@ -652,7 +698,7 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
             "step_name": step["name"],
             "template": step["template"],
             "messages": messages,
-            "response": response
+            "response": response,
         }
 
     def interactive_mode(self):
@@ -729,7 +775,9 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
         partner_data = self._pick_partner()
         if not partner_data:
             return
-        self._print("\nExamples: 'QBR invite', 'follow-up after missed target', 'co-marketing proposal'")
+        self._print(
+            "\nExamples: 'QBR invite', 'follow-up after missed target', 'co-marketing proposal'"
+        )
         situation = self._prompt("Describe the email situation")
         if not situation.strip():
             self._print_error("Situation required")
@@ -795,16 +843,20 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
             "started": datetime.now().isoformat(),
             "current_step": 0,
             "completed": False,
-            "context": {"messages": []}  # Added context storage
+            "context": {"messages": []},  # Added context storage
         }
         self.save_partner_state(partner, state)
 
         # Run through steps
         context = {"messages": []}
         for i, step in enumerate(playbook["steps"]):
-            self._print(f"\n--- Step {i+1}/{len(playbook['steps'])}: {step['name']} ---\n")
+            self._print(
+                f"\n--- Step {i + 1}/{len(playbook['steps'])}: {step['name']} ---\n"
+            )
 
-            result = self.run_playbook_step(playbook, i, partner, context, partner_data=state)
+            result = self.run_playbook_step(
+                playbook, i, partner, context, partner_data=state
+            )
             context = {"messages": result["messages"]}
 
             if RICH_AVAILABLE:
@@ -824,6 +876,12 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
 
         state["playbooks"][playbook_name]["completed"] = True
         state["playbooks"][playbook_name]["completed_at"] = datetime.now().isoformat()
+
+        # Record milestone using PartnerState
+        state_mgr = PartnerState(partner, state_dir=str(self.state_dir))
+        state_mgr.record_playbook_complete(playbook_name)
+        state_mgr.save()
+
         self.save_partner_state(partner, state)
         self._print_success(f"\nPlaybook '{playbook['name']}' completed for {partner}!")
         # Surface next-step recommendations immediately after completion
@@ -842,7 +900,9 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
 
         self._print("\nSaved partners:")
         for i, p in enumerate(partners, 1):
-            active = [k for k, v in p.get("playbooks", {}).items() if not v.get("completed")]
+            active = [
+                k for k, v in p.get("playbooks", {}).items() if not v.get("completed")
+            ]
             self._print(f"  {i}. {p['name']}")
             if active:
                 self._print(f"     Active: {', '.join(active)}", style="yellow")
@@ -855,8 +915,11 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
             return
 
         # Find incomplete playbooks
-        incomplete = {k: v for k, v in partner_data.get("playbooks", {}).items()
-                      if not v.get("completed")}
+        incomplete = {
+            k: v
+            for k, v in partner_data.get("playbooks", {}).items()
+            if not v.get("completed")
+        }
         if not incomplete:
             self._print("No incomplete playbooks for this partner.")
             return
@@ -869,7 +932,7 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
         playbook_name = list(incomplete.keys())[0]
         playbook = self.load_playbook(playbook_name)
         step = incomplete[playbook_name]["current_step"]
-        
+
         self._print(f"\nResuming '{playbook_name}' at step {step + 1}...")
 
         # Load saved context
@@ -877,7 +940,9 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
 
         # Continue from saved step
         for i in range(step, len(playbook["steps"])):
-            self._print(f"\n--- Step {i+1}/{len(playbook['steps'])}: {playbook['steps'][i]['name']} ---\n")
+            self._print(
+                f"\n--- Step {i + 1}/{len(playbook['steps'])}: {playbook['steps'][i]['name']} ---\n"
+            )
 
             result = self.run_playbook_step(playbook, i, partner_data["name"], context)
             context = {"messages": result["messages"]}
@@ -898,9 +963,19 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
                     return
 
         partner_data["playbooks"][playbook_name]["completed"] = True
-        partner_data["playbooks"][playbook_name]["completed_at"] = datetime.now().isoformat()
+        partner_data["playbooks"][playbook_name]["completed_at"] = (
+            datetime.now().isoformat()
+        )
+
+        # Record milestone using PartnerState
+        state_mgr = PartnerState(partner_data["name"], state_dir=str(self.state_dir))
+        state_mgr.record_playbook_complete(playbook_name)
+        state_mgr.save()
+
         self.save_partner_state(partner_data["name"], partner_data)
-        self._print_success(f"\nPlaybook '{playbook_name}' completed for {partner_data['name']}!")
+        self._print_success(
+            f"\nPlaybook '{playbook_name}' completed for {partner_data['name']}!"
+        )
 
     def _show_status(self):
         """Show status of all partners."""
@@ -917,14 +992,20 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
             table.add_column("Last Updated")
 
             for p in partners:
-                active = [k for k, v in p.get("playbooks", {}).items() if not v.get("completed")]
-                completed = [k for k, v in p.get("playbooks", {}).items() if v.get("completed")]
+                active = [
+                    k
+                    for k, v in p.get("playbooks", {}).items()
+                    if not v.get("completed")
+                ]
+                completed = [
+                    k for k, v in p.get("playbooks", {}).items() if v.get("completed")
+                ]
                 stage = completed[-1] if completed else "New"
                 table.add_row(
                     p["name"],
                     stage,
                     ", ".join(active) or "-",
-                    p.get("created", "")[:10]
+                    p.get("created", "")[:10],
                 )
             console.print(table)
         else:
@@ -932,7 +1013,9 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
             for p in partners:
                 self._print(f"  {p['name']}")
                 for pb, data in p.get("playbooks", {}).items():
-                    status = "✓" if data.get("completed") else f"Step {data['current_step']}"
+                    status = (
+                        "✓" if data.get("completed") else f"Step {data['current_step']}"
+                    )
                     self._print(f"    - {pb}: {status}")
 
     def _list_templates(self):
@@ -949,14 +1032,24 @@ Placeholders to fill: {', '.join(template['placeholders'][:10])}
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Partner Agent v1.1 - AI-powered partnership playbooks")
+    parser = argparse.ArgumentParser(
+        description="Partner Agent v1.1 - AI-powered partnership playbooks"
+    )
     parser.add_argument("--playbook", "-p", help="Run specific playbook")
     parser.add_argument("--partner", help="Partner name")
     parser.add_argument("--resume", "-r", help="Resume saved session")
-    parser.add_argument("--status", "-s", action="store_true", help="Show partner status")
-    parser.add_argument("--config", "-c", default="config.yaml", help="Config file path")
-    parser.add_argument("--reload", action="store_true", help="Reload config without restarting")
-    parser.add_argument("--verbose", "-v", action="store_true", help="Enable debug logging")
+    parser.add_argument(
+        "--status", "-s", action="store_true", help="Show partner status"
+    )
+    parser.add_argument(
+        "--config", "-c", default="config.yaml", help="Config file path"
+    )
+    parser.add_argument(
+        "--reload", action="store_true", help="Reload config without restarting"
+    )
+    parser.add_argument(
+        "--verbose", "-v", action="store_true", help="Enable debug logging"
+    )
 
     args = parser.parse_args()
 

@@ -1,5 +1,26 @@
 # PartnerOS CHANGELOG
 
+## Version 1.6 (2026-02-21) - Real Agent Logic & Template Expansion
+
+### Agent Integration
+- **NEW**: PartnerState module (`scripts/partner_agent/partner_state.py`) - unified state management
+- **NEW**: Milestone tracking automatically records when playbooks complete
+- **NEW**: Agent now integrates with PartnerState to track lifecycle progress
+
+### Template Expansion
+- **NEW**: Testimonials & Case Study Guide (`enablement/08-testimonials-case-studies.md`)
+  - Interview questions framework
+  - Metrics quantification guide
+  - Multiple asset formats (quote cards, video, full case study)
+  - Legal approval process
+  - Distribution channels
+
+### Test Suite
+- **NEW**: Added Real Agent Logic tests
+- **UPDATE**: 131 tests passing
+
+---
+
 ## Version 1.4 (2026-02-20) - Navigation, Test Expansion & Polish
 
 ### Phase 6: Navigation & Index Pages
