@@ -1,50 +1,65 @@
 ---
-title: Partner Exit Checklist (Graceful Partnership Termination)
+title: Partner Exit Checklist
 section: Strategy
 category: strategic
 template_number: I.8
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
 - Silver
 - Gold
-skill_level: intermediate
+skill_level: advanced
 purpose: operational
 phase: strategy
-time_required: 1-2 hours
-difficulty: easy
+time_required: 2-4 hours
+difficulty: medium
 prerequisites:
-- Clear partner program vision
-description: 'A comprehensive checklist for professionally and gracefully ending partner
-  relationships while protecting your brand, customers, and legal interests.
-
-  '
-related_templates:
-- 03-evaluation-framework.md
-- ../enablement/06-success-metrics.md
-- 05-strategy-plan.md
+- Executive buy-in for partnership termination
+- Legal review of contract
+description: >
+  A comprehensive checklist for professionally and gracefully ending partner relationships while protecting your brand, customers, and legal interests. Handle exits with class—how you end partnerships defines your reputation.
 outcomes:
-- Completed Partner Exit Checklist (Graceful Partnership Termination)
+- Complete partner exit process
+- Protected customer relationships
+- Legal compliance maintained
+- Documented learnings for future
 skills_gained:
-- Strategic planning
-- Partner program design
-- Competitive analysis
+- Partner termination
+- Customer transition
+- Legal compliance
+- Process documentation
 ---
+
+> **How you end partnerships matters as much as how you start them. A messy exit creates enemies; a graceful exit creates potential future allies.** — Dan O'Leary
+
+:::caution DON'T TERMINATE BEFORE READING THIS
+Exiting a partner improperly can cost you customers, create legal liability, and damage your reputation. Follow this checklist meticulously. If you're rushing, you're making mistakes.
+:::
 
 ## How to Use This Template
 
 **Purpose:**
-Use this template when ending a partner relationship to ensure a professional, thorough, and legally sound termination process that protects all parties involved.
+This checklist ensures a professional, thorough, and legally sound termination process that protects all parties—your company, your customers, and even the departing partner.
+
+**Why It Works:**
+Partner exits are emotional. People get defensive, cut corners, and make hasty decisions. This checklist ensures nothing falls through the cracks and you maintain your reputation even when ending relationships.
+
+**Before you start:**
+
+- [ ] Exit approved by executive sponsor
+- [ ] Legal review of contract terms completed
+- [ ] Business impact assessment done
+- [ ] Communication plan drafted
 
 **Steps:**
-1. Review the exit decision criteria to confirm termination is appropriate
-2. Assemble the exit team and assign responsibilities
-3. Work through each checklist phase systematically
-4. Document all communications and actions
-5. Conduct a post-exit review to capture learnings
-6. Reference the "Related Templates" for supporting information
+
+1. **Confirm exit is appropriate** — Review triggers, consider alternatives (1 hour)
+2. **Assemble exit team** — Assign roles and responsibilities (30 min)
+3. **Execute each phase** — Pre-exit, notification, transition, post-exit (1-2 hours)
+4. **Document everything** — Communications, decisions, learnings (ongoing)
+5. **Conduct post-exit review** — Capture learnings for future (30 min)
 
 ---
 
@@ -54,30 +69,39 @@ Use this template when ending a partner relationship to ensure a professional, t
 
 ### Exit Triggers
 
-| Trigger Category | Examples | Urgency |
-|------------------|----------|---------|
-| **Performance** | Consistently missing targets, declining engagement | Medium |
-| **Strategic** | Market pivot, M&A, program restructuring | Low-Medium |
-| **Compliance** | Contract breach, ethical violations | High |
-| **Mutual** | Both parties agree to end relationship | Low |
-| **Business** | Partner bankruptcy, acquisition by competitor | High |
-| **Customer Impact** | Partner harming customer relationships | High |
+Not every performance issue warrants termination. Use this framework to decide:
+
+| Trigger Category | Examples | Urgency | Action |
+|------------------|----------|---------|--------|
+| **Performance** | Consistently missing targets, declining engagement | Medium | Improvement plan first |
+| **Strategic** | Market pivot, M&A, program restructuring | Low-Medium | Planned wind-down |
+| **Compliance** | Contract breach, ethical violations | High | Immediate review |
+| **Mutual** | Both parties agree to end relationship | Low | Collaborative exit |
+| **Business** | Partner bankruptcy, acquisition by competitor | High | Emergency protocol |
+| **Customer Impact** | Partner harming customer relationships | High | Immediate action |
 
 ### Exit Decision Framework
 
 Before proceeding, confirm:
 
-- [ ] Exit has been reviewed and approved by appropriate stakeholders
-- [ ] Alternative remediation options have been considered
-- [ ] Business impact assessment has been completed
-- [ ] Legal counsel has reviewed the situation
-- [ ] Communication plan has been drafted
+- [ ] Exit approved by executive sponsor
+- [ ] Alternative remediation options considered
+- [ ] Business impact assessment completed
+- [ ] Legal counsel reviewed the situation
+- [ ] Communication plan drafted
+- [ ] Customer transition plan in place
+
+:::tip EXIT vs. IMPROVEMENT
+If the issue is fixable, try a Performance Improvement Plan (PIP) first. 90 days of documented improvement is better than an exit that disrupts customers.
+:::
 
 ---
 
 ## Phase 1: Pre-Exit Planning (2-4 Weeks Before)
 
 ### 1.1 Exit Team Assembly
+
+Every exit needs a coordinated team. Assign these roles:
 
 | Role | Responsibility | Assigned To |
 |------|---------------|-------------|
@@ -92,12 +116,14 @@ Before proceeding, confirm:
 
 ### 1.2 Contract & Legal Review
 
-- [ ] Review partnership agreement termination clauses
-- [ ] Identify required notice period: [X days/months]
-- [ ] Document any contract breaches (if applicable)
+Review the partnership agreement thoroughly:
+
+- [ ] Identify termination clauses and notice periods
+- [ ] Document required notice period: [X days/months]
+- [ ] Note any contract breaches (if applicable)
 - [ ] Review non-compete/non-solicitation provisions
 - [ ] Identify IP and data ownership requirements
-- [ ] Review confidentiality obligations (ongoing)
+- [ ] Review confidentiality obligations (ongoing after exit)
 - [ ] Consult legal on potential liabilities
 - [ ] Prepare formal termination notice
 
@@ -105,6 +131,8 @@ Before proceeding, confirm:
 **Earliest Effective End Date:** [Date]
 
 ### 1.3 Financial Assessment
+
+Settle all financial matters before exit:
 
 | Item | Amount | Status | Action Required |
 |------|--------|--------|-----------------|
@@ -116,6 +144,8 @@ Before proceeding, confirm:
 | Security Deposits | $[X] | [Return/Forfeit] | [Action] |
 
 ### 1.4 Customer Impact Assessment
+
+Identify every customer who will be affected:
 
 **Joint Customers List:**
 
@@ -138,7 +168,8 @@ Before proceeding, confirm:
 
 ### 2.1 Communication Preparation
 
-**Key Messages to Convey:**
+Prepare key messages:
+
 - Clear statement that partnership is ending
 - Effective date of termination
 - Reason (as appropriate and legally advised)
@@ -148,13 +179,14 @@ Before proceeding, confirm:
 
 ### 2.2 Notification Checklist
 
-- [ ] Schedule call with partner leadership (do not email first)
+- [ ] Schedule call with partner leadership (do NOT email first)
 - [ ] Prepare talking points and FAQs
 - [ ] Have termination letter ready to send immediately after call
 - [ ] Brief internal stakeholders before notification
 - [ ] Document the conversation
 
 **Notification Call Details:**
+
 | Field | Details |
 |-------|---------|
 | Date/Time | [Date/Time] |
@@ -165,7 +197,7 @@ Before proceeding, confirm:
 
 ### 2.3 Termination Letter Elements
 
-The formal termination letter should include:
+The formal termination letter must include:
 
 - [ ] Date of notice
 - [ ] Reference to agreement being terminated
@@ -183,6 +215,8 @@ The formal termination letter should include:
 ## Phase 3: Transition Execution (Days 1-30)
 
 ### 3.1 System Access Revocation
+
+Revoke all access immediately:
 
 | System/Access | Revocation Date | Owner | Status |
 |---------------|-----------------|-------|--------|
@@ -207,13 +241,6 @@ The formal termination letter should include:
 - [ ] Update any joint press releases
 - [ ] Archive (don't delete) co-marketing assets
 
-**Co-branded Material Inventory:**
-
-| Material | Location | Action | Due Date | Status |
-|----------|----------|--------|----------|--------|
-| [Item 1] | [Where] | [Remove/Archive] | [Date] | [ ] |
-| [Item 2] | [Where] | [Remove/Archive] | [Date] | [ ] |
-
 ### 3.3 Customer Transition
 
 For each affected customer:
@@ -226,21 +253,6 @@ For each affected customer:
 - [ ] Document any commitments made jointly
 - [ ] Schedule check-in post-transition
 
-**Customer Communication Template:**
-
-> Dear [Customer],
->
-> We're writing to inform you of a change in our partner ecosystem. Effective [Date], [Partner Name] will no longer be a [Your Company] partner.
->
-> [If customer was brought by partner: Your relationship with [Your Company] will continue uninterrupted. Your new point of contact is [Name] at [email].]
->
-> [If customer has active project: Any ongoing work will continue seamlessly. [Transition details].]
->
-> We remain committed to your success and are here to answer any questions.
->
-> Best regards,
-> [Your Name]
-
 ### 3.4 Data & IP Handling
 
 - [ ] Identify all partner-held company data
@@ -250,16 +262,6 @@ For each affected customer:
 - [ ] Return any partner materials you hold
 - [ ] Document chain of custody for sensitive data
 - [ ] Obtain written confirmation of data destruction
-
-**Data Inventory:**
-
-| Data Type | Location | Action | Confirmation |
-|-----------|----------|--------|--------------|
-| Customer lists | [Location] | [Return/Destroy] | [ ] |
-| Product documentation | [Location] | [Return/Destroy] | [ ] |
-| Pricing/proposals | [Location] | [Return/Destroy] | [ ] |
-| Technical specs | [Location] | [Return/Destroy] | [ ] |
-| Training materials | [Location] | [Revoke access] | [ ] |
 
 ### 3.5 Financial Close-Out
 
@@ -285,7 +287,6 @@ For each affected customer:
 | Customer Success | Team meeting | Day of | [Name] | [ ] |
 | Support Team | Email + meeting | Day of | [Name] | [ ] |
 | Marketing | Email | Day of | [Name] | [ ] |
-| All Hands (if needed) | Announcement | Day 1 | [Name] | [ ] |
 
 ### 4.2 Internal Talking Points
 
@@ -327,7 +328,7 @@ For each affected customer:
 
 ### 5.3 Post-Exit Review
 
-**Schedule:** [Date, within 30 days of exit completion]
+Schedule review within 30 days of exit completion.
 
 **Review Questions:**
 1. Was the exit handled professionally?
@@ -347,150 +348,36 @@ For each affected customer:
 
 ---
 
-## Appendix A: Exit Communication Templates
-
-### Template 1: Initial Notification Call Script
-
-> "Thank you for making time to speak with us. I want to be direct with you - we've made the difficult decision to end our partnership, effective [Date].
->
-> [If performance-related]: Despite our efforts to work through the challenges we've discussed in recent months, we haven't seen the progress we need.
->
-> [If strategic]: This is a business decision driven by changes in our strategy/market, not a reflection on your team.
->
-> We're committed to a professional transition. Our priorities are [customer protection / honoring commitments / clean wind-down].
->
-> I'll send a formal letter after this call. [Name] will be your primary contact for the transition. Do you have any immediate questions?"
-
-### Template 2: Formal Termination Letter
-
-```
-[Date]
-
-[Partner Contact Name]
-[Partner Company]
-[Address]
-
-RE: Termination of Partnership Agreement dated [Original Date]
-
-Dear [Name],
-
-This letter serves as formal notice of termination of the Partnership Agreement
-between [Your Company] ("Company") and [Partner Company] ("Partner") dated
-[Agreement Date].
-
-In accordance with Section [X] of the Agreement, the effective termination
-date shall be [Date], which is [X] days from the date of this notice.
-
-During the wind-down period, both parties agree to:
-- [Obligation 1]
-- [Obligation 2]
-- [Obligation 3]
-
-Outstanding matters to be addressed:
-- [Item 1]
-- [Item 2]
-
-Please direct any questions regarding this termination to [Name] at [email].
-
-We appreciate the collaboration over the past [duration] and wish you
-continued success.
-
-Sincerely,
-
-[Signature]
-[Name]
-[Title]
-[Company]
-```
-
-### Template 3: Customer Notification (Neutral Tone)
-
-```
-Subject: Update on Our Partner Ecosystem
-
-Dear [Customer Name],
-
-We're reaching out to share an update about our partner ecosystem that
-may affect your account.
-
-Effective [Date], [Partner Name] will no longer be a certified partner
-of [Your Company].
-
-What this means for you:
-- [Impact statement - e.g., "Your support and service continuity is our
-  top priority"]
-- [Transition details - e.g., "Your new dedicated contact is..."]
-- [Reassurance - e.g., "All existing commitments will be honored"]
-
-If you have any questions or concerns, please don't hesitate to reach
-out to [Name] at [email] or [phone].
-
-Thank you for your continued partnership.
-
-Best regards,
-[Name]
-```
-
----
-
-## Appendix B: Legal Considerations
-
-### Common Contract Provisions to Review
-
-| Provision | What to Check | Implication |
-|-----------|---------------|-------------|
-| **Termination for Convenience** | Notice period required | Sets minimum timeline |
-| **Termination for Cause** | Defined breach conditions | May accelerate exit |
-| **Survival Clauses** | What outlasts termination | Ongoing obligations |
-| **Non-Compete** | Duration, scope, geography | Restricts future actions |
-| **Non-Solicitation** | Employees, customers | Protects relationships |
-| **Confidentiality** | Term, scope | Usually survives exit |
-| **Indemnification** | Post-termination claims | Liability exposure |
-| **IP Ownership** | Joint work product | Who owns what |
-| **Data Rights** | Handling requirements | Destruction/return |
-
-### Documentation to Retain
-
-Retain the following for [X years] post-exit:
-
-- [ ] Original partnership agreement
-- [ ] All amendments and addenda
-- [ ] Termination notice and acknowledgment
-- [ ] Financial records and reconciliation
-- [ ] Customer transition documentation
-- [ ] Data destruction confirmations
-- [ ] Correspondence related to termination
-- [ ] Meeting notes from exit discussions
-
----
-
-## Appendix C: Exit Scenario Playbooks
+## Exit Scenarios
 
 ### Scenario 1: Underperforming Partner
 
 **Situation:** Partner consistently misses targets, low engagement
+
 **Approach:** Graduated wind-down with warning period
 
-1. Document performance gaps
-2. Formal performance improvement plan (30-90 days)
+1. Document performance gaps over 6+ months
+2. Create formal performance improvement plan (30-90 days)
 3. If no improvement, provide termination notice
-4. Standard transition timeline
+4. Standard 30-day transition timeline
 5. Offer to stay connected informally
 
 ### Scenario 2: Contract Breach
 
 **Situation:** Partner violated agreement terms
+
 **Approach:** Expedited exit with legal protection
 
 1. Document breach with evidence
 2. Legal review and guidance
 3. Termination for cause notice (shorter notice period)
-4. Accelerated access revocation
+4. Accelerated access revocation (within 48 hours)
 5. Preserve evidence for potential dispute
 
 ### Scenario 3: Mutual Agreement
 
 **Situation:** Both parties agree partnership isn't working
+
 **Approach:** Collaborative wind-down
 
 1. Joint discussion on terms
@@ -502,19 +389,84 @@ Retain the following for [X years] post-exit:
 ### Scenario 4: Partner Acquisition by Competitor
 
 **Situation:** Partner acquired by your competitor
+
 **Approach:** Immediate protective action
 
-1. Emergency legal review
-2. Expedited access revocation
-3. Customer communication priority
+1. Emergency legal review (within 24 hours)
+2. Expedited access revocation (within 48 hours)
+3. Customer communication priority (within 72 hours)
 4. IP and data protection focus
 5. Competitive intelligence lockdown
 
 ---
 
+## What I Wish I Knew
+
+**The customer call is the hardest part:**
+I used to delay customer notifications, thinking I could handle them later. That was wrong. Customers hear about the exit from the partner, not from you—and then you're defensive. Notify customers proactively.
+
+**Document everything:**
+Every conversation, every email, every decision. If the exit becomes contentious, documentation is your protection. If it's amicable, documentation helps future improvements.
+
+**Leave on good terms if possible:**
+You never know when paths will cross again. The partner landscape is small. A graceful exit today could be a valuable relationship tomorrow.
+
+---
+
+## Common Pitfalls
+
+**Pitfall #1: Delayed Notification**
+- **What happens:** Partner hears from customers before you
+- **Warning sign:** Partner calls you asking what's happening
+- **Prevention:** Notify partner day 0, before any customer communication
+
+**Pitfall #2: Incomplete Access Revocation**
+- **What happens:** Partner retains portal access, continues seeing data
+- **Warning sign:** System access audit shows active credentials
+- **Prevention:** Full access audit within 72 hours of termination
+
+**Pitfall #3: Ignoring Customer Transitions**
+- **What happens:** Customers left hanging, blame you
+- **Warning sign:** Customer complaints post-exit
+- **Prevention:** Every customer has named transition owner
+
+**Pitfall #4: No Post-Exit Review**
+- **What happens:** Same mistakes repeat with next exit
+- **Warning sign:** Similar issues in subsequent exits
+- **Prevention:** Mandatory post-exit review within 30 days
+
+---
+
+## Quick Win Checklist
+
+*Complete these first (30 minutes)*
+
+- [ ] Confirm exit approval from executive sponsor
+- [ ] Identify legal requirements (notice period, etc.)
+- [ ] List all affected customers
+- [ ] Draft termination letter
+- [ ] Schedule partner notification call
+
+## Full Implementation
+
+*Complete for standard implementation (2-4 hours)*
+
+- [ ] Assemble exit team with RACI
+- [ ] Complete contract and legal review
+- [ ] Assess financial obligations
+- [ ] Execute customer transition plan
+- [ ] Revoke all system access
+- [ ] Remove co-branded materials
+- [ ] Complete data/IP handling
+- [ ] Conduct internal stakeholder communication
+- [ ] Schedule post-exit review
+
+---
+
 ## Related Templates
 
-- [3C/4C Evaluation Framework](03-evaluation-framework/) - For evaluating partnerships
-- [Partner Success Metrics](../enablement/06-success-metrics/) - Performance tracking
-- [Partner Strategy Plan](05-strategy-plan/) - Strategic context for exits
----
+- [Partner Strategy Plan](../strategy/05-strategy-plan/) — Strategic context for exits
+- [Program Architecture](../strategy/06-program-architecture/) — Tier and agreement structure
+- [Partner Success Metrics](../enablement/06-success-metrics/) — Performance tracking leading to exit decisions
+- [QBR Template](../enablement/07-qbr-template/) — Regular reviews that can identify exit triggers
+- [Partner Program Glossary](../resources/glossary/) — Definitions of all terms used here
