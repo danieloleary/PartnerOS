@@ -368,7 +368,7 @@ Use this matrix to evaluate prospects consistently:
 These categories require a minimum score of 3—or automatic disqualification:
 
 - ICP alignment (Category A)
-- Technical capability (Category B)  
+- Technical capability (Category B)
 - Commitment signals (Category D)
 
 ---

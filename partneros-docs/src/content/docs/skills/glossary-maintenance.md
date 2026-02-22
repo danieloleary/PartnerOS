@@ -57,7 +57,7 @@ The glossary is organized **alphabetically**. Find the letter section where your
 ## A
 ### ACV (Annual Contract Value)
 
-## B  
+## B
 ### Bronze Tier
 
 ## C
@@ -222,7 +222,7 @@ To link related terms in the glossary:
 ```markdown
 **Related terms:**
 - TAM (Total Addressable Market)
-- SAM (Serviceable Addressable Market)  
+- SAM (Serviceable Addressable Market)
 - SOM (Serviceable Obtainable Market)
 ```
 

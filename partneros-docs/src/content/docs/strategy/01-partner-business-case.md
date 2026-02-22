@@ -64,7 +64,7 @@ This template is built around what actually gets approved. It addresses the CFO'
 This template uses specific terminology from the Partner Program Glossary. Understanding these terms ensures your business case sounds like an expert wrote it:
 
 - **TAM** (Total Addressable Market) - The total market opportunity
-- **SAM** (Serviceable Addressable Market) - Your addressable segment  
+- **SAM** (Serviceable Addressable Market) - Your addressable segment
 - **SOM** (Serviceable Obtainable Market) - Realistic capture
 - **ARR** (Annual Recurring Revenue) - Your revenue metric
 - **CAC** (Customer Acquisition Cost) - Cost to acquire customers

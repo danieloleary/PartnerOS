@@ -69,7 +69,7 @@ Thank you for our conversation earlier this week. I enjoyed learning about [Thei
 Based on our discussion, I've put together a proposal that outlines how a partnership would work. Key highlights:
 
 - [Benefit #1 relevant to them]
-- [Benefit #2 relevant to them]  
+- [Benefit #2 relevant to them]
 - [Benefit #3 relevant to them]
 
 I'd love to walk you through it. Are you available [date/time] for a 15-minute call?

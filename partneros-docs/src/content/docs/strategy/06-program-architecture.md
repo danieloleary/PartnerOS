@@ -120,7 +120,7 @@ Revenue thresholds create objective progression:
 - Must maintain for 2 consecutive quarters to qualify
 - Calculated on rolling 12-month basis
 
-### Certification  
+### Certification
 - Minimum 3 certified professionals
 - At least 1 Advanced certification
 - Annual recertification required
@@ -221,7 +221,7 @@ Clear progression creates aspiration:
 
 ### Requirements to Advance
 1. Achieve $100K revenue in 12 months
-2. Maintain revenue for 2 consecutive quarters  
+2. Maintain revenue for 2 consecutive quarters
 3. 3 certified professionals (1 Advanced minimum)
 4. Participate in 2 co-marketing activities
 5. Complete QBR with partner manager

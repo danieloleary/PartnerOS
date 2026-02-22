@@ -166,11 +166,11 @@ Third attempt — I'll stop after this one.
 
 I wanted to share specifically what a partnership could look like:
 
-**[Specific Outcome]:** We've helped similar partners achieve [X] in [timeframe]. 
+**[Specific Outcome]:** We've helped similar partners achieve [X] in [timeframe].
 
 **Here's how:**
 - [Benefit #1]
-- [Benefit #2]  
+- [Benefit #2]
 - [Benefit #3]
 
 If this isn't relevant, no worries — just let me know and I'll stop reaching out.

@@ -96,11 +96,11 @@ Templates are rendered using **Astro Starlight**, which has specific formatting 
    :::tip[Custom Title]
    Your content here
    :::
-   
+
    :::note
    For important information
    :::
-   
+
    :::caution
    For warnings
    :::
@@ -387,7 +387,7 @@ Expert templates meet users where they are:
 ## Quick Win Section
 *[Complete this in 30 minutes]*
 
-## Standard Implementation  
+## Standard Implementation
 *[Complete this in 2-4 hours]*
 
 ## Strategic Deep Dive

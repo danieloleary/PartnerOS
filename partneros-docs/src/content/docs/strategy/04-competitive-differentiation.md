@@ -131,7 +131,7 @@ Document your top 10 win scenarios. For each:
 [Specific customer story with numbers]
 
 **Partner script:**
-"When [situation], customers choose us because [reason]. 
+"When [situation], customers choose us because [reason].
 Acme Corp saved $X and saw results in [timeframe]."
 ```
 
@@ -191,7 +191,7 @@ Each competitor needs a one-page battle card. Here's the format:
 [1-2 sentences on where we excel]
 
 ## The Scenario Script
-"If your situation is [specific scenario], 
+"If your situation is [specific scenario],
 we typically beat [Competitor] because [specific reason]."
 
 ## Top 3 Objections

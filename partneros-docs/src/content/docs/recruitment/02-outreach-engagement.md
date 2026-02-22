@@ -149,7 +149,7 @@ Best,
 
 **LinkedIn Message or Email:**
 ```
-Hi [Name], came across this and thought of you: [relevant article about their industry]. 
+Hi [Name], came across this and thought of you: [relevant article about their industry].
 
 [Your take]: The key insight is [specific point]. We see this playing out with our partners in [their segment].
 
@@ -231,7 +231,7 @@ Best,
 ```
 Hi [Name], I know you're busy. I'll be brief.
 
-I've been trying to reach you about a partnership opportunity with [Your Company]. 
+I've been trying to reach you about a partnership opportunity with [Your Company].
 
 [If they seem interested]: Great — here's what I'd propose [brief summary].
 
