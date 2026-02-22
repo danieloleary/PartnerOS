@@ -461,4 +461,53 @@ Based on Starlight's built-in components to improve UX:
 
 ---
 
+## Expert Assessment Findings (Feb 2026)
+
+*Assessment from Partner Architect, Leader, Designer, and Security perspectives*
+
+### Quick Wins (v1.8)
+
+| # | Item | Purpose | Priority | Effort |
+|---|------|---------|----------|--------|
+| Q1 | **Customer Success Stories** | Add 2-3 case studies/testimonials to site | p1 | 4 hrs |
+| Q2 | **Edit This Page Links** | Add Starlight edit links to every template | p1 | 2 hrs |
+| Q3 | **Search Analytics** | Track what users search for to improve content | p2 | 3 hrs |
+| Q4 | **Web UI Modernization** | Update chat UI to feel like ChatGPT | p2 | 6 hrs |
+| Q5 | **Template Count Fix** | Resolve README 40 vs 41 template mismatch | p1 | 1 hr |
+| Q6 | **Interactive ROI Calculator** | Add web-based calculator for business case | p2 | 4 hrs |
+
+### Medium Term (v2.0)
+
+| # | Item | Purpose | Priority | Effort |
+|---|------|---------|----------|--------|
+| M1 | **Web UI Authentication** | Add login/access control to web interface | p1 | 8 hrs |
+| M2 | **Partner API Template** | New template for REST API documentation | p2 | 4 hrs |
+| M3 | **Multi-Currency Support** | Update finance templates for international | p2 | 3 hrs |
+| M4 | **PRM Setup Guide** | Partner Relationship Management implementation | p2 | 4 hrs |
+| M5 | **Visual Diagrams** | Add flowcharts, architecture diagrams to templates | p2 | 6 hrs |
+| M6 | **Variable Interpolation** | Interactive form to fill templates online | p2 | 8 hrs |
+
+### Long Term (v2.1+)
+
+| # | Item | Purpose | Priority | Effort |
+|---|------|---------|----------|--------|
+| L1 | **SOC 2 Type II Compliance** | Security compliance package | p1 | 20 hrs |
+| L2 | **SAML/SSO Integration** | Enterprise identity integration | p1 | 12 hrs |
+| L3 | **Partner Portal Template** | Full portal with login, dashboards | p1 | 16 hrs |
+| L4 | **Marketplace Templates** | AWS, Azure, Salesforce marketplace docs | p2 | 8 hrs |
+| L5 | **Multi-Region Support** | International partnership frameworks | p2 | 6 hrs |
+| L6 | **Custom Tier Framework** | Beyond Bronze/Silver/Gold | p3 | 4 hrs |
+
+### Security Enhancements
+
+| # | Item | Purpose | Priority | Effort |
+|---|------|---------|----------|--------|
+| S1 | **Audit Logging** | Track all partner state changes | p1 | 4 hrs |
+| S2 | **Data Encryption** | Encrypt partners.json at rest | p1 | 3 hrs |
+| S3 | **API Key Management** | Secure handling of LLM keys | p1 | 2 hrs |
+| S4 | **Security Scanning** | Add SAST to CI/CD pipeline | p2 | 4 hrs |
+| S5 | **GDPR Compliance** | Data privacy documentation | p2 | 4 hrs |
+
+---
+
 *Backlog managed per ARCHITECTURE.md vision - "Give them the playbook + the coach"*
