@@ -34,7 +34,7 @@ skills_gained:
 
 > **Your partners won't sell against competitors they don't understand. Give them the specific scenarios, the exact objections, and the precise counters—and watch win rates double.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The #1 mistake in competitive differentiation? Creating generic "why we're better" decks instead of scenario-specific battle cards. A partner who knows you beat Competitor X in healthcare deals has something to sell. A partner who knows you're "generally better" has nothing.
 :::
 

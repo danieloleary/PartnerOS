@@ -34,7 +34,7 @@ skills_gained:
 
 > **Your pitch deck should answer one question: "Why should I spend my limited time and resources on this partnership instead of the other 10 things competing for my attention?"** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The best pitch decks are 10 slides maximum. If you need more, you don't have a clear enough message. Executives have 5 minutes—make every slide count.
 :::
 

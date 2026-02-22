@@ -34,7 +34,7 @@ skills_gained:
 
 > **The partner evaluation score is only as good as the questions you ask. Skip the hard questions now, and you'll be explaining the partnership failure later.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The 3C framework originated in Japanese business (1990s) for strategic alliances. The 4C adds "Cultural Fit" which became essential as Western partnership programs matured. Use 3C for transactional relationships, 4C for strategic partnerships.
 :::
 

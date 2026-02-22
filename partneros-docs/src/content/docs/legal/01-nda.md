@@ -31,7 +31,7 @@ skills_gained:
 
 > **Sign the NDA before you share anything sensitive. It's not about distrust—it's about professionalism.** — Dan O'Leary
 
-:::caution LEGAL REVIEW REQUIRED
+:::caution[LEGAL REVIEW REQUIRED]
 Have your legal team review before use. This is a template, not legal advice.
 :::
 

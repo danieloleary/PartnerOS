@@ -35,7 +35,7 @@ skills_gained:
 
 > **The proposal is where deals are won or lost. A weak proposal kills strong interest. A strong proposal closes the deal.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 Send proposals within 48 hours of the discovery call. Speed signals seriousness. If you take 2 weeks, you've lost momentum.
 :::
 

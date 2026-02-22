@@ -32,7 +32,7 @@ skills_gained:
 
 > **If you don't know which accounts your partners can access, you're leaving money on the table.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The best partners don't just sell to your ICP—they sell to accounts you can't reach. Map the overlap AND the complementary coverage.
 :::
 

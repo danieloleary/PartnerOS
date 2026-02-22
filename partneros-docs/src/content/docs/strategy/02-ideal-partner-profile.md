@@ -33,7 +33,7 @@ skills_gained:
 
 > **The partner you choose in Year 1 will define your channel for years. Get this wrong, and you'll spend Years 2-4 digging yourself out.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The most common mistake? Defining IPP too narrowly. You need at least 20 potential partners who meet your criteria—or your profile is a wish list, not a filter. If you can only name 5 prospects, broaden your verticals or geography.
 :::
 

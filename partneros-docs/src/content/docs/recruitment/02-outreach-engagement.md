@@ -34,7 +34,7 @@ skills_gained:
 
 > **Email alone doesn't work anymore. Today's partners are reached through 5-7 touchpoints across 3-4 channels before they respond. Single-channel outreach is just hoping.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The "Rule of 7" applies to partner outreach: prospects need to see your message 7 times before they act. If you only send emails, you're hoping for a 1-in-7 success rate. Use multiple channels to hit 7 touchpoints faster.
 :::
 

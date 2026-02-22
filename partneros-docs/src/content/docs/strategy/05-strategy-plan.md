@@ -37,7 +37,7 @@ skills_gained:
 
 > **Your partner strategy isn't a document—it's a commitment. Write something you can actually execute, because your partners will read it and decide whether to invest in you.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The most common strategy plan failure? Writing a strategy that's 100 pages and zero execution. If your plan takes more than 2 weeks to write, it's too complex. Partners need a 5-page strategy they can understand and act on.
 :::
 

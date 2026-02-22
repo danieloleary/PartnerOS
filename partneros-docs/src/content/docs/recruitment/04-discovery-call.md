@@ -34,7 +34,7 @@ skills_gained:
 
 > **The discovery call is where partnerships are won or lost. Ask the right questions, listen more than you talk, and always leave with a clear next step.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The best discovery calls feel like conversations, not interrogations. Your goal is to understand their business deeply enough to propose something valuable. If you're pitching more than 30% of the time, you're doing it wrong.
 :::
 

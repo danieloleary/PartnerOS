@@ -31,7 +31,7 @@ skills_gained:
 
 > **Data protection isn't optional. Get this right or face serious consequences.** — Dan O'Leary
 
-:::caution LEGAL REVIEW REQUIRED
+:::caution[LEGAL REVIEW REQUIRED]
 Essential for GDPR compliance. Work with legal.
 :::
 

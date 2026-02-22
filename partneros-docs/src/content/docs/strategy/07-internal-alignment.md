@@ -34,7 +34,7 @@ skills_gained:
 
 > **The Problem:** Most partner programs fail not because of the partners—but because internal teams (Sales, Marketing, Product) weren't aligned. Sales ignores partners. Marketing doesn't support partner campaigns. Product won't build integrations. This template fixes that. — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The #1 killer of partner programs isn't external—it's internal politics. I've seen programs with perfect strategy die because Sales blocked every partner deal. Get alignment BEFORE you launch.
 :::
 
@@ -76,7 +76,7 @@ Your partner program will fail if:
 
 This template helps you get ahead of all of it.
 
-:::caution EXPECT RESISTANCE
+:::caution[EXPECT RESISTANCE]
 Every internal stakeholder will have objections. That's normal. The goal isn't to eliminate resistance—it's to address it with solutions, not just promises.
 :::
 

@@ -32,7 +32,7 @@ skills_gained:
 
 > **The best enablement programs get partners to first deal in 30 days. Programs that stretch to 90 days lose momentum—and partners.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 Partners who complete enablement within 30 days are 3x more likely to generate revenue in Year 1. Speed matters—but so does thoroughness. Balance both.
 :::
 

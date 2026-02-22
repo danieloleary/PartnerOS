@@ -430,7 +430,7 @@ skills_gained:
 
 > **Expert quote or summary** - captures the essence
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 Key insider tip or common mistake to avoid
 :::
 

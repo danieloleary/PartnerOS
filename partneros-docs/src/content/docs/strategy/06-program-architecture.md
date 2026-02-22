@@ -35,7 +35,7 @@ skills_gained:
 
 > **Your program architecture is a promise to partners. Make promises you can keep—and keep every promise you make. A broken promise destroys more trust than a bad product.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The most common architecture failure? Three tiers that look identical. Bronze, Silver, and Gold must have meaningfully different benefits. If a partner can't articulate why they'd move from Silver to Gold, your tier structure is broken.
 :::
 

@@ -563,4 +563,18 @@ Add "Tell Your Agent To..." section to existing templates:
 
 ---
 
+## Template Quality & Formatting Fixes (v1.9)
+
+### Critical Fixes Found
+
+| # | Issue | Files Affected | Priority | Effort |
+|---|-------|----------------|----------|--------|
+| Q1 | **:::tip formatting broken** | 17 files | p1 | 1 hr |
+| Q2 | **:::caution formatting broken** | 6 files | p1 | 1 hr |
+| Q3 | **Link verification** | All templates | p1 | 2 hrs |
+| Q4 | **Template consistency audit** | All 53 templates | p2 | 4 hrs |
+| Q5 | **Cross-reference verification** | All templates | p2 | 2 hrs |
+
+---
+
 *Backlog managed per ARCHITECTURE.md vision - "Give them the playbook + the coach"*

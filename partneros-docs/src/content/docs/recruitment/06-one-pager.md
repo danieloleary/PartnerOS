@@ -32,7 +32,7 @@ skills_gained:
 
 > **If you can't explain your partnership value in one page, you don't understand it well enough.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 This one-pager should be readable in 2 minutes. Executives receive hundreds of documents—the shorter and clearer yours is, the more likely it gets read.
 :::
 

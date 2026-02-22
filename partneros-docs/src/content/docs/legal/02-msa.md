@@ -31,7 +31,7 @@ skills_gained:
 
 > **The MSA protects both sides. Don't rush it—get legal involved early.** — Dan O'Leary
 
-:::caution LEGAL REVIEW REQUIRED
+:::caution[LEGAL REVIEW REQUIRED]
 Work with legal to customize for your situation.
 :::
 

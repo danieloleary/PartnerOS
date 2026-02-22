@@ -34,7 +34,7 @@ skills_gained:
 
 > **How you end partnerships matters as much as how you start them. A messy exit creates enemies; a graceful exit creates potential future allies.** — Dan O'Leary
 
-:::caution DON'T TERMINATE BEFORE READING THIS
+:::caution[DON'T TERMINATE BEFORE READING THIS]
 Exiting a partner improperly can cost you customers, create legal liability, and damage your reputation. Follow this checklist meticulously. If you're rushing, you're making mistakes.
 :::
 

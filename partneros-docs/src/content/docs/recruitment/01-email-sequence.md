@@ -34,7 +34,7 @@ skills_gained:
 
 > **The first email gets you read. The follow-up gets you replied to. Most people give up after one email—and that's why they fail at partner recruitment.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 The magic number is 4 emails. After 4 without response, stop. You've reached the limit of reasonable persistence. Move on to the next prospect. The partners who want to partner will respond by email 4.
 :::
 

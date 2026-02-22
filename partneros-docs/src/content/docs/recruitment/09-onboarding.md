@@ -31,7 +31,7 @@ skills_gained:
 
 > **The first 30 days define the partnership. Get them productive fast or watch momentum die.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 Partners who complete onboarding in 30 days are 3x more likely to generate revenue in Year 1. Speed matters.
 :::
 

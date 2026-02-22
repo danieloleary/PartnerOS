@@ -34,7 +34,7 @@ skills_gained:
 
 > **Qualifying partners isn't about saying no—it's about saying yes to the right partners. Skip qualification and you'll spend 18 months pursuing partners who were never going to work.** — Dan O'Leary
 
-:::tip INSIDER TIP
+:::tip[Insider Tip]
 Use the same qualification framework your Sales team uses for prospects. If Marketing and Sales both qualify to the same standard, you avoid the "Marketing said yes, Sales said no" conflict that kills partnerships before they start.
 :::
 

@@ -32,7 +32,7 @@ skills_gained:
 
 > **The agreement protects both parties. Don't skip it, don't rush it, and always involve legal.** — Dan O'Leary
 
-:::caution LEGAL REVIEW REQUIRED
+:::caution[LEGAL REVIEW REQUIRED]
 This template provides a framework. Work with your legal team to customize for your specific situation, jurisdiction, and risk tolerance. This is not legal advice.
 :::
 
