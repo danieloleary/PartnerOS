@@ -3,165 +3,71 @@ title: Weekly Partner Standup
 section: Operations
 category: operational
 template_number: O.2
-version: 1.0.0
-last_updated: 2026-02-20
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Silver
 - Gold
-- Strategic
 skill_level: beginner
 purpose: operational
 phase: enablement
-time_required: 0.5 hours
+time_required: 30 minutes
 difficulty: easy
 prerequisites:
-- Partner CRM or tracking system
-description: 'Lightweight weekly standup agenda for Partner Account Managers.
-
-  '
-purpose_detailed: "A 15\u201330 minute weekly sync that keeps partner pipeline moving,\
-  \ surfaces blockers early, and maintains momentum without requiring heavy reporting\
-  \ overhead.\n"
+- Partner manager assigned
+- CRM access
+description: >
+  A weekly sync structure to review partner pipeline and address blockers. Keep partnerships moving forward.
 outcomes:
-- Consistent pipeline visibility
-- Early blocker identification
-- Clear weekly action items
+- Pipeline visibility
+- Blocker identification
+- Action items
 skills_gained:
-- Partner relationship management
-- Pipeline cadence
-- Meeting facilitation
+- Pipeline management
+- Issue resolution
+- Partner communication
 ---
 
-> **Lightweight weekly standup agenda for Partner Account Managers.**
-
-
+> **Weekly stands prevent small issues from becoming big problems. Keep them short, focused, and action-oriented.** — Dan O'Leary
 
 ## How to Use This Template
 
 **Purpose:**
-A weekly standup is the heartbeat of an active partnership. It should be short,
-structured, and action-oriented. If you leave without knowing the next step on
-every active deal, the meeting failed.
+This standup reviews weekly partner progress.
 
-**Instructions:**
-- Keep it to 15–30 minutes maximum
-- Partner hosts the call; PAM facilitates
-- Always end with documented actions and owners
+**Steps:**
 
----
-
-# Weekly Partner Standup
-
-**Partner:** [Partner Name]
-**Date:** [Date]
-**Attendees:** [Partner rep(s)] | [PAM Name]
-**Meeting link:** [URL]
+1. **Prepare** — Review CRM (5 min)
+2. **Discuss** — Cover each partner (20 min)
+3. **Action** — Document next steps (5 min)
 
 ---
 
-## AGENDA (15–30 min)
+# Weekly Standup Agenda
 
-| # | Topic | Time | Owner |
-|---|-------|------|-------|
-| 1 | Wins from last week | 3 min | Both |
-| 2 | Pipeline review — active deals | 10 min | Partner |
-| 3 | Blockers / escalations | 5 min | Both |
-| 4 | This week's focus | 3 min | Both |
-| 5 | Actions and owners | 2 min | PAM |
+## Quick Review
 
----
+| Topic | Time | Owner |
+|-------|------|-------|
+| Pipeline review | 10 min | Partner Manager |
+| Active deals | 10 min | Partner Manager |
+| Blockers | 5 min | All |
+| Next actions | 5 min## Discussion Points
 
-## 1. WINS FROM LAST WEEK
-
-| Win | Impact |
-|-----|--------|
-| | |
-| | |
+ | All |
 
 ---
 
-## 2. PIPELINE REVIEW
-
-### Active Registered Deals
-
-| Prospect | Stage | Value | Close Date | Status / Next Step |
-|----------|-------|-------|------------|--------------------|
-| | | $ | | |
-| | | $ | | |
-| | | $ | | |
-
-**Pipeline total:** $[sum]
-
-### New Opportunities This Week
-
-| Prospect | Initial Meeting | Estimated Value | Register by |
-|----------|----------------|-----------------|-------------|
-| | | $ | |
-
-### Deals at Risk
-
-| Deal | Risk | What's Needed |
-|------|------|---------------|
-| | | |
-
----
-
-## 3. BLOCKERS / ESCALATIONS
-
-| Blocker | Who Owns Resolution | By When |
-|---------|---------------------|---------|
-| | | |
-| | | |
-
----
-
-## 4. THIS WEEK'S FOCUS
-
-| Priority | Owner | Success Looks Like |
-|----------|-------|--------------------|
-| | | |
-| | | |
-
----
-
-## 5. ACTION ITEMS
-
-| Action | Owner | Due |
-|--------|-------|-----|
-| | | |
-| | | |
-| | | |
-
----
-
-## STANDING TOPICS (rotate as needed)
-
-**Certification status:** [X of Y reps certified — next target: Z by Date]
-
-**MDF balance:** $[available] | $[committed] | $[spent YTD]
-
-**Upcoming events:** [conference / webinar / co-sell call]
-
----
-
-## NOTES
-
-[Free-form notes from the call]
-
----
-
-## NEXT STANDUP
-
-**Date:** [Date]
-**Focus:** [Any special agenda items]
+- New opportunities
+- Deal status updates
+- Support needs
+- Upcoming activities
 
 ---
 
 ## Related Templates
 
-- [Monthly Partner Report](03-monthly-report/)
-- [QBR Template](../enablement/07-qbr-template/)
-- [Deal Registration Policy](01-deal-registration/)
-- [Partner Success Metrics](../enablement/06-success-metrics/)
----
+- [Deal Registration](../operations/01-deal-registration/) — Manage deals
+- [Monthly Report](../operations/03-monthly-report/) — Broader review
+- [Success Metrics](../enablement/06-success-metrics/) — Track KPIs

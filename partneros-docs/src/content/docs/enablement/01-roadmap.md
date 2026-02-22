@@ -1,10 +1,10 @@
 ---
-title: Partner Enablement Roadmap (Strategic & Phased)
+title: Partner Enablement Roadmap
 section: Enablement
 category: tactical
 template_number: III.1
-version: 1.0.0
-last_updated: 2024-06-10
+version: 2.0.0
+last_updated: 2026-02-21
 author: PartnerOS Team
 tier:
 - Bronze
@@ -13,119 +13,150 @@ tier:
 skill_level: intermediate
 purpose: operational
 phase: enablement
-time_required: 2-4 hours
-difficulty: easy
+time_required: 2-3 hours
+difficulty: medium
 prerequisites:
-- Partner-signed agreement
-description: Partner Enablement Roadmap (Strategic & Phased) template
+- Partnership agreement signed
+- Partner manager assigned
+description: >
+  A phased roadmap to systematically enable partners from signing to productivity. Get partners to first deal fast with this structured approach.
 outcomes:
-- Completed Partner Enablement Roadmap (Strategic & Phased)
+- Complete enablement timeline
+- Phase-by-phase milestones
+- Owner assignments
 skills_gained:
-- Training development
-- Certification design
-- Content creation
+- Partner enablement
+- Training program design
+- Onboarding management
 ---
 
-> **Partner Enablement Roadmap (Strategic & Phased) template**
+> **The best enablement programs get partners to first deal in 30 days. Programs that stretch to 90 days lose momentum—and partners.** — Dan O'Leary
 
+:::tip INSIDER TIP
+Partners who complete enablement within 30 days are 3x more likely to generate revenue in Year 1. Speed matters—but so does thoroughness. Balance both.
+:::
 
 ## How to Use This Template
 
 **Purpose:**
-Use this roadmap to define, sequence, and communicate all critical enablement milestones for partner development.
+This roadmap provides a structured approach to partner enablement, ensuring nothing falls through the cracks while getting partners productive fast.
+
+**Why It Works:**
+A clear roadmap aligns expectations between you and the partner. It creates accountability and ensures every critical milestone is hit.
 
 **Steps:**
-1. Review each phase and milestone.
-2. Assign owners and timelines for each activity.
-3. Track progress in a shared system with your partner.
-4. Reference the "Related Templates" for supporting information.
-5. Review and update at regular check-ins and QBRs.
+
+1. **Customize** — Adjust timeline to partner tier (15 min)
+2. **Assign owners** — Who owns each milestone (15 min)
+3. **Execute** — Work through each phase (ongoing)
+4. **Track** — Monitor progress in CRM (ongoing)
 
 ---
 
-# Partner Enablement Roadmap (Strategic & Phased)
+# Partner Enablement Roadmap
 
-Purpose: To define, sequence, and communicate all critical training, certification, content access, and go-to-market enablement milestones required to transform a new or developing partner into a highly competent and productive member of our ecosystem. This roadmap provides clarity and a shared vision for partner development.
+## Phase Overview
 
-Core Sections & Example Prompts (Expanded with Strategic Context):
+| Phase | Timeline | Goal |
+|-------|----------|------|
+| **Phase 1: Foundation** | Days 1-7 | Setup and orientation |
+| **Phase 2: Training** | Days 8-21 | Product and sales training |
+| **Phase 3: Enablement** | Days 22-30 | First deal support |
+| **Phase 4: Optimization** | Days 31-60 | Scale and optimize |
 
-### I. Foundational Onboarding & Program Immersion (First 30 Days) *(Corresponds with Partner Onboarding Checklist II.3)*
-- **Day 0-7: Welcome & Access ("Signed, Sealed, Delivered")**
-  - Action: Official partnership agreement signed.
-  - Action: Welcome email from executive sponsor & dedicated Partner Manager (PAM) sent.
-  - Action: Access to Partner Portal, PRM, and essential tools provisioned and validated.
-  - Milestone: Partner confirms access and completes profile in Partner Portal.
-- **Week 1-2: Program & Product Fundamentals ("Understanding the Landscape")**
-  - Action: Attend live or on-demand Partner Program Overview webinar (covering program structure, benefits, rules of engagement, key contacts). *(Refer to: Partner Program Architecture I.6)*
-  - Action: Review core product overview materials (solution briefs, introductory videos, target market).
-  - Action: Initial 1:1 call with PAM to discuss 30-60-90 day goals and enablement path.
-  - Milestone: Partner can articulate the core value proposition of [Your Company] and the basic structure of the partner program.
-- **Week 3-4: Initial Sales & Technical Orientation ("Learning the Ropes")**
-  - Action: Complete "Sales 101" online training module (covering basic pitch, ICP, key differentiators). *(Refer to: Partner Training Deck III.2 for content)*
-  - Action: Complete "Technical 101" online training module (covering basic architecture, key features, integration points). *(Refer to: Partner Training Deck III.2 for content)*
-  - Action: Access and explore the sandbox/demo environment.
-  - Milestone: Key sales and technical contacts identified within the partner organization.
+---
 
-### II. Role-Based Learning Paths & Certification (Month 1-3)
-- **Learning Paths (Defined by Partner Role - Sales, Pre-Sales/Technical, Marketing, Delivery):**
-  - **Sales Path (Month 1-2):**
-    - Training: In-depth product training, competitive positioning, objection handling workshops, deal registration process.
-    - Resources: Access to sales battlecards, presentation templates, proposal tools.
-    - Activity: Shadow a [Your Company] sales rep on a call (if feasible).
-    - Certification: "Certified Sales Professional" - pass online exam, deliver mock pitch to PAM.
-  - **Technical/Pre-Sales Path (Month 1-3):**
-    - Training: Deep-dive technical training, hands-on labs, implementation best practices, integration protocols and APIs, troubleshooting common issues.
-    - Resources: Access to detailed technical documentation, SDKs/APIs, advanced demo scripts, support knowledge base.
-    - Activity: Build a sample integration or configure a complex demo in the sandbox.
-    - Certification: "Certified Technical Professional" - pass technical exam, successfully complete a practical lab assignment or demo build.
-  - **Marketing Path (Month 1-2):**
-    - Training: Brand guidelines, messaging framework, available co-marketing programs & tools, lead management process.
-    - Resources: Access to marketing asset library, campaign kits, MDF request process.
-    - Activity: Develop a draft joint marketing plan for their first campaign.
-    - Certification (Optional): "Certified Marketing Advocate."
-- **Key Milestones by End of Month 3:**
-  - "[X]" number of "Certified Sales Leads" identified and certified.
-  - "[Y]" number of "Certified Technical Leads" identified and certified.
-  - First internal solution demo successfully delivered by the partner to their PAM.
-  - Joint business plan for the next 6-12 months drafted and reviewed.
+## Phase 1: Foundation (Days 1-7)
 
-### III. Go-to-Market Activation & First Wins (Month 2-6)
-- **Month 2-4: Pipeline Generation & Co-Selling Practice**
-  - Action: Register first qualified opportunity in the PRM/CRM.
-  - Action: Conduct first joint discovery call with [Your Company] sales team support.
-  - Action: Participate in joint pipeline review meetings with PAM.
-  - Milestone: First partner-sourced or partner-influenced deal closed. (Celebrate this!)
-- **Month 3-6: Joint Marketing & Solution Development**
-  - Action: Launch first joint marketing activity (e.g., webinar, blog post, local event).
-  - Action (for ISVs/SIs): Scope and begin development of first joint solution or integration.
-  - Milestone: Measurable ROI from initial marketing activities (e.g., leads generated).
-  - Milestone (for ISVs/SIs): Beta version of joint solution ready for demonstration.
+### Week 1 Checklist
 
-### IV. Ongoing Enablement & Specialization (Quarterly & Annually)
-- **Quarterly Product Updates & Roadmap Previews:**
-  - Action: Attend mandatory quarterly product update webinars and roadmap sessions.
-  - Milestone: Partner team demonstrates knowledge of new features and positioning.
-- **Advanced Workshops & Specializations:**
-  - Action: Participate in advanced training workshops (e.g., vertical-specific solutions, new product modules, advanced security).
-  - Action: Pursue advanced certifications or specializations (if offered by your program).
-  - Milestone: Partner achieves "Specialist" status in a key area.
-- **Annual Business Review & Planning:**
-  - Action: Participate in Annual Business Review (ABR) to assess past year performance and plan for the next.
-  - Milestone: Mutual agreement on joint goals and investment areas for the upcoming year.
-- **Continuous Learning:**
-  - Access to an updated library of on-demand training, best practice guides, and community forums. *(Refer to: Partner Strategy Plan I.5 for community platforms)*
+**Administrative:**
+- [ ] Send welcome email with next steps
+- [ ] Execute partnership agreement
+- [ ] Set up partner portal access
+- [ ] Create CRM account
+- [ ] Assign dedicated partner manager
+- [ ] Schedule kickoff call
 
-#### How to Use & Strategic Implementation:
-- Assign a Dedicated Partner Manager (PAM) or Enablement Lead: This individual is responsible for guiding the partner through their roadmap and ensuring accountability.
-- Convert into a Shared Tracking System: Use a collaborative tool (PRM checklist, shared spreadsheet, project management software) to track progress against the roadmap for each key partner. Make it visible to both your team and the partner.
-- Review Progress at QBRs/Regular Check-ins: Make roadmap progress a standard agenda item in Quarterly Business Reviews and other regular partner meetings.
-- Tailor to Partner Type & Tier: While the core framework remains, customize specific activities, timelines, and depth based on the partner's type (e.g., ISV vs. Reseller), tier, and existing capabilities.
-- Celebrate Milestones: Acknowledge and celebrate achievements along the roadmap to maintain motivation and engagement.
-- Feedback Mechanism: Include a way for partners to provide feedback on the enablement process and resources to allow for continuous improvement. *(Refer to: Partner Strategy Plan I.5 for formal feedback mechanisms)*
-- Link Enablement to Program Benefits: Consider making completion of certain enablement milestones a prerequisite for accessing higher program tier benefits or specific incentives. This drives adoption.
+**Kickoff Meeting:**
+1. Introduction to team (15 min)
+2. Partnership overview and goals (15 min)
+3. 90-day expectations (15 min)
+4. Communication cadence (15 min)
+
+---
+
+## Phase 2: Training (Days 8-21)
+
+### Product Training
+
+| Day | Topic | Format | Owner |
+|-----|-------|--------|-------|
+| 8-9 | Product overview | Self-paced | Partner |
+| 10-11 | Technical deep-dive | Live session | SE Team |
+| 12-13 | Demo training | Practice | Partner |
+| 14 | Certification kickoff | Self-paced | Partner |
+
+### Sales Training
+
+| Day | Topic | Format | Owner |
+|-----|-------|--------|-------|
+| 15 | Sales process | Live session | Sales |
+| 16 | Pitch deck review | Self-paced | Partner |
+| 17 | Objection handling | Live session | Sales |
+| 18 | Tools training | Self-paced | Operations |
+
+---
+
+## Phase 3: Enablement (Days 22-30)
+
+### First Deal Support
+
+- [ ] Identify first opportunity
+- [ ] Joint call support
+- [ ] Deal registration process
+- [ ] Pricing and discounts
+- [ ] Demo support
+
+### Marketing Enablement
+- [ ] Provide sales collateral
+- [ ] Share battle cards
+- [ ] Review success stories
+- [ ] Plan first co-marketing activity
+
+---
+
+## Phase 4: Optimization (Days 31-60)
+
+### 30-Day Checkpoint
+
+- [ ] Review progress
+- [ ] Address challenges
+- [ ] Adjust plan as needed
+- [ ] Set 60-day goals
+
+### 60-Day Review
+- [ ] Revenue assessment
+- [ ] Pipeline review
+- [ ] Enablement gaps
+- [ ] QBR scheduling
+
+---
+
+## Quick Win Checklist
+
+*Complete in Week 1*
+
+- [ ] Execute agreement
+- [ ] Set up access
+- [ ] Assign partner manager
+- [ ] Complete kickoff
 
 ---
 
 ## Related Templates
-- [Partner Training Deck](02-training-deck/)
----
+
+- [Training Deck](../enablement/02-training-deck/) — Training materials
+- [Certification Program](../enablement/03-certification/) — Certification path
+- [Success Metrics](../enablement/06-success-metrics/) — What to track
+- [Partner Program Glossary](../resources/glossary/) — Definitions
