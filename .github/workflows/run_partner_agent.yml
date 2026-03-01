@@ -69,7 +69,7 @@ jobs:
           python agent.py --playbook ${{ inputs.playbook }} --partner "${{ inputs.partner }}" 2>&1 | tee output.log
 
       - name: Upload results
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: agent-output-${{ inputs.partner }}-${{ inputs.playbook }}
           path: |
