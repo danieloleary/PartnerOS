@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Link Checker (Lychee)
-        uses: lycheeverse/lychee-action@v1.10.0
+        uses: lycheeverse/lychee-action@v2.8.0
         with:
           args: --verbose --no-progress './partneros-docs/src/content/docs/**/*.md' './partneros-docs/src/content/docs/**/*.mdx'
           fail: true
